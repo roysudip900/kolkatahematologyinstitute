@@ -205,7 +205,7 @@ function ic(inner){return '<svg class="ic" viewBox="0 0 52 52" aria-hidden="true
    (chapters/<id>.bn.txt and chapters/<id>.en.txt). The words of each chapter live in those files.
    "art" is the small drawing shown beside the chapter name. */
 var CH=[
- {id:'anaemia',    bn:'রক্তাল্পতা',          en:'Anaemia',
+ {id:'anaemia',    bn:'অ্যানিমিয়া: রক্তাল্পতা', en:'Anaemia: low hemoglobin',
   art:'<circle cx="26" cy="26" r="26" fill="#FDECEE"/><circle cx="26" cy="26" r="15" fill="#F2A7AE"/><circle cx="26" cy="26" r="9" fill="#FDECEE"/>'},
  {id:'thalassemia',bn:'থ্যালাসেমিয়া',        en:'Thalassemia',
   art:'<circle cx="26" cy="26" r="26" fill="#FFF3D6"/><circle cx="26" cy="26" r="15" fill="#D93A4A"/><circle cx="26" cy="26" r="10" fill="#FFF3D6"/><circle cx="26" cy="26" r="4.5" fill="#D93A4A"/>'},
@@ -259,12 +259,11 @@ function load(id,l){
 
 var body=document.getElementById('chapterBody'),current=null;
 function show(i){
-  var c=CH[i],nx=CH[(i+1)%CH.length];
+  var c=CH[i];
   current=c.id;
   body.innerHTML='<a class="back" href="#library">'+LEFT+two('ফিরে যান','Back')+'</a>'+
    '<div class="chead">'+ic(c.art)+'<div><h1>'+two(c.bn,c.en)+'</h1></div></div>'+
-   '<div class="slot" id="slot">'+placeholder('এই অধ্যায়ের লেখা এখানে বসবে','The script for this chapter goes here')+'</div>'+
-   '<div class="nextrow"><span class="k">'+two('পরের অধ্যায়','Next chapter')+'</span><a href="#'+nx.id+'">'+two(nx.bn,nx.en)+RIGHT+'</a></div>';
+   '<div class="slot" id="slot">'+placeholder('এই অধ্যায়ের লেখা এখানে বসবে','The script for this chapter goes here')+'</div>';
   Promise.all([load(c.id,'bn'),load(c.id,'en')]).then(function(t){
     if(current!==c.id)return;
     var bn=t[0].trim(),en=t[1].trim();
