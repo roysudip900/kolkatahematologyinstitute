@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kolkatahematologyinstitute.com/sitemap.xml

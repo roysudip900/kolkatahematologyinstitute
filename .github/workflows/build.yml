@@ -1,0 +1,31 @@
+# Rebuilds the chapter pages, the home page grid and sitemap.xml whenever a
+# chapter .txt file (or the design in index.html) changes, then commits the result.
+# This is what lets a chapter edited on the phone appear on its own page.
+name: Build chapter pages
+on:
+  push:
+    branches: [main]
+    paths: ['chapters/**', 'index.html', 'tools/**']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: build-pages
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node tools/build.mjs
+      - name: Commit the rebuilt pages if anything changed
+        run: |
+          git config user.name "site-builder"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then echo "Nothing to rebuild."; exit 0; fi
+          git commit -m "Rebuild chapter pages"
+          git push
