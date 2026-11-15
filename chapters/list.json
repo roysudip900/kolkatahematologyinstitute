@@ -1,0 +1,50 @@
+[
+ {
+  "id": "anaemia",
+  "bn": "অ্যানিমিয়া: রক্তাল্পতা",
+  "en": "Anaemia: low hemoglobin",
+  "desc_bn": "",
+  "desc_en": "",
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FDECEE\"/><circle cx=\"26\" cy=\"26\" r=\"15\" fill=\"#F2A7AE\"/><circle cx=\"26\" cy=\"26\" r=\"9\" fill=\"#FDECEE\"/>"
+ },
+ {
+  "id": "thalassemia",
+  "bn": "থ্যালাসেমিয়া",
+  "en": "Thalassemia",
+  "desc_bn": "",
+  "desc_en": "",
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FFF3D6\"/><circle cx=\"26\" cy=\"26\" r=\"15\" fill=\"#D93A4A\"/><circle cx=\"26\" cy=\"26\" r=\"10\" fill=\"#FFF3D6\"/><circle cx=\"26\" cy=\"26\" r=\"4.5\" fill=\"#D93A4A\"/>"
+ },
+ {
+  "id": "itp",
+  "bn": "আইটিপি",
+  "en": "ITP",
+  "desc_bn": "",
+  "desc_en": "",
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#EDE7FB\"/><circle cx=\"18\" cy=\"20\" r=\"4\" fill=\"#7A5AD1\"/><circle cx=\"33\" cy=\"17\" r=\"3\" fill=\"#7A5AD1\"/><circle cx=\"30\" cy=\"33\" r=\"4.5\" fill=\"#7A5AD1\"/><circle cx=\"17\" cy=\"35\" r=\"2.5\" fill=\"#7A5AD1\"/>"
+ },
+ {
+  "id": "cml",
+  "bn": "সিএমএল",
+  "en": "CML",
+  "desc_bn": "",
+  "desc_en": "",
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#E4EEFF\"/><circle cx=\"19\" cy=\"19\" r=\"9\" fill=\"#B7CBF7\"/><circle cx=\"18\" cy=\"18\" r=\"4.5\" fill=\"#3B4FB8\"/><circle cx=\"35\" cy=\"24\" r=\"7\" fill=\"#B7CBF7\"/><circle cx=\"36\" cy=\"25\" r=\"3.5\" fill=\"#3B4FB8\"/><circle cx=\"24\" cy=\"37\" r=\"8\" fill=\"#B7CBF7\"/><circle cx=\"23\" cy=\"38\" r=\"4\" fill=\"#3B4FB8\"/>"
+ },
+ {
+  "id": "myeloma",
+  "bn": "মাল্টিপল মায়েলোমা",
+  "en": "Multiple myeloma",
+  "desc_bn": "",
+  "desc_en": "",
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FDECEE\"/><ellipse cx=\"15\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#D93A4A\"/><ellipse cx=\"22.5\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#E8616D\"/><ellipse cx=\"30\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#D93A4A\"/><ellipse cx=\"37.5\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#E8616D\"/>"
+ },
+ {
+  "id": "marrow",
+  "bn": "বোন ম্যারো পরীক্ষা",
+  "en": "The bone marrow test",
+  "desc_bn": "",
+  "desc_en": "",
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FFE9D2\"/><circle cx=\"18\" cy=\"19\" r=\"8\" fill=\"#FFFFFF\"/><circle cx=\"35\" cy=\"30\" r=\"9\" fill=\"#FFFFFF\"/><circle cx=\"18\" cy=\"37\" r=\"5\" fill=\"#FFFFFF\"/><circle cx=\"31\" cy=\"14\" r=\"2.5\" fill=\"#7A5AD1\"/><circle cx=\"38\" cy=\"17\" r=\"2\" fill=\"#7A5AD1\"/><circle cx=\"26\" cy=\"27\" r=\"2.5\" fill=\"#7A5AD1\"/><circle cx=\"27\" cy=\"41\" r=\"2\" fill=\"#7A5AD1\"/><circle cx=\"10\" cy=\"28\" r=\"2\" fill=\"#7A5AD1\"/>"
+ }
+]
