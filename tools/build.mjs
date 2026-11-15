@@ -105,8 +105,8 @@ for (const c of chapters) {
     if (live) {
       body = `<div class="slot"><div class="prose">${render(text[l])}</div></div>` +
         `<p class="byline">${l === 'bn'
-          ? `দেখে দিয়েছেন ${AUTHOR.bn}, ${CRED.bn}। শেষ বদল ${niceDate(date, 'bn')}।`
-          : `Reviewed by ${AUTHOR.en}, ${CRED.en}. Last updated ${niceDate(date, 'en')}.`}</p>`;
+          ? `লিখেছেন ${AUTHOR.bn}, ${CRED.bn}। শেষ বদল ${niceDate(date, 'bn')}।`
+          : `By ${AUTHOR.en}, ${CRED.en}. Last updated ${niceDate(date, 'en')}.`}</p>`;
     } else if (has[other]) {
       body = `<div class="slot"><p>${l === 'bn'
         ? `এই অধ্যায়টি এখন শুধু ইংরেজিতে আছে। <a href="${url(c.id, 'en')}"><u>ইংরেজিতে পড়ুন</u></a>।`
@@ -120,7 +120,7 @@ for (const c of chapters) {
     const ld = live ? `<script type="application/ld+json">${JSON.stringify({
       '@context': 'https://schema.org', '@type': 'MedicalWebPage', name: title, description: desc, inLanguage: l,
       url: canonical, dateModified: date, about: { '@type': 'MedicalCondition', name: c.en.split(':')[0] },
-      reviewedBy: { '@type': 'Person', name: AUTHOR.en, jobTitle: 'Clinical Hematologist', honorificSuffix: CRED.en },
+      author: { '@type': 'Person', name: AUTHOR.en, jobTitle: 'Clinical Hematologist', honorificSuffix: CRED.en },
       publisher: { '@type': 'MedicalOrganization', name: SITE_NAME.en, url: SITE + '/' },
     }).replace(/</g, '\\u003c')}</script>` : '';
     const html = `<!DOCTYPE html>
