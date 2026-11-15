@@ -66,6 +66,9 @@ function summary(txt, max = 155) {
 }
 function reviewed(file) {
   try {
+    // A file changed but not yet committed counts as changed today.
+    const dirty = execFileSync('git', ['status', '--porcelain', '--', file], { cwd: ROOT, encoding: 'utf8' }).trim();
+    if (dirty) return new Date().toISOString().slice(0, 10);
     const d = execFileSync('git', ['log', '-1', '--format=%cs', '--', file], { cwd: ROOT, encoding: 'utf8' }).trim();
     if (d) return d;
   } catch {}
@@ -102,8 +105,8 @@ for (const c of chapters) {
     if (live) {
       body = `<div class="slot"><div class="prose">${render(text[l])}</div></div>` +
         `<p class="byline">${l === 'bn'
-          ? `লিখেছেন ও দেখে দিয়েছেন ${AUTHOR.bn}, ${CRED.bn}। শেষ দেখা হয়েছে ${niceDate(date, 'bn')}।`
-          : `Reviewed by ${AUTHOR.en}, ${CRED.en}. Last reviewed ${niceDate(date, 'en')}.`}</p>`;
+          ? `দেখে দিয়েছেন ${AUTHOR.bn}, ${CRED.bn}। শেষ বদল ${niceDate(date, 'bn')}।`
+          : `Reviewed by ${AUTHOR.en}, ${CRED.en}. Last updated ${niceDate(date, 'en')}.`}</p>`;
     } else if (has[other]) {
       body = `<div class="slot"><p>${l === 'bn'
         ? `এই অধ্যায়টি এখন শুধু ইংরেজিতে আছে। <a href="${url(c.id, 'en')}"><u>ইংরেজিতে পড়ুন</u></a>।`
@@ -116,7 +119,7 @@ for (const c of chapters) {
     const alt = LANGS.filter((x) => has[x]).map((x) => `<link rel="alternate" hreflang="${x}" href="${SITE + url(c.id, x)}">`).join('\n');
     const ld = live ? `<script type="application/ld+json">${JSON.stringify({
       '@context': 'https://schema.org', '@type': 'MedicalWebPage', name: title, description: desc, inLanguage: l,
-      url: canonical, lastReviewed: date, about: { '@type': 'MedicalCondition', name: c.en.split(':')[0] },
+      url: canonical, dateModified: date, about: { '@type': 'MedicalCondition', name: c.en.split(':')[0] },
       reviewedBy: { '@type': 'Person', name: AUTHOR.en, jobTitle: 'Clinical Hematologist', honorificSuffix: CRED.en },
       publisher: { '@type': 'MedicalOrganization', name: SITE_NAME.en, url: SITE + '/' },
     }).replace(/</g, '\\u003c')}</script>` : '';
