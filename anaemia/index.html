@@ -5,6 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light">
+<meta name="theme-color" content="#FAF5EC">
 <title>অ্যানিমিয়া: রক্তাল্পতা | কলকাতা হেমাটোলজি ইনস্টিটিউট</title>
 <meta name="description" content="হিমোগ্লোবিন কম কেন হয়, কী লক্ষণ, কী পরীক্ষা, আয়রনের চিকিৎসা, খাওয়াদাওয়া, আর কখন হাসপাতালে যাবেন। সহজ ভাষায়, কলকাতার হেমাটোলজিস্টের লেখা।">
 <link rel="canonical" href="https://kolkatahematologyinstitute.com/anaemia/">
@@ -17,131 +18,203 @@
 <meta property="og:url" content="https://kolkatahematologyinstitute.com/anaemia/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@400..800&display=swap" rel="stylesheet">
 <style>
-/* Design A, "calm and illustrated": soft green ground, deep teal hero, white rounded cards, a drawn cell for each disease. */
+/* Design B, "a story book about blood": warm paper ground, deep teal ink, red cells that drift,
+   serif headlines (Fraunces for English, Noto Serif Bengali for Bengali), Hind Siliguri for reading.
+   This one style block is used by the home page and by every chapter page (tools/build.mjs copies it). */
 :root{
-  --bg:#F2F7F6;
+  --paper:#FAF5EC;
   --surface:#FFFFFF;
-  --ink:#0D2B2A;
-  --muted:#3D5C5A;
-  --line:#DCE9E7;
-  --teal:#0F4C4A;
-  --teal-soft:#BFE3DF;
-  --teal-text:#D7EDEA;
-  --red:#D93A4A;
-  --font:"Hind Siliguri",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --ink:#15211F;
+  --ink-2:#31423F;
+  --muted:#5B6B68;
+  --line:#EADFCE;
+  --teal:#0B3F3D;
+  --teal-2:#126158;
+  --teal-soft:#BFE3DC;
+  --teal-text:#D9EFEA;
+  --mint:#E6F3EE;
+  --mint-line:#BFE0D6;
+  --red:#D8323F;
+  --red-2:#EC6A74;
+  --red-ink:#A51D2A;
+  --rose:#FDEDEE;
+  --rose-line:#F4C3C8;
+  --gold:#F2B441;
+  --sans:"Hind Siliguri",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --serif:"Fraunces","Noto Serif Bengali",Georgia,serif;
+  --deep:radial-gradient(60% 75% at 90% 12%,#1B7A70 0%,rgba(27,122,112,0) 70%),radial-gradient(70% 80% at 0% 100%,#062B2A 0%,rgba(6,43,42,0) 65%),#0B3F3D;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 html[data-lang="en"] [lang="bn"]{display:none}
 html[data-lang="bn"] [lang="en"]{display:none}
 a{color:inherit;text-decoration:none}
-:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
 h1,h2,h3,p{margin:0}
-h1,h2,h3{text-wrap:balance;font-weight:700;line-height:1.25}
+h1,h2,h3{text-wrap:balance}
 /* header */
-header{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
-.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:12px}
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 86%,transparent);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:11px}
 .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:.95rem;line-height:1.25;min-width:0}
-.brand svg{width:34px;height:34px;flex:none}
+.brand svg{width:36px;height:36px;flex:none}
 .brand .nm{display:block;max-width:11.5em}
-.right{display:flex;align-items:center;gap:26px;flex:none}
+.right{display:flex;align-items:center;gap:22px;flex:none}
 .right a.nav{font-size:1rem;font-weight:500;min-height:44px;display:flex;align-items:center}
-.right a.nav:hover{color:var(--teal)}
-.lang{display:flex;background:var(--line);border-radius:999px;padding:3px}
-.lang button{font:inherit;font-size:.86rem;font-weight:600;min-width:46px;height:40px;border:0;border-radius:999px;background:none;color:var(--muted);cursor:pointer}
-.lang button[aria-pressed="true"]{background:var(--surface);color:var(--ink)}
+.right a.nav:hover{color:var(--teal-2)}
+.lang{display:flex;background:#EFE6D6;border-radius:999px;padding:3px}
+.lang button,.lang a{font:inherit;font-size:.86rem;font-weight:600;min-width:46px;height:40px;border:0;border-radius:999px;background:none;color:var(--muted);cursor:pointer;display:flex;align-items:center;justify-content:center}
+.lang button[aria-pressed="true"],.lang a[aria-current="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 3px rgba(21,33,31,.14)}
 /* hero */
-.hero{margin-top:10px;background:var(--teal);color:#fff;border-radius:36px;padding:48px;display:flex;align-items:center;gap:40px;overflow:hidden}
-.hero .txt{flex:1 1 380px;display:flex;flex-direction:column;gap:16px;align-items:flex-start}
-.hero .tag{font-size:.9rem;font-weight:600;color:var(--teal-soft)}
-.hero h1{font-size:clamp(2.2rem,8.6vw,4rem);line-height:1.2}
-.hero .lead{font-size:clamp(1rem,2.4vw,1.15rem);font-weight:500;line-height:1.55;color:var(--teal-text);max-width:24em}
-.cta{display:inline-flex;align-items:center;gap:8px;margin-top:6px;background:#fff;color:var(--teal);font-weight:700;padding:0 24px;height:50px;border-radius:999px;transition:transform .2s ease}
-.cta:hover{transform:translateY(-2px)}
+.hero{position:relative;color:#fff;background:var(--deep);border-radius:0 0 48px 48px;overflow:hidden}
+.hero-in{display:flex;align-items:center;gap:28px;padding-block:54px 66px;min-height:min(74vh,640px)}
+.hero .txt{flex:1 1 440px;display:flex;flex-direction:column;gap:18px;align-items:flex-start;position:relative;z-index:1}
+.hero .tag{display:inline-flex;align-items:center;gap:9px;font-size:.88rem;font-weight:600;color:var(--teal-soft);border:1px solid rgba(191,227,220,.35);border-radius:999px;padding:6px 15px}
+.hero .tag::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--red-2);box-shadow:0 0 0 4px rgba(236,106,116,.25)}
+.hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(2.7rem,10vw,5rem);line-height:1.1;letter-spacing:-.015em}
+html[data-lang="bn"] .hero h1{line-height:1.32;letter-spacing:0;font-weight:700;font-size:clamp(2.5rem,9.4vw,4.6rem)}
+.hero h1 .hl{font-style:normal;display:inline-block;padding-bottom:.16em;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 20' preserveAspectRatio='none'%3E%3Cpath d='M4 13 C58 3 112 4 152 9 S246 17 296 6' fill='none' stroke='%23F2B441' stroke-width='5' stroke-linecap='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") no-repeat 0 100%/100% .34em}
+html[data-lang="bn"] .hero h1 .hl{padding-bottom:.2em}
+.hero .lead{font-size:clamp(1.02rem,2.6vw,1.2rem);font-weight:500;line-height:1.55;color:var(--teal-text)}
+.cta{display:inline-flex;align-items:center;gap:10px;margin-top:8px;background:#fff;color:var(--teal);font-weight:700;padding:0 8px 0 26px;height:56px;border-radius:999px;transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s;box-shadow:0 18px 30px -18px rgba(0,0,0,.6)}
+.cta:hover{transform:translateY(-3px)}
+.cta .dot{width:40px;height:40px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center}
 .cta svg{width:16px;height:16px}
-.cells{flex:1 1 300px;max-width:420px;height:auto;overflow:visible}
-.cells g{transform-box:fill-box;transform-origin:center;animation:float 7s ease-in-out infinite}
-.cells g:nth-child(2){animation-duration:9s;animation-delay:-3s}
-.cells g:nth-child(3){animation-duration:11s;animation-delay:-6s}
-.cells g:nth-child(4){animation-duration:8s;animation-delay:-2s}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-@media (prefers-reduced-motion: reduce){.cells g{animation:none}.cta{transition:none}html{scroll-behavior:auto}}
-/* library */
-.sec{padding-block:28px 0}
-.head{display:flex;align-items:baseline;justify-content:space-between;gap:20px;margin-bottom:16px}
-.head h2{font-size:clamp(1.4rem,4.5vw,1.9rem)}
-.head p{color:var(--muted);font-size:.92rem;flex:none}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.card{display:flex;align-items:center;gap:16px;padding:20px;border-radius:24px;background:var(--surface);transition:transform .25s ease,box-shadow .25s ease}
-.card:hover{transform:translateY(-3px);box-shadow:0 18px 30px -22px rgba(13,43,42,.45)}
-.card .ic{width:58px;height:58px;flex:none}
-.card .t{flex:1;min-width:0}
-.card .n{font-size:.85rem;color:var(--muted);font-variant-numeric:tabular-nums}
-.card h3{font-size:1.3rem;line-height:1.3}
-.card .go{width:18px;height:18px;flex:none;color:var(--muted)}
-@media (prefers-reduced-motion: reduce){.card{transition:none}}
+.cells{flex:1 1 360px;max-width:540px;height:auto;overflow:visible}
+.cells .f{transform-box:fill-box;transform-origin:center;animation:float 8s ease-in-out infinite}
+.cells .f2{animation-duration:10s;animation-delay:-3s}
+.cells .f3{animation-duration:12s;animation-delay:-6s}
+.cells .f4{animation-duration:9s;animation-delay:-2s}
+@keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-12px) rotate(3deg)}}
+/* chapter cards on the home page */
+.sec{padding-block:40px 0}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.card{position:relative;overflow:hidden;display:flex;flex-direction:column;gap:14px;padding:26px 26px 22px;border-radius:30px;background:var(--surface);border:1px solid var(--line);box-shadow:0 30px 50px -42px rgba(21,33,31,.5);transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
+.card:hover{transform:translateY(-5px);box-shadow:0 38px 60px -38px rgba(21,33,31,.55)}
+.card .deco{position:absolute;right:-52px;top:-52px;width:200px;height:200px;opacity:.5;pointer-events:none}
+.card .top{position:relative;display:flex;align-items:center;gap:14px}
+.card .ic{width:58px;height:58px;flex:none;filter:drop-shadow(0 6px 10px rgba(21,33,31,.12))}
+.card h3{font-family:var(--serif);font-weight:600;font-size:clamp(1.45rem,5.2vw,1.85rem);line-height:1.2}
+.card[lang="bn"] h3{line-height:1.4}
+.card .hook{position:relative;font-family:var(--serif);font-style:italic;font-size:1.13rem;line-height:1.5;color:var(--ink-2)}
+.card[lang="bn"] .hook{font-style:normal;line-height:1.75;font-size:1.08rem}
+.card .meta{position:relative;display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;padding-top:4px;color:var(--muted);font-size:.9rem;font-weight:500}
+.card .go{width:44px;height:44px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.card:hover .go{transform:translateX(5px)}
+.card .go svg{width:16px;height:16px}
+.soon{margin-top:28px}
+.soon .k{font-size:.85rem;font-weight:600;color:var(--muted);margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{display:inline-flex;align-items:center;gap:10px;padding:7px 17px 7px 7px;border-radius:999px;border:1px dashed #D6C8AF;color:var(--muted);font-weight:500;font-size:.98rem;background:rgba(255,255,255,.55)}
+.chip .ic{width:34px;height:34px;flex:none}
 /* about */
-.about{background:var(--surface);border-radius:24px;padding:26px;display:flex;align-items:center;gap:18px}
-.about .av{width:58px;height:58px;flex:none}
-.about .k{font-size:.85rem;font-weight:600;color:var(--muted)}
-.about .who{font-size:1.35rem;font-weight:700;line-height:1.3}
-.about .cred{color:var(--muted);font-size:.95rem}
-/* chapter */
-#chapter{display:none;padding-block:18px 0}
-body.reading #home{display:none}
-body.reading #chapter{display:block}
+.head h2{font-family:var(--serif);font-weight:600;font-size:clamp(1.5rem,4.6vw,2rem);margin-bottom:16px}
+.about{display:flex;align-items:center;gap:20px;background:linear-gradient(135deg,#fff 0%,var(--mint) 100%);border:1px solid var(--mint-line);border-radius:30px;padding:28px}
+.about .av{width:72px;height:72px;flex:none}
+.about .k{font-size:.82rem;font-weight:600;color:var(--teal-2)}
+.about .who{font-family:var(--serif);font-size:1.7rem;font-weight:600;line-height:1.3}
+.about .cred{color:var(--muted);font-size:.98rem}
+/* chapter page */
+.progress{position:fixed;left:0;top:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(var(--p,0));background:linear-gradient(90deg,var(--red),var(--gold));z-index:30;pointer-events:none}
+.read{max-width:760px;margin:0 auto;padding:14px 20px 0}
 .back{display:inline-flex;align-items:center;gap:8px;color:var(--muted);font-size:.95rem;font-weight:500;min-height:44px}
 .back svg{width:14px;height:14px}
-.chead{margin-top:8px;background:var(--teal);color:#fff;border-radius:30px;padding:28px;display:flex;align-items:center;gap:20px}
-.chead .ic{width:84px;height:84px;flex:none}
-.chead .n{color:var(--teal-soft);font-weight:600;font-size:.9rem}
-.chead h1{font-size:clamp(1.9rem,7.5vw,3.2rem);line-height:1.2}
-.slot{max-width:720px;margin-top:20px;background:var(--surface);border-radius:24px;padding:28px 24px}
+.chead{position:relative;overflow:hidden;margin-top:4px;color:#fff;border-radius:34px;padding:30px 28px;background:var(--deep);min-height:190px;display:flex;flex-direction:column;justify-content:flex-end;gap:10px}
+.chead .big{position:absolute;right:-34px;top:-34px;width:190px;height:190px;animation:float 10s ease-in-out infinite;filter:drop-shadow(0 20px 30px rgba(0,0,0,.25))}
+.chead .kick{position:relative;font-size:.86rem;font-weight:600;color:var(--teal-soft)}
+.chead h1{position:relative;font-family:var(--serif);font-weight:600;font-size:clamp(2.1rem,8.4vw,3.3rem);line-height:1.12;letter-spacing:-.01em;max-width:11em}
+:lang(bn) .chead h1{line-height:1.35;letter-spacing:0;font-weight:700}
+.by{display:flex;align-items:center;gap:12px;margin-top:18px;color:var(--muted);font-size:.93rem;line-height:1.45}
+.by .av{width:42px;height:42px;flex:none}
+.by b{display:block;color:var(--ink);font-weight:600;font-size:1rem}
+/* the opening story of a chapter */
+.story{margin-top:30px;font-family:var(--serif);font-size:1.22rem;line-height:1.7}
+:lang(bn) .story{font-size:1.15rem;line-height:1.95}
+.story p{margin-top:18px}
+.story p:first-child{margin-top:0}
+.story .hookline{font-size:clamp(1.8rem,6.8vw,2.6rem);line-height:1.2;font-weight:600;color:var(--teal);letter-spacing:-.01em;text-wrap:balance}
+:lang(bn) .story .hookline{line-height:1.45;letter-spacing:0;font-weight:700}
+.story .lede{font-size:1.34rem}
+:lang(bn) .story .lede{font-size:1.24rem}
+.sep{display:flex;justify-content:center;gap:11px;margin:40px 0 4px}
+.sep i{width:11px;height:11px;border-radius:50%;background:radial-gradient(circle,#F6B6BC 0 34%,var(--red) 36%)}
+/* the rest of a chapter */
+.prose h2{font-family:var(--serif);font-weight:600;font-size:clamp(1.5rem,5.4vw,1.95rem);line-height:1.22;color:var(--teal);margin-top:44px}
+:lang(bn) .prose h2{line-height:1.45;font-weight:700}
+.prose h2::before{content:"";display:block;width:38px;height:4px;border-radius:2px;background:var(--red);margin-bottom:14px}
+.prose h3{font-size:1.18rem;font-weight:600;line-height:1.4;margin-top:28px}
+.prose p{margin-top:16px;font-size:1.1rem;line-height:1.85;overflow-wrap:anywhere}
+.prose ul{list-style:none;margin:16px 0 0;padding:0}
+.prose li{position:relative;padding-left:1.7em;margin-top:10px;font-size:1.1rem;line-height:1.7}
+.prose li::before{content:"";position:absolute;left:.2em;top:.55em;width:.62em;height:.62em;border-radius:50%;background:radial-gradient(circle,#F6B6BC 0 34%,var(--red) 36%)}
+.box{margin-top:40px;border-radius:26px;padding:24px 22px 22px}
+.prose .box h2{margin-top:0;display:flex;align-items:flex-start;gap:12px;font-size:clamp(1.35rem,4.8vw,1.7rem)}
+.prose .box h2::before{display:none}
+.box h2 svg{width:30px;height:30px;flex:none;margin-top:.12em}
+.warn{background:var(--rose);border:1px solid var(--rose-line)}
+.prose .warn h2{color:var(--red-ink)}
+.ask{background:var(--mint);border:1px solid var(--mint-line)}
+.ask li{padding-left:2em}
+.ask li::before{left:0;top:.32em;width:1.05em;height:1.05em;border-radius:6px;background:#fff;border:2px solid var(--teal-2)}
+.key{background:#FFF8E6;border:1px solid #F1DDA2}
+.faq details{border-top:1px solid var(--line)}
+.faq h2 + details{margin-top:20px}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;position:relative;padding:18px 50px 18px 0;font-weight:600;font-size:1.12rem;line-height:1.5}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:2px;top:50%;width:34px;height:34px;border-radius:50%;background:var(--mint);color:var(--teal);display:grid;place-items:center;font-size:1.35rem;font-weight:500;line-height:1;transform:translateY(-50%);transition:transform .3s,background .3s}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg);background:var(--teal);color:#fff}
+.faq details > div{padding:0 0 20px}
+.faq details > div > :first-child{margin-top:0}
+.endcard{margin-top:46px;display:flex;align-items:center;gap:16px;background:linear-gradient(135deg,#fff 0%,var(--mint) 100%);border:1px solid var(--mint-line);border-radius:26px;padding:20px 22px}
+.endcard .av{width:58px;height:58px;flex:none}
+.endcard .k{font-size:.82rem;font-weight:600;color:var(--teal-2)}
+.endcard .who{font-family:var(--serif);font-size:1.35rem;font-weight:600;line-height:1.3}
+.endcard .cred{color:var(--muted);font-size:.93rem}
+.allbtn{display:inline-flex;align-items:center;gap:10px;margin-top:18px;background:var(--teal);color:#fff;font-weight:600;padding:0 24px 0 20px;height:52px;border-radius:999px;transition:transform .3s}
+.allbtn:hover{transform:translateX(-3px)}
+.allbtn svg{width:15px;height:15px}
+/* a chapter that has no words yet */
+.slot{margin-top:24px;background:var(--surface);border:1px solid var(--line);border-radius:26px;padding:28px 24px}
 .slot .note{display:inline-block;font-size:.85rem;font-weight:600;color:var(--muted);border:1px dashed var(--muted);border-radius:999px;padding:6px 14px;margin-bottom:22px}
 .sk{height:14px;border-radius:7px;background:var(--line);margin-top:14px}
 .sk.h{height:24px;width:55%;margin-top:36px}
-/* the doctor's own script, loaded from the chapters folder */
-.prose p{margin-top:18px;font-size:1.08rem;line-height:1.8;overflow-wrap:anywhere}
-.prose p:first-child{margin-top:0}
-.prose h2{font-size:clamp(1.35rem,4.4vw,1.7rem);margin-top:40px;color:var(--teal)}
-.prose h2:first-child{margin-top:0}
-.prose h3{font-size:clamp(1.15rem,3.6vw,1.3rem);margin-top:28px}
-.prose ul{margin:14px 0 0;padding-left:1.3em}
-.prose li{margin-top:8px;font-size:1.08rem;line-height:1.7}
-.byline{max-width:720px;margin-top:14px;color:var(--muted);font-size:.92rem}
-.lang a{display:flex;align-items:center;justify-content:center;font-size:.86rem;font-weight:600;min-width:46px;height:40px;border-radius:999px;color:var(--muted)}
-.lang a[aria-current="true"]{background:var(--surface);color:var(--ink)}
-.nextrow{max-width:720px;margin-top:16px;background:var(--surface);border-radius:24px;padding:18px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px}
-.nextrow .k{font-size:.85rem;color:var(--muted);font-weight:600}
-.nextrow a{font-size:1.2rem;font-weight:700;display:inline-flex;align-items:center;gap:10px;min-height:44px;text-align:right}
-.nextrow svg{width:18px;height:18px;flex:none}
-footer{margin-top:56px;padding:26px 0 44px;color:var(--muted);font-size:.88rem;border-top:1px solid var(--line)}
+/* things fade up as they come into view (only when the script is running) */
+.rv{opacity:0;transform:translateY(18px)}
+.rv.in{opacity:1;transform:none;transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+footer{margin-top:64px;padding:28px 0 46px;color:var(--muted);font-size:.88rem;border-top:1px solid var(--line)}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 30px}
 footer p{max-width:36em}
-@media (max-width:860px){
-  .grid{grid-template-columns:repeat(2,1fr)}
-}
-@media (max-width:640px){
+@media (max-width:760px){
   .right a.nav{display:none}
-  .hero{flex-direction:column-reverse;align-items:stretch;padding:24px;border-radius:28px;gap:14px}
+  .hero{border-radius:0 0 36px 36px}
+  .hero-in{flex-direction:column-reverse;align-items:stretch;gap:6px;padding-block:8px 40px;min-height:0}
   .hero .txt{flex:none}
-  .cells{flex:none;max-width:none;width:100%;max-height:150px}
-  .grid{grid-template-columns:1fr;gap:12px}
-  .card{padding:14px 16px;border-radius:20px}
-  .card .ic{width:52px;height:52px}
-  .chead{padding:22px;border-radius:26px;gap:16px}
-  .chead .ic{width:64px;height:64px}
+  .cells{flex:none;max-width:none;width:100%;max-height:250px}
+  .grid{grid-template-columns:1fr;gap:16px}
+  .card{padding:22px 22px 18px;border-radius:26px}
+  .about{padding:22px}
+  .chead{padding:26px 22px;border-radius:28px;min-height:176px}
+  .chead .big{width:150px;height:150px;right:-30px;top:-30px}
+  .chead h1{max-width:8.6em}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .cells .f,.chead .big{animation:none}
+  .card,.cta,.allbtn,.card .go{transition:none}
+  .rv{opacity:1;transform:none}
 }
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalWebPage","name":"অ্যানিমিয়া: রক্তাল্পতা","description":"হিমোগ্লোবিন কম কেন হয়, কী লক্ষণ, কী পরীক্ষা, আয়রনের চিকিৎসা, খাওয়াদাওয়া, আর কখন হাসপাতালে যাবেন। সহজ ভাষায়, কলকাতার হেমাটোলজিস্টের লেখা।","inLanguage":"bn","url":"https://kolkatahematologyinstitute.com/anaemia/","dateModified":"2026-11-15","about":{"@type":"MedicalCondition","name":"Anaemia"},"author":{"@type":"Person","name":"Dr. Sudip Roy","jobTitle":"Clinical Hematologist","honorificSuffix":"MBBS, MD, DM (Clinical Hematology)"},"publisher":{"@type":"MedicalOrganization","name":"Kolkata Hematology Institute","url":"https://kolkatahematologyinstitute.com/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"bn","mainEntity":[{"@type":"Question","name":"অ্যানিমিয়া কি বিপজ্জনক?","acceptedAnswer":{"@type":"Answer","text":"অল্প অ্যানিমিয়া নিজে সাধারণত বিপজ্জনক নয়, তবে কারণটা জানা সবসময় দরকার। বেশি অ্যানিমিয়া হৃৎপিণ্ডের উপর চাপ ফেলে, আর গর্ভাবস্থায় মা ও বাচ্চা দুজনেরই ঝুঁকি বাড়ায়। আর কারণটা, যেমন লুকোনো রক্তপাত, নিজেও গুরুতর হতে পারে।"}},{"@type":"Question","name":"অ্যানিমিয়া সারতে কতদিন লাগে?","acceptedAnswer":{"@type":"Answer","text":"আয়রনের অভাবে বেশিরভাগ মানুষ কয়েক সপ্তাহের মধ্যে ভালো বোধ করতে শুরু করেন, আর হিমোগ্লোবিন ধীরে ধীরে বাড়ে। আয়রনের ভাঁড়ার ভরাতে সাধারণত কয়েক মাস চিকিৎসা চলে। অন্য ধরনের অ্যানিমিয়ায় সময়টা নির্ভর করে কারণের উপর।"}},{"@type":"Question","name":"অ্যানিমিয়া কি পুরোপুরি সেরে যায়?","acceptedAnswer":{"@type":"Answer","text":"আয়রন, ভিটামিন বি১২ বা ফোলিক অ্যাসিডের অভাবে হওয়া অ্যানিমিয়া, কারণের চিকিৎসা হলে সাধারণত পুরোপুরি ঠিক হয়ে যায়। থ্যালাসেমিয়া মেজরের মতো বংশগত রোগ ট্যাবলেটে সারে না, কিন্তু ঠিকঠাক চিকিৎসায় ভালোভাবে সামলে রাখা যায়। আপনার কোনটা, ডাক্তারবাবু বলে দেবেন।"}},{"@type":"Question","name":"\"রক্ত কম\" আর অ্যানিমিয়া কি একই?","acceptedAnswer":{"@type":"Answer","text":"আমরা বলি \"রক্ত কমে গেছে\", কিন্তু আসলে কমে হিমোগ্লোবিন। রক্তের পরিমাণ প্রায়ই ঠিক থাকে। কমে যায় অক্সিজেন বওয়ার ক্ষমতা।"}},{"@type":"Question","name":"হিমোগ্লোবিন কত থাকা স্বাভাবিক?","acceptedAnswer":{"@type":"Answer","text":"বয়স, ছেলে না মেয়ে, আর গর্ভাবস্থার উপর নির্ভর করে। ভারতে গর্ভবতী নন এমন মহিলাদের 12 g/dL এর নিচে, আর গর্ভবতী মা ও ছোট বাচ্চাদের 11 g/dL এর নিচে অ্যানিমিয়া ধরা হয়। ছেলেদের স্বাভাবিকভাবে একটু বেশি থাকে। নিজের রিপোর্টে ছাপা রেঞ্জটা সবসময় দেখবেন।"}},{"@type":"Question","name":"চা খেলে কি রক্ত কমে?","acceptedAnswer":{"@type":"Answer","text":"চা নিজে অ্যানিমিয়া করে না। কিন্তু খাবারের সঙ্গে চা খেলে খাবার থেকে আয়রন কম শোষণ হয়। খাবারের সঙ্গে নয়, দুই খাবারের মাঝে চা খাওয়ার অভ্যাসটা সহজ, আর কাজের।"}},{"@type":"Question","name":"অ্যানিমিয়ায় কি হেমাটোলজিস্ট দেখাতে হবে?","acceptedAnswer":{"@type":"Answer","text":"অনেক ক্ষেত্রে ফ্যামিলি ডাক্তার বা স্ত্রীরোগ বিশেষজ্ঞই ভালোভাবে সামলে নেন। হেমাটোলজিস্ট দেখান যদি কারণ পরিষ্কার না হয়, চিকিৎসায় উন্নতি না হয়, শ্বেতকণিকা বা প্লেটলেটও গোলমেলে থাকে, পরিবারে রক্তের রোগ থাকে, বা থ্যালাসেমিয়ার সন্দেহ থাকে।"}}]}</script>
 </head>
 <body>
+<div class="progress" aria-hidden="true"></div>
 <header><div class="wrap bar">
-  <a class="brand" href="/"><svg viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#D93A4A"/><circle cx="17" cy="17" r="8" fill="#F08A93"/></svg><span class="nm">কলকাতা হেমাটোলজি ইনস্টিটিউট</span></a>
+  <a class="brand" href="/"><svg viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#D8323F"/><circle cx="17" cy="17" r="8" fill="#F08A93"/></svg><span class="nm">কলকাতা হেমাটোলজি ইনস্টিটিউট</span></a>
   <div class="right">
     <a class="nav" href="/#about">পরিচিতি</a>
     <div class="lang" role="group" aria-label="Language">
@@ -150,11 +223,11 @@ footer p{max-width:36em}
     </div>
   </div>
 </div></header>
-<main><div class="wrap" style="padding-block:18px 0">
+<main class="read">
 <a class="back" href="/#library"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4"/></svg>সব অধ্যায়</a>
-<div class="chead"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#FDECEE"/><circle cx="26" cy="26" r="15" fill="#F2A7AE"/><circle cx="26" cy="26" r="9" fill="#FDECEE"/></svg><div><h1>অ্যানিমিয়া: রক্তাল্পতা</h1></div></div>
-<div class="slot"><div class="prose"><p>রিপোর্টে হিমোগ্লোবিন কম এসেছে? আপনি একা নন। পশ্চিমবঙ্গে সর্বশেষ জাতীয় পারিবারিক স্বাস্থ্য সমীক্ষায় দেখা গেছে, যাঁরা গর্ভবতী নন এমন প্রতি ১০ জন মহিলার মধ্যে প্রায় ৭ জনের অ্যানিমিয়া আছে। গর্ভবতী মায়েদের মধ্যে প্রায় ১০ জনে ৬ জন, আর পাঁচ বছরের কম বয়সী বাচ্চাদের মধ্যে প্রায় ১০ জনে ৭ জন। এত বেশি লোকের হয় বলে অনেকেই ব্যাপারটাকে আর গুরুত্ব দেন না। এখানেই ভুলটা হয়।</p><p>অ্যানিমিয়া নিজে আলাদা কোনো একটা রোগ নয়। এটা একটা সংকেত, শরীরে কোথাও কিছু গোলমাল হচ্ছে। ঠিক যেমন জ্বর একটা সংকেত। কখনো কারণটা সহজ, খাবারে আয়রন কম। কখনো পরিবারে চলে আসা থ্যালাসেমিয়ার বাহক অবস্থা। আবার কখনো এটা এমন কোনো সমস্যার প্রথম ইঙ্গিত, যেটা ভালো করে দেখা দরকার। চিকিৎসা পুরোটাই নির্ভর করে কারণের উপর। তাই আসল কাজ হল কারণটা খুঁজে বের করা।</p><h2>রক্ত কীভাবে অক্সিজেন বয়ে নিয়ে যায়</h2><p>আমাদের রক্তে আছে অসংখ্য লোহিত কণিকা, ইংরেজিতে রেড ব্লাড সেল। প্রতিটা কণিকার ভিতরে থাকে হিমোগ্লোবিন নামে একটা প্রোটিন। হিমোগ্লোবিনকে একটা লরির মতো ভাবুন। ফুসফুস থেকে অক্সিজেন তুলে নিয়ে সে পৌঁছে দেয় মস্তিষ্কে, হৃৎপিণ্ডে, পেশিতে, শরীরের সব জায়গায়।</p><p>এই লোহিত কণিকা তৈরি হয় বোন ম্যারোতে, মানে হাড়ের ভিতরের নরম অংশে। একটা লোহিত কণিকা মোটামুটি তিন থেকে চার মাস বাঁচে, তারপর শরীর সেটাকে সরিয়ে দেয়। তাই বোন ম্যারো সারাক্ষণ কাজ করে চলেছে, পুরোনোর জায়গায় নতুন কণিকা বানাচ্ছে। এর জন্য তার কাঁচামাল লাগে, প্রধানত আয়রন, ভিটামিন বি১২ আর ফোলিক অ্যাসিড। অক্সিজেন কম পড়লে কিডনি টের পায়, আর ইরিথ্রোপোয়েটিন নামে একটা হরমোন পাঠিয়ে বোন ম্যারোকে বলে আরও কণিকা বানাতে।</p><h2>অ্যানিমিয়া মানে কী</h2><p>অ্যানিমিয়া বা রক্তাল্পতা মানে রক্তে হিমোগ্লোবিন যতটা থাকা উচিত, তার চেয়ে কম। লরি কম, তাই শরীরের অঙ্গগুলোয় অক্সিজেনও কম পৌঁছায়। সেই কারণেই অ্যানিমিয়ায় মূলত ক্লান্তি আর হাঁফ ধরা হয়।</p><p>হিমোগ্লোবিন কম কিনা, সেটা ঠিক হয় বয়স, ছেলে না মেয়ে, আর গর্ভাবস্থা আছে কিনা, এসব দেখে। ভারতের জাতীয় সমীক্ষায় অ্যানিমিয়া ধরা হয়:</p><ul><li>গর্ভবতী নন এমন মহিলাদের হিমোগ্লোবিন 12 g/dL এর কম হলে</li><li>গর্ভবতী মহিলাদের 11 g/dL এর কম হলে</li><li>৬ মাস থেকে ৫ বছরের বাচ্চাদের 11 g/dL এর কম হলে</li></ul><p>ছেলেদের হিমোগ্লোবিন স্বাভাবিকভাবে মেয়েদের চেয়ে একটু বেশি থাকে, তাই ওঁদের মাপকাঠিও একটু উপরে। প্রতিটা ল্যাব রিপোর্টে আপনার ফলের পাশে তাদের নিজেদের নর্মাল রেঞ্জ ছাপা থাকে। সেটাই দেখবেন, আর আপনার ক্ষেত্রে সংখ্যাটার মানে কী, সেটা ডাক্তারবাবুর কাছ থেকে বুঝে নেবেন।</p><h2>কেন হয়</h2><p>প্রায় সব অ্যানিমিয়ার কারণ তিনটে ভাগের কোনো একটায় পড়ে। হয় শরীর যথেষ্ট লোহিত কণিকা বানাতে পারছে না, নয় শরীর থেকে রক্ত বেরিয়ে যাচ্ছে, অথবা কণিকাগুলো সময়ের আগেই ভেঙে যাচ্ছে।</p><h3>যথেষ্ট তৈরি হচ্ছে না</h3><ul><li>আয়রনের অভাব। সারা পৃথিবীতে, আর ভারতেও, এটাই সবচেয়ে বড় কারণ। খাবারে আয়রন কম থাকলে, শরীর ঠিকমতো শুষে নিতে না পারলে, অথবা রক্তক্ষরণে আয়রন বেরিয়ে গেলে এটা হয়।</li><li>ভিটামিন বি১২ বা ফোলিক অ্যাসিডের অভাব। বি১২ মূলত আসে মাছ, মাংস, ডিম, দুধ জাতীয় খাবার থেকে। তাই যাঁরা এগুলো একেবারেই খান না, তাঁদের ঝুঁকি বেশি। কারও কারও আবার পাকস্থলী থেকে বি১২ শুষে নেওয়ার ক্ষমতাই কমে যায়।</li><li>দীর্ঘদিনের অসুখ, যেমন কিডনির রোগ, রিউমাটয়েড আর্থ্রাইটিস, টিবির মতো লম্বা সংক্রমণ, কিছু ক্যান্সার। এগুলো কণিকা তৈরির গতি কমিয়ে দেয়।</li><li>বোন ম্যারোর নিজেরই সমস্যা, যেমন অ্যাপ্লাস্টিক অ্যানিমিয়া, লিউকেমিয়া, মায়েলোমা বা মায়েলোডিসপ্লাসিয়া। এগুলো কম হয়, কিন্তু এই কারণেই কখনো কখনো হেমাটোলজিস্টকে আরও গভীরে দেখতে হয়।</li></ul><h3>রক্ত বেরিয়ে যাচ্ছে</h3><ul><li>মাসিকে বেশি রক্তপাত। মহিলা আর কিশোরী মেয়েদের মধ্যে খুব সাধারণ কারণ, অথচ প্রায়ই কেউ খেয়াল করেন না।</li><li>গর্ভাবস্থা আর প্রসব, বিশেষ করে প্রসবের সময় বা পরে অনেক রক্ত গেলে।</li><li>পাকস্থলী বা অন্ত্র থেকে অল্প অল্প করে রক্ত যাওয়া। আলসার, পাইলস, অ্যাসপিরিন বা আইবুপ্রোফেনের মতো ব্যথার ওষুধ নিয়মিত খাওয়া, পেটে কৃমি (হুকওয়ার্ম), আর কম ক্ষেত্রে পাকস্থলী বা অন্ত্রে কোনো টিউমার থেকে এমন হতে পারে। এই রক্তপাত অনেক সময় চোখে দেখা যায় না।</li></ul><h3>কণিকা আগেই ভেঙে যাচ্ছে</h3><ul><li>বংশগত রোগ, যেমন থ্যালাসেমিয়া, হিমোগ্লোবিন ই, সিকল সেল ডিজিজ। বাংলায় থ্যালাসেমিয়ার বাহক আর হিমোগ্লোবিন ই বেশ দেখা যায়। রিপোর্টে লোহিত কণিকা ছোট আসার এটা একটা বড় কারণ।</li><li>শরীরের রোগ প্রতিরোধ ব্যবস্থা নিজের কণিকাকেই আক্রমণ করলে, ম্যালেরিয়ার মতো কিছু সংক্রমণে, বা কিছু ওষুধে। ডাক্তারি ভাষায় একে হিমোলাইসিস বলে। এতে জন্ডিস হতে পারে, মানে চোখ আর চামড়া হলুদ হয়ে যায়।</li></ul><h2>কাদের ঝুঁকি বেশি</h2><ul><li>যে বয়সে মাসিক হয় সেই বয়সের মহিলা, আর গর্ভবতী মায়েরা</li><li>শিশু, ছোট বাচ্চা আর কিশোরী মেয়েরা, কারণ ওদের শরীর দ্রুত বাড়ছে</li><li>যাঁদের খাবারে মূলত ভাত বা রুটি, ডাল, শাক, মাছ, মাংস, ডিম কম</li><li>যাঁদের দীর্ঘদিনের অসুখ আছে, বিশেষ করে কিডনির</li><li>যাঁদের পরিবারে থ্যালাসেমিয়া বা অন্য রক্তের রোগ আছে</li><li>বয়স্ক মানুষ। ওঁদের অ্যানিমিয়াকে &quot;বয়স হয়েছে&quot; বলে মেনে নেবেন না, কারণটা জানা দরকার</li></ul><h2>কী কী টের পেতে পারেন</h2><p>অ্যানিমিয়া অল্প হলে অনেক সময় কিছুই টের পাওয়া যায় না, রুটিন রক্ত পরীক্ষায় হঠাৎ ধরা পড়ে। ধীরে ধীরে বাড়লে শরীর মানিয়ে নেয়, আর মানুষ ক্লান্তিটাকে কাজের চাপ, বয়স বা গরমের ঘাড়ে চাপিয়ে দেন।</p><p>সাধারণ লক্ষণ:</p><ul><li>ক্লান্তি, গায়ে জোর না পাওয়া, বিকেলের দিকে আরও বেশি</li><li>সিঁড়ি ভাঙতে হাঁফ ধরা, আগে যে কাজ সহজে করতেন তাতেও হাঁপিয়ে যাওয়া</li><li>বুক ধড়ফড় করা</li><li>মাথাব্যথা, মাথা ঘোরা, বিশেষ করে হঠাৎ উঠে দাঁড়ালে</li><li>ফ্যাকাশে লাগা, মুখে, চোখের পাতার ভিতরে, হাতের তালুতে, নখে</li><li>হাত-পা ঠান্ডা থাকা</li><li>মন বসাতে না পারা, খিটখিটে মেজাজ। বাচ্চাদের ক্ষেত্রে পড়াশোনায় পিছিয়ে পড়া, খেলতে না চাওয়া</li></ul><p>কিছু লক্ষণ বিশেষ করে আয়রনের অভাবের দিকে ইঙ্গিত করে:</p><ul><li>খাবার নয় এমন জিনিস খাওয়ার ইচ্ছে, যেমন কাঁচা চাল, মাটি, চক, কাগজ বা বরফ</li><li>জিভে ঘা বা জ্বালা, ঠোঁটের কোণে ফাটা</li><li>স্বাভাবিকের চেয়ে বেশি চুল পড়া</li><li>নখ ভঙ্গুর হয়ে যাওয়া, বা চ্যাপ্টা হয়ে চামচের মতো বেঁকে যাওয়া</li><li>রাতে পা অস্থির লাগা</li></ul><p>হাতে-পায়ে ঝিনঝিন বা অবশ ভাব, সোজা হাঁটতে অসুবিধা, ভুলে যাওয়া, এগুলো ভিটামিন বি১২ এর অভাবের লক্ষণ হতে পারে। এর চিকিৎসা তাড়াতাড়ি শুরু করা দরকার, কারণ বি১২ এর অভাবে স্নায়ুর কিছু ক্ষতি পরে আর পুরোপুরি সারে না।</p><h2>এগুলো হলে আজই হাসপাতালে যান</h2><ul><li>বুকে ব্যথা বা চাপ ধরা ভাব</li><li>বসে বা শুয়ে থাকা অবস্থাতেও শ্বাসকষ্ট</li><li>অজ্ঞান হয়ে যাওয়া, বা প্রায় অজ্ঞান হওয়ার মতো লাগা</li><li>রক্তবমি, আলকাতরার মতো কালো পায়খানা, বা পায়খানার সঙ্গে রক্ত</li><li>শরীরের যেকোনো জায়গা থেকে অনেক রক্তপাত যা থামছে না</li><li>অ্যানিমিয়া আছে এমন গর্ভবতী মায়ের হাঁফ ধরা, মাথা ঘোরা বা খুব দুর্বল লাগা</li><li>অ্যানিমিয়া আছে এমন বাচ্চা ঝিমিয়ে পড়লে, হাঁপালে বা খাওয়া বন্ধ করে দিলে</li><li>অ্যানিমিয়ার সঙ্গে খুব জ্বর, চোখ হলুদ আর প্রস্রাব গাঢ় রঙের হলে, অথবা নতুন করে গায়ে কালশিটে বা মাড়ি থেকে রক্ত পড়লে</li></ul><h2>কী কী পরীক্ষা হয়</h2><h3>কমপ্লিট ব্লাড কাউন্ট (সিবিসি)</h3><p>এটাই প্রথম পরীক্ষা। হাতের শিরা থেকে একটু রক্ত নেওয়া হয়। খালি পেটে যেতে হয় না। রিপোর্টে অনেকগুলো লাইন থাকে, তবে অ্যানিমিয়ার জন্য এগুলো সবচেয়ে কাজের:</p><ul><li>হিমোগ্লোবিন (Hb): মূল সংখ্যা। রক্তে অক্সিজেন বওয়ার প্রোটিন কতটা আছে।</li><li>আরবিসি কাউন্ট (RBC): লোহিত কণিকা কতগুলো।</li><li>হিমাটোক্রিট বা পিসিভি (PCV): রক্তের কতটা অংশ লোহিত কণিকা দিয়ে তৈরি।</li><li>এমসিভি (MCV): লোহিত কণিকার গড় আকার। এটা খুব কাজের সূত্র। কণিকা ছোট হলে আয়রনের অভাব বা থ্যালাসেমিয়ার বাহক অবস্থার কথা ভাবা হয়। বড় হলে ভিটামিন বি১২ বা ফোলিক অ্যাসিডের অভাব, লিভার বা থাইরয়েডের সমস্যা, বা বোন ম্যারোর সমস্যার কথা।</li><li>এমসিএইচ আর এমসিএইচসি (MCH, MCHC): প্রতিটা কণিকায় কতটা হিমোগ্লোবিন ভরা আছে।</li><li>আরডিডব্লিউ (RDW): কণিকাগুলোর আকারে কতটা তফাত।</li><li>শ্বেতকণিকা আর প্লেটলেট: এগুলোও যদি কম বা বেশি থাকে, তাহলে বোন ম্যারো ভালো করে দেখার দরকার হতে পারে।</li></ul><h3>কারণ খোঁজার পরীক্ষা</h3><p>সিবিসি দেখে ডাক্তারবাবু এগুলোর কয়েকটা করতে বলতে পারেন:</p><ul><li>সিরাম ফেরিটিন আর আয়রন স্টাডি, শরীরে আয়রনের মজুত কতটা আছে দেখতে। ফেরিটিন মজুত আয়রন বোঝার ভালো পরীক্ষা, তবে সংক্রমণ বা প্রদাহ থাকলে ফেরিটিন বেড়ে যায়, আর তখন আয়রনের অভাব চাপা পড়ে যেতে পারে।</li><li>ভিটামিন বি১২ আর ফোলেটের মাত্রা।</li><li>হিমোগ্লোবিন ইলেক্ট্রোফোরেসিস বা এইচপিএলসি (HPLC), থ্যালাসেমিয়ার বাহক, হিমোগ্লোবিন ই আর অন্য বংশগত হিমোগ্লোবিনের রোগ খুঁজতে। বাংলায় এগুলো বেশি হয় বলে এই পরীক্ষাটা বিশেষ কাজের।</li><li>পেরিফেরাল স্মিয়ার: মাইক্রোস্কোপে রক্তের কণিকাগুলো চোখে দেখা।</li><li>রেটিকুলোসাইট কাউন্ট: বোন ম্যারো কতগুলো নতুন লোহিত কণিকা বানাচ্ছে। ম্যারো তাল রাখার চেষ্টা করছে কিনা, এটা বোঝা যায়।</li><li>কিডনি, লিভার আর থাইরয়েডের পরীক্ষা।</li><li>পায়খানা পরীক্ষা, লুকোনো রক্ত বা কৃমি আছে কিনা দেখতে।</li><li>এন্ডোস্কোপি বা কোলোনোস্কোপি, মানে ক্যামেরা দিয়ে পাকস্থলী বা অন্ত্রের ভিতরটা দেখা, যদি পেট থেকে রক্ত যাওয়ার সন্দেহ থাকে। ছেলেদের, আর মাসিক বন্ধ হয়ে যাওয়ার পরে মহিলাদের, আয়রনের অভাব হলে এটা বিশেষ জরুরি, কারণ ওঁদের ক্ষেত্রে আয়রন সাধারণত কোথাও দিয়ে বেরিয়ে যাচ্ছে।</li><li>বোন ম্যারো পরীক্ষা, শুধু তখনই যখন রক্ত পরীক্ষায় মনে হয় বোন ম্যারো নিজেই ঠিক কাজ করছে না। এই নিয়ে আলাদা একটা অধ্যায় আছে।</li></ul><h2>চিকিৎসা</h2><p>অ্যানিমিয়ার চিকিৎসা মানে তার কারণের চিকিৎসা। কেন কমল না জেনে শুধু হিমোগ্লোবিন বাড়ানো মানে কল দিয়ে জল পড়ছে, সেটা না সারিয়ে মেঝে মোছা।</p><h3>আয়রন</h3><p>আয়রনের অভাবে সাধারণত প্রথমে আয়রন ট্যাবলেট বা সিরাপ দেওয়া হয়। কোন আয়রন, কতটা, কতদিন, সেটা ডাক্তারবাবু ঠিক করবেন। কয়েকটা জিনিস মনে রাখলে উপকার হয়:</p><ul><li>খালি পেটে আয়রন ভালো শোষণ হয়। কিন্তু পেটে অসুবিধা হলে ডাক্তারবাবু খাবারের সঙ্গে খেতে বলতে পারেন।</li><li>ভিটামিন সি আছে এমন কিছুর সঙ্গে খেলে শোষণ ভালো হয়, যেমন একটু লেবু জল বা একটা আমলকী।</li><li>আয়রনের আগে-পরে চা, কফি, দুধ আর ক্যালসিয়াম ট্যাবলেট থেকে কিছুটা সময়ের ফারাক রাখুন। এগুলো আয়রন শোষণে বাধা দেয়।</li><li>আয়রন খেলে পায়খানা কালো হওয়া স্বাভাবিক। কোষ্ঠকাঠিন্য, বমি ভাব, পেটে ব্যথাও প্রায়ই হয়। নিজে থেকে বন্ধ না করে ডাক্তারবাবুকে জানান, কারণ অন্য ধরনের আয়রন আছে যা কারও কারও বেশি সয়।</li><li>কয়েক সপ্তাহের মধ্যে সাধারণত হিমোগ্লোবিন বাড়তে শুরু করে। কিন্তু সংখ্যা স্বাভাবিক হয়ে যাওয়ার পরেও কয়েক মাস ওষুধ চলে, শরীরের আয়রনের ভাঁড়ার ভরাট করার জন্য। &quot;ভালো লাগছে, তাই ছেড়ে দিলাম&quot;, অ্যানিমিয়া ফিরে আসার এটাই সবচেয়ে চেনা কারণ।</li><li>আয়রন ট্যাবলেট বাচ্চাদের নাগালের বাইরে রাখুন। ছোট বাচ্চা বেশি আয়রন খেয়ে ফেললে মারাত্মক বিষক্রিয়া হতে পারে।</li></ul><p>ট্যাবলেটে কাজ না হলে, সহ্য না হলে, অথবা তাড়াতাড়ি হিমোগ্লোবিন বাড়ানো দরকার হলে (যেমন গর্ভাবস্থার শেষ দিকে বা অপারেশনের আগে) হাসপাতালে বা ক্লিনিকে শিরার মাধ্যমে আয়রন দেওয়া যায়।</p><p>বাংলায় একটা সাবধানতা বিশেষ জরুরি। লোহিত কণিকা ছোট মানেই সবসময় আয়রনের অভাব নয়। থ্যালাসেমিয়ার বাহকদেরও কণিকা ছোট হয়, আর তাতে আয়রন খেয়ে কোনো লাভ হয় না। দরকার ছাড়া মাসের পর মাস আয়রন খেলে উল্টে ক্ষতি হতে পারে। তাই লম্বা চিকিৎসা শুরুর আগে ডাক্তারবাবু ফেরিটিন বা থ্যালাসেমিয়ার পরীক্ষা করাতে পারেন।</p><h3>ভিটামিন বি১২ আর ফোলিক অ্যাসিড</h3><p>এগুলো ট্যাবলেট বা ইঞ্জেকশনে দেওয়া হয়। যাঁদের পাকস্থলী বি১২ শুষে নিতে পারে না, তাঁদের সাধারণত ইঞ্জেকশন লাগে, কারও কারও সারাজীবন। কোনটা আর কতদিন অন্তর, সেটা ডাক্তারবাবু ঠিক করবেন।</p><h3>কারণের চিকিৎসা</h3><ul><li>মাসিকে বেশি রক্তপাত হলে তার চিকিৎসা, অনেক সময় স্ত্রীরোগ বিশেষজ্ঞের সাহায্যে।</li><li>কৃমি থাকলে কৃমির ওষুধ।</li><li>পেটে আলসার বা রক্তপাত থাকলে তার চিকিৎসা।</li><li>কিডনি, থাইরয়েড বা লম্বা সংক্রমণের চিকিৎসা সংশ্লিষ্ট বিশেষজ্ঞ করবেন। কখনো ইরিথ্রোপোয়েটিন নামে একটা ইঞ্জেকশন দেওয়া হয়, যা বোন ম্যারোকে কণিকা বানাতে সাহায্য করে।</li><li>বংশগত রোগ আর বোন ম্যারোর রোগের চিকিৎসা করেন হেমাটোলজিস্ট। এই সাইটে প্রতিটার আলাদা অধ্যায় আছে।</li></ul><h3>রক্ত দেওয়া</h3><p>রক্ত দিলে হিমোগ্লোবিন তাড়াতাড়ি বাড়ে, কিন্তু কারণটা সারে না। খুব বেশি অ্যানিমিয়া হলে, বিশ্রামেও শ্বাসকষ্ট বা বুকে ব্যথার মতো বিপদের লক্ষণ থাকলে, অনেক রক্তপাতের পরে, আর থ্যালাসেমিয়া মেজরের মতো কিছু রোগে, যেখানে নিয়মিত রক্ত নেওয়াই চিকিৎসার অংশ, তখন রক্ত দেওয়া হয়। আয়রনের অভাবে হিমোগ্লোবিন বেশ কম হলেও, রোগী স্থিতিশীল থাকলে অনেক সময় শুধু আয়রনেই নিরাপদে চিকিৎসা করা যায়। রক্ত লাগবে কিনা, সেটা ডাক্তারবাবু বিচার করবেন।</p><h2>অ্যানিমিয়া নিয়ে রোজকার জীবন</h2><h3>খাওয়াদাওয়া</h3><p>একবার আয়রনের অভাব জমে গেলে শুধু খাবার দিয়ে সাধারণত সেটা পূরণ হয় না। তবে চিকিৎসার পরে ভালো খাওয়াদাওয়া অ্যানিমিয়াকে দূরে রাখতে সাহায্য করে।</p><ul><li>বাঙালি রান্নাঘরে আয়রনের ভালো উৎস: মাছ, মাংস, মেটে, ডিম, ডাল, ছোলা, আর গাঢ় সবুজ শাক।</li><li>মাছ, মাংস, ডিমের আয়রন শাকসবজির আয়রনের চেয়ে সহজে শরীরে ঢোকে।</li><li>খাবারের সঙ্গে ভিটামিন সি আছে এমন ফল বা সবজি রাখুন, যেমন লেবু, পেয়ারা, আমলকী, কমলালেবু।</li><li>চা-কফি খাবারের সঙ্গে নয়, দুই খাবারের মাঝে খান।</li><li>মাছ, মাংস, ডিম, দুধ একেবারেই না খেলে ভিটামিন বি১২ নিয়ে ডাক্তারবাবুর সঙ্গে কথা বলুন।</li></ul><h3>গর্ভাবস্থা</h3><p>গর্ভাবস্থায় শরীরে অনেক বেশি আয়রন লাগে, আর এই সময়ের অ্যানিমিয়া মা আর বাচ্চা দুজনেরই ক্ষতি করে। ডাক্তারবাবু বা সরকারি স্বাস্থ্যকেন্দ্র যে আয়রন আর ফোলিক অ্যাসিড ট্যাবলেট দেন, পুরো গর্ভাবস্থা জুড়ে নিয়ম করে খান, আর বলা অনুযায়ী হিমোগ্লোবিন পরীক্ষা করান। পরিবারে থ্যালাসেমিয়া থাকলে, বা রিপোর্টে কণিকা ছোট এলে, থ্যালাসেমিয়ার পরীক্ষার কথা জিজ্ঞেস করুন। সম্ভব হলে স্বামী-স্ত্রী দুজনেরই, আর সম্ভব হলে গর্ভধারণের আগেই।</p><h3>বাচ্চারা</h3><p>অ্যানিমিয়া থাকলে বাচ্চারা পড়া ধরতে দেরি করে, ক্লান্ত থাকে, আর সহজে অসুখে পড়ে। অনেক বাচ্চার একসঙ্গে আয়রন, কৃমির ওষুধ আর ভালো খাবার, তিনটেই দরকার হয়। বড়দের আয়রন ট্যাবলেট বাচ্চাকে দেবেন না। ঠিক কোনটা দেবেন, ডাক্তারবাবুকে জিজ্ঞেস করুন।</p><h3>কাজকর্ম আর ব্যায়াম</h3><p>অল্প বা মাঝারি অ্যানিমিয়া নিয়ে বেশিরভাগ মানুষ কাজ চালিয়ে যেতে পারেন। দরকার হলে বিশ্রাম নিন, আর হিমোগ্লোবিন যত বাড়বে, ধীরে ধীরে পরিশ্রম বাড়ান। পরিশ্রমে বুকে ব্যথা, মাথা ঘুরে পড়ে যাওয়ার মতো লাগা বা খুব শ্বাসকষ্ট হলে থামুন, আর ডাক্তার দেখান।</p><h2>ভুল ধারণা আর আসল কথা</h2><h3>&quot;বিট আর বেদানা খেলেই রক্ত বেড়ে যাবে&quot;</h3><p>এগুলো ভালো খাবার, কিন্তু লোকে যতটা ভাবেন, তার চেয়ে অনেক কম আয়রন থাকে। একবার আয়রনের অভাবে অ্যানিমিয়া হয়ে গেলে শুধু খাবারে সাধারণত ভাঁড়ার ভরে না। কারণের চিকিৎসা আর সাধারণত আয়রনের ওষুধ লাগে।</p><h3>&quot;আয়রন ট্যাবলেটে মোটা হয়ে যায়&quot; বা &quot;আয়রন শরীর গরম করে&quot;</h3><p>আয়রন ট্যাবলেটে ওজন বাড়ে না। পেটের গোলমাল আর কোষ্ঠকাঠিন্য হতে পারে, সেটা ডাক্তারবাবু সামলে দিতে পারবেন।</p><h3>&quot;এখন তো ভালো আছি, আয়রন বন্ধ করে দিই&quot;</h3><p>শরীরের আয়রনের ভাঁড়ার ভরার অনেক আগেই ভালো লাগতে শুরু করে। আগেভাগে বন্ধ করাই অ্যানিমিয়া ফিরে আসার সবচেয়ে চেনা কারণ।</p><h3>&quot;মেয়েদের তো রক্ত একটু কম থাকবেই&quot;</h3><p>মেয়েদের মধ্যে অ্যানিমিয়া বেশি দেখা যায় ঠিকই, কিন্তু সেটা কখনোই স্বাভাবিক নয়। এতে ক্লান্তি হয়, গর্ভাবস্থায় ক্ষতি হয়, আর এর আড়ালে অন্য অসুখ লুকিয়ে থাকতে পারে।</p><h3>&quot;এই বয়সে রক্ত তো কমবেই&quot;</h3><p>বয়স্ক মানুষের অ্যানিমিয়ার সবসময় একটা কারণ থাকে। পেট থেকে রক্ত যাওয়া, কিডনির অসুখ বা বোন ম্যারোর সমস্যার প্রথম লক্ষণ হতে পারে এটা।</p><h2>ডাক্তারবাবুকে কী কী জিজ্ঞেস করবেন</h2><ul><li>আমার কোন ধরনের অ্যানিমিয়া, আর কেন হয়েছে?</li><li>আমার হিমোগ্লোবিন কতটা কম, আর কত তাড়াতাড়ি বাড়বে বলে আশা করছেন?</li><li>কারণ খুঁজতে আর কোনো পরীক্ষা দরকার?</li><li>আমি কি থ্যালাসেমিয়ার বাহক বা আমার হিমোগ্লোবিন ই থাকতে পারে? পরিবারের অন্যদের কি পরীক্ষা করানো উচিত?</li><li>ওষুধ কতদিন খেতে হবে, আর কী কী পার্শ্বপ্রতিক্রিয়ার দিকে নজর রাখব?</li><li>আবার কবে রক্ত পরীক্ষা করাব?</li><li>খাওয়াদাওয়ায় বা অন্য ওষুধে কিছু বদলাতে হবে?</li><li>কোন লক্ষণ হলে আগেই চলে আসব?</li></ul><h2>অনেকে যা জানতে চান</h2><h3>অ্যানিমিয়া কি বিপজ্জনক?</h3><p>অল্প অ্যানিমিয়া নিজে সাধারণত বিপজ্জনক নয়, তবে কারণটা জানা সবসময় দরকার। বেশি অ্যানিমিয়া হৃৎপিণ্ডের উপর চাপ ফেলে, আর গর্ভাবস্থায় মা ও বাচ্চা দুজনেরই ঝুঁকি বাড়ায়। আর কারণটা, যেমন লুকোনো রক্তপাত, নিজেও গুরুতর হতে পারে।</p><h3>অ্যানিমিয়া সারতে কতদিন লাগে?</h3><p>আয়রনের অভাবে বেশিরভাগ মানুষ কয়েক সপ্তাহের মধ্যে ভালো বোধ করতে শুরু করেন, আর হিমোগ্লোবিন ধীরে ধীরে বাড়ে। আয়রনের ভাঁড়ার ভরাতে সাধারণত কয়েক মাস চিকিৎসা চলে। অন্য ধরনের অ্যানিমিয়ায় সময়টা নির্ভর করে কারণের উপর।</p><h3>অ্যানিমিয়া কি পুরোপুরি সেরে যায়?</h3><p>আয়রন, ভিটামিন বি১২ বা ফোলিক অ্যাসিডের অভাবে হওয়া অ্যানিমিয়া, কারণের চিকিৎসা হলে সাধারণত পুরোপুরি ঠিক হয়ে যায়। থ্যালাসেমিয়া মেজরের মতো বংশগত রোগ ট্যাবলেটে সারে না, কিন্তু ঠিকঠাক চিকিৎসায় ভালোভাবে সামলে রাখা যায়। আপনার কোনটা, ডাক্তারবাবু বলে দেবেন।</p><h3>&quot;রক্ত কম&quot; আর অ্যানিমিয়া কি একই?</h3><p>আমরা বলি &quot;রক্ত কমে গেছে&quot;, কিন্তু আসলে কমে হিমোগ্লোবিন। রক্তের পরিমাণ প্রায়ই ঠিক থাকে। কমে যায় অক্সিজেন বওয়ার ক্ষমতা।</p><h3>হিমোগ্লোবিন কত থাকা স্বাভাবিক?</h3><p>বয়স, ছেলে না মেয়ে, আর গর্ভাবস্থার উপর নির্ভর করে। ভারতে গর্ভবতী নন এমন মহিলাদের 12 g/dL এর নিচে, আর গর্ভবতী মা ও ছোট বাচ্চাদের 11 g/dL এর নিচে অ্যানিমিয়া ধরা হয়। ছেলেদের স্বাভাবিকভাবে একটু বেশি থাকে। নিজের রিপোর্টে ছাপা রেঞ্জটা সবসময় দেখবেন।</p><h3>চা খেলে কি রক্ত কমে?</h3><p>চা নিজে অ্যানিমিয়া করে না। কিন্তু খাবারের সঙ্গে চা খেলে খাবার থেকে আয়রন কম শোষণ হয়। খাবারের সঙ্গে নয়, দুই খাবারের মাঝে চা খাওয়ার অভ্যাসটা সহজ, আর কাজের।</p><h3>অ্যানিমিয়ায় কি হেমাটোলজিস্ট দেখাতে হবে?</h3><p>অনেক ক্ষেত্রে ফ্যামিলি ডাক্তার বা স্ত্রীরোগ বিশেষজ্ঞই ভালোভাবে সামলে নেন। হেমাটোলজিস্ট দেখান যদি কারণ পরিষ্কার না হয়, চিকিৎসায় উন্নতি না হয়, শ্বেতকণিকা বা প্লেটলেটও গোলমেলে থাকে, পরিবারে রক্তের রোগ থাকে, বা থ্যালাসেমিয়ার সন্দেহ থাকে।</p><h2>মূল কথাগুলো</h2><ul><li>অ্যানিমিয়া মানে হিমোগ্লোবিন কম। এটা একটা সমস্যার সংকেত, শেষ রোগনির্ণয় নয়।</li><li>আয়রনের অভাব সবচেয়ে বড় কারণ। কিন্তু বাংলায় থ্যালাসেমিয়ার বাহক আর হিমোগ্লোবিন ই এর কথাও ভাবতে হবে।</li><li>সংখ্যাটা বাড়ানোর চেয়ে কারণ খুঁজে তার চিকিৎসা করা বেশি জরুরি।</li><li>ভালো লাগলেই নয়, ডাক্তারবাবু যতদিন বলেন ততদিন আয়রন খান।</li><li>বুকে ব্যথা, বিশ্রামে শ্বাসকষ্ট, অজ্ঞান হয়ে যাওয়া বা কালো পায়খানা হলে সেদিনই হাসপাতালে যান।</li></ul></div></div><p class="byline">লিখেছেন ডাঃ সুদীপ রায়, এমবিবিএস, এমডি, ডিএম (ক্লিনিক্যাল হেমাটোলজি)। শেষ বদল ১৫ নভেম্বর, ২০২৬।</p>
-</div></main>
+<div class="chead"><svg class="big" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#FDECEE"/><circle cx="26" cy="26" r="15" fill="#F2A7AE"/><circle cx="26" cy="26" r="9" fill="#FDECEE"/></svg><span class="kick">১২ মিনিটে পড়ুন</span><h1>অ্যানিমিয়া: রক্তাল্পতা</h1></div>
+<div class="by"><svg class="av" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#CFE6DF"/><circle cx="26" cy="20" r="8" fill="#0B3F3D"/><path d="M10 44c2-10 9-14 16-14s14 4 16 14" fill="#0B3F3D"/></svg><div><b>লিখেছেন ডাঃ সুদীপ রায়</b>এমবিবিএস, এমডি, ডিএম (ক্লিনিক্যাল হেমাটোলজি)<br>শেষ আপডেট ১৫ নভেম্বর, ২০২৬</div></div><article><div class="story"><p class="lede">রিপোর্টে হিমোগ্লোবিন কম এসেছে? আপনি একা নন। পশ্চিমবঙ্গে সর্বশেষ জাতীয় পারিবারিক স্বাস্থ্য সমীক্ষায় দেখা গেছে, যাঁরা গর্ভবতী নন এমন প্রতি ১০ জন মহিলার মধ্যে প্রায় ৭ জনের অ্যানিমিয়া আছে। গর্ভবতী মায়েদের মধ্যে প্রায় ১০ জনে ৬ জন, আর পাঁচ বছরের কম বয়সী বাচ্চাদের মধ্যে প্রায় ১০ জনে ৭ জন। এত বেশি লোকের হয় বলে অনেকেই ব্যাপারটাকে আর গুরুত্ব দেন না। এখানেই ভুলটা হয়।</p><p>অ্যানিমিয়া নিজে আলাদা কোনো একটা রোগ নয়। এটা একটা সংকেত, শরীরে কোথাও কিছু গোলমাল হচ্ছে। ঠিক যেমন জ্বর একটা সংকেত। কখনো কারণটা সহজ, খাবারে আয়রন কম। কখনো পরিবারে চলে আসা থ্যালাসেমিয়ার বাহক অবস্থা। আবার কখনো এটা এমন কোনো সমস্যার প্রথম ইঙ্গিত, যেটা ভালো করে দেখা দরকার। চিকিৎসা পুরোটাই নির্ভর করে কারণের উপর। তাই আসল কাজ হল কারণটা খুঁজে বের করা।</p></div><div class="sep" aria-hidden="true"><i></i><i></i><i></i></div><div class="prose"><h2>রক্ত কীভাবে অক্সিজেন বয়ে নিয়ে যায়</h2><p>আমাদের রক্তে আছে অসংখ্য লোহিত কণিকা, ইংরেজিতে রেড ব্লাড সেল। প্রতিটা কণিকার ভিতরে থাকে হিমোগ্লোবিন নামে একটা প্রোটিন। হিমোগ্লোবিনকে একটা লরির মতো ভাবুন। ফুসফুস থেকে অক্সিজেন তুলে নিয়ে সে পৌঁছে দেয় মস্তিষ্কে, হৃৎপিণ্ডে, পেশিতে, শরীরের সব জায়গায়।</p><p>এই লোহিত কণিকা তৈরি হয় বোন ম্যারোতে, মানে হাড়ের ভিতরের নরম অংশে। একটা লোহিত কণিকা মোটামুটি তিন থেকে চার মাস বাঁচে, তারপর শরীর সেটাকে সরিয়ে দেয়। তাই বোন ম্যারো সারাক্ষণ কাজ করে চলেছে, পুরোনোর জায়গায় নতুন কণিকা বানাচ্ছে। এর জন্য তার কাঁচামাল লাগে, প্রধানত আয়রন, ভিটামিন বি১২ আর ফোলিক অ্যাসিড। অক্সিজেন কম পড়লে কিডনি টের পায়, আর ইরিথ্রোপোয়েটিন নামে একটা হরমোন পাঠিয়ে বোন ম্যারোকে বলে আরও কণিকা বানাতে।</p><h2>অ্যানিমিয়া মানে কী</h2><p>অ্যানিমিয়া বা রক্তাল্পতা মানে রক্তে হিমোগ্লোবিন যতটা থাকা উচিত, তার চেয়ে কম। লরি কম, তাই শরীরের অঙ্গগুলোয় অক্সিজেনও কম পৌঁছায়। সেই কারণেই অ্যানিমিয়ায় মূলত ক্লান্তি আর হাঁফ ধরা হয়।</p><p>হিমোগ্লোবিন কম কিনা, সেটা ঠিক হয় বয়স, ছেলে না মেয়ে, আর গর্ভাবস্থা আছে কিনা, এসব দেখে। ভারতের জাতীয় সমীক্ষায় অ্যানিমিয়া ধরা হয়:</p><ul><li>গর্ভবতী নন এমন মহিলাদের হিমোগ্লোবিন 12 g/dL এর কম হলে</li><li>গর্ভবতী মহিলাদের 11 g/dL এর কম হলে</li><li>৬ মাস থেকে ৫ বছরের বাচ্চাদের 11 g/dL এর কম হলে</li></ul><p>ছেলেদের হিমোগ্লোবিন স্বাভাবিকভাবে মেয়েদের চেয়ে একটু বেশি থাকে, তাই ওঁদের মাপকাঠিও একটু উপরে। প্রতিটা ল্যাব রিপোর্টে আপনার ফলের পাশে তাদের নিজেদের নর্মাল রেঞ্জ ছাপা থাকে। সেটাই দেখবেন, আর আপনার ক্ষেত্রে সংখ্যাটার মানে কী, সেটা ডাক্তারবাবুর কাছ থেকে বুঝে নেবেন।</p><h2>কেন হয়</h2><p>প্রায় সব অ্যানিমিয়ার কারণ তিনটে ভাগের কোনো একটায় পড়ে। হয় শরীর যথেষ্ট লোহিত কণিকা বানাতে পারছে না, নয় শরীর থেকে রক্ত বেরিয়ে যাচ্ছে, অথবা কণিকাগুলো সময়ের আগেই ভেঙে যাচ্ছে।</p><h3>যথেষ্ট তৈরি হচ্ছে না</h3><ul><li>আয়রনের অভাব। সারা পৃথিবীতে, আর ভারতেও, এটাই সবচেয়ে বড় কারণ। খাবারে আয়রন কম থাকলে, শরীর ঠিকমতো শুষে নিতে না পারলে, অথবা রক্তক্ষরণে আয়রন বেরিয়ে গেলে এটা হয়।</li><li>ভিটামিন বি১২ বা ফোলিক অ্যাসিডের অভাব। বি১২ মূলত আসে মাছ, মাংস, ডিম, দুধ জাতীয় খাবার থেকে। তাই যাঁরা এগুলো একেবারেই খান না, তাঁদের ঝুঁকি বেশি। কারও কারও আবার পাকস্থলী থেকে বি১২ শুষে নেওয়ার ক্ষমতাই কমে যায়।</li><li>দীর্ঘদিনের অসুখ, যেমন কিডনির রোগ, রিউমাটয়েড আর্থ্রাইটিস, টিবির মতো লম্বা সংক্রমণ, কিছু ক্যান্সার। এগুলো কণিকা তৈরির গতি কমিয়ে দেয়।</li><li>বোন ম্যারোর নিজেরই সমস্যা, যেমন অ্যাপ্লাস্টিক অ্যানিমিয়া, লিউকেমিয়া, মায়েলোমা বা মায়েলোডিসপ্লাসিয়া। এগুলো কম হয়, কিন্তু এই কারণেই কখনো কখনো হেমাটোলজিস্টকে আরও গভীরে দেখতে হয়।</li></ul><h3>রক্ত বেরিয়ে যাচ্ছে</h3><ul><li>মাসিকে বেশি রক্তপাত। মহিলা আর কিশোরী মেয়েদের মধ্যে খুব সাধারণ কারণ, অথচ প্রায়ই কেউ খেয়াল করেন না।</li><li>গর্ভাবস্থা আর প্রসব, বিশেষ করে প্রসবের সময় বা পরে অনেক রক্ত গেলে।</li><li>পাকস্থলী বা অন্ত্র থেকে অল্প অল্প করে রক্ত যাওয়া। আলসার, পাইলস, অ্যাসপিরিন বা আইবুপ্রোফেনের মতো ব্যথার ওষুধ নিয়মিত খাওয়া, পেটে কৃমি (হুকওয়ার্ম), আর কম ক্ষেত্রে পাকস্থলী বা অন্ত্রে কোনো টিউমার থেকে এমন হতে পারে। এই রক্তপাত অনেক সময় চোখে দেখা যায় না।</li></ul><h3>কণিকা আগেই ভেঙে যাচ্ছে</h3><ul><li>বংশগত রোগ, যেমন থ্যালাসেমিয়া, হিমোগ্লোবিন ই, সিকল সেল ডিজিজ। বাংলায় থ্যালাসেমিয়ার বাহক আর হিমোগ্লোবিন ই বেশ দেখা যায়। রিপোর্টে লোহিত কণিকা ছোট আসার এটা একটা বড় কারণ।</li><li>শরীরের রোগ প্রতিরোধ ব্যবস্থা নিজের কণিকাকেই আক্রমণ করলে, ম্যালেরিয়ার মতো কিছু সংক্রমণে, বা কিছু ওষুধে। ডাক্তারি ভাষায় একে হিমোলাইসিস বলে। এতে জন্ডিস হতে পারে, মানে চোখ আর চামড়া হলুদ হয়ে যায়।</li></ul><h2>কাদের ঝুঁকি বেশি</h2><ul><li>যে বয়সে মাসিক হয় সেই বয়সের মহিলা, আর গর্ভবতী মায়েরা</li><li>শিশু, ছোট বাচ্চা আর কিশোরী মেয়েরা, কারণ ওদের শরীর দ্রুত বাড়ছে</li><li>যাঁদের খাবারে মূলত ভাত বা রুটি, ডাল, শাক, মাছ, মাংস, ডিম কম</li><li>যাঁদের দীর্ঘদিনের অসুখ আছে, বিশেষ করে কিডনির</li><li>যাঁদের পরিবারে থ্যালাসেমিয়া বা অন্য রক্তের রোগ আছে</li><li>বয়স্ক মানুষ। ওঁদের অ্যানিমিয়াকে &quot;বয়স হয়েছে&quot; বলে মেনে নেবেন না, কারণটা জানা দরকার</li></ul><h2>কী কী টের পেতে পারেন</h2><p>অ্যানিমিয়া অল্প হলে অনেক সময় কিছুই টের পাওয়া যায় না, রুটিন রক্ত পরীক্ষায় হঠাৎ ধরা পড়ে। ধীরে ধীরে বাড়লে শরীর মানিয়ে নেয়, আর মানুষ ক্লান্তিটাকে কাজের চাপ, বয়স বা গরমের ঘাড়ে চাপিয়ে দেন।</p><p>সাধারণ লক্ষণ:</p><ul><li>ক্লান্তি, গায়ে জোর না পাওয়া, বিকেলের দিকে আরও বেশি</li><li>সিঁড়ি ভাঙতে হাঁফ ধরা, আগে যে কাজ সহজে করতেন তাতেও হাঁপিয়ে যাওয়া</li><li>বুক ধড়ফড় করা</li><li>মাথাব্যথা, মাথা ঘোরা, বিশেষ করে হঠাৎ উঠে দাঁড়ালে</li><li>ফ্যাকাশে লাগা, মুখে, চোখের পাতার ভিতরে, হাতের তালুতে, নখে</li><li>হাত-পা ঠান্ডা থাকা</li><li>মন বসাতে না পারা, খিটখিটে মেজাজ। বাচ্চাদের ক্ষেত্রে পড়াশোনায় পিছিয়ে পড়া, খেলতে না চাওয়া</li></ul><p>কিছু লক্ষণ বিশেষ করে আয়রনের অভাবের দিকে ইঙ্গিত করে:</p><ul><li>খাবার নয় এমন জিনিস খাওয়ার ইচ্ছে, যেমন কাঁচা চাল, মাটি, চক, কাগজ বা বরফ</li><li>জিভে ঘা বা জ্বালা, ঠোঁটের কোণে ফাটা</li><li>স্বাভাবিকের চেয়ে বেশি চুল পড়া</li><li>নখ ভঙ্গুর হয়ে যাওয়া, বা চ্যাপ্টা হয়ে চামচের মতো বেঁকে যাওয়া</li><li>রাতে পা অস্থির লাগা</li></ul><p>হাতে-পায়ে ঝিনঝিন বা অবশ ভাব, সোজা হাঁটতে অসুবিধা, ভুলে যাওয়া, এগুলো ভিটামিন বি১২ এর অভাবের লক্ষণ হতে পারে। এর চিকিৎসা তাড়াতাড়ি শুরু করা দরকার, কারণ বি১২ এর অভাবে স্নায়ুর কিছু ক্ষতি পরে আর পুরোপুরি সারে না।</p><section class="box warn"><h2><svg viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4.5 27 25.5H3z"/><path d="M15 12.5v6"/><path d="M15 22v.4"/></svg><span>এগুলো হলে আজই হাসপাতালে যান</span></h2><ul><li>বুকে ব্যথা বা চাপ ধরা ভাব</li><li>বসে বা শুয়ে থাকা অবস্থাতেও শ্বাসকষ্ট</li><li>অজ্ঞান হয়ে যাওয়া, বা প্রায় অজ্ঞান হওয়ার মতো লাগা</li><li>রক্তবমি, আলকাতরার মতো কালো পায়খানা, বা পায়খানার সঙ্গে রক্ত</li><li>শরীরের যেকোনো জায়গা থেকে অনেক রক্তপাত যা থামছে না</li><li>অ্যানিমিয়া আছে এমন গর্ভবতী মায়ের হাঁফ ধরা, মাথা ঘোরা বা খুব দুর্বল লাগা</li><li>অ্যানিমিয়া আছে এমন বাচ্চা ঝিমিয়ে পড়লে, হাঁপালে বা খাওয়া বন্ধ করে দিলে</li><li>অ্যানিমিয়ার সঙ্গে খুব জ্বর, চোখ হলুদ আর প্রস্রাব গাঢ় রঙের হলে, অথবা নতুন করে গায়ে কালশিটে বা মাড়ি থেকে রক্ত পড়লে</li></ul></section><h2>কী কী পরীক্ষা হয়</h2><h3>কমপ্লিট ব্লাড কাউন্ট (সিবিসি)</h3><p>এটাই প্রথম পরীক্ষা। হাতের শিরা থেকে একটু রক্ত নেওয়া হয়। খালি পেটে যেতে হয় না। রিপোর্টে অনেকগুলো লাইন থাকে, তবে অ্যানিমিয়ার জন্য এগুলো সবচেয়ে কাজের:</p><ul><li>হিমোগ্লোবিন (Hb): মূল সংখ্যা। রক্তে অক্সিজেন বওয়ার প্রোটিন কতটা আছে।</li><li>আরবিসি কাউন্ট (RBC): লোহিত কণিকা কতগুলো।</li><li>হিমাটোক্রিট বা পিসিভি (PCV): রক্তের কতটা অংশ লোহিত কণিকা দিয়ে তৈরি।</li><li>এমসিভি (MCV): লোহিত কণিকার গড় আকার। এটা খুব কাজের সূত্র। কণিকা ছোট হলে আয়রনের অভাব বা থ্যালাসেমিয়ার বাহক অবস্থার কথা ভাবা হয়। বড় হলে ভিটামিন বি১২ বা ফোলিক অ্যাসিডের অভাব, লিভার বা থাইরয়েডের সমস্যা, বা বোন ম্যারোর সমস্যার কথা।</li><li>এমসিএইচ আর এমসিএইচসি (MCH, MCHC): প্রতিটা কণিকায় কতটা হিমোগ্লোবিন ভরা আছে।</li><li>আরডিডব্লিউ (RDW): কণিকাগুলোর আকারে কতটা তফাত।</li><li>শ্বেতকণিকা আর প্লেটলেট: এগুলোও যদি কম বা বেশি থাকে, তাহলে বোন ম্যারো ভালো করে দেখার দরকার হতে পারে।</li></ul><h3>কারণ খোঁজার পরীক্ষা</h3><p>সিবিসি দেখে ডাক্তারবাবু এগুলোর কয়েকটা করতে বলতে পারেন:</p><ul><li>সিরাম ফেরিটিন আর আয়রন স্টাডি, শরীরে আয়রনের মজুত কতটা আছে দেখতে। ফেরিটিন মজুত আয়রন বোঝার ভালো পরীক্ষা, তবে সংক্রমণ বা প্রদাহ থাকলে ফেরিটিন বেড়ে যায়, আর তখন আয়রনের অভাব চাপা পড়ে যেতে পারে।</li><li>ভিটামিন বি১২ আর ফোলেটের মাত্রা।</li><li>হিমোগ্লোবিন ইলেক্ট্রোফোরেসিস বা এইচপিএলসি (HPLC), থ্যালাসেমিয়ার বাহক, হিমোগ্লোবিন ই আর অন্য বংশগত হিমোগ্লোবিনের রোগ খুঁজতে। বাংলায় এগুলো বেশি হয় বলে এই পরীক্ষাটা বিশেষ কাজের।</li><li>পেরিফেরাল স্মিয়ার: মাইক্রোস্কোপে রক্তের কণিকাগুলো চোখে দেখা।</li><li>রেটিকুলোসাইট কাউন্ট: বোন ম্যারো কতগুলো নতুন লোহিত কণিকা বানাচ্ছে। ম্যারো তাল রাখার চেষ্টা করছে কিনা, এটা বোঝা যায়।</li><li>কিডনি, লিভার আর থাইরয়েডের পরীক্ষা।</li><li>পায়খানা পরীক্ষা, লুকোনো রক্ত বা কৃমি আছে কিনা দেখতে।</li><li>এন্ডোস্কোপি বা কোলোনোস্কোপি, মানে ক্যামেরা দিয়ে পাকস্থলী বা অন্ত্রের ভিতরটা দেখা, যদি পেট থেকে রক্ত যাওয়ার সন্দেহ থাকে। ছেলেদের, আর মাসিক বন্ধ হয়ে যাওয়ার পরে মহিলাদের, আয়রনের অভাব হলে এটা বিশেষ জরুরি, কারণ ওঁদের ক্ষেত্রে আয়রন সাধারণত কোথাও দিয়ে বেরিয়ে যাচ্ছে।</li><li>বোন ম্যারো পরীক্ষা, শুধু তখনই যখন রক্ত পরীক্ষায় মনে হয় বোন ম্যারো নিজেই ঠিক কাজ করছে না। এই নিয়ে আলাদা একটা অধ্যায় আছে।</li></ul><h2>চিকিৎসা</h2><p>অ্যানিমিয়ার চিকিৎসা মানে তার কারণের চিকিৎসা। কেন কমল না জেনে শুধু হিমোগ্লোবিন বাড়ানো মানে কল দিয়ে জল পড়ছে, সেটা না সারিয়ে মেঝে মোছা।</p><h3>আয়রন</h3><p>আয়রনের অভাবে সাধারণত প্রথমে আয়রন ট্যাবলেট বা সিরাপ দেওয়া হয়। কোন আয়রন, কতটা, কতদিন, সেটা ডাক্তারবাবু ঠিক করবেন। কয়েকটা জিনিস মনে রাখলে উপকার হয়:</p><ul><li>খালি পেটে আয়রন ভালো শোষণ হয়। কিন্তু পেটে অসুবিধা হলে ডাক্তারবাবু খাবারের সঙ্গে খেতে বলতে পারেন।</li><li>ভিটামিন সি আছে এমন কিছুর সঙ্গে খেলে শোষণ ভালো হয়, যেমন একটু লেবু জল বা একটা আমলকী।</li><li>আয়রনের আগে-পরে চা, কফি, দুধ আর ক্যালসিয়াম ট্যাবলেট থেকে কিছুটা সময়ের ফারাক রাখুন। এগুলো আয়রন শোষণে বাধা দেয়।</li><li>আয়রন খেলে পায়খানা কালো হওয়া স্বাভাবিক। কোষ্ঠকাঠিন্য, বমি ভাব, পেটে ব্যথাও প্রায়ই হয়। নিজে থেকে বন্ধ না করে ডাক্তারবাবুকে জানান, কারণ অন্য ধরনের আয়রন আছে যা কারও কারও বেশি সয়।</li><li>কয়েক সপ্তাহের মধ্যে সাধারণত হিমোগ্লোবিন বাড়তে শুরু করে। কিন্তু সংখ্যা স্বাভাবিক হয়ে যাওয়ার পরেও কয়েক মাস ওষুধ চলে, শরীরের আয়রনের ভাঁড়ার ভরাট করার জন্য। &quot;ভালো লাগছে, তাই ছেড়ে দিলাম&quot;, অ্যানিমিয়া ফিরে আসার এটাই সবচেয়ে চেনা কারণ।</li><li>আয়রন ট্যাবলেট বাচ্চাদের নাগালের বাইরে রাখুন। ছোট বাচ্চা বেশি আয়রন খেয়ে ফেললে মারাত্মক বিষক্রিয়া হতে পারে।</li></ul><p>ট্যাবলেটে কাজ না হলে, সহ্য না হলে, অথবা তাড়াতাড়ি হিমোগ্লোবিন বাড়ানো দরকার হলে (যেমন গর্ভাবস্থার শেষ দিকে বা অপারেশনের আগে) হাসপাতালে বা ক্লিনিকে শিরার মাধ্যমে আয়রন দেওয়া যায়।</p><p>বাংলায় একটা সাবধানতা বিশেষ জরুরি। লোহিত কণিকা ছোট মানেই সবসময় আয়রনের অভাব নয়। থ্যালাসেমিয়ার বাহকদেরও কণিকা ছোট হয়, আর তাতে আয়রন খেয়ে কোনো লাভ হয় না। দরকার ছাড়া মাসের পর মাস আয়রন খেলে উল্টে ক্ষতি হতে পারে। তাই লম্বা চিকিৎসা শুরুর আগে ডাক্তারবাবু ফেরিটিন বা থ্যালাসেমিয়ার পরীক্ষা করাতে পারেন।</p><h3>ভিটামিন বি১২ আর ফোলিক অ্যাসিড</h3><p>এগুলো ট্যাবলেট বা ইঞ্জেকশনে দেওয়া হয়। যাঁদের পাকস্থলী বি১২ শুষে নিতে পারে না, তাঁদের সাধারণত ইঞ্জেকশন লাগে, কারও কারও সারাজীবন। কোনটা আর কতদিন অন্তর, সেটা ডাক্তারবাবু ঠিক করবেন।</p><h3>কারণের চিকিৎসা</h3><ul><li>মাসিকে বেশি রক্তপাত হলে তার চিকিৎসা, অনেক সময় স্ত্রীরোগ বিশেষজ্ঞের সাহায্যে।</li><li>কৃমি থাকলে কৃমির ওষুধ।</li><li>পেটে আলসার বা রক্তপাত থাকলে তার চিকিৎসা।</li><li>কিডনি, থাইরয়েড বা লম্বা সংক্রমণের চিকিৎসা সংশ্লিষ্ট বিশেষজ্ঞ করবেন। কখনো ইরিথ্রোপোয়েটিন নামে একটা ইঞ্জেকশন দেওয়া হয়, যা বোন ম্যারোকে কণিকা বানাতে সাহায্য করে।</li><li>বংশগত রোগ আর বোন ম্যারোর রোগের চিকিৎসা করেন হেমাটোলজিস্ট। এই সাইটে প্রতিটার আলাদা অধ্যায় আছে।</li></ul><h3>রক্ত দেওয়া</h3><p>রক্ত দিলে হিমোগ্লোবিন তাড়াতাড়ি বাড়ে, কিন্তু কারণটা সারে না। খুব বেশি অ্যানিমিয়া হলে, বিশ্রামেও শ্বাসকষ্ট বা বুকে ব্যথার মতো বিপদের লক্ষণ থাকলে, অনেক রক্তপাতের পরে, আর থ্যালাসেমিয়া মেজরের মতো কিছু রোগে, যেখানে নিয়মিত রক্ত নেওয়াই চিকিৎসার অংশ, তখন রক্ত দেওয়া হয়। আয়রনের অভাবে হিমোগ্লোবিন বেশ কম হলেও, রোগী স্থিতিশীল থাকলে অনেক সময় শুধু আয়রনেই নিরাপদে চিকিৎসা করা যায়। রক্ত লাগবে কিনা, সেটা ডাক্তারবাবু বিচার করবেন।</p><h2>অ্যানিমিয়া নিয়ে রোজকার জীবন</h2><h3>খাওয়াদাওয়া</h3><p>একবার আয়রনের অভাব জমে গেলে শুধু খাবার দিয়ে সাধারণত সেটা পূরণ হয় না। তবে চিকিৎসার পরে ভালো খাওয়াদাওয়া অ্যানিমিয়াকে দূরে রাখতে সাহায্য করে।</p><ul><li>বাঙালি রান্নাঘরে আয়রনের ভালো উৎস: মাছ, মাংস, মেটে, ডিম, ডাল, ছোলা, আর গাঢ় সবুজ শাক।</li><li>মাছ, মাংস, ডিমের আয়রন শাকসবজির আয়রনের চেয়ে সহজে শরীরে ঢোকে।</li><li>খাবারের সঙ্গে ভিটামিন সি আছে এমন ফল বা সবজি রাখুন, যেমন লেবু, পেয়ারা, আমলকী, কমলালেবু।</li><li>চা-কফি খাবারের সঙ্গে নয়, দুই খাবারের মাঝে খান।</li><li>মাছ, মাংস, ডিম, দুধ একেবারেই না খেলে ভিটামিন বি১২ নিয়ে ডাক্তারবাবুর সঙ্গে কথা বলুন।</li></ul><h3>গর্ভাবস্থা</h3><p>গর্ভাবস্থায় শরীরে অনেক বেশি আয়রন লাগে, আর এই সময়ের অ্যানিমিয়া মা আর বাচ্চা দুজনেরই ক্ষতি করে। ডাক্তারবাবু বা সরকারি স্বাস্থ্যকেন্দ্র যে আয়রন আর ফোলিক অ্যাসিড ট্যাবলেট দেন, পুরো গর্ভাবস্থা জুড়ে নিয়ম করে খান, আর বলা অনুযায়ী হিমোগ্লোবিন পরীক্ষা করান। পরিবারে থ্যালাসেমিয়া থাকলে, বা রিপোর্টে কণিকা ছোট এলে, থ্যালাসেমিয়ার পরীক্ষার কথা জিজ্ঞেস করুন। সম্ভব হলে স্বামী-স্ত্রী দুজনেরই, আর সম্ভব হলে গর্ভধারণের আগেই।</p><h3>বাচ্চারা</h3><p>অ্যানিমিয়া থাকলে বাচ্চারা পড়া ধরতে দেরি করে, ক্লান্ত থাকে, আর সহজে অসুখে পড়ে। অনেক বাচ্চার একসঙ্গে আয়রন, কৃমির ওষুধ আর ভালো খাবার, তিনটেই দরকার হয়। বড়দের আয়রন ট্যাবলেট বাচ্চাকে দেবেন না। ঠিক কোনটা দেবেন, ডাক্তারবাবুকে জিজ্ঞেস করুন।</p><h3>কাজকর্ম আর ব্যায়াম</h3><p>অল্প বা মাঝারি অ্যানিমিয়া নিয়ে বেশিরভাগ মানুষ কাজ চালিয়ে যেতে পারেন। দরকার হলে বিশ্রাম নিন, আর হিমোগ্লোবিন যত বাড়বে, ধীরে ধীরে পরিশ্রম বাড়ান। পরিশ্রমে বুকে ব্যথা, মাথা ঘুরে পড়ে যাওয়ার মতো লাগা বা খুব শ্বাসকষ্ট হলে থামুন, আর ডাক্তার দেখান।</p><h2>ভুল ধারণা আর আসল কথা</h2><h3>&quot;বিট আর বেদানা খেলেই রক্ত বেড়ে যাবে&quot;</h3><p>এগুলো ভালো খাবার, কিন্তু লোকে যতটা ভাবেন, তার চেয়ে অনেক কম আয়রন থাকে। একবার আয়রনের অভাবে অ্যানিমিয়া হয়ে গেলে শুধু খাবারে সাধারণত ভাঁড়ার ভরে না। কারণের চিকিৎসা আর সাধারণত আয়রনের ওষুধ লাগে।</p><h3>&quot;আয়রন ট্যাবলেটে মোটা হয়ে যায়&quot; বা &quot;আয়রন শরীর গরম করে&quot;</h3><p>আয়রন ট্যাবলেটে ওজন বাড়ে না। পেটের গোলমাল আর কোষ্ঠকাঠিন্য হতে পারে, সেটা ডাক্তারবাবু সামলে দিতে পারবেন।</p><h3>&quot;এখন তো ভালো আছি, আয়রন বন্ধ করে দিই&quot;</h3><p>শরীরের আয়রনের ভাঁড়ার ভরার অনেক আগেই ভালো লাগতে শুরু করে। আগেভাগে বন্ধ করাই অ্যানিমিয়া ফিরে আসার সবচেয়ে চেনা কারণ।</p><h3>&quot;মেয়েদের তো রক্ত একটু কম থাকবেই&quot;</h3><p>মেয়েদের মধ্যে অ্যানিমিয়া বেশি দেখা যায় ঠিকই, কিন্তু সেটা কখনোই স্বাভাবিক নয়। এতে ক্লান্তি হয়, গর্ভাবস্থায় ক্ষতি হয়, আর এর আড়ালে অন্য অসুখ লুকিয়ে থাকতে পারে।</p><h3>&quot;এই বয়সে রক্ত তো কমবেই&quot;</h3><p>বয়স্ক মানুষের অ্যানিমিয়ার সবসময় একটা কারণ থাকে। পেট থেকে রক্ত যাওয়া, কিডনির অসুখ বা বোন ম্যারোর সমস্যার প্রথম লক্ষণ হতে পারে এটা।</p><section class="box ask"><h2><svg viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="5" width="18" height="21" rx="3"/><path d="M11 5V3.5h8V5"/><path d="m10.5 13 2 2 3.5-3.5M10.5 20.5l2 2 3.5-3.5M19.5 13.5H21M19.5 21H21"/></svg><span>ডাক্তারবাবুকে কী কী জিজ্ঞেস করবেন</span></h2><ul><li>আমার কোন ধরনের অ্যানিমিয়া, আর কেন হয়েছে?</li><li>আমার হিমোগ্লোবিন কতটা কম, আর কত তাড়াতাড়ি বাড়বে বলে আশা করছেন?</li><li>কারণ খুঁজতে আর কোনো পরীক্ষা দরকার?</li><li>আমি কি থ্যালাসেমিয়ার বাহক বা আমার হিমোগ্লোবিন ই থাকতে পারে? পরিবারের অন্যদের কি পরীক্ষা করানো উচিত?</li><li>ওষুধ কতদিন খেতে হবে, আর কী কী পার্শ্বপ্রতিক্রিয়ার দিকে নজর রাখব?</li><li>আবার কবে রক্ত পরীক্ষা করাব?</li><li>খাওয়াদাওয়ায় বা অন্য ওষুধে কিছু বদলাতে হবে?</li><li>কোন লক্ষণ হলে আগেই চলে আসব?</li></ul></section><section class="faq"><h2>অনেকে যা জানতে চান</h2><details><summary>অ্যানিমিয়া কি বিপজ্জনক?</summary><div><p>অল্প অ্যানিমিয়া নিজে সাধারণত বিপজ্জনক নয়, তবে কারণটা জানা সবসময় দরকার। বেশি অ্যানিমিয়া হৃৎপিণ্ডের উপর চাপ ফেলে, আর গর্ভাবস্থায় মা ও বাচ্চা দুজনেরই ঝুঁকি বাড়ায়। আর কারণটা, যেমন লুকোনো রক্তপাত, নিজেও গুরুতর হতে পারে।</p></div></details><details><summary>অ্যানিমিয়া সারতে কতদিন লাগে?</summary><div><p>আয়রনের অভাবে বেশিরভাগ মানুষ কয়েক সপ্তাহের মধ্যে ভালো বোধ করতে শুরু করেন, আর হিমোগ্লোবিন ধীরে ধীরে বাড়ে। আয়রনের ভাঁড়ার ভরাতে সাধারণত কয়েক মাস চিকিৎসা চলে। অন্য ধরনের অ্যানিমিয়ায় সময়টা নির্ভর করে কারণের উপর।</p></div></details><details><summary>অ্যানিমিয়া কি পুরোপুরি সেরে যায়?</summary><div><p>আয়রন, ভিটামিন বি১২ বা ফোলিক অ্যাসিডের অভাবে হওয়া অ্যানিমিয়া, কারণের চিকিৎসা হলে সাধারণত পুরোপুরি ঠিক হয়ে যায়। থ্যালাসেমিয়া মেজরের মতো বংশগত রোগ ট্যাবলেটে সারে না, কিন্তু ঠিকঠাক চিকিৎসায় ভালোভাবে সামলে রাখা যায়। আপনার কোনটা, ডাক্তারবাবু বলে দেবেন।</p></div></details><details><summary>&quot;রক্ত কম&quot; আর অ্যানিমিয়া কি একই?</summary><div><p>আমরা বলি &quot;রক্ত কমে গেছে&quot;, কিন্তু আসলে কমে হিমোগ্লোবিন। রক্তের পরিমাণ প্রায়ই ঠিক থাকে। কমে যায় অক্সিজেন বওয়ার ক্ষমতা।</p></div></details><details><summary>হিমোগ্লোবিন কত থাকা স্বাভাবিক?</summary><div><p>বয়স, ছেলে না মেয়ে, আর গর্ভাবস্থার উপর নির্ভর করে। ভারতে গর্ভবতী নন এমন মহিলাদের 12 g/dL এর নিচে, আর গর্ভবতী মা ও ছোট বাচ্চাদের 11 g/dL এর নিচে অ্যানিমিয়া ধরা হয়। ছেলেদের স্বাভাবিকভাবে একটু বেশি থাকে। নিজের রিপোর্টে ছাপা রেঞ্জটা সবসময় দেখবেন।</p></div></details><details><summary>চা খেলে কি রক্ত কমে?</summary><div><p>চা নিজে অ্যানিমিয়া করে না। কিন্তু খাবারের সঙ্গে চা খেলে খাবার থেকে আয়রন কম শোষণ হয়। খাবারের সঙ্গে নয়, দুই খাবারের মাঝে চা খাওয়ার অভ্যাসটা সহজ, আর কাজের।</p></div></details><details><summary>অ্যানিমিয়ায় কি হেমাটোলজিস্ট দেখাতে হবে?</summary><div><p>অনেক ক্ষেত্রে ফ্যামিলি ডাক্তার বা স্ত্রীরোগ বিশেষজ্ঞই ভালোভাবে সামলে নেন। হেমাটোলজিস্ট দেখান যদি কারণ পরিষ্কার না হয়, চিকিৎসায় উন্নতি না হয়, শ্বেতকণিকা বা প্লেটলেটও গোলমেলে থাকে, পরিবারে রক্তের রোগ থাকে, বা থ্যালাসেমিয়ার সন্দেহ থাকে।</p></div></details></section><section class="box key"><h2><svg viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4a8 8 0 0 0-4.5 14.6V21h9v-2.4A8 8 0 0 0 15 4z"/><path d="M11.5 25h7"/></svg><span>মূল কথাগুলো</span></h2><ul><li>অ্যানিমিয়া মানে হিমোগ্লোবিন কম। এটা একটা সমস্যার সংকেত, শেষ রোগনির্ণয় নয়।</li><li>আয়রনের অভাব সবচেয়ে বড় কারণ। কিন্তু বাংলায় থ্যালাসেমিয়ার বাহক আর হিমোগ্লোবিন ই এর কথাও ভাবতে হবে।</li><li>সংখ্যাটা বাড়ানোর চেয়ে কারণ খুঁজে তার চিকিৎসা করা বেশি জরুরি।</li><li>ভালো লাগলেই নয়, ডাক্তারবাবু যতদিন বলেন ততদিন আয়রন খান।</li><li>বুকে ব্যথা, বিশ্রামে শ্বাসকষ্ট, অজ্ঞান হয়ে যাওয়া বা কালো পায়খানা হলে সেদিনই হাসপাতালে যান।</li></ul></section></div></article><aside class="endcard"><svg class="av" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#CFE6DF"/><circle cx="26" cy="20" r="8" fill="#0B3F3D"/><path d="M10 44c2-10 9-14 16-14s14 4 16 14" fill="#0B3F3D"/></svg><div><div class="k">লেখক</div><div class="who">ডাঃ সুদীপ রায়</div><div class="cred">এমবিবিএস, এমডি, ডিএম (ক্লিনিক্যাল হেমাটোলজি)</div></div></aside><a class="allbtn" href="/#library"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4"/></svg>সব অধ্যায়</a>
+</main>
 <footer><div class="wrap">
   <p><span lang="bn">© ২০২৬ কলকাতা হেমাটোলজি ইনস্টিটিউট</span><span lang="en">© 2026 Kolkata Hematology Institute</span></p>
   <p><span lang="bn">এই সাইট শুধু জানার জন্য। এটি চিকিৎসকের পরামর্শের বিকল্প নয়। ছবিগুলি আঁকা, আসল স্লাইড নয়।</span><span lang="en">This site is for learning. It does not replace seeing a doctor. The pictures are drawings, not real slides.</span></p>
@@ -164,6 +237,17 @@ footer p{max-width:36em}
 /* Remember the language this reader chose, so the home page opens in it next time. */
 try{localStorage.setItem('khi-lang','bn');}catch(e){}
 document.querySelectorAll('.lang a').forEach(function(a){a.addEventListener('click',function(){try{localStorage.setItem('khi-lang',a.getAttribute('data-l'));}catch(e){}});});
+/* The thin line at the top grows as the reader moves down the chapter. */
+var bar=document.querySelector('.progress'),art=document.querySelector('article');
+function grow(){if(!art)return;var r=art.getBoundingClientRect(),total=r.height-window.innerHeight*0.6;
+  var p=total>0?Math.min(1,Math.max(0,-r.top/total)):0;bar.style.setProperty('--p',p.toFixed(3));}
+window.addEventListener('scroll',grow,{passive:true});window.addEventListener('resize',grow);grow();
+/* Sections fade up as they come into view. */
+var calm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(!calm&&'IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -6% 0px'});
+  document.querySelectorAll('.box,.faq,.endcard').forEach(function(el){el.classList.add('rv');io.observe(el);});
+}
 })();
 </script>
 </body>
