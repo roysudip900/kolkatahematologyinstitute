@@ -40,9 +40,11 @@ A detailed chapter on inheritance, carriers, HbE and testing during pregnancy is
 
 For thalassemia major, regular blood transfusion is the main treatment. It does two jobs. It gives the body the hemoglobin it cannot make, so the child has energy and can grow. And it quietens down the bone marrow, which otherwise works so hard to make red cells that it widens the bones, especially of the face and skull.
 
-Transfusion is usually started when tests confirm thalassemia major and the hemoglobin keeps falling, or the child is not growing well. After that, the child receives blood at regular intervals, in the most severe type about once a month. Before each transfusion the doctor checks the hemoglobin, and aims to keep it above a set target level all the time, not just to top it up when the child looks pale. Guidelines give exact targets, and the detailed transfusion chapter will list them.
+Regular transfusion usually begins in the first two years of life. International guidelines advise starting once thalassemia is confirmed and the hemoglobin is below 7 g/dL on two tests more than two weeks apart, with no other reason for it such as an infection. It may be started at a higher hemoglobin too, if the child has clear symptoms of anaemia, is not growing well, or the bones of the face are beginning to change.
 
-Each transfusion takes a few hours, usually in a day care unit. The blood should be properly cross matched and screened for infections. Many centres use filtered blood to reduce reactions. Your team will keep a record of every unit given.
+After that, the child receives blood at regular intervals, usually every 2 to 5 weeks. The doctor checks the hemoglobin before each transfusion, and the aim is to keep that number between 9.5 and 10.5 g/dL all the time, not just to give blood when the child looks pale. Some people, for example those with heart problems, are kept a little higher. At this level children grow normally, can run about and play, and the bone marrow stays quiet.
+
+Each transfusion takes a few hours, usually in a day care unit. Guidelines recommend filtered red cells (the bag or report may say leucodepleted or leucoreduced), from voluntary donors, screened for infections and cross matched each time. They also recommend testing the child's detailed blood group, meaning the finer Rh and Kell types and not only A, B, O and positive or negative, and giving blood matched for these. This lowers the chance of the body making antibodies against donated blood later. The test is best done before the very first transfusion. If transfusions have already begun, it needs a special genetic test, so ask about it early. Your team will keep a record of every unit given.
 
 A detailed chapter on transfusion, covering when it starts, the targets and intervals, safe blood and reactions to watch for, is being added to this site.
 
@@ -66,7 +68,7 @@ Most of these can be prevented or caught early with the right transfusion, chela
 
 Every bag of blood brings iron with it, and the body has no natural way to get rid of extra iron. Over months and years it piles up in the heart, the liver and the glands that make hormones. Iron overload is the main cause of serious complications in people who receive regular blood.
 
-Chelation means taking a medicine that binds the extra iron so the body can pass it out in urine or stool. There are three chelation medicines: deferasirox and deferiprone, which are taken by mouth, and desferrioxamine, which is given as a slow injection under the skin. Some people need two of them together. Your hematologist chooses which one, the dose and the timing, based on the iron level and how the body responds.
+Chelation means taking a medicine that binds the extra iron so the body can pass it out in urine or stool. It is usually started after the first 10 to 20 transfusions, or when the ferritin level rises above 1,000. There are three chelation medicines: deferasirox and deferiprone, which are taken by mouth, and desferrioxamine, which is given as a slow injection under the skin. Some people need two of them together. Your hematologist chooses which one, the dose and the timing, based on the iron level and how the body responds.
 
 Iron is checked with a blood test called serum ferritin and, where available, a special MRI scan called T2* that measures iron in the heart and liver.
 
@@ -76,16 +78,15 @@ Chelation only works if it is taken every day as advised. Missing it is one of t
 
 Thalassemia major needs lifelong care from a team, ideally at a thalassemia centre or with a hematologist who sees it often. Beyond transfusion and chelation, regular check ups usually include:
 
-- iron levels, about every 3 months
-- liver tests, about every 6 months
-- tests for infections that can pass through blood, every year
-- hormone tests, including growth, thyroid and blood sugar, every year
-- heart checks
-- growth charts in children
+- blood tests for iron (ferritin) and for the liver, about every 3 months
+- height and weight in children, about every 3 months
+- a heart scan (echo) and, where available, the MRI for iron in the heart and liver, every year
+- tests for infections that can pass through blood (hepatitis B, hepatitis C and HIV), every year
+- hormone tests, such as thyroid, blood sugar and puberty hormones, every year from the age your doctor advises
 
 Vaccines matter, especially hepatitis B, pneumococcus, meningitis and the yearly flu vaccine, and even more so if the spleen has been removed. A balanced diet without extra iron supplements is usually advised. Children should go to school, play and live as normally as possible. Young adults can marry and many can have children, with careful planning.
 
-For some children, a bone marrow (stem cell) transplant from a matched donor can cure thalassemia. It carries real risks, so it is weighed carefully for each child.
+A bone marrow (stem cell) transplant can cure thalassemia. Guidelines advise that it be offered early in childhood, before iron has caused damage, when a fully matched brother or sister can be the donor. It carries real risks, so the decision is made carefully with a transplant centre. Ask soon after diagnosis whether brothers and sisters should be tested as possible donors.
 
 Living with thalassemia is hard on the whole family. Talking to other families, patient groups and counsellors helps. A detailed chapter on everyday care, covering follow up, vaccines, food, school, marriage, transplant and support, is being added to this site.
 
@@ -93,6 +94,7 @@ Living with thalassemia is hard on the whole family. Talking to other families, 
 
 - there is fever, especially if the spleen has been removed
 - the person is breathless at rest, has chest pain, a racing or irregular heartbeat, or fainting
+- there is fever or any sign of infection in someone taking deferiprone. This medicine can lower the white cells that fight infection, so a blood count is needed the same day
 - there is fever, chills, back pain, rash, breathlessness or dark urine during or soon after a transfusion
 - the eyes turn suddenly more yellow, or there is severe tummy pain
 - there is sudden weakness of one side of the body, difficulty speaking, or a severe headache
@@ -140,7 +142,7 @@ Thalassemia is an inherited blood condition in which the body makes too little h
 
 ## Can thalassemia be cured?
 
-A bone marrow or stem cell transplant from a matched donor can cure it, but it carries risks and is not suitable for everyone. Most people live with thalassemia through regular transfusion, chelation and check ups.
+A bone marrow or stem cell transplant can cure it. Guidelines advise offering it early in childhood when a fully matched brother or sister can be the donor. It carries real risks and is not possible for everyone. Most people live with thalassemia through regular transfusion, chelation and check ups.
 
 ## Can two thalassemia carriers marry?
 
@@ -148,7 +150,7 @@ Yes. They can marry and have healthy children. Each pregnancy has a 1 in 4 chanc
 
 ## How long do people with thalassemia major live?
 
-With good modern treatment, many people with severe thalassemia now live into their 50s, 60s and beyond. In the past, it was often fatal by early adulthood. Regular transfusion and chelation make the biggest difference.
+With good modern treatment, many people with severe thalassemia now live into their 50s, 60s and beyond, and international guidelines say that well treated patients can have a near normal life. In the past, it was often fatal by early adulthood. Regular transfusion and chelation make the biggest difference.
 
 ## Is thalassemia minor dangerous?
 
@@ -156,7 +158,7 @@ Thalassemia minor, or carrier state, is not dangerous and usually needs no treat
 
 ## How often is blood needed in thalassemia major?
 
-In the most severe type, about once a month, sometimes more often in older children and adults. The exact gap depends on keeping the hemoglobin above the target your doctor sets.
+Usually every 2 to 5 weeks. The right gap is the one that keeps the hemoglobin before each transfusion between 9.5 and 10.5 g/dL, or at the target your doctor sets for you.
 
 ## Which test shows thalassemia?
 
@@ -166,6 +168,6 @@ A complete blood count gives the first clue, small red cells. HPLC or hemoglobin
 
 - Thalassemia is inherited, not infectious. A child gets thalassemia major only when both parents are carriers.
 - Carriers are healthy, but should know their status before marriage or pregnancy.
-- Thalassemia major needs regular blood transfusion, kept above a target hemoglobin, not just given when the child looks pale.
+- Thalassemia major needs regular blood transfusion, usually every 2 to 5 weeks, keeping the hemoglobin before each one between 9.5 and 10.5 g/dL, not just giving blood when the child looks pale.
 - Chelation every day removes the iron that transfusions bring. Missing it causes most serious complications.
 - With regular care, people with thalassemia go to school, work, marry and live long lives.
