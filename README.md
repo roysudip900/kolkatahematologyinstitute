@@ -29,6 +29,20 @@ Each chapter has two plain text files in the `chapters` folder, one per language
 
 An empty file shows the "script goes here" placeholder, and that page is hidden from Google until it has words in it.
 
+## How a chapter gets its look
+
+You only type plain text. The site dresses it by itself:
+
+| What you type | What the reader sees |
+| --- | --- |
+| The lines before the first `# ` heading | The opening story, in the story typeface. If the first line is short, it becomes the big headline line, and it is also the teaser on the chapter's card on the home page |
+| A heading that says `Go to a hospital ...` (Bengali: `... হাসপাতালে যান`) | The red warning box |
+| A heading with `questions` and `doctor` in it (Bengali: `প্রশ্ন` or `জিজ্ঞেস`) | The green checklist to take to the doctor |
+| The heading `Common questions` (Bengali: `অনেকে যা জানতে চান`), with each question on a `## ` line | Questions that open when tapped |
+| The heading `The main points` (Bengali: `মূল কথাগুলো`) | A pale yellow box |
+
+A chapter with no words yet is listed on the home page under "Coming soon" and is not a link.
+
 ## Adding a new chapter
 
 1. Add a line to `chapters/list.json` with the chapter's `id` (short, lowercase, no spaces), its Bengali and English names, and a short description in each language (`desc_bn`, `desc_en`, about 150 characters, shown in Google results).
@@ -36,7 +50,7 @@ An empty file shows the "script goes here" placeholder, and that page is hidden 
 
 ## Other files
 
-- `index.html`: the design of the whole site. The chapter cards on it are filled in automatically, so do not edit between the `grid:start` and `grid:end` lines.
+- `index.html`: the design of the whole site (colours, typefaces, the moving red cells). The chapter cards and the "Coming soon" list on it are filled in automatically, so do not edit between the `grid:start` and `grid:end` lines or the `soon:start` and `soon:end` lines.
 - `tools/build.mjs`: makes the chapter pages, `sitemap.xml` and `robots.txt` from the text files. It runs by itself on GitHub (`.github/workflows/build.yml`).
 - The `anaemia/`, `en/` and other chapter folders are made by the build. Do not edit them; edit the `.txt` files.
 - `CNAME`: tells GitHub Pages the site's domain. Do not delete it.
