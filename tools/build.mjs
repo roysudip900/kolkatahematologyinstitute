@@ -147,7 +147,7 @@ function teaser(txt, max = 130) {
 }
 function readTime(txt, l) {
   const n = Math.max(1, Math.round(plain(txt).split(/\s+/).length / 200));
-  return l === 'bn' ? `পড়তে ${bnNum(n)} মিনিট` : `${n} min read`;
+  return l === 'bn' ? `${bnNum(n)} মিনিটে পড়ুন` : `${n} min read`;
 }
 function reviewed(file) {
   try {
