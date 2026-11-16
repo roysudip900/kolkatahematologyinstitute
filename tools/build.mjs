@@ -192,7 +192,7 @@ for (const c of chapters) {
     if (live) {
       const b = chapterBody(text[l]);
       kick = readTime(text[l], l);
-      body = `<div class="by">${AVATAR}<div><b>${l === 'bn' ? `লিখেছেন ${AUTHOR.bn}` : `By ${AUTHOR.en}`}</b>${CRED[l]}<br>${l === 'bn' ? `শেষ বদল ${niceDate(date, 'bn')}` : `Last updated ${niceDate(date, 'en')}`}</div></div>` +
+      body = `<div class="by">${AVATAR}<div><b>${l === 'bn' ? `লিখেছেন ${AUTHOR.bn}` : `By ${AUTHOR.en}`}</b>${CRED[l]}<br>${l === 'bn' ? `শেষ আপডেট ${niceDate(date, 'bn')}` : `Last updated ${niceDate(date, 'en')}`}</div></div>` +
         `<article>${b.html}</article>` +
         `<aside class="endcard">${AVATAR}<div><div class="k">${l === 'bn' ? 'লেখক' : 'Author'}</div><div class="who">${AUTHOR[l]}</div><div class="cred">${CRED[l]}</div></div></aside>` +
         `<a class="allbtn" href="/#library">${LEFT}${l === 'bn' ? 'সব অধ্যায়' : 'All chapters'}</a>`;
