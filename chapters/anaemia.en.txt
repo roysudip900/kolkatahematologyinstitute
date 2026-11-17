@@ -1,245 +1,75 @@
-If your blood report says your hemoglobin is low, you are in very large company. In West Bengal, the most recent national family health survey found anaemia in about 7 out of every 10 women who were not pregnant, about 6 out of every 10 pregnant women, and about 7 out of every 10 children under five. It is common enough that many people stop taking it seriously. That is a mistake, and this chapter explains why.
+For two years, she blamed the stairs.
 
-Anaemia is not one disease. It is a sign that something is wrong, the way a fever is a sign. Sometimes the reason is simple, like not enough iron in the food. Sometimes it is a family condition like thalassemia trait, and sometimes it is a warning of something that needs a closer look. The treatment depends entirely on the reason, so finding the reason is the real work.
+Their flat is on the third floor, with no lift. By the second landing she has to stop and hold the railing. She is thirty-four. She tells herself it is age, or the housework, or the heat. She eats last, after everyone else, and ends the meal with a cup of tea. A neighbour says beetroot. Her mother says pomegranate. Nobody says blood test.
 
-# How blood normally carries oxygen
+In another home, a retired man of sixty-two has a routine check up. The report says his hemoglobin is low. The chemist at the corner hands him an iron tonic. He takes it, feels a little better, and tells no one.
 
-Your blood is full of red blood cells. Inside each one is a protein called hemoglobin. Think of hemoglobin as a lorry: it picks up oxygen in the lungs and drops it off at every part of the body, your brain, your heart, your muscles.
+Both of them have anaemia. For one, iron is the right answer, though not the whole answer. For the other, iron is hiding something. This page is about the one word that matters behind every low hemoglobin: why.
 
-Red blood cells are made in the bone marrow, the soft tissue inside your bones. Each red cell lives for about three to four months and is then removed. So your marrow is working all the time, making fresh cells to replace the old ones. To do this it needs raw material, mainly iron, vitamin B12 and folic acid. When the kidneys sense that oxygen is running short, they send a hormone called erythropoietin to tell the marrow to make more.
+# What low hemoglobin means
 
-# What anaemia means
+Blood is red because of hemoglobin, the part of the red cell that carries oxygen from your lungs to the rest of your body. Think of it as a fleet of lorries, delivering oxygen street by street. Anaemia means too few lorries on the road, so you tire quickly, and stairs leave you breathless.
 
-Anaemia means there is less hemoglobin in your blood than there should be. Fewer lorries means less oxygen reaching your organs. That is why the main feelings of anaemia are tiredness and breathlessness.
+Anaemia is not a disease in itself. It is a sign that something else is wrong, the way a fever is a sign. A low number on the report tells you the lorries are short. It does not tell you where they went.
 
-Doctors decide whether hemoglobin is low by comparing it with the expected level for your age, sex and whether you are pregnant. The national survey in India counts anaemia as:
+# Why she is tired
 
-- below 12 g/dL in women who are not pregnant
-- below 11 g/dL in pregnant women
-- below 11 g/dL in children aged 6 months to 5 years
+Her body is running out of iron, and without iron it cannot build hemoglobin. This is the most common kind of anaemia there is.
 
-Men normally have a little more hemoglobin than women, so the cut off for men is a bit higher. Every laboratory prints its own normal range next to your result. Use that range, and let your doctor tell you what your number means for you.
+Look at where her iron goes. Her periods have been heavy for years, one of the commonest reasons a woman runs short of iron, and she has never thought it worth mentioning. She eats last and eats little. And tea with a meal makes it harder for the body to take in the iron in the food.
 
-# What causes it
+The beetroot and the pomegranate are good food. But they cannot answer the real question, which is where her iron is going. That takes a doctor, a blood test, and a conversation about her periods that nobody has ever had with her.
 
-Almost every cause of anaemia fits into one of three groups. The body is not making enough red cells, the body is losing blood, or red cells are being destroyed too early.
+# Why his tonic is not enough
 
-## Not making enough
+A man of his age does not usually run short of iron because of his food. When his iron is low, the first thing a doctor asks is whether he is losing blood somewhere, slowly, without seeing it. The stomach and the bowel are the usual places: an ulcer, piles, or painkillers taken for years for an aching knee. Less often it is a growth, the kind of thing worth finding early.
 
-- Not enough iron. This is the most common cause in the world and in India. It happens when food has too little iron, when the body cannot absorb it well, or when iron is being lost through bleeding.
-- Not enough vitamin B12 or folic acid. Vitamin B12 comes mainly from animal foods, so people who eat no meat, fish, eggs or milk products are more at risk. Some people also cannot absorb B12 from the stomach.
-- Long term illnesses such as kidney disease, rheumatoid arthritis, long infections like tuberculosis, and some cancers. These slow down red cell production.
-- Problems in the bone marrow itself, such as aplastic anaemia, leukaemia, myeloma or myelodysplasia. These are less common, but they are the reason a hematologist sometimes needs to look deeper.
+The tonic will push his hemoglobin up. That is the trouble with it. It tidies the report and leaves the leak. It is like mopping the floor and never looking at the tap.
 
-## Losing blood
+# When iron is the wrong answer
 
-- Heavy periods. A very common and often ignored cause in women and teenage girls.
-- Pregnancy and childbirth, especially if there was heavy bleeding during or after delivery.
-- Slow bleeding from the stomach or intestine. This can come from ulcers, piles, regular use of painkillers such as aspirin or ibuprofen, worms in the gut (hookworm), and less commonly a growth in the stomach or bowel. This kind of bleeding is often not visible.
+There is a third story, and in Bengal it is a common one. A young woman has taken iron tonics on and off since her school days, because her hemoglobin is always a little low. It never comes up.
 
-## Red cells destroyed too early
+She may never have been short of iron at all. Many healthy people in Bengal are carriers of thalassemia or of hemoglobin E. Their red cells are small and their hemoglobin runs slightly low, which on a report can look just like a lack of iron. But it is not the same thing, and iron does nothing for it. A particular blood test tells the two apart.
 
-- Inherited conditions such as thalassemia, hemoglobin E disease and sickle cell disease. Thalassemia trait and hemoglobin E are common in Bengal, and they are a frequent reason for small red cells on a report.
-- The immune system attacking the red cells, certain infections such as malaria, and certain medicines. Doctors call this hemolysis. It can cause jaundice, the yellow colour of the eyes and skin.
+And there are other causes too, from too little vitamin B12 to kidney disease, each needing its own answer.
 
-# Who is most at risk
+# How the stories go on
 
-- Women in the years when they have periods, and pregnant women
-- Babies, young children and teenage girls, because they are growing fast
-- People whose diet is mostly rice or roti with little dal, green leaves, fish, meat or eggs
-- People with long term illnesses, especially kidney disease
-- People with a family history of thalassemia or other blood diseases
-- Older people, in whom anaemia should always be explained, never just accepted as age
+She finally shows her report to a doctor, who asks about her periods. No one had asked before. She is given iron, and treatment for the bleeding. The tablets upset her stomach at first, and she is tempted to stop on the day she feels better. Her doctor explains why she must not: feeling better comes long before the body's store of iron is full again. Months later, the stairs are only stairs.
 
-# What you may feel
+He mentions the tonic to his doctor at last, and is sent for tests to find where the blood is going. Whatever they show, he is better placed than he was, because now someone is looking.
 
-Mild anaemia often causes no symptoms at all and is found only on a routine blood test. When it builds up slowly, the body gets used to it and people blame the tiredness on work, age or the heat.
+And the young woman has one test, learns she is a carrier, and is told she can leave the iron alone. The thalassemia chapter on this site tells the rest of her story.
 
-Common symptoms are:
+# Go to a hospital the same day if
 
-- tiredness and lack of energy, often worst by the afternoon
-- getting breathless on stairs, or with work that used to be easy
-- a pounding or racing heartbeat (palpitations)
-- headaches and dizziness, especially on standing up
-- looking pale, in the face, the inside of the eyelids, the palms and the nails
-- cold hands and feet
-- poor concentration, irritability, and in children, falling behind at school or not wanting to play
+- chest pain, or breathlessness while sitting or lying still
+- fainting, or a racing heartbeat that will not settle
+- vomiting blood, stools that are black like tar, or blood in the stool
+- heavy bleeding from anywhere that does not stop
+- a pregnant woman with anaemia who becomes breathless, dizzy or very weak
 
-Some signs point more towards iron deficiency:
+# Take these questions to your doctor
 
-- craving to eat things that are not food, such as raw rice, mud, chalk, paper or ice
-- a sore tongue, cracks at the corners of the mouth
-- hair falling more than usual
-- brittle nails, or nails that become flat or spoon shaped
-- restless legs at night
+If your report says your hemoglobin is low, do not settle for a tonic and a guess. Take it to your doctor. If the cause is not clear, or the number will not rise, ask to see a hematologist, a blood specialist. And ask:
 
-Numbness or tingling in the hands and feet, difficulty walking in a straight line, or memory problems can be signs of vitamin B12 deficiency. These need treatment early, because some nerve problems from low B12 can become permanent.
-
-# Go to a hospital now if
-
-- you have chest pain or chest tightness
-- you are breathless while sitting or lying down
-- you faint, or nearly faint
-- you are vomiting blood, or passing black, tar like stools, or blood in the stools
-- you have very heavy bleeding that does not stop, from anywhere
-- a pregnant woman with known anaemia becomes breathless, dizzy or very weak
-- a child with anaemia becomes drowsy, breathless or stops feeding
-- anaemia comes with high fever, yellow eyes and dark urine, or with new bruises or bleeding from the gums
-
-# The tests
-
-## Complete blood count (CBC)
-
-This is the first test. A small sample of blood is taken from a vein in your arm. You do not need to be fasting. The report has many lines, but these are the ones that matter most for anaemia:
-
-- Hemoglobin (Hb): the main number. It tells how much oxygen carrying protein your blood has.
-- Red blood cell count (RBC): how many red cells there are.
-- Hematocrit or PCV: how much of your blood is made of red cells.
-- MCV: the average size of your red cells. This is a very useful clue. Small cells point towards iron deficiency or thalassemia trait. Large cells point towards vitamin B12 or folic acid deficiency, liver problems, thyroid problems or a marrow problem.
-- MCH and MCHC: how much hemoglobin is packed in each cell.
-- RDW: how much the cells vary in size.
-- White cells and platelets: if these are also low or high, the marrow may need a closer look.
-
-## Tests to find the reason
-
-Depending on the CBC, your doctor may ask for:
-
-- Serum ferritin and iron studies, to check your iron stores. Ferritin is a good test of stored iron, but infection or inflammation can push it up and hide a shortage of iron.
-- Vitamin B12 and folate levels.
-- Hemoglobin electrophoresis or HPLC, to look for thalassemia trait, hemoglobin E and other inherited hemoglobin conditions. This is especially useful in Bengal, where these are common.
-- Peripheral smear: a doctor looks at your blood cells under a microscope.
-- Reticulocyte count: how many young red cells your marrow is making. It tells whether the marrow is trying to keep up.
-- Kidney, liver and thyroid tests.
-- Stool test for hidden blood or worms.
-- Endoscopy or colonoscopy, a camera test of the stomach or bowel, if bleeding from the gut is suspected. This matters most in men and in women after menopause who have iron deficiency, because in them the iron is usually being lost somewhere.
-- Bone marrow test, only when the blood tests suggest the marrow itself is not working properly. It is covered in its own chapter.
-
-# Treatment
-
-The treatment of anaemia is the treatment of its cause. Raising the hemoglobin without finding out why it fell is like mopping the floor without fixing the leak.
-
-## Iron
-
-For iron deficiency, iron tablets or syrup are the usual first step. Your doctor will decide the kind of iron, the dose and how long to take it. A few things help:
-
-- Iron is absorbed better on an empty stomach, but if it upsets your stomach, your doctor may suggest taking it with food instead.
-- Take it with something containing vitamin C, such as a little lemon water or an amla, which helps absorption.
-- Keep a gap between iron and tea, coffee, milk and calcium tablets, which block absorption.
-- Black stools are normal on iron. Constipation, nausea and stomach pain are common side effects. Tell your doctor rather than stopping on your own, because there are other forms of iron that suit some people better.
-- Hemoglobin usually starts rising within a few weeks, but the treatment continues for some months after the number becomes normal, to refill the body's iron stores. Stopping when you feel better is the most common reason anaemia comes back.
-- Keep iron tablets away from children. Too much iron can seriously poison a small child.
-
-When tablets do not work, cannot be tolerated, or the hemoglobin needs to rise faster (for example late in pregnancy or before surgery), iron can be given into a vein in a hospital or clinic.
-
-A word of caution that matters in Bengal: small red cells are not always iron deficiency. Thalassemia trait also causes small red cells, and iron does not help it. Taking iron for months when you do not need it can do harm. This is why your doctor may check your ferritin, or test for thalassemia, before starting long treatment.
-
-## Vitamin B12 and folic acid
-
-These are replaced with tablets or injections. People who cannot absorb vitamin B12 from the stomach usually need injections, sometimes for life. Your doctor decides the form and how often.
-
-## Treating the cause
-
-- Heavy periods are treated, often with the help of a gynaecologist.
-- Worms are treated with deworming medicine.
-- Ulcers or bleeding in the gut are treated.
-- Kidney disease, thyroid problems and long infections are treated by the right specialist, sometimes with an injection called erythropoietin that helps the marrow make red cells.
-- Inherited conditions and marrow diseases are treated by a hematologist, and each has its own chapter on this site.
-
-## Blood transfusion
-
-A blood transfusion raises the hemoglobin quickly, but it does not treat the cause. It is used when anaemia is severe, when there are dangerous symptoms such as breathlessness at rest or chest pain, after heavy bleeding, and in some conditions like thalassemia major where regular blood is part of the treatment. Many people with iron deficiency, even with quite low hemoglobin, can be treated safely with iron alone if they are stable. Your doctor will weigh up the need for blood.
-
-# Living with anaemia
-
-## Food
-
-Food alone rarely corrects established iron deficiency, but a good diet helps keep anaemia away once treated.
-
-- Good sources of iron in a Bengali kitchen: fish, meat, liver, eggs, dal and other pulses, chickpeas (chhola), and dark green leafy vegetables (shak).
-- Iron from fish, meat and eggs is absorbed more easily than iron from plants.
-- Eat vegetables and fruits with vitamin C, such as lemon, guava, amla and oranges, with your meals.
-- Drink tea and coffee between meals, not with them.
-- If you eat no animal foods at all, talk to your doctor about vitamin B12.
-
-## Pregnancy
-
-Pregnancy needs a lot of extra iron, and anaemia in pregnancy affects both mother and baby. Take the iron and folic acid tablets your doctor or the government health centre gives you through the whole pregnancy, and get your hemoglobin checked as advised. If you have a family history of thalassemia, or small red cells on your report, ask about thalassemia testing, ideally for both partners and ideally before pregnancy.
-
-## Children
-
-Children with anaemia may be slow to learn, tired and more prone to infections. Many children need iron, deworming and a better diet together. Do not give a child adult iron tablets. Ask the doctor for the right form.
-
-## Work, exercise and daily life
-
-Most people with mild or moderate anaemia can keep working. Rest when you need to, and build up activity slowly as your hemoglobin rises. If you get chest pain, faintness or severe breathlessness with exertion, stop and see a doctor.
-
-# Myths and facts
-
-## "Beetroot and pomegranate will cure my anaemia"
-
-They are healthy foods, but they contain much less iron than people think. Once you have iron deficiency anaemia, food alone usually cannot refill the stores. You need treatment of the cause and, usually, iron medicine.
-
-## "Iron tablets make you fat" or "iron tablets heat the body"
-
-Iron tablets do not cause weight gain. They can cause stomach upset and constipation, which your doctor can help with.
-
-## "I feel fine now, so I can stop the iron"
-
-You often feel better long before the body's iron stores are full. Stopping early is the commonest reason the anaemia returns.
-
-## "Anaemia is normal for women"
-
-Anaemia is common in women, but it is never normal. It causes tiredness, affects pregnancy, and can hide another illness.
-
-## "Anaemia at my age is just old age"
-
-Anaemia in an older person always needs a reason, because it can be the first sign of bleeding from the gut, kidney disease or a marrow problem.
-
-# Questions to ask your doctor
-
-- What type of anaemia do I have, and what is causing it?
-- How low is my hemoglobin, and how quickly do you expect it to rise?
-- Do I need any more tests to find the cause?
-- Could I have thalassemia trait or hemoglobin E? Should my family be tested?
-- How long do I need to take the medicine, and what side effects should I watch for?
-- When will you check my blood again?
-- Is there anything in my diet or my other medicines that I should change?
-- What symptoms mean I should come back early?
+- Why is my hemoglobin low?
+- Is it a lack of iron, or could it be something else?
+- If I am short of iron, where is it going?
+- Could I be a carrier of thalassemia or hemoglobin E?
+- How long should I take the medicine, and when will you test my blood again?
 
 # Common questions
 
-## Is anaemia dangerous?
+## Which foods increase hemoglobin?
 
-Mild anaemia is usually not dangerous in itself, but it should always be explained. Severe anaemia can strain the heart, and in pregnancy it raises risks for both mother and baby. The cause, such as hidden bleeding, can also be serious.
+Fish, meat, eggs, dal and green leafy vegetables all give iron, and fruit with vitamin C, such as lemon or guava, helps the body take it in. Tea with meals does the opposite. But food cannot tell you why your hemoglobin fell, so see a doctor as well.
 
-## How long does it take to recover from anaemia?
+## Can I take iron tablets on my own for low hemoglobin?
 
-With iron deficiency, most people start to feel better in a few weeks and the hemoglobin rises steadily. Treatment usually continues for some months to refill the iron stores. Other types depend on their cause.
+It is better not to. Iron helps only when a lack of iron is the cause. Taken blindly, it can hide a problem or do nothing at all. And keep iron tablets out of children's reach, because too much iron is dangerous for a child.
 
-## Can anaemia be cured completely?
+## Is low hemoglobin dangerous?
 
-Anaemia due to iron, vitamin B12 or folic acid deficiency can usually be fully corrected once the cause is treated. Inherited types such as thalassemia major cannot be cured with tablets, but they can be managed well. Your doctor can tell you which type you have.
-
-## Is anaemia the same as having low blood?
-
-People often say "blood is low", but it is the hemoglobin that is low. The amount of blood is often normal. It is the oxygen carrying power that has fallen.
-
-## What is the normal hemoglobin level?
-
-It depends on age, sex and pregnancy. In India, anaemia is counted below 12 g/dL in women who are not pregnant and below 11 g/dL in pregnant women and in young children. Men normally run a little higher. Always check the range printed on your own report.
-
-## Can tea cause anaemia?
-
-Tea does not cause anaemia by itself, but drinking it with meals reduces the iron you absorb from food. Drinking tea between meals instead of with them is a simple habit that helps.
-
-## Should I see a hematologist for anaemia?
-
-Many cases are handled well by a family doctor or gynaecologist. See a hematologist if the cause is not clear, if the anaemia does not improve with treatment, if white cells or platelets are also abnormal, if there is a family history of blood disease, or if thalassemia is suspected.
-
-# The main points
-
-- Anaemia means low hemoglobin. It is a sign of a problem, not a final diagnosis.
-- Iron deficiency is the most common cause, but in Bengal, thalassemia trait and hemoglobin E must also be thought of.
-- Finding and treating the cause matters more than raising the number.
-- Take iron for as long as your doctor advises, not just until you feel better.
-- Chest pain, breathlessness at rest, fainting or black stools need a hospital the same day.
+Mild anaemia is common and can usually be put right. Severe anaemia, left alone, strains the heart, and in pregnancy it can affect both mother and baby. Often the cause matters even more than the number.
