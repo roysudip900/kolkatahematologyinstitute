@@ -37,7 +37,7 @@ const LANGS = ['bn', 'en'];
 const STROKE = 'fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"';
 const RIGHT = `<svg viewBox="0 0 16 16" ${STROKE}><path d="M3 8h10M9 4l4 4-4 4"/></svg>`;
 const LEFT = `<svg viewBox="0 0 16 16" ${STROKE}><path d="M13 8H3M7 4L3 8l4 4"/></svg>`;
-const LOGO = '<svg viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#D8323F"/><circle cx="17" cy="17" r="8" fill="#F08A93"/></svg>';
+const LOGO = '<svg viewBox="0 0 200 240" aria-hidden="true"><path d="M100 10 C100 10 30 104 30 160 A70 70 0 0 0 170 160 C170 104 100 10 100 10 Z" fill="#FFF1F3" stroke="#0F2A4A" stroke-width="10" stroke-linejoin="round"/><circle cx="78" cy="172" r="28" fill="#B0182F"/><circle cx="78" cy="172" r="11" fill="#E46A7B"/><circle cx="124" cy="128" r="24" fill="#B9A3D9"/><circle cx="120" cy="128" r="10" fill="#5B3F8C"/><circle cx="134" cy="184" r="9" fill="#8B6BB5"/></svg>';
 const AVATAR = '<svg class="av" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#CFE6DF"/><circle cx="26" cy="20" r="8" fill="#0B3F3D"/><path d="M10 44c2-10 9-14 16-14s14 4 16 14" fill="#0B3F3D"/></svg>';
 const ICON = {
   warn: `<svg viewBox="0 0 30 30" ${STROKE}><path d="M15 4.5 27 25.5H3z"/><path d="M15 12.5v6"/><path d="M15 22v.4"/></svg>`,
@@ -228,11 +228,15 @@ for (const c of chapters) {
 ${desc ? `<meta name="description" content="${esc(desc)}">` : ''}
 ${live ? '' : '<meta name="robots" content="noindex">'}
 <link rel="canonical" href="${canonical}">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 ${live ? alt + (has.bn ? `\n<link rel="alternate" hreflang="x-default" href="${SITE + url(c.id, 'bn')}">` : '') : ''}
 <meta property="og:title" content="${esc(title)}">
 ${desc ? `<meta property="og:description" content="${esc(desc)}">` : ''}
 <meta property="og:type" content="article">
 <meta property="og:url" content="${canonical}">
+<meta property="og:image" content="${SITE}/assets/logo-mark.png">
 ${fonts}
 ${style}
 ${schema}
