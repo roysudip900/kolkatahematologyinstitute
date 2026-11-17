@@ -5,6 +5,8 @@
   "en": "Anaemia: low hemoglobin",
   "desc_bn": "সব সময় ক্লান্তি, সিঁড়ি ভাঙলে হাঁফ, রিপোর্টে হিমোগ্লোবিন কম? অ্যানিমিয়া মানে কী আর কারণ খোঁজা কেন জরুরি, লিখেছেন কলকাতার হেমাটোলজিস্ট।",
   "desc_en": "Always tired, breathless on the stairs, low hemoglobin on your report? A Kolkata hematologist on what anaemia means and why the cause matters.",
+  "card_bn": "সিঁড়ি ভাঙলেই হাঁফ ধরে? সারাদিন ক্লান্ত লাগে? রিপোর্টে হিমোগ্লোবিন কম?",
+  "card_en": "Breathless on the stairs? Tired all day? Hemoglobin low on your report?",
   "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FDECEE\"/><circle cx=\"26\" cy=\"26\" r=\"15\" fill=\"#F2A7AE\"/><circle cx=\"26\" cy=\"26\" r=\"9\" fill=\"#FDECEE\"/>"
  },
  {
@@ -13,6 +15,8 @@
   "en": "Thalassemia",
   "desc_bn": "থ্যালাসেমিয়া সহজ ভাষায়: বাহক না রোগী, বংশে কীভাবে আসে, এ নিয়ে কীভাবে বাঁচা যায়, আর কখন ডাক্তার দেখাবেন। কলকাতার হেমাটোলজিস্টের লেখা।",
   "desc_en": "Thalassemia in plain words from a Kolkata hematologist: carrier or patient, how it runs in families, living with it, and when to see a doctor.",
+  "card_bn": "রিপোর্টে লেখা ‘থ্যালাসেমিয়া ট্রেট’? বিয়ের আগে কী জানবেন? বাচ্চা ফ্যাকাশে, খেতে চায় না?",
+  "card_en": "Your report says ‘thalassemia trait’? Getting married soon? A baby who is pale and will not feed?",
   "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FFF3D6\"/><circle cx=\"26\" cy=\"26\" r=\"15\" fill=\"#D93A4A\"/><circle cx=\"26\" cy=\"26\" r=\"10\" fill=\"#FFF3D6\"/><circle cx=\"26\" cy=\"26\" r=\"4.5\" fill=\"#D93A4A\"/>"
  },
  {
@@ -21,6 +25,8 @@
   "en": "ITP",
   "desc_bn": "",
   "desc_en": "",
+  "card_bn": "",
+  "card_en": "",
   "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#EDE7FB\"/><circle cx=\"18\" cy=\"20\" r=\"4\" fill=\"#7A5AD1\"/><circle cx=\"33\" cy=\"17\" r=\"3\" fill=\"#7A5AD1\"/><circle cx=\"30\" cy=\"33\" r=\"4.5\" fill=\"#7A5AD1\"/><circle cx=\"17\" cy=\"35\" r=\"2.5\" fill=\"#7A5AD1\"/>"
  },
  {
@@ -29,6 +35,8 @@
   "en": "CML",
   "desc_bn": "",
   "desc_en": "",
+  "card_bn": "",
+  "card_en": "",
   "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#E4EEFF\"/><circle cx=\"19\" cy=\"19\" r=\"9\" fill=\"#B7CBF7\"/><circle cx=\"18\" cy=\"18\" r=\"4.5\" fill=\"#3B4FB8\"/><circle cx=\"35\" cy=\"24\" r=\"7\" fill=\"#B7CBF7\"/><circle cx=\"36\" cy=\"25\" r=\"3.5\" fill=\"#3B4FB8\"/><circle cx=\"24\" cy=\"37\" r=\"8\" fill=\"#B7CBF7\"/><circle cx=\"23\" cy=\"38\" r=\"4\" fill=\"#3B4FB8\"/>"
  },
  {
@@ -37,6 +45,8 @@
   "en": "Multiple myeloma",
   "desc_bn": "",
   "desc_en": "",
+  "card_bn": "",
+  "card_en": "",
   "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FDECEE\"/><ellipse cx=\"15\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#D93A4A\"/><ellipse cx=\"22.5\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#E8616D\"/><ellipse cx=\"30\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#D93A4A\"/><ellipse cx=\"37.5\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#E8616D\"/>"
  },
  {
@@ -45,6 +55,8 @@
   "en": "The bone marrow test",
   "desc_bn": "",
   "desc_en": "",
+  "card_bn": "",
+  "card_en": "",
   "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FFE9D2\"/><circle cx=\"18\" cy=\"19\" r=\"8\" fill=\"#FFFFFF\"/><circle cx=\"35\" cy=\"30\" r=\"9\" fill=\"#FFFFFF\"/><circle cx=\"18\" cy=\"37\" r=\"5\" fill=\"#FFFFFF\"/><circle cx=\"31\" cy=\"14\" r=\"2.5\" fill=\"#7A5AD1\"/><circle cx=\"38\" cy=\"17\" r=\"2\" fill=\"#7A5AD1\"/><circle cx=\"26\" cy=\"27\" r=\"2.5\" fill=\"#7A5AD1\"/><circle cx=\"27\" cy=\"41\" r=\"2\" fill=\"#7A5AD1\"/><circle cx=\"10\" cy=\"28\" r=\"2\" fill=\"#7A5AD1\"/>"
  }
 ]
