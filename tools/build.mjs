@@ -15,7 +15,9 @@
 // How the page is dressed, with nothing extra to type:
 //   - Everything before the first "# Heading" is the opening story. It is set in the serif
 //     story type, and a short first line becomes the big headline line of the chapter.
-//     That same first sentence is the teaser on the chapter's card on the home page.
+//     The line on the chapter's card on the home page comes from "card_bn" / "card_en" in
+//     chapters/list.json: a line in the reader's own words (their symptom, their report, their worry).
+//     If that is empty, the card falls back to the first sentence of the story.
 //   - A section whose heading says "Go to a hospital ..." becomes the red warning box.
 //   - A section whose heading has "questions" and "doctor" becomes the green checklist.
 //   - A section headed "Common questions" becomes tap-to-open questions ("## " lines are the questions).
@@ -291,7 +293,7 @@ if(!calm&&'IntersectionObserver' in window){
   }
 }
 
-// Home page. A chapter with words gets a story card (its first line is the teaser).
+// Home page. A chapter with words gets a card with its card line (or, failing that, its first sentence).
 // A chapter with no words yet is listed quietly under "Coming soon" and is not a link.
 let grid = '', chips = { bn: '', en: '' };
 for (const c of chapters) {
@@ -299,7 +301,9 @@ for (const c of chapters) {
   for (const l of LANGS) {
     const other = l === 'bn' ? 'en' : 'bn';
     if (!has.bn && !has.en) { chips[l] += `<span class="chip" lang="${l}">${ic(c.art)}${esc(c[l])}</span>`; continue; }
-    const hook = has[l] ? `“${esc(teaser(text[l]))}”` : (l === 'bn' ? 'এই অধ্যায়টি এখন শুধু ইংরেজিতে আছে।' : 'This chapter is in Bengali for now.');
+    const own = (c[`card_${l}`] || '').trim();
+    const hook = !has[l] ? (l === 'bn' ? 'এই অধ্যায়টি এখন শুধু ইংরেজিতে আছে।' : 'This chapter is in Bengali for now.')
+      : own ? esc(own) : `“${esc(teaser(text[l]))}”`;
     const meta = has[l] ? readTime(text[l], l) : readTime(text[other], other);
     grid += `<a class="card" lang="${l}" href="${url(c.id, l)}">${ic(c.art, 'deco')}<span class="top">${ic(c.art)}<h3>${esc(c[l])}</h3></span>` +
       `<span class="hook">${hook}</span><span class="meta"><span>${meta}</span><span class="go">${RIGHT}</span></span></a>\n`;

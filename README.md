@@ -35,7 +35,8 @@ You only type plain text. The site dresses it by itself:
 
 | What you type | What the reader sees |
 | --- | --- |
-| The lines before the first `# ` heading | The opening story, in the story typeface. If the first line is short, it becomes the big headline line, and it is also the teaser on the chapter's card on the home page |
+| The lines before the first `# ` heading | The opening story, in the story typeface. If the first line is short, it becomes the big headline line |
+| `card_bn` and `card_en` in `chapters/list.json` | The line on the chapter's card on the home page, in the reader's own words ("Breathless on the stairs? Tired all day?"). Edit it there to change the card |
 | A heading that says `Go to a hospital ...` (Bengali: `... হাসপাতালে যান`) | The red warning box |
 | A heading with `questions` and `doctor` in it (Bengali: `প্রশ্ন` or `জিজ্ঞেস`) | The green checklist to take to the doctor |
 | The heading `Common questions` (Bengali: `অনেকে যা জানতে চান`), with each question on a `## ` line | Questions that open when tapped |
@@ -45,7 +46,7 @@ A chapter with no words yet is listed on the home page under "Coming soon" and i
 
 ## Adding a new chapter
 
-1. Add a line to `chapters/list.json` with the chapter's `id` (short, lowercase, no spaces), its Bengali and English names, and a short description in each language (`desc_bn`, `desc_en`, about 150 characters, shown in Google results).
+1. Add a line to `chapters/list.json` with the chapter's `id` (short, lowercase, no spaces), its Bengali and English names, a short description in each language (`desc_bn`, `desc_en`, about 150 characters, shown in Google results), and the card line in each language (`card_bn`, `card_en`).
 2. Add `chapters/<id>.bn.txt` and `chapters/<id>.en.txt`.
 
 ## Other files
