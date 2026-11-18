@@ -12,6 +12,8 @@ A person with one faulty copy is a carrier. They are healthy, they need no treat
 
 When both parents are carriers, every pregnancy has a 1 in 4 chance that the baby will have thalassemia major. The chance starts again with each child. It does not matter what happened to the brothers and sisters before.
 
+[figure: inheritance]
+
 # The mother did not cause this
 
 Her daughter has thalassemia major, which means the girl received a faulty copy from her mother and another from her father. Neither parent could have known, and neither parent did anything wrong. The father's side has "never had this" only because no one there had married another carrier before, or because no one had been tested.
@@ -23,6 +25,8 @@ The same test is worth doing for the baby's aunts, uncles and cousins. A family 
 # Two names, one risk
 
 The engaged couple made a mistake that is easy to make in Bengal. HbE and beta thalassemia sound like two separate things, and on their own, each is harmless in a carrier. But they are two faults in the same part of hemoglobin. When a child inherits HbE from one parent and beta thalassemia from the other, the result is a condition called HbE beta thalassemia. Some children with it have mild anaemia. Others need regular blood transfusions, just like thalassemia major.
+
+[figure: hbe-beta]
 
 Only a doctor who reads both reports together can tell a couple where they stand.
 

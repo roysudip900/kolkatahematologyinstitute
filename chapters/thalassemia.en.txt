@@ -14,6 +14,8 @@ Blood is red because of hemoglobin, the part of the red cell that carries oxygen
 
 In thalassemia, the body's instructions for building hemoglobin have a mistake in them. Each of us holds two copies of these instructions, one from our mother and one from our father.
 
+[figure: copies]
+
 # The bride is not ill
 
 One of her two copies has the mistake. The other works, and it is enough. Doctors call this being a carrier, or trait, or minor.

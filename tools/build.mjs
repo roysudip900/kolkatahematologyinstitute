@@ -11,6 +11,7 @@
 //   "# Heading"      a section heading
 //   "## Heading"     a smaller heading inside a section
 //   "- item"         a bullet point (several in a row make a list)
+//   "[figure: name]"  a moving illustration from tools/figures.mjs, with its caption, on a line of its own
 //
 // How the page is dressed, with nothing extra to type:
 //   - Everything before the first "# Heading" is the opening story. It is set in the serif
@@ -34,6 +35,7 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync, rmSync, rmdirSync, 
 import { execFileSync } from 'node:child_process';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { figure } from './figures.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const SITE = 'https://kolkatahematologyinstitute.com';
@@ -71,7 +73,9 @@ function tokens(txt) {
     for (let line of block.split('\n')) {
       line = line.trim();
       if (!line) continue;
-      if (/^##\s/.test(line)) { flushP(); flushL(); out.push({ t: 'h3', text: line.replace(/^##\s*/, '') }); }
+      const fig = line.match(/^\[\s*figure\s*:\s*([a-z0-9-]+)\s*\]$/i);
+      if (fig) { flushP(); flushL(); out.push({ t: 'fig', name: fig[1].toLowerCase() }); }
+      else if (/^##\s/.test(line)) { flushP(); flushL(); out.push({ t: 'h3', text: line.replace(/^##\s*/, '') }); }
       else if (/^#\s/.test(line)) { flushP(); flushL(); out.push({ t: 'h2', text: line.replace(/^#\s*/, '') }); }
       else if (/^[-•]\s/.test(line)) { flushP(); list.push(line.replace(/^[-•]\s*/, '')); }
       else { flushL(); para.push(line); }
@@ -80,9 +84,11 @@ function tokens(txt) {
   }
   return out;
 }
+let LANG = 'en'; // the language of the page being built, for figures
 function html(tk, firstClass = '') {
   let first = true;
   return tk.map((x) => {
+    if (x.t === 'fig') return figure(x.name, LANG);
     if (x.t === 'p') { const c = first && firstClass ? ` class="${firstClass}"` : ''; first = false; return `<p${c}>${x.lines.map(esc).join('<br>')}</p>`; }
     first = false;
     if (x.t === 'ul') return `<ul>${x.items.map((i) => `<li>${esc(i)}</li>`).join('')}</ul>`;
@@ -90,7 +96,7 @@ function html(tk, firstClass = '') {
     return `<h2>${esc(x.text)}</h2>`;
   }).join('');
 }
-const textOf = (tk) => tk.map((x) => (x.t === 'p' ? x.lines.join(' ') : x.t === 'ul' ? x.items.join(' ') : x.text)).join(' ');
+const textOf = (tk) => tk.filter((x) => x.t !== 'fig').map((x) => (x.t === 'p' ? x.lines.join(' ') : x.t === 'ul' ? x.items.join(' ') : x.text)).join(' ');
 
 // Which special dress a section gets, from the words in its heading.
 function kind(title) {
@@ -137,7 +143,7 @@ function chapterBody(txt) {
 }
 
 function plain(txt) {
-  return txt.replace(/\r/g, '').split('\n').filter((l) => l.trim() && !/^#/.test(l.trim())).map((l) => l.replace(/^[-•]\s*/, '').trim()).join(' ');
+  return txt.replace(/\r/g, '').split('\n').filter((l) => l.trim() && !/^#/.test(l.trim()) && !/^\[\s*figure\s*:/i.test(l.trim())).map((l) => l.replace(/^[-•]\s*/, '').trim()).join(' ');
 }
 function summary(txt, max = 155) {
   const t = plain(txt);
@@ -264,6 +270,7 @@ for (const c of chapters) {
     const canonical = SITE + url(c.id, l);
     let body, kick = '', schema = '';
     if (live) {
+      LANG = l;
       const b = chapterBody(text[l]);
       kick = root ? `${esc(short(root, l))} · ${readTime(text[l], l)}` : readTime(text[l], l);
       body = `<div class="by">${AVATAR}<div><b>${l === 'bn' ? `লিখেছেন ${AUTHOR.bn}` : `By ${AUTHOR.en}`}</b>${CRED[l]}<br>${l === 'bn' ? `শেষ আপডেট ${niceDate(date, 'bn')}` : `Last updated ${niceDate(date, 'en')}`}</div></div>` +
