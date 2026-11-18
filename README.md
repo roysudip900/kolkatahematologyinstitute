@@ -44,6 +44,14 @@ You only type plain text. The site dresses it by itself:
 
 A chapter with no words yet is listed on the home page under "Coming soon" and is not a link.
 
+## Chapters and their parts
+
+The home page shows only the main chapters. A big subject such as Thalassemia is one chapter with several parts:
+
+- The chapter's own page (`/thalassemia/`) is "the basics". Near the top it lists every part, with the parts not yet written marked "Soon".
+- Each part has its own page under the chapter (`/thalassemia/inheritance/`), a link back to the chapter, the same list, and a "Next" card at the end.
+- A part is a line in `chapters/list.json` with `"parent": "thalassemia"`. Its text files are named as before (`chapters/thalassemia-inheritance.en.txt`). The order of the lines in the list is the order of the parts.
+
 ## Adding a new chapter
 
 1. Add a line to `chapters/list.json` with the chapter's `id` (short, lowercase, no spaces), its Bengali and English names, a short description in each language (`desc_bn`, `desc_en`, about 150 characters, shown in Google results), and the card line in each language (`card_bn`, `card_en`).

@@ -132,6 +132,28 @@ html[data-lang="bn"] .hero h1 .hl{padding-bottom:.2em}
 .by .av{width:42px;height:42px;flex:none}
 .by b{display:block;color:var(--ink);font-weight:600;font-size:1rem}
 
+/* chapters and their parts */
+.parts{margin-top:22px;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:14px 18px 6px}
+.parts .k{font-size:.84rem;font-weight:600;color:var(--teal-2);padding-bottom:4px}
+.parts ol{list-style:none;margin:0;padding:0}
+.parts li{border-top:1px solid var(--line)}
+.parts li:first-child{border-top:0}
+.parts .row{display:flex;align-items:center;gap:12px;min-height:48px;padding:6px 0;font-size:1.02rem;line-height:1.4}
+.parts a.row:hover span:last-child{color:var(--teal-2);text-decoration:underline;text-underline-offset:3px}
+.parts .n{width:28px;height:28px;flex:none;border-radius:50%;display:grid;place-items:center;background:var(--mint);color:var(--teal);font-size:.85rem;font-weight:700}
+.parts li[aria-current] .row{font-weight:600}
+.parts li[aria-current] .n{background:var(--teal);color:#fff}
+.parts .later .row{color:var(--muted)}
+.parts .later .n{background:#F3EDE2;color:var(--muted)}
+.parts .later em{margin-left:auto;flex:none;font-style:normal;font-size:.76rem;font-weight:600;border:1px dashed #D6C8AF;border-radius:999px;padding:1px 10px}
+.nextpart{margin-top:40px;display:flex;align-items:center;gap:16px;color:#fff;background:var(--deep);border-radius:26px;padding:20px 20px 20px 24px;transition:transform .3s}
+.nextpart:hover{transform:translateY(-3px)}
+.nextpart .k{display:block;font-size:.84rem;font-weight:600;color:var(--teal-soft)}
+.nextpart .t{display:block;font-family:var(--serif);font-size:1.32rem;font-weight:600;line-height:1.3;margin-top:2px}
+:lang(bn) .nextpart .t{line-height:1.5;font-weight:700}
+.nextpart .go{margin-left:auto;width:46px;height:46px;flex:none;border-radius:50%;background:#fff;color:var(--teal);display:grid;place-items:center}
+.nextpart .go svg{width:16px;height:16px}
+
 /* the opening story of a chapter */
 .story{margin-top:30px;font-family:var(--serif);font-size:1.22rem;line-height:1.7}
 :lang(bn) .story{font-size:1.15rem;line-height:1.95}
@@ -210,7 +232,7 @@ footer p{max-width:36em}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .cells .f,.chead .big{animation:none}
-  .card,.cta,.allbtn,.card .go{transition:none}
+  .card,.cta,.allbtn,.card .go,.nextpart{transition:none}
   .rv{opacity:1;transform:none}
 }
 </style>
@@ -280,10 +302,8 @@ footer p{max-width:36em}
 <!-- grid:start (written by tools/build.mjs from chapters/list.json, do not edit by hand) -->
 <a class="card" lang="bn" href="/anaemia/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#FDECEE"/><circle cx="26" cy="26" r="15" fill="#F2A7AE"/><circle cx="26" cy="26" r="9" fill="#FDECEE"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#FDECEE"/><circle cx="26" cy="26" r="15" fill="#F2A7AE"/><circle cx="26" cy="26" r="9" fill="#FDECEE"/></svg><h3>অ্যানিমিয়া: রক্তাল্পতা</h3></span><span class="hook">সিঁড়ি ভাঙলেই হাঁফ ধরে? সারাদিন ক্লান্ত লাগে? রিপোর্টে হিমোগ্লোবিন কম?</span><span class="meta"><span>৪ মিনিটে পড়ুন</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
 <a class="card" lang="en" href="/en/anaemia/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#FDECEE"/><circle cx="26" cy="26" r="15" fill="#F2A7AE"/><circle cx="26" cy="26" r="9" fill="#FDECEE"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#FDECEE"/><circle cx="26" cy="26" r="15" fill="#F2A7AE"/><circle cx="26" cy="26" r="9" fill="#FDECEE"/></svg><h3>Anaemia: low hemoglobin</h3></span><span class="hook">Breathless on the stairs? Tired all day? Hemoglobin low on your report?</span><span class="meta"><span>5 min read</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
-<a class="card" lang="bn" href="/thalassemia/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#FFF3D6"/><circle cx="26" cy="26" r="15" fill="#D93A4A"/><circle cx="26" cy="26" r="10" fill="#FFF3D6"/><circle cx="26" cy="26" r="4.5" fill="#D93A4A"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#FFF3D6"/><circle cx="26" cy="26" r="15" fill="#D93A4A"/><circle cx="26" cy="26" r="10" fill="#FFF3D6"/><circle cx="26" cy="26" r="4.5" fill="#D93A4A"/></svg><h3>থ্যালাসেমিয়া</h3></span><span class="hook">রিপোর্টে লেখা ‘থ্যালাসেমিয়া ট্রেট’? বিয়ের আগে কী জানবেন? বাচ্চা ফ্যাকাশে, খেতে চায় না?</span><span class="meta"><span>৪ মিনিটে পড়ুন</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
-<a class="card" lang="en" href="/en/thalassemia/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#FFF3D6"/><circle cx="26" cy="26" r="15" fill="#D93A4A"/><circle cx="26" cy="26" r="10" fill="#FFF3D6"/><circle cx="26" cy="26" r="4.5" fill="#D93A4A"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#FFF3D6"/><circle cx="26" cy="26" r="15" fill="#D93A4A"/><circle cx="26" cy="26" r="10" fill="#FFF3D6"/><circle cx="26" cy="26" r="4.5" fill="#D93A4A"/></svg><h3>Thalassemia</h3></span><span class="hook">Your report says ‘thalassemia trait’? Getting married soon? A baby who is pale and will not feed?</span><span class="meta"><span>5 min read</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
-<a class="card" lang="bn" href="/thalassemia-inheritance/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#FFF3D6"/><circle cx="18" cy="21" r="9" fill="#D93A4A"/><circle cx="18" cy="21" r="4" fill="#FFF3D6"/><circle cx="34" cy="21" r="9" fill="#E8616D"/><circle cx="34" cy="21" r="4" fill="#FFF3D6"/><circle cx="26" cy="37" r="6" fill="#D93A4A"/><circle cx="26" cy="37" r="2.5" fill="#FFF3D6"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#FFF3D6"/><circle cx="18" cy="21" r="9" fill="#D93A4A"/><circle cx="18" cy="21" r="4" fill="#FFF3D6"/><circle cx="34" cy="21" r="9" fill="#E8616D"/><circle cx="34" cy="21" r="4" fill="#FFF3D6"/><circle cx="26" cy="37" r="6" fill="#D93A4A"/><circle cx="26" cy="37" r="2.5" fill="#FFF3D6"/></svg><h3>থ্যালাসেমিয়া: বংশে কীভাবে আসে</h3></span><span class="hook">দুজনের রিপোর্টেই ‘ট্রেট’ লেখা? বাচ্চার থ্যালাসেমিয়ার জন্য দোষ শুনছেন?</span><span class="meta"><span>৪ মিনিটে পড়ুন</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
-<a class="card" lang="en" href="/en/thalassemia-inheritance/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#FFF3D6"/><circle cx="18" cy="21" r="9" fill="#D93A4A"/><circle cx="18" cy="21" r="4" fill="#FFF3D6"/><circle cx="34" cy="21" r="9" fill="#E8616D"/><circle cx="34" cy="21" r="4" fill="#FFF3D6"/><circle cx="26" cy="37" r="6" fill="#D93A4A"/><circle cx="26" cy="37" r="2.5" fill="#FFF3D6"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#FFF3D6"/><circle cx="18" cy="21" r="9" fill="#D93A4A"/><circle cx="18" cy="21" r="4" fill="#FFF3D6"/><circle cx="34" cy="21" r="9" fill="#E8616D"/><circle cx="34" cy="21" r="4" fill="#FFF3D6"/><circle cx="26" cy="37" r="6" fill="#D93A4A"/><circle cx="26" cy="37" r="2.5" fill="#FFF3D6"/></svg><h3>Thalassemia: how it runs in families</h3></span><span class="hook">‘Trait’ on both your reports? Blamed for your child's thalassemia?</span><span class="meta"><span>5 min read</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
+<a class="card" lang="bn" href="/thalassemia/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#FFF3D6"/><circle cx="26" cy="26" r="15" fill="#D93A4A"/><circle cx="26" cy="26" r="10" fill="#FFF3D6"/><circle cx="26" cy="26" r="4.5" fill="#D93A4A"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#FFF3D6"/><circle cx="26" cy="26" r="15" fill="#D93A4A"/><circle cx="26" cy="26" r="10" fill="#FFF3D6"/><circle cx="26" cy="26" r="4.5" fill="#D93A4A"/></svg><h3>থ্যালাসেমিয়া</h3></span><span class="hook">রিপোর্টে লেখা ‘থ্যালাসেমিয়া ট্রেট’? বিয়ের আগে কী জানবেন? বাচ্চা ফ্যাকাশে, খেতে চায় না?</span><span class="meta"><span>২টি পর্ব</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
+<a class="card" lang="en" href="/en/thalassemia/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#FFF3D6"/><circle cx="26" cy="26" r="15" fill="#D93A4A"/><circle cx="26" cy="26" r="10" fill="#FFF3D6"/><circle cx="26" cy="26" r="4.5" fill="#D93A4A"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#FFF3D6"/><circle cx="26" cy="26" r="15" fill="#D93A4A"/><circle cx="26" cy="26" r="10" fill="#FFF3D6"/><circle cx="26" cy="26" r="4.5" fill="#D93A4A"/></svg><h3>Thalassemia</h3></span><span class="hook">Your report says ‘thalassemia trait’? Getting married soon? A baby who is pale and will not feed?</span><span class="meta"><span>2 parts</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
 <!-- grid:end -->
     </div>
 <!-- soon:start (written by tools/build.mjs, do not edit by hand) -->
@@ -313,7 +333,7 @@ footer p{max-width:36em}
 (function(){
 "use strict";
 /* Old links like /#anaemia now go to the chapter's own page, /anaemia/ (Bengali) or /en/anaemia/ (English). */
-var CHAPTER_IDS=/*ids:start*/["anaemia","thalassemia","thalassemia-inheritance","itp","cml","myeloma","marrow"]/*ids:end*/;
+var CHAPTER_IDS=/*ids:start*/["anaemia","thalassemia","itp","cml","myeloma","marrow"]/*ids:end*/;
 var h=location.hash.slice(1);
 if(CHAPTER_IDS.indexOf(h)>-1){var pl='bn';try{pl=localStorage.getItem('khi-lang')||'bn';}catch(e){}
   location.replace((pl==='en'?'/en/':'/')+h+'/');return;}
