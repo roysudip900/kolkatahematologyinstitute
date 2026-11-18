@@ -23,8 +23,14 @@
 //   - A section headed "Common questions" becomes tap-to-open questions ("## " lines are the questions).
 //   - A section headed "The main points" becomes a pale yellow box.
 //   (The Bengali headings are recognised too. See kind() below.)
+//
+// Chapters and parts: a line in chapters/list.json with "parent": "thalassemia" is a PART of the
+// Thalassemia chapter. It gets the address /thalassemia/<rest of its id>/ (thalassemia-inheritance
+// becomes /thalassemia/inheritance/), it is not shown on the home page, and it is listed under
+// "In this chapter" on the chapter's own page and on every part's page. Its text files keep their
+// names (chapters/thalassemia-inheritance.en.txt). The old flat address redirects to the new one.
 
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync, rmSync, rmdirSync, readdirSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -50,7 +56,8 @@ const ICON = {
 const read = (p) => readFileSync(join(ROOT, p), 'utf8');
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const ic = (art, cls = 'ic') => `<svg class="${cls}" viewBox="0 0 52 52" aria-hidden="true">${art}</svg>`;
-const url = (id, l) => (l === 'en' ? `/en/${id}/` : `/${id}/`);
+const PATHS = {}; // chapter id -> address on the site, filled in once chapters/list.json is read
+const url = (id, l) => (l === 'en' ? `/en/${PATHS[id] || id}/` : `/${PATHS[id] || id}/`);
 const BN_DIGITS = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];
 const bnNum = (n) => String(n).replace(/\d/g, (d) => BN_DIGITS[+d]);
 
@@ -172,8 +179,21 @@ const style = index.match(/<style>[\s\S]*?<\/style>/)[0];
 const fonts = index.match(/<link rel="preconnect"[\s\S]*?rel="stylesheet">/)[0];
 const footer = index.match(/<footer>[\s\S]*?<\/footer>/)[0];
 const chapters = JSON.parse(read('chapters/list.json'));
+const byId = Object.fromEntries(chapters.map((c) => [c.id, c]));
+for (const c of chapters) {
+  if (c.parent && !byId[c.parent]) throw new Error(`${c.id}: parent "${c.parent}" is not in chapters/list.json`);
+  PATHS[c.id] = c.parent ? `${c.parent}/${c.slug || c.id.replace(new RegExp(`^${c.parent}-`), '')}` : c.id;
+}
+const kids = (id) => chapters.filter((x) => x.parent === id);
+const short = (c, l) => c[l].split(/[:：]/)[0].trim();
+// A part's own name without the chapter's name in front: "Thalassemia: how it runs in families" -> "How it runs in families".
+function partTitle(c, l) {
+  const p = byId[c.parent];
+  let t = c[l];
+  if (p) { const pre = short(p, l); if (t.startsWith(pre)) t = t.slice(pre.length).replace(/^\s*[:：]\s*/, ''); }
+  return l === 'en' ? t.charAt(0).toUpperCase() + t.slice(1) : t;
+}
 
-const pages = [];
 const info = {};
 for (const c of chapters) {
   const text = {}, has = {};
@@ -183,6 +203,58 @@ for (const c of chapters) {
     has[l] = !!text[l];
   }
   info[c.id] = { text, has };
+}
+
+// "In this chapter": the chapter itself (the basics) and every part, in list order.
+function partsNav(c, l) {
+  const root = c.parent ? byId[c.parent] : c;
+  const ks = kids(root.id).filter((x) => info[x.id].has[l]);
+  if (!ks.length) return '';
+  const rows = [root, ...ks].map((x, i) => {
+    const label = i === 0 ? (l === 'bn' ? 'গোড়ার কথা' : 'The basics') : partTitle(x, l);
+    const n = `<span class="n">${l === 'bn' ? bnNum(i + 1) : i + 1}</span>`;
+    if (x.id === c.id) return `<li aria-current="page"><span class="row">${n}<span>${esc(label)}</span></span></li>`;
+    return `<li><a class="row" href="${url(x.id, l)}">${n}<span>${esc(label)}</span></a></li>`;
+  }).join('');
+  return `<nav class="parts" aria-label="${l === 'bn' ? 'এই অধ্যায়ে যা আছে' : 'In this chapter'}"><div class="k">${l === 'bn' ? `${esc(short(root, l))}: এই অধ্যায়ে যা আছে` : `${esc(short(root, l))}: in this chapter`}</div><ol>${rows}</ol></nav>`;
+}
+// The next written part after this one, for the card at the end of the page.
+function nextPart(c, l) {
+  const root = c.parent ? byId[c.parent] : c;
+  const all = [root, ...kids(root.id)];
+  const i = all.findIndex((x) => x.id === c.id);
+  const nx = all.slice(i + 1).find((x) => info[x.id].has[l]);
+  if (!nx) return '';
+  return `<a class="nextpart" href="${url(nx.id, l)}"><span><span class="k">${l === 'bn' ? `${esc(short(root, l))}: এরপর পড়ুন` : `Next in ${esc(short(root, l))}`}</span><span class="t">${esc(partTitle(nx, l))}</span></span><span class="go">${RIGHT}</span></a>`;
+}
+// The old flat address of a part (/thalassemia-inheritance/) sends readers on to the new one.
+function redirectPage(to) {
+  return `<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Moved</title><meta name="robots" content="noindex">
+<link rel="canonical" href="${SITE + to}"><meta http-equiv="refresh" content="0; url=${to}">
+<script>location.replace(${JSON.stringify(to)}+location.hash);</script></head>
+<body><p><a href="${to}">${to}</a></p></body></html>
+`;
+}
+
+// Remove a page this script made earlier, for a chapter or part that has no words yet.
+function removeGenerated(rel) {
+  const f = join(ROOT, rel);
+  if (!existsSync(f) || !/Written by tools\/build\.mjs|<title>Moved<\/title>/.test(read(rel))) return;
+  rmSync(f);
+  let d = dirname(f);
+  while (d !== ROOT && existsSync(d) && readdirSync(d).length === 0) { rmdirSync(d); d = dirname(d); }
+}
+
+const pages = [];
+for (const c of chapters) {
+  const { text, has } = info[c.id];
+  // Nothing written yet in either language: no page, no card, no link anywhere (Dr. Roy, 2026-11-18).
+  if (!has.bn && !has.en) {
+    for (const p of [PATHS[c.id], c.id]) { removeGenerated(`${p}/index.html`); removeGenerated(`en/${p}/index.html`); }
+    continue;
+  }
+  const root = c.parent ? byId[c.parent] : null;
   for (const l of LANGS) {
     const other = l === 'bn' ? 'en' : 'bn';
     const title = c[l];
@@ -193,9 +265,10 @@ for (const c of chapters) {
     let body, kick = '', schema = '';
     if (live) {
       const b = chapterBody(text[l]);
-      kick = readTime(text[l], l);
+      kick = root ? `${esc(short(root, l))} · ${readTime(text[l], l)}` : readTime(text[l], l);
       body = `<div class="by">${AVATAR}<div><b>${l === 'bn' ? `লিখেছেন ${AUTHOR.bn}` : `By ${AUTHOR.en}`}</b>${CRED[l]}<br>${l === 'bn' ? `শেষ আপডেট ${niceDate(date, 'bn')}` : `Last updated ${niceDate(date, 'en')}`}</div></div>` +
-        `<article>${b.html}</article>` +
+        partsNav(c, l) +
+        `<article>${b.html}</article>` + nextPart(c, l) +
         `<aside class="endcard">${AVATAR}<div><div class="k">${l === 'bn' ? 'লেখক' : 'Author'}</div><div class="who">${AUTHOR[l]}</div><div class="cred">${CRED[l]}</div></div></aside>` +
         `<a class="allbtn" href="/#library">${LEFT}${l === 'bn' ? 'সব অধ্যায়' : 'All chapters'}</a>`;
       schema = ld({
@@ -203,6 +276,7 @@ for (const c of chapters) {
         url: canonical, dateModified: date, about: { '@type': 'MedicalCondition', name: c.en.split(':')[0] },
         author: { '@type': 'Person', name: AUTHOR.en, jobTitle: 'Clinical Hematologist', honorificSuffix: CRED.en },
         publisher: { '@type': 'MedicalOrganization', name: SITE_NAME.en, url: SITE + '/' },
+        ...(root ? { isPartOf: { '@type': 'MedicalWebPage', name: root[l], url: SITE + url(root.id, l) } } : {}),
       });
       if (b.faq.length) schema += '\n' + ld({
         '@context': 'https://schema.org', '@type': 'FAQPage', inLanguage: l,
@@ -258,8 +332,8 @@ ${schema}
 </div></header>
 
 <main class="read">
-<a class="back" href="/#library">${LEFT}${l === 'bn' ? 'সব অধ্যায়' : 'All chapters'}</a>
-<div class="chead">${ic(c.art, 'big')}${kick ? `<span class="kick">${kick}</span>` : ''}<h1>${esc(title)}</h1></div>
+${root ? `<a class="back" href="${url(root.id, l)}">${LEFT}${esc(short(root, l))}</a>` : `<a class="back" href="/#library">${LEFT}${l === 'bn' ? 'সব অধ্যায়' : 'All chapters'}</a>`}
+<div class="chead">${ic(c.art, 'big')}${kick ? `<span class="kick">${kick}</span>` : ''}<h1>${esc(root ? partTitle(c, l) : title)}</h1></div>
 ${body}
 </main>
 
@@ -286,33 +360,40 @@ if(!calm&&'IntersectionObserver' in window){
 </body>
 </html>
 `;
-    const out = l === 'en' ? `en/${c.id}/index.html` : `${c.id}/index.html`;
+    const out = l === 'en' ? `en/${PATHS[c.id]}/index.html` : `${PATHS[c.id]}/index.html`;
+    // A part that used to live at a flat address keeps a redirect there, so old links still work.
+    const old = l === 'en' ? `en/${c.id}/index.html` : `${c.id}/index.html`;
+    if (PATHS[c.id] !== c.id && existsSync(join(ROOT, old))) writeFileSync(join(ROOT, old), redirectPage(url(c.id, l)));
     mkdirSync(join(ROOT, dirname(out)), { recursive: true });
     writeFileSync(join(ROOT, out), page.replace(/^\s*\n/gm, ''));
     if (live) pages.push({ loc: canonical, lastmod: date, alts: LANGS.filter((x) => has[x]).map((x) => [x, SITE + url(c.id, x)]) });
   }
 }
 
-// Home page. A chapter with words gets a card with its card line (or, failing that, its first sentence).
-// A chapter with no words yet is listed quietly under "Coming soon" and is not a link.
-let grid = '', chips = { bn: '', en: '' };
+// Home page: chapters only. Parts live inside their chapter.
+// A chapter with words gets a card with its card line (or, failing that, its first sentence).
+// A chapter with no words yet is not shown.
+let grid = '';
 for (const c of chapters) {
+  if (c.parent) continue;
   const { text, has } = info[c.id];
   for (const l of LANGS) {
     const other = l === 'bn' ? 'en' : 'bn';
-    if (!has.bn && !has.en) { chips[l] += `<span class="chip" lang="${l}">${ic(c.art)}${esc(c[l])}</span>`; continue; }
+    if (!has.bn && !has.en) continue; // not written yet: not shown
     const own = (c[`card_${l}`] || '').trim();
     const hook = !has[l] ? (l === 'bn' ? 'এই অধ্যায়টি এখন শুধু ইংরেজিতে আছে।' : 'This chapter is in Bengali for now.')
       : own ? esc(own) : `“${esc(teaser(text[l]))}”`;
-    const meta = has[l] ? readTime(text[l], l) : readTime(text[other], other);
+    const parts = 1 + kids(c.id).filter((x) => info[x.id].has[l]).length;
+    const meta = parts > 1 ? (l === 'bn' ? `${bnNum(parts)}টি পর্ব` : `${parts} parts`)
+      : has[l] ? readTime(text[l], l) : readTime(text[other], other);
     grid += `<a class="card" lang="${l}" href="${url(c.id, l)}">${ic(c.art, 'deco')}<span class="top">${ic(c.art)}<h3>${esc(c[l])}</h3></span>` +
       `<span class="hook">${hook}</span><span class="meta"><span>${meta}</span><span class="go">${RIGHT}</span></span></a>\n`;
   }
 }
-const soon = chips.bn ? `    <div class="soon"><div class="k"><span lang="bn">শীঘ্রই আসছে</span><span lang="en">Coming soon</span></div><div class="chips">${chips.bn}${chips.en}</div></div>\n` : '';
+const soon = ''; // Chapters with no words yet are not shown at all (Dr. Roy, 2026-11-18), so there is no "Coming soon" list.
 let home = index.replace(/(<!-- grid:start[^>]*-->\n)[\s\S]*?(<!-- grid:end -->)/, (m, a, b) => a + grid + b)
   .replace(/(<!-- soon:start[^>]*-->\n)[\s\S]*?(<!-- soon:end -->)/, (m, a, b) => a + soon + b)
-  .replace(/\/\*ids:start\*\/[\s\S]*?\/\*ids:end\*\//, `/*ids:start*/${JSON.stringify(chapters.map((c) => c.id))}/*ids:end*/`);
+  .replace(/\/\*ids:start\*\/[\s\S]*?\/\*ids:end\*\//, `/*ids:start*/${JSON.stringify(chapters.filter((c) => !c.parent && (info[c.id].has.bn || info[c.id].has.en)).map((c) => c.id))}/*ids:end*/`);
 if (!/rel="canonical"/.test(home)) home = home.replace('</title>', `</title>\n<link rel="canonical" href="${SITE}/">`);
 writeFileSync(join(ROOT, 'index.html'), home);
 
@@ -327,4 +408,4 @@ ${pages.map((p) => `  <url><loc>${p.loc}</loc><lastmod>${p.lastmod}</lastmod>${p
 writeFileSync(join(ROOT, 'sitemap.xml'), sm);
 writeFileSync(join(ROOT, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`);
 
-console.log(`built ${chapters.length * 2} chapter pages, ${pages.length} in the sitemap (${today})`);
+console.log(`built ${2 * chapters.filter((c) => info[c.id].has.bn || info[c.id].has.en).length} chapter pages, ${pages.length} in the sitemap (${today})`);

@@ -21,6 +21,7 @@
  },
  {
   "id": "thalassemia-inheritance",
+  "parent": "thalassemia",
   "bn": "থ্যালাসেমিয়া: বংশে কীভাবে আসে",
   "en": "Thalassemia: how it runs in families",
   "desc_bn": "থ্যালাসেমিয়া বাবা-মা থেকে বাচ্চার মধ্যে কীভাবে আসে, কেন দুজন বাহক লাগে, HbE আর বিটা থ্যালাসেমিয়া একসঙ্গে থাকলে কী হয়, পরীক্ষা কখন করাবেন।",
@@ -28,6 +29,50 @@
   "card_bn": "দুজনের রিপোর্টেই ‘ট্রেট’ লেখা? বাচ্চার থ্যালাসেমিয়ার জন্য দোষ শুনছেন?",
   "card_en": "‘Trait’ on both your reports? Blamed for your child's thalassemia?",
   "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FFF3D6\"/><circle cx=\"18\" cy=\"21\" r=\"9\" fill=\"#D93A4A\"/><circle cx=\"18\" cy=\"21\" r=\"4\" fill=\"#FFF3D6\"/><circle cx=\"34\" cy=\"21\" r=\"9\" fill=\"#E8616D\"/><circle cx=\"34\" cy=\"21\" r=\"4\" fill=\"#FFF3D6\"/><circle cx=\"26\" cy=\"37\" r=\"6\" fill=\"#D93A4A\"/><circle cx=\"26\" cy=\"37\" r=\"2.5\" fill=\"#FFF3D6\"/>"
+ },
+ {
+  "id": "thalassemia-transfusion",
+  "parent": "thalassemia",
+  "bn": "থ্যালাসেমিয়া: রক্ত নেওয়া",
+  "en": "Thalassemia: blood transfusion",
+  "desc_bn": "",
+  "desc_en": "",
+  "card_bn": "",
+  "card_en": "",
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FFF3D6\"/><circle cx=\"26\" cy=\"26\" r=\"15\" fill=\"#D93A4A\"/><circle cx=\"26\" cy=\"26\" r=\"10\" fill=\"#FFF3D6\"/><circle cx=\"26\" cy=\"26\" r=\"4.5\" fill=\"#D93A4A\"/>"
+ },
+ {
+  "id": "thalassemia-complications",
+  "parent": "thalassemia",
+  "bn": "থ্যালাসেমিয়া: নিয়মিত যত্ন কেন জরুরি",
+  "en": "Thalassemia: why regular care matters",
+  "desc_bn": "",
+  "desc_en": "",
+  "card_bn": "",
+  "card_en": "",
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FFF3D6\"/><circle cx=\"26\" cy=\"26\" r=\"15\" fill=\"#D93A4A\"/><circle cx=\"26\" cy=\"26\" r=\"10\" fill=\"#FFF3D6\"/><circle cx=\"26\" cy=\"26\" r=\"4.5\" fill=\"#D93A4A\"/>"
+ },
+ {
+  "id": "thalassemia-chelation",
+  "parent": "thalassemia",
+  "bn": "থ্যালাসেমিয়া: আয়রন বের করার ওষুধ (চিলেশন)",
+  "en": "Thalassemia: the iron medicine (chelation)",
+  "desc_bn": "",
+  "desc_en": "",
+  "card_bn": "",
+  "card_en": "",
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FFF3D6\"/><circle cx=\"26\" cy=\"26\" r=\"15\" fill=\"#D93A4A\"/><circle cx=\"26\" cy=\"26\" r=\"10\" fill=\"#FFF3D6\"/><circle cx=\"26\" cy=\"26\" r=\"4.5\" fill=\"#D93A4A\"/>"
+ },
+ {
+  "id": "thalassemia-care",
+  "parent": "thalassemia",
+  "bn": "থ্যালাসেমিয়া: রোজকার জীবন",
+  "en": "Thalassemia: everyday life",
+  "desc_bn": "",
+  "desc_en": "",
+  "card_bn": "",
+  "card_en": "",
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FFF3D6\"/><circle cx=\"26\" cy=\"26\" r=\"15\" fill=\"#D93A4A\"/><circle cx=\"26\" cy=\"26\" r=\"10\" fill=\"#FFF3D6\"/><circle cx=\"26\" cy=\"26\" r=\"4.5\" fill=\"#D93A4A\"/>"
  },
  {
   "id": "itp",
