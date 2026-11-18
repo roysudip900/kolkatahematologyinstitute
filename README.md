@@ -44,6 +44,19 @@ You only type plain text. The site dresses it by itself:
 
 A chapter with no words yet is not shown on the home page.
 
+## Moving pictures in a chapter
+
+A line on its own such as `[figure: inheritance]` puts a moving illustration, with its caption, at that point in the chapter. It appears in the language of the page. The drawings are in `tools/figures.mjs`:
+
+| Name | Shows | Used in |
+| --- | --- | --- |
+| `oxygen` | Red cells carrying oxygen from the lungs to the body, many in a normal person, few in anaemia | Anaemia |
+| `copies` | Two copies of the instructions: both fine, one faulty (carrier, healthy), both faulty (thalassemia major) | Thalassemia |
+| `inheritance` | Two carrier parents and their four possible children, with the 1 in 4, 2 in 4, 1 in 4 chances | How it runs in families |
+| `hbe-beta` | HbE trait from one parent and beta thalassemia trait from the other, and the child with both | How it runs in families |
+
+To move a picture, move its line. To remove it, delete the line.
+
 ## Chapters and their parts
 
 The home page shows only the main chapters. A big subject such as Thalassemia is one chapter with several parts:
