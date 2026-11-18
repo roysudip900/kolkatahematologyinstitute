@@ -27,7 +27,7 @@ Each chapter has two plain text files in the `chapters` folder, one per language
    - Start a line with `- ` for a bullet point.
 3. Tap "Commit changes". The chapter page rebuilds by itself and the live site updates in a few minutes.
 
-An empty file shows the "script goes here" placeholder, and that page is hidden from Google until it has words in it.
+A chapter or part whose files are both empty is not shown anywhere on the site: no card, no page, no link. It appears by itself as soon as it has words.
 
 ## How a chapter gets its look
 
@@ -42,13 +42,13 @@ You only type plain text. The site dresses it by itself:
 | The heading `Common questions` (Bengali: `অনেকে যা জানতে চান`), with each question on a `## ` line | Questions that open when tapped |
 | The heading `The main points` (Bengali: `মূল কথাগুলো`) | A pale yellow box |
 
-A chapter with no words yet is listed on the home page under "Coming soon" and is not a link.
+A chapter with no words yet is not shown on the home page.
 
 ## Chapters and their parts
 
 The home page shows only the main chapters. A big subject such as Thalassemia is one chapter with several parts:
 
-- The chapter's own page (`/thalassemia/`) is "the basics". Near the top it lists every part, with the parts not yet written marked "Soon".
+- The chapter's own page (`/thalassemia/`) is "the basics". Near the top it lists every part that has been written.
 - Each part has its own page under the chapter (`/thalassemia/inheritance/`), a link back to the chapter, the same list, and a "Next" card at the end.
 - A part is a line in `chapters/list.json` with `"parent": "thalassemia"`. Its text files are named as before (`chapters/thalassemia-inheritance.en.txt`). The order of the lines in the list is the order of the parts.
 
@@ -59,7 +59,7 @@ The home page shows only the main chapters. A big subject such as Thalassemia is
 
 ## Other files
 
-- `index.html`: the design of the whole site (colours, typefaces, the moving red cells). The chapter cards and the "Coming soon" list on it are filled in automatically, so do not edit between the `grid:start` and `grid:end` lines or the `soon:start` and `soon:end` lines.
+- `index.html`: the design of the whole site (colours, typefaces, the moving red cells). The chapter cards on it are filled in automatically, so do not edit between the `grid:start` and `grid:end` lines or the `soon:start` and `soon:end` lines.
 - `tools/build.mjs`: makes the chapter pages, `sitemap.xml` and `robots.txt` from the text files. It runs by itself on GitHub (`.github/workflows/build.yml`).
 - The `anaemia/`, `en/` and other chapter folders are made by the build. Do not edit them; edit the `.txt` files.
 - `CNAME`: tells GitHub Pages the site's domain. Do not delete it.

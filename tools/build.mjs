@@ -30,7 +30,7 @@
 // "In this chapter" on the chapter's own page and on every part's page. Its text files keep their
 // names (chapters/thalassemia-inheritance.en.txt). The old flat address redirects to the new one.
 
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync, rmSync, rmdirSync, readdirSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -208,13 +208,12 @@ for (const c of chapters) {
 // "In this chapter": the chapter itself (the basics) and every part, in list order.
 function partsNav(c, l) {
   const root = c.parent ? byId[c.parent] : c;
-  const ks = kids(root.id);
+  const ks = kids(root.id).filter((x) => info[x.id].has[l]);
   if (!ks.length) return '';
   const rows = [root, ...ks].map((x, i) => {
     const label = i === 0 ? (l === 'bn' ? 'গোড়ার কথা' : 'The basics') : partTitle(x, l);
     const n = `<span class="n">${l === 'bn' ? bnNum(i + 1) : i + 1}</span>`;
     if (x.id === c.id) return `<li aria-current="page"><span class="row">${n}<span>${esc(label)}</span></span></li>`;
-    if (!info[x.id].has[l]) return `<li class="later"><span class="row">${n}<span>${esc(label)}</span><em>${l === 'bn' ? 'শীঘ্রই' : 'Soon'}</em></span></li>`;
     return `<li><a class="row" href="${url(x.id, l)}">${n}<span>${esc(label)}</span></a></li>`;
   }).join('');
   return `<nav class="parts" aria-label="${l === 'bn' ? 'এই অধ্যায়ে যা আছে' : 'In this chapter'}"><div class="k">${l === 'bn' ? `${esc(short(root, l))}: এই অধ্যায়ে যা আছে` : `${esc(short(root, l))}: in this chapter`}</div><ol>${rows}</ol></nav>`;
@@ -238,9 +237,23 @@ function redirectPage(to) {
 `;
 }
 
+// Remove a page this script made earlier, for a chapter or part that has no words yet.
+function removeGenerated(rel) {
+  const f = join(ROOT, rel);
+  if (!existsSync(f) || !/Written by tools\/build\.mjs|<title>Moved<\/title>/.test(read(rel))) return;
+  rmSync(f);
+  let d = dirname(f);
+  while (d !== ROOT && existsSync(d) && readdirSync(d).length === 0) { rmdirSync(d); d = dirname(d); }
+}
+
 const pages = [];
 for (const c of chapters) {
   const { text, has } = info[c.id];
+  // Nothing written yet in either language: no page, no card, no link anywhere (Dr. Roy, 2026-11-18).
+  if (!has.bn && !has.en) {
+    for (const p of [PATHS[c.id], c.id]) { removeGenerated(`${p}/index.html`); removeGenerated(`en/${p}/index.html`); }
+    continue;
+  }
   const root = c.parent ? byId[c.parent] : null;
   for (const l of LANGS) {
     const other = l === 'bn' ? 'en' : 'bn';
@@ -359,14 +372,14 @@ if(!calm&&'IntersectionObserver' in window){
 
 // Home page: chapters only. Parts live inside their chapter.
 // A chapter with words gets a card with its card line (or, failing that, its first sentence).
-// A chapter with no words yet is listed quietly under "Coming soon" and is not a link.
-let grid = '', chips = { bn: '', en: '' };
+// A chapter with no words yet is not shown.
+let grid = '';
 for (const c of chapters) {
   if (c.parent) continue;
   const { text, has } = info[c.id];
   for (const l of LANGS) {
     const other = l === 'bn' ? 'en' : 'bn';
-    if (!has.bn && !has.en) { chips[l] += `<span class="chip" lang="${l}">${ic(c.art)}${esc(c[l])}</span>`; continue; }
+    if (!has.bn && !has.en) continue; // not written yet: not shown
     const own = (c[`card_${l}`] || '').trim();
     const hook = !has[l] ? (l === 'bn' ? 'এই অধ্যায়টি এখন শুধু ইংরেজিতে আছে।' : 'This chapter is in Bengali for now.')
       : own ? esc(own) : `“${esc(teaser(text[l]))}”`;
@@ -377,10 +390,10 @@ for (const c of chapters) {
       `<span class="hook">${hook}</span><span class="meta"><span>${meta}</span><span class="go">${RIGHT}</span></span></a>\n`;
   }
 }
-const soon = chips.bn ? `    <div class="soon"><div class="k"><span lang="bn">শীঘ্রই আসছে</span><span lang="en">Coming soon</span></div><div class="chips">${chips.bn}${chips.en}</div></div>\n` : '';
+const soon = ''; // Chapters with no words yet are not shown at all (Dr. Roy, 2026-11-18), so there is no "Coming soon" list.
 let home = index.replace(/(<!-- grid:start[^>]*-->\n)[\s\S]*?(<!-- grid:end -->)/, (m, a, b) => a + grid + b)
   .replace(/(<!-- soon:start[^>]*-->\n)[\s\S]*?(<!-- soon:end -->)/, (m, a, b) => a + soon + b)
-  .replace(/\/\*ids:start\*\/[\s\S]*?\/\*ids:end\*\//, `/*ids:start*/${JSON.stringify(chapters.filter((c) => !c.parent).map((c) => c.id))}/*ids:end*/`);
+  .replace(/\/\*ids:start\*\/[\s\S]*?\/\*ids:end\*\//, `/*ids:start*/${JSON.stringify(chapters.filter((c) => !c.parent && (info[c.id].has.bn || info[c.id].has.en)).map((c) => c.id))}/*ids:end*/`);
 if (!/rel="canonical"/.test(home)) home = home.replace('</title>', `</title>\n<link rel="canonical" href="${SITE}/">`);
 writeFileSync(join(ROOT, 'index.html'), home);
 
@@ -395,4 +408,4 @@ ${pages.map((p) => `  <url><loc>${p.loc}</loc><lastmod>${p.lastmod}</lastmod>${p
 writeFileSync(join(ROOT, 'sitemap.xml'), sm);
 writeFileSync(join(ROOT, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`);
 
-console.log(`built ${chapters.length * 2} chapter pages, ${pages.length} in the sitemap (${today})`);
+console.log(`built ${2 * chapters.filter((c) => info[c.id].has.bn || info[c.id].has.en).length} chapter pages, ${pages.length} in the sitemap (${today})`);
