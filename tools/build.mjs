@@ -420,6 +420,26 @@ document.querySelectorAll('.try.gap').forEach(function(f){
   bs.forEach(function(b){b.addEventListener('click',function(){touched=true;pick(b.getAttribute('data-m'));});});
   onView(f,0.6,function(){setTimeout(function(){if(!touched)pick('food');setTimeout(function(){if(!touched)pick('milk');},2600);},3000);});
 });
+document.querySelectorAll('.try.baby').forEach(function(f){
+  var go=f.querySelector('.bc-go'),again=f.querySelector('.bc-again'),say=f.querySelector('.bc-say'),dots=f.querySelector('.bc-dots'),
+    ms=f.querySelectorAll('.bc-m'),D=f.dataset,kids=[],busy=false,touched=false;
+  function clear(){['data-pm','data-pf','data-cl','data-cr','data-kid'].forEach(function(a){f.removeAttribute(a);});}
+  function tally(){var n={ok:0,car:0,maj:0};kids.forEach(function(k){n[k]++;});
+    f.querySelectorAll('.bc-legs b').forEach(function(b){b.textContent=num(n[b.getAttribute('data-k')]);});
+    dots.innerHTML=kids.slice(-30).map(function(k){return '<i class="'+k+'"></i>';}).join('');}
+  function reset(){kids=[];clear();tally();say.textContent=D.start;}
+  function baby(){if(busy)return;busy=true;clear();void f.getBoundingClientRect();
+    var pm=Math.random()<0.5?0:1,pf=Math.random()<0.5?0:1,both=f.getAttribute('data-mode')==='both';
+    var fm=pm===1,ff=both&&pf===1,k=fm&&ff?'maj':(fm||ff?'car':'ok');
+    f.setAttribute('data-pm',pm);f.setAttribute('data-pf',pf);
+    setTimeout(function(){f.setAttribute('data-cl',fm?'beta':'ok');f.setAttribute('data-cr',ff?'beta':'ok');f.setAttribute('data-kid',k);
+      kids.push(k);tally();say.textContent=D[k];busy=false;},calm?0:950);}
+  go.addEventListener('click',function(){touched=true;baby();});
+  again.addEventListener('click',function(){touched=true;reset();});
+  ms.forEach(function(b){b.addEventListener('click',function(){touched=true;f.setAttribute('data-mode',b.getAttribute('data-m'));
+    ms.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});reset();});});
+  onView(f,0.5,function(){setTimeout(function(){if(!touched)baby();},800);});
+});
 if(!calm&&'IntersectionObserver' in window){
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -6% 0px'});
   document.querySelectorAll('.box,.faq,.endcard').forEach(function(el){el.classList.add('rv');io.observe(el);});

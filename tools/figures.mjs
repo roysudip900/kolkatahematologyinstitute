@@ -382,6 +382,68 @@ const TRY = {
     const html = svgx + `<div class="seg" role="group">${btn('gap-b', t.milk, ' data-m="milk" aria-pressed="true"')}${btn('gap-b', t.food, ' data-m="food" aria-pressed="false"')}</div>`;
     return { cap: t.cap, cls: 'gap', data: { mode: 'milk' }, html };
   },
+
+  // Thalassemia, how it runs in families: each tap is one pregnancy; one copy comes from each parent by chance.
+  'baby-chance'(l) {
+    const t = l === 'bn'
+      ? { h: 'এই বাচ্চাটা কী পাবে?', both: 'দুজনেই বাহক', one: 'শুধু মা বাহক', go: 'পরের বাচ্চা', again: 'আবার শুরু',
+          mum: 'মা', dad: 'বাবা', kid: 'বাচ্চা', car: 'বাহক', non: 'বাহক নন',
+          r: { ok: 'সুস্থ, বাহকও নয়', car: 'বাহক, সুস্থ', maj: 'থ্যালাসেমিয়া মেজর' },
+          say: { start: 'প্রতিবার চাপ দেওয়া মানে একটা গর্ভধারণ।',
+            ok: 'এই বাচ্চা দুটো ঠিক নকশাই পেয়েছে, তাই সে সুস্থ, বাহকও নয়।',
+            car: 'এই বাচ্চা একটা ভুল নকশা পেয়েছে, তাই সে বাহক, কিন্তু সুস্থ।',
+            maj: 'এই বাচ্চা মা আর বাবা দুজনের কাছ থেকেই ভুল নকশা পেয়েছে, তাই তার থ্যালাসেমিয়া মেজর। সারা জীবনের জন্য রক্ত নিতে হবে।' },
+          nb: 'প্রতিটা গর্ভধারণে ৪ ভাগের ১ ভাগ সম্ভাবনা আবার নতুন করে শুরু হয়, আগে যা-ই হয়ে থাকুক।',
+          no: 'বাবার কোনো ভুল নকশা নেই, তাই কোনো বাচ্চা দুটো ভুল নকশা পাবে না।',
+          so: 'এ পর্যন্ত',
+          cap: 'প্রতিটা বাচ্চা মায়ের কাছ থেকে একটা আর বাবার কাছ থেকে একটা নকশা পায়, পুরোটাই ভাগ্যের উপর। যতবার খুশি চাপুন। একটা পরিবারে বাচ্চা কম, তাই ৪ ভাগের ১ ভাগ হিসেবটা সব সময় মেলে না। পরপর দুটো বাচ্চার থ্যালাসেমিয়া মেজর হতে পারে, আবার একটারও না হতে পারে।' }
+      : { h: 'What will this baby get?', both: 'Both are carriers', one: 'Only the mother is a carrier', go: 'Next baby', again: 'Start again',
+          mum: 'Mother', dad: 'Father', kid: 'Baby', car: 'carrier', non: 'not a carrier',
+          r: { ok: 'Healthy, not a carrier', car: 'Carrier, healthy', maj: 'Thalassemia major' },
+          say: { start: 'Each tap is one pregnancy.',
+            ok: 'This baby got two working copies, so it is healthy and not a carrier.',
+            car: 'This baby got one faulty copy, so it is a carrier, and healthy.',
+            maj: 'This baby got the faulty copy from both parents, so it has thalassemia major and will need blood transfusions for life.' },
+          nb: 'The 1 in 4 chance starts again with every pregnancy, whatever happened before.',
+          no: 'The father has no faulty copy to pass on, so no baby can get two.',
+          so: 'So far',
+          cap: 'Each baby gets one copy from the mother and one from the father, purely by chance. Tap as many times as you like. A real family has too few children to show 1 in 4 neatly. Two affected children in a row can happen, and so can none.' };
+    const s = 1.15;
+    const slot = (x, y, side) => `<rect class="bc-empty" x="${x - 11}" y="${y - 17}" width="22" height="34" rx="6" fill="none" stroke="${C.mintLine}" stroke-width="2" stroke-dasharray="4 3"/>` +
+      copy(x, y, 'ok', s, `bc-c${side}-ok`) + copy(x, y, 'beta', s, `bc-c${side}-beta`);
+    const ring = (x, y, cls) => `<rect class="${cls}" x="${x - 15}" y="${y - 21}" width="30" height="42" rx="9" fill="${C.amberBg}" stroke="${C.amber}" stroke-width="2"/>`;
+    const path = (x1, y1, x2, y2, cls) => `<path class="bc-p ${cls}" pathLength="1" d="M${x1} ${y1 + 20}C${x1} ${y1 + 62} ${x2} ${y2 - 62} ${x2} ${y2 - 20}" fill="none" stroke="${C.amber}" stroke-width="2.6" stroke-linecap="round"/>`;
+    const M = 95, F = 265, K = 180, PY = 112, KY = 214, d = 13;
+    const body =
+      person(M, 34, .9) + T(M, 70, t.mum, { size: 13.5, w: 700, fill: C.teal }) + T(M, 85, t.car, { size: 12.5, fill: C.muted }) +
+      person(F, 34, .9) + T(F, 70, t.dad, { size: 13.5, w: 700, fill: C.teal }) +
+      `<g class="bc-fb">${T(F, 85, t.car, { size: 12.5, fill: C.muted })}</g><g class="bc-fo">${T(F, 85, t.non, { size: 12.5, fill: C.muted })}</g>` +
+      ring(M - d, PY, 'bc-r bc-rm0') + ring(M + d, PY, 'bc-r bc-rm1') + ring(F - d, PY, 'bc-r bc-rf0') + ring(F + d, PY, 'bc-r bc-rf1') +
+      copy(M - d, PY, 'ok', s) + copy(M + d, PY, 'beta', s) + copy(F - d, PY, 'ok', s) +
+      copy(F + d, PY, 'beta', s, 'bc-fb') + copy(F + d, PY, 'ok', s, 'bc-fo') +
+      path(M - d, PY, K - d, KY, 'bc-pm0') + path(M + d, PY, K - d, KY, 'bc-pm1') + path(F - d, PY, K + d, KY, 'bc-pf0') + path(F + d, PY, K + d, KY, 'bc-pf1') +
+      person(K, 172, .72) +
+      slot(K - d, KY, 'l') + slot(K + d, KY, 'r') +
+      ['ok', 'car', 'maj'].map((k) => `<g class="bc-t bc-t-${k}">${T(K, 252, t.r[k], { size: 14, w: 700, fill: k === 'maj' ? C.red : C.teal2 })}</g>`).join('');
+    const svgx = `<svg class="figsvg" viewBox="0 0 360 262" role="img" aria-label="${attr(t.cap)}" font-family="inherit"><style>` +
+      `.bc-r,.bc-p,.bc-cl-ok,.bc-cl-beta,.bc-cr-ok,.bc-cr-beta,.bc-t,.bc-fo{display:none}` +
+      `.baby[data-mode=one] .bc-fb{display:none}.baby[data-mode=one] .bc-fo{display:inline}` +
+      `.baby[data-pm="0"] .bc-rm0,.baby[data-pm="1"] .bc-rm1,.baby[data-pf="0"] .bc-rf0,.baby[data-pf="1"] .bc-rf1{display:inline;animation:bcin .35s ease-out both}` +
+      `.baby[data-pm="0"] .bc-pm0,.baby[data-pm="1"] .bc-pm1,.baby[data-pf="0"] .bc-pf0,.baby[data-pf="1"] .bc-pf1{display:inline;stroke-dasharray:1;stroke-dashoffset:1;animation:bcdraw .7s ease-in-out .25s forwards}` +
+      `.baby[data-cl=ok] .bc-cl-ok,.baby[data-cl=beta] .bc-cl-beta,.baby[data-cr=ok] .bc-cr-ok,.baby[data-cr=beta] .bc-cr-beta{display:inline;animation:bcin .4s ease-out both}` +
+      `.baby[data-cl] .bc-empty{display:none}.baby[data-kid=ok] .bc-t-ok,.baby[data-kid=car] .bc-t-car,.baby[data-kid=maj] .bc-t-maj{display:inline;animation:bcin .4s ease-out both}` +
+      `@keyframes bcin{from{opacity:0}to{opacity:1}}@keyframes bcdraw{to{stroke-dashoffset:0}}` +
+      `@media (prefers-reduced-motion:reduce){.baby *{animation:none!important}.baby .bc-p{stroke-dashoffset:0!important}}</style>${body}</svg>`;
+    const leg = ['ok', 'car', 'maj'].map((k) => `<span class="bc-leg bc-${k}"><i></i>${esc(t.r[k])}: <b data-k="${k}">${l === 'bn' ? '০' : '0'}</b></span>`).join('');
+    const html = `<p class="try-h">${esc(t.h)}</p>` +
+      `<div class="seg" role="group">${btn('bc-m', t.both, ' data-m="both" aria-pressed="true"')}${btn('bc-m', t.one, ' data-m="one" aria-pressed="false"')}</div>` +
+      svgx +
+      `<p class="bc-say" aria-live="polite">${esc(t.say.start)}</p>` +
+      `<div class="bc-ctl">${btn('bc-go', t.go)}${btn('bc-again', t.again)}</div>` +
+      `<div class="bc-sofar"><span class="k">${esc(t.so)}</span><span class="bc-dots" aria-hidden="true"></span><span class="bc-legs">${leg}</span></div>` +
+      `<p class="bc-note bc-nb">${esc(t.nb)}</p><p class="bc-note bc-no">${esc(t.no)}</p>`;
+    return { cap: t.cap, cls: 'baby', data: { mode: 'both', start: t.say.start, ok: t.say.ok, car: t.say.car, maj: t.say.maj }, html };
+  },
 };
 
 export const FIGURE_NAMES = Object.keys(FIG).concat(Object.keys(TRY));
