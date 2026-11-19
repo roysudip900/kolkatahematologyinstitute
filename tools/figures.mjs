@@ -479,6 +479,45 @@ const TRY = {
       `<div class="tr-out" aria-live="polite"><p class="tr-pick">${esc(t.pick)}</p>${panels}</div>`;
     return { cap: t.cap, cls: 'tr', html };
   },
+
+  // Thalassemia, the basics: "telling the two apart". Eight lines from the chapter; the reader sorts each into carrier or major.
+  'trait-or-major'(l) {
+    const t = l === 'bn'
+      ? { h: 'বাহক, না থ্যালাসেমিয়া মেজর?', sub: 'প্রতিটা কথা কার, চাপ দিয়ে বলুন।', a: 'বাহক (ট্রেট)', b: 'থ্যালাসেমিয়া মেজর',
+          right: 'ঠিক', wrong: 'এটা আসলে', next: 'পরেরটা', again: 'আবার খেলুন', of: '{i} / {n}',
+          end: '{n}টার মধ্যে {k}টা ঠিক হয়েছে।', endnote: 'যেটাই আপনার গল্পের কাছাকাছি হোক, রিপোর্টগুলো নিয়ে একজন হেমাটোলজিস্টের কাছে যান।',
+          q: [['একদম সুস্থ বোধ করেন, কাজে কামাই প্রায় নেই', 'a', 'বাহক আর পাঁচজনের মতোই সুস্থ।'],
+            ['কয়েক সপ্তাহ অন্তর রক্ত নিতে হয়', 'b', 'শরীর যে হিমোগ্লোবিন বানাতে পারে না, রক্ত সেটা জুগিয়ে দেয়।'],
+            ['এর জন্য কোনো চিকিৎসা লাগে না', 'a', 'আয়রনের ওষুধও লাগে না, যদি না পরীক্ষায় সত্যিই আয়রন কম আসে।'],
+            ['রোজ আয়রন বের করার ওষুধ খেতে হয়', 'b', 'প্রতি ব্যাগ রক্ত একটু করে আয়রন রেখে যায়। চিলেশনের ওষুধ সেটা বের করে।'],
+            ['দুধ খেতে খেতে ক্লান্ত হয়ে পড়ে, মুখ ফ্যাকাশে, এমন একটা ছোট্ট বাচ্চা', 'b', 'টনিকে কাজ হয় না। দরকার রক্ত পরীক্ষা আর একজন হেমাটোলজিস্ট, দেরি না করে।'],
+            ['বিয়ের আগে হবু স্বামী বা স্ত্রীর পরীক্ষা করানো দরকার', 'a', 'দুজনেই বাহক হলে প্রতিবার গর্ভধারণে ৪ ভাগের ১ ভাগ সম্ভাবনা থাকে যে বাচ্চার থ্যালাসেমিয়া মেজর হবে।'],
+            ['কিছু বাচ্চা বোন ম্যারো ট্রান্সপ্লান্টে সেরে উঠতে পারে', 'b', 'ছোটবেলাতেই এটা ভেবে দেখা ভালো, তাই রোগ ধরা পড়ার পরই জিজ্ঞেস করুন।'],
+            ['পরে কোনোদিন থ্যালাসেমিয়ার রোগী হয়ে যাবেন না', 'a', 'বাহক সারা জীবন বাহকই থাকেন।']],
+          cap: 'দুজনের রিপোর্টেই থ্যালাসেমিয়া শব্দটা আছে, অথচ একজন সুস্থ আর অন্যজনের হাতে সময় নেই। এই খেলাটা শুধু চিনতে শেখায়, রোগ ঠিক করে ডাক্তার আর রক্ত পরীক্ষা।' }
+      : { h: 'Carrier, or thalassemia major?', sub: 'Tap who each line is about.', a: 'Carrier (trait)', b: 'Thalassemia major',
+          right: 'Right', wrong: 'This one is', next: 'Next', again: 'Play again', of: '{i} of {n}',
+          end: 'You sorted {k} of {n} correctly.', endnote: 'Whichever story is closer to yours, take your reports to a hematologist.',
+          q: [['Feels perfectly well and hardly misses a day of work', 'a', 'A carrier is as healthy as anyone else.'],
+            ['Needs a blood transfusion every few weeks', 'b', 'The blood gives the hemoglobin the body cannot make.'],
+            ['Needs no treatment for it', 'a', 'Iron tablets are not needed either, unless a test shows iron is truly low.'],
+            ['Takes a medicine every day to remove iron', 'b', 'Each bag of blood leaves a little iron behind. Chelation removes it.'],
+            ['A baby who tires halfway through a feed and looks pale', 'b', 'Tonics will not help. The baby needs a blood test and a hematologist, without delay.'],
+            ['Should get the partner tested before the wedding', 'a', 'If both are carriers, every pregnancy has a 1 in 4 chance that the baby will have thalassemia major.'],
+            ['Some children can be cured with a bone marrow transplant', 'b', 'It is best considered early in childhood, so ask soon after the diagnosis.'],
+            ['Will not turn into a thalassemia patient later', 'a', 'A carrier stays a carrier for life.']],
+          cap: 'Both reports say thalassemia, yet one person is healthy and the other has no time to lose. This game helps you tell them apart; only a doctor and a blood test can say which is yours.' };
+    const n = t.q.length, nn = l === 'bn' ? bnDigits(n) : String(n);
+    const cards = t.q.map(([line, ans, why], i) => `<div class="tm-card" data-ans="${ans}"${i ? ' hidden' : ''}>` +
+      `<p class="tm-n">${esc(t.of.replace('{i}', l === 'bn' ? bnDigits(i + 1) : String(i + 1)).replace('{n}', nn))}</p>` +
+      `<p class="tm-q">${esc(line)}</p>` +
+      `<div class="tm-ch">${btn('tm-a', t.a, ' data-c="a"')}${btn('tm-b', t.b, ' data-c="b"')}</div>` +
+      `<div class="tm-fb" hidden><p class="tm-v"></p><p class="tm-why">${esc(why)}</p>${btn('tm-next', t.next)}</div></div>`).join('');
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p>` +
+      `<div class="tm-dots" aria-hidden="true">${t.q.map(() => '<i></i>').join('')}</div>${cards}` +
+      `<div class="tm-end" hidden><p class="tm-score" aria-live="polite"></p><p class="tm-endnote">${esc(t.endnote)}</p>${btn('tm-again', t.again)}</div>`;
+    return { cap: t.cap, cls: 'tm', data: { a: t.a, b: t.b, right: t.right, wrong: t.wrong, end: t.end, n: nn }, html };
+  },
 };
 
 export const FIGURE_NAMES = Object.keys(FIG).concat(Object.keys(TRY));

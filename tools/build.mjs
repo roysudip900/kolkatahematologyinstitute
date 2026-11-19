@@ -446,6 +446,22 @@ document.querySelectorAll('.try.tr').forEach(function(f){
   bs.forEach(function(b,i){b.addEventListener('click',function(){touched=true;show(i);});});
   onView(f,0.5,function(){var k=0;(function step(){if(touched||k>2)return;show(k);k++;setTimeout(step,3200);})();});
 });
+document.querySelectorAll('.try.tm').forEach(function(f){
+  var cards=f.querySelectorAll('.tm-card'),dots=f.querySelectorAll('.tm-dots i'),end=f.querySelector('.tm-end'),D=f.dataset,k=0,cur=0;
+  function go(i){cur=i;cards.forEach(function(c,j){c.hidden=j!==i;});dots.forEach(function(d,j){d.classList.toggle('now',j===i&&!d.className.match(/ok|no/));});}
+  cards.forEach(function(c,i){
+    var bs=c.querySelectorAll('.tm-ch button'),fb=c.querySelector('.tm-fb'),v=c.querySelector('.tm-v');
+    bs.forEach(function(b){b.addEventListener('click',function(){if(!fb.hidden)return;var ok=b.getAttribute('data-c')===c.getAttribute('data-ans');
+      if(ok)k++;bs.forEach(function(x){x.disabled=true;x.classList.toggle('picked',x.getAttribute('data-c')===c.getAttribute('data-ans'));});
+      v.className='tm-v '+(ok?'ok':'no');v.textContent=ok?D.right:D.wrong+' '+D[c.getAttribute('data-ans')];
+      dots[i].className=ok?'ok':'no';fb.hidden=false;});});
+    c.querySelector('.tm-next').addEventListener('click',function(){if(i+1<cards.length)go(i+1);else{c.hidden=true;end.hidden=false;
+      end.querySelector('.tm-score').textContent=D.end.replace('{k}',num(k)).replace('{n}',D.n);}});
+  });
+  end.querySelector('.tm-again').addEventListener('click',function(){k=0;end.hidden=true;dots.forEach(function(d){d.className='';});
+    cards.forEach(function(c){c.querySelector('.tm-fb').hidden=true;c.querySelectorAll('.tm-ch button').forEach(function(x){x.disabled=false;x.classList.remove('picked');});});go(0);});
+  go(0);
+});
 if(!calm&&'IntersectionObserver' in window){
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -6% 0px'});
   document.querySelectorAll('.box,.faq,.endcard').forEach(function(el){el.classList.add('rv');io.observe(el);});
