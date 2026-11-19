@@ -14,6 +14,8 @@ When the blood runs low, the factory goes into overdrive. It tries to make red c
 
 That is why doctors plan transfusions by the calendar and by a blood test before each one, not by how pale the child looks. By the time a child looks pale, the marrow has been working too hard for a while. The gap between transfusions, and how much blood each time, is worked out for each child, and it changes as they grow.
 
+[figure: keep-the-date]
+
 # Safe blood
 
 Good centres use blood from voluntary donors, test it for infections, and match it to the child before every transfusion. The chance of picking up an infection this way is very low.

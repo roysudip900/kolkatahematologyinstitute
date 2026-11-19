@@ -518,6 +518,64 @@ const TRY = {
       `<div class="tm-end" hidden><p class="tm-score" aria-live="polite"></p><p class="tm-endnote">${esc(t.endnote)}</p>${btn('tm-again', t.again)}</div>`;
     return { cap: t.cap, cls: 'tm', data: { a: t.a, b: t.b, right: t.right, wrong: t.wrong, end: t.end, n: nn }, html };
   },
+
+  // Thalassemia, blood transfusion: the reader makes the father's choices (keep the date or push it back) and the
+  // marrow "factory" and the blood level answer. Keeping a date lets the factory rest again; each delay works it harder.
+  'keep-the-date'(l) {
+    const t = l === 'bn'
+      ? { h: 'তারিখ রাখবেন, না পিছোবেন?', sub: 'মেয়েটির বাবার জায়গায় আপনি বেছে নিন, আর হাড়ের ভিতরের কারখানাটা দেখুন।',
+          keep: 'তারিখ রাখুন', push: 'পিছিয়ে দিন', next: 'এরপর', again: 'আবার শুরু', blood: 'রক্ত', bone: 'হাড়ের ভিতরের কারখানা',
+          st: ['বিশ্রামে', 'বেশি খাটছে', 'পাগলের মতো খাটছে'],
+          q: ['মেয়ের পরীক্ষা পড়েছে ঠিক রক্ত নেওয়ার সপ্তাহে, আর তাকে দিব্যি দেখাচ্ছে।', 'তারপর নতুন তারিখেই পড়ল এক আত্মীয়ের বিয়ে।'],
+          s: ['রক্ত সময়মতো আসে। হিমোগ্লোবিন থাকে ডাক্তার যেখানে চান সেখানে, আর হাড়ের ভিতরের কারখানা বিশ্রাম পায়।',
+            'হিমোগ্লোবিন কমতেই থাকে। মেয়েকে এখনও ঠিকঠাক দেখায়, কিন্তু হাড়ের ভিতরের কারখানা বেশি খাটতে শুরু করেছে।',
+            'এবার ফারাকটা অনেক লম্বা। কারখানা পাগলের মতো খাটছে, আর মেয়ে চুপচাপ হয়ে গেছে, সিঁড়ি ভাঙতে ধীর।'],
+          none: 'দুটো তারিখই রেখেছেন, তাই হাড়ের ভিতরের কারখানা বিশ্রাম পেয়েছে।',
+          some: 'তারিখ বারবার পিছোলে মাসের পর মাস ধরে ম্যারো হাড় চওড়া করে দেয়, প্লীহা বড় হয়, বাড় কমে যায়। পরীক্ষা বা বিয়ের কথা মাথায় রেখে ডাক্তারবাবু আগে থেকেই তারিখ ঠিক করে দিতে পারেন, তাই জিজ্ঞেস করুন।',
+          endnote: 'শেষে মেয়েটির বাবা যেমন করেছিলেন, তারিখগুলো রান্নাঘরের ক্যালেন্ডারে লিখে রাখুন।',
+          cap: 'ছবিটা এই আলোচনার কথাটাই দেখায়, কোনো আসল মাপ ছাড়া। দুই বারের মাঝে কতদিনের ফারাক, ডাক্তারবাবু প্রত্যেক বাচ্চার জন্য আলাদা করে ঠিক করেন, প্রতিবার রক্ত দেওয়ার আগে একটা রক্ত পরীক্ষা করে।' }
+      : { h: 'Keep the date, or push it back?', sub: "Make her father's choices, and watch the factory in her bones.",
+          keep: 'Keep the date', push: 'Push it back', next: 'Next', again: 'Start again', blood: 'blood', bone: 'the factory inside the bone',
+          st: ['resting', 'working harder', 'in overdrive'],
+          q: ['Her exams fall in the week of her transfusion, and she looks well.', "Then a relative's wedding falls on the new date."],
+          s: ['The blood comes on time. Her hemoglobin stays where the doctor wants it, and the factory in her bones can rest.',
+            'Her hemoglobin keeps falling. She still looks well, but the factory in her bones has started to work harder.',
+            'Now the gap is long. The factory is in overdrive, and she is quieter and slower on the stairs.'],
+          none: 'You kept both dates, so the factory in her bones could rest.',
+          some: 'When dates keep slipping, over months the marrow widens the bones, the spleen grows and growth slows. Her doctor can plan the dates around exams and weddings ahead of time, so ask.',
+          endnote: 'Write the dates on the kitchen calendar, as her father did in the end.',
+          cap: 'This drawing shows the idea in the chapter, with no real numbers. The doctor works out the gap between transfusions for each child, using a blood test before every one.' };
+    const gear = `<g class="kd-gear" transform="translate(70,86)"><circle r="13" fill="${C.teal2}"/>` +
+      [0, 45, 90, 135, 180, 225, 270, 315].map((a) => `<rect x="-3.2" y="-19" width="6.4" height="8" rx="1.6" fill="${C.teal2}" transform="rotate(${a})"/>`).join('') +
+      `<circle r="5" fill="#FFF6E8"/></g>`;
+    const body =
+      `<g fill="#FFF6E8" stroke="#E9D7B9" stroke-width="2"><circle cx="36" cy="60" r="18"/><circle cx="36" cy="108" r="18"/><circle cx="184" cy="60" r="18"/><circle cx="184" cy="108" r="18"/></g>` +
+      `<rect x="36" y="63" width="148" height="42" fill="#FFF6E8"/><path d="M53.5 64H166.5M53.5 104H166.5" stroke="#E9D7B9" stroke-width="2"/>` +
+      `<g class="kd-smoke"><circle cx="133" cy="50" r="5" fill="#C9C2B6"/><circle cx="138" cy="44" r="6" fill="#C9C2B6" style="animation-delay:-.8s"/><circle cx="144" cy="38" r="7" fill="#C9C2B6" style="animation-delay:-1.6s"/></g>` +
+      `<rect x="128" y="56" width="8" height="20" fill="${C.teal}"/><path d="M92 100V78l12-7v7l12-7v7l12-7v29z" fill="${C.teal}"/>` +
+      `<rect x="98" y="88" width="7" height="7" rx="1.5" fill="${C.amber}"/><rect x="111" y="88" width="7" height="7" rx="1.5" fill="${C.amber}"/>` + gear +
+      T(110, 142, t.bone, { size: 12.5, fill: C.muted }) +
+      t.st.map((x, i) => `<g class="kd-st kd-st${i}">${T(110, 162, x, { size: 14, w: 700, fill: i === 0 ? C.teal2 : i === 1 ? '#9A5A0C' : C.red })}</g>`).join('') +
+      `<clipPath id="kd-clip-${l}"><rect x="262" y="26" width="34" height="114" rx="17"/></clipPath>` +
+      `<rect x="262" y="26" width="34" height="114" rx="17" fill="#fff"/><g clip-path="url(#kd-clip-${l})"><rect x="262" y="40" width="34" height="30" fill="${C.mint}"/>` +
+      `<rect class="kd-lvl" x="262" y="26" width="34" height="140" fill="${C.red}" opacity=".9"/></g>` +
+      `<rect x="262" y="26" width="34" height="114" rx="17" fill="none" stroke="${C.mintLine}" stroke-width="2"/>` +
+      T(279, 18, t.blood, { size: 12.5, fill: C.muted, w: 600 }) +
+      `<path d="M300 55h5" stroke="${C.teal2}" stroke-width="2"/>` + T(308, 59.5, l === 'bn' ? 'লক্ষ্য' : 'target', { a: 'start', size: 12.5, fill: C.teal2, w: 600 });
+    const svgx = `<svg class="figsvg" viewBox="0 0 360 172" role="img" aria-label="${attr(t.cap)}" font-family="inherit"><style>` +
+      `.kd-gear{transform-box:fill-box;transform-origin:center;animation:kdspin var(--spin,6s) linear infinite}@keyframes kdspin{to{transform:translate(70px,86px) rotate(360deg)}from{transform:translate(70px,86px) rotate(0)}}` +
+      `.kd-smoke{opacity:0;transition:opacity .6s}.kd[data-s="1"] .kd-smoke{opacity:.5}.kd[data-s="2"] .kd-smoke{opacity:1}` +
+      `.kd-smoke circle{animation:kdsmoke 2.4s ease-out infinite}@keyframes kdsmoke{0%{transform:translateY(6px);opacity:0}30%{opacity:1}100%{transform:translateY(-10px);opacity:0}}` +
+      `.kd-lvl{transform:translateY(var(--drop,22px));transition:transform 1s cubic-bezier(.2,.7,.2,1)}` +
+      `.kd-st{display:none}.kd[data-s="0"] .kd-st0,.kd[data-s="1"] .kd-st1,.kd[data-s="2"] .kd-st2{display:inline}` +
+      `@media (prefers-reduced-motion:reduce){.kd-gear{animation:none}.kd-smoke circle{animation:none}.kd-lvl{transition:none}}</style>${body}</svg>`;
+    const cards = t.q.map((q, i) => `<div class="tm-card"${i ? ' hidden' : ''}><p class="tm-q">${esc(q)}</p>` +
+      `<div class="tm-ch">${btn('tm-a', t.keep, ' data-c="keep"')}${btn('tm-b', t.push, ' data-c="push"')}</div>` +
+      `<div class="tm-fb" hidden><p class="tm-why"></p>${btn('tm-next', t.next)}</div></div>`).join('');
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p>${svgx}${cards}` +
+      `<div class="tm-end" hidden><p class="tm-score" aria-live="polite"></p><p class="tm-endnote">${esc(t.endnote)}</p>${btn('tm-again', t.again)}</div>`;
+    return { cap: t.cap, cls: 'kd', data: { s0: t.s[0], s1: t.s[1], s2: t.s[2], none: t.none, some: t.some }, html };
+  },
 };
 
 export const FIGURE_NAMES = Object.keys(FIG).concat(Object.keys(TRY));

@@ -254,6 +254,9 @@ html[data-lang="bn"] .hero h1 .hl{padding-bottom:.2em}
 .tm-endnote{margin:8px 0 0;font-size:1rem;line-height:1.6;color:var(--teal-text)}
 .tm-end .tm-again{background:#fff;color:var(--teal)}
 @media (prefers-reduced-motion:reduce){.tm-card,.tm-end,.tm-fb{animation:none}}
+.kd .tm-card{margin-top:10px}
+.kd .tm-score{font-family:var(--sans);font-size:1.05rem;font-weight:500;line-height:1.6}
+:lang(bn) .kd .tm-score{line-height:1.8}
 /* short videos inside a chapter ([video: name]) */
 .vid{margin:30px auto 6px;max-width:300px;text-align:center}
 .vid .vbox{position:relative;border-radius:22px;overflow:hidden;background:#1C0A0E;box-shadow:0 30px 50px -34px rgba(21,33,31,.7);-webkit-touch-callout:none;user-select:none}
@@ -508,6 +511,20 @@ document.querySelectorAll('.try.tm').forEach(function(f){
   end.querySelector('.tm-again').addEventListener('click',function(){k=0;end.hidden=true;dots.forEach(function(d){d.className='';});
     cards.forEach(function(c){c.querySelector('.tm-fb').hidden=true;c.querySelectorAll('.tm-ch button').forEach(function(x){x.disabled=false;x.classList.remove('picked');});});go(0);});
   go(0);
+});
+document.querySelectorAll('.try.kd').forEach(function(f){
+  var cards=f.querySelectorAll('.tm-card'),end=f.querySelector('.tm-end'),D=f.dataset,st=0,pushes=0,SP=['6s','2.4s','0.9s'],DR=['22px','58px','90px'];
+  function setS(x){st=x;f.setAttribute('data-s',x);f.style.setProperty('--spin',SP[x]);f.style.setProperty('--drop',DR[x]);}
+  function go(i){cards.forEach(function(c,j){c.hidden=j!==i;});}
+  cards.forEach(function(c,i){var bs=c.querySelectorAll('.tm-ch button'),fb=c.querySelector('.tm-fb'),why=c.querySelector('.tm-why');
+    bs.forEach(function(b){b.addEventListener('click',function(){if(!fb.hidden)return;
+      if(b.getAttribute('data-c')==='push'){pushes++;setS(Math.min(st+1,2));}else setS(0);
+      bs.forEach(function(x){x.disabled=true;x.classList.toggle('picked',x===b);});why.textContent=D['s'+st];fb.hidden=false;});});
+    c.querySelector('.tm-next').addEventListener('click',function(){if(i+1<cards.length)go(i+1);
+      else{c.hidden=true;end.hidden=false;end.querySelector('.tm-score').textContent=pushes?D.some:D.none;}});});
+  end.querySelector('.tm-again').addEventListener('click',function(){pushes=0;setS(0);end.hidden=true;
+    cards.forEach(function(c){c.querySelector('.tm-fb').hidden=true;c.querySelectorAll('.tm-ch button').forEach(function(x){x.disabled=false;x.classList.remove('picked');});});go(0);});
+  setS(0);go(0);
 });
 if(!calm&&'IntersectionObserver' in window){
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -6% 0px'});
