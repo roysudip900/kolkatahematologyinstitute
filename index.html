@@ -208,6 +208,25 @@ html[data-lang="bn"] .hero h1 .hl{padding-bottom:.2em}
 :lang(bn) .bc-note{line-height:1.75}
 .baby[data-mode=both] .bc-no,.baby[data-mode=one] .bc-nb{display:none}
 @media (prefers-reduced-motion:reduce){.bc-dots i{animation:none}}
+.tr-rep{display:block;width:100%;max-width:340px;margin:10px auto 0;height:auto}
+.tr-tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}
+.tr-b{display:flex;flex-direction:column;align-items:center;gap:6px;padding:10px 6px 12px;border-radius:18px;border:1.5px solid var(--line);background:#fff;color:var(--ink);font-size:.86rem;font-weight:600;line-height:1.3;text-align:center;transition:background .25s,border-color .25s,transform .25s}
+:lang(bn) .tr-b{line-height:1.5}
+.tr-b svg{width:46px;height:46px}
+.tr-b[aria-pressed=true]{background:var(--mint);border-color:var(--teal-2);transform:translateY(-2px)}
+.tr-out{margin-top:12px;padding:14px 16px;border-radius:20px;background:var(--paper);border:1px solid var(--line);min-height:120px}
+.tr-pick{margin:0;color:var(--muted);font-size:.95rem}
+.tr-out.has .tr-pick{display:none}
+.tr-p[hidden]{display:none}
+.tr-p{animation:trin .45s ease-out}
+@keyframes trin{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.tr-p dl{margin:0}
+.tr-p dt{font-size:.8rem;font-weight:700;color:var(--teal-2);margin-top:10px}
+.tr-p dt:first-child{margin-top:0}
+.tr-p dd{margin:2px 0 0;font-size:1rem;line-height:1.55;color:var(--ink)}
+:lang(bn) .tr-p dd{line-height:1.75}
+.tr-badge{display:inline-block;margin-top:2px;padding:4px 12px;border-radius:12px;font-weight:600;font-size:.95rem;line-height:1.45}
+@media (prefers-reduced-motion:reduce){.tr-p{animation:none}.tr-b{transition:none}}
 
 /* short videos inside a chapter ([video: name]) */
 .vid{margin:30px auto 6px;max-width:300px;text-align:center}

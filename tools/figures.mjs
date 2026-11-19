@@ -444,6 +444,41 @@ const TRY = {
       `<p class="bc-note bc-nb">${esc(t.nb)}</p><p class="bc-note bc-no">${esc(t.no)}</p>`;
     return { cap: t.cap, cls: 'baby', data: { mode: 'both', start: t.say.start, ok: t.say.ok, car: t.say.car, maj: t.say.maj }, html };
   },
+
+  // Anaemia, the basics: the same low report in three people from the chapter; tap one to see why, and what iron does.
+  'three-reasons'(l) {
+    const t = l === 'bn'
+      ? { h: 'একই রিপোর্ট, তিনটে আলাদা কারণ', sub: 'কার হিমোগ্লোবিন কেন কম, দেখতে একজনের উপর চাপ দিন।', rep: 'রিপোর্ট', hb: 'হিমোগ্লোবিন', low: 'কম',
+          rows: ['কেন কম', 'ডাক্তারবাবু কী করেন', 'শুধু আয়রন টনিক খেলে'], pick: 'উপরে একজনকে বেছে নিন।',
+          p: [['তিনতলার সেই মহিলা', 'বছরের পর বছর মাসিকে বেশি রক্ত যাওয়া, সবার শেষে অল্প খাওয়া, আর খাওয়ার সঙ্গে চা।', 'মাসিকের কথা জিজ্ঞেস করেন, আয়রন দেন, আর রক্ত যাওয়ার চিকিৎসা করেন।', 'কাজে লাগে, কিন্তু রক্ত যাওয়ারও চিকিৎসা দরকার।', 'part'],
+            ['অবসরপ্রাপ্ত ভদ্রলোক', 'চোখের আড়ালে অল্প অল্প রক্ত যাওয়া, সাধারণত পাকস্থলী বা অন্ত্র থেকে, যেমন আলসার, পাইলস, বা বছরের পর বছর খাওয়া ব্যথার ওষুধ। কম ক্ষেত্রে সেটা টিউমার।', 'রক্ত কোথা থেকে যাচ্ছে, খুঁজে বার করতে পরীক্ষা করান।', 'সংখ্যাটা বাড়িয়ে দেয়, আর রক্ত যাওয়াটা আড়াল করে।', 'bad'],
+            ['টনিক খাওয়া মেয়েটি', 'হয়তো তিনি থ্যালাসেমিয়া বা হিমোগ্লোবিন ই এর বাহক। লোহিত কণিকা ছোট, হিমোগ্লোবিন বরাবর একটু কম।', 'একটা বিশেষ রক্ত পরীক্ষা করান, যাতে আয়রনের অভাব থেকে এটাকে আলাদা করে চেনা যায়।', 'কোনো কাজ করে না।', 'none']],
+          cap: 'তিনজনের রিপোর্টেই একই কথা লেখা। হিমোগ্লোবিন কেন কমল, তার উপরই নির্ভর করে কী কাজে লাগবে। সেটা জানতে লাগে ডাক্তার আর রক্ত পরীক্ষা।' }
+      : { h: 'One report, three reasons', sub: 'Tap a person to see why their hemoglobin is low.', rep: 'Report', hb: 'Hemoglobin', low: 'Low',
+          rows: ['Why it is low', 'What the doctor does', 'An iron tonic on its own'], pick: 'Choose a person above.',
+          p: [['The woman on the third floor', 'Heavy periods for years, meals eaten last and little, and tea with food.', 'Asks about her periods, gives iron, and treats the bleeding.', 'Helps, but the bleeding has to be treated too.', 'part'],
+            ['The retired man', 'Slow bleeding he cannot see, usually from the stomach or bowel, such as an ulcer, piles, or years of painkillers. Less often, it is a growth.', 'Sends him for tests to find where the blood is going.', 'Pushes the number up and hides the bleeding.', 'bad'],
+            ['The young woman on tonics', 'She may be a carrier of thalassemia or hemoglobin E. Her red cells are small and her hemoglobin runs a little low.', 'Orders one particular blood test that tells it apart from low iron.', 'Does nothing for it.', 'none']],
+          cap: 'All three reports say the same word. Why the hemoglobin fell decides what helps, and finding out takes a doctor and a blood test.' };
+    const face = [
+      `${person(26, 32, .95)}<circle cx="26" cy="5" r="6" fill="${C.teal}"/>`,
+      `${person(26, 32, .95)}<g fill="none" stroke="#fff" stroke-width="1.8"><circle cx="21.5" cy="18.5" r="3.4"/><circle cx="30.5" cy="18.5" r="3.4"/><path d="M25 18.5h2"/></g>`,
+      `<path d="M13.5 20c0-10 5.5-15 12.5-15s12.5 5 12.5 15v15h-25z" fill="${C.teal2}"/>${person(26, 32, .95)}<rect x="36" y="30" width="9" height="13" rx="2.5" fill="${C.amberBg}" stroke="${C.amber}" stroke-width="1.6"/>`,
+    ];
+    const badge = { part: ['#FFF1DC', '#9A5A0C'], bad: ['#FDEDEE', '#B4202E'], none: ['#EEF0EF', '#3E4A48'] };
+    const report = `<svg class="tr-rep" viewBox="0 0 300 66" aria-hidden="true" font-family="inherit"><rect x="1" y="1" width="298" height="64" rx="14" fill="#fff" stroke="${C.mintLine}" stroke-width="1.5"/>` +
+      T(18, 24, t.rep, { a: 'start', size: 12.5, fill: C.muted, w: 600 }) + `<path d="M18 34h120M18 44h90" stroke="${C.mintLine}" stroke-width="3" stroke-linecap="round" opacity=".7"/>` +
+      T(160, 42, t.hb, { a: 'start', size: 14, w: 700, fill: C.ink }) +
+      `<rect x="232" y="24" width="56" height="26" rx="13" fill="${C.roseBg}" stroke="${C.red}" stroke-width="1.5"/>` + T(252, 42, t.low, { size: 13.5, w: 700, fill: C.red }) +
+      `<path d="M272 31v11M268 38l4 4 4-4" fill="none" stroke="${C.red}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+    const tabs = t.p.map((x, i) => `<button type="button" class="tr-b" aria-pressed="false" data-i="${i}"><svg viewBox="0 0 52 52" aria-hidden="true">${face[i]}</svg><span>${esc(x[0])}</span></button>`).join('');
+    const panels = t.p.map((x, i) => `<div class="tr-p" data-i="${i}" hidden><dl>` +
+      `<dt>${esc(t.rows[0])}</dt><dd>${esc(x[1])}</dd><dt>${esc(t.rows[1])}</dt><dd>${esc(x[2])}</dd>` +
+      `<dt>${esc(t.rows[2])}</dt><dd><span class="tr-badge" style="background:${badge[x[4]][0]};color:${badge[x[4]][1]}">${esc(x[3])}</span></dd></dl></div>`).join('');
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p>${report}<div class="tr-tabs">${tabs}</div>` +
+      `<div class="tr-out" aria-live="polite"><p class="tr-pick">${esc(t.pick)}</p>${panels}</div>`;
+    return { cap: t.cap, cls: 'tr', html };
+  },
 };
 
 export const FIGURE_NAMES = Object.keys(FIG).concat(Object.keys(TRY));

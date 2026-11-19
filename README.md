@@ -61,6 +61,7 @@ A line on its own such as `[figure: inheritance]` puts a moving illustration, wi
 | `habit-or-sign` | Touch: four cards ("eats mud", "flares up at small things") that turn over to show what low iron can do | Anaemia: children |
 | `iron-gap` | Touch: a chart with no numbers, iron stored at birth falling while a growing child's need stays high, with buttons for "mostly milk" and "milk and family food" | Anaemia: children |
 | `baby-chance` | Touch: each tap of "Next baby" is one pregnancy of two carrier parents; one copy comes from each parent by chance, and a tally of the children so far builds up. A second button shows only the mother as a carrier, where no child gets thalassemia major | How it runs in families |
+| `three-reasons` | Touch: the same low hemoglobin report, and the three people from the chapter. Tapping one shows why theirs is low, what the doctor does, and what an iron tonic alone would do | Anaemia |
 
 The ones marked "Touch" respond to the reader's finger. Each one plays a short demonstration once when the reader reaches it, and stays still on phones set to reduce motion.
 
