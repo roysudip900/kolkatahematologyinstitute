@@ -58,6 +58,16 @@ A line on its own such as `[figure: inheritance]` puts a moving illustration, wi
 
 To move a picture, move its line. To remove it, delete the line.
 
+## Your own videos in a chapter
+
+A line on its own such as `[video: thalassemia-carrier]` puts one of your videos at that point in a chapter. The reader sees a still picture and taps to play, so the video never uses mobile data by itself.
+
+| Name | Video | Used in |
+| --- | --- | --- |
+| `thalassemia-carrier` | "Are you a thalassemia carrier?" 30 seconds, Bengali and English on screen | How it runs in families, after the opening story |
+
+To add a new video, send it in the chat. It is shrunk for phones (the 4.5 MB original became under 1 MB), stored in `assets/video/`, and listed in `tools/figures.mjs`.
+
 ## Chapters and their parts
 
 The home page shows only the main chapters. A big subject such as Thalassemia is one chapter with several parts:
