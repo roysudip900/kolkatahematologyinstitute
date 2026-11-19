@@ -21,6 +21,17 @@
   "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FDECEE\"/><path d=\"M26 37C14 29 14 19 20 17c3-1 5 1 6 3 1-2 3-4 6-3 6 2 6 12-6 20z\" fill=\"#D93A4A\"/><path d=\"M13 33c4-3 6 3 10 0s6 3 10 0 6 3 10 0\" fill=\"none\" stroke=\"#7A5AD1\" stroke-width=\"2.2\" stroke-linecap=\"round\"/>"
  },
  {
+  "id": "anaemia-children",
+  "parent": "anaemia",
+  "bn": "অ্যানিমিয়া: যখন মনে হয় বাচ্চার বদ অভ্যাস বা দুষ্টুমি",
+  "en": "Anaemia: when a child eats mud or seems naughty",
+  "desc_bn": "বাচ্চা মাটি বা চক খায়? খিটখিটে, পড়ায় মন নেই? এর পিছনে আয়রনের অভাব থাকতে পারে। কখন রক্ত পরীক্ষা করাবেন, আর কখন হাসপাতালে যাবেন।",
+  "desc_en": "A toddler who eats mud or chalk, a child who is cranky and cannot concentrate: low iron can be behind it. When to ask for a blood count, and when to go to hospital.",
+  "card_bn": "বাচ্চা মাটি খায়? খিটখিটে, পড়ায় মন নেই? কারণটা হতে পারে রক্তে।",
+  "card_en": "Your child eats mud? Cranky, falling behind in class? The cause may be in the blood.",
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FDECEE\"/><path d=\"M17 28h18l-3 12H20z\" fill=\"#C9744A\"/><path d=\"M26 28c-1-6-4-9-9-10 1 6 4 9 9 10zM26 28c1-7 4-11 9-12-1 6-4 10-9 12z\" fill=\"#2E8B57\"/><circle cx=\"26\" cy=\"14\" r=\"3\" fill=\"#D93A4A\"/>"
+ },
+ {
   "id": "thalassemia",
   "bn": "থ্যালাসেমিয়া",
   "en": "Thalassemia",
