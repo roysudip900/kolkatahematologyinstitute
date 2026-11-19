@@ -465,7 +465,6 @@ const TRY = {
       `${person(26, 32, .95)}<g fill="none" stroke="#fff" stroke-width="1.8"><circle cx="21.5" cy="18.5" r="3.4"/><circle cx="30.5" cy="18.5" r="3.4"/><path d="M25 18.5h2"/></g>`,
       `<path d="M13.5 20c0-10 5.5-15 12.5-15s12.5 5 12.5 15v15h-25z" fill="${C.teal2}"/>${person(26, 32, .95)}<rect x="36" y="30" width="9" height="13" rx="2.5" fill="${C.amberBg}" stroke="${C.amber}" stroke-width="1.6"/>`,
     ];
-    const badge = { part: ['#FFF1DC', '#9A5A0C'], bad: ['#FDEDEE', '#B4202E'], none: ['#EEF0EF', '#3E4A48'] };
     const report = `<svg class="tr-rep" viewBox="0 0 300 66" aria-hidden="true" font-family="inherit"><rect x="1" y="1" width="298" height="64" rx="14" fill="#fff" stroke="${C.mintLine}" stroke-width="1.5"/>` +
       T(18, 24, t.rep, { a: 'start', size: 12.5, fill: C.muted, w: 600 }) + `<path d="M18 34h120M18 44h90" stroke="${C.mintLine}" stroke-width="3" stroke-linecap="round" opacity=".7"/>` +
       T(160, 42, t.hb, { a: 'start', size: 14, w: 700, fill: C.ink }) +
@@ -474,7 +473,7 @@ const TRY = {
     const tabs = t.p.map((x, i) => `<button type="button" class="tr-b" aria-pressed="false" data-i="${i}"><svg viewBox="0 0 52 52" aria-hidden="true">${face[i]}</svg><span>${esc(x[0])}</span></button>`).join('');
     const panels = t.p.map((x, i) => `<div class="tr-p" data-i="${i}" hidden><dl>` +
       `<dt>${esc(t.rows[0])}</dt><dd>${esc(x[1])}</dd><dt>${esc(t.rows[1])}</dt><dd>${esc(x[2])}</dd>` +
-      `<dt>${esc(t.rows[2])}</dt><dd><span class="tr-badge" style="background:${badge[x[4]][0]};color:${badge[x[4]][1]}">${esc(x[3])}</span></dd></dl></div>`).join('');
+      `<dt>${esc(t.rows[2])}</dt><dd><span class="tr-badge tr-${x[4]}">${esc(x[3])}</span></dd></dl></div>`).join('');
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p>${report}<div class="tr-tabs">${tabs}</div>` +
       `<div class="tr-out" aria-live="polite"><p class="tr-pick">${esc(t.pick)}</p>${panels}</div>`;
     return { cap: t.cap, cls: 'tr', html };
