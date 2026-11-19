@@ -35,11 +35,11 @@
   "parent": "thalassemia",
   "bn": "থ্যালাসেমিয়া: রক্ত নেওয়া",
   "en": "Thalassemia: blood transfusion",
-  "desc_bn": "",
-  "desc_en": "",
-  "card_bn": "",
-  "card_en": "",
-  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FFF3D6\"/><circle cx=\"26\" cy=\"26\" r=\"15\" fill=\"#D93A4A\"/><circle cx=\"26\" cy=\"26\" r=\"10\" fill=\"#FFF3D6\"/><circle cx=\"26\" cy=\"26\" r=\"4.5\" fill=\"#D93A4A\"/>"
+  "desc_bn": "থ্যালাসেমিয়া মেজরে বাচ্চার রক্ত কেন সময়মতো দরকার, ফ্যাকাশে হওয়ার অপেক্ষায় নয়, রক্ত নেওয়ার দিনটা কেমন, আর কোন লক্ষণ দেখলে জানাবেন।",
+  "desc_en": "Why a child with thalassemia major needs blood on time, not when they look pale, what a transfusion day is like, and what to report. By a Kolkata hematologist.",
+  "card_bn": "পরীক্ষা বা বিয়েবাড়ির জন্য রক্ত নেওয়া পিছিয়ে দিচ্ছেন? বাচ্চা ফ্যাকাশে হওয়ার অপেক্ষা করছেন?",
+  "card_en": "Pushing the transfusion back for exams or a wedding? Waiting until your child looks pale?",
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FFF3D6\"/><path d=\"M26 11c6 8 10 13 10 18a10 10 0 0 1-20 0c0-5 4-10 10-18z\" fill=\"#D93A4A\"/><circle cx=\"22\" cy=\"30\" r=\"3\" fill=\"#F7B3B9\"/>"
  },
  {
   "id": "thalassemia-complications",

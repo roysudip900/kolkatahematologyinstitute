@@ -145,6 +145,40 @@ const FIG = {
         body),
     };
   },
+
+  // Thalassemia transfusion: hemoglobin over time, with transfusions on time and with late ones.
+  // No numbers: the safe band is where the doctor wants the hemoglobin, the low zone is where the marrow overworks.
+  'transfusion-timing'(l) {
+    const t = l === 'bn'
+      ? { a: 'সময়মতো রক্ত', b: 'দেরি করে রক্ত', drop: 'রক্ত নেওয়া', low: 'ম্যারো বেশি খাটে, প্লীহা বাড়ে', time: 'সপ্তাহ ধরে →', ok: 'যেখানে থাকা উচিত',
+          cap: 'সময়মতো রক্ত নিলে হিমোগ্লোবিন সেখানেই থাকে, যেখানে ডাক্তার রাখতে চান। বারবার দেরি হলে দুই বারের মাঝে হিমোগ্লোবিন অনেক নেমে যায়, ম্যারো বেশি খাটে আর প্লীহা বড় হতে থাকে।' }
+      : { a: 'Blood on time', b: 'Blood late', drop: 'transfusion', low: 'marrow overworks, spleen grows', time: 'weeks →', ok: 'where it should be',
+          cap: 'With transfusions on time, hemoglobin stays where the doctor wants it. When they keep getting late, it falls too low between transfusions: the marrow overworks and the spleen grows.' };
+    const drop = (x, y) => `<path d="M${x} ${y - 8}c3 4 5 6.5 5 9a5 5 0 0 1-10 0c0-2.5 2-5 5-9z" fill="${C.red}"/>`;
+    const panel = (oy, title, color, pts, jumps, low) => {
+      let g = T(14, oy - 2, title, { a: 'start', w: 700, fill: color, size: 14 }) +
+        `<rect x="34" y="${oy + 18}" width="312" height="30" rx="8" fill="${C.mint}"/>`;
+      if (low) g += `<rect x="34" y="${oy + 48}" width="312" height="34" rx="8" fill="${C.roseBg}"/>` + T(340, oy + 74, t.low, { a: 'end', size: 12.5, fill: C.red, w: 600 });
+      else g += T(340, oy + 66, t.ok, { a: 'end', size: 12.5, fill: C.teal2, w: 600 });
+      g += `<path class="tt-line" pathLength="1" d="${pts}" fill="none" stroke="${color}" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/>`;
+      g += jumps.map((x) => drop(x, oy + 14)).join('');
+      return g;
+    };
+    const top = 'M40 45L100 68V45L160 68V45L220 68V45L280 68V45L340 68';
+    const shift = (d, dy) => d.replace(/([MLV])(\d+)(?: (\d+))?/g, (m, c, a, b) => c === 'V' ? `V${+a + dy}` : `${c}${a} ${+b + dy}`);
+    const late = 'M40 45L100 68V45L200 83V45L260 68V45L340 75';
+    const body =
+      `<g transform="translate(0,10)">${drop(262, 0)}${T(272, 4, t.drop, { a: 'start', size: 12.5, fill: C.muted })}</g>` +
+      panel(30, t.a, C.teal, shift(top, 6), [100, 160, 220, 280], false) +
+      panel(146, t.b, C.red, shift(late, 122), [100, 200, 260], true) +
+      `<path d="M40 246h300" stroke="${C.mintLine}" stroke-width="2"/>` + T(340, 262, t.time, { a: 'end', size: 12.5, fill: C.muted });
+    return {
+      cap: t.cap,
+      svg: svg('tt', 360, 270, t.cap,
+        '.tt-line{stroke-dasharray:1;stroke-dashoffset:1;animation:ttdraw 8s ease-in-out infinite}@keyframes ttdraw{0%{stroke-dashoffset:1}65%,92%{stroke-dashoffset:0}100%{stroke-dashoffset:0;opacity:.2}}@media (prefers-reduced-motion:reduce){.tt-line{stroke-dashoffset:0}}',
+        body),
+    };
+  },
 };
 
 export const FIGURE_NAMES = Object.keys(FIG);
