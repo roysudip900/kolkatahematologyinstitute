@@ -56,6 +56,13 @@ A line on its own such as `[figure: inheritance]` puts a moving illustration, wi
 | `hbe-beta` | HbE trait from one parent and beta thalassemia trait from the other, and the child with both | How it runs in families |
 | `transfusion-timing` | Hemoglobin over time: with transfusions on time it stays in the band the doctor wants; when they keep getting late it falls into the zone where the marrow overworks | Blood transfusion |
 
+| `heart-pace` | Touch: a slider lowers the hemoglobin; red cells thin out and the heart beats faster, with one line of plain words at each step | Anaemia: heart and nerves |
+| `signs-check` | Touch: the reader taps the signs they have noticed, gets sent to a blood count and the doctor, and can send the list on WhatsApp. A danger sign shows the hospital line. Nothing is saved | Anaemia: heart and nerves |
+| `habit-or-sign` | Touch: four cards ("eats mud", "flares up at small things") that turn over to show what low iron can do | Anaemia: children |
+| `iron-gap` | Touch: a chart with no numbers, iron stored at birth falling while a growing child's need stays high, with buttons for "mostly milk" and "milk and family food" | Anaemia: children |
+
+The ones marked "Touch" respond to the reader's finger. Each one plays a short demonstration once when the reader reaches it, and stays still on phones set to reduce motion.
+
 To move a picture, move its line. To remove it, delete the line.
 
 ## Your own videos in a chapter
