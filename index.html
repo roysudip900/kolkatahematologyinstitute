@@ -140,7 +140,20 @@ html[data-lang="bn"] .hero h1 .hl{padding-bottom:.2em}
 
 /* short videos inside a chapter ([video: name]) */
 .vid{margin:30px auto 6px;max-width:300px;text-align:center}
-.vid video{display:block;width:100%;height:auto;aspect-ratio:9/16;border-radius:22px;background:#1C0A0E;box-shadow:0 30px 50px -34px rgba(21,33,31,.7)}
+.vid .vbox{position:relative;border-radius:22px;overflow:hidden;background:#1C0A0E;box-shadow:0 30px 50px -34px rgba(21,33,31,.7);-webkit-touch-callout:none;user-select:none}
+.vid video{display:block;width:100%;height:auto;aspect-ratio:9/16;cursor:pointer}
+.vid button{position:absolute;border:0;padding:0;display:grid;place-items:center;cursor:pointer;color:#fff;-webkit-tap-highlight-color:transparent}
+.vid .vplay{left:50%;top:50%;width:72px;height:72px;margin:-36px 0 0 -36px;border-radius:50%;background:rgba(216,50,63,.92);box-shadow:0 10px 26px rgba(0,0,0,.4);transition:opacity .3s,transform .3s}
+.vid .vplay svg{width:34px;height:34px}
+.vid .vplay .i-replay{display:none}
+.vid.ended .vplay .i-play{display:none}.vid.ended .vplay .i-replay{display:block}
+.vid.playing .vplay{opacity:0;transform:scale(.8);pointer-events:none}
+.vid .vsnd{right:12px;bottom:16px;width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.92);color:var(--teal);box-shadow:0 6px 16px rgba(0,0,0,.35)}
+.vid .vsnd svg{width:24px;height:24px}
+.vid .vsnd .i-sound{display:none}
+.vid.sound .vsnd .i-muted{display:none}.vid.sound .vsnd .i-sound{display:block}
+.vid .vbar{position:absolute;left:0;right:0;bottom:0;height:4px;background:rgba(255,255,255,.18)}
+.vid .vbar i{display:block;height:100%;width:0;background:var(--red)}
 .vid figcaption{margin-top:12px;font-family:var(--sans);font-size:.98rem;line-height:1.6;color:var(--ink-2)}
 :lang(bn) .vid figcaption{line-height:1.8}
 

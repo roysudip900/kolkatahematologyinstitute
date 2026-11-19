@@ -60,7 +60,7 @@ To move a picture, move its line. To remove it, delete the line.
 
 ## Your own videos in a chapter
 
-A line on its own such as `[video: thalassemia-carrier]` puts one of your videos at that point in a chapter. The reader sees a still picture and taps to play, so the video never uses mobile data by itself.
+A line on its own such as `[video: thalassemia-carrier]` puts one of your videos at that point in a chapter. It starts by itself, without sound, when the reader scrolls to it, and pauses when they scroll away. A speaker button turns the sound on; tapping the video pauses it. There is no download menu. Nothing loads until the reader reaches the video, and it does not start by itself on phones set to save data or to reduce motion.
 
 | Name | Video | Used in |
 | --- | --- | --- |

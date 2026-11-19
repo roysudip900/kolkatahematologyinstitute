@@ -360,6 +360,31 @@ function grow(){if(!art)return;var r=art.getBoundingClientRect(),total=r.height-
 window.addEventListener('scroll',grow,{passive:true});window.addEventListener('resize',grow);grow();
 /* Sections fade up as they come into view. */
 var calm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+/* Dr. Roy's videos: no download menu, start muted when scrolled into view, pause when scrolled away. */
+document.querySelectorAll('figure.vid').forEach(function(fig){
+  var v=fig.querySelector('video'),pp=fig.querySelector('.vplay'),snd=fig.querySelector('.vsnd'),bar=fig.querySelector('.vbar i');
+  if(!v)return;
+  v.muted=true;v.controls=false;
+  fig.addEventListener('contextmenu',function(e){e.preventDefault();});
+  function sync(){fig.classList.toggle('playing',!v.paused);fig.classList.toggle('sound',!v.muted);
+    pp.setAttribute('aria-label',v.paused?fig.dataset.lPlay:fig.dataset.lPause);
+    snd.setAttribute('aria-label',v.muted?fig.dataset.lOn:fig.dataset.lOff);}
+  ['play','pause','volumechange'].forEach(function(ev){v.addEventListener(ev,sync);});
+  v.addEventListener('ended',function(){fig.classList.add('ended');sync();});
+  v.addEventListener('timeupdate',function(){if(v.duration)bar.style.width=(100*v.currentTime/v.duration)+'%';});
+  function toggle(){if(v.paused){fig.classList.remove('ended');fig.removeAttribute('data-held');v.play().catch(function(){});}
+    else{v.pause();fig.setAttribute('data-held','1');}}
+  pp.addEventListener('click',toggle);v.addEventListener('click',toggle);
+  snd.addEventListener('click',function(){v.muted=!v.muted;if(!v.muted&&v.paused){fig.classList.remove('ended');fig.removeAttribute('data-held');v.play().catch(function(){});}sync();});
+  var saver=navigator.connection&&navigator.connection.saveData;
+  if(!calm&&!saver&&'IntersectionObserver' in window){
+    new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting&&e.intersectionRatio>=0.6){if(v.paused&&!fig.classList.contains('ended')&&!fig.hasAttribute('data-held'))v.play().catch(function(){});}
+      else if(!v.paused)v.pause();
+    });},{threshold:[0,0.6]}).observe(fig);
+  }
+  sync();
+});
 if(!calm&&'IntersectionObserver' in window){
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -6% 0px'});
   document.querySelectorAll('.box,.faq,.endcard').forEach(function(el){el.classList.add('rv');io.observe(el);});
