@@ -183,12 +183,16 @@ const FIG = {
 
 // Short videos made by Dr. Roy, kept in assets/video/<name>.mp4 with a still picture <name>.jpg.
 // Placed in a chapter with a line of its own:  [video: thalassemia-carrier]
-// They play only when the reader taps, so they never use mobile data by themselves.
+// Dr. Roy, 2026-11-19: no download option, and the video starts by itself when the reader scrolls to it.
+// Phones only let a video start by itself without sound, so it starts muted, with a speaker button for sound.
+// The phone's own video controls (which hold the Download menu) are not used; the page draws its own
+// play/pause and sound buttons. It starts only when most of it is on screen and pauses when scrolled away.
+// It does not start by itself for readers whose phone asks for less motion or is set to save data.
 const VIDEO = {
   'thalassemia-carrier': {
     w: 720, h: 1280,
-    bn: { label: 'থ্যালাসেমিয়া বাহক: ৩০ সেকেন্ডের ভিডিও', cap: 'আপনি কি থ্যালাসেমিয়ার বাহক? ৩০ সেকেন্ডে পুরো কথাটা। দেখতে চাপুন।' },
-    en: { label: 'Thalassemia carrier: a 30 second video', cap: 'Are you a thalassemia carrier? The whole story in 30 seconds. Tap to play.' },
+    bn: { label: 'থ্যালাসেমিয়া বাহক: ৩০ সেকেন্ডের ভিডিও', cap: 'আপনি কি থ্যালাসেমিয়ার বাহক? ৩০ সেকেন্ডে পুরো কথাটা। শব্দ শুনতে স্পিকারের বোতামটা চাপুন।' },
+    en: { label: 'Thalassemia carrier: a 30 second video', cap: 'Are you a thalassemia carrier? The whole story in 30 seconds. Tap the speaker button for sound.' },
   },
 };
 export const VIDEO_NAMES = Object.keys(VIDEO);
@@ -196,8 +200,21 @@ export function video(name, l) {
   const v = VIDEO[name];
   if (!v) throw new Error(`[video: ${name}] is not a known video. Known: ${VIDEO_NAMES.join(', ')}`);
   const t = v[l] || v.en;
-  return `<figure class="vid"><video controls playsinline preload="none" width="${v.w}" height="${v.h}" poster="/assets/video/${name}.jpg" aria-label="${esc(t.label)}">` +
-    `<source src="/assets/video/${name}.mp4" type="video/mp4"></video><figcaption>${esc(t.cap)}</figcaption></figure>`;
+  const L = l === 'bn'
+    ? { play: 'চালান', pause: 'থামান', on: 'শব্দ চালু করুন', off: 'শব্দ বন্ধ করুন' }
+    : { play: 'Play', pause: 'Pause', on: 'Turn sound on', off: 'Turn sound off' };
+  const I = {
+    play: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg>',
+    replay: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5a7 7 0 1 1-6.6 4.7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M4.5 4.5v5h5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    muted: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="currentColor"/><path d="M16 9.5l5 5M21 9.5l-5 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>',
+    sound: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="currentColor"/><path d="M15.5 9a4.5 4.5 0 0 1 0 6M18 6.5a8 8 0 0 1 0 11" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>',
+  };
+  return `<figure class="vid" data-l-play="${esc(L.play)}" data-l-pause="${esc(L.pause)}" data-l-on="${esc(L.on)}" data-l-off="${esc(L.off)}"><div class="vbox">` +
+    `<video muted playsinline preload="none" disablepictureinpicture disableremoteplayback controlslist="nodownload noplaybackrate noremoteplayback nofullscreen" width="${v.w}" height="${v.h}" poster="/assets/video/${name}.jpg" aria-label="${esc(t.label)}">` +
+    `<source src="/assets/video/${name}.mp4" type="video/mp4"></video>` +
+    `<button type="button" class="vplay" aria-label="${esc(L.play)}"><span class="i-play">${I.play}</span><span class="i-replay">${I.replay}</span></button>` +
+    `<button type="button" class="vsnd" aria-label="${esc(L.on)}"><span class="i-muted">${I.muted}</span><span class="i-sound">${I.sound}</span></button>` +
+    `<span class="vbar" aria-hidden="true"><i></i></span></div><figcaption>${esc(t.cap)}</figcaption></figure>`;
 }
 
 export const FIGURE_NAMES = Object.keys(FIG);
