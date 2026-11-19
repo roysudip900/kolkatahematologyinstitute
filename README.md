@@ -54,6 +54,7 @@ A line on its own such as `[figure: inheritance]` puts a moving illustration, wi
 | `copies` | Two copies of the instructions: both fine, one faulty (carrier, healthy), both faulty (thalassemia major) | Thalassemia |
 | `inheritance` | Two carrier parents and their four possible children, with the 1 in 4, 2 in 4, 1 in 4 chances | How it runs in families |
 | `hbe-beta` | HbE trait from one parent and beta thalassemia trait from the other, and the child with both | How it runs in families |
+| `transfusion-timing` | Hemoglobin over time: with transfusions on time it stays in the band the doctor wants; when they keep getting late it falls into the zone where the marrow overworks | Blood transfusion |
 
 To move a picture, move its line. To remove it, delete the line.
 
