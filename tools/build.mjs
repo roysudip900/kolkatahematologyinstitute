@@ -12,6 +12,7 @@
 //   "## Heading"     a smaller heading inside a section
 //   "- item"         a bullet point (several in a row make a list)
 //   "[figure: name]"  a moving illustration from tools/figures.mjs, with its caption, on a line of its own
+//   "[video: name]"   a short video from assets/video/ (listed in tools/figures.mjs), on a line of its own
 //
 // How the page is dressed, with nothing extra to type:
 //   - Everything before the first "# Heading" is the opening story. It is set in the serif
@@ -35,7 +36,7 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync, rmSync, rmdirSync, 
 import { execFileSync } from 'node:child_process';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { figure } from './figures.mjs';
+import { figure, video } from './figures.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const SITE = 'https://kolkatahematologyinstitute.com';
@@ -73,8 +74,8 @@ function tokens(txt) {
     for (let line of block.split('\n')) {
       line = line.trim();
       if (!line) continue;
-      const fig = line.match(/^\[\s*figure\s*:\s*([a-z0-9-]+)\s*\]$/i);
-      if (fig) { flushP(); flushL(); out.push({ t: 'fig', name: fig[1].toLowerCase() }); }
+      const fig = line.match(/^\[\s*(figure|video)\s*:\s*([a-z0-9-]+)\s*\]$/i);
+      if (fig) { flushP(); flushL(); out.push({ t: fig[1].toLowerCase() === 'video' ? 'vid' : 'fig', name: fig[2].toLowerCase() }); }
       else if (/^##\s/.test(line)) { flushP(); flushL(); out.push({ t: 'h3', text: line.replace(/^##\s*/, '') }); }
       else if (/^#\s/.test(line)) { flushP(); flushL(); out.push({ t: 'h2', text: line.replace(/^#\s*/, '') }); }
       else if (/^[-•]\s/.test(line)) { flushP(); list.push(line.replace(/^[-•]\s*/, '')); }
@@ -89,6 +90,7 @@ function html(tk, firstClass = '') {
   let first = true;
   return tk.map((x) => {
     if (x.t === 'fig') return figure(x.name, LANG);
+    if (x.t === 'vid') return video(x.name, LANG);
     if (x.t === 'p') { const c = first && firstClass ? ` class="${firstClass}"` : ''; first = false; return `<p${c}>${x.lines.map(esc).join('<br>')}</p>`; }
     first = false;
     if (x.t === 'ul') return `<ul>${x.items.map((i) => `<li>${esc(i)}</li>`).join('')}</ul>`;
@@ -96,7 +98,7 @@ function html(tk, firstClass = '') {
     return `<h2>${esc(x.text)}</h2>`;
   }).join('');
 }
-const textOf = (tk) => tk.filter((x) => x.t !== 'fig').map((x) => (x.t === 'p' ? x.lines.join(' ') : x.t === 'ul' ? x.items.join(' ') : x.text)).join(' ');
+const textOf = (tk) => tk.filter((x) => x.t !== 'fig' && x.t !== 'vid').map((x) => (x.t === 'p' ? x.lines.join(' ') : x.t === 'ul' ? x.items.join(' ') : x.text)).join(' ');
 
 // Which special dress a section gets, from the words in its heading.
 function kind(title) {
@@ -143,7 +145,7 @@ function chapterBody(txt) {
 }
 
 function plain(txt) {
-  return txt.replace(/\r/g, '').split('\n').filter((l) => l.trim() && !/^#/.test(l.trim()) && !/^\[\s*figure\s*:/i.test(l.trim())).map((l) => l.replace(/^[-•]\s*/, '').trim()).join(' ');
+  return txt.replace(/\r/g, '').split('\n').filter((l) => l.trim() && !/^#/.test(l.trim()) && !/^\[\s*(figure|video)\s*:/i.test(l.trim())).map((l) => l.replace(/^[-•]\s*/, '').trim()).join(' ');
 }
 function summary(txt, max = 155) {
   const t = plain(txt);

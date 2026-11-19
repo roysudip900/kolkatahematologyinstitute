@@ -181,6 +181,25 @@ const FIG = {
   },
 };
 
+// Short videos made by Dr. Roy, kept in assets/video/<name>.mp4 with a still picture <name>.jpg.
+// Placed in a chapter with a line of its own:  [video: thalassemia-carrier]
+// They play only when the reader taps, so they never use mobile data by themselves.
+const VIDEO = {
+  'thalassemia-carrier': {
+    w: 720, h: 1280,
+    bn: { label: 'থ্যালাসেমিয়া বাহক: ৩০ সেকেন্ডের ভিডিও', cap: 'আপনি কি থ্যালাসেমিয়ার বাহক? ৩০ সেকেন্ডে পুরো কথাটা। দেখতে চাপুন।' },
+    en: { label: 'Thalassemia carrier: a 30 second video', cap: 'Are you a thalassemia carrier? The whole story in 30 seconds. Tap to play.' },
+  },
+};
+export const VIDEO_NAMES = Object.keys(VIDEO);
+export function video(name, l) {
+  const v = VIDEO[name];
+  if (!v) throw new Error(`[video: ${name}] is not a known video. Known: ${VIDEO_NAMES.join(', ')}`);
+  const t = v[l] || v.en;
+  return `<figure class="vid"><video controls playsinline preload="none" width="${v.w}" height="${v.h}" poster="/assets/video/${name}.jpg" aria-label="${esc(t.label)}">` +
+    `<source src="/assets/video/${name}.mp4" type="video/mp4"></video><figcaption>${esc(t.cap)}</figcaption></figure>`;
+}
+
 export const FIGURE_NAMES = Object.keys(FIG);
 export function figure(name, l) {
   const f = FIG[name];
