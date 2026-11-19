@@ -10,6 +10,17 @@
   "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FDECEE\"/><circle cx=\"26\" cy=\"26\" r=\"15\" fill=\"#F2A7AE\"/><circle cx=\"26\" cy=\"26\" r=\"9\" fill=\"#FDECEE\"/>"
  },
  {
+  "id": "anaemia-heart-nerves",
+  "parent": "anaemia",
+  "bn": "অ্যানিমিয়া: যখন মনে হয় হার্ট বা নার্ভের সমস্যা",
+  "en": "Anaemia: when it feels like the heart or the nerves",
+  "desc_bn": "বুক ধড়ফড়, অল্পেই হাঁফ, হাত-পা ঝিনঝিন? কারণটা হতে পারে অ্যানিমিয়া বা ভিটামিন বি১২ এর অভাব। কখন রক্ত পরীক্ষা চাইবেন, আর কখন হাসপাতালে যাবেন।",
+  "desc_en": "A racing heart, breathlessness or pins and needles can come from anaemia or low vitamin B12. When to ask for a blood count, and when to go to hospital.",
+  "card_bn": "বুক ধড়ফড় করে? হাত-পা ঝিনঝিন? কারণটা হতে পারে রক্তে।",
+  "card_en": "Heart racing? Pins and needles in your feet? The cause may be in your blood.",
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FDECEE\"/><path d=\"M26 37C14 29 14 19 20 17c3-1 5 1 6 3 1-2 3-4 6-3 6 2 6 12-6 20z\" fill=\"#D93A4A\"/><path d=\"M13 33c4-3 6 3 10 0s6 3 10 0 6 3 10 0\" fill=\"none\" stroke=\"#7A5AD1\" stroke-width=\"2.2\" stroke-linecap=\"round\"/>"
+ },
+ {
   "id": "thalassemia",
   "bn": "থ্যালাসেমিয়া",
   "en": "Thalassemia",
