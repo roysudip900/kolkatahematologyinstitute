@@ -68,10 +68,10 @@
   "parent": "thalassemia",
   "bn": "থ্যালাসেমিয়া: নিয়মিত যত্ন কেন জরুরি",
   "en": "Thalassemia: why regular care matters",
-  "desc_bn": "",
-  "desc_en": "",
-  "card_bn": "",
-  "card_en": "",
+  "desc_bn": "থ্যালাসেমিয়ার বাচ্চা দিব্যি আছে, অথচ হৃৎপিণ্ড, লিভার আর গ্রন্থিতে আয়রন জমছে। প্রতি বছরের চেক-আপ আর রোজের আয়রন বের করার ওষুধ কেন জরুরি।",
+  "desc_en": "A child with thalassemia can feel fine while iron builds up in the heart, liver and glands. Why the yearly check-ups and the daily iron medicine matter.",
+  "card_bn": "বাচ্চা তো ভালোই আছে, তবু এত পরীক্ষা কেন? বন্ধুদের চেয়ে বেঁটে? আয়রনের ওষুধ বাদ পড়ছে?",
+  "card_en": "Your child feels fine, so why so many tests? Shorter than friends? Skipping the iron medicine?",
   "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FFF3D6\"/><circle cx=\"26\" cy=\"26\" r=\"15\" fill=\"#D93A4A\"/><circle cx=\"26\" cy=\"26\" r=\"10\" fill=\"#FFF3D6\"/><circle cx=\"26\" cy=\"26\" r=\"4.5\" fill=\"#D93A4A\"/>"
  },
  {

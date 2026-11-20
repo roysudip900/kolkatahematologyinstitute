@@ -179,6 +179,43 @@ const FIG = {
         body),
     };
   },
+
+  // Thalassemia, why regular care matters: iron in the heart over the years. Kept low with the daily medicine and
+  // yearly check-ups (a small rise caught at a check-up); climbing while the child still feels fine when doses are skipped.
+  'quiet-iron'(l) {
+    const t = l === 'bn'
+      ? { y: 'হৃৎপিণ্ডে আয়রন', x: 'বছরের পর বছর', band: 'কষ্ট টের পাওয়া যায়', fine: 'এখনও দিব্যি আছে', cu: 'চেক-আপ',
+          a: 'রোজ ওষুধ, নিয়মিত চেক-আপ', b: 'ওষুধ বাদ, চেক-আপ বাদ',
+          cap: 'রক্তের সঙ্গে আসা আয়রন জমে নিঃশব্দে। রোজ ওষুধ আর প্রতি বছর চেক-আপ হলে আয়রন কম থাকে, আর একটু বাড়লেও গোড়াতেই ধরা পড়ে। ওষুধ বাদ পড়তে থাকলে বছরের পর বছর আয়রন বাড়ে, অথচ বাচ্চা তখনও দিব্যি আছে। ছবিতে কোনো আসল মাপ নেই।' }
+      : { y: 'iron in the heart', x: 'years go by', band: 'trouble is felt', fine: 'still feels fine', cu: 'check-up',
+          a: 'medicine daily, check-ups kept', b: 'doses skipped, check-ups missed',
+          cap: 'Iron from transfusions builds up without a sound. With the medicine every day and a check-up every year, it stays low, and a rise is caught early. When doses are skipped, it climbs for years while the child still feels fine. The drawing has no real numbers.' };
+    const face = (x, y, sad) => `<g transform="translate(${x},${y})"><circle r="8" fill="${C.amberBg}" stroke="${C.amber}" stroke-width="1.6"/><circle cx="-2.8" cy="-1.6" r="1.1" fill="${C.ink}"/><circle cx="2.8" cy="-1.6" r="1.1" fill="${C.ink}"/>` +
+      (sad ? `<path d="M-3 3.6c2-1.6 4-1.6 6 0" fill="none" stroke="${C.ink}" stroke-width="1.3" stroke-linecap="round"/>` : `<path d="M-3 2.2c2 2 4 2 6 0" fill="none" stroke="${C.ink}" stroke-width="1.3" stroke-linecap="round"/>`) + `</g>`;
+    const tick = (x, y) => `<g class="qi-cu" transform="translate(${x},${y})"><circle r="6.5" fill="#fff" stroke="${C.teal2}" stroke-width="1.8"/><path d="M-3 0l2 2 4-4" fill="none" stroke="${C.teal2}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></g>`;
+    const red = 'M40 186C120 172 200 126 332 64';
+    const teal = 'M40 186L120 184C142 183 154 172 176 169C188 168 198 182 222 184L332 184';
+    const body =
+      `<rect x="40" y="40" width="292" height="40" rx="8" fill="${C.roseBg}"/>` + T(50, 64, t.band, { a: 'start', size: 12.5, fill: C.red, w: 600 }) +
+      T(40, 30, t.y, { a: 'start', size: 13, fill: C.muted, w: 600 }) +
+      `<path d="M40 200h292" stroke="${C.mintLine}" stroke-width="2"/><path d="M326 195l6 5-6 5" fill="none" stroke="${C.mintLine}" stroke-width="2" stroke-linecap="round"/>` +
+      T(332, 218, t.x, { a: 'end', size: 12.5, fill: C.muted }) +
+      `<path class="qi-line" pathLength="1" d="${teal}" fill="none" stroke="${C.teal2}" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>` +
+      `<path class="qi-line" pathLength="1" d="${red}" fill="none" stroke="${C.red}" stroke-width="3.4" stroke-linecap="round"/>` +
+      tick(80, 185) + tick(176, 169) + tick(262, 184) + T(176, 157, t.cu, { size: 12.5, fill: C.teal2, w: 600 }) +
+      `<g class="qi-f">${face(118, 156, false)}${face(208, 120, false)}${face(300, 66, true)}</g>` +
+      T(206, 145, t.fine, { a: 'start', size: 12.5, fill: '#9A5A0C', w: 600 }) +
+      `<rect x="40" y="228" width="16" height="5" rx="2.5" fill="${C.teal2}"/>` + T(62, 234, t.a, { a: 'start', size: 12.5, fill: C.ink }) +
+      `<rect x="40" y="246" width="16" height="5" rx="2.5" fill="${C.red}"/>` + T(62, 252, t.b, { a: 'start', size: 12.5, fill: C.ink });
+    return {
+      cap: t.cap,
+      svg: svg('qi', 360, 262, t.cap,
+        '.qi-line{stroke-dasharray:1;stroke-dashoffset:1;animation:qidraw 9s ease-in-out infinite}@keyframes qidraw{0%{stroke-dashoffset:1;opacity:1}55%,92%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}' +
+        '.qi-f,.qi-cu{animation:qifade 9s ease-in-out infinite}@keyframes qifade{0%,20%{opacity:0}45%,92%{opacity:1}100%{opacity:0}}' +
+        '@media (prefers-reduced-motion:reduce){.qi-line{stroke-dashoffset:0}.qi-f,.qi-cu{opacity:1}}',
+        body),
+    };
+  },
 };
 
 // Short videos made by Dr. Roy, kept in assets/video/<name>.mp4 with a still picture <name>.jpg.
@@ -575,6 +612,39 @@ const TRY = {
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p>${svgx}${cards}` +
       `<div class="tm-end" hidden><p class="tm-score" aria-live="polite"></p><p class="tm-endnote">${esc(t.endnote)}</p>${btn('tm-again', t.again)}</div>`;
     return { cap: t.cap, cls: 'kd', data: { s0: t.s[0], s1: t.s[1], s2: t.s[2], none: t.none, some: t.some }, html };
+  },
+
+  // Thalassemia, why regular care matters: the stops on a check-up day; tap one to see what it looks for and why.
+  'checkup-day'(l) {
+    const t = l === 'bn'
+      ? { h: 'চেক-আপের দিন', sub: 'প্রতিটা ধাপে চাপ দিয়ে দেখুন, সেটা কী খোঁজে।', pick: 'উপরে একটা ধাপ বেছে নিন।',
+          rows: ['কী খোঁজে', 'বাচ্চা ভালো থাকলেও কেন দরকার'],
+          p: [['হার্টের স্ক্যান', 'হৃৎপিণ্ডের পেশিতে আয়রন জমেছে কিনা, আর হৃৎপিণ্ড কতটা ভালো পাম্প করছে।', 'কোনো কষ্ট হওয়ার বহু বছর আগে থেকেই হৃৎপিণ্ডে আয়রন জমতে পারে। গোড়ায় ধরা পড়লে সময় থাকতেই ওষুধ বদলানো যায়।'],
+            ['লিভার', 'লিভারে আয়রন কতটা, আর লিভার কেমন কাজ করছে।', 'লিভারেও আয়রন জমে, আর প্রথম কয়েক বছর সেখানকার গোলমাল সাধারণত কোনো জানান দেয় না।'],
+            ['উচ্চতা আর বাড়', 'আগের বারের পর বাচ্চা কতটা লম্বা হল, আর বয়ঃসন্ধির লক্ষণ।', 'গ্রন্থিতে আয়রন জমলে বাড় কমে যেতে পারে, বয়ঃসন্ধি পিছিয়ে যেতে পারে। চার্টে একটা ধীর বছরই প্রায়ই প্রথম সংকেত।'],
+            ['হরমোনের পরীক্ষা', 'যে গ্রন্থিগুলো বাড়, বয়ঃসন্ধি, রক্তের সুগার আর থাইরয়েড চালায়।', 'আয়রন এই গ্রন্থিগুলোর ক্ষতি করে চুপিচুপি। গোলমাল ধরা পড়লে তার চিকিৎসা আছে।'],
+            ['আয়রনের মাত্রা', 'শরীরের আয়রন বাড়ছে, না কমছে।', 'আয়রন বের করার ওষুধ ঠিকঠাক কাজ করছে কিনা, আর কখন সেটা বদলানো দরকার, ডাক্তারবাবু তা বুঝতে পারেন।']],
+          cap: 'কোন পরীক্ষা, কতদিন অন্তর, তা আপনার বাচ্চার হেমাটোলজিস্ট ঠিক করেন, আর বয়সের সঙ্গে সেটা বদলায়।' }
+      : { h: 'The check-up day', sub: 'Tap each stop to see what it looks for.', pick: 'Choose a stop above.',
+          rows: ['What it looks for', 'Why it matters when your child feels fine'],
+          p: [['Heart scan', 'Iron in the heart muscle, and how well the heart pumps.', 'Iron can settle in the heart for years before it causes any symptom. Found early, the iron medicine can be changed in time.'],
+            ['Liver', 'Iron in the liver, and how well the liver is working.', 'Iron builds up in the liver too, and trouble there usually gives no warning in the early years.'],
+            ['Height and growth', 'How much your child has grown since the last visit, and the signs of puberty.', 'Iron in the glands can slow growth and delay puberty. A slow year on the growth chart is often the first sign.'],
+            ['Hormone tests', 'The glands that control growth, puberty, blood sugar and the thyroid.', 'Iron harms these glands quietly. When a problem is found, there is treatment for it.'],
+            ['Iron level', 'Whether the iron in the body is going up or coming down.', 'It shows the doctor whether the iron medicine is doing its job, and when to change it.']],
+          cap: 'Which tests your child needs, and how often, is decided by your hematologist, and it changes with age.' };
+    const icon = [
+      `<path d="M26 40C12 31 12 19 18 16c3.5-1.6 6.5.5 8 3 1.5-2.5 4.5-4.6 8-3 6 3 6 15-8 24z" fill="${C.red}"/><path d="M14 27h7l3-5 4 10 3-5h7" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`,
+      `<path d="M10 22c4-8 22-10 32-4 4 3 2 10-6 13-7 3-15 7-20 5-6-2-9-8-6-14z" fill="${C.rose}"/><circle cx="20" cy="24" r="2.4" fill="${C.amber}"/><circle cx="28" cy="27" r="2" fill="${C.amber}"/><circle cx="33" cy="22" r="1.8" fill="${C.amber}"/>`,
+      `<rect x="31" y="8" width="9" height="36" rx="2" fill="${C.amberBg}" stroke="${C.amber}" stroke-width="1.6"/><path d="M31 14h4M31 20h5M31 26h4M31 32h5M31 38h4" stroke="${C.amber}" stroke-width="1.4"/>${person(18, 30, .8)}`,
+      `<rect x="20" y="8" width="12" height="34" rx="6" fill="#fff" stroke="${C.teal2}" stroke-width="2"/><rect x="22" y="26" width="8" height="14" rx="4" fill="${C.o2}"/><path d="M17 8h18" stroke="${C.teal2}" stroke-width="2.4" stroke-linecap="round"/>`,
+      `<path d="M26 8c7 10 12 16 12 22a12 12 0 0 1-24 0c0-6 5-12 12-22z" fill="${C.red}"/><text x="26" y="35" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">Fe</text>`,
+    ];
+    const tabs = t.p.map((x, i) => `<button type="button" class="tr-b" aria-pressed="false" data-i="${i}"><svg viewBox="0 0 52 52" aria-hidden="true">${icon[i]}</svg><span>${esc(x[0])}</span></button>`).join('');
+    const panels = t.p.map((x, i) => `<div class="tr-p" data-i="${i}" hidden><dl><dt>${esc(t.rows[0])}</dt><dd>${esc(x[1])}</dd><dt>${esc(t.rows[1])}</dt><dd>${esc(x[2])}</dd></dl></div>`).join('');
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="tr-tabs">${tabs}</div>` +
+      `<div class="tr-out" aria-live="polite"><p class="tr-pick">${esc(t.pick)}</p>${panels}</div>`;
+    return { cap: t.cap, cls: 'tr cu', html };
   },
 };
 
