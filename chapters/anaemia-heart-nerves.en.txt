@@ -1,3 +1,5 @@
+> Low hemoglobin can feel like heart trouble, with a racing heart and breathlessness, and low vitamin B12 can feel like nerve trouble, with pins and needles and unsteady walking. A normal ECG does not rule out anaemia, so ask for a blood count along with the heart and nerve tests.
+
 Three months after the baby came, her heart started to race.
 
 It happens when she lifts the older child onto her hip, and on the stairs up from the market. At night, lying in the dark, she can hear it thudding in her ears. Some nights a cramp knots her calf, or her legs will not keep still until she gets up and walks. Her father had a heart attack at fifty-five, and she is sure this is the same thing starting. At a clinic near the station, the ECG comes back normal. She is told it is stress, and that she should rest. She goes home, lies down, and listens to her heart pound again.
@@ -80,3 +82,12 @@ Yes. Low vitamin B12 can cause pins and needles, numbness and unsteadiness, ofte
 ## Should I take vitamin B12 or nerve tonics on my own?
 
 It is better to have a blood test first. Your doctor needs to know whether B12 is really low and why, and then decides on the treatment. A tonic can delay finding the real cause.
+
+# Sources
+
+- NHS: Iron deficiency anaemia | https://www.nhs.uk/conditions/iron-deficiency-anaemia/
+- NHS: Vitamin B12 or folate deficiency anaemia, symptoms | https://www.nhs.uk/conditions/vitamin-b12-or-folate-deficiency-anaemia/symptoms/
+- MedlinePlus: Anemia | https://medlineplus.gov/ency/article/000560.htm
+- National Heart, Lung, and Blood Institute: Iron-deficiency anemia | https://www.nhlbi.nih.gov/health/anemia/iron-deficiency-anemia
+- American Society of Hematology: Iron-deficiency anemia | https://www.hematology.org/education/patients/anemia/iron-deficiency
+- NHS: Heart palpitations | https://www.nhs.uk/conditions/heart-palpitations/

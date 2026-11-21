@@ -1,3 +1,5 @@
+> থ্যালাসেমিয়ার বাহক বা ট্রেট মানুষ সুস্থ, কোনো চিকিৎসা লাগে না, কিন্তু থ্যালাসেমিয়া মেজর নিয়ে জন্মানো বাচ্চার সারা জীবনের জন্য রক্ত নিতে হবে। একজন বাহক হলে বিয়ের আগে অন্যজনেরও পরীক্ষা করান, আর যেকোনো রিপোর্ট নিয়ে হেমাটোলজিস্টের কাছে যান।
+
 রিপোর্টটা যখন এল, বিয়ের কার্ড তখন ছাপা হয়ে গেছে।
 
 রক্ত পরীক্ষাটা করিয়েছিলেন নেহাত এক দিদির জোরাজুরিতে। শরীরে কোনো অসুবিধা নেই। অসুখের জন্য অফিস কামাই প্রায় কখনও করেনইনি। অথচ ল্যাবের কাগজে লেখা দুটো শব্দ, যা আগে কোনোদিন শোনেননি: থ্যালাসেমিয়া ট্রেট।
@@ -80,3 +82,11 @@
 ## থ্যালাসেমিয়া কি সারে?
 
 কিছু বাচ্চার ক্ষেত্রে বোন ম্যারো ট্রান্সপ্ল্যান্টে সারে, আর সেটা ছোট বয়সে ভাবাই ভালো। বেশিরভাগ মানুষ নিয়মিত রক্ত, আয়রন বের করার ওষুধ আর চেক আপ নিয়ে ভালোভাবেই বাঁচেন।
+
+# তথ্যসূত্র
+
+- Thalassaemia International Federation: Guidelines for the Management of Transfusion Dependent Thalassaemia, 4th edition (2021) | https://thalassaemia.org.cy/wp-content/uploads/2021/06/GUIDELINE-4th-SINGLE-PAGE.pdf
+- NHS: Thalassaemia | https://www.nhs.uk/conditions/thalassaemia/
+- NHS: Thalassaemia, treatment | https://www.nhs.uk/conditions/thalassaemia/treatment/
+- National Heart, Lung, and Blood Institute: Living with thalassemia | https://www.nhlbi.nih.gov/health/thalassemia/living-with
+- MedlinePlus Genetics: Beta thalassemia | https://medlineplus.gov/genetics/condition/beta-thalassemia/

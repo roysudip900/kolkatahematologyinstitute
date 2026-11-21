@@ -1,3 +1,5 @@
+> Anaemia means your blood has too little hemoglobin to carry oxygen, so you tire easily and get breathless on the stairs. It is a sign that something else is wrong, so take the report to a doctor and find out why it fell before trying iron or a tonic.
+
 For two years, she blamed the stairs.
 
 Their flat is on the third floor, with no lift. By the second landing she has to stop and hold the railing. She is thirty-four. She tells herself it is age, or the housework, or the heat. She eats last, after everyone else, and ends the meal with a cup of tea. A neighbour says beetroot. Her mother says pomegranate. Nobody says blood test.
@@ -77,3 +79,11 @@ It is better not to. Iron helps only when a lack of iron is the cause. Taken bli
 ## Is low hemoglobin dangerous?
 
 Mild anaemia is common and can usually be put right. Severe anaemia, left alone, strains the heart, and in pregnancy it can affect both mother and baby.
+
+# Sources
+
+- WHO: Anaemia fact sheet | https://www.who.int/news-room/fact-sheets/detail/anaemia
+- NHS: Iron deficiency anaemia | https://www.nhs.uk/conditions/iron-deficiency-anaemia/
+- National Heart, Lung, and Blood Institute: Iron-deficiency anemia | https://www.nhlbi.nih.gov/health/anemia/iron-deficiency-anemia
+- MedlinePlus: Anemia | https://medlineplus.gov/ency/article/000560.htm
+- NHS: Thalassaemia | https://www.nhs.uk/conditions/thalassaemia/

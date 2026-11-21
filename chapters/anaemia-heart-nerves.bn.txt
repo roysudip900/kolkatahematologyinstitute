@@ -1,3 +1,5 @@
+> হিমোগ্লোবিন কম হলে মনে হতে পারে হার্টের সমস্যা, বুক ধড়ফড় করে, হাঁফ ধরে, আর ভিটামিন বি১২ কম হলে মনে হতে পারে নার্ভের সমস্যা, হাত-পা ঝিনঝিন করে, হাঁটা টলমল করে। ইসিজি নর্মাল এলেও অ্যানিমিয়া বাদ যায় না, তাই হার্ট আর নার্ভের পরীক্ষার সঙ্গে একটা রক্ত পরীক্ষাও চেয়ে নিন।
+
 বাচ্চা হওয়ার তিন মাস পর থেকে তাঁর বুক ধড়ফড় শুরু হল।
 
 বড় ছেলেকে কোলে তুললেই হয়, বাজার থেকে ফিরে সিঁড়ি ভাঙলেও হয়। রাতে অন্ধকারে শুয়ে থাকলে কানের ভিতরে বুকের ধুকপুক শুনতে পান। কোনো কোনো রাতে পায়ের ডিমে টান ধরে, নয়তো পা দুটো এমন অস্থির লাগে যে উঠে একটু না হাঁটলে শান্তি নেই। পঞ্চান্ন বছর বয়সে বাবার হার্ট অ্যাটাক হয়েছিল, তাই তাঁর পাকা ধারণা, সেটাই শুরু হচ্ছে। স্টেশনের কাছের এক ক্লিনিকে ইসিজি করালেন, রিপোর্ট নর্মাল। বলা হল, এ সব টেনশন, বিশ্রাম নিন। বাড়ি ফিরে শুয়ে পড়েন, আর আবার শোনেন বুকের সেই ধুকপুক।
@@ -80,3 +82,12 @@
 ## নিজে থেকে ভিটামিন বি১২ বা নার্ভের টনিক খাওয়া যায়?
 
 আগে রক্ত পরীক্ষা করানোই ভালো। বি১২ সত্যিই কম কিনা আর কেন কম, সেটা ডাক্তারবাবুর জানা দরকার, তারপর তিনি চিকিৎসা ঠিক করবেন। টনিক খেয়ে গেলে আসল কারণ খুঁজে পেতে দেরি হয়ে যেতে পারে।
+
+# তথ্যসূত্র
+
+- NHS: Iron deficiency anaemia | https://www.nhs.uk/conditions/iron-deficiency-anaemia/
+- NHS: Vitamin B12 or folate deficiency anaemia, symptoms | https://www.nhs.uk/conditions/vitamin-b12-or-folate-deficiency-anaemia/symptoms/
+- MedlinePlus: Anemia | https://medlineplus.gov/ency/article/000560.htm
+- National Heart, Lung, and Blood Institute: Iron-deficiency anemia | https://www.nhlbi.nih.gov/health/anemia/iron-deficiency-anemia
+- American Society of Hematology: Iron-deficiency anemia | https://www.hematology.org/education/patients/anemia/iron-deficiency
+- NHS: Heart palpitations | https://www.nhs.uk/conditions/heart-palpitations/
