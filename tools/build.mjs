@@ -51,9 +51,12 @@ const ID = { org: `${SITE}/#org`, author: `${SITE}/#author`, site: `${SITE}/#web
 // Same words as the home page's meta description.
 const SITE_DESC = 'Blood diseases explained in plain words, in Bengali and English, by a clinical hematologist.';
 const AREA = { '@type': 'City', name: 'Kolkata' };
-// Paste profile links here when they exist (Google Business Profile, LinkedIn, YouTube...).
-// They go into the schema as sameAs, which lets search engines and AI systems confirm the author is a real doctor.
-const SAME_AS = [];
+// Profile links go into the schema as sameAs ("this is the same person / organization"),
+// which lets search engines and AI systems confirm the author is a real doctor.
+// SAME_AS: Dr. Roy's own profiles (Google Business Profile, LinkedIn, YouTube...).
+// ORG_SAME_AS: profiles in the institute's own name, once they exist.
+const SAME_AS = ['https://share.google/OLTZr4ebHj8UmXFnB']; // Google Business Profile (Dr. Sudip Roy)
+const ORG_SAME_AS = [];
 
 const STROKE = 'fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"';
 const RIGHT = `<svg viewBox="0 0 16 16" ${STROKE}><path d="M3 8h10M9 4l4 4-4 4"/></svg>`;
@@ -545,7 +548,7 @@ ${ld({
   '@graph': [
     { '@type': 'MedicalOrganization', '@id': ID.org, name: SITE_NAME.en, alternateName: SITE_NAME.bn, url: SITE + '/',
       logo: `${SITE}/assets/logo-mark.png`, description: SITE_DESC, medicalSpecialty: 'Hematologic', areaServed: AREA,
-      founder: { '@id': ID.author }, member: { '@id': ID.author }, ...(SAME_AS.length ? { sameAs: SAME_AS } : {}) },
+      founder: { '@id': ID.author }, member: { '@id': ID.author }, ...(ORG_SAME_AS.length ? { sameAs: ORG_SAME_AS } : {}) },
     { '@type': 'Person', '@id': ID.author, name: AUTHOR.en, alternateName: AUTHOR.bn, honorificSuffix: CRED.en,
       jobTitle: 'Clinical Hematologist', url: `${SITE}/#about`, workLocation: AREA, worksFor: { '@id': ID.org },
       hasOccupation: { '@type': 'Occupation', name: 'Clinical Hematologist', occupationLocation: AREA },
