@@ -539,6 +539,8 @@ const soon = ''; // Chapters with no words yet are not shown at all (Dr. Roy, 20
 let home = index.replace(/(<!-- grid:start[^>]*-->\n)[\s\S]*?(<!-- grid:end -->)/, (m, a, b) => a + grid + b)
   .replace(/(<!-- soon:start[^>]*-->\n)[\s\S]*?(<!-- soon:end -->)/, (m, a, b) => a + soon + b)
   .replace(/\/\*ids:start\*\/[\s\S]*?\/\*ids:end\*\//, `/*ids:start*/${JSON.stringify(chapters.filter((c) => !c.parent && (info[c.id].has.bn || info[c.id].has.en)).map((c) => c.id))}/*ids:end*/`);
+// The author's name in the home page About section links to the same profile as on chapter pages.
+if (SAME_AS.length) home = home.replace(/(<a class="au" href=")[^"]*(")/g, (m, x, y) => x + SAME_AS[0] + y);
 if (!/rel="canonical"/.test(home)) home = home.replace('</title>', `</title>\n<link rel="canonical" href="${SITE}/">`);
 const homeHead = `<!-- site:start (written by tools/build.mjs) -->
 <meta property="og:title" content="${SITE_NAME.en}">
