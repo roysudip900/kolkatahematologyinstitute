@@ -216,6 +216,44 @@ const FIG = {
         body),
     };
   },
+
+  // Thalassemia, the iron medicine: two jars. Blood bags drip iron into both; the daily medicine (a tap) lets it out of
+  // one, so its level stays low; with the tap closed the level of the other keeps rising.
+  'iron-jar'(l) {
+    const t = l === 'bn'
+      ? { a: 'রোজ খাওয়া হলে', b: 'বন্ধ থাকলে', drip: 'রক্তের সঙ্গে আয়রন', tap: 'ওষুধ', iron: 'আয়রন',
+          cap: 'প্রতিবার রক্তের সঙ্গে একটু করে আয়রন শরীরে জমা হয়। রোজের ওষুধ সেটা বের করে দেয়, তাই মাত্রা কম থাকে। ওষুধ বন্ধ থাকলে আয়রন আসতেই থাকে আর মাত্রা বাড়তে থাকে, অথচ বাচ্চা কিছুই টের পায় না। ছবিতে কোনো আসল মাপ নেই।' }
+      : { a: 'taken every day', b: 'stopped', drip: 'iron from each transfusion', tap: 'medicine', iron: 'iron',
+          cap: 'Every transfusion adds a little iron to the body. The daily medicine lets it out, so the level stays low. When the medicine stops, the iron keeps coming and the level rises, though the child feels nothing. The drawing has no real numbers.' };
+    const bag = (x) => `<g transform="translate(${x},30)"><rect x="-13" y="-12" width="26" height="30" rx="7" fill="${C.red}"/><rect x="-7" y="-17" width="14" height="6" rx="2" fill="${C.rose}"/><path d="M0 18v8" stroke="${C.red}" stroke-width="3" stroke-linecap="round"/></g>`;
+    const drops = (x, to, cls) => [0, 1, 2].map((i) => `<circle class="${cls}" cx="${x}" cy="62" r="4" fill="${C.amber}" style="--to:${to}px;animation-delay:${(i * 0.9).toFixed(1)}s"/>`).join('');
+    const jar = (x) => `<path d="M${x - 42} 76v86a14 14 0 0 0 14 14h56a14 14 0 0 0 14-14V76" fill="#fff" stroke="${C.mintLine}" stroke-width="2.5"/>`;
+    const clip = (x, id) => `<clipPath id="${id}"><path d="M${x - 41} 77v85a13 13 0 0 0 13 13h56a13 13 0 0 0 13-13V77z"/></clipPath>`;
+    const A = 95, B = 265;
+    const body =
+      `<defs>${clip(A, `ij-a-${l}`)}${clip(B, `ij-b-${l}`)}</defs>` +
+      T(180, 14, t.drip, { size: 12.5, fill: C.muted, w: 600 }) +
+      bag(A) + bag(B) + drops(A, 92, 'ij-d') + drops(B, 70, 'ij-d') +
+      jar(A) + `<g clip-path="url(#ij-a-${l})"><rect x="${A - 45}" y="150" width="90" height="40" fill="${C.amberBg}"/><rect x="${A - 45}" y="150" width="90" height="4" fill="${C.amber}" opacity=".6"/></g>` +
+      jar(B) + `<g clip-path="url(#ij-b-${l})"><g class="ij-rise"><rect x="${B - 45}" y="150" width="90" height="140" fill="${C.amberBg}"/><rect x="${B - 45}" y="150" width="90" height="4" fill="${C.amber}" opacity=".6"/></g></g>` +
+      T(A, 166, t.iron, { size: 12.5, fill: '#9A5A0C', w: 600 }) + T(B, 166, t.iron, { size: 12.5, fill: '#9A5A0C', w: 600 }) +
+      `<path d="M${A + 42} 160h14v10" fill="none" stroke="${C.teal2}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>` +
+      [0, 1].map((i) => `<circle class="ij-out" cx="${A + 56}" cy="176" r="3.5" fill="${C.amber}" style="animation-delay:${(i * 0.9).toFixed(1)}s"/>`).join('') +
+      T(A + 60, 200, t.tap, { size: 12.5, fill: C.teal2, w: 600 }) +
+      `<path d="M${B + 42} 160h14v10" fill="none" stroke="${C.muted}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity=".55"/>` +
+      `<path d="M${B + 50} 179l8 8M${B + 58} 179l-8 8" stroke="${C.red}" stroke-width="2.4" stroke-linecap="round"/>` +
+      T(B + 60, 202, t.tap, { size: 12.5, fill: C.muted, w: 600 }) +
+      T(A, 222, t.a, { size: 13.5, fill: C.teal2, w: 700 }) + T(B, 222, t.b, { size: 13.5, fill: C.red, w: 700 });
+    return {
+      cap: t.cap,
+      svg: svg('ij', 360, 232, t.cap,
+        '.ij-d{animation:ijdrop 2.7s ease-in infinite;opacity:0}@keyframes ijdrop{0%{transform:translateY(0);opacity:0}10%{opacity:1}80%{opacity:1}100%{transform:translateY(var(--to));opacity:0}}' +
+        '.ij-out{animation:ijout 1.8s ease-in infinite;opacity:0}@keyframes ijout{0%{transform:translateY(0);opacity:0}15%{opacity:1}100%{transform:translateY(14px);opacity:0}}' +
+        '.ij-rise{animation:ijrise 10s ease-in-out infinite}@keyframes ijrise{0%{transform:translateY(0)}85%,100%{transform:translateY(-62px)}}' +
+        '@media (prefers-reduced-motion:reduce){.ij-d,.ij-out{animation:none;opacity:0}.ij-rise{animation:none;transform:translateY(-62px)}}',
+        body),
+    };
+  },
 };
 
 // Short videos made by Dr. Roy, kept in assets/video/<name>.mp4 with a still picture <name>.jpg.
@@ -644,6 +682,38 @@ const TRY = {
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="tr-tabs">${tabs}</div>` +
       `<div class="tr-out" aria-live="polite"><p class="tr-pick">${esc(t.pick)}</p>${panels}</div>`;
     return { cap: t.cap, cls: 'tr cu', html };
+  },
+
+  // Thalassemia, the iron medicine: the common reasons a dose is missed (TIF's own table of barriers); tap one to see
+  // what helps and what to ask the doctor.
+  'what-gets-in-the-way'(l) {
+    const t = l === 'bn'
+      ? { h: 'আটকায় কোথায়?', sub: 'আপনার বাড়ির সঙ্গে যেটা মেলে, তাতে চাপ দিন।', pick: 'উপরে একটা বেছে নিন।', rows: ['কী কাজে দেয়', 'ডাক্তারবাবুকে জিজ্ঞেস করুন'],
+          p: [['ভুলে যাওয়া', 'রোজ একই সময়, এমন কিছুর সঙ্গে জুড়ে যা রোজ হয়ই, যেমন রাতের খাওয়া বা দাঁত মাজা। ফোনে একটা অ্যালার্ম, আর একটা চার্ট যেখানে প্রতিদিন টিক দেওয়া হয়।', 'আমাদের দিনের সঙ্গে মানায় এমন সময়ে কি ওষুধটা দেওয়া যায়?'],
+            ['বিস্বাদ বা পেটে গোলমাল', 'বন্ধ না করে ডাক্তারবাবুকে বলুন। আয়রন বের করার ওষুধ একটাই নয়, আর ডাক্তারবাবু প্রায়ই ওষুধটা বা দেওয়ার ধরনটা বদলে দিতে পারেন।', 'আমার বাচ্চার পক্ষে খাওয়া সহজ, এমন কোনো ওষুধ আছে কি?'],
+            ['বন্ধুরা দেখে ফেলবে', 'বাড়িতে খাওয়ার মতো একটা সময়, স্কুলে যাওয়ার আগে বা ফিরে। কিশোর-কিশোরী ধাপে ধাপে দায়িত্ব নিলে, আর বাবা-মা তখনও খেয়াল রাখলে, সবচেয়ে ভালো চলে।', 'বন্ধুরা আশেপাশে থাকে না, এমন সময়ে কি খাওয়া যায়?'],
+            ['ছোট বাচ্চা খেতে চায় না', 'প্রতি সন্ধেয় একই মুহূর্ত, প্রশংসা, আর স্টিকারের একটা চার্ট, সপ্তাহ শেষে ছোট্ট পুরস্কার।', 'তবুও রোজ রাতে লড়াই চললে, অন্যভাবে কি দেওয়া যায়?'],
+            ['ভালোই তো আছে, কী দরকার', 'আয়রন কোনো জানান দেয় না। প্রতি বছরের চেক-আপে দেখা যায় আয়রন বাড়ছে না কমছে, তাতেই বোঝা যায় ওষুধ কাজ করছে।', 'আয়রন বাড়ছে, না কমছে?']],
+          cap: 'যেখানেই আটকাক, হেমাটোলজিস্টকে বলুন। প্রায়ই পরিকল্পনাটা আপনার পরিবারের সুবিধামতো বদলানো যায়।' }
+      : { h: 'What gets in the way?', sub: 'Tap the one that sounds like your home.', pick: 'Choose one above.', rows: ['What helps', 'Ask your doctor'],
+          p: [['Forgetting', 'The same time every day, tied to something that already happens, like dinner or brushing teeth. An alarm on the phone, and a chart where each day is ticked.', 'Can the medicine fit a time that suits our day?'],
+            ['The taste, or an upset stomach', 'Tell the doctor instead of stopping. There is more than one iron medicine, and the doctor can often change it, or the way it is given.', 'Is there an iron medicine my child finds easier to take?'],
+            ['Friends might see', 'A time at home, before school or after it. A teenager who takes charge step by step, with a parent still checking, does best.', 'Can it be taken at a time when friends are not around?'],
+            ['A small child refuses', 'The same moment every evening, praise, and a sticker chart with a small reward at the end of the week.', 'If it is still a fight every night, is there another way to give it?'],
+            ['Feels fine, so why bother', 'Iron gives no warning. The yearly check-ups show whether it is going up or coming down, and that is how you see the medicine working.', 'Is the iron going up or coming down?']],
+          cap: 'Whatever gets in the way, tell your hematologist. The plan can often be changed to fit your family.' };
+    const icon = [
+      `<circle cx="26" cy="28" r="14" fill="#fff" stroke="${C.teal2}" stroke-width="2.4"/><path d="M26 20v8l6 4" fill="none" stroke="${C.teal2}" stroke-width="2.4" stroke-linecap="round"/><path d="M13 14l6-5M39 14l-6-5" stroke="${C.teal2}" stroke-width="2.4" stroke-linecap="round"/>`,
+      `<circle cx="26" cy="26" r="15" fill="${C.amberBg}" stroke="${C.amber}" stroke-width="2"/><circle cx="21" cy="23" r="1.6" fill="${C.ink}"/><circle cx="31" cy="23" r="1.6" fill="${C.ink}"/><path d="M19 33c2-3 4 1 7-2s5 1 7-1" fill="none" stroke="${C.ink}" stroke-width="1.8" stroke-linecap="round"/>`,
+      `${person(18, 32, .8)}${person(34, 32, .8)}<circle cx="42" cy="12" r="6" fill="#fff" stroke="${C.muted}" stroke-width="1.6"/><circle cx="42" cy="12" r="2" fill="${C.muted}"/>`,
+      `${person(18, 36, .72)}<ellipse cx="37" cy="16" rx="6" ry="4.5" fill="#fff" stroke="${C.teal2}" stroke-width="2"/><path d="M37 20.5v16" stroke="${C.teal2}" stroke-width="2.4" stroke-linecap="round"/><path d="M40 34l7 7M47 34l-7 7" stroke="${C.red}" stroke-width="2.4" stroke-linecap="round"/>`,
+      `<circle cx="26" cy="26" r="15" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><circle cx="21" cy="23" r="1.6" fill="${C.ink}"/><circle cx="31" cy="23" r="1.6" fill="${C.ink}"/><path d="M20 30c3 3 9 3 12 0" fill="none" stroke="${C.ink}" stroke-width="1.8" stroke-linecap="round"/>`,
+    ];
+    const tabs = t.p.map((x, i) => `<button type="button" class="tr-b" aria-pressed="false" data-i="${i}"><svg viewBox="0 0 52 52" aria-hidden="true">${icon[i]}</svg><span>${esc(x[0])}</span></button>`).join('');
+    const panels = t.p.map((x, i) => `<div class="tr-p" data-i="${i}" hidden><dl><dt>${esc(t.rows[0])}</dt><dd>${esc(x[1])}</dd><dt>${esc(t.rows[1])}</dt><dd>${esc(x[2])}</dd></dl></div>`).join('');
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="tr-tabs">${tabs}</div>` +
+      `<div class="tr-out" aria-live="polite"><p class="tr-pick">${esc(t.pick)}</p>${panels}</div>`;
+    return { cap: t.cap, cls: 'tr wg', html };
   },
 };
 
