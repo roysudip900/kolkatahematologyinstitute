@@ -350,6 +350,7 @@ ${footer}
 
 <script>
 (function(){
+document.documentElement.classList.add('js');
 /* Remember the language this reader chose, so the home page opens in it next time. */
 try{localStorage.setItem('khi-lang','${l}');}catch(e){}
 document.querySelectorAll('.lang a').forEach(function(a){a.addEventListener('click',function(){try{localStorage.setItem('khi-lang',a.getAttribute('data-l'));}catch(e){}});});
@@ -511,7 +512,7 @@ for (const c of chapters) {
     const parts = 1 + kids(c.id).filter((x) => info[x.id].has[l]).length;
     const meta = parts > 1 ? (l === 'bn' ? `${bnNum(parts)}টি পর্ব` : `${parts} parts`)
       : has[l] ? readTime(text[l], l) : readTime(text[other], other);
-    grid += `<a class="card" lang="${l}" href="${url(c.id, l)}">${ic(c.art, 'deco')}<span class="top">${ic(c.art)}<h3>${esc(c[l])}</h3></span>` +
+    grid += `<a class="card" lang="${l}" href="${url(c.id, l)}">${ic(c.art, 'deco')}<span class="top">${ic(c.art)}<h2>${esc(c[l])}</h2></span>` +
       `<span class="hook">${hook}</span><span class="meta"><span>${meta}</span><span class="go">${RIGHT}</span></span></a>\n`;
   }
 }
