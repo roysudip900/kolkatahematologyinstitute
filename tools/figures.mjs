@@ -293,6 +293,39 @@ const FIG = {
         body),
     };
   },
+  // Low platelets: a cut in a blood vessel wall. With enough platelets (purple) they gather and seal the gap;
+  // with too few, only two arrive and the gap stays open longer. No blood is drawn leaking out.
+  'platelet-plug'(l) {
+    const P = '#7A5AD1';
+    const t = l === 'bn'
+      ? { a: 'প্লেটলেট যথেষ্ট', b: 'প্লেটলেট কম', cut: 'কাটা জায়গা', sealed: 'মুখ বন্ধ', open: 'মুখ খোলা থাকে বেশিক্ষণ',
+          cap: 'কোথাও কাটলে প্লেটলেট (বেগুনি) ছুটে গিয়ে একসঙ্গে জুড়ে ফাঁকটা বন্ধ করে। প্লেটলেট কম থাকলে কম পৌঁছায়, তাই রক্ত থামতে বেশি সময় লাগে। ছবিতে কোনো আসল মাপ নেই।' }
+      : { a: 'Enough platelets', b: 'Too few', cut: 'a cut', sealed: 'sealed', open: 'stays open longer',
+          cap: 'At a cut, platelets (purple) gather and stick together to seal the gap. With too few, fewer arrive, so bleeding takes longer to stop. The drawing has no real numbers.' };
+    const gx = [170, 179, 188, 197, 206];
+    const lane = (y, n, cls, lab, done) => {
+      let g = T(40, y - 16, lab, { a: 'start', size: 13.5, fill: n > 2 ? C.teal2 : C.red, w: 700 }) +
+        `<rect x="40" y="${y}" width="280" height="46" fill="${C.vessel}"/>` +
+        `<path d="M40 ${y}H164M212 ${y}H320M40 ${y + 46}H320" stroke="${C.rose}" stroke-width="5" stroke-linecap="round"/>` +
+        `<path d="M164 ${y}l3 -8M212 ${y}l-3 -8" stroke="${C.rose}" stroke-width="4" stroke-linecap="round"/>` +
+        `<rect x="166" y="${y - 4}" width="44" height="8" rx="4" fill="none" stroke="${C.muted}" stroke-width="1.2" stroke-dasharray="3 3"/>`;
+      for (let i = 0; i < 6; i++) g += `<g transform="translate(${70 + i * 42},${y + 31})">${cell(7, false)}</g>`;
+      for (let i = 0; i < n; i++) {
+        const sx = 60 + i * 22, sy = y + 16;
+        g += `<ellipse class="${cls}" cx="${gx[i]}" cy="${y}" rx="5.6" ry="3.8" fill="${P}" style="--dx:${sx - gx[i]}px;--dy:${sy - y}px;animation-delay:${(i * 0.45).toFixed(2)}s"/>`;
+      }
+      return g + T(188, y - 16, done, { size: 12.5, fill: n > 2 ? C.teal2 : '#9A5A0C', w: 600 }).replace('<text', `<text class="${cls}-t"`);
+    };
+    const body = lane(48, 5, 'pp-a', t.a, t.sealed) + lane(150, 2, 'pp-b', t.b, t.open);
+    return {
+      cap: t.cap,
+      svg: svg('pp', 360, 214, t.cap,
+        '.pp-a,.pp-b{animation:ppgo 8s ease-in-out infinite;opacity:0}@keyframes ppgo{0%{transform:translate(var(--dx),var(--dy));opacity:0}8%{opacity:1}55%,92%{transform:translate(0,0);opacity:1}100%{transform:translate(0,0);opacity:0}}' +
+        '.pp-a-t,.pp-b-t{animation:pptx 8s ease-in-out infinite;opacity:0}@keyframes pptx{0%,62%{opacity:0}70%,92%{opacity:1}100%{opacity:0}}' +
+        '@media (prefers-reduced-motion:reduce){.pp-a,.pp-b{animation:none;opacity:1;transform:none}.pp-a-t,.pp-b-t{animation:none;opacity:1}}',
+        body),
+    };
+  },
 };
 
 // Short videos made by Dr. Roy, kept in assets/video/<name>.mp4 with a still picture <name>.jpg.
@@ -780,6 +813,39 @@ const TRY = {
         `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
         `<span class="fc back"><span class="k">${esc(t.sign)}</span><span>${esc(back)}</span></span></button>`).join('') + '</div>';
     return { cap: t.cap, cls: 'flipset', html };
+  },
+  // Low platelets: tick the signs noticed, to take to the doctor; any red-flag sign shows "go to a hospital today".
+  'platelet-signs'(l) {
+    const t = l === 'bn'
+      ? { h: 'ডাক্তারবাবুকে যা জানাবেন', sub: 'যেগুলো চোখে পড়েছে, সেগুলোয় চাপ দিন।',
+          g: [['চামড়ায়', ['ছোট ছোট লাল বিন্দু, প্রায়ই পায়ের সামনে', 'বেগুনি বা বাদামি ছোপ', 'অল্পেই কালশিটে']],
+            ['রক্ত পড়া', ['নাক দিয়ে রক্ত', 'মাড়ি থেকে রক্ত', 'কাটা জায়গা থেকে অনেকক্ষণ রক্ত পড়ে', 'মাসিক অনেক বেশি']],
+            ['ডাক্তারবাবু যা জিজ্ঞেস করবেন', ['গত কয়েক সপ্তাহে জ্বর', 'নতুন কোনো ওষুধ বা ব্যথার ওষুধ', 'প্রায় রোজ মদ']]],
+          red: ['আজ এর কোনোটা হচ্ছে?', ['চেপে ধরলেও রক্ত পড়া থামছে না', 'বমি, প্রস্রাব বা পায়খানায় রক্ত, বা কালো পায়খানা', 'হঠাৎ খুব মাথাব্যথা, ঝিমুনি বা সব গুলিয়ে যাওয়া', 'জ্বরের মধ্যে বা পরে পেটে খুব ব্যথা বা বারবার বমি']],
+          none: 'এখনও কিছু বাছেননি।',
+          many: 'আপনি {n}টা বেছেছেন। এই তালিকা দেখে প্লেটলেট কেন কম, বলা যায় না। রিপোর্টের সঙ্গে তালিকাটা ডাক্তারবাবুকে দেখান।',
+          warn: 'আজই হাসপাতালে যান। অ্যাপয়েন্টমেন্টের জন্য অপেক্ষা করবেন না।',
+          share: 'তালিকাটা পাঠান (হোয়াটসঅ্যাপ বা অন্য কোথাও)', copied: 'তালিকা কপি হয়েছে',
+          head: 'যা যা চোখে পড়েছে:', ask: 'ডাক্তারবাবুকে জিজ্ঞেস করব: প্লেটলেট কেন কম, আর আবার কবে পরীক্ষা করাতে হবে?',
+          cap: 'তালিকাটা ডাক্তারবাবুর কাছে নিয়ে যান। আপনি নিজে না পাঠালে কিছুই কোথাও জমা থাকে না বা যায় না।' }
+      : { h: 'Signs to tell the doctor about', sub: 'Tap the ones you have noticed.',
+          g: [['On the skin', ['Tiny red dots, often on the shins', 'Purple or brown patches', 'Bruises that come easily']],
+            ['Bleeding', ['Nosebleeds', 'Bleeding gums', 'A cut that keeps bleeding', 'Periods much heavier than usual']],
+            ['The doctor will also ask', ['A fever in the last few weeks', 'A new medicine or painkiller', 'Alcohol most days']]],
+          red: ['Any of these today?', ['Bleeding that will not stop with pressure', 'Blood in vomit, urine or stool, or black stool', 'A sudden severe headache, drowsiness or confusion', 'Severe stomach pain or vomiting again and again, during or after a fever']],
+          none: 'Nothing ticked yet.',
+          many: 'You have ticked {n}. A list like this cannot tell you why the count is low. Show it to your doctor with the report.',
+          warn: 'Go to a hospital today. Do not wait for an appointment.',
+          share: 'Send this list (WhatsApp or anywhere)', copied: 'List copied',
+          head: 'Things I have noticed:', ask: 'I want to ask my doctor: why is my platelet count low, and when should it be checked again?',
+          cap: 'Take this list to your doctor. Nothing you tap is saved or sent anywhere unless you send it.' };
+    const group = (k, items, red) => `<div class="chk-g${red ? ' red' : ''}"><p class="k">${esc(k)}</p><div class="chk-l">` +
+      items.map((x) => btn(`chk-i${red ? ' red' : ''}`, x, ' aria-pressed="false"')).join('') + '</div></div>';
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p>` +
+      t.g.map(([k, items]) => group(k, items, false)).join('') + group(t.red[0], t.red[1], true) +
+      `<div class="chk-out"><p class="chk-warn" hidden>${esc(t.warn)}</p><p class="chk-msg" aria-live="polite">${esc(t.none)}</p>` +
+      `${btn('chk-share', t.share, ' hidden')}</div>`;
+    return { cap: t.cap, cls: 'chk', data: { none: t.none, many: t.many, head: t.head, ask: t.ask, copied: t.copied }, html };
   },
 };
 

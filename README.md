@@ -15,7 +15,7 @@ Each chapter has two plain text files in the `chapters` folder, one per language
 | --- | --- | --- |
 | Anaemia | `anaemia.bn.txt` | `anaemia.en.txt` |
 | Thalassemia | `thalassemia.bn.txt` | `thalassemia.en.txt` |
-| ITP | `itp.bn.txt` | `itp.en.txt` |
+| Low platelets and ITP | `low-platelets.bn.txt` | `low-platelets.en.txt` |
 | CML | `cml.bn.txt` | `cml.en.txt` |
 | Multiple myeloma | `myeloma.bn.txt` | `myeloma.en.txt` |
 | The bone marrow test | `marrow.bn.txt` | `marrow.en.txt` |
@@ -75,6 +75,8 @@ A line on its own such as `[figure: inheritance]` puts a moving illustration, wi
 | `transfusion-timing` | Hemoglobin over time: with transfusions on time it stays in the band the doctor wants; when they keep getting late it falls into the zone where the marrow overworks | Blood transfusion |
 | `quiet-iron` | Iron in the heart over the years, no numbers: kept low with the daily medicine and yearly check-ups (a small rise caught at a check-up), climbing while the child still feels fine when doses are skipped | Why regular care matters |
 | `iron-jar` | Two jars: blood bags drip iron into both; the daily medicine (a tap) lets it out of one so its level stays low, while with the tap closed the other keeps rising | The iron medicine |
+| `growing-up` | A child walks a road past school, play, work and marriage, each lighting up in turn, while a red line of regular care keeps pace underneath | Thalassemia: everyday life |
+| `platelet-plug` | A cut in a vessel wall: with enough platelets they gather and seal it; with too few, two arrive and the gap stays open longer | Low platelets and ITP |
 
 | `heart-pace` | Touch: a slider lowers the hemoglobin; red cells thin out and the heart beats faster, with one line of plain words at each step | Anaemia: heart and nerves |
 | `signs-check` | Touch: the reader taps the signs they have noticed, gets sent to a blood count and the doctor, and can send the list on WhatsApp. A danger sign shows the hospital line. Nothing is saved | Anaemia: heart and nerves |
@@ -86,6 +88,8 @@ A line on its own such as `[figure: inheritance]` puts a moving illustration, wi
 | `keep-the-date` | Touch: the reader makes the father's choices from the story (exams, then a wedding: keep the transfusion date or push it back); the factory inside the bone works harder and the blood level falls with each delay, and keeping a date lets it rest again | Blood transfusion |
 | `checkup-day` | Touch: the five stops of a check-up day (heart scan, liver, height and growth, hormone tests, iron level); tapping one shows what it looks for and why it matters when the child feels fine | Why regular care matters |
 | `what-gets-in-the-way` | Touch: five reasons a dose gets missed (forgetting, taste or stomach, friends seeing, a small child refusing, feels fine); tapping one shows what helps and what to ask the doctor | The iron medicine |
+| `myth-or-fact` | Touch: four flip cards of things families are told (no cricket, no fish, it spreads, no children), each turned over to show what is true | Thalassemia: everyday life |
+| `platelet-signs` | Touch: tick the skin and bleeding signs noticed, plus what the doctor will ask; red-flag signs show "go to a hospital today"; the list can be sent to the doctor | Low platelets and ITP |
 
 The ones marked "Touch" respond to the reader's finger. Each one plays a short demonstration once when the reader reaches it, and stays still on phones set to reduce motion.
 
