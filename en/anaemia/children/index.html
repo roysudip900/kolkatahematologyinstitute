@@ -359,6 +359,17 @@ html[data-lang="bn"] .hero h1 .hl{padding-bottom:.2em}
 .ask li{padding-left:2em}
 .ask li::before{left:0;top:.32em;width:1.05em;height:1.05em;border-radius:6px;background:var(--surface);border:2px solid var(--teal-2)}
 .key{background:var(--key);border:1px solid var(--key-line)}
+/* "In short" answer above the story ("> " lines) and the sources list at the end ("# Sources") */
+.insum{margin-top:20px;padding:15px 18px 16px;border-radius:20px;background:var(--mint);border:1px solid var(--mint-line)}
+.insum .k{display:block;font-size:.8rem;font-weight:700;color:var(--teal-2)}
+.insum p{margin:4px 0 0;font-size:1.06rem;line-height:1.6;font-weight:500;color:var(--ink)}
+:lang(bn) .insum p{line-height:1.8}
+.srcs{margin-top:44px;padding-top:6px;border-top:1px solid var(--line)}
+.prose .srcs h2{font-size:1.15rem;margin-top:18px;color:var(--muted)}
+.prose .srcs h2::before{display:none}
+.prose .srcs li{font-size:.97rem;line-height:1.55;margin-top:9px}
+.srcs a{color:var(--teal-2);text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
+.srcs .host{color:var(--muted);font-size:.84rem;white-space:nowrap}
 .faq details{border-top:1px solid var(--line)}
 .faq h2 + details{margin-top:20px}
 .faq details:last-child{border-bottom:1px solid var(--line)}
