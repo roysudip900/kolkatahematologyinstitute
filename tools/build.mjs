@@ -147,7 +147,10 @@ function chapterBody(txt) {
   if (opening.length) {
     const p0 = opening[0].t === 'p' ? opening[0].lines.join(' ') : '';
     const cls = p0 && p0.length <= 110 && opening.length > 1 ? 'hookline' : 'lede';
-    out += `<div class="story">${html(opening, cls)}</div>`;
+    // Dr. Roy, 2026-11-22, on legal's flag (NMC notice 2026, clause 8.1(v)): the families in the stories are
+    // typical examples, never real patients, and every chapter page says so once, under the opening story.
+    const note = LANG === 'bn' ? 'এই গল্পের মানুষেরা চেনা ধরনের উদাহরণ, কোনো আসল রোগী নন।' : 'The people in these stories are typical examples, not real patients.';
+    out += `<div class="story">${html(opening, cls)}<p class="story-note">${note}</p></div>`;
     if (sections.length) out += '<div class="sep" aria-hidden="true"><i></i><i></i><i></i></div>';
   }
   const faq = [], src = [];
