@@ -24,11 +24,11 @@ There are three ways it happens. The bone marrow, where blood is made, makes too
 
 The common reasons a doctor thinks of first:
 
-- A fever from an infection. Viral and bacterial infections can lower the count for a while. In Bengal, dengue is the one everyone thinks of in the monsoon, and it has its own part.
-- ITP. The body's own defence system destroys platelets by mistake. In children it often comes after a viral illness.
+- A fever from an infection. Viral and bacterial infections can lower the count for a while. In Bengal, dengue is the one everyone thinks of in the monsoon, and it will have its own part.
+- ITP. The body's own defence system destroys platelets by mistake. In children it sometimes follows a viral illness.
 - Medicines. Some medicines lower the count, or set off a reaction that destroys platelets.
-- Alcohol, and a large spleen, as in some liver diseases.
-- Late pregnancy. A mild drop near delivery is common and usually needs no treatment.
+- Alcohol, and a large spleen.
+- Late pregnancy. Some women have a mild drop near delivery, and it usually needs no treatment.
 
 Less often, the cause is in the bone marrow itself, as in aplastic anaemia, leukaemia or lymphoma. So a low count always needs a doctor's look, even when you feel well.
 
@@ -54,7 +54,7 @@ Usually the count is repeated, and a drop of blood is looked at under the micros
 
 # ITP, in a few lines
 
-In ITP the defence system attacks the body's own platelets. In children it often goes away by itself within a few weeks or months. In adults it more often lasts. Many people with mild ITP need no treatment, only regular checks. Others need medicines that calm the defence system or help the body make more platelets, and sometimes an operation to remove the spleen. The doctor decides, and ITP has its own part.
+In ITP the defence system attacks the body's own platelets. In children it often goes away by itself within a few weeks or months. In adults it more often lasts. Many people with mild ITP need no treatment, only regular checks. Others need medicines that calm the defence system or help the body make more platelets, and sometimes an operation to remove the spleen. The doctor decides, and ITP will have its own part.
 
 # While the count is low
 
