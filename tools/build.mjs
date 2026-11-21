@@ -44,6 +44,11 @@ const AUTHOR = { bn: 'ডাঃ সুদীপ রায়', en: 'Dr. Sudip Ro
 const CRED = { bn: 'এমবিবিএস, এমডি, ডিএম (ক্লিনিক্যাল হেমাটোলজি)', en: 'MBBS, MD, DM (Clinical Hematology)' };
 const SITE_NAME = { bn: 'কলকাতা হেমাটোলজি ইনস্টিটিউট', en: 'Kolkata Hematology Institute' };
 const LANGS = ['bn', 'en'];
+// One identity for the site, the author and the publisher, so search engines and AI systems
+// can tie every page to the same person. The home page carries the full records; chapter pages point to them by @id.
+// There is no physical institute yet (Dr. Roy, 2026-11-21): the publisher is an Organization, not a clinic.
+const ID = { org: `${SITE}/#org`, author: `${SITE}/#author`, site: `${SITE}/#website` };
+const SITE_DESC = 'Patient education on blood diseases in plain Bengali and English, written by a clinical hematologist. For learning only; it does not replace seeing a doctor.';
 
 const STROKE = 'fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"';
 const RIGHT = `<svg viewBox="0 0 16 16" ${STROKE}><path d="M3 8h10M9 4l4 4-4 4"/></svg>`;
@@ -283,8 +288,10 @@ for (const c of chapters) {
       schema = ld({
         '@context': 'https://schema.org', '@type': 'MedicalWebPage', name: title, description: desc, inLanguage: l,
         url: canonical, dateModified: date, about: { '@type': 'MedicalCondition', name: c.en.split(':')[0] },
-        author: { '@type': 'Person', name: AUTHOR.en, jobTitle: 'Clinical Hematologist', honorificSuffix: CRED.en },
-        publisher: { '@type': 'MedicalOrganization', name: SITE_NAME.en, url: SITE + '/' },
+        audience: { '@type': 'MedicalAudience', audienceType: 'Patient' },
+        author: { '@type': 'Person', '@id': ID.author, name: AUTHOR.en, jobTitle: 'Clinical Hematologist', honorificSuffix: CRED.en },
+        publisher: { '@type': 'Organization', '@id': ID.org, name: SITE_NAME.en, url: SITE + '/' },
+        isPartOf: { '@id': ID.site },
         ...(root ? { isPartOf: { '@type': 'MedicalWebPage', name: root[l], url: SITE + url(root.id, l) } } : {}),
       });
       if (b.faq.length) schema += '\n' + ld({
@@ -322,6 +329,7 @@ ${desc ? `<meta property="og:description" content="${esc(desc)}">` : ''}
 <meta property="og:type" content="article">
 <meta property="og:url" content="${canonical}">
 <meta property="og:image" content="${SITE}/assets/logo-mark.png">
+<meta name="twitter:card" content="summary">
 ${fonts}
 ${style}
 ${schema}
@@ -521,17 +529,55 @@ let home = index.replace(/(<!-- grid:start[^>]*-->\n)[\s\S]*?(<!-- grid:end -->)
   .replace(/(<!-- soon:start[^>]*-->\n)[\s\S]*?(<!-- soon:end -->)/, (m, a, b) => a + soon + b)
   .replace(/\/\*ids:start\*\/[\s\S]*?\/\*ids:end\*\//, `/*ids:start*/${JSON.stringify(chapters.filter((c) => !c.parent && (info[c.id].has.bn || info[c.id].has.en)).map((c) => c.id))}/*ids:end*/`);
 if (!/rel="canonical"/.test(home)) home = home.replace('</title>', `</title>\n<link rel="canonical" href="${SITE}/">`);
+const homeHead = `<!-- site:start (written by tools/build.mjs) -->
+<meta property="og:title" content="${SITE_NAME.en}">
+<meta property="og:description" content="${esc(SITE_DESC)}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="${SITE}/">
+<meta name="twitter:card" content="summary">
+${ld({
+  '@context': 'https://schema.org',
+  '@graph': [
+    { '@type': 'Organization', '@id': ID.org, name: SITE_NAME.en, alternateName: SITE_NAME.bn, url: SITE + '/',
+      logo: `${SITE}/assets/logo-mark.png`, description: SITE_DESC, founder: { '@id': ID.author } },
+    { '@type': 'Person', '@id': ID.author, name: AUTHOR.en, alternateName: AUTHOR.bn, honorificSuffix: CRED.en,
+      jobTitle: 'Clinical Hematologist', url: `${SITE}/#about`, knowsAbout: ['Hematology', 'Anaemia', 'Thalassemia'] },
+    { '@type': 'WebSite', '@id': ID.site, url: SITE + '/', name: SITE_NAME.en, alternateName: SITE_NAME.bn,
+      description: SITE_DESC, inLanguage: LANGS, publisher: { '@id': ID.org } },
+  ],
+})}
+<!-- site:end -->`;
+home = /<!-- site:start[\s\S]*?<!-- site:end -->/.test(home)
+  ? home.replace(/<!-- site:start[\s\S]*?<!-- site:end -->/, () => homeHead)
+  : home.replace('</head>', () => homeHead + '\n</head>');
 writeFileSync(join(ROOT, 'index.html'), home);
 
 // sitemap.xml: the home page plus every chapter page that has words in it.
 const today = new Date().toISOString().slice(0, 10);
 const sm = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url><loc>${SITE}/</loc></url>
+  <url><loc>${SITE}/</loc>${pages.length ? `<lastmod>${pages.map((p) => p.lastmod).sort().pop()}</lastmod>` : ''}</url>
 ${pages.map((p) => `  <url><loc>${p.loc}</loc><lastmod>${p.lastmod}</lastmod>${p.alts.length > 1 ? p.alts.map(([x, h]) => `<xhtml:link rel="alternate" hreflang="${x}" href="${h}"/>`).join('') : ''}</url>`).join('\n')}
 </urlset>
 `;
 writeFileSync(join(ROOT, 'sitemap.xml'), sm);
+// llms.txt: a plain map of the site for AI systems (llmstxt.org), English first, then Bengali.
+const liveIn = (l) => (c) => info[c.id].has[l];
+const llmsList = (l) => chapters.filter((c) => !c.parent && liveIn(l)(c)).map((c) =>
+  [`- [${c[l]}](${SITE + url(c.id, l)})${c[`desc_${l}`] ? `: ${c[`desc_${l}`].trim()}` : ''}`,
+    ...kids(c.id).filter(liveIn(l)).map((k) => `  - [${partTitle(k, l)}](${SITE + url(k.id, l)})${k[`desc_${l}`] ? `: ${k[`desc_${l}`].trim()}` : ''}`)].join('\n')).join('\n');
+writeFileSync(join(ROOT, 'llms.txt'), `# ${SITE_NAME.en} (${SITE_NAME.bn})
+
+> ${SITE_DESC}
+
+Author: ${AUTHOR.en}, ${CRED.en}. Every chapter exists in Bengali and in English.
+
+## Chapters (English)
+${llmsList('en')}
+
+## অধ্যায় (বাংলা)
+${llmsList('bn')}
+`);
 writeFileSync(join(ROOT, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`);
 
 console.log(`built ${2 * chapters.filter((c) => info[c.id].has.bn || info[c.id].has.en).length} chapter pages, ${pages.length} in the sitemap (${today})`);
