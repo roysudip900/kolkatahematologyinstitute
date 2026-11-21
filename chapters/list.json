@@ -79,10 +79,10 @@
   "parent": "thalassemia",
   "bn": "থ্যালাসেমিয়া: আয়রন বের করার ওষুধ (চিলেশন)",
   "en": "Thalassemia: the iron medicine (chelation)",
-  "desc_bn": "",
-  "desc_en": "",
-  "card_bn": "",
-  "card_en": "",
+  "desc_bn": "বাচ্চা ভালো আছে, তবু রোজ আয়রন বের করার ওষুধ কেন? কিশোর-কিশোরীরা কেন ছেড়ে দেয়, রোজ চালিয়ে যেতে কী কাজে দেয়, আর জ্বর হলে কেন সেদিনই ডাক্তার।",
+  "desc_en": "Your child feels fine, so why the iron medicine every day? Why teenagers stop it, what helps a family keep it going, and why fever needs a doctor the same day.",
+  "card_bn": "ভালোই তো আছে, তবু আয়রনের ওষুধ কেন? ওষুধ ছেড়ে দিয়েছে কিশোর ছেলেমেয়ে? বাচ্চা খেতেই চায় না?",
+  "card_en": "Feels fine, so why the iron medicine? A teenager who stopped it? A child who won't swallow it?",
   "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FFF3D6\"/><circle cx=\"26\" cy=\"26\" r=\"15\" fill=\"#D93A4A\"/><circle cx=\"26\" cy=\"26\" r=\"10\" fill=\"#FFF3D6\"/><circle cx=\"26\" cy=\"26\" r=\"4.5\" fill=\"#D93A4A\"/>"
  },
  {
