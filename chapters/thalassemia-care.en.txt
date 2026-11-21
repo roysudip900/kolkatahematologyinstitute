@@ -30,9 +30,9 @@ As the child grows, the doctor keeps checking the heart and the bones. If your t
 
 # Food
 
-A child on regular transfusions gets far more iron from the blood than from any food. Fish, eggs, meat, dal and rice can stay on the plate, and a child who eats well grows better. If your child needs blood only now and then, the advice on food can be different, so ask the doctor.
+A child on regular transfusions gets far more iron from the blood than from any food. Fish, eggs, meat, dal and rice can stay on the plate, and a child who eats well grows better. If your child needs blood only now and then, or often gets it only after the hemoglobin has fallen very low, the advice on food can be different, so ask the doctor.
 
-Iron tablets and iron tonics have no place in thalassemia, even in pregnancy. If a chemist or a relative suggests one, ask the hematologist first, and if your child already takes one, tell them. Some children need other vitamins or minerals, and the doctor decides that.
+Iron tablets and iron tonics have no place in thalassemia, even in pregnancy. This is not about carriers, whose own doctor decides about iron. If a chemist or a relative suggests one, ask the hematologist first, and if your child already takes one, tell them. Some children need other vitamins or minerals, and the doctor decides that.
 
 [figure: myth-or-fact]
 
@@ -48,7 +48,7 @@ Some teenagers feel angry, low, or tired of being different. Support for the min
 
 # Work and marriage
 
-Many adults with thalassemia work without difficulty. Many marry and have children.
+Many adults with thalassemia work without difficulty. Many marry and have children, and some need fertility treatment, which the same team plans.
 
 Before marriage, the partner should have a blood test. If the partner also carries thalassemia, each pregnancy has a chance of a baby with thalassemia major, and there are ways to know early in the pregnancy. A pregnancy is planned with the specialist team before it begins, so the heart and the iron can be checked and the medicines reviewed.
 
@@ -72,6 +72,8 @@ The young woman goes to her hematologist with her fiancé. The doctor explains t
 - the person is very pale, drowsy, or too weak to eat or play before the next transfusion is due
 
 # Take these questions to your doctor
+
+Whichever story is closer to yours, take the reports to the hematologist at the next visit, and ask:
 
 - Can my child play every sport, or should we avoid any?
 - Can the transfusion be given at a time that does not cut into school?
