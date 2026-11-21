@@ -254,6 +254,45 @@ const FIG = {
         body),
     };
   },
+  // Thalassemia, everyday life: a child walks a road past school, play, work and marriage, each lighting up in turn,
+  // while a red line of regular care (transfusions and the iron medicine) keeps pace underneath the whole way.
+  'growing-up'(l) {
+    const t = l === 'bn'
+      ? { m: ['স্কুল', 'খেলা', 'চাকরি', 'বিয়ে'], care: 'নিয়মিত রক্ত আর আয়রন বের করার ওষুধ, সারা পথ',
+          cap: 'নিয়মিত রক্ত আর আয়রন বের করার ওষুধ সঙ্গে চললে থ্যালাসেমিয়ার অনেক বাচ্চা স্কুল, খেলা, চাকরি আর বিয়ের পথ পেরিয়ে বড় হয়। চিকিৎসা চলে সারা পথ জুড়ে। ছবিতে কোনো আসল বয়স বা মাপ নেই।' }
+      : { m: ['School', 'Play', 'Work', 'Marriage'], care: 'regular transfusions and the iron medicine, all the way',
+          cap: 'With regular transfusions and the iron medicine going alongside, many children with thalassemia grow up through school, play, work and marriage. The care keeps going the whole way. The drawing has no real ages or numbers.' };
+    const icon = [
+      `<rect x="-11" y="-8" width="22" height="21" rx="5" fill="${C.amberBg}" stroke="${C.amber}" stroke-width="2"/><path d="M-5 -8v-3a5 5 0 0 1 10 0v3" fill="none" stroke="${C.amber}" stroke-width="2"/><rect x="-6" y="1" width="12" height="6" rx="2" fill="${C.amber}"/>`,
+      `<g transform="rotate(35)"><rect x="-4" y="-15" width="8" height="21" rx="3" fill="${C.amberBg}" stroke="${C.amber}" stroke-width="2"/><path d="M0 6v9" stroke="${C.teal2}" stroke-width="3" stroke-linecap="round"/></g><circle cx="-10" cy="-8" r="4" fill="${C.red}"/>`,
+      `<rect x="-13" y="-5" width="26" height="18" rx="4" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><path d="M-5 -5v-4h10v4" fill="none" stroke="${C.teal2}" stroke-width="2"/><path d="M-13 3h26" stroke="${C.teal2}" stroke-width="2"/>`,
+      `<circle cx="-5" cy="3" r="8" fill="none" stroke="${C.amber}" stroke-width="3"/><circle cx="6" cy="3" r="8" fill="none" stroke="${C.amber}" stroke-width="3"/><path d="M-5 -10l3 4-3 3-3-3z" fill="${C.o2}"/>`,
+    ];
+    const X0 = 45, X1 = 315, xs = [82, 160, 238, 312];
+    const pc = (x) => +(((x - X0) / (X1 - X0)) * 88).toFixed(1);
+    let keys = '';
+    const stops = xs.map((x, i) => {
+      const p = pc(x);
+      keys += `@keyframes gu${i}{0%,${Math.max(0, p - 2)}%{opacity:.28}${p}%,94%{opacity:1}100%{opacity:.28}}.gu-m${i}{animation:gu${i} 11s ease-in-out infinite}`;
+      return `<g class="gu-m${i}"><circle cx="${x}" cy="56" r="22" fill="#fff" stroke="${C.mintLine}" stroke-width="2"/><g transform="translate(${x},56)">${icon[i]}</g>` +
+        `<circle cx="${x}" cy="122" r="6" fill="#fff" stroke="${C.teal2}" stroke-width="2.6"/>` + T(x, 148, t.m[i], { size: 13.5, fill: C.teal2, w: 700 }) + '</g>';
+    }).join('');
+    const body =
+      `<path d="M${X0 - 15} 122H${X1 + 15}" stroke="${C.mint}" stroke-width="12" stroke-linecap="round"/>` + stops +
+      `<g class="gu-w"><g transform="translate(${X0},104) scale(.5)">${person(0, 0, 1)}</g></g>` +
+      `<g transform="translate(${X0 - 14},172)">${cell(6, false)}</g>` +
+      `<path class="gu-c" pathLength="1" d="M${X0} 172H${X1 + 10}" stroke="${C.red}" stroke-width="4" stroke-linecap="round"/>` +
+      T(180, 194, t.care, { size: 12.5, fill: C.muted, w: 600 });
+    return {
+      cap: t.cap,
+      svg: svg('gu', 360, 204, t.cap,
+        keys +
+        '.gu-w{animation:guw 11s linear infinite}@keyframes guw{0%{transform:translateX(0)}88%,100%{transform:translateX(' + (X1 - X0) + 'px)}}' +
+        '.gu-c{stroke-dasharray:1;stroke-dashoffset:1;animation:guc 11s linear infinite}@keyframes guc{0%{stroke-dashoffset:1}88%,100%{stroke-dashoffset:0}}' +
+        '@media (prefers-reduced-motion:reduce){.gu-w{transform:translateX(' + (X1 - X0) + 'px)}.gu-c{stroke-dashoffset:0}[class^=gu-m]{opacity:1}}',
+        body),
+    };
+  },
 };
 
 // Short videos made by Dr. Roy, kept in assets/video/<name>.mp4 with a still picture <name>.jpg.
@@ -714,6 +753,33 @@ const TRY = {
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="tr-tabs">${tabs}</div>` +
       `<div class="tr-out" aria-live="polite"><p class="tr-pick">${esc(t.pick)}</p>${panels}</div>`;
     return { cap: t.cap, cls: 'tr wg', html };
+  },
+  // Thalassemia, everyday life: four things families are told, each turned over to show what is true.
+  'myth-or-fact'(l) {
+    const ic = {
+      bat: `<g transform="rotate(35 22 20)"><rect x="18" y="4" width="8" height="21" rx="3" fill="${C.amberBg}" stroke="${C.amber}" stroke-width="2"/><path d="M22 25v9" stroke="${C.teal2}" stroke-width="3" stroke-linecap="round"/></g><circle cx="9" cy="11" r="4" fill="${C.red}"/>`,
+      fish: `<path d="M5 20c5-7 15-8 22 0-7 8-17 7-22 0z" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2" stroke-linejoin="round"/><path d="M27 20l8-6v12z" fill="${C.teal2}"/><circle cx="11" cy="18.5" r="1.7" fill="${C.ink}"/>`,
+      friends: `${person(13, 27, .62)}${person(28, 27, .62)}`,
+      rings: `<circle cx="15" cy="23" r="8" fill="none" stroke="${C.amber}" stroke-width="3"/><circle cx="26" cy="23" r="8" fill="none" stroke="${C.amber}" stroke-width="3"/><path d="M15 9l3 4-3 3-3-3z" fill="${C.o2}"/>`,
+    };
+    const t = l === 'bn'
+      ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
+          c: [['bat', 'ওর ক্রিকেট খেলা চলবে না', 'সত্যি?', 'খেলা ওর পক্ষে ভালো। কৈশোরের আগে সাধারণত প্রাণ খুলে খেলতে পারে। পরে সিরিয়াস খেলার আগে ডাক্তারবাবুকে জিজ্ঞেস করুন।'],
+            ['fish', 'মাছ, ডিম, মাংস সব বন্ধ', 'সত্যি?', 'নিয়মিত রক্ত নিলে রক্তের আয়রনের তুলনায় খাবারের আয়রন সামান্য।'],
+            ['friends', 'ওর সঙ্গে খেললে অন্য বাচ্চারও হবে', 'সত্যি?', 'থ্যালাসেমিয়া কারও কাছ থেকে ছড়ায় না। আসে শুধু বাবা-মায়ের কাছ থেকে সন্তানের মধ্যে।'],
+            ['rings', 'ওর কোনোদিন সন্তান হবে না', 'সত্যি?', 'থ্যালাসেমিয়া মেজর নিয়েও অনেকের সন্তান হয়। গর্ভধারণের পরিকল্পনা হয় বিশেষজ্ঞ দলের সঙ্গে।']],
+          cap: 'প্রতিটা বাচ্চা আলাদা। আপনার বাচ্চার জন্য ঠিক কী, সেটা হেমাটোলজিস্টকে জিজ্ঞেস করুন।' }
+      : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
+          c: [['bat', 'He must not play cricket', 'True?', 'Play is good for him. Before the teens he can usually play freely. Ask the doctor before serious sport later.'],
+            ['fish', 'No fish, no eggs, no meat', 'True?', 'With regular transfusions, the iron in food is small next to the iron in blood.'],
+            ['friends', 'Children who play with him can catch it', 'True?', 'Nobody catches thalassemia. It passes only from parents to their children.'],
+            ['rings', 'She can never have children', 'True?', 'Many people with thalassemia major have children. The pregnancy is planned with the specialist team.']],
+          cap: 'Every child is different. Ask your hematologist what is right for yours.' };
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
+      t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
+        `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
+        `<span class="fc back"><span class="k">${esc(t.sign)}</span><span>${esc(back)}</span></span></button>`).join('') + '</div>';
+    return { cap: t.cap, cls: 'flipset', html };
   },
 };
 
