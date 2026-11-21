@@ -29,6 +29,24 @@ Each chapter has two plain text files in the `chapters` folder, one per language
 
 A chapter or part whose files are both empty is not shown anywhere on the site: no card, no page, no link. It appears by itself as soon as it has words.
 
+## The short answer at the top, and the sources at the end
+
+Two things every chapter now has (Dr. Roy, 2026-11-21, from the SEO audit), so Google and AI tools can quote the page and see where its facts come from:
+
+- **In short.** At the very top of the file, lines that start with `> ` hold a two-sentence plain answer. It shows in a small green box above the story, headed "In short" / "সংক্ষেপে". The story still starts the chapter with its big headline line.
+- **Sources.** The last section, headed `# Sources` (Bengali `# তথ্যসূত্র`), lists 3 to 6 sources, one per line, as `- Title | https://link`. They show as links at the end of the page. This is the only place in a chapter where links appear.
+
+```
+> A child on regular transfusions needs the iron medicine every day, even when feeling well. If it is hard to take, tell the hematologist instead of stopping it.
+
+The medicine strips were hidden behind her school certificates, still full.
+...
+
+# Sources
+
+- NHS: Thalassaemia | https://www.nhs.uk/conditions/thalassaemia/
+```
+
 ## How a chapter gets its look
 
 You only type plain text. The site dresses it by itself:

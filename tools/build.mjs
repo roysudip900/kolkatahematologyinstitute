@@ -13,6 +13,10 @@
 //   "- item"         a bullet point (several in a row make a list)
 //   "[figure: name]"  a moving illustration from tools/figures.mjs, with its caption, on a line of its own
 //   "[video: name]"   a short video from assets/video/ (listed in tools/figures.mjs), on a line of its own
+//   "> text"          at the very top: the "In short" answer, two plain sentences shown in a box above the story
+//                     (Dr. Roy, 2026-11-21, from the SEO audit: this is the part AI tools and Google quote)
+//   "# Sources" (Bengali "# তথ্যসূত্র") as the last section, with lines "- Title | https://link":
+//                     the sources list at the end of the page, the only place where links are shown
 //
 // How the page is dressed, with nothing extra to type:
 //   - Everything before the first "# Heading" is the opening story. It is set in the serif
@@ -91,7 +95,9 @@ function tokens(txt) {
       line = line.trim();
       if (!line) continue;
       const fig = line.match(/^\[\s*(figure|video)\s*:\s*([a-z0-9-]+)\s*\]$/i);
-      if (fig) { flushP(); flushL(); out.push({ t: fig[1].toLowerCase() === 'video' ? 'vid' : 'fig', name: fig[2].toLowerCase() }); }
+      const sum = line.match(/^>\s?(.*)$/);
+      if (sum) { flushP(); flushL(); if (sum[1].trim()) out.push({ t: 'sum', text: sum[1].trim() }); }
+      else if (fig) { flushP(); flushL(); out.push({ t: fig[1].toLowerCase() === 'video' ? 'vid' : 'fig', name: fig[2].toLowerCase() }); }
       else if (/^##\s/.test(line)) { flushP(); flushL(); out.push({ t: 'h3', text: line.replace(/^##\s*/, '') }); }
       else if (/^#\s/.test(line)) { flushP(); flushL(); out.push({ t: 'h2', text: line.replace(/^#\s*/, '') }); }
       else if (/^[-•]\s/.test(line)) { flushP(); list.push(line.replace(/^[-•]\s*/, '')); }
@@ -105,6 +111,7 @@ let LANG = 'en'; // the language of the page being built, for figures
 function html(tk, firstClass = '') {
   let first = true;
   return tk.map((x) => {
+    if (x.t === 'sum') return '';
     if (x.t === 'fig') return figure(x.name, LANG);
     if (x.t === 'vid') return video(x.name, LANG);
     if (x.t === 'p') { const c = first && firstClass ? ` class="${firstClass}"` : ''; first = false; return `<p${c}>${x.lines.map(esc).join('<br>')}</p>`; }
@@ -114,10 +121,11 @@ function html(tk, firstClass = '') {
     return `<h2>${esc(x.text)}</h2>`;
   }).join('');
 }
-const textOf = (tk) => tk.filter((x) => x.t !== 'fig' && x.t !== 'vid').map((x) => (x.t === 'p' ? x.lines.join(' ') : x.t === 'ul' ? x.items.join(' ') : x.text)).join(' ');
+const textOf = (tk) => tk.filter((x) => x.t !== 'fig' && x.t !== 'vid' && x.t !== 'sum').map((x) => (x.t === 'p' ? x.lines.join(' ') : x.t === 'ul' ? x.items.join(' ') : x.text)).join(' ');
 
 // Which special dress a section gets, from the words in its heading.
 function kind(title) {
+  if (/^sources?$/i.test(title.trim()) || /তথ্যসূত্র/.test(title)) return 'src';
   if (/go to (a |the )?hospital/i.test(title) || /হাসপাতালে যান/.test(title)) return 'warn';
   if (/common questions/i.test(title) || /জানতে চান/.test(title)) return 'faq';
   if (/question|ask your doctor/i.test(title) || /প্রশ্ন|জিজ্ঞেস/.test(title)) return 'ask';
@@ -126,24 +134,38 @@ function kind(title) {
 }
 
 function chapterBody(txt) {
-  const tk = tokens(txt);
+  const all = tokens(txt);
+  const sum = all.filter((x) => x.t === 'sum').map((x) => x.text).join(' ');
+  const tk = all.filter((x) => x.t !== 'sum');
   const firstH = tk.findIndex((x) => x.t === 'h2');
   const opening = firstH === -1 ? tk : tk.slice(0, firstH);
   const rest = firstH === -1 ? [] : tk.slice(firstH);
   const sections = [];
   for (const x of rest) { if (x.t === 'h2') sections.push({ title: x.text, tk: [] }); else sections[sections.length - 1].tk.push(x); }
 
-  let out = '';
+  let out = sum ? `<div class="insum"><span class="k">${LANG === 'bn' ? 'সংক্ষেপে' : 'In short'}</span><p>${esc(sum)}</p></div>` : '';
   if (opening.length) {
     const p0 = opening[0].t === 'p' ? opening[0].lines.join(' ') : '';
     const cls = p0 && p0.length <= 110 && opening.length > 1 ? 'hookline' : 'lede';
     out += `<div class="story">${html(opening, cls)}</div>`;
     if (sections.length) out += '<div class="sep" aria-hidden="true"><i></i><i></i><i></i></div>';
   }
-  const faq = [];
+  const faq = [], src = [];
   out += '<div class="prose">';
   for (const s of sections) {
     const k = kind(s.title);
+    if (k === 'src') {
+      const items = s.tk.filter((x) => x.t === 'ul').flatMap((x) => x.items).map((i) => {
+        const m = i.match(/^(.*?)\s*\|\s*(https?:\/\/\S+)\s*$/);
+        return m ? { title: m[1].trim(), url: m[2] } : { title: i.trim(), url: '' };
+      });
+      src.push(...items.filter((i) => i.url));
+      const host = (u) => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch (e) { return ''; } };
+      out += `<section class="srcs"><h2>${esc(s.title)}</h2><ul>` + items.map((i) => i.url
+        ? `<li><a href="${esc(i.url)}" target="_blank" rel="noopener">${esc(i.title)}</a> <span class="host">${esc(host(i.url))}</span></li>`
+        : `<li>${esc(i.title)}</li>`).join('') + '</ul></section>';
+      continue;
+    }
     if (k === 'faq') {
       const pre = []; const items = [];
       for (const x of s.tk) { if (x.t === 'h3') items.push({ q: x.text, tk: [] }); else if (items.length) items[items.length - 1].tk.push(x); else pre.push(x); }
@@ -157,11 +179,11 @@ function chapterBody(txt) {
     }
   }
   out += '</div>';
-  return { html: out, faq };
+  return { html: out, faq, sum, src };
 }
 
 function plain(txt) {
-  return txt.replace(/\r/g, '').split('\n').filter((l) => l.trim() && !/^#/.test(l.trim()) && !/^\[\s*(figure|video)\s*:/i.test(l.trim())).map((l) => l.replace(/^[-•]\s*/, '').trim()).join(' ');
+  return txt.replace(/\r/g, '').split('\n').filter((l) => l.trim() && !/^#/.test(l.trim()) && !/^\[\s*(figure|video)\s*:/i.test(l.trim()) && !/\|\s*https?:\/\//.test(l)).map((l) => l.replace(/^>\s?/, '').replace(/^[-•]\s*/, '').trim()).join(' ');
 }
 function summary(txt, max = 155) {
   const t = plain(txt);
@@ -303,6 +325,8 @@ for (const c of chapters) {
         author: { '@type': 'Person', '@id': ID.author, name: AUTHOR.en, jobTitle: 'Clinical Hematologist', honorificSuffix: CRED.en },
         publisher: { '@type': 'MedicalOrganization', '@id': ID.org, name: SITE_NAME.en, url: SITE + '/' },
         isPartOf: { '@id': ID.site },
+        ...(b.sum ? { abstract: b.sum } : {}),
+        ...(b.src.length ? { citation: b.src.map((x) => ({ '@type': 'CreativeWork', name: x.title, url: x.url })) } : {}),
         ...(root ? { isPartOf: { '@type': 'MedicalWebPage', name: root[l], url: SITE + url(root.id, l) } } : {}),
       });
       if (b.faq.length) schema += '\n' + ld({

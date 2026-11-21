@@ -1,3 +1,5 @@
+> A child on regular transfusions needs the iron medicine every day, even when feeling well, because the iron each transfusion leaves behind builds up without any warning. If the medicine is hard to take, tell the hematologist instead of stopping it, and see a doctor the same day if a fever comes.
+
 The medicine strips were hidden behind her school certificates, still full.
 
 Her mother found them while cleaning the cupboard before Durga Puja. The girl is sixteen. She has had blood every few weeks all her life, and she has never once missed a transfusion. The iron medicine was another matter. She stopped it quietly some months ago, after a school trip where she did not want her friends to see her take it. Nothing happened. She felt exactly the same. So she never started again.
@@ -70,3 +72,9 @@ It is better not to. Iron keeps arriving with every transfusion, and even short 
 ## Why is fever dangerous with the iron medicine?
 
 Some of these medicines can lower the white cells that fight infection, and a fever may be the first sign. It needs a doctor and a blood test the same day.
+
+# Sources
+
+- Thalassaemia International Federation: Guidelines for the Management of Transfusion Dependent Thalassaemia, 4th edition (2021) | https://thalassaemia.org.cy/wp-content/uploads/2021/06/GUIDELINE-4th-SINGLE-PAGE.pdf
+- National Heart, Lung, and Blood Institute: Thalassemia, treatment | https://www.nhlbi.nih.gov/health/thalassemia/treatment
+- NHS: Thalassaemia | https://www.nhs.uk/conditions/thalassaemia/
