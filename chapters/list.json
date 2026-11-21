@@ -90,10 +90,10 @@
   "parent": "thalassemia",
   "bn": "থ্যালাসেমিয়া: রোজকার জীবন",
   "en": "Thalassemia: everyday life",
-  "desc_bn": "",
-  "desc_en": "",
-  "card_bn": "",
-  "card_en": "",
+  "desc_bn": "থ্যালাসেমিয়ার বাচ্চা কি স্কুলে যাবে, ক্রিকেট খেলবে, মাছ খাবে? কোন টিকা লাগে, বড় হলে বিয়ে আর সন্তান, আর পুরো পরিবারের উপর চাপ সামলানোর কথা।",
+  "desc_en": "Can a child with thalassemia go to school, play cricket and eat fish? Which vaccines matter, marriage and children later, and how a family shares the load.",
+  "card_bn": "ছেলেকে খেলতে দিতে ভয় পান? মাছ বন্ধ করে দিয়েছেন? বিয়ের কথা চলছে, সন্তান হবে কিনা ভাবছেন?",
+  "card_en": "Afraid to let your child play? Taken fish off the plate? Wondering about marriage and children?",
   "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FFF3D6\"/><circle cx=\"26\" cy=\"26\" r=\"15\" fill=\"#D93A4A\"/><circle cx=\"26\" cy=\"26\" r=\"10\" fill=\"#FFF3D6\"/><circle cx=\"26\" cy=\"26\" r=\"4.5\" fill=\"#D93A4A\"/>"
  },
  {
