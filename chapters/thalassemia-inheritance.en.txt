@@ -1,3 +1,5 @@
+> A baby is born with thalassemia major only when both parents are carriers, and then every pregnancy has a 1 in 4 chance. Both partners should be tested before the wedding or a pregnancy, and a doctor should read the two reports together, because HbE trait and beta thalassemia trait together also carry a risk.
+
 When the baby's report came back, the first person her mother-in-law blamed was her.
 
 Nobody said it in front of the doctor. They said it at home, in the kitchen, in the low voice that families keep for these things. Our side has never had this. It must have come from yours. The young mother said nothing. She had a son of four who had never been ill, and now a daughter of ten months who needed blood. She was half ready to believe it herself.
@@ -78,3 +80,11 @@ It can seem to. Carriers are healthy and can pass the gene on for generations wi
 ## Is HbE trait the same as thalassemia trait?
 
 No, but they are related. Each is harmless in a carrier. If one partner has HbE trait and the other has beta thalassemia trait, their child can be born with HbE beta thalassemia, so both reports should be read together by a doctor.
+
+# Sources
+
+- NHS: Thalassaemia, causes | https://www.nhs.uk/conditions/thalassaemia/causes/
+- NHS: Screening for sickle cell and thalassaemia in pregnancy | https://www.nhs.uk/pregnancy/your-pregnancy-care/screening-for-sickle-cell-and-thalassaemia/
+- NHS: Thalassaemia, diagnosis | https://www.nhs.uk/conditions/thalassaemia/diagnosis/
+- MedlinePlus Genetics: Beta thalassemia | https://medlineplus.gov/genetics/condition/beta-thalassemia/
+- Thalassaemia International Federation: Guidelines for the Management of Transfusion Dependent Thalassaemia, 4th edition (2021) | https://thalassaemia.org.cy/wp-content/uploads/2021/06/GUIDELINE-4th-SINGLE-PAGE.pdf

@@ -1,3 +1,5 @@
+> A child with thalassemia major needs blood on the dates the doctor plans, before they look pale, because when blood comes late the bone marrow overworks and the bones and spleen suffer. Plan the dates with the doctor around exams and family events, and go to hospital the same day if fever, shivering or dark urine follows a transfusion.
+
 On transfusion days, the alarm goes off at five.
 
 His mother packs a tiffin box, the file of reports, and the charger for the phone he will play games on all day. They take the first local train into the city. He is seven, and he knows the day care ward better than his school: the bed by the window, the nurse who calls him "hero", the bag of dark red blood hanging above his arm. By evening he is pink in the cheeks again. The next afternoon he is the loudest boy in the football game.
@@ -68,3 +70,9 @@ Only the prick when a thin tube is put into a vein in the arm. After that, the b
 ## Is donated blood safe for my child?
 
 Blood transfusion is very safe. Donated blood is tested for infections and matched to your child. Going to the same centre each time, with your child's records, makes it safer still.
+
+# Sources
+
+- Thalassaemia International Federation: Guidelines for the Management of Transfusion Dependent Thalassaemia, 4th edition (2021) | https://thalassaemia.org.cy/wp-content/uploads/2021/06/GUIDELINE-4th-SINGLE-PAGE.pdf
+- NHS: Blood transfusion | https://www.nhs.uk/conditions/blood-transfusion/
+- NHS: Thalassaemia, treatment | https://www.nhs.uk/conditions/thalassaemia/treatment/

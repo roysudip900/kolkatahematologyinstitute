@@ -1,3 +1,5 @@
+> অ্যানিমিয়া মানে রক্তে হিমোগ্লোবিন কম, তাই শরীরে অক্সিজেন কম পৌঁছায়, অল্পেই ক্লান্ত লাগে, সিঁড়ি ভাঙলে হাঁফ ধরে। এটা অন্য কোনো গোলমালের সংকেত, তাই আয়রন বা টনিক খাওয়ার আগে রিপোর্ট নিয়ে ডাক্তার দেখান, আর জেনে নিন হিমোগ্লোবিন কেন কমল।
+
 দু'বছর ধরে তিনি দোষ দিয়ে এসেছেন সিঁড়িকে।
 
 ফ্ল্যাটটা তিনতলায়, বাড়িতে লিফট নেই। দোতলা পর্যন্ত উঠেই রেলিং ধরে একটু দাঁড়াতে হয়। বয়স চৌত্রিশ। নিজেকে বোঝান, বয়স হচ্ছে, সংসারের খাটুনি, তার উপর এই গরম। সবাইকে খাইয়ে তবে নিজে খেতে বসেন, আর খাওয়ার শেষে এক কাপ চা। পাশের বাড়ির বৌদি বলেন বিট খেতে। মা বলেন বেদানা। রক্ত পরীক্ষার কথা কেউ বলেন না।
@@ -77,3 +79,11 @@
 ## হিমোগ্লোবিন কম থাকা কি বিপজ্জনক?
 
 অল্প অ্যানিমিয়া অনেকেরই হয়, আর সাধারণত সারিয়ে তোলা যায়। কিন্তু বেশি অ্যানিমিয়া দীর্ঘদিন ফেলে রাখলে হৃৎপিণ্ডের উপর চাপ পড়ে, আর গর্ভাবস্থায় মা ও বাচ্চা দুজনেরই ক্ষতি হতে পারে।
+
+# তথ্যসূত্র
+
+- WHO: Anaemia fact sheet | https://www.who.int/news-room/fact-sheets/detail/anaemia
+- NHS: Iron deficiency anaemia | https://www.nhs.uk/conditions/iron-deficiency-anaemia/
+- National Heart, Lung, and Blood Institute: Iron-deficiency anemia | https://www.nhlbi.nih.gov/health/anemia/iron-deficiency-anemia
+- MedlinePlus: Anemia | https://medlineplus.gov/ency/article/000560.htm
+- NHS: Thalassaemia | https://www.nhs.uk/conditions/thalassaemia/

@@ -1,3 +1,5 @@
+> রক্তের সঙ্গে আসা আয়রন বছরের পর বছর হৃৎপিণ্ডে, লিভারে আর হরমোনের গ্রন্থিতে জমতে পারে, অথচ থ্যালাসেমিয়ার বাচ্চা দিব্যি থাকে, আর রক্ত বারবার দেরিতে এলে হৃৎপিণ্ডের উপর চাপ পড়ে। প্রতি বছরের চেক-আপ বাদ দেবেন না, ডাক্তারবাবু যেমন বলেছেন সেভাবে রোজ আয়রন বের করার ওষুধ দিন, কারণ পরীক্ষায় গোলমাল গোড়াতেই ধরা পড়ে, যখন চিকিৎসা বদলানোর সময় থাকে।
+
 প্রতি বছর মা একদিন কামাই করে সেই একই পরীক্ষা করাতে আনেন, আর ডাক্তারবাবু বলেন, সব ঠিক আছে।
 
 মেয়ের বয়স তেরো। ছোট্ট বয়স থেকে কয়েক সপ্তাহ অন্তর রক্ত নিচ্ছে। রক্ত নেওয়ার দিনগুলো এখন জীবনেরই অংশ। চেক-আপের দিনটা অন্যরকম: লম্বা লাইন, হার্টের স্ক্যান, লিভার আর হরমোনের জন্য রক্ত পরীক্ষা, দেওয়ালে পিঠ ঠেকিয়ে উচ্চতা মাপা। একদিনের মাইনে যায়, দুজনের ট্রেনভাড়া যায়, আর ফল কিছুই হয় না। এবার মা মুখ ফুটে বলেই ফেললেন, এ বছরটা বাদ দিলে কী হয়, একবার?
@@ -72,3 +74,11 @@
 ## আয়রন বের করার ওষুধ বাদ পড়লে কী হয়?
 
 প্রতিবার রক্তের সঙ্গে আয়রন আসতেই থাকে, তাই জমে যায়, আর অল্প কদিনের বিরতিও ক্ষতি করতে পারে। ওষুধ খেতে কষ্ট হলে ডাক্তারবাবুকে বলুন। ওষুধ একাধিক আছে, আপনার বাচ্চার জন্য কোনোটা হয়তো বেশি মানানসই।
+
+# তথ্যসূত্র
+
+- Thalassaemia International Federation: Guidelines for the Management of Transfusion Dependent Thalassaemia, 4th edition (2021) | https://thalassaemia.org.cy/wp-content/uploads/2021/06/GUIDELINE-4th-SINGLE-PAGE.pdf
+- National Heart, Lung, and Blood Institute: Living with thalassemia | https://www.nhlbi.nih.gov/health/thalassemia/living-with
+- National Heart, Lung, and Blood Institute: Thalassemia treatment | https://www.nhlbi.nih.gov/health/thalassemia/treatment
+- NHS: Thalassaemia | https://www.nhs.uk/conditions/thalassaemia/
+- NHS: Thalassaemia, treatment | https://www.nhs.uk/conditions/thalassaemia/treatment/

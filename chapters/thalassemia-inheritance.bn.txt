@@ -1,3 +1,5 @@
+> বাবা-মা দুজনেই বাহক হলে তবেই বাচ্চার থ্যালাসেমিয়া মেজর হতে পারে, আর তখন প্রতিবার গর্ভধারণে ৪ ভাগের ১ ভাগ সম্ভাবনা থাকে। বিয়ে বা সন্তান নেওয়ার আগে দুজনেরই পরীক্ষা করান, আর দুটো রিপোর্ট একসঙ্গে ডাক্তারকে দেখান, কারণ হিমোগ্লোবিন ই ট্রেট আর বিটা থ্যালাসেমিয়া ট্রেট একসঙ্গে থাকলেও ঝুঁকি আছে।
+
 বাচ্চার রিপোর্ট আসার পর শাশুড়ি প্রথম দোষটা দিলেন বৌমাকেই।
 
 ডাক্তারের সামনে কেউ কিছু বলেননি। বলা হল বাড়ি ফিরে, রান্নাঘরে, সেই চাপা গলায়, যে গলায় এসব কথা বলা হয়। আমাদের বংশে কারও এসব ছিল না। তোমাদের দিক থেকেই এসেছে। মেয়েটি চুপ করে রইলেন। চার বছরের ছেলে, কোনোদিন বড় কোনো অসুখ হয়নি। আর এখন দশ মাসের মেয়ে, যার রক্ত লাগবে। কথাটা তিনি নিজেও প্রায় বিশ্বাস করে ফেলছিলেন।
@@ -78,3 +80,11 @@
 ## HbE ট্রেট আর থ্যালাসেমিয়া ট্রেট কি একই?
 
 না, তবে দুটো সম্পর্কিত। বাহকের শরীরে দুটোই নিরীহ। কিন্তু এক জনের HbE ট্রেট আর অন্য জনের বিটা থ্যালাসেমিয়া ট্রেট থাকলে বাচ্চার এইচবিই বিটা থ্যালাসেমিয়া হতে পারে। তাই দুজনের রিপোর্ট একসঙ্গে ডাক্তারকে দেখান।
+
+# তথ্যসূত্র
+
+- NHS: Thalassaemia, causes | https://www.nhs.uk/conditions/thalassaemia/causes/
+- NHS: Screening for sickle cell and thalassaemia in pregnancy | https://www.nhs.uk/pregnancy/your-pregnancy-care/screening-for-sickle-cell-and-thalassaemia/
+- NHS: Thalassaemia, diagnosis | https://www.nhs.uk/conditions/thalassaemia/diagnosis/
+- MedlinePlus Genetics: Beta thalassemia | https://medlineplus.gov/genetics/condition/beta-thalassemia/
+- Thalassaemia International Federation: Guidelines for the Management of Transfusion Dependent Thalassaemia, 4th edition (2021) | https://thalassaemia.org.cy/wp-content/uploads/2021/06/GUIDELINE-4th-SINGLE-PAGE.pdf
