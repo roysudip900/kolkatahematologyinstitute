@@ -587,7 +587,7 @@ writeFileSync(join(ROOT, 'llms.txt'), `# ${SITE_NAME.en} (${SITE_NAME.bn})
 
 > ${SITE_DESC}
 
-Author: ${AUTHOR.en}, ${CRED.en}, clinical hematologist in Kolkata. Every chapter exists in Bengali and in English, and each one ends with when to go to hospital and which questions to take to a doctor.
+Author: ${SAME_AS.length ? `[${AUTHOR.en}](${SAME_AS[0]})` : AUTHOR.en}, ${CRED.en}, clinical hematologist in Kolkata. Every chapter exists in Bengali and in English, and each one ends with when to go to hospital and which questions to take to a doctor.
 
 ## Chapters (English)
 ${llmsList('en')}
