@@ -57,6 +57,9 @@ const AREA = { '@type': 'City', name: 'Kolkata' };
 // ORG_SAME_AS: profiles in the institute's own name, once they exist.
 const SAME_AS = ['https://share.google/OLTZr4ebHj8UmXFnB']; // Google Business Profile (Dr. Sudip Roy)
 const ORG_SAME_AS = [];
+// The author's name on chapter pages links to the first profile in SAME_AS (Dr. Roy, 2026-11-21).
+const au = (l) => SAME_AS.length
+  ? `<a class="au" href="${SAME_AS[0]}" target="_blank" rel="noopener">${AUTHOR[l]}</a>` : AUTHOR[l];
 
 const STROKE = 'fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"';
 const RIGHT = `<svg viewBox="0 0 16 16" ${STROKE}><path d="M3 8h10M9 4l4 4-4 4"/></svg>`;
@@ -288,10 +291,10 @@ for (const c of chapters) {
       LANG = l;
       const b = chapterBody(text[l]);
       kick = root ? `${esc(short(root, l))} · ${readTime(text[l], l)}` : readTime(text[l], l);
-      body = `<div class="by">${AVATAR}<div><b>${l === 'bn' ? `লিখেছেন ${AUTHOR.bn}` : `By ${AUTHOR.en}`}</b>${CRED[l]}<br>${l === 'bn' ? `শেষ আপডেট ${niceDate(date, 'bn')}` : `Last updated ${niceDate(date, 'en')}`}</div></div>` +
+      body = `<div class="by">${AVATAR}<div><b>${l === 'bn' ? `লিখেছেন ${au('bn')}` : `By ${au('en')}`}</b>${CRED[l]}<br>${l === 'bn' ? `শেষ আপডেট ${niceDate(date, 'bn')}` : `Last updated ${niceDate(date, 'en')}`}</div></div>` +
         partsNav(c, l) +
         `<article>${b.html}</article>` + nextPart(c, l) +
-        `<aside class="endcard">${AVATAR}<div><div class="k">${l === 'bn' ? 'লেখক' : 'Author'}</div><div class="who">${AUTHOR[l]}</div><div class="cred">${CRED[l]}</div></div></aside>` +
+        `<aside class="endcard">${AVATAR}<div><div class="k">${l === 'bn' ? 'লেখক' : 'Author'}</div><div class="who">${au(l)}</div><div class="cred">${CRED[l]}</div></div></aside>` +
         `<a class="allbtn" href="/#library">${LEFT}${l === 'bn' ? 'সব অধ্যায়' : 'All chapters'}</a>`;
       schema = ld({
         '@context': 'https://schema.org', '@type': 'MedicalWebPage', name: title, description: desc, inLanguage: l,
