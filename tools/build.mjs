@@ -46,9 +46,14 @@ const SITE_NAME = { bn: 'কলকাতা হেমাটোলজি ইন�
 const LANGS = ['bn', 'en'];
 // One identity for the site, the author and the publisher, so search engines and AI systems
 // can tie every page to the same person. The home page carries the full records; chapter pages point to them by @id.
-// There is no physical institute yet (Dr. Roy, 2026-11-21): the publisher is an Organization, not a clinic.
+// The publisher stays a MedicalOrganization, and no chamber name goes on the site (Dr. Roy, 2026-11-21).
 const ID = { org: `${SITE}/#org`, author: `${SITE}/#author`, site: `${SITE}/#website` };
-const SITE_DESC = 'Patient education on blood diseases in plain Bengali and English, written by a clinical hematologist. For learning only; it does not replace seeing a doctor.';
+// Same words as the home page's meta description.
+const SITE_DESC = 'Blood diseases explained in plain words, in Bengali and English, by a clinical hematologist.';
+const AREA = { '@type': 'City', name: 'Kolkata' };
+// Paste profile links here when they exist (Google Business Profile, LinkedIn, YouTube...).
+// They go into the schema as sameAs, which lets search engines and AI systems confirm the author is a real doctor.
+const SAME_AS = [];
 
 const STROKE = 'fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"';
 const RIGHT = `<svg viewBox="0 0 16 16" ${STROKE}><path d="M3 8h10M9 4l4 4-4 4"/></svg>`;
@@ -290,7 +295,7 @@ for (const c of chapters) {
         url: canonical, dateModified: date, about: { '@type': 'MedicalCondition', name: c.en.split(':')[0] },
         audience: { '@type': 'MedicalAudience', audienceType: 'Patient' },
         author: { '@type': 'Person', '@id': ID.author, name: AUTHOR.en, jobTitle: 'Clinical Hematologist', honorificSuffix: CRED.en },
-        publisher: { '@type': 'Organization', '@id': ID.org, name: SITE_NAME.en, url: SITE + '/' },
+        publisher: { '@type': 'MedicalOrganization', '@id': ID.org, name: SITE_NAME.en, url: SITE + '/' },
         isPartOf: { '@id': ID.site },
         ...(root ? { isPartOf: { '@type': 'MedicalWebPage', name: root[l], url: SITE + url(root.id, l) } } : {}),
       });
@@ -538,10 +543,14 @@ const homeHead = `<!-- site:start (written by tools/build.mjs) -->
 ${ld({
   '@context': 'https://schema.org',
   '@graph': [
-    { '@type': 'Organization', '@id': ID.org, name: SITE_NAME.en, alternateName: SITE_NAME.bn, url: SITE + '/',
-      logo: `${SITE}/assets/logo-mark.png`, description: SITE_DESC, founder: { '@id': ID.author } },
+    { '@type': 'MedicalOrganization', '@id': ID.org, name: SITE_NAME.en, alternateName: SITE_NAME.bn, url: SITE + '/',
+      logo: `${SITE}/assets/logo-mark.png`, description: SITE_DESC, medicalSpecialty: 'Hematologic', areaServed: AREA,
+      founder: { '@id': ID.author }, member: { '@id': ID.author }, ...(SAME_AS.length ? { sameAs: SAME_AS } : {}) },
     { '@type': 'Person', '@id': ID.author, name: AUTHOR.en, alternateName: AUTHOR.bn, honorificSuffix: CRED.en,
-      jobTitle: 'Clinical Hematologist', url: `${SITE}/#about`, knowsAbout: ['Hematology', 'Anaemia', 'Thalassemia'] },
+      jobTitle: 'Clinical Hematologist', url: `${SITE}/#about`, workLocation: AREA, worksFor: { '@id': ID.org },
+      hasOccupation: { '@type': 'Occupation', name: 'Clinical Hematologist', occupationLocation: AREA },
+      knowsAbout: ['Hematology', 'Anaemia', 'Iron deficiency', 'Vitamin B12 deficiency', 'Thalassemia', 'HbE', 'Blood transfusion', 'Iron chelation'],
+      ...(SAME_AS.length ? { sameAs: SAME_AS } : {}) },
     { '@type': 'WebSite', '@id': ID.site, url: SITE + '/', name: SITE_NAME.en, alternateName: SITE_NAME.bn,
       description: SITE_DESC, inLanguage: LANGS, publisher: { '@id': ID.org } },
   ],
@@ -570,7 +579,7 @@ writeFileSync(join(ROOT, 'llms.txt'), `# ${SITE_NAME.en} (${SITE_NAME.bn})
 
 > ${SITE_DESC}
 
-Author: ${AUTHOR.en}, ${CRED.en}. Every chapter exists in Bengali and in English.
+Author: ${AUTHOR.en}, ${CRED.en}, clinical hematologist in Kolkata. Every chapter exists in Bengali and in English, and each one ends with when to go to hospital and which questions to take to a doctor.
 
 ## Chapters (English)
 ${llmsList('en')}
