@@ -14,7 +14,7 @@ Dengue is spread by mosquito bites. A few days after the bite comes a sudden hig
 
 Most people get better in one to two weeks. A smaller number develop severe dengue, and that is what everyone is trying to catch in time.
 
-The severe signs often come after the fever has gone away, within a day or two. So keep watching closely on the day the fever breaks and the day after. A second dengue infection, in a later year, carries a higher risk of severe dengue.
+The severe signs often come after the fever has gone away. So keep watching closely on the day the fever breaks and in the days just after. A second dengue infection, in a later year, carries a higher risk of severe dengue.
 
 After recovery, tiredness can last several weeks, then it passes.
 
@@ -36,7 +36,7 @@ Many families think a low count means platelets must be given. Giving platelets 
 - There is no specific medicine for dengue itself. Papaya leaf juice, goat's milk and kiwi are often suggested to raise platelets. Ask the doctor before giving any of them, and never let them take the place of drinks and check-ups.
 - Keep every blood test the doctor asks for, and the next visit.
 
-Dengue does not pass from person to person by touch. The mosquitoes that spread it bite during the day, so use a net for daytime sleep, and empty and clean water containers every week.
+Dengue spreads through mosquito bites. The mosquitoes that spread it bite during the day, so use a net for daytime sleep, and empty and clean water containers every week.
 
 [figure: dengue-myths]
 
@@ -48,13 +48,13 @@ She has no warning signs. Her count turns around on its own and climbs over the 
 
 # Go to a hospital the same day if
 
-- severe stomach pain, or vomiting again and again (three or more times in a day)
+- severe stomach pain, or vomiting again and again
 - bleeding from the gums or nose, blood in vomit, stool or urine, or new bruises
-- fast or difficult breathing
-- the person is very tired or weak, restless or irritable
+- fast breathing
+- the person is very tired, weak or restless
 - cold, pale skin, or great thirst
 
-These can come during the fever or in the day or two after it goes.
+These can come during the fever or soon after it goes.
 
 # Take these questions to your doctor
 
@@ -68,7 +68,7 @@ These can come during the fever or in the day or two after it goes.
 
 ## When is dengue most dangerous?
 
-Often just after the fever goes away, within a day or two. That is when the warning signs need the closest watching.
+Often just after the fever goes away. That is when the warning signs need the closest watching.
 
 ## Does papaya leaf juice raise platelets?
 
@@ -81,6 +81,5 @@ No. A falling count is expected in dengue. Doctors give platelets when there is 
 # Sources
 
 - World Health Organization: Dengue and severe dengue | https://www.who.int/news-room/fact-sheets/detail/dengue-and-severe-dengue
-- MedlinePlus: Dengue fever | https://medlineplus.gov/ency/article/001374.htm
 - National Heart, Lung, and Blood Institute: Thrombocytopenia | https://www.nhlbi.nih.gov/health/thrombocytopenia
 - Whitehorn and others: Prophylactic platelets in dengue, PLoS Neglected Tropical Diseases (2012) | https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3383756/
