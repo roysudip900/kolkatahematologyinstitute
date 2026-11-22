@@ -130,6 +130,17 @@
   "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FFF3D6\"/><circle cx=\"26\" cy=\"26\" r=\"15\" fill=\"#D93A4A\"/><circle cx=\"26\" cy=\"26\" r=\"10\" fill=\"#FFF3D6\"/><circle cx=\"26\" cy=\"26\" r=\"4.5\" fill=\"#D93A4A\"/>"
  },
  {
+  "id": "thalassemia-hbe",
+  "parent": "thalassemia",
+  "bn": "থ্যালাসেমিয়া: হিমোগ্লোবিন ই",
+  "en": "Thalassemia: Hemoglobin E",
+  "desc_bn": "রিপোর্টে HbE? HbE ট্রেট নিরীহ, HbE ডিজিজ সাধারণত হালকা, আর HbE বিটা থ্যালাসেমিয়া হালকা থেকে গুরুতর হতে পারে। কখন আয়রন, কখন নিয়মিত দেখানো।",
+  "desc_en": "HbE on your report? HbE trait is harmless, HbE disease is usually mild, and HbE beta thalassemia can be mild or severe. When iron helps, and why checks matter.",
+  "card_bn": "রিপোর্টে HbE লেখা? বছরের পর বছর আয়রন খেয়েও লাভ নেই? বলা হয়েছিল হালকা থ্যালাসেমিয়া?",
+  "card_en": "HbE on your report? Years of iron with no change? Told it is a mild thalassemia?",
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FFF3D6\"/><circle cx=\"26\" cy=\"26\" r=\"15\" fill=\"#D93A4A\"/><circle cx=\"26\" cy=\"26\" r=\"10\" fill=\"#FFF3D6\"/><circle cx=\"26\" cy=\"26\" r=\"4.5\" fill=\"#D93A4A\"/>"
+ },
+ {
   "id": "low-platelets",
   "bn": "প্লেটলেট কম ও আইটিপি",
   "en": "Low platelets and ITP",
