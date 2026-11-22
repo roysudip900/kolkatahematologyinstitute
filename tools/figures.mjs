@@ -1049,13 +1049,13 @@ const TRY = {
       ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
           c: [['plt', 'আইটিপি একরকমের ব্লাড ক্যান্সার', 'সত্যি?', 'আইটিপিতে রোগ প্রতিরোধ ক্ষমতা ভুল করে প্লেটলেট নষ্ট করে। এটা ক্যান্সার নয়।'],
             ['up', 'প্লেটলেট বেড়ে গেছে, এবার ওষুধ বন্ধ করা যায়', 'সত্যি?', 'ওষুধ বন্ধ করলে কারও কারও আবার বেড়ে যায়। কমানো বা বন্ধ করা ডাক্তারবাবুই ঠিক করবেন।'],
-            ['steroid', 'দোকান থেকে স্টেরয়েড কিনে খেলেই প্লেটলেট বাড়বে', 'সত্যি?', 'ডাক্তারের নজর ছাড়া স্টেরয়েডে সংক্রমণ, ডায়াবেটিস, হাই প্রেশার আর হাড় দুর্বল হতে পারে, আর হঠাৎ ছাড়াও বিপজ্জনক। আগে হেমাটোলজিস্টকে জিজ্ঞেস করুন।'],
+            ['steroid', 'প্লেটলেট বাড়াতে দোকান থেকে স্টেরয়েড কিনে খাওয়াই যায়', 'সত্যি?', 'ডাক্তারের নজর ছাড়া স্টেরয়েডে সংক্রমণ, ডায়াবেটিস, হাই প্রেশার আর হাড় দুর্বল হতে পারে, আর হঠাৎ ছাড়াও বিপজ্জনক। আগে হেমাটোলজিস্টকে জিজ্ঞেস করুন।'],
             ['pill', 'জ্বর-ব্যথায় যেকোনো ওষুধ চলে', 'সত্যি?', 'অ্যাসপিরিন আর আইবুপ্রোফেনে রক্ত পড়া বাড়তে পারে। কোনটা নিরাপদ, ডাক্তারবাবুকে জিজ্ঞেস করুন।']],
           cap: 'প্রত্যেকের আইটিপি আলাদা। যে ডাক্তারবাবু দেখছেন, তাঁকে জিজ্ঞেস করুন।' }
       : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
           c: [['plt', 'ITP is a kind of blood cancer', 'True?', 'In ITP the immune system destroys platelets by mistake. It is not a cancer.'],
             ['up', 'The count is up, so the medicine can stop', 'True?', 'Some people get worse when a medicine is stopped. Only the doctor lowers or stops it.'],
-            ['steroid', 'Steroids from the chemist will raise the count', 'True?', 'Without a doctor watching, steroids can cause infections, diabetes, high blood pressure and weak bones, and stopping suddenly is dangerous too. Ask your hematologist first.'],
+            ['steroid', 'Steroids from the chemist are a safe way to raise the count', 'True?', 'Without a doctor watching, steroids can cause infections, diabetes, high blood pressure and weak bones, and stopping suddenly is dangerous too. Ask your hematologist first.'],
             ['pill', 'Any medicine is fine for fever or pain', 'True?', 'Aspirin and ibuprofen can make bleeding worse. Ask the doctor which one is safe.']],
           cap: 'Every person’s ITP is different. Ask the doctor who is looking after you.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
