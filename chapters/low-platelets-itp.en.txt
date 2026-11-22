@@ -119,5 +119,5 @@ Yes, many do. Tell your hematologist before you plan a pregnancy. Your count wil
 - National Heart, Lung, and Blood Institute: Platelet disorders, treatment | https://www.nhlbi.nih.gov/health/platelet-disorders/treatment
 - National Heart, Lung, and Blood Institute: Living with platelet disorders | https://www.nhlbi.nih.gov/health/platelet-disorders/living-with
 - National Heart, Lung, and Blood Institute: Pregnancy and platelet disorders | https://www.nhlbi.nih.gov/health/platelet-disorders/pregnancy
-- NHS: Steroids | https://www.nhs.uk/conditions/steroids/
-- NHS: Prednisolone | https://www.nhs.uk/medicines/prednisolone/
+- NHS: Steroids | https://www.nhs.uk/medicines/steroids/
+- NHS: Prednisolone | https://www.nhs.uk/medicines/prednisolone-tablets-and-liquid/
