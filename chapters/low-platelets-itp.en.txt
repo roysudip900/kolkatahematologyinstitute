@@ -49,6 +49,24 @@ The doctor chooses from a few kinds of treatment:
 
 Some people get worse when a medicine is stopped. So a dose is lowered or stopped only by the doctor, even when the count looks good.
 
+## Steroids without a hematologist
+
+Some people buy steroids from the chemist, or go back to an old prescription, without asking their hematologist. This is dangerous. Steroids do not suit everyone, and how much to take, for how long, and how to come off them is planned for each person.
+
+Taken without a doctor watching, especially at a high dose or for a long time, steroids can cause:
+
+- infections that come more often and can be serious
+- high blood sugar or diabetes
+- high blood pressure
+- weak, thinning bones
+- mood changes, low mood, anxiety and poor sleep
+- weight gain and a round, puffy face
+- eye problems such as cataract and glaucoma
+- indigestion and heartburn
+- slow growth in children
+
+Stopping them suddenly after a while can be dangerous too, because the body may not make enough of its own steroid hormone for a time. If you have been taking steroids on your own, tell your hematologist now, and ask before you stop them.
+
 [figure: itp-cards]
 
 # When a baby is planned
@@ -68,6 +86,7 @@ The teacher's ITP is still there after a year. She takes the medicine her hemato
 - a sudden severe headache, vomiting, unusual sleepiness or confusion, especially after a fall or a knock on the head
 - a period so heavy that you feel faint or dizzy
 - a fever, if the spleen has been removed
+- vomiting, severe weakness, dizziness or fainting while taking steroids, or soon after stopping them
 
 # Take these questions to your doctor
 
