@@ -95,7 +95,7 @@ A line on its own such as `[figure: inheritance]` puts a moving illustration, wi
 | `platelet-signs` | Touch: tick the skin and bleeding signs noticed, plus what the doctor will ask; red-flag signs show "go to a hospital today"; the list can be sent to the doctor | Low platelets and ITP |
 | `dengue-myths` | Touch: four flip cards of dengue beliefs (fever gone means safe, low count needs platelets, papaya leaf cures, any painkiller is fine), each turned over to show what is true | Low platelets: dengue |
 | `iron-troubles` | Touch: five things that happen while taking iron (black stools, upset stomach, constipation, taking it with tea, hemoglobin not rising); tapping one shows what it means and what to ask | Anaemia: iron deficiency and taking iron |
-| `cbc-reader` | Touch: tap a line on the report (hemoglobin, PCV, MCV, white cells, platelets) to see what low and high can mean | Your blood report (CBC) |
+| `cbc-reader` | Touch: tap a line on the report (hemoglobin, PCV, MCV, white cells, platelets) to see what it measures and what to ask the doctor | Your blood report (CBC) |
 
 The ones marked "Touch" respond to the reader's finger. Each one plays a short demonstration once when the reader reaches it, and stays still on phones set to reduce motion.
 

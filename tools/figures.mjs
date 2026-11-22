@@ -999,23 +999,25 @@ const TRY = {
       `<div class="tr-out" aria-live="polite"><p class="tr-pick">${esc(t.pick)}</p>${panels}</div>`;
     return { cap: t.cap, cls: 'tr wg', html };
   },
-  // Blood report (CBC): tap a line on the report to see what low and high can mean.
+  // Blood report (CBC): tap a line on the report to see what it measures and what to ask the doctor.
   'cbc-reader'(l) {
+    // Dr. Roy, 2026-11-22: no lists of diseases for a high or low value (readers may diagnose and treat themselves).
+    // Each line shows only what it measures and what to ask the doctor.
     const t = l === 'bn'
-      ? { h: 'রিপোর্টের কোন লাইন?', sub: 'যে লাইনটা নিয়ে ভাবছেন, তাতে চাপ দিন।', pick: 'উপরে একটা বেছে নিন।', rows: ['কম হলে হতে পারে', 'বেশি হলে হতে পারে'],
-          p: [['হিমোগ্লোবিন', 'অ্যানিমিয়া, বা থ্যালাসেমিয়া বা সিকল সেলের মতো অসুখ।', 'এর কয়েকটা কারণ আছে। কী মানে, ডাক্তারবাবুকে জিজ্ঞেস করুন।'],
-            ['পিসিভি (হেমাটোক্রিট)', 'অ্যানিমিয়া।', 'শরীরে জল কম থাকা।'],
-            ['এমসিভি', 'আয়রনের অভাবে অ্যানিমিয়া, বা থ্যালাসেমিয়া, থ্যালাসেমিয়ার বাহক হলেও।', 'এর কয়েকটা কারণ আছে। ডাক্তারবাবুকে জিজ্ঞেস করুন।'],
-            ['শ্বেত কণিকা (TLC)', 'সংক্রমণ, রোগ প্রতিরোধ ক্ষমতার সমস্যা, কখনো রক্তের ক্যান্সার।', 'সংক্রমণ, রোগ প্রতিরোধ ক্ষমতার সমস্যা, কখনো রক্তের ক্যান্সার।'],
-            ['প্লেটলেট', 'রক্ত পড়ার সমস্যা। প্লেটলেট কম ও আইটিপি নিয়ে আলাদা আলোচনা আছে।', 'রক্ত জমাট বাঁধার সমস্যা।']],
-          cap: 'একটা লাইন দেখে কিছু বলা যায় না। ডাক্তারবাবু সব লাইন একসঙ্গে, আর আপনি কেমন আছেন, দেখে বলবেন।' }
-      : { h: 'Which line on your report?', sub: 'Tap the line you are wondering about.', pick: 'Choose one above.', rows: ['Low can mean', 'High can mean'],
-          p: [['Hemoglobin', 'Anaemia, or conditions such as thalassemia or sickle cell disease.', 'There are several reasons. Ask your doctor what it means for you.'],
-            ['PCV (hematocrit)', 'Anaemia.', 'Too little water in the body (dehydration).'],
-            ['MCV', 'Anaemia from low iron, or thalassemia, including the carrier state.', 'There are several reasons. Ask your doctor.'],
-            ['White cells (TLC)', 'An infection, a problem with the defence system, sometimes a blood cancer.', 'An infection, a problem with the defence system, sometimes a blood cancer.'],
-            ['Platelets', 'A bleeding problem. The Low platelets and ITP page goes further.', 'A clotting problem.']],
-          cap: 'One line on its own cannot tell you much. Your doctor reads all the lines together, with how you are.' };
+      ? { h: 'রিপোর্টের কোন লাইন?', sub: 'যে লাইনটা নিয়ে ভাবছেন, তাতে চাপ দিন।', pick: 'উপরে একটা বেছে নিন।', rows: ['এটা কী মাপে', 'ডাক্তারবাবুকে জিজ্ঞেস করুন'],
+          p: [['হিমোগ্লোবিন', 'লোহিত কণিকার সেই অংশ, যা অক্সিজেন বয়।', 'আমার হিমোগ্লোবিন কি ঠিক আছে, না আবার দেখতে হবে?'],
+            ['পিসিভি (হেমাটোক্রিট)', 'রক্তের কতটা অংশ লোহিত কণিকা।', 'আমার পিসিভি নিয়ে চিন্তার কিছু আছে কি?'],
+            ['এমসিভি', 'লোহিত কণিকার গড় আকার।', 'আমার এমসিভি কি ঠিক আছে? কিছু করার দরকার আছে?'],
+            ['শ্বেত কণিকা (TLC)', 'সংক্রমণের সঙ্গে লড়ার কণিকা।', 'আমার শ্বেত কণিকার মাপ কি ঠিক আছে?'],
+            ['প্লেটলেট', 'রক্ত পড়া বন্ধ করার ছোট্ট কণা।', 'আমার প্লেটলেট কি ঠিক আছে, না আবার দেখতে হবে?']],
+          cap: 'বেশি বা কম মানে কী, সেটা ডাক্তারবাবু সব লাইন আর আপনি কেমন আছেন দেখে বলবেন। রিপোর্ট দেখে নিজে কোনো ওষুধ শুরু বা বন্ধ করবেন না।' }
+      : { h: 'Which line on your report?', sub: 'Tap the line you are wondering about.', pick: 'Choose one above.', rows: ['What it measures', 'Ask your doctor'],
+          p: [['Hemoglobin', 'The part of the red cells that carries oxygen.', 'Is my hemoglobin fine, or should it be checked again?'],
+            ['PCV (hematocrit)', 'How much of the blood is made of red cells.', 'Is there anything to think about in my PCV?'],
+            ['MCV', 'The average size of the red cells.', 'Is my MCV fine? Does anything need doing?'],
+            ['White cells (TLC)', 'The cells that fight infection.', 'Is my white cell count fine?'],
+            ['Platelets', 'Tiny pieces in the blood that help stop bleeding.', 'Is my platelet count fine, or should it be checked again?']],
+          cap: 'Your doctor tells you what a high or low value means, from all the lines and how you are. Do not start or stop any medicine on your own because of a report.' };
     const dot = (c) => `<rect x="10" y="14" width="32" height="26" rx="5" fill="#fff" stroke="${C.mintLine}" stroke-width="2"/><path d="M15 22h14M15 28h18M15 34h10" stroke="${C.muted}" stroke-width="2" stroke-linecap="round"/><circle cx="38" cy="16" r="7" fill="${c}"/>`;
     const icon = [dot(C.red), dot(C.rose), dot(C.amber), dot(C.o2), dot('#7A5AD1')];
     const tabs = t.p.map((x, i) => `<button type="button" class="tr-b" aria-pressed="false" data-i="${i}"><svg viewBox="0 0 52 52" aria-hidden="true">${icon[i]}</svg><span>${esc(x[0])}</span></button>`).join('');
