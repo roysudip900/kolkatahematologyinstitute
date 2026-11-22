@@ -12,7 +12,7 @@ The mother wants to know why nothing is being given. The teacher wants to know w
 
 # What is going on in ITP
 
-Platelets are the tiny cells that plug a cut. In ITP, the body's defence system, the immune system, attacks its own platelets by mistake, and the body may also make fewer of them. Why this happens is not known. In children it can follow an infection.
+Platelets are the tiny cells that plug a cut. In ITP, the body's defence system, the immune system, attacks its own platelets by mistake, and the body may also make fewer of them. Why this happens is not known. An infection can set it off.
 
 There is no single quick test for it. The doctor looks at the whole report and at the platelets under the microscope, and sometimes needs a bone marrow test to be sure it is ITP and not another cause.
 
@@ -26,7 +26,7 @@ For most children, ITP is not a serious illness. It often goes away by itself wi
 
 Watching means repeat counts on the dates the doctor gives, knowing the warning signs, and keeping away from rough games for now. Ask the doctor which games and sports are safe.
 
-No tonic, juice or milk has to be added. If the family wants to give anything, a herbal remedy included, show it to the doctor first. Be careful with painkillers. Aspirin and ibuprofen can make bleeding worse, and many fever medicines from the chemist contain them. Ask the doctor which one to give.
+No tonic, juice or milk has to be added. If the family wants to give anything, a herbal remedy included, show it to the doctor first. Be careful with painkillers. Aspirin and ibuprofen can make bleeding worse, and many medicines from the chemist contain them. Ask the doctor which one to give.
 
 When ITP in a child does not settle, or there is bleeding, treatment starts.
 
@@ -34,7 +34,7 @@ When ITP in a child does not settle, or there is bleeding, treatment starts.
 
 Her heavy periods and bleeding gums were signs of the low count. Losing blood every month can also lower the hemoglobin, so she may be tired and pale as well.
 
-In adults, ITP that lasts a year or more is common. It varies from person to person and can go on for years. Even so, most people with long-lasting ITP can stop treatment at some point and keep a healthy count, and people with serious forms still live for decades.
+ITP that lasts a year or more mostly affects adults. It varies from person to person and can go on for years. Even so, most people with long-lasting ITP can stop treatment at some point and keep a healthy count, and people with serious forms still live for decades.
 
 She can expect regular blood tests and a plan that changes with her count.
 
@@ -43,7 +43,7 @@ She can expect regular blood tests and a plan that changes with her count.
 Some people need no treatment, only checks. When treatment is needed, the doctor chooses from a few kinds:
 
 - Steroid medicines, often the first one tried. They calm the defence system so the count rises. They have side effects, especially when taken for a long time, so the doctor watches closely.
-- A drip of immunoglobulin, which can raise the count quickly.
+- A drip of immunoglobulin, which can raise the count and is also used for serious bleeding.
 - Medicines that help the body make more platelets.
 - Other medicines that stop the defence system destroying platelets.
 - Sometimes an operation to remove the spleen, which raises the count but brings a higher risk of infection, so vaccines are given and any fever needs a doctor.
