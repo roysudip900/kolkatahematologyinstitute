@@ -49,7 +49,7 @@ These signs are common, and most of the time the cause is not cancer. A blood co
 
 Each blood cancer is different, and how serious it is depends on the type, the person's age and general health. Many can be treated, and some can be cured:
 
-- Acute lymphoblastic leukaemia, the most common cancer in children, now has very good results, and most children who complete treatment survive.
+- Acute lymphoblastic leukaemia, the most common cancer in children, now has very good results, and where full treatment is available, most children who complete it survive.
 - Hodgkin lymphoma, if caught early, can often be removed completely by treatment, though it can come back.
 - Some types, such as chronic lymphocytic leukaemia and myeloma, usually cannot be cured, but treatment can control them, often for years.
 
