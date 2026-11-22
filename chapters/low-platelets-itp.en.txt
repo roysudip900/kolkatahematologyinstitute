@@ -1,14 +1,14 @@
-> ITP is when the body's own defence system destroys platelets by mistake, so bruises and red spots come easily. In children it often settles by itself within weeks or months, while in adults it more often lasts, so a hematologist decides whether to watch or treat, and bleeding that will not stop needs a hospital the same day.
+> ITP is when the body's own defence system destroys platelets by mistake, so bruises and red spots come easily. In children it often settles by itself within weeks or months, while in adults it more often lasts, so a hematologist plans the care, and bleeding that will not stop needs a hospital the same day.
 
-The doctor wrote no medicine, and that was what frightened the mother most.
+The red dots came a week after the fever, first on her legs, then on her arms.
 
-Her daughter is three. A week after a fever, small red dots appeared on her legs, then a bruise on her arm that nobody could explain. The report showed very few platelets. The hematologist examined her, looked at the blood under the microscope, and said it was most likely ITP. Then the doctor said they would watch her closely for now.
+She is three. A few days later a bruise appeared on her arm that nobody could explain. The report showed very few platelets. The hematologist examined her, looked at the blood under the microscope, and said it was most likely ITP.
 
-On the way home the grandmother asked why they had not been given a tonic at least. A neighbour sent a message about goat milk.
+On the way home the grandmother said a tonic would build her blood. A neighbour sent a message about goat milk.
 
 In another part of the city, a schoolteacher of twenty-eight has had heavy periods for a year. Her gums bleed when she brushes. She thought it was weakness. A blood test, done because she and her husband are hoping for a baby, showed a low platelet count. It was low again a month later.
 
-The mother wants to know why nothing is being given. The teacher wants to know whether she can still have a child.
+The mother wants to know whether it will ever go away. The teacher wants to know whether she can still have a child.
 
 # What is going on in ITP
 
@@ -20,19 +20,19 @@ In children ITP is usually short lived. In adults it more often lasts a year or 
 
 [figure: itp-paths]
 
-# The little girl may need only watching
+# The little girl's ITP often settles
 
-For most children, ITP is not a serious illness. It often goes away by itself within a few weeks or months and does not come back. When the count is low but there is little or no bleeding, the doctor may only keep checking it.
+For most children, ITP is not a serious illness. It often goes away within a few weeks or months and does not come back. Her hematologist plans her care and how often to check the count.
 
-Watching means repeat counts on the dates the doctor gives, knowing the warning signs, and keeping away from rough games for now. Ask the doctor which games and sports are safe.
+While the count is low, keep the dates for repeat counts, know the warning signs, and keep her away from rough games. Ask the doctor which games and sports are safe.
 
 No tonic, juice or milk has to be added. If the family wants to give anything, a herbal remedy included, show it to the doctor first. Be careful with painkillers. Aspirin and ibuprofen can make bleeding worse, and many medicines from the chemist contain them. Ask the doctor which one to give.
-
-When ITP in a child does not settle, or there is bleeding, treatment starts.
 
 # The teacher's ITP may last
 
 Her heavy periods and bleeding gums were signs of the low count. Losing blood every month can also lower the hemoglobin, so she may be tired and pale as well.
+
+In ITP, life-threatening bleeding in the brain or in the organs inside the body can happen, and it usually starts with minor bleeding, such as heavy periods or bleeding gums. So tell the doctor about any bleeding, however small, and have a doctor check every nosebleed.
 
 ITP that lasts a year or more mostly affects adults. It varies from person to person and can go on for years. Even so, most people with long-lasting ITP can stop treatment at some point and keep a healthy count, and people with serious forms still live for decades.
 
@@ -40,7 +40,7 @@ She can expect regular blood tests and a plan that changes with her count.
 
 # What treatment can do
 
-Some people need no treatment, only checks. When treatment is needed, the doctor chooses from a few kinds:
+The doctor chooses from a few kinds of treatment:
 
 - Steroid medicines, often the first one tried. They calm the defence system so the count rises. They have side effects, especially when taken for a long time, so the doctor watches closely.
 - A drip of immunoglobulin, which can raise the count and is also used for serious bleeding.
@@ -51,15 +51,33 @@ Some people need no treatment, only checks. When treatment is needed, the doctor
 
 Some people get worse when a medicine is stopped. So a dose is lowered or stopped only by the doctor, even when the count looks good.
 
+## Steroids without a hematologist
+
+Some people buy steroids from the chemist, or go back to an old prescription, without asking their hematologist. This is very dangerous. Steroids do not suit everyone, and how much to take, for how long, and how to come off them is planned for each person.
+
+Taken without a doctor watching, especially at a high dose or for a long time, steroids can cause:
+
+- infections that come more often and can be serious
+- high blood sugar or diabetes
+- high blood pressure
+- weak, thinning bones
+- mood changes, low mood, anxiety and poor sleep
+- weight gain and a round, puffy face
+- eye problems such as cataract and glaucoma
+- indigestion and heartburn
+- slow growth in children
+
+Stopping them suddenly after a while can be dangerous too, because the body may not make enough of its own steroid hormone for a time. If you have been taking steroids on your own, tell your hematologist now, and ask before you stop them.
+
 [figure: itp-cards]
 
 # When a baby is planned
 
-Pregnancy can make ITP worse, so the doctor wants to know before you plan a baby. During pregnancy the count is checked often, by a hematologist together with a doctor for high-risk pregnancies. Many women need no treatment. If the count is very low near the end, treatment can raise it before delivery to lower the risk of bleeding. The baby may have a low count at birth, and most of the time it is normal within a few days.
+Pregnancy can make ITP worse, so the doctor wants to know before you plan a baby. During pregnancy the count is checked often, by a hematologist together with a doctor for high-risk pregnancies. If the count is very low near the end, treatment can raise it before delivery to lower the risk of bleeding. The baby may have a low count at birth, and most of the time it is normal within a few days.
 
 # How the stories go on
 
-The little girl goes for her checks with her mother, and the grandmother is talked out of the tonic. The spots fade over the following weeks. The count climbs back, and the doctor spaces out the visits.
+The little girl's mother keeps every appointment and gives only what the hematologist prescribes, and the grandmother is talked out of the tonic. The spots fade over the following weeks. The count climbs back, and the doctor spaces out the visits.
 
 The teacher's ITP is still there after a year. She takes the medicine her hematologist chooses, sees a gynaecologist for the heavy periods, and has her iron checked. When she and her husband are ready, she tells both doctors first, and her pregnancy is planned around her count.
 
@@ -70,13 +88,14 @@ The teacher's ITP is still there after a year. She takes the medicine her hemato
 - a sudden severe headache, vomiting, unusual sleepiness or confusion, especially after a fall or a knock on the head
 - a period so heavy that you feel faint or dizzy
 - a fever, if the spleen has been removed
+- vomiting, severe weakness, dizziness or fainting while taking steroids, or soon after stopping them
 
 # Take these questions to your doctor
 
 A hematologist can tell you which path your ITP is on. Bring every report, and ask:
 
 - Is this ITP, or could it be something else?
-- Does it need treatment now, or watching?
+- What is the plan for my ITP, and for how long?
 - When should the count be checked again?
 - Which painkiller and fever medicine are safe?
 - Which games, sports or work should we avoid for now?
@@ -102,3 +121,5 @@ Yes, many do. Tell your hematologist before you plan a pregnancy. Your count wil
 - National Heart, Lung, and Blood Institute: Platelet disorders, treatment | https://www.nhlbi.nih.gov/health/platelet-disorders/treatment
 - National Heart, Lung, and Blood Institute: Living with platelet disorders | https://www.nhlbi.nih.gov/health/platelet-disorders/living-with
 - National Heart, Lung, and Blood Institute: Pregnancy and platelet disorders | https://www.nhlbi.nih.gov/health/platelet-disorders/pregnancy
+- NHS: Steroids | https://www.nhs.uk/medicines/steroids/
+- NHS: Prednisolone | https://www.nhs.uk/medicines/prednisolone-tablets-and-liquid/
