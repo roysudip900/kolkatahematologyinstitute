@@ -32,6 +32,17 @@
   "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FDECEE\"/><path d=\"M17 28h18l-3 12H20z\" fill=\"#C9744A\"/><path d=\"M26 28c-1-6-4-9-9-10 1 6 4 9 9 10zM26 28c1-7 4-11 9-12-1 6-4 10-9 12z\" fill=\"#2E8B57\"/><circle cx=\"26\" cy=\"14\" r=\"3\" fill=\"#D93A4A\"/>"
  },
  {
+  "id": "anaemia-iron",
+  "parent": "anaemia",
+  "bn": "অ্যানিমিয়া: আয়রনের অভাব আর আয়রন খাওয়া",
+  "en": "Anaemia: iron deficiency and taking iron",
+  "desc_bn": "কাদের আয়রন কম পড়ে, ডাক্তারবাবু আগে কারণ খোঁজেন কেন, আয়রন ট্যাবলেট কীভাবে খাবেন (কালো পায়খানা, পেট গোলানো, চা), কতদিন লাগে, আর হিমোগ্লোবিন না বাড়লে কী করবেন।",
+  "desc_en": "Who runs short of iron, why the reason is looked for first, taking iron tablets (black stools, upset stomach, tea), how long it takes, and when hemoglobin does not rise.",
+  "card_bn": "আয়রন ট্যাবলেটে পেট গোলাচ্ছে? পায়খানা কালো? মাসের পর মাস খেয়েও হিমোগ্লোবিন বাড়ছে না?",
+  "card_en": "Iron tablets upsetting your stomach? Stools gone black? Months of iron and hemoglobin still low?",
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FDECEE\"/><path d=\"M17 28h18l-3 12H20z\" fill=\"#C9744A\"/><path d=\"M26 28c-1-6-4-9-9-10 1 6 4 9 9 10zM26 28c1-7 4-11 9-12-1 6-4 10-9 12z\" fill=\"#2E8B57\"/><circle cx=\"26\" cy=\"14\" r=\"3\" fill=\"#D93A4A\"/>"
+ },
+ {
   "id": "thalassemia",
   "bn": "থ্যালাসেমিয়া",
   "en": "Thalassemia",

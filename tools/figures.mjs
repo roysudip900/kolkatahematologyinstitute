@@ -356,6 +356,42 @@ const FIG = {
         body),
     };
   },
+  // Anaemia, iron: two tanks of body iron. Tablets drip iron into both. In the first, a leak (heavy periods or
+  // bleeding) lets it out, so the level hardly rises; in the second the leak is treated and the level slowly rises.
+  'iron-tank'(l) {
+    const t = l === 'bn'
+      ? { a: 'কারণের চিকিৎসা হয়নি', b: 'কারণের চিকিৎসা হয়েছে', drip: 'আয়রন ট্যাবলেট', leak: 'বেশি মাসিক বা রক্তপাত', iron: 'আয়রন',
+          cap: 'আয়রন ট্যাবলেট শরীরে আয়রন ভরে। কিন্তু বেশি মাসিক বা অন্য রক্তপাতে আয়রন বেরিয়ে যেতে থাকলে মাপ প্রায় বাড়ে না। কারণের চিকিৎসা হলে সেই ট্যাবলেটেই কয়েক মাসে আয়রন ভরে ওঠে। ছবিতে কোনো আসল মাপ নেই।' }
+      : { a: 'leak not treated', b: 'leak treated', drip: 'iron tablets', leak: 'heavy periods or bleeding', iron: 'iron',
+          cap: 'Iron tablets put iron in. If iron keeps leaking out, with heavy periods or other bleeding, the level hardly rises. Once the leak is treated, the same tablets fill the store over some months. The drawing has no real numbers.' };
+    const pill = (x) => `<g transform="translate(${x},28)"><rect x="-12" y="-7" width="24" height="14" rx="7" fill="#fff" stroke="${C.red}" stroke-width="2"/><rect x="-12" y="-7" width="12" height="14" rx="7" fill="${C.red}"/></g>`;
+    const drops = (x) => [0, 1, 2].map((i) => `<circle class="it-d" cx="${x}" cy="44" r="4" fill="${C.red}" style="animation-delay:${(i * 0.9).toFixed(1)}s"/>`).join('');
+    const tank = (x) => `<path d="M${x - 46} 70v84a14 14 0 0 0 14 14h64a14 14 0 0 0 14-14V70" fill="#fff" stroke="${C.mintLine}" stroke-width="2.5"/>`;
+    const clip = (x, id) => `<clipPath id="${id}"><path d="M${x - 45} 71v83a13 13 0 0 0 13 13h64a13 13 0 0 0 13-13V71z"/></clipPath>`;
+    const A = 92, B = 268;
+    const body =
+      `<defs>${clip(A, `it-a-${l}`)}${clip(B, `it-b-${l}`)}</defs>` +
+      T(180, 14, t.drip, { size: 12.5, fill: C.muted, w: 600 }) +
+      pill(A) + pill(B) + drops(A) + drops(B) + tank(A) + tank(B) +
+      `<g clip-path="url(#it-a-${l})"><rect x="${A - 50}" y="146" width="100" height="40" fill="${C.roseBg}"/><rect x="${A - 50}" y="146" width="100" height="4" fill="${C.red}" opacity=".55"/></g>` +
+      `<g clip-path="url(#it-b-${l})"><g class="it-rise"><rect x="${B - 50}" y="146" width="100" height="140" fill="${C.roseBg}"/><rect x="${B - 50}" y="146" width="100" height="4" fill="${C.red}" opacity=".55"/></g></g>` +
+      T(A, 162, t.iron, { size: 12.5, fill: C.red, w: 600 }) + T(B, 162, t.iron, { size: 12.5, fill: C.red, w: 600 }) +
+      `<path d="M${A + 46} 156h14v10" fill="none" stroke="${C.muted}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>` +
+      [0, 1].map((i) => `<circle class="it-out" cx="${A + 60}" cy="172" r="3.5" fill="${C.red}" style="animation-delay:${(i * 0.9).toFixed(1)}s"/>`).join('') +
+      T(A, 194, t.leak, { size: 11.5, fill: C.muted, w: 600 }) +
+      `<path d="M${B + 46} 156h14v10" fill="none" stroke="${C.mintLine}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>` +
+      `<path d="M${B + 54} 174l8 8M${B + 62} 174l-8 8" stroke="${C.teal2}" stroke-width="2.4" stroke-linecap="round"/>` +
+      T(A, 216, t.a, { size: 13.5, fill: C.red, w: 700 }) + T(B, 216, t.b, { size: 13.5, fill: C.teal2, w: 700 });
+    return {
+      cap: t.cap,
+      svg: svg('it', 360, 226, t.cap,
+        '.it-d{animation:itdrop 2.7s ease-in infinite;opacity:0}@keyframes itdrop{0%{transform:translateY(0);opacity:0}10%{opacity:1}80%{opacity:1}100%{transform:translateY(96px);opacity:0}}' +
+        '.it-out{animation:itout 1.8s ease-in infinite;opacity:0}@keyframes itout{0%{transform:translateY(0);opacity:0}15%{opacity:1}100%{transform:translateY(14px);opacity:0}}' +
+        '.it-rise{animation:itrise 10s ease-in-out infinite}@keyframes itrise{0%{transform:translateY(0)}85%,100%{transform:translateY(-58px)}}' +
+        '@media (prefers-reduced-motion:reduce){.it-d,.it-out{animation:none;opacity:0}.it-rise{animation:none;transform:translateY(-58px)}}',
+        body),
+    };
+  },
 };
 
 // Short videos made by Dr. Roy, kept in assets/video/<name>.mp4 with a still picture <name>.jpg.
@@ -903,6 +939,36 @@ const TRY = {
         `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
         `<span class="fc back"><span class="k">${esc(t.sign)}</span><span>${esc(back)}</span></span></button>`).join('') + '</div>';
     return { cap: t.cap, cls: 'flipset', html };
+  },
+  // Anaemia, iron: five things that happen while taking iron; tapping one shows what it means and what to ask.
+  'iron-troubles'(l) {
+    const t = l === 'bn'
+      ? { h: 'ট্যাবলেট নিয়ে কী হচ্ছে?', sub: 'আপনার সঙ্গে যেটা মেলে, তাতে চাপ দিন।', pick: 'উপরে একটা বেছে নিন।', rows: ['এর মানে', 'ডাক্তারবাবুকে জিজ্ঞেস করুন'],
+          p: [['পায়খানা কালো', 'আয়রন ট্যাবলেটে পায়খানা কালচে বা কালো হতে পারে, এটা আয়রনেরই জানা প্রভাব। তবে কালো, আঠালো, দুর্গন্ধ পায়খানার সঙ্গে দুর্বলতা বা মাথা ঘোরা থাকলে সেদিনই হাসপাতালে যান।', 'আমার পায়খানার রং কি আয়রনের জন্যই?'],
+            ['পেট গোলায়', 'খাবারের সঙ্গে বা খাওয়ার একটু পরে খেলে কম হতে পারে। ট্যাবলেট চালিয়ে যান আর ডাক্তারবাবুকে জানান, আয়রন একরকমের নয়।', 'খাবারের সঙ্গে খাওয়া যায়, নাকি অন্য আয়রন দেওয়া যায়?'],
+            ['কোষ্ঠকাঠিন্য', 'আয়রনে এটা হতে পারে। খাওয়া চালিয়ে যান, আর অসুবিধা হলে ডাক্তারবাবুকে বলুন।', 'কোষ্ঠকাঠিন্যের জন্য কী করতে পারি?'],
+            ['চায়ের সঙ্গে খাই', 'চা, কফি আর দুধে শরীর আয়রন কম টেনে নেয়। এগুলো ট্যাবলেটের সময় থেকে সরিয়ে রাখুন।', 'আমার ট্যাবলেট খাওয়ার সবচেয়ে ভালো সময় কোনটা?'],
+            ['হিমোগ্লোবিন বাড়ছে না', 'ডাক্তারবাবুর কাছে ফিরে যান। ট্যাবলেট বাদ পড়ছে, এখনও রক্ত বেরিয়ে যাচ্ছে, অন্ত্র আয়রন টানছে না, বা আয়রনের অভাবই নয়, এর কোনটা দেখতে হবে।', 'আমার হিমোগ্লোবিন বাড়ছে না কেন?']],
+          cap: 'যা-ই হোক, বন্ধ না করে ডাক্তারবাবুকে জানান। প্রায়ই খাওয়ার নিয়মটা বদলে নেওয়া যায়।' }
+      : { h: 'What is happening with your tablets?', sub: 'Tap the one that sounds like you.', pick: 'Choose one above.', rows: ['What it means', 'Ask your doctor'],
+          p: [['Black stools', 'Iron tablets can make stools dark or black, a known effect of the iron. Black, sticky, bad-smelling stools with weakness or dizziness are different: go to a hospital the same day.', 'Is the colour of my stools from the iron?'],
+            ['Upset stomach', 'Taking the tablet with food, or soon after, may help. Keep taking it and tell the doctor. There is more than one kind of iron.', 'Can I take it with food, or try another kind?'],
+            ['Constipation', 'Iron can cause it. Keep taking it, and tell the doctor if it troubles you.', 'What can I do about the constipation?'],
+            ['Taking it with tea', 'Tea, coffee and milk make it harder for the body to take in iron. Keep them away from the tablet.', 'When is the best time for me to take the tablet?'],
+            ['Hemoglobin not rising', 'Go back to the doctor. Tablets missed, blood still being lost, the gut not taking the iron in, or not iron deficiency at all: one of these needs finding.', 'Why is my hemoglobin not rising?']],
+          cap: 'Whatever it is, tell your doctor instead of stopping. The plan can often be changed.' };
+    const icon = [
+      `<circle cx="26" cy="26" r="15" fill="${C.ink}" opacity=".75"/><path d="M26 18v10" stroke="#fff" stroke-width="3" stroke-linecap="round"/><circle cx="26" cy="33.5" r="2.2" fill="#fff"/>`,
+      `<circle cx="26" cy="26" r="15" fill="${C.amberBg}" stroke="${C.amber}" stroke-width="2"/><circle cx="21" cy="23" r="1.6" fill="${C.ink}"/><circle cx="31" cy="23" r="1.6" fill="${C.ink}"/><path d="M19 33c2-3 4 1 7-2s5 1 7-1" fill="none" stroke="${C.ink}" stroke-width="1.8" stroke-linecap="round"/>`,
+      `<g transform="rotate(-30 26 26)"><rect x="12" y="19" width="28" height="14" rx="7" fill="#fff" stroke="${C.red}" stroke-width="2"/><rect x="12" y="19" width="14" height="14" rx="7" fill="${C.red}"/></g><path d="M34 38h8M34 42h8" stroke="${C.muted}" stroke-width="2" stroke-linecap="round"/>`,
+      `<path d="M13 21h22v10a11 11 0 0 1-22 0z" fill="${C.amberBg}" stroke="${C.amber}" stroke-width="2"/><path d="M35 24h3a4.5 4.5 0 0 1 0 9h-3" fill="none" stroke="${C.amber}" stroke-width="2"/><path d="M20 10c0 3 3 3 3 7M27 10c0 3 3 3 3 7" stroke="${C.muted}" stroke-width="1.6" fill="none" stroke-linecap="round"/>`,
+      `<path d="M10 40h33M10 40V11" stroke="${C.muted}" stroke-width="2"/><path d="M13 31l9-1 9 1 10-1" stroke="${C.red}" stroke-width="3" fill="none" stroke-linecap="round"/>`,
+    ];
+    const tabs = t.p.map((x, i) => `<button type="button" class="tr-b" aria-pressed="false" data-i="${i}"><svg viewBox="0 0 52 52" aria-hidden="true">${icon[i]}</svg><span>${esc(x[0])}</span></button>`).join('');
+    const panels = t.p.map((x, i) => `<div class="tr-p" data-i="${i}" hidden><dl><dt>${esc(t.rows[0])}</dt><dd>${esc(x[1])}</dd><dt>${esc(t.rows[1])}</dt><dd>${esc(x[2])}</dd></dl></div>`).join('');
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="tr-tabs">${tabs}</div>` +
+      `<div class="tr-out" aria-live="polite"><p class="tr-pick">${esc(t.pick)}</p>${panels}</div>`;
+    return { cap: t.cap, cls: 'tr wg', html };
   },
 };
 
