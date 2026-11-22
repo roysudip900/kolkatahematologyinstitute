@@ -421,6 +421,42 @@ const FIG = {
         body),
     };
   },
+  // Anaemia, school and anganwadi test: the programme's four steps (test, iron, talk, retest) light up in turn,
+  // and an arrow loops back from the retest, because the child is followed until the anaemia has gone.
+  'school-track'(l) {
+    const t = l === 'bn'
+      ? { h: 'অ্যানিমিয়া মুক্ত ভারতের চারটে ধাপ', s: [['পরীক্ষা', 'আঙুলে এক ফোঁটা'], ['আয়রন', 'যেমন বলেছে'], ['কথা', 'টিচার, কর্মী'], ['আবার পরীক্ষা', 'তারিখ মেনে']], back: 'অ্যানিমিয়া না সারা পর্যন্ত',
+          cap: 'আঙুলে এক ফোঁটা রক্তে পরীক্ষা, স্বাস্থ্যকর্মী যেভাবে বলেছেন সেভাবে আয়রন, কোনো অসুবিধা হলে টিচার বা স্বাস্থ্যকর্মীকে জানানো, আর দেওয়া তারিখে আবার পরীক্ষা। ঠিকমতো খেয়েও হিমোগ্লোবিন না বাড়লে কারণ খুঁজতে বাচ্চাকে বড় হাসপাতালে পাঠানো হয়।' }
+      : { h: "The programme's four steps", s: [['test', 'finger-prick'], ['iron', 'as advised'], ['talk', 'teacher, worker'], ['retest', 'on the date']], back: 'until the anaemia has gone',
+          cap: 'A finger-prick test, iron given the way the health worker explains, telling the teacher or health worker about any trouble, and a retest on the date given. If the hemoglobin has not risen though the iron was taken well, the child is sent to a bigger hospital to find out why.' };
+    const X = [52, 140, 228, 316], Y = 80;
+    const icon = [
+      `<path d="M0-15c6 8 10 13 10 18a10 10 0 0 1-20 0c0-5 4-10 10-18z" fill="${C.red}"/><circle cx="-3" cy="4" r="3" fill="${C.rose}"/>`,
+      `<g transform="rotate(-30)"><rect x="-15" y="-7" width="30" height="14" rx="7" fill="#fff" stroke="${C.o2}" stroke-width="2.2"/><rect x="-15" y="-7" width="15" height="14" rx="7" fill="${C.o2}"/></g>`,
+      `<rect x="-16" y="-14" width="22" height="15" rx="6" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><rect x="-4" y="-2" width="20" height="14" rx="6" fill="${C.amberBg}" stroke="${C.amber}" stroke-width="2"/>`,
+      `<rect x="-14" y="-13" width="28" height="26" rx="4" fill="#fff" stroke="${C.teal2}" stroke-width="2"/><rect x="-14" y="-13" width="28" height="7" rx="3" fill="${C.teal2}"/><circle cx="4" cy="4" r="5.5" fill="none" stroke="${C.red}" stroke-width="2"/>`,
+    ];
+    let body = T(180, 16, t.h, { size: 13, fill: C.muted, w: 600 }) +
+      `<path d="M${X[0]} ${Y}H${X[3]}" stroke="${C.mintLine}" stroke-width="3" stroke-dasharray="2 7" stroke-linecap="round"/>` +
+      `<circle class="st-dot" cx="${X[0]}" cy="${Y}" r="5" fill="${C.teal2}"/>`;
+    X.forEach((x, i) => {
+      body += `<circle class="st-r" cx="${x}" cy="${Y}" r="35" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2.5" opacity="0" style="animation-delay:${i * 2}s"/>` +
+        `<circle cx="${x}" cy="${Y}" r="29" fill="#fff" stroke="${C.mintLine}" stroke-width="2"/>` +
+        `<g transform="translate(${x},${Y})">${icon[i]}</g>` +
+        T(x, 136, t.s[i][0], { size: l === 'bn' ? 13 : 14, w: 700, fill: C.teal }) + T(x, 154, t.s[i][1], { size: 12.5, fill: C.muted });
+    });
+    body += `<g class="st-back"><path d="M${X[3]} 166c0 22-24 28-50 28H102c-26 0-50-6-50-28" fill="none" stroke="${C.teal2}" stroke-width="2.2" stroke-linecap="round"/>` +
+      `<path d="M46 172l6-7 6 7" fill="none" stroke="${C.teal2}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>` +
+      T(180, 212, t.back, { size: 12.5, fill: C.teal2, w: 600 }) + '</g>';
+    return {
+      cap: t.cap,
+      svg: svg('st', 360, 222, t.cap,
+        '.st-r{animation:str 8s ease-in-out infinite}@keyframes str{0%{opacity:0}4%,20%{opacity:1}26%,100%{opacity:0}}' +
+        `.st-dot{animation:stdot 8s ease-in-out infinite}@keyframes stdot{0%,20%{transform:translateX(0)}25%,45%{transform:translateX(88px)}50%,70%{transform:translateX(176px)}75%,100%{transform:translateX(264px)}}` +
+        '.st-back{animation:stb 8s ease-in-out infinite}@keyframes stb{0%,74%{opacity:.15}82%,96%{opacity:1}100%{opacity:.15}}',
+        body),
+    };
+  },
 };
 
 // Short videos made by Dr. Roy, kept in assets/video/<name>.mp4 with a still picture <name>.jpg.
@@ -1020,6 +1056,40 @@ const TRY = {
           cap: 'Your doctor tells you what a high or low value means, from all the lines and how you are. Do not start or stop any medicine on your own because of a report.' };
     const dot = (c) => `<rect x="10" y="14" width="32" height="26" rx="5" fill="#fff" stroke="${C.mintLine}" stroke-width="2"/><path d="M15 22h14M15 28h18M15 34h10" stroke="${C.muted}" stroke-width="2" stroke-linecap="round"/><circle cx="38" cy="16" r="7" fill="${c}"/>`;
     const icon = [dot(C.red), dot(C.rose), dot(C.amber), dot(C.o2), dot('#7A5AD1')];
+    const tabs = t.p.map((x, i) => `<button type="button" class="tr-b" aria-pressed="false" data-i="${i}"><svg viewBox="0 0 52 52" aria-hidden="true">${icon[i]}</svg><span>${esc(x[0])}</span></button>`).join('');
+    const panels = t.p.map((x, i) => `<div class="tr-p" data-i="${i}" hidden><dl><dt>${esc(t.rows[0])}</dt><dd>${esc(x[1])}</dd><dt>${esc(t.rows[1])}</dt><dd>${esc(x[2])}</dd></dl></div>`).join('');
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="tr-tabs">${tabs}</div>` +
+      `<div class="tr-out" aria-live="polite"><p class="tr-pick">${esc(t.pick)}</p>${panels}</div>`;
+    return { cap: t.cap, cls: 'tr wg', html };
+  },
+  // Anaemia, school and anganwadi test: tap what is happening at home with the school's iron; each shows what to do
+  // and what to ask. Nothing tells the family to stop or start iron on their own (CLAUDE.md rule 5).
+  'school-slip'(l) {
+    const t = l === 'bn'
+      ? { h: 'বাড়িতে কী হচ্ছে?', sub: 'আপনার সঙ্গে যেটা মেলে, তাতে চাপ দিন।', pick: 'উপরে একটা বেছে নিন।', rows: ['কী করবেন', 'জিজ্ঞেস করুন'],
+          p: [['খেয়ে গা গোলায়', 'চুপচাপ বন্ধ না করে টিচার বা স্বাস্থ্যকর্মীকে জানান। প্রথম কয়েক সপ্তাহে অনেক সময় কমে আসে, আর কর্মসূচি বলে খাওয়ার পরে খেতে।', 'খাওয়ার পরে খাওয়ানো যায়?'],
+            ['পায়খানা কালচে', 'আয়রনে পায়খানা কালচে হতে পারে, কর্মসূচি বলে এটা স্বাভাবিক। আলকাতরার মতো কালো, লাল বা রক্তমাখা পায়খানা হলে সেদিনই হাসপাতালে যান।', 'এই রং কি আয়রনের জন্য?'],
+            ['জ্বর বা পেট খারাপ', 'পরের বার খাওয়ানোর আগে স্বাস্থ্যকর্মী বা ডাক্তারবাবুকে জিজ্ঞেস করুন। অসুখের সময় কর্মসূচি নিয়মিত আয়রন বন্ধ রাখে, তখন ডাক্তার ঠিক করেন।', 'অসুখের মধ্যে আয়রন চলবে?'],
+            ['টনিকও কিনেছি', 'নিজে থেকে টনিক বা বাড়তি আয়রন যোগ করবেন না। বেশি আয়রন ছোট বাচ্চার প্রাণ নিতে পারে। দুটোই ডাক্তারবাবুকে দেখান।', 'কর্মসূচির আয়রন ছাড়া আর কিছু লাগবে?'],
+            ['থ্যালাসেমিয়া মেজর আছে', 'স্কুলের স্বাস্থ্য দলকে জানান। এই বাচ্চাদের কর্মসূচির নিয়মিত আয়রন দেওয়া হয় না, আয়রনের ব্যাপারে ওদের ডাক্তারবাবুই ঠিক করেন।', 'স্বাস্থ্য দলকে কী জানাব?'],
+            ['পরীক্ষার তারিখ জানি না', 'স্বাস্থ্যকর্মীর কাছে তারিখটা জেনে লিখে রাখুন। আবার পরীক্ষায় বোঝা যায় হিমোগ্লোবিন বাড়ল কিনা।', 'আবার পরীক্ষা কবে, কোথায়?']],
+          cap: 'যা-ই হোক, কিছু বদলানোর আগে স্বাস্থ্যকর্মী বা ডাক্তারবাবুকে জানান। হাসপাতালে যাওয়ার লক্ষণগুলো সব সময় মনে রাখুন।' }
+      : { h: 'What is happening at home?', sub: 'Tap the one that sounds like yours.', pick: 'Choose one above.', rows: ['What to do', 'Ask'],
+          p: [['Feels sick after it', 'Tell the teacher or the health worker instead of quietly stopping it. It often fades in the first few weeks, and the programme suggests taking it after a meal.', 'Can my child take it after a meal?'],
+            ['Stools gone dark', 'Iron can turn stools dark, and the programme says this is expected. Stools that are black and tar-like, or red, or have blood in them need a hospital the same day.', 'Is this colour from the iron?'],
+            ['Fever or loose motions', 'Ask the health worker or your child’s doctor before the next dose. During an illness the programme holds back its routine iron, and a doctor decides.', 'Should the iron go on while my child is ill?'],
+            ['Bought a tonic too', 'Do not add a tonic or more iron on your own. Too much iron can be fatal for a small child. Show both to the doctor.', 'Does my child need anything besides the programme’s iron?'],
+            ['Has thalassemia major', 'Tell the school health team. The programme does not give its routine iron to these children, and their own doctor decides about iron.', 'What should I tell the school health team?'],
+            ['Retest date not known', 'Ask the health worker for the date and write it down. The retest shows whether the hemoglobin has risen.', 'When and where is the retest?']],
+          cap: 'Whatever it is, tell the health worker or your child’s doctor before changing anything. Keep the hospital signs in mind all the time.' };
+    const icon = [
+      `<circle cx="26" cy="26" r="15" fill="${C.amberBg}" stroke="${C.amber}" stroke-width="2"/><circle cx="21" cy="23" r="1.6" fill="${C.ink}"/><circle cx="31" cy="23" r="1.6" fill="${C.ink}"/><path d="M19 33c2-3 4 1 7-2s5 1 7-1" fill="none" stroke="${C.ink}" stroke-width="1.8" stroke-linecap="round"/>`,
+      `<circle cx="26" cy="26" r="15" fill="${C.ink}" opacity=".75"/><path d="M26 18v10" stroke="#fff" stroke-width="3" stroke-linecap="round"/><circle cx="26" cy="33.5" r="2.2" fill="#fff"/>`,
+      `<rect x="22" y="8" width="8" height="28" rx="4" fill="#fff" stroke="${C.red}" stroke-width="2"/><circle cx="26" cy="38" r="7" fill="${C.red}"/><rect x="24.5" y="22" width="3" height="14" fill="${C.red}"/>`,
+      `<rect x="17" y="14" width="18" height="28" rx="4" fill="${C.amberBg}" stroke="${C.amber}" stroke-width="2"/><rect x="20" y="9" width="12" height="6" rx="2" fill="${C.amber}"/><path d="M21 26h10M21 31h10" stroke="${C.amber}" stroke-width="1.8" stroke-linecap="round"/>`,
+      `<circle cx="20" cy="26" r="9" fill="${C.red}"/><circle cx="20" cy="26" r="4" fill="${C.rose}"/><circle cx="34" cy="24" r="7" fill="${C.rose}"/><path d="M31 37h8M35 33v8" stroke="${C.teal2}" stroke-width="2.4" stroke-linecap="round"/>`,
+      `<rect x="11" y="12" width="30" height="28" rx="4" fill="#fff" stroke="${C.teal2}" stroke-width="2"/><rect x="11" y="12" width="30" height="7" rx="3" fill="${C.teal2}"/><path d="M22 27a4 4 0 1 1 5 4v3" fill="none" stroke="${C.red}" stroke-width="2.2" stroke-linecap="round"/><circle cx="27" cy="37.5" r="1.4" fill="${C.red}"/>`,
+    ];
     const tabs = t.p.map((x, i) => `<button type="button" class="tr-b" aria-pressed="false" data-i="${i}"><svg viewBox="0 0 52 52" aria-hidden="true">${icon[i]}</svg><span>${esc(x[0])}</span></button>`).join('');
     const panels = t.p.map((x, i) => `<div class="tr-p" data-i="${i}" hidden><dl><dt>${esc(t.rows[0])}</dt><dd>${esc(x[1])}</dd><dt>${esc(t.rows[1])}</dt><dd>${esc(x[2])}</dd></dl></div>`).join('');
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="tr-tabs">${tabs}</div>` +

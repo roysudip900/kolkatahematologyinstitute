@@ -43,6 +43,17 @@
   "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FDECEE\"/><path d=\"M17 28h18l-3 12H20z\" fill=\"#C9744A\"/><path d=\"M26 28c-1-6-4-9-9-10 1 6 4 9 9 10zM26 28c1-7 4-11 9-12-1 6-4 10-9 12z\" fill=\"#2E8B57\"/><circle cx=\"26\" cy=\"14\" r=\"3\" fill=\"#D93A4A\"/>"
  },
  {
+  "id": "anaemia-school-test",
+  "parent": "anaemia",
+  "bn": "অ্যানিমিয়া: স্কুল আর অঙ্গনওয়াড়ির রক্ত পরীক্ষা",
+  "en": "Anaemia: the school and anganwadi test",
+  "desc_bn": "স্কুল বা অঙ্গনওয়াড়ির পরীক্ষায় বাচ্চার হিমোগ্লোবিন কম? আঙুলের পরীক্ষা কী, আয়রন ট্যাবলেট আর সিরাপ কীভাবে দেবেন, জ্বরের সময় কী করবেন, আর আবার পরীক্ষা কেন জরুরি।",
+  "desc_en": "Your child's hemoglobin was low at the school or anganwadi check? What the finger-prick test is, giving the iron, what to do in a fever, and why the retest matters.",
+  "card_bn": "স্কুলের পরীক্ষায় বাচ্চার হিমোগ্লোবিন কম এসেছে? স্কুল বা অঙ্গনওয়াড়ি আয়রন দিয়েছে?",
+  "card_en": "School health check says your child's hemoglobin is low? Iron tablets or syrup sent home?",
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FDECEE\"/><circle cx=\"26\" cy=\"26\" r=\"15\" fill=\"#F2A7AE\"/><circle cx=\"26\" cy=\"26\" r=\"9\" fill=\"#FDECEE\"/>"
+ },
+ {
   "id": "thalassemia",
   "bn": "থ্যালাসেমিয়া",
   "en": "Thalassemia",
