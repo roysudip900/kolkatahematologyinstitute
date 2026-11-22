@@ -356,6 +356,38 @@ const FIG = {
         body),
     };
   },
+  // Low platelets, ITP: two lines of the platelet count over time, drawn slowly. The child's dips and climbs back by
+  // itself; the adult's dips and stays lower, with regular checks (small marks). No numbers, no real time.
+  'itp-paths'(l) {
+    const P = '#7A5AD1';
+    const t = l === 'bn'
+      ? { a: 'বাচ্চাদের', b: 'বড়দের', ok: 'যথেষ্ট প্লেটলেট', a2: 'প্রায়ই নিজে থেকে সেরে যায়', b2: 'থেকে যেতে পারে, নিয়মিত দেখাতে হয়', time: 'সময়',
+          cap: 'বাচ্চাদের আইটিপিতে প্লেটলেট কমে যায়, আর প্রায়ই কয়েক সপ্তাহ বা মাসে নিজে থেকে আবার বাড়ে। বড়দের বেশি দিন কম থাকতে পারে, তখন নিয়মিত পরীক্ষা (ছোট দাগ) আর দরকার হলে চিকিৎসা চলে। ছবিতে কোনো আসল মাপ বা সময় নেই।' }
+      : { a: 'In a child', b: 'In an adult', ok: 'enough platelets', a2: 'often settles by itself', b2: 'may last, with regular checks', time: 'time',
+          cap: 'In a child with ITP the count falls and often climbs back by itself within weeks or months. In an adult it may stay low for longer, with regular checks (the small marks) and treatment when needed. The drawing has no real numbers or times.' };
+    const lane = (y, d, lab, lab2, col, ticks) => {
+      let g = T(24, y - 8, lab, { a: 'start', size: 13.5, fill: C.teal2, w: 700 }) +
+        `<rect x="24" y="${y}" width="312" height="70" rx="12" fill="${C.mint}"/>` +
+        `<path d="M34 ${y + 18}H326" stroke="${C.mintLine}" stroke-width="2" stroke-dasharray="5 5"/>` +
+        T(326, y + 12, t.ok, { a: 'end', size: 12.5, fill: C.muted, w: 600 }) +
+        `<path class="ip-l" pathLength="1" d="${d}" fill="none" stroke="${P}" stroke-width="4" stroke-linecap="round"/>`;
+      for (const x of ticks) g += `<path class="ip-t" d="M${x} ${y + 60}v-8" stroke="${C.teal2}" stroke-width="2.4" stroke-linecap="round"/>`;
+      return g + T(180, y + 90, lab2, { size: 12.5, fill: col, w: 600 });
+    };
+    const body =
+      lane(34, 'M36 52C70 52 74 92 100 92S150 88 180 70 250 50 324 50', t.a, t.a2, C.teal2, []) +
+      lane(150, 'M36 166C70 166 74 206 100 206S150 196 180 198 250 190 324 194', t.b, t.b2, '#9A5A0C', [120, 170, 220, 270, 320]) +
+      `<path d="M36 262H324" stroke="${C.muted}" stroke-width="1.6"/><path d="M318 257l7 5-7 5" fill="none" stroke="${C.muted}" stroke-width="1.6"/>` +
+      T(180, 280, t.time, { size: 12.5, fill: C.muted, w: 600 });
+    return {
+      cap: t.cap,
+      svg: svg('ip', 360, 290, t.cap,
+        '.ip-l{stroke-dasharray:1;stroke-dashoffset:1;animation:ipl 10s ease-in-out infinite}@keyframes ipl{0%{stroke-dashoffset:1}70%,94%{stroke-dashoffset:0}100%{stroke-dashoffset:0;opacity:.2}}' +
+        '.ip-t{opacity:0;animation:ipt 10s ease-in-out infinite}@keyframes ipt{0%,45%{opacity:0}60%,94%{opacity:1}100%{opacity:0}}' +
+        '@media (prefers-reduced-motion:reduce){.ip-l{stroke-dashoffset:0}.ip-t{opacity:1}}',
+        body),
+    };
+  },
   // Anaemia, iron: two tanks of body iron. Tablets drip iron into both. In the first, a leak (heavy periods or
   // bleeding) lets it out, so the level hardly rises; in the second the leak is treated and the level slowly rises.
   'iron-tank'(l) {
@@ -999,6 +1031,33 @@ const TRY = {
             ['leaf', 'Papaya leaf juice cures dengue', 'True?', 'WHO says there is no specific treatment for dengue. Ask the doctor before giving it.'],
             ['pill', 'Any painkiller is fine for the fever', 'True?', 'Ibuprofen and aspirin can make bleeding more likely. Give what the doctor advises, usually paracetamol.']],
           cap: 'Every illness is different. Ask the doctor who is looking after your child.' };
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
+      t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
+        `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
+        `<span class="fc back"><span class="k">${esc(t.sign)}</span><span>${esc(back)}</span></span></button>`).join('') + '</div>';
+    return { cap: t.cap, cls: 'flipset', html };
+  },
+  // Low platelets, ITP: four beliefs families bring to the clinic; each card turns over to what the chapter says.
+  'itp-cards'(l) {
+    const ic = {
+      eye: `<ellipse cx="20" cy="20" rx="15" ry="9" fill="#fff" stroke="${C.teal2}" stroke-width="2"/><circle cx="20" cy="20" r="5" fill="${C.teal2}"/>`,
+      plt: `<ellipse cx="14" cy="15" rx="7" ry="4.5" fill="#7A5AD1"/><ellipse cx="26" cy="23" rx="7" ry="4.5" fill="#7A5AD1" opacity=".75"/><ellipse cx="15" cy="30" rx="5" ry="3.4" fill="#7A5AD1" opacity=".5"/>`,
+      up: `<path d="M8 32l9-9 6 5 10-14" fill="none" stroke="#7A5AD1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M27 13h7v7" fill="none" stroke="#7A5AD1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>`,
+      pill: `<g transform="rotate(-35 20 20)"><rect x="8" y="14" width="12" height="12" rx="6" fill="${C.amberBg}"/><rect x="8" y="14" width="24" height="12" rx="6" fill="none" stroke="${C.amber}" stroke-width="2"/><path d="M20 14v12" stroke="${C.amber}" stroke-width="2"/></g>`,
+    };
+    const t = l === 'bn'
+      ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
+          c: [['eye', 'ওষুধ দেয়নি, মানে কিছুই করা হচ্ছে না', 'সত্যি?', 'হালকা আইটিপিতে কাছ থেকে নজর রাখাটাই চিকিৎসা। বারবার মেপেই ডাক্তারবাবু বোঝেন, কখন ওষুধ লাগবে।'],
+            ['plt', 'আইটিপি একরকমের ব্লাড ক্যান্সার', 'সত্যি?', 'আইটিপিতে রোগ প্রতিরোধ ক্ষমতা ভুল করে প্লেটলেট নষ্ট করে। এটা ক্যান্সার নয়।'],
+            ['up', 'প্লেটলেট বেড়ে গেছে, এবার ওষুধ বন্ধ করা যায়', 'সত্যি?', 'ওষুধ বন্ধ করলে কারও কারও আবার বেড়ে যায়। কমানো বা বন্ধ করা ডাক্তারবাবুই ঠিক করবেন।'],
+            ['pill', 'জ্বর-ব্যথায় যেকোনো ওষুধ চলে', 'সত্যি?', 'অ্যাসপিরিন আর আইবুপ্রোফেনে রক্ত পড়া বাড়তে পারে। কোনটা নিরাপদ, ডাক্তারবাবুকে জিজ্ঞেস করুন।']],
+          cap: 'প্রত্যেকের আইটিপি আলাদা। যে ডাক্তারবাবু দেখছেন, তাঁকে জিজ্ঞেস করুন।' }
+      : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
+          c: [['eye', 'No medicine means nothing is being done', 'True?', 'In mild ITP, watching closely is the care. The repeat counts tell the doctor when a medicine is needed.'],
+            ['plt', 'ITP is a kind of blood cancer', 'True?', 'In ITP the immune system destroys platelets by mistake. It is not a cancer.'],
+            ['up', 'The count is up, so the medicine can stop', 'True?', 'Some people get worse when a medicine is stopped. Only the doctor lowers or stops it.'],
+            ['pill', 'Any medicine is fine for fever or pain', 'True?', 'Aspirin and ibuprofen can make bleeding worse. Ask the doctor which one is safe.']],
+          cap: 'Every person’s ITP is different. Ask the doctor who is looking after you.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
       t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
         `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
