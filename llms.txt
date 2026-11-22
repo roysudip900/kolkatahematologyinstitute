@@ -22,6 +22,7 @@ Author: [Dr. Sudip Roy](https://share.google/OLTZr4ebHj8UmXFnB), MBBS, MD, DM (C
   - [Dengue](https://kolkatahematologyinstitute.com/en/low-platelets/dengue/): Platelets falling in dengue? The risky days after the fever goes, the warning signs that need a hospital, care at home, and why platelets are not given for the number alone.
   - [ITP in children and adults](https://kolkatahematologyinstitute.com/en/low-platelets/itp/): In ITP the body destroys its own platelets. In children it often settles by itself, in adults it may last. What treatment can do, and planning a baby.
 - [Your blood report (CBC)](https://kolkatahematologyinstitute.com/en/cbc/): What hemoglobin, PCV, MCV, white cells and platelets measure on your report, why ranges differ between labs, why one H or L is often nothing, and when to see a hematologist.
+- [Blood cancers](https://kolkatahematologyinstitute.com/en/blood-cancers/): What leukaemia, lymphoma and myeloma are, the signs that call for a blood test, when to go to hospital the same day, and what treatment can do. Many are treatable.
 
 ## অধ্যায় (বাংলা)
 - [অ্যানিমিয়া: রক্তাল্পতা](https://kolkatahematologyinstitute.com/anaemia/): সব সময় ক্লান্তি, সিঁড়ি ভাঙলে হাঁফ, রিপোর্টে হিমোগ্লোবিন কম? অ্যানিমিয়া মানে কী আর কারণ খোঁজা কেন জরুরি, লিখেছেন কলকাতার হেমাটোলজিস্ট।
@@ -41,3 +42,4 @@ Author: [Dr. Sudip Roy](https://share.google/OLTZr4ebHj8UmXFnB), MBBS, MD, DM (C
   - [ডেঙ্গু](https://kolkatahematologyinstitute.com/low-platelets/dengue/): ডেঙ্গুতে প্লেটলেট কমলে কতটা চিন্তার? জ্বর ছাড়ার পরের বিপদের সময়, কোন লক্ষণে সেদিনই হাসপাতাল, বাড়িতে যত্ন, আর প্লেটলেট দেওয়া কেন সব সময় লাগে না।
   - [আইটিপি, শিশু ও বড়দের](https://kolkatahematologyinstitute.com/low-platelets/itp/): আইটিপিতে শরীর ভুল করে নিজের প্লেটলেট নষ্ট করে। বাচ্চাদের প্রায়ই নিজে সেরে যায়, বড়দের থেকে যেতে পারে। চিকিৎসা কী করতে পারে, আর সন্তান নেওয়ার কথা।
 - [রক্তের রিপোর্ট (সিবিসি)](https://kolkatahematologyinstitute.com/cbc/): রক্তের রিপোর্টে হিমোগ্লোবিন, পিসিভি, এমসিভি, শ্বেত কণিকা আর প্লেটলেট কী মাপে, মাত্রা ল্যাবে ল্যাবে আলাদা কেন, একটা H বা L কেন প্রায়ই কিছু নয়, আর কখন হেমাটোলজিস্ট।
+- [রক্তের ক্যান্সার](https://kolkatahematologyinstitute.com/blood-cancers/): লিউকেমিয়া, লিম্ফোমা আর মায়েলোমা কী, কোন লক্ষণে রক্ত পরীক্ষা করানো উচিত, কখন সেদিনই হাসপাতাল, আর চিকিৎসা কী করতে পারে: অনেকের চিকিৎসা হয়, কিছু সারে।
