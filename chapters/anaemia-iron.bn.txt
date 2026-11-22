@@ -95,4 +95,5 @@
 - NHS: Iron deficiency anaemia | https://www.nhs.uk/conditions/iron-deficiency-anaemia/
 - National Heart, Lung, and Blood Institute: Iron-deficiency anemia | https://www.nhlbi.nih.gov/health/anemia/iron-deficiency-anemia
 - World Health Organization: Anaemia | https://www.who.int/news-room/fact-sheets/detail/anaemia
+- NHS: Side effects of ferrous sulfate | https://www.nhs.uk/medicines/ferrous-sulfate/side-effects-of-ferrous-sulfate/
 - Ministry of Health and Family Welfare: Anemia Mukt Bharat Abhiyaan Operational Guidelines (2026) | https://nhm.gov.in/New-Update-2025-26/Nutrition/AMB-guidelines/AMB-Abhiyaan-Guidelines.pdf

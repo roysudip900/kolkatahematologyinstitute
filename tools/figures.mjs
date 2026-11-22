@@ -361,9 +361,9 @@ const FIG = {
   'iron-tank'(l) {
     const t = l === 'bn'
       ? { a: 'কারণের চিকিৎসা হয়নি', b: 'কারণের চিকিৎসা হয়েছে', drip: 'আয়রন ট্যাবলেট', leak: 'বেশি মাসিক বা রক্তপাত', iron: 'আয়রন',
-          cap: 'আয়রন ট্যাবলেট শরীরে আয়রন ভরে। কিন্তু বেশি মাসিক বা অন্য রক্তপাতে আয়রন বেরিয়ে যেতে থাকলে মাপ প্রায় বাড়ে না। কারণের চিকিৎসা হলে সেই ট্যাবলেটেই কয়েক মাসে আয়রন ভরে ওঠে। ছবিতে কোনো আসল মাপ নেই।' }
+          cap: 'আয়রন ট্যাবলেট শরীরে আয়রন ভরে। কিন্তু বেশি মাসিক বা অন্য রক্তপাতে আয়রন বেরিয়ে যেতে থাকলে মাপ প্রায় বাড়ে না। কারণের চিকিৎসা হলে সেই ট্যাবলেটেই কয়েক মাসে আয়রন ভরে উঠতে পারে। ছবিতে কোনো আসল মাপ নেই।' }
       : { a: 'leak not treated', b: 'leak treated', drip: 'iron tablets', leak: 'heavy periods or bleeding', iron: 'iron',
-          cap: 'Iron tablets put iron in. If iron keeps leaking out, with heavy periods or other bleeding, the level hardly rises. Once the leak is treated, the same tablets fill the store over some months. The drawing has no real numbers.' };
+          cap: 'Iron tablets put iron in. If iron keeps leaking out, with heavy periods or other bleeding, the level hardly rises. Once the leak is treated, the same tablets can fill the store over some months. The drawing has no real numbers.' };
     const pill = (x) => `<g transform="translate(${x},28)"><rect x="-12" y="-7" width="24" height="14" rx="7" fill="#fff" stroke="${C.red}" stroke-width="2"/><rect x="-12" y="-7" width="12" height="14" rx="7" fill="${C.red}"/></g>`;
     const drops = (x) => [0, 1, 2].map((i) => `<circle class="it-d" cx="${x}" cy="44" r="4" fill="${C.red}" style="animation-delay:${(i * 0.9).toFixed(1)}s"/>`).join('');
     const tank = (x) => `<path d="M${x - 46} 70v84a14 14 0 0 0 14 14h64a14 14 0 0 0 14-14V70" fill="#fff" stroke="${C.mintLine}" stroke-width="2.5"/>`;
