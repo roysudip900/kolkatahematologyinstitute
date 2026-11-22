@@ -1037,24 +1037,21 @@ const TRY = {
         `<span class="fc back"><span class="k">${esc(t.sign)}</span><span>${esc(back)}</span></span></button>`).join('') + '</div>';
     return { cap: t.cap, cls: 'flipset', html };
   },
-  // Low platelets, ITP: four beliefs families bring to the clinic; each card turns over to what the chapter says.
+  // Low platelets, ITP: three beliefs families bring to the clinic; each card turns over to what the chapter says.
   'itp-cards'(l) {
     const ic = {
-      eye: `<ellipse cx="20" cy="20" rx="15" ry="9" fill="#fff" stroke="${C.teal2}" stroke-width="2"/><circle cx="20" cy="20" r="5" fill="${C.teal2}"/>`,
       plt: `<ellipse cx="14" cy="15" rx="7" ry="4.5" fill="#7A5AD1"/><ellipse cx="26" cy="23" rx="7" ry="4.5" fill="#7A5AD1" opacity=".75"/><ellipse cx="15" cy="30" rx="5" ry="3.4" fill="#7A5AD1" opacity=".5"/>`,
       up: `<path d="M8 32l9-9 6 5 10-14" fill="none" stroke="#7A5AD1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M27 13h7v7" fill="none" stroke="#7A5AD1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>`,
       pill: `<g transform="rotate(-35 20 20)"><rect x="8" y="14" width="12" height="12" rx="6" fill="${C.amberBg}"/><rect x="8" y="14" width="24" height="12" rx="6" fill="none" stroke="${C.amber}" stroke-width="2"/><path d="M20 14v12" stroke="${C.amber}" stroke-width="2"/></g>`,
     };
     const t = l === 'bn'
       ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
-          c: [['eye', 'ওষুধ দেয়নি, মানে কিছুই করা হচ্ছে না', 'সত্যি?', 'হালকা আইটিপিতে কাছ থেকে নজর রাখাটাই চিকিৎসা। বারবার মেপেই ডাক্তারবাবু বোঝেন, কখন ওষুধ লাগবে।'],
-            ['plt', 'আইটিপি একরকমের ব্লাড ক্যান্সার', 'সত্যি?', 'আইটিপিতে রোগ প্রতিরোধ ক্ষমতা ভুল করে প্লেটলেট নষ্ট করে। এটা ক্যান্সার নয়।'],
+          c: [['plt', 'আইটিপি একরকমের ব্লাড ক্যান্সার', 'সত্যি?', 'আইটিপিতে রোগ প্রতিরোধ ক্ষমতা ভুল করে প্লেটলেট নষ্ট করে। এটা ক্যান্সার নয়।'],
             ['up', 'প্লেটলেট বেড়ে গেছে, এবার ওষুধ বন্ধ করা যায়', 'সত্যি?', 'ওষুধ বন্ধ করলে কারও কারও আবার বেড়ে যায়। কমানো বা বন্ধ করা ডাক্তারবাবুই ঠিক করবেন।'],
             ['pill', 'জ্বর-ব্যথায় যেকোনো ওষুধ চলে', 'সত্যি?', 'অ্যাসপিরিন আর আইবুপ্রোফেনে রক্ত পড়া বাড়তে পারে। কোনটা নিরাপদ, ডাক্তারবাবুকে জিজ্ঞেস করুন।']],
           cap: 'প্রত্যেকের আইটিপি আলাদা। যে ডাক্তারবাবু দেখছেন, তাঁকে জিজ্ঞেস করুন।' }
       : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
-          c: [['eye', 'No medicine means nothing is being done', 'True?', 'In mild ITP, watching closely is the care. The repeat counts tell the doctor when a medicine is needed.'],
-            ['plt', 'ITP is a kind of blood cancer', 'True?', 'In ITP the immune system destroys platelets by mistake. It is not a cancer.'],
+          c: [['plt', 'ITP is a kind of blood cancer', 'True?', 'In ITP the immune system destroys platelets by mistake. It is not a cancer.'],
             ['up', 'The count is up, so the medicine can stop', 'True?', 'Some people get worse when a medicine is stopped. Only the doctor lowers or stops it.'],
             ['pill', 'Any medicine is fine for fever or pain', 'True?', 'Aspirin and ibuprofen can make bleeding worse. Ask the doctor which one is safe.']],
           cap: 'Every person’s ITP is different. Ask the doctor who is looking after you.' };
