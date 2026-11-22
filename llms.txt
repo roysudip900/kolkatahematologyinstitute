@@ -2,7 +2,7 @@
 
 > Blood diseases explained in plain words, in Bengali and English, by a clinical hematologist.
 
-Author: [Dr. Sudip Roy](https://share.google/OLTZr4ebHj8UmXFnB), MBBS, MD, DM (Clinical Hematology), clinical hematologist in Kolkata. Every chapter exists in Bengali and in English, and each one ends with when to go to hospital and which questions to take to a doctor.
+Author: [Dr. Sudip Roy](https://share.google/OLTZr4ebHj8UmXFnB), MBBS, MD, DM (Clinical Hematology), clinical hematologist in Kolkata. Co-author of the blood report and other hematopathology pages: Dr. Srejita Mridha, MBBS, MD (Pathology), pathologist. Every chapter exists in Bengali and in English, and each one ends with when to go to hospital and which questions to take to a doctor.
 
 ## Chapters (English)
 - [Anaemia: low hemoglobin](https://kolkatahematologyinstitute.com/en/anaemia/): Always tired, breathless on the stairs, low hemoglobin on your report? A Kolkata hematologist on what anaemia means and why the cause matters.
@@ -17,6 +17,7 @@ Author: [Dr. Sudip Roy](https://share.google/OLTZr4ebHj8UmXFnB), MBBS, MD, DM (C
   - [Everyday life](https://kolkatahematologyinstitute.com/en/thalassemia/care/): Can a child with thalassemia go to school, play cricket and eat fish? Which vaccines matter, marriage and children later, and how a family shares the load.
 - [Low platelets and ITP](https://kolkatahematologyinstitute.com/en/low-platelets/): Low platelets on your report? What it means, why the count falls (fever, dengue, ITP, medicines, the marrow), which signs need a hospital, and what the doctor checks.
   - [Dengue](https://kolkatahematologyinstitute.com/en/low-platelets/dengue/): Platelets falling in dengue? The risky days after the fever goes, the warning signs that need a hospital, care at home, and why platelets are not given for the number alone.
+- [Your blood report (CBC)](https://kolkatahematologyinstitute.com/en/cbc/): What hemoglobin, PCV, MCV, white cells and platelets mean on your report, why ranges differ between labs, why one H or L is often nothing, and when to see a hematologist.
 
 ## অধ্যায় (বাংলা)
 - [অ্যানিমিয়া: রক্তাল্পতা](https://kolkatahematologyinstitute.com/anaemia/): সব সময় ক্লান্তি, সিঁড়ি ভাঙলে হাঁফ, রিপোর্টে হিমোগ্লোবিন কম? অ্যানিমিয়া মানে কী আর কারণ খোঁজা কেন জরুরি, লিখেছেন কলকাতার হেমাটোলজিস্ট।
@@ -31,3 +32,4 @@ Author: [Dr. Sudip Roy](https://share.google/OLTZr4ebHj8UmXFnB), MBBS, MD, DM (C
   - [রোজকার জীবন](https://kolkatahematologyinstitute.com/thalassemia/care/): থ্যালাসেমিয়ার বাচ্চা কি স্কুলে যাবে, ক্রিকেট খেলবে, মাছ খাবে? কোন টিকা লাগে, বড় হলে বিয়ে আর সন্তান, আর পুরো পরিবারের উপর চাপ সামলানোর কথা।
 - [প্লেটলেট কম ও আইটিপি](https://kolkatahematologyinstitute.com/low-platelets/): রিপোর্টে প্লেটলেট কম? এর মানে কী, কেন কমে (জ্বর, ডেঙ্গু, আইটিপি, ওষুধ, বোন ম্যারো), কোন লক্ষণে সেদিনই হাসপাতাল, আর ডাক্তারবাবু কী দেখবেন।
   - [ডেঙ্গু](https://kolkatahematologyinstitute.com/low-platelets/dengue/): ডেঙ্গুতে প্লেটলেট কমলে কতটা চিন্তার? জ্বর ছাড়ার পরের বিপদের সময়, কোন লক্ষণে সেদিনই হাসপাতাল, বাড়িতে যত্ন, আর প্লেটলেট দেওয়া কেন সব সময় লাগে না।
+- [রক্তের রিপোর্ট (সিবিসি)](https://kolkatahematologyinstitute.com/cbc/): রক্তের রিপোর্টে হিমোগ্লোবিন, পিসিভি, এমসিভি, শ্বেত কণিকা আর প্লেটলেট কী বোঝায়, মাত্রা ল্যাবে ল্যাবে আলাদা কেন, একটা H বা L কেন প্রায়ই কিছু নয়, আর কখন হেমাটোলজিস্ট।
