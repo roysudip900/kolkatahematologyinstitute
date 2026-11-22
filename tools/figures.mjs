@@ -1308,12 +1308,12 @@ const TRY = {
     };
     const t = l === 'bn'
       ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
-          c: [['smile', 'ভালো আছি, তাই ট্যাবলেট বন্ধ করা যায়', 'সত্যি?', 'ভালো থাকা মানে ট্যাবলেট কাজ করছে। বন্ধ করা যায় কিনা, হেমাটোলজিস্ট বছরের পর বছরের পরীক্ষা দেখে ঠিক করেন।'],
+          c: [['smile', 'ভালো আছি, তাই ট্যাবলেট বন্ধ করা যায়', 'সত্যি?', 'ভালো থাকা দিয়ে বোঝা যায় না সিএমএল আটকে আছে কিনা। সেটা শুধু পরীক্ষা বলে, আর বন্ধ করা যায় কিনা হেমাটোলজিস্ট সেই পরীক্ষা দেখে ঠিক করেন।'],
             ['pill', 'পার্শ্বপ্রতিক্রিয়া হলে ট্যাবলেট বাদ দিতেই হবে', 'সত্যি?', 'বাদ না দিয়ে হেমাটোলজিস্টকে বলুন। অনেক সময় অন্য ট্যাবলেট দিয়ে দেখা যায়।'],
             ['fam', 'সিএমএল ছেলেমেয়ের হবে', 'সত্যি?', 'সিএমএলের জিনের বদল জীবনের কোনো এক সময়ে হয়, বাবা-মা থেকে সন্তানে যায় না।']],
           cap: 'যা-ই হোক, ট্যাবলেট নিয়ে কিছু বদলানোর আগে হেমাটোলজিস্টকে জিজ্ঞেস করুন।' }
       : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
-          c: [['smile', 'I feel fine, so the tablets can stop', 'True?', 'Feeling fine means the tablets are working. Your hematologist decides about stopping, from years of test results.'],
+          c: [['smile', 'I feel fine, so the tablets can stop', 'True?', 'Feeling fine does not show whether the CML is held back. Only the tests can, and your hematologist decides about stopping from them.'],
             ['pill', 'A side effect means I must stop the tablet', 'True?', 'Tell your hematologist instead of skipping it. A different tablet can often be tried.'],
             ['fam', 'My children will get CML from me', 'True?', 'The gene change in CML happens during a person’s life. It is not passed from parent to child.']],
           cap: 'Whatever it is, ask your hematologist before changing anything about the tablets.' };
