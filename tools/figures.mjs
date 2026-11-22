@@ -434,6 +434,35 @@ const FIG = {
         body),
     };
   },
+  // Thalassemia, Hemoglobin E: three people and their two copies. E with a normal copy (trait), E with E (HbE disease),
+  // E with beta (HbE beta thalassemia). The bar under each shows how much it affects life: none, a little, and for
+  // HbE beta a bar that swings between mild and severe, because it varies. No numbers.
+  'hbe-three'(l) {
+    const t = l === 'bn'
+      ? { n: [['HbE ট্রেট'], ['HbE ডিজিজ'], ['HbE বিটা', 'থ্যালাসেমিয়া']], s: ['সুস্থ বাহক', 'সাধারণত হালকা', 'হালকা থেকে গুরুতর'], lo: 'কম', hi: 'বেশি', k: 'জীবনে প্রভাব',
+          cap: 'HbE একটা নকশায় থাকলে মানুষটি সুস্থ বাহক। দুটো নকশাতেই E থাকলে সাধারণত শুধু হালকা অ্যানিমিয়া। একটায় E আর অন্যটায় বিটা থ্যালাসেমিয়া থাকলে অসুখটা হালকা থেকে গুরুতর, যে কোনোরকম হতে পারে, তাই নিয়মিত দেখাশোনা লাগে। ছবিতে কোনো আসল মাপ নেই।' }
+      : { n: [['HbE trait'], ['HbE disease'], ['HbE beta', 'thalassemia']], s: ['healthy carrier', 'usually mild', 'mild to severe'], lo: 'less', hi: 'more', k: 'effect on life',
+          cap: 'With E in one copy, the person is a healthy carrier. With E in both copies, there is usually only mild anaemia. With E in one copy and beta thalassemia in the other, the illness can be anything from mild to severe, so it needs regular care. The drawing has no real numbers.' };
+    const X = [60, 180, 300], kinds = [['e', 'ok'], ['e', 'e'], ['e', 'beta']];
+    let body = '';
+    X.forEach((x, i) => {
+      body += person(x, 46, 0.95) + pair(x, 96, kinds[i][0], kinds[i][1], 1.05);
+      t.n[i].forEach((line, j) => { body += T(x, 136 + j * 16, line, { size: 13, fill: C.ink, w: 700 }); });
+      const by = 174;
+      body += `<rect x="${x - 44}" y="${by}" width="88" height="12" rx="6" fill="${C.mint}" stroke="${C.mintLine}" stroke-width="1.5"/>`;
+      if (i === 1) body += `<rect x="${x - 44}" y="${by}" width="22" height="12" rx="6" fill="${C.amber}"/>`;
+      if (i === 2) body += `<rect class="ht-v" x="${x - 44}" y="${by}" width="88" height="12" rx="6" fill="${C.red}"/>`;
+      body += T(x, by + 30, t.s[i], { size: 12.5, fill: i === 0 ? C.teal2 : i === 1 ? '#9A5A0C' : C.red, w: 600 });
+    });
+    body += T(180, 226, t.k, { size: 12.5, fill: C.muted, w: 600 });
+    return {
+      cap: t.cap,
+      svg: svg('ht', 360, 236, t.cap,
+        '.ht-v{transform-box:fill-box;transform-origin:left center;animation:htv 6s ease-in-out infinite}@keyframes htv{0%,100%{transform:scaleX(.22)}45%,60%{transform:scaleX(1)}}' +
+        '@media (prefers-reduced-motion:reduce){.ht-v{transform:scaleX(.6)}}',
+        body),
+    };
+  },
   // Anaemia, iron: two tanks of body iron. Tablets drip iron into both. In the first, a leak (heavy periods or
   // bleeding) lets it out, so the level hardly rises; in the second the leak is treated and the level slowly rises.
   'iron-tank'(l) {
@@ -1136,6 +1165,34 @@ const TRY = {
         `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
         `<span class="fc back"><span class="k">${esc(t.sign)}</span><span>${esc(back)}</span></span></button>`).join('') + '</div>';
     return { cap: t.cap, cls: 'flipset', html };
+  },
+  // Thalassemia, Hemoglobin E: tap the name on the report to see what it means and what to ask. No result says what
+  // the reader has; each ends with the hematologist.
+  'hbe-names'(l) {
+    const t = l === 'bn'
+      ? { h: 'রিপোর্টে কোনটা লেখা?', sub: 'আপনার রিপোর্টের নামে চাপ দিন।', pick: 'উপরে একটা বেছে নিন।', rows: ['এর মানে', 'ডাক্তারবাবুকে জিজ্ঞেস করুন'],
+          p: [['HbE ট্রেট', 'সুস্থ বাহক। কোনো চিকিৎসা লাগে না। ছোট লোহিত কণিকা দেখে আয়রনের অভাব ভেবে নেওয়া হতে পারে।', 'আমার আয়রন সত্যিই কম, না শুধু HbE-এর জন্য এমন দেখাচ্ছে?'],
+            ['HbE ডিজিজ', 'দুটো নকশাতেই E। সাধারণত শুধু হালকা অ্যানিমিয়া, স্বাভাবিক জীবন।', 'এটা কি সত্যিই HbE ডিজিজ, না HbE বিটা থ্যালাসেমিয়া?'],
+            ['HbE বিটা থ্যালাসেমিয়া', 'থ্যালাসেমিয়ার একটা রূপ। হালকা থেকে গুরুতর হতে পারে, বছরের পর বছর বদলাতেও পারে। রক্ত না লাগলেও নিয়মিত দেখাতে হয়।', 'কত দিন পরপর দেখাব, আর জ্বর এলে কী করব?'],
+            ['দুজনের দুরকম ট্রেট', 'একজনের HbE ট্রেট আর অন্যজনের বিটা থ্যালাসেমিয়া ট্রেট হলে সন্তানের HbE বিটা থ্যালাসেমিয়া হতে পারে।', 'সন্তান নেওয়ার আগে আমাদের কী করা উচিত?']],
+          cap: 'সব রিপোর্ট একসঙ্গে নিয়ে হেমাটোলজিস্টের কাছে যান। শুধু নাম দেখে কিছু ঠিক করবেন না।' }
+      : { h: 'Which one is on your report?', sub: 'Tap the name on your report.', pick: 'Choose one above.', rows: ['What it means', 'Ask your doctor'],
+          p: [['HbE trait', 'A healthy carrier. No treatment is needed. Small red cells can be mistaken for a shortage of iron.', 'Is my iron really low, or does HbE only make it look that way?'],
+            ['HbE disease', 'E in both copies. Usually only mild anaemia, and a normal life.', 'Are you sure this is HbE disease, and not HbE beta thalassemia?'],
+            ['HbE beta thalassemia', 'A form of thalassemia. It can be mild or severe, and can change over the years. Regular checks are needed even without transfusions.', 'How often should we come, and what do we do when a fever comes?'],
+            ['Two different traits in a couple', 'If one partner has HbE trait and the other has beta thalassemia trait, a child can be born with HbE beta thalassemia.', 'What should we do before planning a baby?']],
+          cap: 'Take all the reports together to a hematologist. Do not decide anything from the name alone.' };
+    const icon = [
+      `<rect x="15" y="10" width="9" height="30" rx="4" fill="${C.amberBg}" stroke="${C.amber}" stroke-width="2"/><rect x="28" y="10" width="9" height="30" rx="4" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><text x="19.5" y="30" text-anchor="middle" font-size="10" font-weight="700" fill="${C.amber}">E</text>`,
+      `<rect x="15" y="10" width="9" height="30" rx="4" fill="${C.amberBg}" stroke="${C.amber}" stroke-width="2"/><rect x="28" y="10" width="9" height="30" rx="4" fill="${C.amberBg}" stroke="${C.amber}" stroke-width="2"/><text x="19.5" y="30" text-anchor="middle" font-size="10" font-weight="700" fill="${C.amber}">E</text><text x="32.5" y="30" text-anchor="middle" font-size="10" font-weight="700" fill="${C.amber}">E</text>`,
+      `<rect x="15" y="10" width="9" height="30" rx="4" fill="${C.amberBg}" stroke="${C.amber}" stroke-width="2"/><rect x="28" y="10" width="9" height="30" rx="4" fill="${C.roseBg}" stroke="${C.red}" stroke-width="2"/><text x="19.5" y="30" text-anchor="middle" font-size="10" font-weight="700" fill="${C.amber}">E</text><path d="M29.5 21l6 6M35.5 21l-6 6" stroke="${C.red}" stroke-width="2" stroke-linecap="round"/>`,
+      `<circle cx="18" cy="18" r="7" fill="${C.teal}"/><path d="M8 40c0-9 4-13 10-13s10 4 10 13z" fill="${C.teal}"/><circle cx="35" cy="18" r="7" fill="${C.teal2}"/><path d="M25 40c0-9 4-13 10-13s10 4 10 13z" fill="${C.teal2}"/>`,
+    ];
+    const tabs = t.p.map((x, i) => `<button type="button" class="tr-b" aria-pressed="false" data-i="${i}"><svg viewBox="0 0 52 52" aria-hidden="true">${icon[i]}</svg><span>${esc(x[0])}</span></button>`).join('');
+    const panels = t.p.map((x, i) => `<div class="tr-p" data-i="${i}" hidden><dl><dt>${esc(t.rows[0])}</dt><dd>${esc(x[1])}</dd><dt>${esc(t.rows[1])}</dt><dd>${esc(x[2])}</dd></dl></div>`).join('');
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="tr-tabs">${tabs}</div>` +
+      `<div class="tr-out" aria-live="polite"><p class="tr-pick">${esc(t.pick)}</p>${panels}</div>`;
+    return { cap: t.cap, cls: 'tr wg', html };
   },
   // Anaemia, iron: five things that happen while taking iron; tapping one shows what it means and what to ask.
   'iron-troubles'(l) {
