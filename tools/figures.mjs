@@ -392,6 +392,35 @@ const FIG = {
         body),
     };
   },
+  // Blood report (CBC): twenty healthy people appear one by one against a lab's range; one of them lands just
+  // outside it, marked H, to show why one letter on a report is often nothing.
+  'cbc-twenty'(l) {
+    const t = l === 'bn'
+      ? { band: 'ল্যাবের স্বাভাবিক মাত্রা', one: 'সুস্থ, তবু H', heal: 'কুড়িজন সুস্থ মানুষ',
+          cap: 'ল্যাব এমনভাবে মাত্রা ঠিক করে যাতে বেশিরভাগ সুস্থ মানুষ তার মধ্যে পড়েন। মোটামুটি কুড়িজনে একজন সুস্থ মানুষ তবু বাইরে পড়েন। তাই একটা H বা L মানেই অসুখ নয়, ডাক্তারবাবু পুরো রিপোর্ট দেখে বলবেন। ছবিতে কোনো আসল মাপ নেই।' }
+      : { band: "the lab's normal range", one: 'healthy, still H', heal: 'twenty healthy people',
+          cap: 'A lab sets its range so that most healthy people fall inside it. About one healthy person in twenty still falls outside. So one H or L does not by itself mean illness; the doctor reads the whole report. The drawing has no real numbers.' };
+    const ys = [104, 88, 120, 96, 112, 80, 126, 100, 92, 116, 84, 108, 122, 90, 102, 118, 86, 110, 98, 50];
+    let dots = '';
+    ys.forEach((y, i) => {
+      const x = 32 + i * 15.5, out = i === ys.length - 1;
+      dots += `<circle class="ct-p" cx="${x}" cy="${y}" r="${out ? 6.5 : 5.5}" fill="${out ? C.red : C.teal2}" style="animation-delay:${(i * 0.35).toFixed(2)}s"/>`;
+    });
+    const xo = 32 + 19 * 15.5;
+    const body =
+      `<rect x="20" y="70" width="320" height="66" rx="12" fill="${C.mint}" stroke="${C.mintLine}" stroke-width="2"/>` +
+      T(26, 154, t.band, { a: 'start', size: 12.5, fill: C.teal2, w: 600 }) +
+      T(26, 172, t.heal, { a: 'start', size: 12, fill: C.muted, w: 500 }) + dots +
+      `<g class="ct-l"><path d="M${xo} 42v-14" stroke="${C.red}" stroke-width="1.6"/>` + T(xo, 22, t.one, { a: 'end', size: 12.5, fill: C.red, w: 700 }) + '</g>';
+    return {
+      cap: t.cap,
+      svg: svg('ct', 360, 182, t.cap,
+        '.ct-p{animation:ctin 9s ease-out infinite;opacity:0}@keyframes ctin{0%{opacity:0;transform:translateY(-8px)}6%,92%{opacity:1;transform:none}100%{opacity:0}}' +
+        '.ct-l{animation:ctl 9s ease-in-out infinite;opacity:0}@keyframes ctl{0%,74%{opacity:0}80%,92%{opacity:1}100%{opacity:0}}' +
+        '@media (prefers-reduced-motion:reduce){.ct-p,.ct-l{animation:none;opacity:1}}',
+        body),
+    };
+  },
 };
 
 // Short videos made by Dr. Roy, kept in assets/video/<name>.mp4 with a still picture <name>.jpg.
@@ -964,6 +993,31 @@ const TRY = {
       `<path d="M13 21h22v10a11 11 0 0 1-22 0z" fill="${C.amberBg}" stroke="${C.amber}" stroke-width="2"/><path d="M35 24h3a4.5 4.5 0 0 1 0 9h-3" fill="none" stroke="${C.amber}" stroke-width="2"/><path d="M20 10c0 3 3 3 3 7M27 10c0 3 3 3 3 7" stroke="${C.muted}" stroke-width="1.6" fill="none" stroke-linecap="round"/>`,
       `<path d="M10 40h33M10 40V11" stroke="${C.muted}" stroke-width="2"/><path d="M13 31l9-1 9 1 10-1" stroke="${C.red}" stroke-width="3" fill="none" stroke-linecap="round"/>`,
     ];
+    const tabs = t.p.map((x, i) => `<button type="button" class="tr-b" aria-pressed="false" data-i="${i}"><svg viewBox="0 0 52 52" aria-hidden="true">${icon[i]}</svg><span>${esc(x[0])}</span></button>`).join('');
+    const panels = t.p.map((x, i) => `<div class="tr-p" data-i="${i}" hidden><dl><dt>${esc(t.rows[0])}</dt><dd>${esc(x[1])}</dd><dt>${esc(t.rows[1])}</dt><dd>${esc(x[2])}</dd></dl></div>`).join('');
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="tr-tabs">${tabs}</div>` +
+      `<div class="tr-out" aria-live="polite"><p class="tr-pick">${esc(t.pick)}</p>${panels}</div>`;
+    return { cap: t.cap, cls: 'tr wg', html };
+  },
+  // Blood report (CBC): tap a line on the report to see what low and high can mean.
+  'cbc-reader'(l) {
+    const t = l === 'bn'
+      ? { h: 'রিপোর্টের কোন লাইন?', sub: 'যে লাইনটা নিয়ে ভাবছেন, তাতে চাপ দিন।', pick: 'উপরে একটা বেছে নিন।', rows: ['কম হলে হতে পারে', 'বেশি হলে হতে পারে'],
+          p: [['হিমোগ্লোবিন', 'অ্যানিমিয়া, বা থ্যালাসেমিয়া বা সিকল সেলের মতো অসুখ।', 'এর কয়েকটা কারণ আছে। কী মানে, ডাক্তারবাবুকে জিজ্ঞেস করুন।'],
+            ['পিসিভি (হেমাটোক্রিট)', 'অ্যানিমিয়া।', 'শরীরে জল কম থাকা।'],
+            ['এমসিভি', 'আয়রনের অভাবে অ্যানিমিয়া, বা থ্যালাসেমিয়া, থ্যালাসেমিয়ার বাহক হলেও।', 'এর কয়েকটা কারণ আছে। ডাক্তারবাবুকে জিজ্ঞেস করুন।'],
+            ['শ্বেত কণিকা (TLC)', 'সংক্রমণ, রোগ প্রতিরোধ ক্ষমতার সমস্যা, কখনো রক্তের ক্যান্সার।', 'সংক্রমণ, রোগ প্রতিরোধ ক্ষমতার সমস্যা, কখনো রক্তের ক্যান্সার।'],
+            ['প্লেটলেট', 'রক্ত পড়ার সমস্যা। প্লেটলেট কম ও আইটিপি নিয়ে আলাদা আলোচনা আছে।', 'রক্ত জমাট বাঁধার সমস্যা।']],
+          cap: 'একটা লাইন দেখে কিছু বলা যায় না। ডাক্তারবাবু সব লাইন একসঙ্গে, আর আপনি কেমন আছেন, দেখে বলবেন।' }
+      : { h: 'Which line on your report?', sub: 'Tap the line you are wondering about.', pick: 'Choose one above.', rows: ['Low can mean', 'High can mean'],
+          p: [['Hemoglobin', 'Anaemia, or conditions such as thalassemia or sickle cell disease.', 'There are several reasons. Ask your doctor what it means for you.'],
+            ['PCV (hematocrit)', 'Anaemia.', 'Too little water in the body (dehydration).'],
+            ['MCV', 'Anaemia from low iron, or thalassemia, including the carrier state.', 'There are several reasons. Ask your doctor.'],
+            ['White cells (TLC)', 'An infection, a problem with the defence system, sometimes a blood cancer.', 'An infection, a problem with the defence system, sometimes a blood cancer.'],
+            ['Platelets', 'A bleeding problem. The Low platelets and ITP page goes further.', 'A clotting problem.']],
+          cap: 'One line on its own cannot tell you much. Your doctor reads all the lines together, with how you are.' };
+    const dot = (c) => `<rect x="10" y="14" width="32" height="26" rx="5" fill="#fff" stroke="${C.mintLine}" stroke-width="2"/><path d="M15 22h14M15 28h18M15 34h10" stroke="${C.muted}" stroke-width="2" stroke-linecap="round"/><circle cx="38" cy="16" r="7" fill="${c}"/>`;
+    const icon = [dot(C.red), dot(C.rose), dot(C.amber), dot(C.o2), dot('#7A5AD1')];
     const tabs = t.p.map((x, i) => `<button type="button" class="tr-b" aria-pressed="false" data-i="${i}"><svg viewBox="0 0 52 52" aria-hidden="true">${icon[i]}</svg><span>${esc(x[0])}</span></button>`).join('');
     const panels = t.p.map((x, i) => `<div class="tr-p" data-i="${i}" hidden><dl><dt>${esc(t.rows[0])}</dt><dd>${esc(x[1])}</dd><dt>${esc(t.rows[1])}</dt><dd>${esc(x[2])}</dd></dl></div>`).join('');
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="tr-tabs">${tabs}</div>` +

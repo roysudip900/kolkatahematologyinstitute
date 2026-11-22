@@ -1,0 +1,85 @@
+> A blood count (CBC) report lists your red cells, white cells and platelets, each against a range, and one value just outside its range is often not a sign of disease. Read it with your doctor, who looks at all the lines together with how you are, and decides whether anything needs a second test or a hematologist.
+
+The report arrived on WhatsApp at eleven at night, and two lines had a letter printed beside them.
+
+The mother in Barasat had been waiting for it since the morning. Her son, seven, had been tested after a week of fever. Beside the white cells was an H. Beside something called MCV was an L. She typed each word into her phone and read until two in the morning: infection, leukaemia, thalassemia, cancer.
+
+By the time the doctor's chamber opened, she was sure something terrible was hiding in that sheet of paper.
+
+# What a blood count measures
+
+The complete blood count, or CBC, is one of the most common blood tests, and it is often done as part of a routine check-up. It counts the three kinds of cells in the blood: red cells, which carry oxygen; white cells, which fight infection; and platelets, which help stop bleeding. Each line on the report shows your result, and beside it the range the lab uses.
+
+# Reading the lines
+
+- Hemoglobin is the oxygen-carrying part of the red cells. Low can mean anaemia, or conditions such as thalassemia or sickle cell disease.
+- Hematocrit, often printed as PCV, is how much of the blood is red cells. High can mean the body is short of water. Low can mean anaemia.
+- MCV is the average size of the red cells. Low can mean anaemia from low iron, or thalassemia, including the carrier state.
+- White cells (WBC or TLC): high or low can come from an infection, a problem with the body's defence system, and sometimes a blood cancer.
+- Platelets: high or low can point to a problem with clotting or bleeding.
+
+For more, this site has pages on Anaemia (low hemoglobin), Thalassemia (a low MCV that runs in a family), and Low platelets and ITP.
+
+[figure: cbc-reader]
+
+# Why the ranges differ
+
+There is no single normal for everyone. Ranges differ between men and women, between children and adults, and with things like altitude. They also differ a little from one lab to another, even with the same machines. That is why each report prints its own range, and why you should read your result against the range on that report, not one from the internet.
+
+# One letter beside a number
+
+A lab sets its range so that most healthy people fall inside it. About one healthy person in twenty falls outside each range. So on a report with twenty lines, a healthy person can expect one H or L.
+
+A value just outside the range is often nothing. What matters more is how far outside it is, whether more than one kind of cell is out of range together, whether it keeps moving on a second test, and how you feel.
+
+[figure: cbc-twenty]
+
+# When to see a hematologist
+
+Your own doctor can read most reports. A hematologist is usually needed when two or three kinds of cells are abnormal together, when a value is far outside the range, when the numbers keep changing on repeat tests, or when the report goes with bleeding, repeated fevers, or weight loss. Sometimes the doctor will ask for a smear, where the blood is looked at under a microscope.
+
+Bring your old reports too. The same line on last year's report can tell the doctor a lot.
+
+# How the story goes on
+
+The doctor reads the whole sheet. The white cells were a little high after a week of fever, and a repeat test some weeks later is normal. The low MCV stays low. A further test shows the boy is a carrier of thalassemia, like his father, who never knew. The doctor suggests testing the rest of the family.
+
+# Go to a hospital the same day if
+
+- the report shows very low hemoglobin and the person is breathless, has chest pain or faints
+- bleeding that will not stop, or new purple spots, with a low platelet count
+- fever in someone who has been told their white cells are very low
+- the doctor or lab calls you about a result and asks you to come at once
+
+# Take these questions to your doctor
+
+Bring this report and any old ones, and ask:
+
+- Which of these results matter, and which can I ignore?
+- Is this value far outside the range, or just outside?
+- Should any test be repeated, and when?
+- Do I need to see a hematologist?
+- Does anyone else in my family need a test?
+
+# Common questions
+
+## My report has an H or an L. Is it serious?
+
+Often not. About one healthy person in twenty falls outside any one range. Your doctor looks at how far outside it is and at the rest of the report.
+
+## Why do two labs give different normal ranges?
+
+Each lab sets its own range for its methods, and ranges also differ with sex and age. Read your result against the range printed on your own report.
+
+## When should I see a hematologist about my blood report?
+
+When more than one kind of cell is abnormal, when a value is far outside the range or keeps changing, or when the report goes with bleeding, fevers or weight loss. Your doctor can refer you.
+
+# Sources
+
+- National Heart, Lung, and Blood Institute: Blood tests | https://www.nhlbi.nih.gov/health/blood-tests
+- Doles and others: Interpreting normal values and reference ranges for laboratory tests, Journal of the American Board of Family Medicine (2025) | https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12096374/
+- American Society of Hematology: Blood basics | https://www.hematology.org/education/patients/blood-basics
+- NHS: Blood tests | https://www.nhs.uk/tests-and-treatments/blood-tests/
+- NHS: Thalassaemia | https://www.nhs.uk/conditions/thalassaemia/
+- American Society of Hematology: Iron-deficiency anemia | https://www.hematology.org/education/patients/anemia/iron-deficiency

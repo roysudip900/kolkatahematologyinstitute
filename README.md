@@ -79,6 +79,7 @@ A line on its own such as `[figure: inheritance]` puts a moving illustration, wi
 | `platelet-plug` | A cut in a vessel wall: with enough platelets they gather and seal it; with too few, two arrive and the gap stays open longer | Low platelets and ITP |
 | `dengue-days` | A dengue timeline: a few days of fever, then the risky window just after the fever goes (it pulses as a dot passes), then getting better, then tiredness | Low platelets: dengue |
 | `iron-tank` | Two tanks of body iron with tablets dripping in: one leaks (heavy periods or bleeding) so its level hardly rises; in the other the leak is treated and the level rises | Anaemia: iron deficiency and taking iron |
+| `cbc-twenty` | Twenty healthy people appear against a lab's range; one lands just outside it, marked H, to show why one letter on a report is often nothing | Your blood report (CBC) |
 
 | `heart-pace` | Touch: a slider lowers the hemoglobin; red cells thin out and the heart beats faster, with one line of plain words at each step | Anaemia: heart and nerves |
 | `signs-check` | Touch: the reader taps the signs they have noticed, gets sent to a blood count and the doctor, and can send the list on WhatsApp. A danger sign shows the hospital line. Nothing is saved | Anaemia: heart and nerves |
@@ -94,6 +95,7 @@ A line on its own such as `[figure: inheritance]` puts a moving illustration, wi
 | `platelet-signs` | Touch: tick the skin and bleeding signs noticed, plus what the doctor will ask; red-flag signs show "go to a hospital today"; the list can be sent to the doctor | Low platelets and ITP |
 | `dengue-myths` | Touch: four flip cards of dengue beliefs (fever gone means safe, low count needs platelets, papaya leaf cures, any painkiller is fine), each turned over to show what is true | Low platelets: dengue |
 | `iron-troubles` | Touch: five things that happen while taking iron (black stools, upset stomach, constipation, taking it with tea, hemoglobin not rising); tapping one shows what it means and what to ask | Anaemia: iron deficiency and taking iron |
+| `cbc-reader` | Touch: tap a line on the report (hemoglobin, PCV, MCV, white cells, platelets) to see what low and high can mean | Your blood report (CBC) |
 
 The ones marked "Touch" respond to the reader's finger. Each one plays a short demonstration once when the reader reaches it, and stays still on phones set to reduce motion.
 
