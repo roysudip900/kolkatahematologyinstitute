@@ -12,13 +12,13 @@ The complete blood count, or CBC, is one of the most common blood tests, and it 
 
 # Reading the lines
 
-- Hemoglobin is the oxygen-carrying part of the red cells. Low can mean anaemia, or conditions such as thalassemia or sickle cell disease.
-- Hematocrit, often printed as PCV, is how much of the blood is red cells. High can mean the body is short of water. Low can mean anaemia.
-- MCV is the average size of the red cells. Low can mean anaemia from low iron, or thalassemia, including the carrier state.
-- White cells (WBC or TLC): high or low can come from an infection, a problem with the body's defence system, and sometimes a blood cancer.
-- Platelets: high or low can point to a problem with clotting or bleeding.
+- Hemoglobin is the part of the red cells that carries oxygen.
+- Hematocrit, often printed as PCV, is how much of the blood is made of red cells.
+- MCV is the average size of the red cells.
+- White cells, printed as WBC or TLC, are the cells that fight infection.
+- Platelets are the tiny cells that help stop bleeding.
 
-For more, this site has pages on Anaemia (low hemoglobin), Thalassemia (a low MCV that runs in a family), and Low platelets and ITP.
+What a high or low value means for you depends on the other lines, your age, how you feel and your past reports. The same letter can mean very different things in two people, so leave the meaning to your doctor. Do not start iron, a tonic or any other medicine because of a report, and do not stop one either. Show the report to your doctor first.
 
 [figure: cbc-reader]
 
@@ -81,5 +81,3 @@ When more than one kind of cell is abnormal, when a value is far outside the ran
 - Doles and others: Interpreting normal values and reference ranges for laboratory tests, Journal of the American Board of Family Medicine (2025) | https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12096374/
 - American Society of Hematology: Blood basics | https://www.hematology.org/education/patients/blood-basics
 - NHS: Blood tests | https://www.nhs.uk/tests-and-treatments/blood-tests/
-- NHS: Thalassaemia | https://www.nhs.uk/conditions/thalassaemia/
-- American Society of Hematology: Iron-deficiency anemia | https://www.hematology.org/education/patients/anemia/iron-deficiency
