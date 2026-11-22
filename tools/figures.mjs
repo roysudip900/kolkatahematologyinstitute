@@ -944,14 +944,14 @@ const TRY = {
   'iron-troubles'(l) {
     const t = l === 'bn'
       ? { h: 'ট্যাবলেট নিয়ে কী হচ্ছে?', sub: 'আপনার সঙ্গে যেটা মেলে, তাতে চাপ দিন।', pick: 'উপরে একটা বেছে নিন।', rows: ['এর মানে', 'ডাক্তারবাবুকে জিজ্ঞেস করুন'],
-          p: [['পায়খানা কালো', 'আয়রন ট্যাবলেটে পায়খানা কালচে বা কালো হতে পারে, এটা আয়রনেরই জানা প্রভাব। তবে কালো, আঠালো, দুর্গন্ধ পায়খানার সঙ্গে দুর্বলতা বা মাথা ঘোরা থাকলে সেদিনই হাসপাতালে যান।', 'আমার পায়খানার রং কি আয়রনের জন্যই?'],
+          p: [['পায়খানা কালচে', 'আয়রন ট্যাবলেটে প্রায়ই পায়খানা স্বাভাবিকের চেয়ে কালচে হয়, সাধারণত চিন্তার কিছু নেই। তবে আলকাতরার মতো কালো, বা লাল, বা রক্তমাখা পায়খানা হলে সেদিনই হাসপাতালে যান।', 'আমার পায়খানার রং কি আয়রনের জন্যই?'],
             ['পেট গোলায়', 'খাবারের সঙ্গে বা খাওয়ার একটু পরে খেলে কম হতে পারে। ট্যাবলেট চালিয়ে যান আর ডাক্তারবাবুকে জানান, আয়রন একরকমের নয়।', 'খাবারের সঙ্গে খাওয়া যায়, নাকি অন্য আয়রন দেওয়া যায়?'],
             ['কোষ্ঠকাঠিন্য', 'আয়রনে এটা হতে পারে। খাওয়া চালিয়ে যান, আর অসুবিধা হলে ডাক্তারবাবুকে বলুন।', 'কোষ্ঠকাঠিন্যের জন্য কী করতে পারি?'],
             ['চায়ের সঙ্গে খাই', 'চা, কফি আর দুধে শরীর আয়রন কম টেনে নেয়। এগুলো ট্যাবলেটের সময় থেকে সরিয়ে রাখুন।', 'আমার ট্যাবলেট খাওয়ার সবচেয়ে ভালো সময় কোনটা?'],
-            ['হিমোগ্লোবিন বাড়ছে না', 'ডাক্তারবাবুর কাছে ফিরে যান। ট্যাবলেট বাদ পড়ছে, এখনও রক্ত বেরিয়ে যাচ্ছে, অন্ত্র আয়রন টানছে না, বা আয়রনের অভাবই নয়, এর কোনটা দেখতে হবে।', 'আমার হিমোগ্লোবিন বাড়ছে না কেন?']],
+            ['হিমোগ্লোবিন বাড়ছে না', 'ডাক্তারবাবুর কাছে ফিরে যান। ট্যাবলেট বাদ পড়ছে, এখনও রক্ত বেরিয়ে যাচ্ছে, পেট খাবার থেকে আয়রন টানছে না, বা আয়রনের অভাবই নয়, এর কোনটা দেখতে হবে।', 'আমার হিমোগ্লোবিন বাড়ছে না কেন?']],
           cap: 'যা-ই হোক, বন্ধ না করে ডাক্তারবাবুকে জানান। প্রায়ই খাওয়ার নিয়মটা বদলে নেওয়া যায়।' }
       : { h: 'What is happening with your tablets?', sub: 'Tap the one that sounds like you.', pick: 'Choose one above.', rows: ['What it means', 'Ask your doctor'],
-          p: [['Black stools', 'Iron tablets can make stools dark or black, a known effect of the iron. Black, sticky, bad-smelling stools with weakness or dizziness are different: go to a hospital the same day.', 'Is the colour of my stools from the iron?'],
+          p: [['Dark stools', 'Iron tablets often make stools darker than usual, and that is usually nothing to worry about. Stools that are black and tar-like, or red, or have blood in them need a hospital the same day.', 'Is the colour of my stools from the iron?'],
             ['Upset stomach', 'Taking the tablet with food, or soon after, may help. Keep taking it and tell the doctor. There is more than one kind of iron.', 'Can I take it with food, or try another kind?'],
             ['Constipation', 'Iron can cause it. Keep taking it, and tell the doctor if it troubles you.', 'What can I do about the constipation?'],
             ['Taking it with tea', 'Tea, coffee and milk make it harder for the body to take in iron. Keep them away from the tablet.', 'When is the best time for me to take the tablet?'],
