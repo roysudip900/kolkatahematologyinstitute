@@ -194,13 +194,14 @@
   "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#E4EEFF\"/><circle cx=\"19\" cy=\"19\" r=\"9\" fill=\"#B7CBF7\"/><circle cx=\"18\" cy=\"18\" r=\"4.5\" fill=\"#3B4FB8\"/><circle cx=\"35\" cy=\"24\" r=\"7\" fill=\"#B7CBF7\"/><circle cx=\"36\" cy=\"25\" r=\"3.5\" fill=\"#3B4FB8\"/><circle cx=\"24\" cy=\"37\" r=\"8\" fill=\"#B7CBF7\"/><circle cx=\"23\" cy=\"38\" r=\"4\" fill=\"#3B4FB8\"/>"
  },
  {
-  "id": "cml",
-  "bn": "সিএমএল",
-  "en": "CML",
-  "desc_bn": "",
-  "desc_en": "",
-  "card_bn": "",
-  "card_en": "",
+  "id": "blood-cancers-cml",
+  "parent": "blood-cancers",
+  "bn": "রক্তের ক্যান্সার: সিএমএল",
+  "en": "Blood cancers: CML",
+  "desc_bn": "সিএমএল কী, ইমাটিনিবের মতো টার্গেটেড ট্যাবলেট কেন ফাঁক ছাড়া খেতে হয়, নিয়মিত পরীক্ষা কী দেখে, আর ভালো লাগলেও নিজে থেকে কেন ট্যাবলেট বন্ধ নয়।",
+  "desc_en": "What CML is, why targeted tablets such as imatinib must be taken without gaps, what the regular tests show, and why the tablets are never stopped on your own.",
+  "card_bn": "চেক-আপে শ্বেত কণিকা অনেক বেশি? বাঁ দিকের পেটে ভরা ভাব? ট্যাবলেট বন্ধ করার কথা ভাবছেন?",
+  "card_en": "Very high white count on a check-up? Fullness on the left of the belly? Thinking of stopping your tablets?",
   "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#E4EEFF\"/><circle cx=\"19\" cy=\"19\" r=\"9\" fill=\"#B7CBF7\"/><circle cx=\"18\" cy=\"18\" r=\"4.5\" fill=\"#3B4FB8\"/><circle cx=\"35\" cy=\"24\" r=\"7\" fill=\"#B7CBF7\"/><circle cx=\"36\" cy=\"25\" r=\"3.5\" fill=\"#3B4FB8\"/><circle cx=\"24\" cy=\"37\" r=\"8\" fill=\"#B7CBF7\"/><circle cx=\"23\" cy=\"38\" r=\"4\" fill=\"#3B4FB8\"/>"
  },
  {

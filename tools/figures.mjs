@@ -503,6 +503,37 @@ const FIG = {
         body),
     };
   },
+  // Blood cancers, CML: the three phases as a road (chronic, accelerated, blast). Top lane, tablets taken without gaps and
+  // checked with tests: the dot stays in the slow chronic phase, with small test marks. Lower lane, tablets stopped: the dot
+  // drifts slowly towards the faster phases. No numbers, no times.
+  'cml-phases'(l) {
+    const t = l === 'bn'
+      ? { z: ['ক্রনিক (ধীর)', 'অ্যাক্সিলারেটেড', 'ব্লাস্ট'], a: 'ট্যাবলেট ফাঁক ছাড়া, নিয়মিত পরীক্ষা', b: 'ট্যাবলেট বন্ধ', test: 'পরীক্ষা',
+          cap: 'সিএমএলের তিনটে পর্যায়: ক্রনিক (ধীর), অ্যাক্সিলারেটেড আর ব্লাস্ট। ফাঁক ছাড়া ট্যাবলেট আর নিয়মিত পরীক্ষা সিএমএলকে ধীর পর্যায়ে ধরে রাখতে পারে। নিজে থেকে বন্ধ করলে সেটা দ্রুত পর্যায়ের দিকে এগোতে পারে। ছবিতে কোনো আসল সময় নেই।' }
+      : { z: ['Chronic (slow)', 'Accelerated', 'Blast'], a: 'Tablets without gaps, regular tests', b: 'Tablets stopped', test: 'tests',
+          cap: 'CML has three phases: chronic (slow), accelerated and blast. Tablets taken without gaps, checked with regular tests, can hold CML in the slow phase. Stopped on one’s own, it can move towards the faster phases. The drawing has no real times.' };
+    const road = (y) =>
+      `<rect x="20" y="${y}" width="170" height="30" rx="15" fill="${C.mint}" stroke="${C.mintLine}" stroke-width="2"/>` +
+      `<rect x="194" y="${y}" width="72" height="30" rx="15" fill="${C.amberBg}" stroke="${C.amber}" stroke-width="2"/>` +
+      `<rect x="270" y="${y}" width="70" height="30" rx="15" fill="${C.roseBg}" stroke="${C.red}" stroke-width="2"/>`;
+    const labels = (y) => T(105, y, t.z[0], { size: 12.5, fill: C.teal2, w: 700 }) + T(230, y, t.z[1], { size: 12, fill: '#9A5A0C', w: 700 }) + T(305, y, t.z[2], { size: 12.5, fill: C.red, w: 700 });
+    let body = labels(34) +
+      T(20, 60, t.a, { a: 'start', size: 13, fill: C.teal2, w: 700 }) + road(68) +
+      `<g class="cp-a"><circle cx="50" cy="83" r="8" fill="${C.teal}"/></g>`;
+    [70, 110, 150].forEach((x) => { body += `<path class="cp-t" d="M${x} 104v-6" stroke="${C.teal2}" stroke-width="2.4" stroke-linecap="round"/>`; });
+    body += T(110, 122, t.test, { size: 12.5, fill: C.muted, w: 600 }) +
+      T(20, 156, t.b, { a: 'start', size: 13, fill: C.red, w: 700 }) + road(164) +
+      `<g class="cp-b"><circle cx="50" cy="179" r="8" fill="${C.teal}"/></g>`;
+    return {
+      cap: t.cap,
+      svg: svg('cp', 360, 210, t.cap,
+        '.cp-a{animation:cpa 5s ease-in-out infinite alternate}@keyframes cpa{0%{transform:translateX(0)}100%{transform:translateX(110px)}}' +
+        '.cp-t{animation:cpt 2.5s ease-in-out infinite}@keyframes cpt{0%,100%{opacity:.35}50%{opacity:1}}' +
+        '.cp-b{animation:cpb 12s ease-in infinite}@keyframes cpb{0%{transform:translateX(0)}85%,100%{transform:translateX(262px)}}' +
+        '@media (prefers-reduced-motion:reduce){.cp-a{transform:translateX(60px)}.cp-b{transform:translateX(200px)}.cp-t{opacity:1}}',
+        body),
+    };
+  },
   // Anaemia, iron: two tanks of body iron. Tablets drip iron into both. In the first, a leak (heavy periods or
   // bleeding) lets it out, so the level hardly rises; in the second the leak is treated and the level slowly rises.
   'iron-tank'(l) {
@@ -1267,6 +1298,30 @@ const TRY = {
       `<div class="chk-out"><p class="chk-warn" hidden>${esc(t.warn)}</p><p class="chk-msg" aria-live="polite">${esc(t.none)}</p>` +
       `${btn('chk-share', t.share, ' hidden')}</div>`;
     return { cap: t.cap, cls: 'chk', data: { none: t.none, many: t.many, head: t.head, ask: t.ask, copied: t.copied }, html };
+  },
+  // Blood cancers, CML: three beliefs from the stories; each card turns over to what the chapter says.
+  'cml-cards'(l) {
+    const ic = {
+      smile: `<circle cx="20" cy="20" r="13" fill="${C.amberBg}" stroke="${C.amber}" stroke-width="2"/><circle cx="15.5" cy="17" r="1.6" fill="${C.ink}"/><circle cx="24.5" cy="17" r="1.6" fill="${C.ink}"/><path d="M14.5 24c3 3.5 8 3.5 11 0" fill="none" stroke="${C.ink}" stroke-width="1.8" stroke-linecap="round"/>`,
+      fam: `<circle cx="13" cy="13" r="5" fill="${C.teal}"/><path d="M5 30c0-7 3.5-10 8-10s8 3 8 10z" fill="${C.teal}"/><circle cx="28" cy="18" r="4" fill="${C.teal2}"/><path d="M21.5 32c0-5.5 3-8 6.5-8s6.5 2.5 6.5 8z" fill="${C.teal2}"/>`,
+      pill: `<g transform="rotate(-35 20 20)"><rect x="8" y="14" width="12" height="12" rx="6" fill="${C.amberBg}"/><rect x="8" y="14" width="24" height="12" rx="6" fill="none" stroke="${C.amber}" stroke-width="2"/><path d="M20 14v12" stroke="${C.amber}" stroke-width="2"/></g>`,
+    };
+    const t = l === 'bn'
+      ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
+          c: [['smile', 'ভালো আছি, তাই ট্যাবলেট বন্ধ করা যায়', 'সত্যি?', 'ভালো থাকা মানে ট্যাবলেট কাজ করছে। বন্ধ করা যায় কিনা, হেমাটোলজিস্ট বছরের পর বছরের পরীক্ষা দেখে ঠিক করেন।'],
+            ['pill', 'পার্শ্বপ্রতিক্রিয়া হলে ট্যাবলেট বাদ দিতেই হবে', 'সত্যি?', 'বাদ না দিয়ে হেমাটোলজিস্টকে বলুন। অনেক সময় অন্য ট্যাবলেট দিয়ে দেখা যায়।'],
+            ['fam', 'সিএমএল ছেলেমেয়ের হবে', 'সত্যি?', 'সিএমএলের জিনের বদল জীবনের কোনো এক সময়ে হয়, বাবা-মা থেকে সন্তানে যায় না।']],
+          cap: 'যা-ই হোক, ট্যাবলেট নিয়ে কিছু বদলানোর আগে হেমাটোলজিস্টকে জিজ্ঞেস করুন।' }
+      : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
+          c: [['smile', 'I feel fine, so the tablets can stop', 'True?', 'Feeling fine means the tablets are working. Your hematologist decides about stopping, from years of test results.'],
+            ['pill', 'A side effect means I must stop the tablet', 'True?', 'Tell your hematologist instead of skipping it. A different tablet can often be tried.'],
+            ['fam', 'My children will get CML from me', 'True?', 'The gene change in CML happens during a person’s life. It is not passed from parent to child.']],
+          cap: 'Whatever it is, ask your hematologist before changing anything about the tablets.' };
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
+      t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
+        `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
+        `<span class="fc back"><span class="k">${esc(t.sign)}</span><span>${esc(back)}</span></span></button>`).join('') + '</div>';
+    return { cap: t.cap, cls: 'flipset', html };
   },
   // Anaemia, iron: five things that happen while taking iron; tapping one shows what it means and what to ask.
   'iron-troubles'(l) {
