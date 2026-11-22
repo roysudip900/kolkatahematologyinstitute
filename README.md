@@ -77,6 +77,7 @@ A line on its own such as `[figure: inheritance]` puts a moving illustration, wi
 | `iron-jar` | Two jars: blood bags drip iron into both; the daily medicine (a tap) lets it out of one so its level stays low, while with the tap closed the other keeps rising | The iron medicine |
 | `growing-up` | A child walks a road past school, play, work and marriage, each lighting up in turn, while a red line of regular care keeps pace underneath | Thalassemia: everyday life |
 | `platelet-plug` | A cut in a vessel wall: with enough platelets they gather and seal it; with too few, two arrive and the gap stays open longer | Low platelets and ITP |
+| `dengue-days` | A dengue timeline: a few days of fever, then the risky window just after the fever goes (it pulses as a dot passes), then getting better, then tiredness | Low platelets: dengue |
 
 | `heart-pace` | Touch: a slider lowers the hemoglobin; red cells thin out and the heart beats faster, with one line of plain words at each step | Anaemia: heart and nerves |
 | `signs-check` | Touch: the reader taps the signs they have noticed, gets sent to a blood count and the doctor, and can send the list on WhatsApp. A danger sign shows the hospital line. Nothing is saved | Anaemia: heart and nerves |
@@ -90,6 +91,7 @@ A line on its own such as `[figure: inheritance]` puts a moving illustration, wi
 | `what-gets-in-the-way` | Touch: five reasons a dose gets missed (forgetting, taste or stomach, friends seeing, a small child refusing, feels fine); tapping one shows what helps and what to ask the doctor | The iron medicine |
 | `myth-or-fact` | Touch: four flip cards of things families are told (no cricket, no fish, it spreads, no children), each turned over to show what is true | Thalassemia: everyday life |
 | `platelet-signs` | Touch: tick the skin and bleeding signs noticed, plus what the doctor will ask; red-flag signs show "go to a hospital today"; the list can be sent to the doctor | Low platelets and ITP |
+| `dengue-myths` | Touch: four flip cards of dengue beliefs (fever gone means safe, low count needs platelets, papaya leaf cures, any painkiller is fine), each turned over to show what is true | Low platelets: dengue |
 
 The ones marked "Touch" respond to the reader's finger. Each one plays a short demonstration once when the reader reaches it, and stays still on phones set to reduce motion.
 

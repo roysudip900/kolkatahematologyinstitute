@@ -24,7 +24,7 @@ There are three ways it happens. The bone marrow, where blood is made, makes too
 
 The common reasons a doctor thinks of first:
 
-- A fever from an infection. Viral and bacterial infections can lower the count for a while. In Bengal, dengue is the one everyone thinks of in the monsoon, and it will have its own part.
+- A fever from an infection. Viral and bacterial infections can lower the count for a while. In Bengal, dengue is the one everyone thinks of in the monsoon, and it has its own part.
 - ITP. The body's own defence system destroys platelets by mistake. In children it sometimes follows a viral illness.
 - Medicines. Some medicines lower the count, or set off a reaction that destroys platelets.
 - Alcohol, and a large spleen.

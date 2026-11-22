@@ -326,6 +326,36 @@ const FIG = {
         body),
     };
   },
+  // Dengue: a timeline. A few days of fever, then the risky window just after the fever goes (it pulses as the
+  // dot passes), then getting better, then a stretch of tiredness. No real days are drawn.
+  'dengue-days'(l) {
+    const t = l === 'bn'
+      ? { a: 'জ্বর', goes: 'জ্বর ছাড়ল', b: 'কড়া নজর', c: 'সেরে ওঠা', d: 'ক্লান্তি', look: 'বিপদের লক্ষণ?',
+          cap: 'ডেঙ্গু সাধারণত শুরু হয় কয়েকদিনের খুব জ্বর দিয়ে। বিপদের সময় প্রায়ই আসে জ্বর ছাড়ার ঠিক পরে, তাই তখনই সবচেয়ে কাছ থেকে নজর রাখতে হয়। তারপর বেশিরভাগ মানুষ এক-দু সপ্তাহে সেরে ওঠেন, যদিও কয়েক সপ্তাহ ক্লান্তি থাকতে পারে। ছবিতে কোনো আসল দিন নেই।' }
+      : { a: 'Fever', goes: 'fever goes', b: 'Watch closely', c: 'Getting better', d: 'Tired', look: 'warning signs?',
+          cap: 'Dengue usually starts with a few days of high fever. The risky time often comes just after the fever goes, so that is when to watch most closely. Most people then get better within one to two weeks, though tiredness can last a few weeks. The drawing has no real days.' };
+    const y = 98, h = 26;
+    const body =
+      `<rect x="20" y="${y}" width="90" height="${h}" rx="13" fill="${C.amberBg}" stroke="${C.amber}" stroke-width="2"/>` +
+      `<rect class="dd-w" x="114" y="${y}" width="88" height="${h}" rx="13" fill="${C.roseBg}" stroke="${C.red}" stroke-width="2.4"/>` +
+      `<rect x="206" y="${y}" width="90" height="${h}" rx="13" fill="${C.mint}" stroke="${C.mintLine}" stroke-width="2"/>` +
+      `<rect x="300" y="${y}" width="42" height="${h}" rx="13" fill="#fff" stroke="${C.mintLine}" stroke-width="2" stroke-dasharray="4 4"/>` +
+      T(65, y - 10, t.a, { size: 12.5, fill: '#9A5A0C', w: 700 }) + T(158, y - 10, t.b, { size: 12.5, fill: C.red, w: 700 }) +
+      T(251, y - 10, t.c, { size: 12.5, fill: C.teal2, w: 700 }) + T(321, y - 10, t.d, { size: 11.5, fill: C.muted, w: 600 }) +
+      `<path d="M112 ${y - 4}v${h + 12}" stroke="${C.ink}" stroke-width="1.6" stroke-dasharray="3 3"/>` + T(112, y + h + 22, t.goes, { size: 12, fill: C.ink, w: 600 }) +
+      `<g class="dd-l"><circle cx="158" cy="30" r="13" fill="#fff" stroke="${C.red}" stroke-width="2.4"/><path d="M158 22v9" stroke="${C.red}" stroke-width="3" stroke-linecap="round"/><circle cx="158" cy="36" r="1.9" fill="${C.red}"/>` +
+      T(158, 62, t.look, { size: 12, fill: C.red, w: 600 }) + '</g>' +
+      `<g class="dd-m"><circle cx="30" cy="${y + h / 2}" r="7" fill="${C.teal}"/></g>`;
+    return {
+      cap: t.cap,
+      svg: svg('dd', 360, 160, t.cap,
+        '.dd-m{animation:ddmv 12s linear infinite}@keyframes ddmv{0%{transform:translateX(0)}92%,100%{transform:translateX(292px)}}' +
+        '.dd-w{animation:ddw 12s ease-in-out infinite}@keyframes ddw{0%,26%{stroke-width:2.4}31%,52%{stroke-width:5}57%,100%{stroke-width:2.4}}' +
+        '.dd-l{animation:ddl 12s ease-in-out infinite;opacity:0}@keyframes ddl{0%,26%{opacity:0}31%,54%{opacity:1}60%,100%{opacity:0}}' +
+        '@media (prefers-reduced-motion:reduce){.dd-m{animation:none;transform:translateX(128px)}.dd-w{animation:none;stroke-width:4}.dd-l{animation:none;opacity:1}}',
+        body),
+    };
+  },
 };
 
 // Short videos made by Dr. Roy, kept in assets/video/<name>.mp4 with a still picture <name>.jpg.
@@ -846,6 +876,33 @@ const TRY = {
       `<div class="chk-out"><p class="chk-warn" hidden>${esc(t.warn)}</p><p class="chk-msg" aria-live="polite">${esc(t.none)}</p>` +
       `${btn('chk-share', t.share, ' hidden')}</div>`;
     return { cap: t.cap, cls: 'chk', data: { none: t.none, many: t.many, head: t.head, ask: t.ask, copied: t.copied }, html };
+  },
+  // Dengue: four beliefs families hear, each turned over to show what is true.
+  'dengue-myths'(l) {
+    const ic = {
+      therm: `<rect x="17" y="5" width="7" height="22" rx="3.5" fill="#fff" stroke="${C.red}" stroke-width="2"/><rect x="19" y="14" width="3" height="14" fill="${C.red}"/><circle cx="20.5" cy="30" r="6" fill="${C.red}"/>`,
+      plt: `<ellipse cx="14" cy="15" rx="7" ry="4.5" fill="#7A5AD1"/><ellipse cx="26" cy="23" rx="7" ry="4.5" fill="#7A5AD1" opacity=".75"/><ellipse cx="15" cy="30" rx="5" ry="3.4" fill="#7A5AD1" opacity=".5"/>`,
+      leaf: `<path d="M20 35c-9-4-13-12-10-23 8 1 15 6 16 15 1 4-1 7-6 8z" fill="${C.teal2}"/><path d="M20 35c-2-8-4-15-9-22" stroke="#fff" stroke-width="1.6" fill="none"/>`,
+      pill: `<g transform="rotate(-35 20 20)"><rect x="8" y="14" width="12" height="12" rx="6" fill="${C.amberBg}"/><rect x="8" y="14" width="24" height="12" rx="6" fill="none" stroke="${C.amber}" stroke-width="2"/><path d="M20 14v12" stroke="${C.amber}" stroke-width="2"/></g>`,
+    };
+    const t = l === 'bn'
+      ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
+          c: [['therm', 'জ্বর ছেড়ে গেছে, মানে বিপদ কেটে গেছে', 'সত্যি?', 'বিপদের সময় প্রায়ই আসে জ্বর ছাড়ার ঠিক পরে। তখনও লক্ষণগুলোর দিকে নজর রাখুন।'],
+            ['plt', 'প্লেটলেট কম হলেই প্লেটলেট দিতে হবে', 'সত্যি?', 'খুব রক্তপাত হলে বা তার জোরালো ঝুঁকি থাকলে প্লেটলেট দেওয়া হয়, শুধু সংখ্যা দেখে নয়।'],
+            ['leaf', 'পেঁপে পাতার রসে ডেঙ্গু সারে', 'সত্যি?', 'বিশ্ব স্বাস্থ্য সংস্থা বলছে, ডেঙ্গুর নির্দিষ্ট চিকিৎসা নেই। দেওয়ার আগে ডাক্তারবাবুকে জিজ্ঞেস করুন।'],
+            ['pill', 'জ্বরে যেকোনো ব্যথার ওষুধ চলে', 'সত্যি?', 'আইবুপ্রোফেন আর অ্যাসপিরিনে রক্তপাতের সম্ভাবনা বাড়ে। ডাক্তারবাবু যা বলেন, সাধারণত প্যারাসিটামল, সেটাই দিন।']],
+          cap: 'প্রতিটা অসুখ আলাদা। যে ডাক্তারবাবু দেখছেন, তাঁকে জিজ্ঞেস করুন।' }
+      : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
+          c: [['therm', 'The fever has gone, so the danger is over', 'True?', 'The risky time often comes just after the fever goes. Keep watching for the warning signs.'],
+            ['plt', 'A low count always needs a platelet transfusion', 'True?', 'Platelets are given for serious bleeding or a high risk of it, not for the number alone.'],
+            ['leaf', 'Papaya leaf juice cures dengue', 'True?', 'WHO says there is no specific treatment for dengue. Ask the doctor before giving it.'],
+            ['pill', 'Any painkiller is fine for the fever', 'True?', 'Ibuprofen and aspirin can make bleeding more likely. Give what the doctor advises, usually paracetamol.']],
+          cap: 'Every illness is different. Ask the doctor who is looking after your child.' };
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
+      t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
+        `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
+        `<span class="fc back"><span class="k">${esc(t.sign)}</span><span>${esc(back)}</span></span></button>`).join('') + '</div>';
+    return { cap: t.cap, cls: 'flipset', html };
   },
 };
 

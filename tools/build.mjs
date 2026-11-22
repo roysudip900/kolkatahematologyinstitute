@@ -239,7 +239,12 @@ const short = (c, l) => c[l].split(/[:：]/)[0].trim();
 function partTitle(c, l) {
   const p = byId[c.parent];
   let t = c[l];
-  if (p) { const pre = short(p, l); if (t.startsWith(pre)) t = t.slice(pre.length).replace(/^\s*[:：]\s*/, ''); }
+  if (p) {
+    const pre = short(p, l), own = short(c, l);
+    if (t.startsWith(pre)) t = t.slice(pre.length).replace(/^\s*[:：]\s*/, '');
+    // "Low platelets: dengue" under "Low platelets and ITP": the part's own prefix is the start of the chapter's name.
+    else if (/[:：]/.test(t) && pre.startsWith(own)) t = t.slice(own.length).replace(/^\s*[:：]\s*/, '');
+  }
   return l === 'en' ? t.charAt(0).toUpperCase() + t.slice(1) : t;
 }
 
