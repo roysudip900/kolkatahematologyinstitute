@@ -463,6 +463,46 @@ const FIG = {
         body),
     };
   },
+  // Blood cancers: the bone marrow as a workshop. Top lane, healthy: red cells, white cells (blue) and platelets (purple)
+  // leave the marrow into the blood in a steady mix. Lower lane, a blood cancer: faulty cells (dark) appear one by one and
+  // fill the marrow, and fewer healthy cells leave. No blood, no numbers.
+  'marrow-crowd'(l) {
+    const P = '#7A5AD1', BAD = '#2E3A59';
+    const t = l === 'bn'
+      ? { a: 'সুস্থ বোন ম্যারো', b: 'রক্তের ক্যান্সার', m: 'বোন ম্যারো', bl: 'রক্ত', bad: 'খারাপ কোষ',
+          cap: 'বোন ম্যারো রোজ লোহিত কণিকা, শ্বেত কণিকা (নীল) আর প্লেটলেট (বেগুনি) বানিয়ে রক্তে পাঠায়। রক্তের ক্যান্সারে একটা খারাপ কোষ (কালচে) বাড়তে বাড়তে ম্যারো ভরিয়ে ফেলে, তাই সুস্থ কোষ কম বেরোয়: ক্লান্তি, সংক্রমণ আর রক্ত পড়া সেখান থেকেই। ছবিতে কোনো আসল মাপ নেই।' }
+      : { a: 'Healthy marrow', b: 'Blood cancer', m: 'marrow', bl: 'blood', bad: 'faulty cells',
+          cap: 'The bone marrow makes red cells, white cells (blue) and platelets (purple) every day and sends them into the blood. In a blood cancer, faulty cells (dark) multiply and fill the marrow, so fewer healthy cells come out, which is why tiredness, infections and bleeding follow. The drawing has no real numbers.' };
+    const white = `<circle r="7.5" fill="#fff" stroke="${C.o2}" stroke-width="2.2"/><circle r="3.2" fill="${C.o2}"/>`;
+    const plt = `<ellipse rx="5" ry="3.4" fill="${P}"/>`;
+    const out = (y, n, cls) => {
+      const kinds = [cell(7, false), white, plt];
+      let g = `<rect x="150" y="${y - 20}" width="190" height="40" rx="20" fill="${C.vessel}"/>`;
+      for (let i = 0; i < n; i++) g += `<g transform="translate(150,${y})"><g class="${cls}" style="animation-delay:-${(6 / n * i).toFixed(2)}s">${kinds[i % 3]}</g></g>`;
+      return g + T(300, y - 26, t.bl, { size: 12.5, fill: C.muted, w: 600 });
+    };
+    const box = (y, title, col) => T(20, y - 44, title, { a: 'start', size: 13.5, fill: col, w: 700 }) +
+      `<rect x="20" y="${y - 32}" width="120" height="64" rx="16" fill="${C.amberBg}" stroke="${C.amber}" stroke-width="2"/>` + T(80, y + 48, t.m, { size: 12.5, fill: C.muted, w: 600 });
+    let body = box(68, t.a, C.teal2) + out(68, 9, 'mc-go');
+    const seeds = [[40, 56], [58, 82], [84, 52], [104, 78], [124, 58], [48, 70], [72, 66], [96, 64], [118, 82], [36, 84]];
+    [[44, 58, 'r'], [70, 80, 'w'], [96, 56, 'p'], [118, 76, 'r'], [60, 68, 'w']].forEach(([x, y, k]) => {
+      body += `<g transform="translate(${x},${y})">${k === 'r' ? cell(7, false) : k === 'w' ? white : plt}</g>`;
+    });
+    body += box(196, t.b, C.red) + out(196, 3, 'mc-go');
+    [[46, 184], [72, 208], [98, 182], [120, 204], [60, 196]].forEach(([x, y]) => { body += `<g transform="translate(${x},${y})">${cell(6.5, false)}</g>`; });
+    seeds.forEach(([x, y], i) => {
+      body += `<circle class="mc-bad" cx="${x}" cy="${y + 128}" r="8" fill="${BAD}" style="animation-delay:${(i * 0.45).toFixed(2)}s"/>`;
+    });
+    body += `<circle cx="156" cy="148" r="6" fill="${BAD}"/>` + T(166, 152, t.bad, { a: 'start', size: 12.5, fill: BAD, w: 700 });
+    return {
+      cap: t.cap,
+      svg: svg('mc', 360, 256, t.cap,
+        '.mc-go{animation:mcgo 6s linear infinite}@keyframes mcgo{0%{transform:translateX(4px);opacity:0}10%{opacity:1}88%{opacity:1}100%{transform:translateX(180px);opacity:0}}' +
+        '.mc-bad{opacity:0;animation:mcb 9s ease-out infinite}@keyframes mcb{0%{opacity:0;transform:scale(.3)}8%,90%{opacity:1;transform:scale(1)}100%{opacity:0}}.mc-bad{transform-box:fill-box;transform-origin:center}' +
+        '@media (prefers-reduced-motion:reduce){.mc-go{transform:translateX(90px);opacity:1}.mc-bad{opacity:1;transform:none}}',
+        body),
+    };
+  },
   // Anaemia, iron: two tanks of body iron. Tablets drip iron into both. In the first, a leak (heavy periods or
   // bleeding) lets it out, so the level hardly rises; in the second the leak is treated and the level slowly rises.
   'iron-tank'(l) {
@@ -1193,6 +1233,40 @@ const TRY = {
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="tr-tabs">${tabs}</div>` +
       `<div class="tr-out" aria-live="polite"><p class="tr-pick">${esc(t.pick)}</p>${panels}</div>`;
     return { cap: t.cap, cls: 'tr wg', html };
+  },
+  // Blood cancers: tap the signs you have noticed; the list goes to the doctor, never to a verdict. A red line for the
+  // hospital signs. Nothing is stored or sent unless the reader sends it (same script as signs-check).
+  'bc-signs'(l) {
+    const t = l === 'bn'
+      ? { h: 'ডাক্তার দেখানোর আগে', sub: 'যেগুলো না সারছে, সেগুলোয় চাপ দিন।',
+          g: [['শরীর', ['ক্লান্তি আর ফ্যাকাশে ভাব, বিশ্রামেও যায় না', 'অকারণে কালশিটে বা রক্ত পড়া', 'বারবার ফিরে আসা জ্বর আর সংক্রমণ']],
+            ['গাঁট আর ওজন', ['গলা, বগল বা কুঁচকিতে ব্যথাহীন গাঁট', 'রাতে ভিজে যাওয়ার মতো ঘাম', 'চেষ্টা ছাড়াই ওজন কমে যাওয়া']],
+            ['হাড়', ['হাড় বা কোমরের ব্যথা, যা বেড়েই চলেছে', 'খুব জলতেষ্টা, ঘন ঘন প্রস্রাব']]],
+          red: ['আজ এর কোনোটা হচ্ছে?', ['রক্ত পড়া থামছে না', 'হঠাৎ পা দুর্বল, হাঁটতে পারছেন না', 'হঠাৎ সব গুলিয়ে যাওয়া', 'হঠাৎ মুখ বা গলা ফুলে লাল']],
+          none: 'এখনও কিছু বাছেননি।',
+          many: 'আপনি {n}টা লক্ষণ টের পেয়েছেন। এই তালিকা দেখে রক্তের ক্যান্সার কিনা বলা যায় না, আর বেশিরভাগ সময় কারণটা অন্য কিছু। প্রথম ধাপ একটা রক্ত পরীক্ষা। তালিকাটা ডাক্তারবাবুকে দেখান।',
+          warn: 'আজই হাসপাতালে যান। অ্যাপয়েন্টমেন্টের জন্য অপেক্ষা করবেন না।',
+          share: 'তালিকাটা পাঠান (হোয়াটসঅ্যাপ বা অন্য কোথাও)', copied: 'তালিকা কপি হয়েছে',
+          head: 'আমি যে লক্ষণগুলো টের পেয়েছি, যা সারছে না:', ask: 'ডাক্তারবাবুকে জিজ্ঞেস করব: একটা রক্ত পরীক্ষা করা যায়?',
+          cap: 'তালিকাটা ডাক্তারবাবুর কাছে নিয়ে যান। আপনি নিজে না পাঠালে কিছুই কোথাও জমা থাকে না বা যায় না।' }
+      : { h: 'Before you see your doctor', sub: 'Tap the ones that have not gone away.',
+          g: [['Body', ['Tired and pale, and rest does not help', 'Bruises or bleeding for no reason', 'Fevers and infections that keep coming back']],
+            ['Lumps and weight', ['A painless lump in the neck, armpit or groin', 'Drenching sweats at night', 'Losing weight without trying']],
+            ['Bones', ['Bone or back pain that keeps getting worse', 'Very thirsty, passing urine often']]],
+          red: ['Any of these today?', ['Bleeding that will not stop', 'Sudden weakness of the legs, cannot walk', 'Sudden confusion', 'Face or neck suddenly swollen and red']],
+          none: 'Nothing ticked yet.',
+          many: 'You have noticed {n}. A list like this cannot tell you whether you have a blood cancer, and most of the time the cause is something else. A blood count is the first step. Show this list to your doctor.',
+          warn: 'Go to a hospital today. Do not wait for an appointment.',
+          share: 'Send this list (WhatsApp or anywhere)', copied: 'List copied',
+          head: 'Signs I have noticed that have not gone away:', ask: 'I want to ask my doctor: can we do a blood count?',
+          cap: 'Take this list to your doctor. Nothing you tap is saved or sent anywhere unless you send it.' };
+    const group = (k, items, red) => `<div class="chk-g${red ? ' red' : ''}"><p class="k">${esc(k)}</p><div class="chk-l">` +
+      items.map((x) => btn(`chk-i${red ? ' red' : ''}`, x, ' aria-pressed="false"')).join('') + '</div></div>';
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p>` +
+      t.g.map(([k, items]) => group(k, items, false)).join('') + group(t.red[0], t.red[1], true) +
+      `<div class="chk-out"><p class="chk-warn" hidden>${esc(t.warn)}</p><p class="chk-msg" aria-live="polite">${esc(t.none)}</p>` +
+      `${btn('chk-share', t.share, ' hidden')}</div>`;
+    return { cap: t.cap, cls: 'chk', data: { none: t.none, many: t.many, head: t.head, ask: t.ask, copied: t.copied }, html };
   },
   // Anaemia, iron: five things that happen while taking iron; tapping one shows what it means and what to ask.
   'iron-troubles'(l) {
