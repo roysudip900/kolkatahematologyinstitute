@@ -15,6 +15,7 @@ Author: [Dr. Sudip Roy](https://share.google/OLTZr4ebHj8UmXFnB), MBBS, MD, DM (C
   - [The iron medicine (chelation)](https://kolkatahematologyinstitute.com/en/thalassemia/chelation/): Your child feels fine, so why the iron medicine every day? Why teenagers stop it, what helps a family keep it going, and why fever needs a doctor the same day.
   - [Everyday life](https://kolkatahematologyinstitute.com/en/thalassemia/care/): Can a child with thalassemia go to school, play cricket and eat fish? Which vaccines matter, marriage and children later, and how a family shares the load.
 - [Low platelets and ITP](https://kolkatahematologyinstitute.com/en/low-platelets/): Low platelets on your report? What it means, why the count falls (fever, dengue, ITP, medicines, the marrow), which signs need a hospital, and what the doctor checks.
+  - [Dengue](https://kolkatahematologyinstitute.com/en/low-platelets/dengue/): Platelets falling in dengue? The risky days after the fever goes, the warning signs that need a hospital, care at home, and why platelets are not given for the number alone.
 
 ## অধ্যায় (বাংলা)
 - [অ্যানিমিয়া: রক্তাল্পতা](https://kolkatahematologyinstitute.com/anaemia/): সব সময় ক্লান্তি, সিঁড়ি ভাঙলে হাঁফ, রিপোর্টে হিমোগ্লোবিন কম? অ্যানিমিয়া মানে কী আর কারণ খোঁজা কেন জরুরি, লিখেছেন কলকাতার হেমাটোলজিস্ট।
@@ -27,3 +28,4 @@ Author: [Dr. Sudip Roy](https://share.google/OLTZr4ebHj8UmXFnB), MBBS, MD, DM (C
   - [আয়রন বের করার ওষুধ (চিলেশন)](https://kolkatahematologyinstitute.com/thalassemia/chelation/): বাচ্চা ভালো আছে, তবু রোজ আয়রন বের করার ওষুধ কেন? কিশোর-কিশোরীরা কেন ছেড়ে দেয়, রোজ চালিয়ে যেতে কী কাজে দেয়, আর জ্বর হলে কেন সেদিনই ডাক্তার।
   - [রোজকার জীবন](https://kolkatahematologyinstitute.com/thalassemia/care/): থ্যালাসেমিয়ার বাচ্চা কি স্কুলে যাবে, ক্রিকেট খেলবে, মাছ খাবে? কোন টিকা লাগে, বড় হলে বিয়ে আর সন্তান, আর পুরো পরিবারের উপর চাপ সামলানোর কথা।
 - [প্লেটলেট কম ও আইটিপি](https://kolkatahematologyinstitute.com/low-platelets/): রিপোর্টে প্লেটলেট কম? এর মানে কী, কেন কমে (জ্বর, ডেঙ্গু, আইটিপি, ওষুধ, বোন ম্যারো), কোন লক্ষণে সেদিনই হাসপাতাল, আর ডাক্তারবাবু কী দেখবেন।
+  - [ডেঙ্গু](https://kolkatahematologyinstitute.com/low-platelets/dengue/): ডেঙ্গুতে প্লেটলেট কমলে কতটা চিন্তার? জ্বর ছাড়ার পরের বিপদের সময়, কোন লক্ষণে সেদিনই হাসপাতাল, বাড়িতে যত্ন, আর প্লেটলেট দেওয়া কেন সব সময় লাগে না।
