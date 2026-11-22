@@ -205,13 +205,14 @@
   "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#E4EEFF\"/><circle cx=\"19\" cy=\"19\" r=\"9\" fill=\"#B7CBF7\"/><circle cx=\"18\" cy=\"18\" r=\"4.5\" fill=\"#3B4FB8\"/><circle cx=\"35\" cy=\"24\" r=\"7\" fill=\"#B7CBF7\"/><circle cx=\"36\" cy=\"25\" r=\"3.5\" fill=\"#3B4FB8\"/><circle cx=\"24\" cy=\"37\" r=\"8\" fill=\"#B7CBF7\"/><circle cx=\"23\" cy=\"38\" r=\"4\" fill=\"#3B4FB8\"/>"
  },
  {
-  "id": "myeloma",
-  "bn": "মাল্টিপল মায়েলোমা",
-  "en": "Multiple myeloma",
-  "desc_bn": "",
-  "desc_en": "",
-  "card_bn": "",
-  "card_en": "",
+  "id": "blood-cancers-myeloma",
+  "parent": "blood-cancers",
+  "bn": "রক্তের ক্যান্সার: মাল্টিপল মায়েলোমা",
+  "en": "Blood cancers: multiple myeloma",
+  "desc_bn": "মাল্টিপল মায়েলোমা কী, কোমর আর হাড়ের ব্যথা, রক্তে বেশি ক্যালসিয়াম, কিডনির ক্ষতি আর রক্তকণিকা কমা, কোন লক্ষণে সেদিনই হাসপাতাল, আর চিকিৎসা কী করতে পারে।",
+  "desc_en": "What multiple myeloma is: back and bone pain, high calcium, kidney strain and low blood counts, which signs need a hospital the same day, and what treatment can do.",
+  "card_bn": "কোমরের ব্যথা বাড়ছেই? সামান্য চাপে হাড় ভাঙল? খুব জলতেষ্টা, মাঝে মাঝে সব গুলিয়ে যায়?",
+  "card_en": "Back pain that keeps getting worse? A bone that broke too easily? Very thirsty, sometimes muddled?",
   "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FDECEE\"/><ellipse cx=\"15\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#D93A4A\"/><ellipse cx=\"22.5\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#E8616D\"/><ellipse cx=\"30\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#D93A4A\"/><ellipse cx=\"37.5\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#E8616D\"/>"
  },
  {

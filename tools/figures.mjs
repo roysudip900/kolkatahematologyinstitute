@@ -534,6 +534,40 @@ const FIG = {
         body),
     };
   },
+  // Blood cancers, myeloma: the bone marrow in the middle, and the four places myeloma shows itself around it (bones,
+  // calcium in the blood, kidneys, blood counts). Each link lights up in turn. No numbers, no frightening images.
+  'myeloma-four'(l) {
+    const t = l === 'bn'
+      ? { m: 'বোন ম্যারো', n: ['হাড় দুর্বল', 'ক্যালসিয়াম বেশি', 'কিডনির ক্ষতি', 'রক্তকণিকা কম'], s: ['ব্যথা, সহজে ভাঙা', 'জলতেষ্টা, গুলিয়ে যাওয়া', 'প্রস্রাব কম', 'ক্লান্তি, সংক্রমণ'],
+          cap: 'মায়েলোমার কোষ বোন ম্যারোতে জমে, আর চার জায়গায় ধরা দিতে পারে: হাড় দুর্বল হয়, রক্তে ক্যালসিয়াম বাড়ে, কিডনির ক্ষতি হয়, আর রক্তকণিকা কমে যায়। ছবিতে কোনো আসল মাপ নেই।' }
+      : { m: 'bone marrow', n: ['Bones weaken', 'Calcium rises', 'Kidneys strain', 'Blood counts fall'], s: ['pain, break easily', 'thirst, confusion', 'less urine', 'tiredness, infections'],
+          cap: 'Myeloma cells build up in the bone marrow and can show themselves in four places: the bones weaken, calcium rises in the blood, the kidneys are harmed, and the blood counts fall. The drawing has no real numbers.' };
+    const P = [[90, 58], [270, 58], [90, 196], [270, 196]];
+    const icon = [
+      `<rect x="-20" y="-6" width="40" height="12" rx="6" fill="#fff" stroke="${C.muted}" stroke-width="2"/><circle cx="-20" cy="-5" r="6" fill="#fff" stroke="${C.muted}" stroke-width="2"/><circle cx="-20" cy="5" r="6" fill="#fff" stroke="${C.muted}" stroke-width="2"/><circle cx="20" cy="-5" r="6" fill="#fff" stroke="${C.muted}" stroke-width="2"/><circle cx="20" cy="5" r="6" fill="#fff" stroke="${C.muted}" stroke-width="2"/><path d="M-2-6l4 5-3 3 3 4" fill="none" stroke="${C.red}" stroke-width="2" stroke-linecap="round"/>`,
+      `<circle r="15" fill="${C.amberBg}" stroke="${C.amber}" stroke-width="2"/><text y="5" text-anchor="middle" font-size="13" font-weight="700" fill="#9A5A0C">Ca</text>`,
+      `<path d="M-6-14c-12 0-14 14-8 22s14 8 14-2c0-6-4-6-4-10s2-10-2-10z" fill="${C.roseBg}" stroke="${C.rose}" stroke-width="2"/><path d="M6-14c12 0 14 14 8 22s-14 8-14-2c0-6 4-6 4-10s-2-10 2-10z" fill="${C.roseBg}" stroke="${C.rose}" stroke-width="2"/>`,
+      `<g transform="translate(-8,0)">${cell(9, false)}</g><g transform="translate(10,4)">${cell(6, false)}</g>`,
+    ];
+    let body = `<rect x="130" y="100" width="100" height="48" rx="14" fill="${C.amberBg}" stroke="${C.amber}" stroke-width="2"/>`;
+    [[150, 118], [170, 130], [190, 116], [208, 132], [160, 136], [200, 122]].forEach(([x, y]) => { body += `<circle cx="${x}" cy="${y}" r="5.5" fill="#2E3A59"/>`; });
+    body += T(180, 166, t.m, { size: 12.5, fill: C.muted, w: 600 });
+    P.forEach(([x, y], i) => {
+      const ex = x < 180 ? 130 : 230, ey = y < 124 ? 104 : 144;
+      body += `<path class="mf-l" style="animation-delay:${(i * 1.5).toFixed(1)}s" d="M${ex} ${ey}L${x + (x < 180 ? 28 : -28)} ${y + (y < 124 ? 10 : -10)}" stroke="${C.red}" stroke-width="3" stroke-linecap="round"/>`;
+      body += `<g transform="translate(${x},${y})"><g class="mf-i" style="animation-delay:${(i * 1.5).toFixed(1)}s">${icon[i]}</g></g>`;
+      const ty = y < 124 ? y - 36 : y + 34;
+      body += T(x, ty, t.n[i], { size: 13, fill: C.ink, w: 700 }) + T(x, ty + 15, t.s[i], { size: 12, fill: C.muted, w: 600 });
+    });
+    return {
+      cap: t.cap,
+      svg: svg('mf', 360, 250, t.cap,
+        '.mf-l{opacity:.15;animation:mfl 6s ease-in-out infinite}@keyframes mfl{0%,100%{opacity:.15}8%,22%{opacity:1}30%{opacity:.15}}' +
+        '.mf-i{transform-box:fill-box;transform-origin:center;animation:mfi 6s ease-in-out infinite}@keyframes mfi{0%,100%{transform:scale(1)}12%{transform:scale(1.15)}24%{transform:scale(1)}}' +
+        '@media (prefers-reduced-motion:reduce){.mf-l{opacity:.8}.mf-i{transform:none}}',
+        body),
+    };
+  },
   // Anaemia, iron: two tanks of body iron. Tablets drip iron into both. In the first, a leak (heavy periods or
   // bleeding) lets it out, so the level hardly rises; in the second the leak is treated and the level slowly rises.
   'iron-tank'(l) {
@@ -1317,6 +1351,30 @@ const TRY = {
             ['pill', 'A side effect means I must stop the tablet', 'True?', 'Tell your hematologist instead of skipping it. A different tablet can often be tried.'],
             ['fam', 'My children will get CML from me', 'True?', 'The gene change in CML happens during a person’s life. It is not passed from parent to child.']],
           cap: 'Whatever it is, ask your hematologist before changing anything about the tablets.' };
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
+      t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
+        `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
+        `<span class="fc back"><span class="k">${esc(t.sign)}</span><span>${esc(back)}</span></span></button>`).join('') + '</div>';
+    return { cap: t.cap, cls: 'flipset', html };
+  },
+  // Blood cancers, myeloma: three beliefs from the stories; each card turns over to what the chapter says.
+  'myeloma-cards'(l) {
+    const ic = {
+      back: `<path d="M20 6v28" stroke="${C.muted}" stroke-width="3" stroke-linecap="round"/><path d="M14 11h12M13 18h14M14 25h12M15 32h10" stroke="${C.muted}" stroke-width="2.4" stroke-linecap="round"/><circle cx="27" cy="22" r="4" fill="${C.red}" opacity=".8"/>`,
+      ca: `<circle cx="20" cy="20" r="13" fill="${C.amberBg}" stroke="${C.amber}" stroke-width="2"/><text x="20" y="25" text-anchor="middle" font-size="12" font-weight="700" fill="#9A5A0C">Ca</text>`,
+      hand: `<path d="M12 30V17a3 3 0 0 1 6 0v-5a3 3 0 0 1 6 0v6a3 3 0 0 1 6 0v12c0 4-4 6-9 6s-9-2-9-6z" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/>`,
+    };
+    const t = l === 'bn'
+      ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
+          c: [['back', 'এই বয়সে কোমরে ব্যথা তো হবেই', 'সত্যি?', 'বেশিরভাগ কোমরের ব্যথা পেশি বা শিরদাঁড়া থেকে হয়। কিন্তু ব্যথা বেড়েই চললে, সঙ্গে ক্লান্তি থাকলে, ডাক্তার দেখান।'],
+            ['ca', 'ক্যালসিয়াম ট্যাবলেটে হাড় শক্ত হবে', 'সত্যি?', 'মায়েলোমায় রক্তে ক্যালসিয়াম আগে থেকেই বেশি থাকতে পারে। ক্যালসিয়াম বা ভিটামিনের ট্যাবলেটের আগে হেমাটোলজিস্টকে জিজ্ঞেস করুন।'],
+            ['hand', 'মায়েলোমা মানে আর কিছু করার নেই', 'সত্যি?', 'সাধারণত সারে না, কিন্তু চিকিৎসায় সামলানো যায়, আর ফিরে এলে আবার চিকিৎসা হয়।']],
+          cap: 'যা-ই হোক, কোনো ওষুধ বা ট্যাবলেট শুরু বা বন্ধ করার আগে হেমাটোলজিস্টকে জিজ্ঞেস করুন।' }
+      : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
+          c: [['back', 'Back pain at this age is only age', 'True?', 'Most back pain comes from the muscles or the spine. But pain that keeps getting worse, with tiredness, needs a doctor.'],
+            ['ca', 'Calcium tablets will make the bones strong', 'True?', 'In myeloma, the calcium in the blood can already be high. Ask the hematologist before any calcium or vitamin tablet.'],
+            ['hand', 'Myeloma means nothing can be done', 'True?', 'It usually cannot be cured, but it can be managed with treatment, and treated again if it comes back.']],
+          cap: 'Whatever it is, ask your hematologist before starting or stopping any medicine or tablet.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
       t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
         `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
