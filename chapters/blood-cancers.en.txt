@@ -10,7 +10,7 @@ The mother wants to know whether her son will live. The clerk wants to know whet
 
 # What a blood cancer is
 
-Blood is made in the bone marrow, the soft tissue inside the bones, which makes red cells, white cells and platelets every day. Some white cells also live in the lymph glands of the neck, armpits and groin.
+Blood is made in the bone marrow, the soft tissue inside the bones, which makes red cells, white cells and platelets every day. Some white cells also live in the lymph glands (lymph nodes) of the neck, armpits and groin.
 
 A blood cancer starts when one of these blood-making cells changes and starts to multiply out of control. The faulty cells crowd out the healthy ones. With too few red cells you become tired and pale. With too few working white cells, infections and fevers keep coming. With too few platelets, you bruise and bleed easily.
 
@@ -42,6 +42,10 @@ Any of these, if they do not go away:
 - bone pain that keeps getting worse
 
 These signs are common, and most of the time the cause is not cancer. A blood count is the first step, and a doctor reads it together with how you are.
+
+If the blood report does not show a cause, see a hematologist if you have these signs.
+
+Glands (lymph nodes) in the neck, armpit or groin that swell with an infection usually go down within a week or two. A gland that is not going down, is growing, feels hard or does not move needs a doctor's look. Most often it is not cancer. Left for months, if the cause is lymphoma or another cancer, it can spread and become harder to treat.
 
 [figure: bc-signs]
 
