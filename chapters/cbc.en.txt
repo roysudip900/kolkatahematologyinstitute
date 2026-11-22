@@ -81,3 +81,5 @@ When more than one kind of cell is abnormal, when a value is far outside the ran
 - Doles and others: Interpreting normal values and reference ranges for laboratory tests, Journal of the American Board of Family Medicine (2025) | https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12096374/
 - American Society of Hematology: Blood basics | https://www.hematology.org/education/patients/blood-basics
 - NHS: Blood tests | https://www.nhs.uk/tests-and-treatments/blood-tests/
+- NHS: Thalassaemia | https://www.nhs.uk/conditions/thalassaemia/
+- American Society of Hematology: Iron-deficiency anemia | https://www.hematology.org/education/patients/anemia/iron-deficiency

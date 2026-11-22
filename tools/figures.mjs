@@ -1003,14 +1003,14 @@ const TRY = {
   'cbc-reader'(l) {
     const t = l === 'bn'
       ? { h: 'রিপোর্টের কোন লাইন?', sub: 'যে লাইনটা নিয়ে ভাবছেন, তাতে চাপ দিন।', pick: 'উপরে একটা বেছে নিন।', rows: ['কম হলে হতে পারে', 'বেশি হলে হতে পারে'],
-          p: [['হিমোগ্লোবিন', 'অ্যানিমিয়া, বা থ্যালাসেমিয়া বা সিকল সেলের মতো অসুখ।', 'শরীরে জল কম থাকলে বাড়তে পারে। কী মানে, ডাক্তারবাবুকে জিজ্ঞেস করুন।'],
+          p: [['হিমোগ্লোবিন', 'অ্যানিমিয়া, বা থ্যালাসেমিয়া বা সিকল সেলের মতো অসুখ।', 'এর কয়েকটা কারণ আছে। কী মানে, ডাক্তারবাবুকে জিজ্ঞেস করুন।'],
             ['পিসিভি (হেমাটোক্রিট)', 'অ্যানিমিয়া।', 'শরীরে জল কম থাকা।'],
-            ['এমসিভি', 'আয়রনের অভাবে অ্যানিমিয়া, বা থ্যালাসেমিয়া, বাহক অবস্থাও।', 'এর কয়েকটা কারণ আছে। ডাক্তারবাবুকে জিজ্ঞেস করুন।'],
+            ['এমসিভি', 'আয়রনের অভাবে অ্যানিমিয়া, বা থ্যালাসেমিয়া, থ্যালাসেমিয়ার বাহক হলেও।', 'এর কয়েকটা কারণ আছে। ডাক্তারবাবুকে জিজ্ঞেস করুন।'],
             ['শ্বেত কণিকা (TLC)', 'সংক্রমণ, রোগ প্রতিরোধ ক্ষমতার সমস্যা, কখনো রক্তের ক্যান্সার।', 'সংক্রমণ, রোগ প্রতিরোধ ক্ষমতার সমস্যা, কখনো রক্তের ক্যান্সার।'],
             ['প্লেটলেট', 'রক্ত পড়ার সমস্যা। প্লেটলেট কম ও আইটিপি নিয়ে আলাদা আলোচনা আছে।', 'রক্ত জমাট বাঁধার সমস্যা।']],
           cap: 'একটা লাইন দেখে কিছু বলা যায় না। ডাক্তারবাবু সব লাইন একসঙ্গে, আর আপনি কেমন আছেন, দেখে বলবেন।' }
       : { h: 'Which line on your report?', sub: 'Tap the line you are wondering about.', pick: 'Choose one above.', rows: ['Low can mean', 'High can mean'],
-          p: [['Hemoglobin', 'Anaemia, or conditions such as thalassemia or sickle cell disease.', 'Too little water in the body can raise it. Ask your doctor what it means for you.'],
+          p: [['Hemoglobin', 'Anaemia, or conditions such as thalassemia or sickle cell disease.', 'There are several reasons. Ask your doctor what it means for you.'],
             ['PCV (hematocrit)', 'Anaemia.', 'Too little water in the body (dehydration).'],
             ['MCV', 'Anaemia from low iron, or thalassemia, including the carrier state.', 'There are several reasons. Ask your doctor.'],
             ['White cells (TLC)', 'An infection, a problem with the defence system, sometimes a blood cancer.', 'An infection, a problem with the defence system, sometimes a blood cancer.'],
