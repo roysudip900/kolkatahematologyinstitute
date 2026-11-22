@@ -1122,13 +1122,13 @@ const TRY = {
       ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
           c: [['tonic', 'হাত-পা ঝিনঝিন করলে দোকানের নার্ভ টনিকেই হবে', 'সত্যি?', 'আগে রক্ত পরীক্ষা। বি১২ সত্যিই কম কিনা আর কেন, সেটা জানা দরকার, টনিকে আসল কারণ ধরা পড়তে দেরি হয়।'],
             ['inj', 'ভালো লাগছে, এবার ইঞ্জেকশন বন্ধ', 'সত্যি?', 'পারনিশাস অ্যানিমিয়ায় সাধারণত সারা জীবন ইঞ্জেকশন লাগে। বন্ধ করার আগে ডাক্তারবাবুকে জিজ্ঞেস করুন।'],
-            ['egg', 'বেশি মাছ-ডিম খেলেই ঠিক হয়ে যাবে', 'সত্যি?', 'পাকস্থলী যদি বি১২ টানতে না পারে, তাহলে খাবার বাড়িয়ে লাভ হয় না।'],
+            ['egg', 'বেশি মাছ-ডিম খেলেই সব সময় ঠিক হয়ে যাবে', 'সত্যি?', 'পাকস্থলী যদি বি১২ টানতে না পারে, তাহলে খাবার বাড়িয়ে লাভ হয় না।'],
             ['leaf', 'শুধু ফলিক অ্যাসিড খেলেই চলবে', 'সত্যি?', 'আগে বি১২ দেখা হয়। শুধু ফলিক অ্যাসিডে বি১২-এর ঘাটতি চাপা পড়তে পারে, আর নার্ভের ক্ষতি চলতে থাকে।']],
           cap: 'যা-ই খান বা বন্ধ করুন, আগে ডাক্তারবাবুকে জিজ্ঞেস করুন।' }
       : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
           c: [['tonic', 'A nerve tonic from the chemist will fix the tingling', 'True?', 'A blood test comes first. The doctor needs to know whether B12 is really low and why, and a tonic can delay finding the cause.'],
             ['inj', 'I feel better, so the injections can stop', 'True?', 'In pernicious anaemia the injections are usually needed for life. Ask your doctor before stopping.'],
-            ['egg', 'More fish and eggs will put it right', 'True?', 'If the stomach cannot take in B12, eating more does not help.'],
+            ['egg', 'More fish and eggs will always put it right', 'True?', 'If the stomach cannot take in B12, eating more does not help.'],
             ['leaf', 'Folic acid on its own is enough', 'True?', 'B12 is checked first. Folic acid alone can hide a B12 shortage while the nerves go on being harmed.']],
           cap: 'Whatever you take or stop, ask your doctor first.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
