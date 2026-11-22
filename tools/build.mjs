@@ -64,6 +64,14 @@ const ORG_SAME_AS = [];
 // The author's name on chapter pages links to the first profile in SAME_AS (Dr. Roy, 2026-11-21).
 const au = (l) => SAME_AS.length
   ? `<a class="au" href="${SAME_AS[0]}" target="_blank" rel="noopener">${AUTHOR[l]}</a>` : AUTHOR[l];
+// Co-authors (Dr. Roy, 2026-11-22): a chapter's line in chapters/list.json may carry "coauthor": "<key>".
+// Dr. Srejita Mridha co-authors the hematopathology topics (the blood report, the bone marrow test and other lab pages).
+// She is named first on those pages, then Dr. Roy; both are in the home page author list.
+const COAUTHORS = {
+  mridha: { bn: 'ডাঃ শ্রীজিতা মৃধা', en: 'Dr. Srejita Mridha', cred: { bn: 'এমবিবিএস, এমডি (প্যাথোলজি)', en: 'MBBS, MD (Pathology)' },
+    job: 'Pathologist', id: `${SITE}/#author-mridha` },
+};
+const coPerson = (k) => ({ '@type': 'Person', '@id': COAUTHORS[k].id, name: COAUTHORS[k].en, jobTitle: COAUTHORS[k].job, honorificSuffix: COAUTHORS[k].cred.en });
 
 const STROKE = 'fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"';
 const RIGHT = `<svg viewBox="0 0 16 16" ${STROKE}><path d="M3 8h10M9 4l4 4-4 4"/></svg>`;
@@ -321,16 +329,21 @@ for (const c of chapters) {
       LANG = l;
       const b = chapterBody(text[l]);
       kick = root ? `${esc(short(root, l))} · ${readTime(text[l], l)}` : readTime(text[l], l);
-      body = `<div class="by">${AVATAR}<div><b>${l === 'bn' ? `লিখেছেন ${au('bn')}` : `By ${au('en')}`}</b>${CRED[l]}<br>${l === 'bn' ? `শেষ আপডেট ${niceDate(date, 'bn')}` : `Last updated ${niceDate(date, 'en')}`}</div></div>` +
+      const co = c.coauthor && COAUTHORS[c.coauthor];
+      body = `<div class="by">${AVATAR}<div>` + (co
+        ? `<b>${l === 'bn' ? `লিখেছেন ${co[l]} ও ${au('bn')}` : `By ${co[l]} and ${au('en')}`}</b>${co[l]}: ${co.cred[l]}<br>${AUTHOR[l]}: ${CRED[l]}<br>`
+        : `<b>${l === 'bn' ? `লিখেছেন ${au('bn')}` : `By ${au('en')}`}</b>${CRED[l]}<br>`) + `${l === 'bn' ? `শেষ আপডেট ${niceDate(date, 'bn')}` : `Last updated ${niceDate(date, 'en')}`}</div></div>` +
         partsNav(c, l) +
         `<article>${b.html}</article>` + nextPart(c, l) +
-        `<aside class="endcard">${AVATAR}<div><div class="k">${l === 'bn' ? 'লেখক' : 'Author'}</div><div class="who">${au(l)}</div><div class="cred">${CRED[l]}</div></div></aside>` +
+        `<aside class="endcard">${AVATAR}<div><div class="k">${l === 'bn' ? 'লেখক' : (co ? 'Authors' : 'Author')}</div>` +
+        (co ? `<div class="who">${co[l]}</div><div class="cred">${co.cred[l]}</div>` : '') +
+        `<div class="who">${au(l)}</div><div class="cred">${CRED[l]}</div></div></aside>` +
         `<a class="allbtn" href="/#library">${LEFT}${l === 'bn' ? 'সব অধ্যায়' : 'All chapters'}</a>`;
       schema = ld({
         '@context': 'https://schema.org', '@type': 'MedicalWebPage', name: title, description: desc, inLanguage: l,
         url: canonical, dateModified: date, about: { '@type': 'MedicalCondition', name: c.en.split(':')[0] },
         audience: { '@type': 'MedicalAudience', audienceType: 'Patient' },
-        author: { '@type': 'Person', '@id': ID.author, name: AUTHOR.en, jobTitle: 'Clinical Hematologist', honorificSuffix: CRED.en },
+        author: [...(co ? [coPerson(c.coauthor)] : []), { '@type': 'Person', '@id': ID.author, name: AUTHOR.en, jobTitle: 'Clinical Hematologist', honorificSuffix: CRED.en }],
         publisher: { '@type': 'MedicalOrganization', '@id': ID.org, name: SITE_NAME.en, url: SITE + '/' },
         isPartOf: { '@id': ID.site },
         ...(b.sum ? { abstract: b.sum } : {}),
@@ -585,12 +598,14 @@ ${ld({
   '@graph': [
     { '@type': 'MedicalOrganization', '@id': ID.org, name: SITE_NAME.en, alternateName: SITE_NAME.bn, url: SITE + '/',
       logo: `${SITE}/assets/logo-mark.png`, description: SITE_DESC, medicalSpecialty: 'Hematologic', areaServed: AREA,
-      founder: { '@id': ID.author }, member: { '@id': ID.author }, ...(ORG_SAME_AS.length ? { sameAs: ORG_SAME_AS } : {}) },
+      founder: { '@id': ID.author }, member: [{ '@id': ID.author }, ...Object.keys(COAUTHORS).map((k) => ({ '@id': COAUTHORS[k].id }))], ...(ORG_SAME_AS.length ? { sameAs: ORG_SAME_AS } : {}) },
     { '@type': 'Person', '@id': ID.author, name: AUTHOR.en, alternateName: AUTHOR.bn, honorificSuffix: CRED.en,
       jobTitle: 'Clinical Hematologist', url: `${SITE}/#about`, workLocation: AREA, worksFor: { '@id': ID.org },
       hasOccupation: { '@type': 'Occupation', name: 'Clinical Hematologist', occupationLocation: AREA },
       knowsAbout: ['Hematology', 'Anaemia', 'Iron deficiency', 'Vitamin B12 deficiency', 'Thalassemia', 'HbE', 'Blood transfusion', 'Iron chelation'],
       ...(SAME_AS.length ? { sameAs: SAME_AS } : {}) },
+    ...Object.keys(COAUTHORS).map((k) => ({ ...coPerson(k), alternateName: COAUTHORS[k].bn, url: `${SITE}/#about`, workLocation: AREA,
+      hasOccupation: { '@type': 'Occupation', name: COAUTHORS[k].job, occupationLocation: AREA } })),
     { '@type': 'WebSite', '@id': ID.site, url: SITE + '/', name: SITE_NAME.en, alternateName: SITE_NAME.bn,
       description: SITE_DESC, inLanguage: LANGS, publisher: { '@id': ID.org } },
   ],
@@ -619,7 +634,7 @@ writeFileSync(join(ROOT, 'llms.txt'), `# ${SITE_NAME.en} (${SITE_NAME.bn})
 
 > ${SITE_DESC}
 
-Author: ${SAME_AS.length ? `[${AUTHOR.en}](${SAME_AS[0]})` : AUTHOR.en}, ${CRED.en}, clinical hematologist in Kolkata. Every chapter exists in Bengali and in English, and each one ends with when to go to hospital and which questions to take to a doctor.
+Author: ${SAME_AS.length ? `[${AUTHOR.en}](${SAME_AS[0]})` : AUTHOR.en}, ${CRED.en}, clinical hematologist in Kolkata. Co-author of the blood report and other hematopathology pages: ${COAUTHORS.mridha.en}, ${COAUTHORS.mridha.cred.en}, pathologist. Every chapter exists in Bengali and in English, and each one ends with when to go to hospital and which questions to take to a doctor.
 
 ## Chapters (English)
 ${llmsList('en')}
