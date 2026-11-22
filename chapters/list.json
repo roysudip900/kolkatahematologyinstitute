@@ -54,6 +54,17 @@
   "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FDECEE\"/><circle cx=\"26\" cy=\"26\" r=\"15\" fill=\"#F2A7AE\"/><circle cx=\"26\" cy=\"26\" r=\"9\" fill=\"#FDECEE\"/>"
  },
  {
+  "id": "anaemia-b12",
+  "parent": "anaemia",
+  "bn": "অ্যানিমিয়া: ভিটামিন বি১২ ও ফোলেট",
+  "en": "Anaemia: vitamin B12 and folate",
+  "desc_bn": "বি১২ বা ফোলেট কম কেন হয়: নিরামিষ খাবার, পারনিশাস অ্যানিমিয়া, গ্যাসের ট্যাবলেট আর মেটফরমিন। ইঞ্জেকশন কেন সারা জীবন লাগতে পারে, আর ফলিক অ্যাসিডের কথা।",
+  "desc_en": "Why B12 or folate runs low: diet, pernicious anaemia, acid tablets and metformin. Why B12 injections can be lifelong, and what to know about folic acid.",
+  "card_bn": "ক্লান্তি আর জিভে জ্বালা? বি১২ ইঞ্জেকশন বন্ধ করে দিয়েছেন? বহু বছর সুগার বা গ্যাসের ট্যাবলেট খাচ্ছেন?",
+  "card_en": "Tired, with a sore tongue? Stopped your B12 injections? On sugar or acid tablets for years?",
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FDECEE\"/><path d=\"M17 28h18l-3 12H20z\" fill=\"#C9744A\"/><path d=\"M26 28c-1-6-4-9-9-10 1 6 4 9 9 10zM26 28c1-7 4-11 9-12-1 6-4 10-9 12z\" fill=\"#2E8B57\"/><circle cx=\"26\" cy=\"14\" r=\"3\" fill=\"#D93A4A\"/>"
+ },
+ {
   "id": "thalassemia",
   "bn": "থ্যালাসেমিয়া",
   "en": "Thalassemia",

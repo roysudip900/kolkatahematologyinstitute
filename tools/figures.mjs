@@ -388,6 +388,52 @@ const FIG = {
         body),
     };
   },
+  // Anaemia, B12 and folate: the road B12 takes from food to blood. In the top lane a B12 dot (blue) leaves the food,
+  // picks up the stomach's helper (teal) and goes through the gut into the blood. In the lower lane, pernicious anaemia,
+  // the stomach makes no helper, so the dot stops there and fades. No numbers.
+  'b12-route'(l) {
+    const t = l === 'bn'
+      ? { food: 'খাবার', st: 'পাকস্থলী', gut: 'অন্ত্র', blood: 'রক্ত', a: 'স্বাভাবিক', b: 'পারনিশাস অ্যানিমিয়া', help: 'সাহায্যকারী প্রোটিন', no: 'সাহায্যকারী নেই',
+          cap: 'খাবারের বি১২ (নীল) পাকস্থলীতে একটা সাহায্যকারী প্রোটিনের (সবুজ) সঙ্গে জোড়ে, তারপর অন্ত্র দিয়ে রক্তে যায়। পারনিশাস অ্যানিমিয়ায় পাকস্থলী সেই প্রোটিন বানাতে পারে না, তাই বি১২ ওখানেই আটকে যায়, যত খাবারই খান। ছবিতে কোনো আসল মাপ নেই।' }
+      : { food: 'food', st: 'stomach', gut: 'gut', blood: 'blood', a: 'Usual road', b: 'Pernicious anaemia', help: 'helper protein', no: 'no helper',
+          cap: 'B12 from food (blue) joins a helper protein (green) in the stomach, then passes through the gut into the blood. In pernicious anaemia the stomach cannot make the helper, so B12 stops there, however much food is eaten. The drawing has no real numbers.' };
+    const X = [44, 136, 228, 316];
+    const station = (x, y, lab, kind) => {
+      const shape = kind === 'food'
+        ? `<rect x="${x - 20}" y="${y - 16}" width="40" height="32" rx="10" fill="${C.amberBg}" stroke="${C.amber}" stroke-width="2"/><ellipse cx="${x - 5}" cy="${y}" rx="9" ry="5" fill="${C.amber}"/><circle cx="${x + 9}" cy="${y - 2}" r="5" fill="#fff" stroke="${C.amber}" stroke-width="1.6"/>`
+        : kind === 'st'
+          ? `<path d="M${x - 16} ${y - 14}c10-4 18 2 18 10s10 4 12 -2c6 14-6 24-18 22s-18-10-12-30z" fill="${C.roseBg}" stroke="${C.rose}" stroke-width="2"/>`
+          : kind === 'gut'
+            ? `<path d="M${x - 18} ${y - 8}h30a6 6 0 0 1 0 12h-24a6 6 0 0 0 0 12h30" fill="none" stroke="${C.rose}" stroke-width="5" stroke-linecap="round"/>`
+            : `<g transform="translate(${x},${y})">${cell(13, false)}</g>`;
+      return shape + T(x, y + 32, lab, { size: 12.5, fill: C.muted, w: 600 });
+    };
+    const lane = (y, title, blocked) => {
+      let g = T(20, y - 30, title, { a: 'start', size: 13.5, fill: blocked ? C.red : C.teal2, w: 700 }) +
+        `<path d="M${X[0] + 22} ${y}H${X[3] - 16}" stroke="${C.mintLine}" stroke-width="3" stroke-dasharray="4 5"/>`;
+      g += station(X[0], y, t.food, 'food') + station(X[1], y, t.st, 'st') + station(X[2], y, t.gut, 'gut') + station(X[3], y, t.blood, 'blood');
+      if (blocked) {
+        g += `<g transform="translate(${X[1] + 26},${y - 22})"><circle r="9" fill="#fff" stroke="${C.red}" stroke-width="2"/><path d="M-4-4l8 8M4-4l-8 8" stroke="${C.red}" stroke-width="2.4" stroke-linecap="round"/></g>`;
+        g += `<g class="br-d br-stop"><circle cx="${X[0]}" cy="${y - 1}" r="6" fill="${C.o2}"/></g>`;
+        g += T(X[1] + 40, y + 50, t.no, { size: 12.5, fill: C.red, w: 600 });
+      } else {
+        g += `<g class="br-d br-go"><circle cx="${X[0]}" cy="${y - 1}" r="6" fill="${C.o2}"/><circle class="br-h" cx="${X[0] + 9}" cy="${y - 1}" r="5" fill="${C.teal2}"/></g>`;
+        g += T(X[1], y - 26, t.help, { size: 12.5, fill: C.teal2, w: 600 });
+      }
+      return g;
+    };
+    const body = lane(62, t.a, false) + lane(178, t.b, true);
+    const go = X[3] - X[0], stop = X[1] - X[0];
+    return {
+      cap: t.cap,
+      svg: svg('br', 360, 250, t.cap,
+        `.br-go{animation:brgo 9s ease-in-out infinite}@keyframes brgo{0%{transform:translateX(0)}35%{transform:translateX(${stop}px)}45%{transform:translateX(${stop}px)}85%,100%{transform:translateX(${go}px)}}` +
+        `.br-h{opacity:0;animation:brh 9s ease-in-out infinite}@keyframes brh{0%,33%{opacity:0}40%,100%{opacity:1}}` +
+        `.br-stop{animation:brst 9s ease-in-out infinite}@keyframes brst{0%{transform:translateX(0);opacity:1}35%{transform:translateX(${stop - 6}px);opacity:1}60%{transform:translateX(${stop - 6}px);opacity:1}80%,100%{transform:translateX(${stop - 6}px);opacity:.15}}` +
+        `@media (prefers-reduced-motion:reduce){.br-go{transform:translateX(${go}px)}.br-h{opacity:1}.br-stop{transform:translateX(${stop - 6}px)}}`,
+        body),
+    };
+  },
   // Anaemia, iron: two tanks of body iron. Tablets drip iron into both. In the first, a leak (heavy periods or
   // bleeding) lets it out, so the level hardly rises; in the second the leak is treated and the level slowly rises.
   'iron-tank'(l) {
@@ -1058,6 +1104,33 @@ const TRY = {
             ['steroid', 'Steroids from the chemist are a safe way to raise the count', 'True?', 'Without a doctor watching, steroids can cause infections, diabetes, high blood pressure and weak bones, and stopping suddenly is dangerous too. Ask your hematologist first.'],
             ['pill', 'Any medicine is fine for fever or pain', 'True?', 'Aspirin and ibuprofen can make bleeding worse. Ask the doctor which one is safe.']],
           cap: 'Every person’s ITP is different. Ask the doctor who is looking after you.' };
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
+      t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
+        `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
+        `<span class="fc back"><span class="k">${esc(t.sign)}</span><span>${esc(back)}</span></span></button>`).join('') + '</div>';
+    return { cap: t.cap, cls: 'flipset', html };
+  },
+  // Anaemia, B12 and folate: four beliefs; each card turns over to what the chapter says (no doses, no self-treatment).
+  'b12-cards'(l) {
+    const ic = {
+      tonic: `<rect x="13" y="12" width="14" height="22" rx="3" fill="${C.amberBg}" stroke="${C.amber}" stroke-width="2"/><rect x="15" y="6" width="10" height="7" rx="2" fill="${C.amber}"/><path d="M16 22h8M16 27h8" stroke="${C.amber}" stroke-width="1.6" stroke-linecap="round"/>`,
+      inj: `<g transform="rotate(-40 20 20)"><rect x="8" y="16" width="20" height="8" rx="2" fill="#fff" stroke="${C.o2}" stroke-width="2"/><path d="M28 20h8M4 20h4M4 16v8" stroke="${C.o2}" stroke-width="2" stroke-linecap="round"/></g>`,
+      egg: `<ellipse cx="20" cy="22" rx="10" ry="13" fill="#fff" stroke="${C.amber}" stroke-width="2"/><circle cx="20" cy="24" r="5" fill="${C.amber}"/>`,
+      leaf: `<path d="M20 35c-9-4-13-12-10-23 8 1 15 6 16 15 1 4-1 7-6 8z" fill="${C.teal2}"/><path d="M20 35c-2-8-4-15-9-22" stroke="#fff" stroke-width="1.6" fill="none"/>`,
+    };
+    const t = l === 'bn'
+      ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
+          c: [['tonic', 'হাত-পা ঝিনঝিন করলে দোকানের নার্ভ টনিকেই হবে', 'সত্যি?', 'আগে রক্ত পরীক্ষা। বি১২ সত্যিই কম কিনা আর কেন, সেটা জানা দরকার, টনিকে আসল কারণ ধরা পড়তে দেরি হয়।'],
+            ['inj', 'ভালো লাগছে, এবার ইঞ্জেকশন বন্ধ', 'সত্যি?', 'পারনিশাস অ্যানিমিয়ায় সাধারণত সারা জীবন ইঞ্জেকশন লাগে। বন্ধ করার আগে ডাক্তারবাবুকে জিজ্ঞেস করুন।'],
+            ['egg', 'বেশি মাছ-ডিম খেলেই ঠিক হয়ে যাবে', 'সত্যি?', 'পাকস্থলী যদি বি১২ টানতে না পারে, তাহলে খাবার বাড়িয়ে লাভ হয় না।'],
+            ['leaf', 'শুধু ফলিক অ্যাসিড খেলেই চলবে', 'সত্যি?', 'আগে বি১২ দেখা হয়। শুধু ফলিক অ্যাসিডে বি১২-এর ঘাটতি চাপা পড়তে পারে, আর নার্ভের ক্ষতি চলতে থাকে।']],
+          cap: 'যা-ই খান বা বন্ধ করুন, আগে ডাক্তারবাবুকে জিজ্ঞেস করুন।' }
+      : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
+          c: [['tonic', 'A nerve tonic from the chemist will fix the tingling', 'True?', 'A blood test comes first. The doctor needs to know whether B12 is really low and why, and a tonic can delay finding the cause.'],
+            ['inj', 'I feel better, so the injections can stop', 'True?', 'In pernicious anaemia the injections are usually needed for life. Ask your doctor before stopping.'],
+            ['egg', 'More fish and eggs will put it right', 'True?', 'If the stomach cannot take in B12, eating more does not help.'],
+            ['leaf', 'Folic acid on its own is enough', 'True?', 'B12 is checked first. Folic acid alone can hide a B12 shortage while the nerves go on being harmed.']],
+          cap: 'Whatever you take or stop, ask your doctor first.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
       t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
         `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
