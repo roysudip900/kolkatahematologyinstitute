@@ -1178,7 +1178,7 @@ const TRY = {
           cap: 'সব রিপোর্ট একসঙ্গে নিয়ে হেমাটোলজিস্টের কাছে যান। শুধু নাম দেখে কিছু ঠিক করবেন না।' }
       : { h: 'Which one is on your report?', sub: 'Tap the name on your report.', pick: 'Choose one above.', rows: ['What it means', 'Ask your doctor'],
           p: [['HbE trait', 'A healthy carrier. No treatment is needed. Small red cells can be mistaken for a shortage of iron.', 'Is my iron really low, or does HbE only make it look that way?'],
-            ['HbE disease', 'E in both copies. Usually only mild anaemia, and a normal life.', 'Is this surely HbE disease, and not HbE beta thalassemia?'],
+            ['HbE disease', 'E in both copies. Usually only mild anaemia, and a normal life.', 'Are you sure this is HbE disease, and not HbE beta thalassemia?'],
             ['HbE beta thalassemia', 'A form of thalassemia. It can be mild or severe, and can change over the years. Regular checks are needed even without transfusions.', 'How often should we come, and what do we do when a fever comes?'],
             ['Two different traits in a couple', 'If one partner has HbE trait and the other has beta thalassemia trait, a child can be born with HbE beta thalassemia.', 'What should we do before planning a baby?']],
           cap: 'Take all the reports together to a hematologist. Do not decide anything from the name alone.' };
