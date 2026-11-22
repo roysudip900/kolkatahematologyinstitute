@@ -326,14 +326,14 @@ const FIG = {
         body),
     };
   },
-  // Dengue: a timeline. A few days of fever, then the risky window just after the fever goes (it pulses as the
+  // Dengue: a timeline. A few days of fever, then the risky window after the fever goes (it pulses as the
   // dot passes), then getting better, then a stretch of tiredness. No real days are drawn.
   'dengue-days'(l) {
     const t = l === 'bn'
       ? { a: 'জ্বর', goes: 'জ্বর ছাড়ল', b: 'কড়া নজর', c: 'সেরে ওঠা', d: 'ক্লান্তি', look: 'বিপদের লক্ষণ?',
-          cap: 'ডেঙ্গু সাধারণত শুরু হয় কয়েকদিনের খুব জ্বর দিয়ে। বিপদের সময় প্রায়ই আসে জ্বর ছাড়ার ঠিক পরে, তাই তখনই সবচেয়ে কাছ থেকে নজর রাখতে হয়। তারপর বেশিরভাগ মানুষ এক-দু সপ্তাহে সেরে ওঠেন, যদিও কয়েক সপ্তাহ ক্লান্তি থাকতে পারে। ছবিতে কোনো আসল দিন নেই।' }
+          cap: 'ডেঙ্গু সাধারণত শুরু হয় কয়েকদিনের খুব জ্বর দিয়ে। বিপদের সময় প্রায়ই আসে জ্বর ছাড়ার পরে, তাই তখনই সবচেয়ে কাছ থেকে নজর রাখতে হয়। তারপর বেশিরভাগ মানুষ এক-দু সপ্তাহে সেরে ওঠেন, যদিও কয়েক সপ্তাহ ক্লান্তি থাকতে পারে। ছবিতে কোনো আসল দিন নেই।' }
       : { a: 'Fever', goes: 'fever goes', b: 'Watch closely', c: 'Getting better', d: 'Tired', look: 'warning signs?',
-          cap: 'Dengue usually starts with a few days of high fever. The risky time often comes just after the fever goes, so that is when to watch most closely. Most people then get better within one to two weeks, though tiredness can last a few weeks. The drawing has no real days.' };
+          cap: 'Dengue usually starts with a few days of high fever. The risky time often comes after the fever goes, so that is when to watch most closely. Most people then get better within one to two weeks, though tiredness can last a few weeks. The drawing has no real days.' };
     const y = 98, h = 26;
     const body =
       `<rect x="20" y="${y}" width="90" height="${h}" rx="13" fill="${C.amberBg}" stroke="${C.amber}" stroke-width="2"/>` +
@@ -887,13 +887,13 @@ const TRY = {
     };
     const t = l === 'bn'
       ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
-          c: [['therm', 'জ্বর ছেড়ে গেছে, মানে বিপদ কেটে গেছে', 'সত্যি?', 'বিপদের সময় প্রায়ই আসে জ্বর ছাড়ার ঠিক পরে। তখনও লক্ষণগুলোর দিকে নজর রাখুন।'],
+          c: [['therm', 'জ্বর ছেড়ে গেছে, মানে বিপদ কেটে গেছে', 'সত্যি?', 'বিপদের সময় প্রায়ই আসে জ্বর ছাড়ার পরে। তখনও লক্ষণগুলোর দিকে নজর রাখুন।'],
             ['plt', 'প্লেটলেট কম হলেই প্লেটলেট দিতে হবে', 'সত্যি?', 'খুব রক্তপাত হলে বা তার জোরালো ঝুঁকি থাকলে প্লেটলেট দেওয়া হয়, শুধু সংখ্যা দেখে নয়।'],
             ['leaf', 'পেঁপে পাতার রসে ডেঙ্গু সারে', 'সত্যি?', 'বিশ্ব স্বাস্থ্য সংস্থা বলছে, ডেঙ্গুর নির্দিষ্ট চিকিৎসা নেই। দেওয়ার আগে ডাক্তারবাবুকে জিজ্ঞেস করুন।'],
             ['pill', 'জ্বরে যেকোনো ব্যথার ওষুধ চলে', 'সত্যি?', 'আইবুপ্রোফেন আর অ্যাসপিরিনে রক্তপাতের সম্ভাবনা বাড়ে। ডাক্তারবাবু যা বলেন, সাধারণত প্যারাসিটামল, সেটাই দিন।']],
           cap: 'প্রতিটা অসুখ আলাদা। যে ডাক্তারবাবু দেখছেন, তাঁকে জিজ্ঞেস করুন।' }
       : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
-          c: [['therm', 'The fever has gone, so the danger is over', 'True?', 'The risky time often comes just after the fever goes. Keep watching for the warning signs.'],
+          c: [['therm', 'The fever has gone, so the danger is over', 'True?', 'The risky time often comes after the fever goes. Keep watching for the warning signs.'],
             ['plt', 'A low count always needs a platelet transfusion', 'True?', 'Platelets are given for serious bleeding or a high risk of it, not for the number alone.'],
             ['leaf', 'Papaya leaf juice cures dengue', 'True?', 'WHO says there is no specific treatment for dengue. Ask the doctor before giving it.'],
             ['pill', 'Any painkiller is fine for the fever', 'True?', 'Ibuprofen and aspirin can make bleeding more likely. Give what the doctor advises, usually paracetamol.']],
