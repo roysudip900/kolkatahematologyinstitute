@@ -604,7 +604,7 @@ const FIG = {
     const P = '#7A5AD1';
     const t = l === 'bn'
       ? { neck: 'গলা', arm: 'বগল', groin: 'কুঁচকি', lump: 'ব্যথাহীন ডেলা',
-          cap: 'লিম্ফ নোড (গ্রন্থি) সারা শরীরে থাকে, সবচেয়ে সহজে টের পাওয়া যায় গলা, বগল আর কুঁচকিতে। লিম্ফোমায় একটা নোড ফুলে ব্যথাহীন ডেলা হয়, যা কমে না। সংক্রমণে ফোলা গ্রন্থি সাধারণত এক-দু সপ্তাহে কমে যায়।' }
+          cap: 'লসিকা গ্রন্থি (লিম্ফ নোড) সারা শরীরে থাকে, সবচেয়ে সহজে টের পাওয়া যায় গলা, বগল আর কুঁচকিতে। লিম্ফোমায় একটা নোড ফুলে ব্যথাহীন ডেলা হয়, যা কমে না। সংক্রমণে ফোলা গ্রন্থি সাধারণত এক-দু সপ্তাহে কমে যায়।' }
       : { neck: 'neck', arm: 'armpit', groin: 'groin', lump: 'painless lump',
           cap: 'Lymph nodes (glands) are all over the body, most easily felt in the neck, armpits and groin. In lymphoma a node swells into a painless lump that does not go down. Glands swollen by an infection usually go down within a week or two.' };
     const body0 =
@@ -1471,12 +1471,12 @@ const TRY = {
     };
     const t = l === 'bn'
       ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
-          c: [['lump', 'ব্যথা নেই, তাই ডেলা নিয়ে ভাবার কিছু নেই', 'সত্যি?', 'লিম্ফোমার ডেলায় প্রায়ই ব্যথা থাকে না। যে ডেলা কয়েক সপ্তাহে কমে না, সেটা ডাক্তারকে দেখান।'],
+          c: [['lump', 'ব্যথা নেই, তাই ডেলা নিয়ে ভাবার কিছু নেই', 'সত্যি?', 'লিম্ফোমার ডেলায় প্রায়ই ব্যথা থাকে না। যে ডেলা দু সপ্তাহে কমে না, সেটা ডাক্তারকে দেখান।'],
             ['neck', 'গলায় ডেলা মানেই ক্যান্সার', 'সত্যি?', 'বেশিরভাগ সময় সংক্রমণে গ্রন্থি ফোলে, আর এক-দু সপ্তাহে কমে যায়।'],
             ['hand', 'লিম্ফোমা হলে কিছু করার নেই', 'সত্যি?', 'অনেক ধরনের চিকিৎসা হয়, আর কিছু পুরোপুরি সরানোও যেতে পারে।']],
           cap: 'যা-ই হোক, ডেলা থেকে গেলে ডাক্তারবাবুকে দেখান।' }
       : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
-          c: [['lump', 'It does not hurt, so the lump is nothing', 'True?', 'Lymphoma lumps are often painless. A lump that does not go down in a few weeks needs a doctor.'],
+          c: [['lump', 'It does not hurt, so the lump is nothing', 'True?', 'Lymphoma lumps are often painless. A lump that does not go down in two weeks needs a doctor.'],
             ['neck', 'A lump in the neck always means cancer', 'True?', 'Most of the time glands swell with an infection and go down within a week or two.'],
             ['hand', 'Nothing can be done for lymphoma', 'True?', 'Many types can be treated, and some can be removed completely.']],
           cap: 'Whatever it is, a lump that stays needs a doctor.' };

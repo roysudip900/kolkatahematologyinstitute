@@ -37,7 +37,7 @@ Lymphoma can cause fevers that come and go, drenching sweats at night, weight lo
 
 If the blood report does not show a cause, see a hematologist if you have these signs.
 
-A gland (lymph node) that stays swollen for more than a few weeks needs a doctor and a biopsy. Left for months, if the cause is lymphoma, it can spread to other parts of the body and become harder to treat.
+A gland (lymph node) that has not gone down after two weeks, or keeps growing, needs a doctor, who may advise a biopsy. Left for months, if the cause is lymphoma, it can spread to other parts of the body and become harder to treat.
 
 [figure: lymphoma-cards]
 
@@ -46,7 +46,7 @@ A gland (lymph node) that stays swollen for more than a few weeks needs a doctor
 Treatment depends on the type of lymphoma, how fast it grows, where it is, whether it has spread, and the person's general health. It is planned by a team of specialists and may include:
 
 - chemotherapy, sometimes with steroids taken only as the hematologist plans
-- targeted medicines and immunotherapy, which help the body's defences attack the lymphoma
+- targeted medicines, which act on the lymphoma cells, and immunotherapy, which helps the body's defences attack the lymphoma
 - radiotherapy to the affected glands
 - a stem cell transplant for some people whose lymphoma comes back
 
