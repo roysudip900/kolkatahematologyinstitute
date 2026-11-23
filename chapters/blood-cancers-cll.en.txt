@@ -48,7 +48,7 @@ A gland (lymph node) that has not gone down after two weeks, or keeps growing, n
 
 # When treatment starts, and what it does
 
-When to start depends on the signs, how far the CLL has developed and the person's general health. The main treatments are targeted medicines. These include ibrutinib, acalabrutinib, zanubrutinib and venetoclax, sometimes given with antibody medicines such as obinutuzumab or rituximab. Chemotherapy is used less often. Rarely, radiotherapy or an operation to remove the spleen is needed.
+When to start depends on the signs, how far the CLL has developed and the person's general health. The main treatments are targeted medicines. These include newer tablets such as ibrutinib, acalabrutinib, zanubrutinib, pirtobrutinib, venetoclax, idelalisib and duvelisib, sometimes given with antibody medicines such as obinutuzumab, rituximab or ofatumumab. For some people whose CLL comes back, CAR T-cell therapy may be used. Chemotherapy is used less often. Rarely, radiotherapy or an operation to remove the spleen is needed.
 
 Treatment cannot usually cure CLL, but it can control it, and this control can last for years. CLL can come back, and treatment may be repeated several times over the years. People also get help to prevent infections, including medicines, vaccines the hematologist advises and, when needed, blood or platelet transfusions.
 
