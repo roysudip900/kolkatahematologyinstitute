@@ -1,4 +1,4 @@
-> Lymphoma is a blood cancer of the lymphocytes, the white cells that live in the glands (lymph nodes), and its main sign is a painless lump in the neck, armpit or groin. Many types can be treated and some removed completely, so a lump that stays or grows, especially with fever, night sweats or weight loss, needs a doctor.
+> Lymphoma is a blood cancer of the lymphocytes, the white cells that live in the glands (lymph nodes), and its main sign is a painless lump in the neck, armpit or groin. Many types can be treated and some removed completely, though lymphoma can come back. A lump that stays or grows, especially with fever, night sweats or weight loss, needs a doctor.
 
 The lump in her neck did not hurt, so she left it alone.
 
@@ -50,7 +50,7 @@ Treatment depends on the type of lymphoma, how fast it grows, where it is, wheth
 - radiotherapy to the affected glands
 - a stem cell transplant for some people whose lymphoma comes back
 
-In Hodgkin lymphoma, treatment can often remove the lymphoma completely, especially if it is caught early. It can come back, and then it can often still be treated. Fast-growing non-Hodgkin lymphoma needs treatment straight away, and treatment can often remove it completely. Slow-growing non-Hodgkin lymphoma usually cannot be removed, but treatment can keep it under control for many years.
+In Hodgkin lymphoma, treatment can often remove the lymphoma completely, especially if it is caught early. It can come back, and then it can often still be treated. Fast-growing non-Hodgkin lymphoma needs treatment straight away, and treatment can often remove it completely, though sometimes more treatment is needed later. Slow-growing non-Hodgkin lymphoma usually cannot be removed, but treatment can keep it under control for many years.
 
 Some treatments can affect the chance of having children later. Young people should ask about this before treatment starts.
 
@@ -85,7 +85,7 @@ Usually not. Glands often swell with infections and go down within a week or two
 
 ## Is lymphoma curable?
 
-Many types can be treated, and some can be removed completely, such as Hodgkin lymphoma and fast-growing non-Hodgkin lymphoma. Slow-growing types usually cannot be removed but can be kept under control for many years.
+Many types can be treated, and some can be removed completely, such as Hodgkin lymphoma and fast-growing non-Hodgkin lymphoma. Even then it can come back, and sometimes more treatment is needed. Slow-growing types usually cannot be removed but can be kept under control for many years.
 
 ## What is the difference between Hodgkin and non-Hodgkin lymphoma?
 
