@@ -640,7 +640,7 @@ const FIG = {
       T(34, 34, t.y, { a: 'start', size: 12.5, fill: C.muted, w: 600 }) + T(336, 228, t.x, { a: 'end', size: 12.5, fill: C.muted, w: 600 });
     body += `<path d="M${pts.map(p => p.join(' ')).join('L')}" fill="none" stroke="${P}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>`;
     pts.slice(0, 6).forEach(([x, y], i) => {
-      body += `<circle class="cw-c" style="animation-delay:${(i * 1.1).toFixed(1)}s" cx="${x}" cy="${y}" r="6.5" fill="#fff" stroke="${C.teal2}" stroke-width="2"/>`;
+      body += `<circle class="cw-c" style="animation-delay:${[0, 1.3, 2.5, 3.8, 5.2, 6.5][i]}s" cx="${x}" cy="${y}" r="6.5" fill="#fff" stroke="${C.teal2}" stroke-width="2"/>`;
     });
     body += T(150, 206, t.chk, { a: 'middle', size: 12.5, fill: C.teal2, w: 700 });
     body += `<circle cx="330" cy="108" r="9" fill="${C.red}" opacity=".9"/>` + T(326, 86, t.tx, { a: 'end', size: 12.5, fill: C.red, w: 700 });
@@ -1525,12 +1525,12 @@ const TRY = {
       ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
           c: [['clock', 'লিউকেমিয়া মানেই সঙ্গে সঙ্গে চিকিৎসা', 'সত্যি?', 'সিএলএল সাধারণত খুব ধীরে বাড়ে। অনেকের প্রথমে নিয়মিত চেকআপ হয়, দরকার হলে চিকিৎসা।'],
             ['eye', 'চিকিৎসা হচ্ছে না, মানে ডাক্তার হাল ছেড়ে দিয়েছেন', 'সত্যি?', 'নজরে রেখে অপেক্ষা একটা পরিকল্পনা। নিয়মিত পরীক্ষা হয়, আর দরকার বোঝা গেলেই চিকিৎসা শুরু হয়।'],
-            ['therm', 'সিএলএল-এ বারবার জ্বর এমনিই হয়, ডাক্তারকে বলার কিছু নেই', 'সত্যি?', 'সিএলএল-এ সংক্রমণ বেশি হয়। জ্বর হলে হেমাটোলজিস্টকে জানান।']],
+            ['therm', 'সিএলএল-এ বারবার জ্বর এমনিই হয়, ডাক্তারকে বলার কিছু নেই', 'সত্যি?', 'সিএলএল-এ সংক্রমণ বেশি হয়। জ্বর হলে হেমাটোলজিস্টকে জানান, খুব জ্বর বা কাঁপুনি হলে সেদিনই হাসপাতালে যান।']],
           cap: 'নতুন কোনো লক্ষণ হলে পরের চেকআপের জন্য বসে থাকবেন না।' }
       : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
           c: [['clock', 'Leukaemia always needs treatment at once', 'True?', 'CLL usually grows very slowly. Many people first have regular check-ups, and treatment when needed.'],
             ['eye', 'No treatment means the doctor has given up', 'True?', 'Watch and wait is a plan. Regular tests are done, and treatment starts as soon as it is needed.'],
-            ['therm', 'Fevers just happen with CLL, no need to tell the doctor', 'True?', 'Infections are more common with CLL. Tell the hematologist about a fever.']],
+            ['therm', 'Fevers just happen with CLL, no need to tell the doctor', 'True?', 'Infections are more common with CLL. Tell the hematologist about a fever, and go to hospital the same day for a high fever or shivering.']],
           cap: 'New signs do not need to wait for the next check-up.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
       t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
