@@ -1,4 +1,4 @@
-> Chronic lymphocytic leukaemia, CLL, is a slow-growing blood cancer of the lymphocytes that mostly affects older people and is often found on a blood report before it causes any trouble. It cannot usually be cured, but it can be controlled for years, and many people are first checked regularly and start treatment only when it is needed.
+> Chronic lymphocytic leukaemia, CLL, is a slow-growing blood cancer of the lymphocytes that mostly affects older people and is often found on a blood report before it causes any trouble. It cannot usually be cured, but it can be controlled for years, and many people are first checked regularly by a hematologist, who starts treatment only when it is needed.
 
 The blood test was only for the cataract operation, and now the eye doctor wanted him to see a hematologist.
 
@@ -88,7 +88,7 @@ CLL usually grows very slowly, and many people have no signs for a long time. Th
 
 ## Is CLL the same as acute leukaemia?
 
-No. Acute leukaemia grows over weeks and usually needs treatment at once. CLL usually grows very slowly.
+No. Acute leukaemia usually develops quickly and needs treatment straight away. CLL usually grows very slowly.
 
 # Sources
 
