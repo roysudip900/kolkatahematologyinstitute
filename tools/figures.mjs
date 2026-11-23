@@ -568,6 +568,36 @@ const FIG = {
         body),
     };
   },
+  // Blood cancers, acute leukaemia: the road from signs to treatment, which is short and should be walked quickly.
+  // A dot moves from the signs (a few weeks), to a blood count, to the hematologist, to treatment, each stop lighting up.
+  'acute-clock'(l) {
+    const t = l === 'bn'
+      ? { s: [['লক্ষণ', 'কয়েক সপ্তাহে'], ['রক্ত পরীক্ষা', 'দেরি না করে'], ['হেমাটোলজিস্ট', 'তাড়াতাড়ি'], ['চিকিৎসা', 'সঙ্গে সঙ্গে']],
+          cap: 'অ্যাকিউট লিউকেমিয়া কয়েক সপ্তাহে বাড়ে। তাই লক্ষণ থেকে রক্ত পরীক্ষা, হেমাটোলজিস্ট আর চিকিৎসা পর্যন্ত পথটা দেরি না করে পেরোতে হয়। ছবিতে কোনো আসল সময় নেই।' }
+      : { s: [['Signs', 'over a few weeks'], ['Blood count', 'without delay'], ['Hematologist', 'quickly'], ['Treatment', 'straight away']],
+          cap: 'Acute leukaemia grows over a few weeks, so the road from the first signs to a blood count, a hematologist and treatment should be walked without delay. The drawing has no real times.' };
+    const X = [45, 135, 225, 315], y = 92;
+    const icon = [
+      `<circle r="15" fill="${C.amberBg}" stroke="${C.amber}" stroke-width="2"/><path d="M0-7v8" stroke="#9A5A0C" stroke-width="2.6" stroke-linecap="round"/><circle cy="6" r="1.8" fill="#9A5A0C"/>`,
+      `<circle r="15" fill="#fff" stroke="${C.red}" stroke-width="2"/><g transform="translate(-3,0)">${cell(6, false)}</g><g transform="translate(6,3)">${cell(4, false)}</g>`,
+      `<circle r="15" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><circle cy="-4" r="4.5" fill="${C.teal}"/><path d="M-8 9c0-5 3.5-7.5 8-7.5s8 2.5 8 7.5z" fill="${C.teal}"/>`,
+      `<circle r="15" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><path d="M-6 0l4 4 8-9" fill="none" stroke="${C.teal2}" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>`,
+    ];
+    let body = `<path d="M${X[0]} ${y}H${X[3]}" stroke="${C.mintLine}" stroke-width="4" stroke-linecap="round"/>`;
+    X.forEach((x, i) => {
+      body += `<g transform="translate(${x},${y})"><g class="ac-s" style="animation-delay:${(i * 1.1).toFixed(1)}s">${icon[i]}</g></g>`;
+      body += T(x, y + 36, t.s[i][0], { size: 13, fill: C.ink, w: 700 }) + T(x, y + 52, t.s[i][1], { size: 12, fill: C.muted, w: 600 });
+    });
+    body += `<g class="ac-d"><circle cx="${X[0]}" cy="${y - 28}" r="7" fill="${C.red}"/></g>`;
+    return {
+      cap: t.cap,
+      svg: svg('ac', 360, 160, t.cap,
+        `.ac-d{animation:acd 5s ease-in-out infinite}@keyframes acd{0%,8%{transform:translateX(0)}30%{transform:translateX(90px)}52%{transform:translateX(180px)}74%,100%{transform:translateX(270px)}}` +
+        '.ac-s{transform-box:fill-box;transform-origin:center;animation:acs 5s ease-in-out infinite}@keyframes acs{0%,100%{transform:scale(1)}10%{transform:scale(1.15)}20%{transform:scale(1)}}' +
+        '@media (prefers-reduced-motion:reduce){.ac-d{transform:translateX(270px)}.ac-s{transform:none}}',
+        body),
+    };
+  },
   // Anaemia, iron: two tanks of body iron. Tablets drip iron into both. In the first, a leak (heavy periods or
   // bleeding) lets it out, so the level hardly rises; in the second the leak is treated and the level slowly rises.
   'iron-tank'(l) {
@@ -1375,6 +1405,30 @@ const TRY = {
             ['ca', 'Calcium tablets will make the bones strong', 'True?', 'In myeloma, the calcium in the blood can already be high. Ask the hematologist before any calcium or vitamin tablet.'],
             ['hand', 'Myeloma means nothing can be done', 'True?', 'It usually cannot be cured, but it can be managed with treatment, and treated again if it comes back.']],
           cap: 'Whatever it is, ask your hematologist before starting or stopping any medicine or tablet.' };
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
+      t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
+        `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
+        `<span class="fc back"><span class="k">${esc(t.sign)}</span><span>${esc(back)}</span></span></button>`).join('') + '</div>';
+    return { cap: t.cap, cls: 'flipset', html };
+  },
+  // Blood cancers, acute leukaemia: three beliefs from the stories; each card turns over to what the chapter says.
+  'leukaemia-cards'(l) {
+    const ic = {
+      leg: `<path d="M17 6v16l-3 12h8l1-12 3-16z" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2" stroke-linejoin="round"/>`,
+      cal: `<rect x="8" y="10" width="24" height="22" rx="3" fill="#fff" stroke="${C.amber}" stroke-width="2"/><rect x="8" y="10" width="24" height="6" fill="${C.amber}"/><path d="M14 22h4M22 22h4M14 27h4" stroke="${C.amber}" stroke-width="2" stroke-linecap="round"/>`,
+      therm: `<rect x="17" y="5" width="7" height="22" rx="3.5" fill="#fff" stroke="${C.red}" stroke-width="2"/><rect x="19" y="14" width="3" height="14" fill="${C.red}"/><circle cx="20.5" cy="30" r="6" fill="${C.red}"/>`,
+    };
+    const t = l === 'bn'
+      ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
+          c: [['leg', 'কিশোরের পায়ে ব্যথা মানেই বাড়ন্ত বয়সের ব্যথা', 'সত্যি?', 'বেশিরভাগ সময় তাই। কিন্তু সঙ্গে ফ্যাকাশে ভাব, ক্লান্তি আর অকারণ কালশিটে থাকলে সেই সপ্তাহেই রক্ত পরীক্ষা।'],
+            ['cal', 'বিয়ে বা পুজোর পরে চিকিৎসা শুরু করলেও চলবে', 'সত্যি?', 'অ্যাকিউট লিউকেমিয়া কয়েক সপ্তাহে বাড়ে। চিকিৎসা সাধারণত সঙ্গে সঙ্গে শুরু করতে হয়।'],
+            ['therm', 'চিকিৎসার মধ্যে জ্বর এলে বাড়িতে দেখা যায়', 'সত্যি?', 'চিকিৎসার সময় শরীর সংক্রমণ সামলাতে পারে না। জ্বর এলেই সঙ্গে সঙ্গে হাসপাতালে ফোন করুন।']],
+          cap: 'যা-ই হোক, হেমাটোলজিস্টের দলকে জিজ্ঞেস করুন, আর হাসপাতালের নম্বর হাতের কাছে রাখুন।' }
+      : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
+          c: [['leg', 'Leg pain in a teenager is always growing pains', 'True?', 'Usually it is. But with paleness, tiredness and unexplained bruises, it needs a blood count the same week.'],
+            ['cal', 'Treatment can wait until after the wedding or the puja', 'True?', 'Acute leukaemia grows over weeks. Treatment usually needs to start straight away.'],
+            ['therm', 'A fever during treatment can be watched at home', 'True?', 'During treatment the body fights infection poorly. Call the hospital as soon as a fever comes.']],
+          cap: 'Whatever it is, ask the hematology team, and keep the hospital number close.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
       t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
         `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
