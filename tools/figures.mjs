@@ -598,6 +598,33 @@ const FIG = {
         body),
     };
   },
+  // Blood cancers, lymphoma: a simple body outline with the lymph nodes most easily felt (neck, armpits, groin) as small
+  // dots. One node in the neck slowly grows into a painless lump and stays, while the others stay small. No faces.
+  'lymph-map'(l) {
+    const P = '#7A5AD1';
+    const t = l === 'bn'
+      ? { neck: 'গলা', arm: 'বগল', groin: 'কুঁচকি', lump: 'ব্যথাহীন ডেলা',
+          cap: 'লিম্ফ নোড (গ্রন্থি) সারা শরীরে থাকে, সবচেয়ে সহজে টের পাওয়া যায় গলা, বগল আর কুঁচকিতে। লিম্ফোমায় একটা নোড ফুলে ব্যথাহীন ডেলা হয়, যা কমে না। সংক্রমণে ফোলা গ্রন্থি সাধারণত এক-দু সপ্তাহে কমে যায়।' }
+      : { neck: 'neck', arm: 'armpit', groin: 'groin', lump: 'painless lump',
+          cap: 'Lymph nodes (glands) are all over the body, most easily felt in the neck, armpits and groin. In lymphoma a node swells into a painless lump that does not go down. Glands swollen by an infection usually go down within a week or two.' };
+    const body0 =
+      `<circle cx="180" cy="40" r="20" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/>` +
+      `<path d="M172 60h16v10h30c12 0 18 6 20 16l10 56h-18l-10-48v100l6 76h-20l-12-70h-8l-12 70h-20l6-76V94l-10 48h-18l10-56c2-10 8-16 20-16h30z" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2" stroke-linejoin="round"/>`;
+    const node = (x, y, r = 4.5) => `<circle cx="${x}" cy="${y}" r="${r}" fill="${P}" opacity=".75"/>`;
+    let body = body0 + node(170, 66) + node(162, 84) + node(214, 92) + node(146, 92) + node(166, 166) + node(194, 166);
+    body += `<g transform="translate(192,72)"><circle class="lm-g" r="6" fill="${P}"/></g>`;
+    body += `<path d="M204 70H262" stroke="${C.red}" stroke-width="1.6" stroke-dasharray="3 3"/>` + T(266, 74, t.lump, { a: 'start', size: 12.5, fill: C.red, w: 700 });
+    body += T(110, 64, t.neck, { a: 'end', size: 12.5, fill: C.muted, w: 600 }) + `<path d="M114 60H158" stroke="${C.mintLine}" stroke-width="1.4"/>` +
+      T(110, 96, t.arm, { a: 'end', size: 12.5, fill: C.muted, w: 600 }) + `<path d="M114 92H140" stroke="${C.mintLine}" stroke-width="1.4"/>` +
+      T(110, 170, t.groin, { a: 'end', size: 12.5, fill: C.muted, w: 600 }) + `<path d="M114 166H160" stroke="${C.mintLine}" stroke-width="1.4"/>`;
+    return {
+      cap: t.cap,
+      svg: svg('lm', 360, 320, t.cap,
+        '.lm-g{transform-box:fill-box;transform-origin:center;animation:lmg 7s ease-in-out infinite}@keyframes lmg{0%{transform:scale(.75)}60%,100%{transform:scale(2)}}' +
+        '@media (prefers-reduced-motion:reduce){.lm-g{transform:scale(2)}}',
+        body),
+    };
+  },
   // Anaemia, iron: two tanks of body iron. Tablets drip iron into both. In the first, a leak (heavy periods or
   // bleeding) lets it out, so the level hardly rises; in the second the leak is treated and the level slowly rises.
   'iron-tank'(l) {
@@ -1429,6 +1456,30 @@ const TRY = {
             ['cal', 'Treatment can wait until after the wedding or the puja', 'True?', 'Acute leukaemia grows over weeks. Treatment usually needs to start straight away.'],
             ['therm', 'A fever during treatment can be watched at home', 'True?', 'During treatment the body fights infection poorly. Call the hospital as soon as a fever comes.']],
           cap: 'Whatever it is, ask the hematology team, and keep the hospital number close.' };
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
+      t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
+        `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
+        `<span class="fc back"><span class="k">${esc(t.sign)}</span><span>${esc(back)}</span></span></button>`).join('') + '</div>';
+    return { cap: t.cap, cls: 'flipset', html };
+  },
+  // Blood cancers, lymphoma: three beliefs; each card turns over to what the chapter says.
+  'lymphoma-cards'(l) {
+    const ic = {
+      lump: `<circle cx="20" cy="20" r="13" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><circle cx="25" cy="16" r="5" fill="#7A5AD1"/>`,
+      neck: `<circle cx="20" cy="13" r="7" fill="${C.teal}"/><path d="M10 36c0-10 4-15 10-15s10 5 10 15z" fill="${C.teal}"/><circle cx="26" cy="22" r="3.5" fill="#7A5AD1"/>`,
+      hand: `<path d="M12 30V17a3 3 0 0 1 6 0v-5a3 3 0 0 1 6 0v6a3 3 0 0 1 6 0v12c0 4-4 6-9 6s-9-2-9-6z" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/>`,
+    };
+    const t = l === 'bn'
+      ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
+          c: [['lump', 'ব্যথা নেই, তাই ডেলা নিয়ে ভাবার কিছু নেই', 'সত্যি?', 'লিম্ফোমার ডেলায় প্রায়ই ব্যথা থাকে না। যে ডেলা কয়েক সপ্তাহে কমে না, সেটা ডাক্তারকে দেখান।'],
+            ['neck', 'গলায় ডেলা মানেই ক্যান্সার', 'সত্যি?', 'বেশিরভাগ সময় সংক্রমণে গ্রন্থি ফোলে, আর এক-দু সপ্তাহে কমে যায়।'],
+            ['hand', 'লিম্ফোমা হলে কিছু করার নেই', 'সত্যি?', 'অনেক ধরনের চিকিৎসা হয়, আর কিছু পুরোপুরি সরানোও যেতে পারে।']],
+          cap: 'যা-ই হোক, ডেলা থেকে গেলে ডাক্তারবাবুকে দেখান।' }
+      : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
+          c: [['lump', 'It does not hurt, so the lump is nothing', 'True?', 'Lymphoma lumps are often painless. A lump that does not go down in a few weeks needs a doctor.'],
+            ['neck', 'A lump in the neck always means cancer', 'True?', 'Most of the time glands swell with an infection and go down within a week or two.'],
+            ['hand', 'Nothing can be done for lymphoma', 'True?', 'Many types can be treated, and some can be removed completely.']],
+          cap: 'Whatever it is, a lump that stays needs a doctor.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
       t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
         `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +

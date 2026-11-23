@@ -227,6 +227,17 @@
   "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FDECEE\"/><ellipse cx=\"15\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#D93A4A\"/><ellipse cx=\"22.5\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#E8616D\"/><ellipse cx=\"30\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#D93A4A\"/><ellipse cx=\"37.5\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#E8616D\"/>"
  },
  {
+  "id": "blood-cancers-lymphoma",
+  "parent": "blood-cancers",
+  "bn": "রক্তের ক্যান্সার: লিম্ফোমা",
+  "en": "Blood cancers: lymphoma",
+  "desc_bn": "লিম্ফোমা কী, গলা, বগল বা কুঁচকিতে ব্যথাহীন ডেলা কখন ডাক্তারকে দেখাবেন, হজকিন আর নন-হজকিন, বায়োপসি, আর চিকিৎসা কী করতে পারে।",
+  "desc_en": "What lymphoma is, when a painless lump in the neck, armpit or groin needs a doctor, Hodgkin and non-Hodgkin types, the biopsy, and what treatment can do.",
+  "card_bn": "গলায় বা বগলে ব্যথাহীন ডেলা যা কমছে না? রাতে ঘামে ভিজে যান? চেষ্টা ছাড়াই ওজন কমছে?",
+  "card_en": "A painless lump in the neck or armpit that will not go? Night sweats? Losing weight without trying?",
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FDECEE\"/><ellipse cx=\"15\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#D93A4A\"/><ellipse cx=\"22.5\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#E8616D\"/><ellipse cx=\"30\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#D93A4A\"/><ellipse cx=\"37.5\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#E8616D\"/>"
+ },
+ {
   "id": "marrow",
   "bn": "বোন ম্যারো পরীক্ষা",
   "en": "The bone marrow test",
