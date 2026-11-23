@@ -659,15 +659,15 @@ const FIG = {
   'marrow-test'(l) {
     const P = '#7A5AD1';
     const t = l === 'bn'
-      ? { spine: 'মেরুদণ্ড: হাত দেওয়া হয় না', hip: 'কোমরের হাড়', asp: 'তরল মজ্জা', core: 'সরু টুকরো', mic: 'প্যাথোলজিস্ট',
-          cap: 'চামড়া অবশ করে কোমরের হাড়ের পেছন দিক থেকে অল্প তরল মজ্জা আর একটা সরু টুকরো নেওয়া হয়। মেরুদণ্ডে হাত দেওয়া হয় না। প্যাথোলজিস্ট দুটোই মাইক্রোস্কোপে দেখেন।' }
+      ? { spine: 'শিরদাঁড়া: হাত দেওয়া হয় না', hip: 'কোমরের হাড়', asp: 'তরল মজ্জা', core: 'সরু টুকরো', mic: 'প্যাথোলজিস্ট',
+          cap: 'চামড়া অবশ করে কোমরের হাড়ের পেছন দিক থেকে অল্প তরল মজ্জা আর একটা সরু টুকরো নেওয়া হয়। শিরদাঁড়ায় হাত দেওয়া হয় না। প্যাথোলজিস্ট দুটোই মাইক্রোস্কোপে দেখেন।' }
       : { spine: 'spine: not touched', hip: 'hip bone', asp: 'liquid marrow', core: 'thin core', mic: 'pathologist',
           cap: 'With the skin numbed, a little liquid marrow and a thin core are taken from the back of the hip bone. The spine is not touched. A pathologist looks at both under a microscope.' };
     let body = '';
     for (let i = 0; i < 6; i++) body += `<rect x="104" y="${30 + i * 22}" width="22" height="17" rx="4" fill="#e8e8ee" stroke="#b8b8c4" stroke-width="1.5"/>`;
     body += `<path d="M100 120c-30-10-62-4-80 18c-10 14-6 34 10 42c24 10 56 4 70-14z" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/>` +
       `<path d="M130 120c30-10 62-4 80 18c10 14 6 34-10 42c-24 10-56 4-70-14z" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/>` +
-      `<path d="M150 150c18-4 34 0 42 10" stroke="${C.rose}" stroke-width="5" stroke-linecap="round" fill="none" opacity=".55"/>`;
+      '';
     body += `<g class="mt-n"><path d="M196 92L176 134" stroke="${C.ink}" stroke-width="3" stroke-linecap="round"/><rect x="190" y="78" width="16" height="10" rx="3" transform="rotate(25 198 83)" fill="${C.teal}"/></g>`;
     body += T(115, 22, t.spine, { a: 'middle', size: 12, fill: C.muted, w: 600 }) + T(176, 205, t.hip, { a: 'middle', size: 12.5, fill: C.teal2, w: 700 });
     body += `<path d="M232 118h28" stroke="${C.mintLine}" stroke-width="1.6" stroke-dasharray="3 3"/>`;
@@ -1577,7 +1577,7 @@ const TRY = {
     };
     const t = l === 'bn'
       ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
-          c: [['spine', 'এই পরীক্ষায় শিরদাঁড়া থেকে রস টেনে নেয়', 'সত্যি?', 'নমুনা নেওয়া হয় কোমরের হাড়ের পেছন দিক থেকে। মেরুদণ্ডে হাত দেওয়া হয় না।'],
+          c: [['spine', 'এই পরীক্ষায় শিরদাঁড়া থেকে রস টেনে নেয়', 'সত্যি?', 'নমুনা নেওয়া হয় কোমরের হাড়ের পেছন দিক থেকে। শিরদাঁড়ায় হাত দেওয়া হয় না।'],
             ['bolt', 'পরীক্ষার পর মানুষ সারাজীবনের মতো দুর্বল হয়ে যায়', 'সত্যি?', 'নমুনাটা অল্প, আর শরীর নতুন মজ্জা তৈরি করতেই থাকে।'],
             ['drop', 'রক্তের রিপোর্টেই সব জানা যায়, ম্যারো পরীক্ষা বাড়তি', 'সত্যি?', 'রিপোর্টে কণিকা কম-বেশি বোঝা যায়। কেন, সেটা অনেক সময় ম্যারো পরীক্ষায় জানা যায়।']],
           cap: 'যা জানতে চান, পরীক্ষার আগে হেমাটোলজিস্টকে জিজ্ঞেস করে নিন।' }

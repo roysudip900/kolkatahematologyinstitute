@@ -20,10 +20,10 @@ There are two parts, usually done together, from the back of the hip bone. The f
 
 The marrow test is asked for when the blood report shows a problem but not its cause. It can show:
 
-- why all three kinds of blood cells are low
-- whether leukaemia, myeloma or another blood cancer is there, and which type
-- how far some blood cancers, such as CLL, have developed
-- how well treatment is working, in some blood cancers
+- why the blood counts are low or high
+- whether a blood disease is there, and which type
+- how far some blood diseases have developed
+- how well treatment is working
 
 Special tests can also be done on the same sample, such as tests on the chromosomes of the cells. These help the hematologist confirm the type of illness and plan treatment.
 
@@ -35,7 +35,9 @@ The doctor puts a hollow needle through the numbed skin into the bone and draws 
 
 Before the test, tell the doctor about any medicines you take, especially blood thinners, and about any allergies. The doctor decides what to do about them.
 
-# Why it will not leave him weak
+Do not start tonics, iron or any other medicine because of a blood report, and do not stop a medicine you take, such as a blood thinner, on your own. Show the report to the hematologist first.
+
+# Will the test leave him weak?
 
 The marrow is not the spinal cord. The test is done from the hip bone, and it does not touch the spine.
 
@@ -60,7 +62,7 @@ The girl has her test while she sleeps, and wakes up asking for an ice cream. He
 After a marrow test:
 
 - the spot keeps bleeding after you press on it for a while
-- a fever or shivering
+- you get a fever or shivering
 - the spot becomes red, hot, swollen, or more painful each day
 
 # Take these questions to your doctor
@@ -85,7 +87,7 @@ No. It is usually taken from the back of the hip bone. Bone marrow is the soft t
 
 ## Will the test make me weak?
 
-The sample is small, and the body keeps making new marrow cells. Tiredness is usually from the illness that the test is looking for.
+The sample is small, and the body keeps making new marrow cells. Tiredness can come from the illness that the test is looking for.
 
 # Sources
 
