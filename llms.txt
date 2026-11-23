@@ -27,6 +27,7 @@ Author: [Dr. Sudip Roy](https://share.google/OLTZr4ebHj8UmXFnB), MBBS, MD, DM (C
   - [Multiple myeloma](https://kolkatahematologyinstitute.com/en/blood-cancers/myeloma/): What multiple myeloma is: back and bone pain, high calcium, kidney strain and low blood counts, which signs need a hospital the same day, and what treatment can do.
   - [Acute leukaemia](https://kolkatahematologyinstitute.com/en/blood-cancers/leukaemia/): What acute leukaemia (AML and ALL) is, the signs that should not wait, why treatment usually starts straight away, and what the long treatment asks of a family.
   - [Lymphoma](https://kolkatahematologyinstitute.com/en/blood-cancers/lymphoma/): What lymphoma is, when a painless lump in the neck, armpit or groin needs a doctor, Hodgkin and non-Hodgkin types, the biopsy, and what treatment can do.
+  - [CLL](https://kolkatahematologyinstitute.com/en/blood-cancers/cll/): What chronic lymphocytic leukaemia is, why it is often found on a blood report, why watch and wait, when treatment starts, and how to lower the risk of infections.
 
 ## অধ্যায় (বাংলা)
 - [অ্যানিমিয়া: রক্তাল্পতা](https://kolkatahematologyinstitute.com/anaemia/): সব সময় ক্লান্তি, সিঁড়ি ভাঙলে হাঁফ, রিপোর্টে হিমোগ্লোবিন কম? অ্যানিমিয়া মানে কী আর কারণ খোঁজা কেন জরুরি, লিখেছেন কলকাতার হেমাটোলজিস্ট।
@@ -51,3 +52,4 @@ Author: [Dr. Sudip Roy](https://share.google/OLTZr4ebHj8UmXFnB), MBBS, MD, DM (C
   - [মাল্টিপল মায়েলোমা](https://kolkatahematologyinstitute.com/blood-cancers/myeloma/): মাল্টিপল মায়েলোমা কী, কোমর আর হাড়ের ব্যথা, রক্তে বেশি ক্যালসিয়াম, কিডনির ক্ষতি আর রক্তকণিকা কমা, কোন লক্ষণে সেদিনই হাসপাতাল, আর চিকিৎসা কী করতে পারে।
   - [অ্যাকিউট লিউকেমিয়া](https://kolkatahematologyinstitute.com/blood-cancers/leukaemia/): অ্যাকিউট লিউকেমিয়া (এএমএল আর এএলএল) কী, কোন লক্ষণে দেরি নয়, চিকিৎসা কেন সঙ্গে সঙ্গে শুরু করতে হয়, আর লম্বা চিকিৎসা পরিবারের কাছে কী চায়।
   - [লিম্ফোমা](https://kolkatahematologyinstitute.com/blood-cancers/lymphoma/): লিম্ফোমা কী, গলা, বগল বা কুঁচকিতে ব্যথাহীন ডেলা কখন ডাক্তারকে দেখাবেন, হজকিন আর নন-হজকিন, বায়োপসি, আর চিকিৎসা কী করতে পারে।
+  - [সিএলএল](https://kolkatahematologyinstitute.com/blood-cancers/cll/): ক্রনিক লিম্ফোসাইটিক লিউকেমিয়া কী, কেন প্রায়ই রক্তের রিপোর্টে ধরা পড়ে, নজরে রেখে অপেক্ষা কেন, কখন চিকিৎসা শুরু হয়, আর সংক্রমণের ঝুঁকি কমানোর উপায়।
