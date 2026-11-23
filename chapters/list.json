@@ -250,12 +250,13 @@
  },
  {
   "id": "marrow",
+  "coauthor": "mridha",
   "bn": "বোন ম্যারো পরীক্ষা",
   "en": "The bone marrow test",
-  "desc_bn": "",
-  "desc_en": "",
-  "card_bn": "",
-  "card_en": "",
+  "desc_bn": "বোন ম্যারো পরীক্ষা কী, কেন দরকার হয়, পরীক্ষার দিন কী হয়, ব্যথা লাগে কিনা, কেন এটা শিরদাঁড়া থেকে নয়, আর প্যাথোলজিস্ট নমুনায় কী দেখেন।",
+  "desc_en": "What the bone marrow test is, why it is needed, what happens on the day, whether it hurts, why it is not from the spine, and what the pathologist looks at.",
+  "card_bn": "ম্যারো পরীক্ষা করাতে বলেছে? ব্যথা লাগবে? শিরদাঁড়া থেকে নেয়? দুর্বল হয়ে যাব?",
+  "card_en": "Asked to have a bone marrow test? Will it hurt? Is it from the spine? Will it leave me weak?",
   "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FFE9D2\"/><circle cx=\"18\" cy=\"19\" r=\"8\" fill=\"#FFFFFF\"/><circle cx=\"35\" cy=\"30\" r=\"9\" fill=\"#FFFFFF\"/><circle cx=\"18\" cy=\"37\" r=\"5\" fill=\"#FFFFFF\"/><circle cx=\"31\" cy=\"14\" r=\"2.5\" fill=\"#7A5AD1\"/><circle cx=\"38\" cy=\"17\" r=\"2\" fill=\"#7A5AD1\"/><circle cx=\"26\" cy=\"27\" r=\"2.5\" fill=\"#7A5AD1\"/><circle cx=\"27\" cy=\"41\" r=\"2\" fill=\"#7A5AD1\"/><circle cx=\"10\" cy=\"28\" r=\"2\" fill=\"#7A5AD1\"/>"
  }
 ]

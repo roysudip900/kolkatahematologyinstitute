@@ -653,6 +653,36 @@ const FIG = {
         body),
     };
   },
+  // The bone marrow test: the pelvis seen from the back, with the spine in the middle (grey, untouched). A needle moves
+  // gently in and out of the back of the right hip bone; beside it, the two samples it gives (a drop of liquid marrow
+  // and a thin core) go to the microscope. No faces, no blood, no numbers.
+  'marrow-test'(l) {
+    const P = '#7A5AD1';
+    const t = l === 'bn'
+      ? { spine: 'মেরুদণ্ড: হাত দেওয়া হয় না', hip: 'কোমরের হাড়', asp: 'তরল মজ্জা', core: 'সরু টুকরো', mic: 'প্যাথোলজিস্ট',
+          cap: 'চামড়া অবশ করে কোমরের হাড়ের পেছন দিক থেকে অল্প তরল মজ্জা আর একটা সরু টুকরো নেওয়া হয়। মেরুদণ্ডে হাত দেওয়া হয় না। প্যাথোলজিস্ট দুটোই মাইক্রোস্কোপে দেখেন।' }
+      : { spine: 'spine: not touched', hip: 'hip bone', asp: 'liquid marrow', core: 'thin core', mic: 'pathologist',
+          cap: 'With the skin numbed, a little liquid marrow and a thin core are taken from the back of the hip bone. The spine is not touched. A pathologist looks at both under a microscope.' };
+    let body = '';
+    for (let i = 0; i < 6; i++) body += `<rect x="104" y="${30 + i * 22}" width="22" height="17" rx="4" fill="#e8e8ee" stroke="#b8b8c4" stroke-width="1.5"/>`;
+    body += `<path d="M100 120c-30-10-62-4-80 18c-10 14-6 34 10 42c24 10 56 4 70-14z" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/>` +
+      `<path d="M130 120c30-10 62-4 80 18c10 14 6 34-10 42c-24 10-56 4-70-14z" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/>` +
+      `<path d="M150 150c18-4 34 0 42 10" stroke="${C.rose}" stroke-width="5" stroke-linecap="round" fill="none" opacity=".55"/>`;
+    body += `<g class="mt-n"><path d="M196 92L176 134" stroke="${C.ink}" stroke-width="3" stroke-linecap="round"/><rect x="190" y="78" width="16" height="10" rx="3" transform="rotate(25 198 83)" fill="${C.teal}"/></g>`;
+    body += T(115, 22, t.spine, { a: 'middle', size: 12, fill: C.muted, w: 600 }) + T(176, 205, t.hip, { a: 'middle', size: 12.5, fill: C.teal2, w: 700 });
+    body += `<path d="M232 118h28" stroke="${C.mintLine}" stroke-width="1.6" stroke-dasharray="3 3"/>`;
+    body += `<path d="M272 96c-6 9-10 14-10 19a10 10 0 0 0 20 0c0-5-4-10-10-19z" fill="${C.red}" opacity=".8"/>` + T(272, 146, t.asp, { a: 'middle', size: 12, fill: C.muted, w: 600 });
+    body += `<rect x="300" y="100" width="34" height="9" rx="4.5" fill="${P}" opacity=".8"/>` + T(317, 128, t.core, { a: 'middle', size: 12, fill: C.muted, w: 600 });
+    body += `<g transform="translate(296,160)"><path d="M10 40h28M24 40v-8M14 32h20l-4-14h-12zM20 18l6-14 6 3-5 13" fill="none" stroke="${C.teal2}" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/></g>` +
+      T(320, 218, t.mic, { a: 'middle', size: 12, fill: C.teal2, w: 700 });
+    return {
+      cap: t.cap,
+      svg: svg('mt', 360, 230, t.cap,
+        '.mt-n{animation:mtn 4s ease-in-out infinite}@keyframes mtn{0%,100%{transform:translate(6px,-12px)}45%,60%{transform:translate(0,0)}}' +
+        '@media (prefers-reduced-motion:reduce){.mt-n{animation:none}}',
+        body),
+    };
+  },
   // Anaemia, iron: two tanks of body iron. Tablets drip iron into both. In the first, a leak (heavy periods or
   // bleeding) lets it out, so the level hardly rises; in the second the leak is treated and the level slowly rises.
   'iron-tank'(l) {
@@ -1532,6 +1562,30 @@ const TRY = {
             ['eye', 'No treatment means the doctor has given up', 'True?', 'Watch and wait is a plan. Regular tests are done, and treatment starts as soon as it is needed.'],
             ['therm', 'Fevers just happen with CLL, no need to tell the doctor', 'True?', 'Infections are more common with CLL. Tell the hematologist about a fever, and go to hospital the same day for a high fever or shivering.']],
           cap: 'New signs do not need to wait for the next check-up.' };
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
+      t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
+        `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
+        `<span class="fc back"><span class="k">${esc(t.sign)}</span><span>${esc(back)}</span></span></button>`).join('') + '</div>';
+    return { cap: t.cap, cls: 'flipset', html };
+  },
+  // The bone marrow test: three beliefs; each card turns over to what the chapter says.
+  'marrow-cards'(l) {
+    const ic = {
+      spine: `<rect x="16" y="4" width="8" height="7" rx="2" fill="#d8d8e0"/><rect x="16" y="14" width="8" height="7" rx="2" fill="#d8d8e0"/><rect x="16" y="24" width="8" height="7" rx="2" fill="#d8d8e0"/><path d="M6 34c4-6 10-6 12-2M34 34c-4-6-10-6-12-2" stroke="${C.teal2}" stroke-width="2.4" fill="none" stroke-linecap="round"/>`,
+      bolt: `<path d="M22 4L10 22h9l-3 14 14-20h-9z" fill="${C.amber}" stroke="${C.teal2}" stroke-width="1.6" stroke-linejoin="round"/>`,
+      drop: `<path d="M20 6c-6 9-10 15-10 20a10 10 0 0 0 20 0c0-5-4-11-10-20z" fill="${C.red}" opacity=".8"/>`,
+    };
+    const t = l === 'bn'
+      ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
+          c: [['spine', 'এই পরীক্ষায় শিরদাঁড়া থেকে রস টেনে নেয়', 'সত্যি?', 'নমুনা নেওয়া হয় কোমরের হাড়ের পেছন দিক থেকে। মেরুদণ্ডে হাত দেওয়া হয় না।'],
+            ['bolt', 'পরীক্ষার পর মানুষ সারাজীবনের মতো দুর্বল হয়ে যায়', 'সত্যি?', 'নমুনাটা অল্প, আর শরীর নতুন মজ্জা তৈরি করতেই থাকে।'],
+            ['drop', 'রক্তের রিপোর্টেই সব জানা যায়, ম্যারো পরীক্ষা বাড়তি', 'সত্যি?', 'রিপোর্টে কণিকা কম-বেশি বোঝা যায়। কেন, সেটা অনেক সময় ম্যারো পরীক্ষায় জানা যায়।']],
+          cap: 'যা জানতে চান, পরীক্ষার আগে হেমাটোলজিস্টকে জিজ্ঞেস করে নিন।' }
+      : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
+          c: [['spine', 'The test draws fluid out of the spine', 'True?', 'The sample is taken from the back of the hip bone. The spine is not touched.'],
+            ['bolt', 'After the test a person stays weak for life', 'True?', 'The sample is small, and the body keeps making new marrow.'],
+            ['drop', 'The blood report tells everything, the marrow test is extra', 'True?', 'The report shows which counts are low or high. The marrow test often shows why.']],
+          cap: 'Ask the hematologist anything you want to know before the test.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
       t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
         `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
