@@ -238,6 +238,17 @@
   "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FDECEE\"/><ellipse cx=\"15\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#D93A4A\"/><ellipse cx=\"22.5\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#E8616D\"/><ellipse cx=\"30\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#D93A4A\"/><ellipse cx=\"37.5\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#E8616D\"/>"
  },
  {
+  "id": "blood-cancers-cll",
+  "parent": "blood-cancers",
+  "bn": "রক্তের ক্যান্সার: সিএলএল",
+  "en": "Blood cancers: CLL",
+  "desc_bn": "ক্রনিক লিম্ফোসাইটিক লিউকেমিয়া কী, কেন প্রায়ই রক্তের রিপোর্টে ধরা পড়ে, নজরে রেখে অপেক্ষা কেন, কখন চিকিৎসা শুরু হয়, আর সংক্রমণের ঝুঁকি কমানোর উপায়।",
+  "desc_en": "What chronic lymphocytic leukaemia is, why it is often found on a blood report, why watch and wait, when treatment starts, and how to lower the risk of infections.",
+  "card_bn": "রিপোর্টে লিম্ফোসাইট বেশি এসেছে? গলায় ফোলা, বারবার সংক্রমণ?",
+  "card_en": "Lymphocytes high on a report? Swollen glands in the neck, infections again and again?",
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FDECEE\"/><ellipse cx=\"15\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#D93A4A\"/><ellipse cx=\"22.5\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#E8616D\"/><ellipse cx=\"30\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#D93A4A\"/><ellipse cx=\"37.5\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#E8616D\"/>"
+ },
+ {
   "id": "marrow",
   "bn": "বোন ম্যারো পরীক্ষা",
   "en": "The bone marrow test",
