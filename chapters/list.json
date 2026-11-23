@@ -216,6 +216,17 @@
   "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FDECEE\"/><ellipse cx=\"15\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#D93A4A\"/><ellipse cx=\"22.5\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#E8616D\"/><ellipse cx=\"30\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#D93A4A\"/><ellipse cx=\"37.5\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#E8616D\"/>"
  },
  {
+  "id": "blood-cancers-leukaemia",
+  "parent": "blood-cancers",
+  "bn": "রক্তের ক্যান্সার: অ্যাকিউট লিউকেমিয়া",
+  "en": "Blood cancers: acute leukaemia",
+  "desc_bn": "অ্যাকিউট লিউকেমিয়া (এএমএল আর এএলএল) কী, কোন লক্ষণে দেরি নয়, চিকিৎসা কেন সঙ্গে সঙ্গে শুরু করতে হয়, আর লম্বা চিকিৎসা পরিবারের কাছে কী চায়।",
+  "desc_en": "What acute leukaemia (AML and ALL) is, the signs that should not wait, why treatment usually starts straight away, and what the long treatment asks of a family.",
+  "card_bn": "কয়েক সপ্তাহ ধরে ক্লান্তি, কালশিটে, মাড়ি দিয়ে রক্ত? বাচ্চার পায়ে ব্যথা আর ফ্যাকাশে মুখ?",
+  "card_en": "Weeks of tiredness, bruises, bleeding gums? A child with leg pain and a pale face?",
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FDECEE\"/><ellipse cx=\"15\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#D93A4A\"/><ellipse cx=\"22.5\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#E8616D\"/><ellipse cx=\"30\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#D93A4A\"/><ellipse cx=\"37.5\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#E8616D\"/>"
+ },
+ {
   "id": "marrow",
   "bn": "বোন ম্যারো পরীক্ষা",
   "en": "The bone marrow test",
