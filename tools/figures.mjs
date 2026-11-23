@@ -625,6 +625,34 @@ const FIG = {
         body),
     };
   },
+  // Blood cancers, CLL: watch and wait as a long, slow road. A gently rising line of lymphocytes over years, with
+  // regular check-up dots along it; a dot walks the road, each check-up lights as it passes, and treatment starts
+  // only at the end, when signs appear. No numbers, no real intervals.
+  'cll-watch'(l) {
+    const P = '#7A5AD1';
+    const t = l === 'bn'
+      ? { y: 'লিম্ফোসাইট', x: 'বছরের পর বছর', chk: 'নিয়মিত চেকআপ', tx: 'দরকার হলে চিকিৎসা',
+          cap: 'সিএলএল সাধারণত খুব ধীরে বাড়ে। অনেকের প্রথমে নিয়মিত চেকআপ হয়, আর লক্ষণ বা পরীক্ষায় দরকার বোঝা গেলে চিকিৎসা শুরু হয়। মাঝে নতুন লক্ষণ হলে অপেক্ষা না করে জানান।' }
+      : { y: 'lymphocytes', x: 'years', chk: 'regular check-ups', tx: 'treatment when needed',
+          cap: 'CLL usually grows very slowly. Many people first have regular check-ups, and treatment starts when signs or tests show it is needed. New signs in between are reported without waiting.' };
+    const pts = [[40, 190], [90, 184], [140, 176], [190, 166], [240, 152], [290, 132], [330, 108]];
+    let body = `<path d="M30 210H340M30 210V40" stroke="${C.mintLine}" stroke-width="1.6"/>` +
+      T(34, 34, t.y, { a: 'start', size: 12.5, fill: C.muted, w: 600 }) + T(336, 228, t.x, { a: 'end', size: 12.5, fill: C.muted, w: 600 });
+    body += `<path d="M${pts.map(p => p.join(' ')).join('L')}" fill="none" stroke="${P}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>`;
+    pts.slice(0, 6).forEach(([x, y], i) => {
+      body += `<circle class="cw-c" style="animation-delay:${(i * 1.1).toFixed(1)}s" cx="${x}" cy="${y}" r="6.5" fill="#fff" stroke="${C.teal2}" stroke-width="2"/>`;
+    });
+    body += T(150, 206, t.chk, { a: 'middle', size: 12.5, fill: C.teal2, w: 700 });
+    body += `<circle cx="330" cy="108" r="9" fill="${C.red}" opacity=".9"/>` + T(326, 86, t.tx, { a: 'end', size: 12.5, fill: C.red, w: 700 });
+    body += `<circle class="cw-d" r="5" fill="${C.teal}"><animateMotion dur="7.7s" repeatCount="indefinite" path="M${pts.map(p => p.join(' ')).join('L')}"/></circle>`;
+    return {
+      cap: t.cap,
+      svg: svg('cw', 360, 240, t.cap,
+        '.cw-c{animation:cwc 7.7s linear infinite}@keyframes cwc{0%,12%{fill:#7A5AD1}20%,100%{fill:#fff}}' +
+        '@media (prefers-reduced-motion:reduce){.cw-c{animation:none}.cw-d{display:none}}',
+        body),
+    };
+  },
   // Anaemia, iron: two tanks of body iron. Tablets drip iron into both. In the first, a leak (heavy periods or
   // bleeding) lets it out, so the level hardly rises; in the second the leak is treated and the level slowly rises.
   'iron-tank'(l) {
@@ -1480,6 +1508,30 @@ const TRY = {
             ['neck', 'A lump in the neck always means cancer', 'True?', 'Most of the time glands swell with an infection and go down within a week or two.'],
             ['hand', 'Nothing can be done for lymphoma', 'True?', 'Many types can be treated, and some can be removed completely.']],
           cap: 'Whatever it is, a lump that stays needs a doctor.' };
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
+      t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
+        `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
+        `<span class="fc back"><span class="k">${esc(t.sign)}</span><span>${esc(back)}</span></span></button>`).join('') + '</div>';
+    return { cap: t.cap, cls: 'flipset', html };
+  },
+  // Blood cancers, CLL: three beliefs; each card turns over to what the chapter says.
+  'cll-cards'(l) {
+    const ic = {
+      clock: `<circle cx="20" cy="20" r="14" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><path d="M20 11v9l6 4" stroke="${C.teal2}" stroke-width="2.4" fill="none" stroke-linecap="round"/>`,
+      eye: `<path d="M5 20c5-8 25-8 30 0c-5 8-25 8-30 0z" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><circle cx="20" cy="20" r="5" fill="${C.teal}"/>`,
+      therm: `<rect x="16" y="6" width="8" height="22" rx="4" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><circle cx="20" cy="31" r="6" fill="${C.red}"/>`,
+    };
+    const t = l === 'bn'
+      ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
+          c: [['clock', 'লিউকেমিয়া মানেই সঙ্গে সঙ্গে চিকিৎসা', 'সত্যি?', 'সিএলএল সাধারণত খুব ধীরে বাড়ে। অনেকের প্রথমে নিয়মিত চেকআপ হয়, দরকার হলে চিকিৎসা।'],
+            ['eye', 'চিকিৎসা হচ্ছে না, মানে ডাক্তার হাল ছেড়ে দিয়েছেন', 'সত্যি?', 'নজরে রেখে অপেক্ষা একটা পরিকল্পনা। নিয়মিত পরীক্ষা হয়, আর দরকার বোঝা গেলেই চিকিৎসা শুরু হয়।'],
+            ['therm', 'সিএলএল-এ বারবার জ্বর এমনিই হয়, ডাক্তারকে বলার কিছু নেই', 'সত্যি?', 'সিএলএল-এ সংক্রমণ বেশি হয়। জ্বর হলে হেমাটোলজিস্টকে জানান।']],
+          cap: 'নতুন কোনো লক্ষণ হলে পরের চেকআপের জন্য বসে থাকবেন না।' }
+      : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
+          c: [['clock', 'Leukaemia always needs treatment at once', 'True?', 'CLL usually grows very slowly. Many people first have regular check-ups, and treatment when needed.'],
+            ['eye', 'No treatment means the doctor has given up', 'True?', 'Watch and wait is a plan. Regular tests are done, and treatment starts as soon as it is needed.'],
+            ['therm', 'Fevers just happen with CLL, no need to tell the doctor', 'True?', 'Infections are more common with CLL. Tell the hematologist about a fever.']],
+          cap: 'New signs do not need to wait for the next check-up.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
       t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
         `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
