@@ -255,8 +255,8 @@
   "en": "Blood cancers: MDS",
   "desc_bn": "মায়েলোডিসপ্লাস্টিক সিনড্রোম কী, কেন আয়রন বা টনিকে কাজ হয় না, কীভাবে ধরা পড়ে, কম আর বেশি ঝুঁকি, রক্ত দেওয়া, আর চিকিৎসা কী করতে পারে।",
   "desc_en": "What myelodysplastic syndrome is, why iron or tonics do not help, how it is found, low and high risk, transfusions, and what treatment can do.",
-  "card_bn": "বয়স্ক মানুষ, হিমোগ্লোবিন বারবার কমছে, আয়রনে কাজ হচ্ছে না? রিপোর্টে সব কণিকা একটু কম?",
-  "card_en": "Older, with hemoglobin that keeps falling and iron not helping? All counts a little low on a report?",
+  "card_bn": "বয়স্ক মানুষ, ক্লান্ত, ফ্যাকাশে, হিমোগ্লোবিন বারবার কমছে আর আয়রনে কাজ হচ্ছে না?",
+  "card_en": "Older, tired and pale, with hemoglobin that keeps falling and iron not helping?",
   "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FDECEE\"/><ellipse cx=\"15\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#D93A4A\"/><ellipse cx=\"22.5\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#E8616D\"/><ellipse cx=\"30\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#D93A4A\"/><ellipse cx=\"37.5\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#E8616D\"/>"
  },
  {

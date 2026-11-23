@@ -18,7 +18,7 @@ There are several types of MDS, depending on which blood cells are affected and 
 
 # Why iron and tonics did not help him
 
-Iron helps when the body is short of iron. In MDS, the problem is in the marrow, so iron or tonics cannot fix it. Do not start tonics, iron or any other medicine because of a blood report. Show the report to the hematologist first.
+Iron helps when the body is short of iron. In MDS, the problem is in the marrow, so iron or tonics cannot fix it. Do not start or stop tonics, iron or any other medicine because of a blood report. Show the report to the hematologist first.
 
 The main tests for MDS are blood tests and a bone marrow test, in which a small sample is taken from the hip bone with the skin numbed. Genetic tests on the marrow show the type of MDS and the risk group, which means how fast it is likely to get worse and how likely it is to turn into AML.
 
@@ -43,13 +43,13 @@ Treatment depends on the type of MDS, the risk group, the signs, age and general
 
 People with low-risk MDS and few signs usually have regular check-ups and blood tests first, and start treatment if it gets worse. Many people also need supportive treatment: blood transfusions, medicines called growth factors that help the marrow make more blood cells, and antibiotics for infections. People who need many transfusions may need chelation, a medicine that removes the extra iron.
 
-Other treatments are used for some types of MDS. These include azacitidine and decitabine, which kill fast-dividing cells and may slow the change to AML, and newer medicines. Lenalidomide, luspatercept and imetelstat are used for anaemia in some people who need regular transfusions, and ivosidenib for some MDS that has come back or not responded. Higher-risk MDS may need stronger chemotherapy and a stem cell transplant, which can sometimes cure MDS, but is not suitable for everyone.
+Other treatments are used for some types of MDS. These include azacitidine and decitabine, which kill fast-dividing cells and may slow the change to AML, and newer medicines. Lenalidomide, luspatercept and imetelstat are used for anaemia in some people who need regular transfusions, and ivosidenib for some MDS that has come back or not responded. Higher-risk MDS may need chemotherapy and a stem cell transplant, which can sometimes cure MDS, but is not suitable for everyone.
 
 MDS cannot usually be cured, and advanced MDS can be very hard to treat. Then treatment aims to control it and its symptoms, and help the person live longer.
 
 # How the stories go on
 
-The railway guard's marrow test shows MDS that needs regular transfusions. His hematologist plans his treatment, and a nephew who drives an auto takes him to the hospital. He stops buying tonics and keeps every report in one folder.
+The railway guard's marrow test shows MDS that needs regular transfusions. His hematologist plans his treatment, and a nephew who drives an auto takes him to the hospital. His hematologist tells him the tonics will not help, so he stops buying them, and he keeps every report in one folder.
 
 The woman's tests show low-risk MDS. She has regular check-ups and blood tests, and her son learns which signs to report between visits.
 
@@ -83,7 +83,7 @@ It cannot usually be cured. A stem cell transplant can sometimes cure it, but it
 
 ## Will iron tablets help?
 
-Not for MDS itself, because the problem is in the marrow. Do not start iron or tonics on your own. The hematologist will decide what you need.
+Not for MDS itself, because the problem is in the marrow. Do not start or stop iron or tonics on your own. The hematologist will decide what you need.
 
 # Sources
 

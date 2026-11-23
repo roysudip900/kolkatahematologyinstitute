@@ -689,9 +689,9 @@ const FIG = {
     const P = '#7A5AD1';
     const t = l === 'bn'
       ? { m: 'অস্থিমজ্জা', b: 'রক্ত', y: 'কচি কণিকা', few: 'সুস্থ কণিকা কম',
-          cap: 'এমডিএস-এ মজ্জার কচি কণিকাগুলোর বেশিরভাগ সুস্থ কণিকা হয়ে বড় হয় না, তাই রক্তে সুস্থ লোহিত কণিকা, শ্বেত কণিকা বা প্লেটলেট কম পড়ে।' }
+          cap: 'এমডিএস-এ মজ্জার কচি কণিকাগুলো সুস্থ কণিকা হয়ে বড় হয় না, তাই রক্তে সুস্থ লোহিত কণিকা, শ্বেত কণিকা বা প্লেটলেট কম পড়ে।' }
       : { m: 'bone marrow', b: 'blood', y: 'young cells', few: 'few healthy cells',
-          cap: 'In MDS, most young cells in the marrow do not grow up into healthy cells, so the blood is short of healthy red cells, white cells or platelets.' };
+          cap: 'In MDS, young cells in the marrow do not grow up into healthy cells, so the blood is short of healthy red cells, white cells or platelets.' };
     let body = `<rect x="14" y="40" width="160" height="150" rx="18" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/>` +
       `<rect x="232" y="40" width="114" height="150" rx="40" fill="${C.roseBg}" stroke="${C.rose}" stroke-width="2"/>`;
     body += T(94, 30, t.m, { a: 'middle', size: 12.5, fill: C.teal2, w: 700 }) + T(289, 30, t.b, { a: 'middle', size: 12.5, fill: C.rose, w: 700 });
