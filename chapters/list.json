@@ -312,5 +312,15 @@
   "card_bn": "ছোট্ট ছেলের অল্পেই কালশিটে, হাঁটু ফুলে যায়? কেটে গেলে রক্ত থামে না?",
   "card_en": "A little boy who bruises easily, or a knee that swells? A cut that keeps bleeding?",
   "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FDE2E4\"/><path d=\"M26 10c-7 10-11 16-11 21a11 11 0 0 0 22 0c0-5-4-11-11-21z\" fill=\"#D7263D\"/><path d=\"M20 32a6 6 0 0 0 6 6\" stroke=\"#FFFFFF\" stroke-width=\"2.2\" fill=\"none\" stroke-linecap=\"round\"/>"
+ },
+ {
+  "id": "clots",
+  "bn": "রক্ত জমাট বাঁধা ও রক্ত পাতলা করার ওষুধ",
+  "en": "Blood clots and blood thinners",
+  "desc_bn": "পায়ে জমাট (ডিভিটি) আর ফুসফুসে জমাট (পিই) কী, কাদের বেশি হয়, লক্ষণ, রক্ত পাতলা করার ওষুধ নিয়ে রোজকার জীবন, আর কেন নিজে থেকে বন্ধ নয়।",
+  "desc_en": "What a clot in the leg (DVT) and in the lungs (PE) are, who is at risk, the signs, living with blood thinners, and why never to stop them on your own.",
+  "card_bn": "এক পা ফুলে ব্যথা? হঠাৎ হাঁফ ধরা? রক্ত পাতলা করার ওষুধ খান?",
+  "card_en": "One leg swollen and painful? Sudden breathlessness? Taking a blood thinner?",
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#E3EEF9\"/><path d=\"M21 8h10v22c0 5 3 8 8 10v4H21c-3 0-4-2-4-5V16c0-5 1-8 4-8z\" fill=\"#FFFFFF\" stroke=\"#2D6E8E\" stroke-width=\"2\"/><circle cx=\"25\" cy=\"28\" r=\"4.5\" fill=\"#D7263D\"/>"
  }
 ]
