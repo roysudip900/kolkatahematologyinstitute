@@ -35,6 +35,7 @@ Author: [Dr. Sudip Roy](https://share.google/OLTZr4ebHj8UmXFnB), MBBS, MD, DM (C
 - [The bone marrow test](https://kolkatahematologyinstitute.com/en/marrow/): What the bone marrow test is, why it is needed, what happens on the day, whether it hurts, why it is not from the spine, and what the pathologist looks at.
 - [Haemophilia](https://kolkatahematologyinstitute.com/en/haemophilia/): What haemophilia is, why it mostly affects boys, bleeding into joints, factor and other treatment, school and sport, and when to go to hospital at once.
 - [Blood clots and blood thinners](https://kolkatahematologyinstitute.com/en/clots/): What a clot in the leg (DVT) and in the lungs (PE) are, who is at risk, the signs, living with blood thinners, and why never to stop them on your own.
+- [Sickle cell disease](https://kolkatahematologyinstitute.com/en/sickle-cell/): What sickle cell disease and being a carrier mean, the signs and crises, everyday care to prevent crises, treatment, and marriage and family planning.
 
 ## অধ্যায় (বাংলা)
 - [অ্যানিমিয়া: রক্তাল্পতা](https://kolkatahematologyinstitute.com/anaemia/): সব সময় ক্লান্তি, সিঁড়ি ভাঙলে হাঁফ, রিপোর্টে হিমোগ্লোবিন কম? অ্যানিমিয়া মানে কী আর কারণ খোঁজা কেন জরুরি, লিখেছেন কলকাতার হেমাটোলজিস্ট।
@@ -67,3 +68,4 @@ Author: [Dr. Sudip Roy](https://share.google/OLTZr4ebHj8UmXFnB), MBBS, MD, DM (C
 - [বোন ম্যারো পরীক্ষা](https://kolkatahematologyinstitute.com/marrow/): বোন ম্যারো পরীক্ষা কী, কেন দরকার হয়, পরীক্ষার দিন কী হয়, ব্যথা লাগে কিনা, কেন এটা শিরদাঁড়া থেকে নয়, আর প্যাথোলজিস্ট নমুনায় কী দেখেন।
 - [হিমোফিলিয়া](https://kolkatahematologyinstitute.com/haemophilia/): হিমোফিলিয়া কী, কেন বেশিরভাগ ছেলেদের হয়, জয়েন্টে রক্ত পড়া, ফ্যাক্টর আর অন্য চিকিৎসা, স্কুল আর খেলাধুলো, আর কখন সঙ্গে সঙ্গে হাসপাতাল।
 - [রক্ত জমাট বাঁধা ও রক্ত পাতলা করার ওষুধ](https://kolkatahematologyinstitute.com/clots/): পায়ে জমাট (ডিভিটি) আর ফুসফুসে জমাট (পিই) কী, কাদের বেশি হয়, লক্ষণ, রক্ত পাতলা করার ওষুধ নিয়ে রোজকার জীবন, আর কেন নিজে থেকে বন্ধ নয়।
+- [সিকল সেল ডিজিজ](https://kolkatahematologyinstitute.com/sickle-cell/): সিকল সেল ডিজিজ আর বাহক হওয়া কী, লক্ষণ আর ক্রাইসিস, ক্রাইসিস আটকানোর রোজকার যত্ন, চিকিৎসা, আর বিয়ে ও পরিবার পরিকল্পনা।
