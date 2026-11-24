@@ -876,6 +876,32 @@ const FIG = {
         body),
     };
   },
+  // Pregnancy: a simple line across the months of pregnancy with four check-up dots. A drop at each dot is a
+  // haemoglobin test; a small tag near the start is the carrier test; a band from the fourth month is iron tablets.
+  'pregnancy-checks'(l) {
+    const t = l === 'bn'
+      ? { hb: 'প্রতিটা চেকআপে হিমোগ্লোবিন পরীক্ষা', carrier: 'শুরুতেই বাহক পরীক্ষা', iron: 'দ্বিতীয় তিন মাস থেকে আয়রন-ফলিক অ্যাসিড', start: 'শুরু', birth: 'প্রসব',
+          cap: 'অ্যানিমিয়া মুক্ত ভারত কর্মসূচিতে গর্ভাবস্থার প্রতিটা চেকআপে, অন্তত চারবার, হিমোগ্লোবিন পরীক্ষা হয়। বাহক পরীক্ষা শুরুতেই করানো ভালো, আর দ্বিতীয় তিন মাস থেকে আয়রন-ফলিক অ্যাসিড ট্যাবলেট দেওয়া হয়।' }
+      : { hb: 'haemoglobin test at every check-up', carrier: 'carrier test early', iron: 'iron and folic acid from the second three months', start: 'start', birth: 'birth',
+          cap: 'Under the Anemia Mukt Bharat programme, haemoglobin is tested at every pregnancy check-up, at least four times. The carrier test is best done early, and iron and folic acid tablets are given from the second three months.' };
+    const drop = x => `<path d="M${x} 64c-6 9-9 13-9 17a9 9 0 0 0 18 0c0-4-3-8-9-17z" fill="${C.red}" opacity=".85"/>`;
+    let body = `<path d="M30 110H330" stroke="${C.teal2}" stroke-width="4" stroke-linecap="round"/>` +
+      `<rect x="120" y="128" width="210" height="14" rx="7" fill="${C.mint}" stroke="${C.mintLine}" stroke-width="1.5"/>` +
+      `<rect x="38" y="132" width="40" height="30" rx="6" fill="${C.amberBg}" stroke="${C.amber}" stroke-width="1.5"/>`;
+    body += [70, 160, 240, 300].map((x, i) => `<g class="pc-d pc-d${i}">${drop(x)}<circle cx="${x}" cy="110" r="7" fill="#fff" stroke="${C.teal}" stroke-width="3"/></g>`).join('');
+    body += T(30, 30, t.hb, { a: 'start', size: 12, fill: C.red, w: 700 }) +
+      T(30, 182, t.carrier, { a: 'start', size: 12, fill: C.amber, w: 700 }) +
+      T(330, 160, t.iron, { a: 'end', size: 11, fill: C.teal, w: 700 }) +
+      T(30, 100, t.start, { a: 'start', size: 11, fill: C.muted }) + T(330, 100, t.birth, { a: 'end', size: 11, fill: C.muted });
+    return {
+      cap: t.cap,
+      svg: svg('pc', 360, 200, t.cap,
+        '.pc-d{animation:pcd 6s ease-in-out infinite;opacity:.25}.pc-d1{animation-delay:1.5s}.pc-d2{animation-delay:3s}.pc-d3{animation-delay:4.5s}' +
+        '@keyframes pcd{0%,10%{opacity:.25}20%,60%{opacity:1}80%,100%{opacity:.25}}' +
+        '@media (prefers-reduced-motion:reduce){.pc-d{animation:none;opacity:1}}',
+        body),
+    };
+  },
   // Anaemia, iron: two tanks of body iron. Tablets drip iron into both. In the first, a leak (heavy periods or
   // bleeding) lets it out, so the level hardly rises; in the second the leak is treated and the level slowly rises.
   'iron-tank'(l) {
@@ -1946,6 +1972,29 @@ const TRY = {
             ['hand', 'Swollen hands and feet in a child are only an injury', 'True?', 'Painful swelling of the hands and feet in a small child can be a sign of sickle cell disease. See a hematologist.'],
             ['cell', 'Nothing can be done for sickle cell disease', 'True?', 'Water, warmth, vaccines, medicines and regular check-ups prevent many crises and complications.']],
           cap: 'Any fever needs a call to the doctor the same day.' };
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
+      t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
+        `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
+        `<span class="fc back"><span class="k">${esc(t.sign)}</span><span>${esc(back)}</span></span></button>`).join('') + '</div>';
+    return { cap: t.cap, cls: 'flipset', html };
+  },
+  'pregnancy-cards'(l) {
+    const ic = {
+      tired: `<circle cx="20" cy="12" r="6" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><path d="M10 34c0-9 4-14 10-14s10 5 10 14" fill="none" stroke="${C.teal2}" stroke-width="2"/><path d="M27 6h6l-6 6h6" fill="none" stroke="${C.muted}" stroke-width="1.5"/>`,
+      plt: `<circle cx="13" cy="20" r="5" fill="${C.amberBg}" stroke="${C.amber}" stroke-width="2"/><circle cx="27" cy="14" r="4" fill="${C.amberBg}" stroke="${C.amber}" stroke-width="2"/><circle cx="25" cy="28" r="4" fill="${C.amberBg}" stroke="${C.amber}" stroke-width="2"/>`,
+      pill: `<rect x="8" y="14" width="24" height="12" rx="6" fill="${C.red}" opacity=".8"/><path d="M20 14v12" stroke="#fff" stroke-width="2"/>`,
+    };
+    const t = l === 'bn'
+      ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
+          c: [['tired', 'পোয়াতি হলে সব ক্লান্তিই এমনি', 'সত্যি?', 'ক্লান্তির সঙ্গে হাঁফ ধরা, বুক ধড়ফড় বা মুখ ফ্যাকাশে হলে অ্যানিমিয়া হতে পারে। হিমোগ্লোবিন দেখান।'],
+            ['plt', 'গর্ভাবস্থায় প্লেটলেট একটু কম মানেই বিপদ', 'সত্যি?', 'এটা খুব হয়, আর সাধারণত মা বা বাচ্চার ক্ষতি করে না। ডাক্তার কারণ দেখে নজর রাখেন।'],
+            ['pill', 'আয়রন ট্যাবলেটে পেট খারাপ হলে চুপচাপ বন্ধ করে দিলেই হল', 'সত্যি?', 'আশাদিদি বা ডাক্তারকে বলুন। ডাক্তার অন্যভাবে আয়রন দিতে পারেন।']],
+          cap: 'প্রতিটা চেকআপে যান, আর রিপোর্ট ডাক্তারকে দেখান।' }
+      : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
+          c: [['tired', 'All tiredness in pregnancy is just pregnancy', 'True?', 'Tiredness with breathlessness, a fast heartbeat or a pale face can be anaemia. Ask for your haemoglobin to be checked.'],
+            ['plt', 'A slightly low platelet count in pregnancy means danger', 'True?', 'It is common and usually harmless for mother and baby. The doctor checks the cause and keeps an eye on it.'],
+            ['pill', 'If iron tablets upset the stomach, quietly stop them', 'True?', 'Tell the ASHA or the doctor. The doctor can give iron another way.']],
+          cap: 'Keep every check-up, and show the reports to your doctor.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
       t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
         `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +

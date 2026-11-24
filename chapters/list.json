@@ -332,5 +332,15 @@
   "card_bn": "বাচ্চার হাত-পা ফুলে ব্যথা? বারবার হাড়ে ব্যথা? পরিবারে কেউ বাহক?",
   "card_en": "A child with swollen, painful hands and feet? Repeated bone pain? A carrier in the family?",
   "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#E3EEF9\"/><ellipse cx=\"18\" cy=\"20\" rx=\"7\" ry=\"6\" fill=\"#D7263D\" opacity=\".85\"/><path d=\"M20 36C25 26 37 26 42 36C37 31 25 31 20 36z\" fill=\"#8b1e2d\"/>"
+ },
+ {
+  "id": "pregnancy-blood",
+  "bn": "গর্ভাবস্থায় রক্তের সমস্যা",
+  "en": "Blood problems in pregnancy",
+  "desc_bn": "গর্ভাবস্থায় অ্যানিমিয়া আর তার চিকিৎসা, প্লেটলেট কম হওয়া, থ্যালাসেমিয়া আর সিকল সেলের বাহক পরীক্ষা, আর রক্ত জমাট বাঁধা।",
+  "desc_en": "Anaemia in pregnancy and its treatment, low platelets, the carrier test for thalassemia and sickle cell, and blood clots.",
+  "card_bn": "গর্ভাবস্থায় খুব ক্লান্তি? রিপোর্টে প্লেটলেট কম? বাহক পরীক্ষা করাতে বলেছে?",
+  "card_en": "Very tired in pregnancy? Platelets low on the report? Asked to have a carrier test?",
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#E3EEF9\"/><circle cx=\"24\" cy=\"13\" r=\"5\" fill=\"#FFFFFF\" stroke=\"#2D6E8E\" stroke-width=\"2\"/><path d=\"M18 44V26c0-5 3-7 6-7s5 2 6 5c5 2 7 6 6 11-1 4-4 6-8 6v3\" fill=\"#FFFFFF\" stroke=\"#2D6E8E\" stroke-width=\"2\"/><path d=\"M37 12c-3 4-4 6-4 8a4 4 0 0 0 8 0c0-2-1-4-4-8z\" fill=\"#D7263D\"/>"
  }
 ]
