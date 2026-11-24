@@ -302,5 +302,15 @@
   "card_bn": "ম্যারো পরীক্ষা করাতে বলেছে? ব্যথা লাগবে? শিরদাঁড়া থেকে নেয়? দুর্বল হয়ে যাব?",
   "card_en": "Asked to have a bone marrow test? Will it hurt? Is it from the spine? Will it leave me weak?",
   "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FFE9D2\"/><circle cx=\"18\" cy=\"19\" r=\"8\" fill=\"#FFFFFF\"/><circle cx=\"35\" cy=\"30\" r=\"9\" fill=\"#FFFFFF\"/><circle cx=\"18\" cy=\"37\" r=\"5\" fill=\"#FFFFFF\"/><circle cx=\"31\" cy=\"14\" r=\"2.5\" fill=\"#7A5AD1\"/><circle cx=\"38\" cy=\"17\" r=\"2\" fill=\"#7A5AD1\"/><circle cx=\"26\" cy=\"27\" r=\"2.5\" fill=\"#7A5AD1\"/><circle cx=\"27\" cy=\"41\" r=\"2\" fill=\"#7A5AD1\"/><circle cx=\"10\" cy=\"28\" r=\"2\" fill=\"#7A5AD1\"/>"
+ },
+ {
+  "id": "haemophilia",
+  "bn": "হিমোফিলিয়া",
+  "en": "Haemophilia",
+  "desc_bn": "হিমোফিলিয়া কী, কেন বেশিরভাগ ছেলেদের হয়, জয়েন্টে রক্ত পড়া, ফ্যাক্টর আর অন্য চিকিৎসা, স্কুল আর খেলাধুলো, আর কখন সঙ্গে সঙ্গে হাসপাতাল।",
+  "desc_en": "What haemophilia is, why it mostly affects boys, bleeding into joints, factor and other treatment, school and sport, and when to go to hospital at once.",
+  "card_bn": "ছোট্ট ছেলের অল্পেই কালশিটে, হাঁটু ফুলে যায়? কেটে গেলে রক্ত থামে না?",
+  "card_en": "A little boy who bruises easily, or a knee that swells? A cut that keeps bleeding?",
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FDE2E4\"/><path d=\"M26 10c-7 10-11 16-11 21a11 11 0 0 0 22 0c0-5-4-11-11-21z\" fill=\"#D7263D\"/><path d=\"M20 32a6 6 0 0 0 6 6\" stroke=\"#FFFFFF\" stroke-width=\"2.2\" fill=\"none\" stroke-linecap=\"round\"/>"
  }
 ]
