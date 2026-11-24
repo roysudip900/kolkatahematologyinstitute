@@ -33,6 +33,7 @@ Author: [Dr. Sudip Roy](https://share.google/OLTZr4ebHj8UmXFnB), MBBS, MD, DM (C
   - [High counts (polycythaemia, ET, myelofibrosis)](https://kolkatahematologyinstitute.com/en/blood-cancers/mpn/): What polycythaemia vera, ET and myelofibrosis are, why thick blood is a danger, the signs of a clot, venesection, and what treatment can do.
   - [Low white cells and infection](https://kolkatahematologyinstitute.com/en/blood-cancers/infection/): Why chemotherapy lowers the white cells, why a fever is an emergency, hand washing, safe food, visitors, and the signs that mean the hospital at once.
 - [The bone marrow test](https://kolkatahematologyinstitute.com/en/marrow/): What the bone marrow test is, why it is needed, what happens on the day, whether it hurts, why it is not from the spine, and what the pathologist looks at.
+- [Haemophilia](https://kolkatahematologyinstitute.com/en/haemophilia/): What haemophilia is, why it mostly affects boys, bleeding into joints, factor and other treatment, school and sport, and when to go to hospital at once.
 
 ## অধ্যায় (বাংলা)
 - [অ্যানিমিয়া: রক্তাল্পতা](https://kolkatahematologyinstitute.com/anaemia/): সব সময় ক্লান্তি, সিঁড়ি ভাঙলে হাঁফ, রিপোর্টে হিমোগ্লোবিন কম? অ্যানিমিয়া মানে কী আর কারণ খোঁজা কেন জরুরি, লিখেছেন কলকাতার হেমাটোলজিস্ট।
@@ -63,3 +64,4 @@ Author: [Dr. Sudip Roy](https://share.google/OLTZr4ebHj8UmXFnB), MBBS, MD, DM (C
   - [রক্তকণিকা বেশি (পলিসাইথেমিয়া, ইটি, মায়েলোফাইব্রোসিস)](https://kolkatahematologyinstitute.com/blood-cancers/mpn/): পলিসাইথেমিয়া ভেরা, ইটি আর মায়েলোফাইব্রোসিস কী, ঘন রক্ত কেন বিপজ্জনক, রক্ত জমাট বাঁধার লক্ষণ, ভেনিসেকশন, আর চিকিৎসা কী করতে পারে।
   - [শ্বেতকণিকা কম ও সংক্রমণ](https://kolkatahematologyinstitute.com/blood-cancers/infection/): কেমোথেরাপিতে শ্বেত কণিকা কেন কমে, জ্বর কেন জরুরি অবস্থা, হাত ধোয়া, নিরাপদ খাবার, অতিথি, আর কোন লক্ষণে সঙ্গে সঙ্গে হাসপাতাল।
 - [বোন ম্যারো পরীক্ষা](https://kolkatahematologyinstitute.com/marrow/): বোন ম্যারো পরীক্ষা কী, কেন দরকার হয়, পরীক্ষার দিন কী হয়, ব্যথা লাগে কিনা, কেন এটা শিরদাঁড়া থেকে নয়, আর প্যাথোলজিস্ট নমুনায় কী দেখেন।
+- [হিমোফিলিয়া](https://kolkatahematologyinstitute.com/haemophilia/): হিমোফিলিয়া কী, কেন বেশিরভাগ ছেলেদের হয়, জয়েন্টে রক্ত পড়া, ফ্যাক্টর আর অন্য চিকিৎসা, স্কুল আর খেলাধুলো, আর কখন সঙ্গে সঙ্গে হাসপাতাল।
