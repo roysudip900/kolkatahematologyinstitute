@@ -27,7 +27,7 @@ Haemophilia is usually caused by a changed gene passed on from parents to a chil
 
 About 3 in 10 cases come from a new change in the gene, so there may be no one else in the family with it.
 
-A family with haemophilia can ask for a genetic test to see who carries the gene. Tests can also be done before and during a pregnancy, and on a baby after birth.
+A family with haemophilia can ask the team about testing to see who carries the gene.
 
 # Signs of haemophilia
 
@@ -37,19 +37,51 @@ Signs usually begin in early childhood, but in mild haemophilia they may not be 
 - bruising easily
 - pain, stiffness and swelling in a joint, most often an ankle, a knee or an elbow, from bleeding inside it
 
-A blood test that measures the clotting factor shows whether it is haemophilia, and which type.
+The hematologist confirms it with blood tests.
 
 # What treatment can do
 
-Haemophilia cannot usually be cured, but treatment controls it. With treatment, most people with haemophilia live a full life.
+Haemophilia cannot usually be cured, but treatment controls it. With treatment, most people with haemophilia live a full life. Treatment has two parts: medicines that replace or stand in for the missing factor, and supporting care that protects the joints, the teeth and everyday life.
 
-- Clotting factor injections replace the missing factor. People with severe haemophilia usually have them regularly to prevent bleeding, and many learn to give them at home. People with mild or moderate haemophilia usually have them when a bleed starts, and before an operation or dental work.
-- Other medicines include emicizumab, desmopressin and tranexamic acid.
+## Medicines for bleeding
+
+- Clotting factor injections replace the missing factor. People with severe haemophilia usually have them regularly to prevent bleeding, which is called prophylaxis. People with mild or moderate haemophilia usually have them when a bleed starts, and before an operation or dental work.
+- Emicizumab, for haemophilia A, is given under the skin and helps prevent bleeds. It does not treat a bleed that has already started, so the team explains what to use then.
+- Desmopressin helps some people with mild haemophilia A.
+- Tranexamic acid helps a clot hold, especially for bleeding from the mouth, the gums or the nose, and around dental work.
 - Some people make antibodies against the factor, called inhibitors, and then need a different treatment.
 
 The clotting factor used today is very safe. Much of it is made without blood, and the factor made from donated blood is tested and treated to keep the risk of infection very low.
 
-Treat a joint or muscle bleed as soon as possible with the medicine the team has given, to lower pain and the risk of lasting joint damage. Bleeding inside the body can damage the joints over time, and some people need a joint replacement later.
+## Treatment at home
+
+With training from the haemophilia team, many families give treatment at home. Parents usually give the injections to young children, and many children learn to inject themselves by their early teens. Treating a bleed early at home means less pain, fewer hospital stays, and less time away from school and work. The team teaches how to:
+
+- recognise a bleed early; in a small child, not wanting to use an arm or a leg can be the first sign of a joint or muscle bleed
+- store and prepare the medicine, and inject it cleanly
+- keep a written record of each bleed and each injection, and bring it to every visit
+
+Do not wait and see with a suspected bleed. Waiting lets the bleeding go on, and it is what damages the joints.
+
+## First aid for a joint or muscle bleed
+
+Along with the medicine, the team may advise PRICE: protect the joint, rest it, cool it, press it gently with a bandage, and raise it. Ask the team how to do each step for your child. A splint or support may also be used for a short time.
+
+## Physiotherapy and keeping the joints strong
+
+After a joint or muscle bleed, a physiotherapist helps the person return to full movement step by step, under supervision. Over the years, regular exercise and physiotherapy keep the muscles strong and protect the joints. Repeated bleeds can damage a joint, and some people with a badly damaged joint later need an operation, sometimes a joint replacement. Weight-bearing exercise, enough vitamin D and calcium, and staying active also keep the bones strong.
+
+## Pain
+
+Pain from a joint or muscle bleed is common. The first step is to stop the bleeding with the team's medicine, and the team then advises which painkiller is safe. Paracetamol is usually the first. Aspirin, ibuprofen and most similar painkillers make bleeding worse and are avoided unless the team says otherwise. Painkiller injections into the muscle should be avoided. For long-standing joint pain, physiotherapy and simple techniques such as distraction or relaxation can help alongside medicine.
+
+## Teeth and gums
+
+Bleeding from the gums and after dental work is a real risk, so prevention matters. Brush twice a day with a soft or medium toothbrush and fluoride toothpaste, and help children brush until they are about six. Children should see a dentist who knows about haemophilia when the first teeth come, or by their first birthday. Before any tooth extraction or other dental surgery, the dentist and the hematologist plan together, often with tranexamic acid. Fillings and cleaning are usually low risk. Report at once any bleeding that goes on after dental work, or trouble speaking, swallowing or breathing.
+
+## Support for the family
+
+Haemophilia affects school, work and family life. The haemophilia team, which may include a nurse, a physiotherapist and a counsellor, supports the family through each stage, from a baby's first bruise to a teenager taking charge of their own care. Meeting other families through patient groups and camps can also help.
 
 [figure: haemophilia-cards]
 
@@ -57,8 +89,8 @@ Treat a joint or muscle bleed as soon as possible with the medicine the team has
 
 - Regular exercise keeps the joints and bones healthy. Non-contact sports such as swimming, walking, cycling, badminton and table tennis are encouraged, and a physiotherapist can help choose.
 - Contact sports such as football, hockey, boxing and wrestling are not advised unless the person is on regular preventive treatment and the team agrees.
-- Look after the teeth and gums, and tell the team before any dental work or operation.
-- Ask the team before taking any new medicine, even a painkiller, because some common painkillers make bleeding worse.
+- Tell the team before any operation or dental work.
+- Ask the team before taking any new medicine.
 - Wear a medical alert card or bracelet.
 - Tell the school, and give the teachers the team's number.
 
