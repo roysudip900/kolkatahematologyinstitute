@@ -749,19 +749,19 @@ const FIG = {
   // phone light up. No numbers, no days.
   'infection-window'(l) {
     const t = l === 'bn'
-      ? { y: 'শ্বেত কণিকা', x: 'কেমোথেরাপির একটা দফা', win: 'কণিকা কম: সংক্রমণের ঝুঁকি বেশি', call: 'জ্বর হলেই ফোন',
+      ? { y: 'শ্বেত কণিকা', x: 'কেমোথেরাপির একটা দফা', win: 'কণিকা কম', call: 'জ্বর হলেই ফোন',
           cap: 'প্রতিটা দফার কেমোথেরাপিতে কিছু সময় শ্বেত কণিকা খুব কমে যায়, তখন সংক্রমণের ঝুঁকি সবচেয়ে বেশি। তখন জ্বর বা কাঁপুনি হলে সঙ্গে সঙ্গে হাসপাতালে ফোন করুন।' }
-      : { y: 'white cells', x: 'one round of chemotherapy', win: 'low count: highest infection risk', call: 'fever? call now',
+      : { y: 'white cells', x: 'one round of chemotherapy', win: 'low count', call: 'fever? call now',
           cap: 'In each round of chemotherapy there are times when the white cells are very low, and the risk of infection is highest. A fever or shivering then needs a call to the hospital at once.' };
     const path = 'M30 70C90 70 110 72 140 150C160 196 210 196 230 150C258 86 290 72 340 70';
     let body = `<rect x="128" y="120" width="116" height="78" rx="10" fill="${C.roseBg}" stroke="${C.rose}" stroke-dasharray="4 4"/>` +
-      T(186, 214, t.win, { a: 'middle', size: 11.5, fill: C.red, w: 700 }) +
+      T(186, 136, t.win, { a: 'middle', size: 11.5, fill: C.red, w: 700 }) +
       `<path d="M30 206H346M30 206V40" stroke="${C.mintLine}" stroke-width="1.6"/>` +
       T(34, 34, t.y, { a: 'start', size: 12.5, fill: C.muted, w: 600 }) + T(342, 228, t.x, { a: 'end', size: 12, fill: C.muted, w: 600 }) +
       `<path d="${path}" fill="none" stroke="${C.teal}" stroke-width="3" stroke-linecap="round"/>` +
       `<circle r="6" fill="${C.teal2}"><animateMotion dur="7s" repeatCount="indefinite" path="${path}"/></circle>`;
-    body += `<g class="iw-a"><rect x="262" y="104" width="8" height="26" rx="4" fill="#fff" stroke="${C.red}" stroke-width="2"/><circle cx="266" cy="134" r="6" fill="${C.red}"/>` +
-      T(280, 126, t.call, { a: 'start', size: 12, fill: C.red, w: 700 }) + '</g>';
+    body += `<g class="iw-a"><rect x="300" y="118" width="8" height="26" rx="4" fill="#fff" stroke="${C.red}" stroke-width="2"/><circle cx="304" cy="148" r="6" fill="${C.red}"/>` +
+      T(352, 176, t.call, { a: 'end', size: 12, fill: C.red, w: 700 }) + '</g>';
     return {
       cap: t.cap,
       svg: svg('iw', 360, 240, t.cap,
