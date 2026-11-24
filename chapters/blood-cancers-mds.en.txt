@@ -43,7 +43,7 @@ Treatment depends on the type of MDS, the risk group, the signs, age and general
 
 People with low-risk MDS and few signs usually have regular check-ups and blood tests first, and start treatment if it gets worse. Many people also need supportive treatment: blood transfusions, medicines called growth factors that help the marrow make more blood cells, and antibiotics for infections. People who need many transfusions may need chelation, a medicine that removes the extra iron.
 
-Other treatments are used for some types of MDS. These include azacitidine and decitabine, which kill fast-dividing cells and may slow the change to AML, and newer medicines. Lenalidomide, luspatercept and imetelstat are used for anaemia in some people who need regular transfusions, and ivosidenib for some MDS that has come back or not responded. Higher-risk MDS may need chemotherapy and a stem cell transplant, which can sometimes cure MDS, but is not suitable for everyone.
+Other treatments are used for some types of MDS. These include azacitidine and decitabine, which kill fast-dividing cells and may slow the change to AML, and newer medicines. Lenalidomide, luspatercept and imetelstat are used for anaemia in some people who need regular transfusions, and ivosidenib for some MDS that has come back or not responded. Higher-risk MDS may need chemotherapy and a stem cell transplant, which can sometimes cure MDS. A transplant needs healthy stem cells from a donor and carries risks, such as infections and the donor cells attacking the body (graft versus host disease), so it is not suitable for everyone.
 
 MDS cannot usually be cured, and advanced MDS can be very hard to treat. Then treatment aims to control it and its symptoms, and help the person live longer.
 
@@ -79,7 +79,7 @@ Yes, it is a rare type of blood cancer of the bone marrow. It often develops slo
 
 ## Can MDS be cured?
 
-It cannot usually be cured. A stem cell transplant can sometimes cure it, but it is not suitable for everyone. Other treatments can often manage the symptoms.
+It cannot usually be cured. A stem cell transplant can sometimes cure it, but it needs a donor and carries risks, so it is not suitable for everyone. Other treatments can often manage the symptoms.
 
 ## Will iron tablets help?
 
@@ -92,4 +92,4 @@ Not for MDS itself, because the problem is in the marrow. Do not start or stop i
 - NHS: Tests and next steps for myelodysplastic syndrome (MDS) | https://www.nhs.uk/conditions/myelodysplastic-syndrome-mds/tests-and-next-steps/
 - NHS: Treatment for myelodysplastic syndrome (MDS) | https://www.nhs.uk/conditions/myelodysplastic-syndrome-mds/treatment/
 - National Cancer Institute: Myelodysplastic syndromes treatment | https://www.cancer.gov/types/myeloproliferative/patient/myelodysplastic-treatment-pdq
-- National Cancer Institute: Drugs approved for myeloproliferative neoplasms or myelodysplastic syndromes | https://www.cancer.gov/about-cancer/treatment/drugs/myeloproliferative-neoplasms
+- NHS: Complications of a stem cell or bone marrow transplant | https://www.nhs.uk/tests-and-treatments/stem-cell-or-bone-marrow-transplants/complications/
