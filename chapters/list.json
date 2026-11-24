@@ -65,6 +65,17 @@
   "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FDECEE\"/><path d=\"M17 28h18l-3 12H20z\" fill=\"#C9744A\"/><path d=\"M26 28c-1-6-4-9-9-10 1 6 4 9 9 10zM26 28c1-7 4-11 9-12-1 6-4 10-9 12z\" fill=\"#2E8B57\"/><circle cx=\"26\" cy=\"14\" r=\"3\" fill=\"#D93A4A\"/>"
  },
  {
+  "id": "anaemia-aplastic",
+  "parent": "anaemia",
+  "bn": "অ্যানিমিয়া: অ্যাপ্লাস্টিক অ্যানিমিয়া",
+  "en": "Anaemia: aplastic anaemia",
+  "desc_bn": "অ্যাপ্লাস্টিক অ্যানিমিয়া কী, আয়রনে কেন কাজ হয় না, ম্যারো পরীক্ষা কেন লাগে, কেন হয়, আর চিকিৎসা কী করতে পারে, ট্রান্সপ্লান্ট সমেত।",
+  "desc_en": "What aplastic anaemia is, why iron does not help, why the marrow test is needed, what causes it, and what treatment can do, including a transplant.",
+  "card_bn": "মাড়ি থেকে রক্ত, অকারণে কালশিটে, বারবার জ্বর আর খুব ক্লান্তি?",
+  "card_en": "Bleeding gums, bruises for no reason, fevers again and again, and very tired?",
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FDECEE\"/><path d=\"M17 28h18l-3 12H20z\" fill=\"#C9744A\"/><path d=\"M26 28c-1-6-4-9-9-10 1 6 4 9 9 10zM26 28c1-7 4-11 9-12-1 6-4 10-9 12z\" fill=\"#2E8B57\"/><circle cx=\"26\" cy=\"14\" r=\"3\" fill=\"#D93A4A\"/>"
+ },
+ {
   "id": "thalassemia",
   "bn": "থ্যালাসেমিয়া",
   "en": "Thalassemia",
