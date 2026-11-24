@@ -849,6 +849,33 @@ const FIG = {
         body),
     };
   },
+  // Sickle cell: two small blood vessels side by side. In the top one, round soft red cells flow through. In the
+  // bottom one, stiff curved sickle cells pile up at a narrow point and the flow stops. No faces, no numbers.
+  'sickle-block'(l) {
+    const t = l === 'bn'
+      ? { ok: 'গোল নরম কণিকা সহজে চলে', bad: 'কাস্তের মতো শক্ত কণিকা আটকে যায়',
+          cap: 'সাধারণত লোহিত কণিকা গোল আর নরম, সরু রক্তনালি দিয়ে সহজে চলে যায়। সিকল সেল ডিজিজে কণিকা শক্ত হয়ে বেঁকে যায়, সরু জায়গায় আটকে রক্ত চলাচল বন্ধ করে, তাতে ব্যথা হয়।' }
+      : { ok: 'round, soft cells flow through', bad: 'stiff sickle cells get stuck',
+          cap: 'Red blood cells are usually round and soft, and slip through narrow vessels. In sickle cell disease they become stiff and curved, get stuck at narrow points and block the blood flow, which causes pain.' };
+    const vessel = y => `<path d="M20 ${y - 22}H200C240 ${y - 22} 260 ${y - 10} 290 ${y - 10}H340M20 ${y + 22}H200C240 ${y + 22} 260 ${y + 10} 290 ${y + 10}H340" stroke="${C.rose}" stroke-width="4" fill="none"/>` +
+      `<path d="M20 ${y - 20}H200C240 ${y - 20} 260 ${y - 8} 290 ${y - 8}H340V${y + 8}H290C260 ${y + 8} 240 ${y + 20} 200 ${y + 20}H20z" fill="${C.roseBg}"/>`;
+    let body = vessel(60) + vessel(170);
+    body += '<g class="sb-flow">' + [40, 100, 160, 220, 280, 340, 400].map(x =>
+      `<ellipse cx="${x}" cy="60" rx="11" ry="9" fill="${C.red}" opacity=".85"/>`).join('') + '</g>';
+    const sickle = (x, y, r) => `<path transform="translate(${x} ${y}) rotate(${r})" d="M-14 4C-8 -10 8 -10 14 4C8 -3 -8 -3 -14 4z" fill="#8b1e2d"/>`;
+    body += sickle(250, 168, 10) + sickle(236, 174, -20) + sickle(222, 165, 25) + sickle(206, 176, -5) + sickle(190, 166, 15) + sickle(172, 174, -25) +
+      `<ellipse cx="140" cy="170" rx="11" ry="9" fill="${C.red}" opacity=".6"/><ellipse cx="110" cy="166" rx="11" ry="9" fill="${C.red}" opacity=".6"/>` +
+      `<g class="sb-pain"><circle cx="276" cy="170" r="14" fill="none" stroke="${C.amber}" stroke-width="3"/></g>`;
+    body += T(20, 24, t.ok, { a: 'start', size: 12, fill: C.teal, w: 700 }) + T(20, 134, t.bad, { a: 'start', size: 12, fill: C.red, w: 700 });
+    return {
+      cap: t.cap,
+      svg: svg('sb', 360, 210, t.cap,
+        '.sb-flow{animation:sbf 4s linear infinite}@keyframes sbf{from{transform:translateX(-60px)}to{transform:translateX(0)}}' +
+        '.sb-pain{animation:sbp 2s ease-in-out infinite}@keyframes sbp{0%,100%{opacity:.2}50%{opacity:1}}' +
+        '@media (prefers-reduced-motion:reduce){.sb-flow,.sb-pain{animation:none}}',
+        body),
+    };
+  },
   // Anaemia, iron: two tanks of body iron. Tablets drip iron into both. In the first, a leak (heavy periods or
   // bleeding) lets it out, so the level hardly rises; in the second the leak is treated and the level slowly rises.
   'iron-tank'(l) {
@@ -1896,6 +1923,29 @@ const TRY = {
             ['pill', 'Feeling well means the blood thinner can stop', 'True?', 'Only stop on your doctor\'s advice. Stopping early can let a clot form again.'],
             ['drop', 'Blood thinners make the blood watery', 'True?', 'They slow down clotting, which is why bleeding is the main side effect.']],
           cap: 'Ask your doctor or pharmacist before taking any other medicine.' };
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
+      t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
+        `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
+        `<span class="fc back"><span class="k">${esc(t.sign)}</span><span>${esc(back)}</span></span></button>`).join('') + '</div>';
+    return { cap: t.cap, cls: 'flipset', html };
+  },
+  'sickle-cards'(l) {
+    const ic = {
+      kin: `<circle cx="13" cy="12" r="5" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><circle cx="27" cy="12" r="5" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><path d="M6 32c0-7 4-11 7-11s7 4 7 11M20 32c0-7 4-11 7-11s7 4 7 11" fill="none" stroke="${C.teal2}" stroke-width="2"/>`,
+      hand: `<path d="M12 34V18c0-2 3-2 3 0v-8c0-2 3-2 3 0v-2c0-2 3-2 3 0v2c0-2 3-2 3 0v4c0-2 3-2 3 0v14c0 4-3 6-7 6h-3c-3 0-5-2-5-4z" fill="${C.roseBg}" stroke="${C.red}" stroke-width="2"/>`,
+      cell: `<path d="M6 24C12 10 28 10 34 24C28 17 12 17 6 24z" fill="#8b1e2d"/>`,
+    };
+    const t = l === 'bn'
+      ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
+          c: [['kin', 'বাহক মানেই সিকল সেল ডিজিজ', 'সত্যি?', 'বাহক সাধারণত ভালো থাকেন। দুজন বাহকের বাচ্চার অসুখটা হতে পারে, তাই বিয়ের আগে পরীক্ষা কাজে লাগে।'],
+            ['hand', 'বাচ্চার হাত-পা ফোলা মানে শুধু চোট', 'সত্যি?', 'ছোট বাচ্চার হাত আর পায়ের পাতা ফুলে ব্যথা সিকল সেল ডিজিজের লক্ষণ হতে পারে। হেমাটোলজিস্ট দেখান।'],
+            ['cell', 'সিকল সেল ডিজিজে কিছুই করার নেই', 'সত্যি?', 'জল, গরম থাকা, টিকা, ওষুধ আর নিয়মিত চেকআপে অনেক ক্রাইসিস আর জটিলতা আটকানো যায়।']],
+          cap: 'জ্বর হলে সেদিনই ডাক্তারকে ফোন করুন।' }
+      : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
+          c: [['kin', 'A carrier has sickle cell disease', 'True?', 'Carriers usually stay well. Two carriers can have a child with the disease, so a blood test before marriage helps.'],
+            ['hand', 'Swollen hands and feet in a child are only an injury', 'True?', 'Painful swelling of the hands and feet in a small child can be a sign of sickle cell disease. See a hematologist.'],
+            ['cell', 'Nothing can be done for sickle cell disease', 'True?', 'Water, warmth, vaccines, medicines and regular check-ups prevent many crises and complications.']],
+          cap: 'Any fever needs a call to the doctor the same day.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
       t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
         `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +

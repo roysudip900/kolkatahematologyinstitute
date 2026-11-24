@@ -322,5 +322,15 @@
   "card_bn": "এক পা ফুলে ব্যথা? হঠাৎ হাঁফ ধরা? রক্ত পাতলা করার ওষুধ খান?",
   "card_en": "One leg swollen and painful? Sudden breathlessness? Taking a blood thinner?",
   "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#E3EEF9\"/><path d=\"M21 8h10v22c0 5 3 8 8 10v4H21c-3 0-4-2-4-5V16c0-5 1-8 4-8z\" fill=\"#FFFFFF\" stroke=\"#2D6E8E\" stroke-width=\"2\"/><circle cx=\"25\" cy=\"28\" r=\"4.5\" fill=\"#D7263D\"/>"
+ },
+ {
+  "id": "sickle-cell",
+  "bn": "সিকল সেল ডিজিজ",
+  "en": "Sickle cell disease",
+  "desc_bn": "সিকল সেল ডিজিজ আর বাহক হওয়া কী, লক্ষণ আর ক্রাইসিস, ক্রাইসিস আটকানোর রোজকার যত্ন, চিকিৎসা, আর বিয়ে ও পরিবার পরিকল্পনা।",
+  "desc_en": "What sickle cell disease and being a carrier mean, the signs and crises, everyday care to prevent crises, treatment, and marriage and family planning.",
+  "card_bn": "বাচ্চার হাত-পা ফুলে ব্যথা? বারবার হাড়ে ব্যথা? পরিবারে কেউ বাহক?",
+  "card_en": "A child with swollen, painful hands and feet? Repeated bone pain? A carrier in the family?",
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#E3EEF9\"/><ellipse cx=\"18\" cy=\"20\" rx=\"7\" ry=\"6\" fill=\"#D7263D\" opacity=\".85\"/><path d=\"M20 36C25 26 37 26 42 36C37 31 25 31 20 36z\" fill=\"#8b1e2d\"/>"
  }
 ]
