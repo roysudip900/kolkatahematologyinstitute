@@ -744,6 +744,32 @@ const FIG = {
         body),
     };
   },
+  // Blood cancers, infection: the white cell count across one round of chemotherapy, as a line that dips into a
+  // shaded "low count" window and climbs back. A dot travels the line; while it is in the window a thermometer and a
+  // phone light up. No numbers, no days.
+  'infection-window'(l) {
+    const t = l === 'bn'
+      ? { y: 'শ্বেত কণিকা', x: 'কেমোথেরাপির একটা দফা', win: 'কণিকা কম: সংক্রমণের ঝুঁকি বেশি', call: 'জ্বর হলেই ফোন',
+          cap: 'প্রতিটা দফার কেমোথেরাপিতে কিছু সময় শ্বেত কণিকা খুব কমে যায়, তখন সংক্রমণের ঝুঁকি সবচেয়ে বেশি। তখন জ্বর বা কাঁপুনি হলে সঙ্গে সঙ্গে হাসপাতালে ফোন করুন।' }
+      : { y: 'white cells', x: 'one round of chemotherapy', win: 'low count: highest infection risk', call: 'fever? call now',
+          cap: 'In each round of chemotherapy there are times when the white cells are very low, and the risk of infection is highest. A fever or shivering then needs a call to the hospital at once.' };
+    const path = 'M30 70C90 70 110 72 140 150C160 196 210 196 230 150C258 86 290 72 340 70';
+    let body = `<rect x="128" y="120" width="116" height="78" rx="10" fill="${C.roseBg}" stroke="${C.rose}" stroke-dasharray="4 4"/>` +
+      T(186, 214, t.win, { a: 'middle', size: 11.5, fill: C.red, w: 700 }) +
+      `<path d="M30 206H346M30 206V40" stroke="${C.mintLine}" stroke-width="1.6"/>` +
+      T(34, 34, t.y, { a: 'start', size: 12.5, fill: C.muted, w: 600 }) + T(342, 228, t.x, { a: 'end', size: 12, fill: C.muted, w: 600 }) +
+      `<path d="${path}" fill="none" stroke="${C.teal}" stroke-width="3" stroke-linecap="round"/>` +
+      `<circle r="6" fill="${C.teal2}"><animateMotion dur="7s" repeatCount="indefinite" path="${path}"/></circle>`;
+    body += `<g class="iw-a"><rect x="262" y="104" width="8" height="26" rx="4" fill="#fff" stroke="${C.red}" stroke-width="2"/><circle cx="266" cy="134" r="6" fill="${C.red}"/>` +
+      T(280, 126, t.call, { a: 'start', size: 12, fill: C.red, w: 700 }) + '</g>';
+    return {
+      cap: t.cap,
+      svg: svg('iw', 360, 240, t.cap,
+        '.iw-a{animation:iwa 7s linear infinite}@keyframes iwa{0%,30%{opacity:.15}38%,62%{opacity:1}70%,100%{opacity:.15}}' +
+        '@media (prefers-reduced-motion:reduce){.iw-a{animation:none}}',
+        body),
+    };
+  },
   // Anaemia, iron: two tanks of body iron. Tablets drip iron into both. In the first, a leak (heavy periods or
   // bleeding) lets it out, so the level hardly rises; in the second the leak is treated and the level slowly rises.
   'iron-tank'(l) {
@@ -1695,6 +1721,30 @@ const TRY = {
             ['glass', 'Drinking more water will bring a high hemoglobin down', 'True?', 'Water helps only when the body is short of water. In polycythaemia vera, the marrow itself makes too many red cells.'],
             ['plt', 'A high platelet count is nothing to worry about if you feel well', 'True?', 'Too many platelets can clump and cause clots. A count that stays high needs a hematologist.']],
           cap: 'Do not start or stop any medicine because of a report.' };
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
+      t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
+        `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
+        `<span class="fc back"><span class="k">${esc(t.sign)}</span><span>${esc(back)}</span></span></button>`).join('') + '</div>';
+    return { cap: t.cap, cls: 'flipset', html };
+  },
+  // Blood cancers, infection: three beliefs; each card turns over to what the chapter says.
+  'infection-cards'(l) {
+    const ic = {
+      moon: `<path d="M26 6a14 14 0 1 0 8 24A11 11 0 0 1 26 6z" fill="${C.amber}"/>`,
+      therm: `<rect x="16" y="6" width="8" height="22" rx="4" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><circle cx="20" cy="31" r="6" fill="${C.red}"/>`,
+      door: `<rect x="11" y="5" width="18" height="30" rx="2" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><circle cx="24" cy="21" r="1.8" fill="${C.teal2}"/>`,
+    };
+    const t = l === 'bn'
+      ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
+          c: [['moon', 'রাতের জ্বর সকাল পর্যন্ত অপেক্ষা করতে পারে', 'সত্যি?', 'কেমোথেরাপির মধ্যে জ্বর হলে দিনে হোক বা রাতে, সঙ্গে সঙ্গে হাসপাতালে ফোন করুন।'],
+            ['therm', 'জ্বরের ওষুধ খেয়ে শুয়ে থাকলেই হবে', 'সত্যি?', 'জ্বরের কোনো ওষুধ খাওয়ার আগে টিমকে জিজ্ঞেস করুন, আর হাসপাতালে ফোন করুন।'],
+            ['door', 'চিকিৎসার সময় কারও আসা চলবে না', 'সত্যি?', 'সুস্থ অতিথি, যাঁরা হাত ধুয়ে নেন, আসতে পারেন। সর্দি-কাশি থাকলে ফোন করাই ভালো।']],
+          cap: 'থার্মোমিটার আর হাসপাতালের নম্বর হাতের কাছে রাখুন।' }
+      : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
+          c: [['moon', 'A fever at night can wait until morning', 'True?', 'During chemotherapy, a fever needs a call to the hospital at once, day or night.'],
+            ['therm', 'A fever tablet and rest are enough', 'True?', 'Ask the team before taking any fever medicine, and call the hospital.'],
+            ['door', 'No one should visit during treatment', 'True?', 'Visitors who are well and wash their hands can come. Anyone with a cold can phone instead.']],
+          cap: 'Keep a thermometer and the hospital number close.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
       t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
         `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +

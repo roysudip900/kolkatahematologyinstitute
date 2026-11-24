@@ -271,6 +271,17 @@
   "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FDECEE\"/><ellipse cx=\"15\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#D93A4A\"/><ellipse cx=\"22.5\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#E8616D\"/><ellipse cx=\"30\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#D93A4A\"/><ellipse cx=\"37.5\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#E8616D\"/>"
  },
  {
+  "id": "blood-cancers-infection",
+  "parent": "blood-cancers",
+  "bn": "রক্তের ক্যান্সার: শ্বেতকণিকা কম ও সংক্রমণ",
+  "en": "Blood cancers: low white cells and infection",
+  "desc_bn": "কেমোথেরাপিতে শ্বেত কণিকা কেন কমে, জ্বর কেন জরুরি অবস্থা, হাত ধোয়া, নিরাপদ খাবার, অতিথি, আর কোন লক্ষণে সঙ্গে সঙ্গে হাসপাতাল।",
+  "desc_en": "Why chemotherapy lowers the white cells, why a fever is an emergency, hand washing, safe food, visitors, and the signs that mean the hospital at once.",
+  "card_bn": "কেমোথেরাপি চলছে আর রাতে জ্বর এসেছে? অতিথিদের নিয়ে চিন্তা?",
+  "card_en": "On chemotherapy, and a fever at night? Worried about visitors?",
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FDECEE\"/><ellipse cx=\"15\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#D93A4A\"/><ellipse cx=\"22.5\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#E8616D\"/><ellipse cx=\"30\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#D93A4A\"/><ellipse cx=\"37.5\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#E8616D\"/>"
+ },
+ {
   "id": "marrow",
   "coauthor": "mridha",
   "bn": "বোন ম্যারো পরীক্ষা",
