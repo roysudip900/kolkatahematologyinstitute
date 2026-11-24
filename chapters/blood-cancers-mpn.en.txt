@@ -1,0 +1,103 @@
+> Polycythaemia vera, essential thrombocythaemia (ET) and myelofibrosis are slow-growing blood cancers in which the bone marrow makes too many blood cells, or fills with fibres. The main danger in the first two is a blood clot, and treatment can lower that risk, so a high hemoglobin or platelet count that stays high needs a hematologist.
+
+His family said thick blood meant good health, and he was proud of it.
+
+He is fifty-eight, a supervisor at a steel plant in Durgapur. For a year he has had headaches, his face is red even in winter, and his skin itches after every bath. A report for his blood pressure showed a high hemoglobin. His wife's cousin said he should eat less meat and drink more water.
+
+In Siliguri, a woman of forty-five has had burning in her feet that comes and goes. Her blood test before a small operation showed a high platelet count. The surgeon postponed the operation and sent her to a hematologist.
+
+He wants to know why he cannot just drink more water. She wants to know whether a high platelet count is dangerous.
+
+# What these conditions are
+
+The bone marrow, the soft tissue inside the bones, makes red cells, white cells and platelets. In this group of conditions, called myeloproliferative neoplasms, or MPN, the marrow makes too many of them. They are slow-growing blood cancers.
+
+- Polycythaemia vera: too many red cells, and often more white cells and platelets too. The blood becomes thick.
+- Essential thrombocythaemia (ET): too many platelets. Platelets are sticky, and too many can clump and make clots, or sometimes cause bleeding.
+- Myelofibrosis: fibres build up inside the marrow like scar tissue, so it makes fewer blood cells. The spleen and liver may start making blood cells instead, and the spleen may swell.
+
+Many of these start with a change in a gene called JAK2, or in genes called CALR or MPL. The change happens in the marrow during life, and is not usually passed on in families.
+
+[figure: mpn-thick]
+
+# Why water would not fix his blood
+
+A high hemoglobin has more than one cause. Being short of water, smoking, heavy drinking and some lung or kidney illnesses can all raise it. In polycythaemia vera, the marrow itself makes too many red cells, so drinking water does not bring it down. Blood tests, including a test for the JAK2 change, show the cause. Sometimes a bone marrow test is needed too.
+
+Thick blood flows slowly, and that causes many of the signs. The biggest danger is a blood clot in a leg, the lungs, the heart or the brain.
+
+# Signs that need a hematologist
+
+These conditions often cause no signs at first, and are found on a blood test done for something else. When signs come, they can include:
+
+- headaches, dizziness, or blurred or double vision
+- a red face, or red, warm, burning hands and feet
+- itching all over, especially after a bath
+- a feeling of fullness or pain under the left ribs, from a swollen spleen
+- feeling full quickly when eating
+- tiredness, night sweats, or losing weight without trying
+- bruising or bleeding easily
+
+If the blood report does not show a cause, see a hematologist if you have these signs.
+
+[figure: mpn-cards]
+
+# What treatment can do
+
+The aim in polycythaemia vera and ET is to lower the counts and the risk of clots. Treatment can include:
+
+- taking blood off, called venesection, much like giving blood, in polycythaemia vera
+- aspirin, if the hematologist advises it, to lower the risk of clots
+- medicines that bring the counts down, such as hydroxyurea (also called hydroxycarbamide), anagrelide for platelets, and interferon, including newer forms such as ropeginterferon
+- ruxolitinib, a newer targeted medicine, when other treatment has not worked
+
+Some younger people with ET who have no signs and a safe platelet count are watched with regular check-ups.
+
+In myelofibrosis, people without signs are often checked regularly first. Others may need blood transfusions for anaemia, and newer targeted medicines such as ruxolitinib, fedratinib and pacritinib. Some people have a stem cell or bone marrow transplant, but it needs a donor and carries risks, such as infections and the donor cells attacking the body, so it is not suitable for everyone.
+
+These conditions grow slowly. Treatment aims to prevent symptoms and problems such as clots. Some can, over time, turn into myelofibrosis or acute leukaemia, so regular check-ups continue. Do not start or stop aspirin or any other medicine because of a blood report. Show the report to the hematologist first.
+
+# How the stories go on
+
+The supervisor's tests show polycythaemia vera. He has venesection at the hospital, and the hematologist plans his medicines. He gives up smoking, and his headaches ease.
+
+The woman's tests show ET. The hematologist plans her treatment and talks to her surgeon about the operation. She learns which signs mean the hospital.
+
+# Go to a hospital the same day if
+
+- pain, swelling, redness or warmth in one leg
+- sudden breathlessness, chest pain, or coughing up blood
+- a face that droops, an arm or leg that goes weak, or speech that is slurred, which may be a stroke
+- bleeding that does not stop
+
+# Take these questions to your doctor
+
+A hematologist leads the care of these conditions. Bring your reports and ask:
+
+- Which condition is it, and is there a JAK2 change?
+- What is my risk of a clot, and how can we lower it?
+- Do I need venesection or medicine, or check-ups first?
+- Should I take aspirin?
+- How often will I need check-ups and blood tests?
+- What should I tell my surgeon or dentist before an operation?
+
+# Common questions
+
+## Is a high hemoglobin a good sign of strong blood?
+
+Not when it stays high. It makes the blood thick and raises the risk of clots, so a high hemoglobin that stays high needs a doctor to find the cause.
+
+## Are these conditions cancer?
+
+Yes, they are slow-growing blood cancers of the bone marrow. Treatment and regular check-ups aim to prevent clots and other problems.
+
+## Why do I need check-ups if I feel well?
+
+The counts can change slowly, and some of these conditions can turn into myelofibrosis or acute leukaemia over time. Regular blood tests let the hematologist change the treatment early.
+
+# Sources
+
+- NHS: Erythrocytosis (polycythaemia) | https://www.nhs.uk/conditions/erythrocytosis/
+- National Cancer Institute: Chronic myeloproliferative neoplasms treatment | https://www.cancer.gov/types/myeloproliferative/patient/chronic-treatment-pdq
+- National Cancer Institute: Drugs approved for myeloproliferative neoplasms or myelodysplastic syndromes | https://www.cancer.gov/about-cancer/treatment/drugs/myeloproliferative-neoplasms
+- NHS: Complications of a stem cell or bone marrow transplant | https://www.nhs.uk/tests-and-treatments/stem-cell-or-bone-marrow-transplants/complications/
