@@ -57,7 +57,11 @@ Most clots are treated with blood-thinning medicines, called anticoagulants. The
 - Tablets: the newer ones, rivaroxaban, apixaban, dabigatran and edoxaban, and the older one, warfarin.
 - Injections: heparin, often used first in hospital and in pregnancy, because warfarin and the newer tablets are not used in pregnancy.
 
-Treatment usually lasts at least three months, sometimes longer, and for some people for life, depending on the cause. The doctor decides which medicine, how much and for how long.
+The newer tablets are usually preferred over warfarin. They may not suit people with serious kidney or liver disease or some other conditions, so the doctor chooses.
+
+Many people with a DVT without complications, or a small PE at low risk, can be treated at home rather than in hospital, if they have support at home and can get their medicines. Others need a hospital stay.
+
+The first part of treatment usually lasts three to six months. Then the doctor decides whether to stop or continue. When the clot followed a short-term cause, such as an operation or an injury, the blood thinner is usually stopped. When there was no clear cause, or the cause continues, many people keep taking it for the long term, with regular check-ups to weigh the benefit against the risk of bleeding. The doctor decides which medicine, how much and for how long.
 
 ## Never stop a blood thinner on your own
 
@@ -66,14 +70,16 @@ Stopping too early can let the clot grow or a new one form. Only stop on the adv
 ## Living with a blood thinner
 
 - Ask your doctor or pharmacist before taking any other medicine, remedy or supplement, including medicines bought from a shop and herbal remedies. Some antibiotics, painkillers and other medicines change how blood thinners work.
-- For pain, ask first. Ibuprofen and aspirin add to the risk of bleeding.
+- For pain, ask first. Ibuprofen and aspirin add to the risk of bleeding. If you already take aspirin for your heart, the doctor may decide to pause it while you take a blood thinner. Do not stop it yourself.
 - On warfarin, you will have regular blood tests to check how fast your blood clots, and the doctor adjusts the medicine. Keep the amount of green leafy vegetables you eat steady from week to week, and avoid large amounts of alcohol.
 - Use a soft toothbrush and take care when shaving, gardening or playing sport, to avoid cuts.
 - If you are pregnant or planning a baby, talk to the doctor first, because most blood thinners are not suitable in pregnancy.
 
 ## Other treatments
 
-For a large clot causing serious problems, such as a large PE, doctors may give a medicine that dissolves the clot, given in hospital, or remove the clot through a thin tube. People who cannot take blood thinners may need a small filter placed in a large vein, which catches clots before they reach the lungs.
+Most DVTs need a blood thinner alone. For a PE that strains the heart and drops the blood pressure, doctors give a medicine that dissolves the clot, in hospital, along with the blood thinner. In a few cases they remove or break up the clot through a thin tube. A small filter placed in a large vein, which catches clots before they reach the lungs, is used only for people who cannot take blood thinners, and is usually removed when they can.
+
+Compression stockings are not needed by everyone after a DVT, but they may ease swelling and pain in some people. Some people have pain and swelling in the leg that lasts long after a DVT, and a few have lasting breathlessness after a PE. Tell the doctor if this happens.
 
 ## Getting better and preventing another clot
 
@@ -138,4 +144,4 @@ No. They slow down how the blood clots, which is why bleeding is the main side e
 - NHS: Anticoagulant medicines | https://www.nhs.uk/medicines/anticoagulants/
 - NHS: Things to consider when taking anticoagulants | https://www.nhs.uk/medicines/anticoagulants/considerations/
 - NHS: Side effects of anticoagulants | https://www.nhs.uk/medicines/anticoagulants/side-effects/
-- National Heart, Lung, and Blood Institute: Venous thromboembolism, treatment | https://www.nhlbi.nih.gov/health/venous-thromboembolism/treatment
+- American Society of Hematology: 2020 guidelines for treatment of deep vein thrombosis and pulmonary embolism | https://doi.org/10.1182/bloodadvances.2020001830
