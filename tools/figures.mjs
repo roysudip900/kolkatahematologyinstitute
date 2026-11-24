@@ -797,6 +797,34 @@ const FIG = {
         body),
     };
   },
+  // Haemophilia: two small cuts side by side. Left, clotting factor is there: threads cross the cut and the drops stop.
+  // Right, the factor is missing: no threads form and drops keep falling. No faces, no numbers.
+  'haemophilia-clot'(l) {
+    const t = l === 'bn'
+      ? { a: 'ফ্যাক্টর আছে: জমাট বাঁধে', b: 'ফ্যাক্টর কম: রক্ত পড়তেই থাকে',
+          cap: 'জমাট বাঁধার ফ্যাক্টর থাকলে কাটা জায়গায় সুতোর মতো জাল তৈরি হয়ে রক্ত থামে। হিমোফিলিয়ায় ফ্যাক্টর কম থাকে, তাই রক্ত পড়া অনেকক্ষণ চলে।' }
+      : { a: 'factor present: a clot forms', b: 'factor missing: bleeding goes on',
+          cap: 'With clotting factor, threads form across a cut and the bleeding stops. In haemophilia the factor is low, so bleeding goes on for longer.' };
+    const skin = (x) => `<rect x="${x}" y="60" width="150" height="34" rx="8" fill="#f3d9c4" stroke="#c99f84" stroke-width="1.5"/><path d="M${x + 55} 60l12 34M${x + 70} 60l12 34" stroke="${C.red}" stroke-width="3"/>`;
+    let body = skin(14) + skin(196);
+    body += T(89, 40, t.a, { a: 'middle', size: 12, fill: C.teal2, w: 700 }) + T(271, 40, t.b, { a: 'middle', size: 12, fill: C.red, w: 700 });
+    body += '<g class="hc-net">';
+    for (let i = 0; i < 5; i++) body += `<path d="M${60 + i * 6} 62L${88 - i * 4} 92" stroke="#b07a2a" stroke-width="1.6"/>`;
+    body += '</g>';
+    body += `<path class="hc-d1" d="M82 98c-4 6-6 9-6 12a6 6 0 0 0 12 0c0-3-2-6-6-12z" fill="${C.red}"/>`;
+    [0, 1, 2].forEach(i => {
+      body += `<path class="hc-d" style="animation-delay:${i * 0.8}s" d="M264 98c-4 6-6 9-6 12a6 6 0 0 0 12 0c0-3-2-6-6-12z" fill="${C.red}"/>`;
+    });
+    return {
+      cap: t.cap,
+      svg: svg('hc', 360, 190, t.cap,
+        '.hc-net{animation:hcn 4s ease-in-out infinite}@keyframes hcn{0%,20%{opacity:0}50%,100%{opacity:1}}' +
+        '.hc-d1{animation:hcd1 4s ease-in infinite}@keyframes hcd1{0%{transform:translateY(0);opacity:1}40%{transform:translateY(30px);opacity:0}100%{opacity:0}}' +
+        '.hc-d{animation:hcd 2.4s ease-in infinite}@keyframes hcd{0%{transform:translateY(0);opacity:1}100%{transform:translateY(70px);opacity:0}}' +
+        '@media (prefers-reduced-motion:reduce){.hc-net,.hc-d1,.hc-d{animation:none}}',
+        body),
+    };
+  },
   // Anaemia, iron: two tanks of body iron. Tablets drip iron into both. In the first, a leak (heavy periods or
   // bleeding) lets it out, so the level hardly rises; in the second the leak is treated and the level slowly rises.
   'iron-tank'(l) {
@@ -1796,6 +1824,30 @@ const TRY = {
             ['three', 'All three counts low must mean cancer', 'True?', 'A report shows that the counts are low, not why. The hematologist may need a marrow test to find the cause.'],
             ['hand', 'A transplant is the only treatment', 'True?', 'Medicines that calm the defence system are the other main treatment.']],
           cap: 'Do not start or stop any medicine because of a report.' };
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
+      t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
+        `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
+        `<span class="fc back"><span class="k">${esc(t.sign)}</span><span>${esc(back)}</span></span></button>`).join('') + '</div>';
+    return { cap: t.cap, cls: 'flipset', html };
+  },
+  // Haemophilia: three beliefs; each card turns over to what the chapter says.
+  'haemophilia-cards'(l) {
+    const ic = {
+      girl: `<circle cx="20" cy="12" r="7" fill="${C.teal}"/><path d="M9 36l5-15h12l5 15z" fill="${C.teal}"/>`,
+      ball: `<circle cx="20" cy="20" r="13" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><path d="M8 18c8 3 16 3 24 0M10 26c7 2 13 2 20 0" stroke="${C.teal2}" stroke-width="1.6" fill="none"/>`,
+      vial: `<rect x="14" y="8" width="12" height="26" rx="3" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><rect x="14" y="20" width="12" height="14" rx="3" fill="${C.red}" opacity=".7"/>`,
+    };
+    const t = l === 'bn'
+      ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
+          c: [['girl', 'মেয়েদের কখনো কিছু হয় না', 'সত্যি?', 'যে মেয়েরা জিনটা বহন করে, তাদেরও লক্ষণ হতে পারে, তবে কম আর হালকা।'],
+            ['ball', 'হিমোফিলিয়া থাকলে খেলাধুলো বারণ', 'সত্যি?', 'সাঁতার, সাইকেল, ব্যাডমিন্টনের মতো খেলা ভালো। ধাক্কাধাক্কির খেলার আগে টিমকে জিজ্ঞেস করুন।'],
+            ['vial', 'ফ্যাক্টর নিলেই রক্তবাহিত সংক্রমণ হবে', 'সত্যি?', 'এখনকার ফ্যাক্টর খুবই নিরাপদ, আর সংক্রমণের ঝুঁকি খুব কম।']],
+          cap: 'হিমোফিলিয়া টিমের ফোন নম্বর সবসময় সঙ্গে রাখুন।' }
+      : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
+          c: [['girl', 'Girls never have any problem', 'True?', 'Girls who carry the gene can have symptoms too, though less often and milder.'],
+            ['ball', 'A child with haemophilia must not play sport', 'True?', 'Swimming, cycling and badminton are encouraged. Ask the team before contact sports.'],
+            ['vial', 'Clotting factor always carries a risk of infection', 'True?', 'The factor used today is very safe, and the risk of infection is very low.']],
+          cap: 'Keep the haemophilia team\'s number with you at all times.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
       t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
         `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
