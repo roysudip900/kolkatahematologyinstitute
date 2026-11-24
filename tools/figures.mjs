@@ -1839,14 +1839,14 @@ const TRY = {
     };
     const t = l === 'bn'
       ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
-          c: [['girl', 'মেয়েদের কখনো কিছু হয় না', 'সত্যি?', 'যে মেয়েরা জিনটা বহন করে, তাদেরও লক্ষণ হতে পারে, তবে কম আর হালকা।'],
+          c: [['girl', 'মেয়েদের কখনো কিছু হয় না', 'সত্যি?', 'যে মেয়েরা জিনটা বহন করেন, তাঁদেরও লক্ষণ হতে পারে, তবে কম আর হালকা।'],
             ['ball', 'হিমোফিলিয়া থাকলে খেলাধুলো বারণ', 'সত্যি?', 'সাঁতার, সাইকেল, ব্যাডমিন্টনের মতো খেলা ভালো। ধাক্কাধাক্কির খেলার আগে টিমকে জিজ্ঞেস করুন।'],
             ['vial', 'ফ্যাক্টর নিলেই রক্তবাহিত সংক্রমণ হবে', 'সত্যি?', 'এখনকার ফ্যাক্টর খুবই নিরাপদ, আর সংক্রমণের ঝুঁকি খুব কম।']],
           cap: 'হিমোফিলিয়া টিমের ফোন নম্বর সবসময় সঙ্গে রাখুন।' }
       : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
           c: [['girl', 'Girls never have any problem', 'True?', 'Girls who carry the gene can have symptoms too, though less often and milder.'],
             ['ball', 'A child with haemophilia must not play sport', 'True?', 'Swimming, cycling and badminton are encouraged. Ask the team before contact sports.'],
-            ['vial', 'Clotting factor always carries a risk of infection', 'True?', 'The factor used today is very safe, and the risk of infection is very low.']],
+            ['vial', 'Clotting factor will give you an infection from blood', 'True?', 'The factor used today is very safe, and the risk of infection is very low.']],
           cap: 'Keep the haemophilia team\'s number with you at all times.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
       t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
