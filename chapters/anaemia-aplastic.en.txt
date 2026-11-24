@@ -41,8 +41,8 @@ The most common cause is the body's own defence system attacking the stem cells 
 Treatment may include:
 
 - blood and platelet transfusions, to ease the symptoms
-- medicines that stop the defence system from destroying the stem cells, such as antithymocyte globulin (ATG) and ciclosporin
-- a newer medicine, eltrombopag, which helps the marrow make blood cells, sometimes given with them
+- medicines that aim to stop the defence system from destroying the stem cells, such as antithymocyte globulin (ATG) and ciclosporin
+- a newer medicine, eltrombopag, which can help the marrow make blood cells, sometimes given with them
 - a blood or bone marrow transplant, which may cure aplastic anaemia in some people, but needs a donor and carries risks, such as infections and the donor cells attacking the body
 - staying away from any toxin or chemical that may have caused it
 
@@ -83,7 +83,7 @@ Not for aplastic anaemia, because the marrow itself cannot make enough cells. Do
 
 ## Can it be cured?
 
-A transplant may cure it in some people. Medicines that calm the defence system are the other main treatment. The hematologist explains which is right for you.
+A transplant may cure it in some people, but it needs a donor and carries serious risks. Medicines that calm the defence system are the other main treatment. The hematologist explains which is right for you.
 
 # Sources
 
