@@ -775,7 +775,7 @@ const FIG = {
   'aplastic-marrow'(l) {
     const t = l === 'bn'
       ? { a: 'সুস্থ মজ্জা', b: 'অ্যাপ্লাস্টিক অ্যানিমিয়া', a2: 'কচি কণিকায় ভরা', b2: 'কোষ খুব কম',
-          cap: 'অ্যাপ্লাস্টিক অ্যানিমিয়ায় মজ্জার স্টেম সেল ক্ষতিগ্রস্ত হয়, তাই লোহিত কণিকা, শ্বেত কণিকা আর প্লেটলেট তিনটেই কম তৈরি হয়। ম্যারো পরীক্ষায় এটা দেখা যায়।' }
+          cap: 'অ্যাপ্লাস্টিক অ্যানিমিয়ায় মজ্জার স্টেম সেল নষ্ট হয়ে যায়, তাই লোহিত কণিকা, শ্বেত কণিকা আর প্লেটলেট তিনটেই কম তৈরি হয়। ম্যারো পরীক্ষায় এটা দেখা যায়।' }
       : { a: 'healthy marrow', b: 'aplastic anaemia', a2: 'full of young cells', b2: 'very few cells',
           cap: 'In aplastic anaemia the stem cells in the marrow are damaged, so too few red cells, white cells and platelets are made. The marrow test shows this.' };
     const kinds = [C.red, '#7A5AD1', '#b9a7e8'];
@@ -1788,12 +1788,12 @@ const TRY = {
     const t = l === 'bn'
       ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
           c: [['pill', 'অ্যানিমিয়া মানেই আয়রন ট্যাবলেট', 'সত্যি?', 'অ্যাপ্লাস্টিক অ্যানিমিয়ায় মজ্জা নিজেই কণিকা তৈরি করতে পারে না, তাই আয়রনে সারে না।'],
-            ['three', 'তিনটে কণিকাই কম মানে নিশ্চয়ই ক্যান্সার', 'সত্যি?', 'অ্যাপ্লাস্টিক অ্যানিমিয়া ক্যান্সার নয়। কারণ জানতে ম্যারো পরীক্ষা লাগে।'],
+            ['three', 'তিনটে কণিকাই কম মানে নিশ্চয়ই ক্যান্সার', 'সত্যি?', 'রিপোর্টে শুধু দেখা যায় কণিকা কম, কেন কম তা নয়। কারণ জানতে হেমাটোলজিস্ট ম্যারো পরীক্ষা করাতে পারেন।'],
             ['hand', 'ট্রান্সপ্লান্ট ছাড়া কোনো চিকিৎসা নেই', 'সত্যি?', 'প্রতিরোধ ক্ষমতা শান্ত করার ওষুধ আরেকটা প্রধান চিকিৎসা।']],
           cap: 'রিপোর্ট দেখে নিজে কোনো ওষুধ শুরু বা বন্ধ করবেন না।' }
       : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
           c: [['pill', 'Anaemia always means iron tablets', 'True?', 'In aplastic anaemia the marrow itself cannot make enough cells, so iron cannot fix it.'],
-            ['three', 'All three counts low must mean cancer', 'True?', 'Aplastic anaemia is not a cancer. The marrow test is needed to find the cause.'],
+            ['three', 'All three counts low must mean cancer', 'True?', 'A report shows that the counts are low, not why. The hematologist may need a marrow test to find the cause.'],
             ['hand', 'A transplant is the only treatment', 'True?', 'Medicines that calm the defence system are the other main treatment.']],
           cap: 'Do not start or stop any medicine because of a report.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
