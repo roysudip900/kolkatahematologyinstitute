@@ -1,4 +1,4 @@
-> A bone marrow or stem cell transplant replaces unhealthy blood-forming cells with healthy ones, from the person's own body or from a donor. It can cure or control some blood cancers, thalassemia, sickle cell disease and aplastic anaemia, but it is a long and demanding treatment with serious risks, so the decision is made with a hematologist and a transplant team, and recovery can take up to a year.
+> A bone marrow or stem cell transplant replaces unhealthy blood-forming cells with healthy ones, from the person's own body or from a donor. It can cure or control some blood cancers, thalassemia, sickle cell disease and aplastic anaemia, but it is a long and demanding treatment with serious risks, so the decision is made with a hematologist and a transplant team.
 
 His sister sat very still for the blood test, because someone told her she might be able to save her brother.
 
@@ -15,7 +15,7 @@ Stem cells are young cells in the bone marrow, inside the bones, that grow into 
 - In an autologous transplant, the person's own stem cells are collected and given back later.
 - In an allogeneic transplant, the stem cells come from a donor.
 
-Before the new cells go in, chemotherapy or radiotherapy destroys the unhealthy blood cells and makes space. The new stem cells then travel to the bone marrow and begin making healthy blood cells.
+Before the new cells go in, chemotherapy or radiotherapy destroys the unhealthy blood cells and weakens the immune system, so the body accepts the new cells. The new stem cells then travel to the bone marrow and begin making healthy blood cells.
 
 [figure: transplant-steps]
 
@@ -52,7 +52,7 @@ For an autologous transplant, the person's own stem cells are collected in the s
 
 ## Conditioning
 
-Chemotherapy or radiotherapy, called conditioning, destroys the unhealthy blood cells. It usually lasts one to ten days, sometimes longer. It also weakens the body's defences, so the person stays in a room of their own, with doors and windows closed, and everyone who comes in wears a mask, gloves and a gown.
+Chemotherapy or radiotherapy, called conditioning, destroys the unhealthy blood cells. It usually lasts several days, sometimes longer. It also weakens the body's defences, so the person stays in a room of their own, with doors and windows closed, and everyone who comes in wears a mask, gloves and a gown.
 
 ## The transplant day
 
