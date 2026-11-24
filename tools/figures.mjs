@@ -770,6 +770,33 @@ const FIG = {
         body),
     };
   },
+  // Anaemia, aplastic: two pieces of marrow side by side. Left, a healthy marrow packed with young cells of three kinds.
+  // Right, aplastic anaemia: the same space with only a few cells, which slowly fade and return. No numbers.
+  'aplastic-marrow'(l) {
+    const t = l === 'bn'
+      ? { a: 'সুস্থ মজ্জা', b: 'অ্যাপ্লাস্টিক অ্যানিমিয়া', a2: 'কচি কণিকায় ভরা', b2: 'কোষ খুব কম',
+          cap: 'অ্যাপ্লাস্টিক অ্যানিমিয়ায় মজ্জার স্টেম সেল ক্ষতিগ্রস্ত হয়, তাই লোহিত কণিকা, শ্বেত কণিকা আর প্লেটলেট তিনটেই কম তৈরি হয়। ম্যারো পরীক্ষায় এটা দেখা যায়।' }
+      : { a: 'healthy marrow', b: 'aplastic anaemia', a2: 'full of young cells', b2: 'very few cells',
+          cap: 'In aplastic anaemia the stem cells in the marrow are damaged, so too few red cells, white cells and platelets are made. The marrow test shows this.' };
+    const kinds = [C.red, '#7A5AD1', '#b9a7e8'];
+    let body = `<rect x="14" y="40" width="156" height="150" rx="18" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/>` +
+      `<rect x="190" y="40" width="156" height="150" rx="18" fill="#fbf6ee" stroke="${C.mintLine}" stroke-width="2"/>`;
+    body += T(92, 30, t.a, { a: 'middle', size: 12.5, fill: C.teal2, w: 700 }) + T(268, 30, t.b, { a: 'middle', size: 12.5, fill: C.red, w: 700 });
+    for (let r = 0; r < 5; r++) for (let c = 0; c < 5; c++) {
+      body += `<circle cx="${34 + c * 29 + (r % 2) * 6}" cy="${60 + r * 28}" r="7" fill="${kinds[(r + c) % 3]}" opacity=".85"/>`;
+    }
+    [[220, 80], [300, 120], [250, 160]].forEach(([x, y], i) => {
+      body += `<circle class="ap-c" style="animation-delay:${i * 1.2}s" cx="${x}" cy="${y}" r="7" fill="${kinds[i]}"/>`;
+    });
+    body += T(92, 208, t.a2, { a: 'middle', size: 12, fill: C.muted, w: 600 }) + T(268, 208, t.b2, { a: 'middle', size: 12, fill: C.muted, w: 600 });
+    return {
+      cap: t.cap,
+      svg: svg('ap', 360, 220, t.cap,
+        '.ap-c{animation:apc 4s ease-in-out infinite}@keyframes apc{0%,100%{opacity:.9}50%{opacity:.2}}' +
+        '@media (prefers-reduced-motion:reduce){.ap-c{animation:none}}',
+        body),
+    };
+  },
   // Anaemia, iron: two tanks of body iron. Tablets drip iron into both. In the first, a leak (heavy periods or
   // bleeding) lets it out, so the level hardly rises; in the second the leak is treated and the level slowly rises.
   'iron-tank'(l) {
@@ -1745,6 +1772,30 @@ const TRY = {
             ['therm', 'A fever tablet and rest are enough', 'True?', 'Ask the team before taking any fever medicine, and call the hospital.'],
             ['door', 'No one should visit during treatment', 'True?', 'Visitors who are well and wash their hands can come. Anyone with a cold can phone instead.']],
           cap: 'Keep a thermometer and the hospital number close.' };
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
+      t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
+        `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
+        `<span class="fc back"><span class="k">${esc(t.sign)}</span><span>${esc(back)}</span></span></button>`).join('') + '</div>';
+    return { cap: t.cap, cls: 'flipset', html };
+  },
+  // Anaemia, aplastic: three beliefs; each card turns over to what the chapter says.
+  'aplastic-cards'(l) {
+    const ic = {
+      pill: `<rect x="8" y="14" width="24" height="12" rx="6" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><path d="M20 14v12" stroke="${C.teal2}" stroke-width="2"/>`,
+      three: `<circle cx="12" cy="20" r="5" fill="${C.red}"/><circle cx="20" cy="20" r="5" fill="#7A5AD1"/><circle cx="28" cy="20" r="5" fill="#b9a7e8"/>`,
+      hand: `<path d="M12 30V17a3 3 0 0 1 6 0v-5a3 3 0 0 1 6 0v6a3 3 0 0 1 6 0v12c0 4-4 6-9 6s-9-2-9-6z" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/>`,
+    };
+    const t = l === 'bn'
+      ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
+          c: [['pill', 'অ্যানিমিয়া মানেই আয়রন ট্যাবলেট', 'সত্যি?', 'অ্যাপ্লাস্টিক অ্যানিমিয়ায় মজ্জা নিজেই কণিকা তৈরি করতে পারে না, তাই আয়রনে সারে না।'],
+            ['three', 'তিনটে কণিকাই কম মানে নিশ্চয়ই ক্যান্সার', 'সত্যি?', 'অ্যাপ্লাস্টিক অ্যানিমিয়া ক্যান্সার নয়। কারণ জানতে ম্যারো পরীক্ষা লাগে।'],
+            ['hand', 'ট্রান্সপ্লান্ট ছাড়া কোনো চিকিৎসা নেই', 'সত্যি?', 'প্রতিরোধ ক্ষমতা শান্ত করার ওষুধ আরেকটা প্রধান চিকিৎসা।']],
+          cap: 'রিপোর্ট দেখে নিজে কোনো ওষুধ শুরু বা বন্ধ করবেন না।' }
+      : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
+          c: [['pill', 'Anaemia always means iron tablets', 'True?', 'In aplastic anaemia the marrow itself cannot make enough cells, so iron cannot fix it.'],
+            ['three', 'All three counts low must mean cancer', 'True?', 'Aplastic anaemia is not a cancer. The marrow test is needed to find the cause.'],
+            ['hand', 'A transplant is the only treatment', 'True?', 'Medicines that calm the defence system are the other main treatment.']],
+          cap: 'Do not start or stop any medicine because of a report.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
       t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
         `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
