@@ -825,6 +825,30 @@ const FIG = {
         body),
     };
   },
+  // Clots: a simple outline of a leg and the lungs joined by a vein. A small clot sits in the calf; a piece breaks off and
+  // travels up the vein to the lungs, where a red mark lights up. No faces, no numbers.
+  'clot-travel'(l) {
+    const t = l === 'bn'
+      ? { dvt: 'পায়ে জমাট (ডিভিটি)', pe: 'ফুসফুসে পৌঁছলে (পিই)',
+          cap: 'পায়ের গভীরের শিরায় জমাট বাঁধে (ডিভিটি)। তার একটা টুকরো শিরা দিয়ে ফুসফুসে চলে গেলে হয় পালমোনারি এমবোলিজম, যাতে সঙ্গে সঙ্গে হাসপাতাল দরকার।' }
+      : { dvt: 'clot in the leg (DVT)', pe: 'reaches the lungs (PE)',
+          cap: 'A clot forms in a deep vein of the leg (DVT). If a piece travels up the vein to the lungs, it becomes a pulmonary embolism, which needs a hospital at once.' };
+    let body = `<path d="M120 60c-30 0-44 20-44 52s10 50 30 50c14 0 18-12 18-30V72c0-8-2-12-4-12z" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/>` +
+      `<path d="M140 60c30 0 44 20 44 52s-10 50-30 50c-14 0-18-12-18-30V72c0-8 2-12 4-12z" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/>` +
+      `<g class="ct-hit"><circle cx="160" cy="112" r="9" fill="${C.red}" opacity=".85"/></g>`;
+    body += `<path d="M252 196c-6 30-8 60-6 90" stroke="#f3d9c4" stroke-width="34" stroke-linecap="round" fill="none"/>` +
+      `<path d="M252 300V196C252 150 232 120 196 112" stroke="${C.rose}" stroke-width="5" fill="none"/>` +
+      `<ellipse cx="252" cy="262" rx="7" ry="12" fill="#8b1e2d"/>`;
+    body += `<circle r="5" fill="#8b1e2d"><animateMotion dur="4s" repeatCount="indefinite" path="M252 250V196C252 150 232 120 166 112"/></circle>`;
+    body += T(226, 266, t.dvt, { a: 'end', size: 12, fill: C.red, w: 700 }) + T(130, 186, t.pe, { a: 'middle', size: 12, fill: C.red, w: 700 });
+    return {
+      cap: t.cap,
+      svg: svg('ct', 360, 320, t.cap,
+        '.ct-hit{animation:cth 4s linear infinite}@keyframes cth{0%,80%{opacity:.15}90%,100%{opacity:1}}' +
+        '@media (prefers-reduced-motion:reduce){.ct-hit{animation:none}}',
+        body),
+    };
+  },
   // Anaemia, iron: two tanks of body iron. Tablets drip iron into both. In the first, a leak (heavy periods or
   // bleeding) lets it out, so the level hardly rises; in the second the leak is treated and the level slowly rises.
   'iron-tank'(l) {
@@ -1848,6 +1872,30 @@ const TRY = {
             ['ball', 'A child with haemophilia must not play sport', 'True?', 'Swimming, cycling and badminton are encouraged. Ask the team before contact sports.'],
             ['vial', 'Clotting factor will give you an infection from blood', 'True?', 'The factor used today is very safe, and the risk of infection is very low.']],
           cap: 'Keep the haemophilia team\'s number with you at all times.' };
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
+      t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
+        `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
+        `<span class="fc back"><span class="k">${esc(t.sign)}</span><span>${esc(back)}</span></span></button>`).join('') + '</div>';
+    return { cap: t.cap, cls: 'flipset', html };
+  },
+  // Clots: three beliefs; each card turns over to what the chapter says.
+  'clot-cards'(l) {
+    const ic = {
+      leg: `<path d="M16 4h8v18l6 10H12l4-10z" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><circle cx="20" cy="20" r="3.5" fill="${C.red}"/>`,
+      pill: `<rect x="8" y="14" width="24" height="12" rx="6" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><path d="M20 14v12" stroke="${C.teal2}" stroke-width="2"/>`,
+      drop: `<path d="M20 6c-6 9-10 15-10 20a10 10 0 0 0 20 0c0-5-4-11-10-20z" fill="${C.red}" opacity=".8"/>`,
+    };
+    const t = l === 'bn'
+      ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
+          c: [['leg', 'বাচ্চা হওয়ার পর পা ফোলা নিয়ে ভাবার কিছু নেই', 'সত্যি?', 'এক পায়ে ব্যথা আর ফোলা জমাট হতে পারে। তাড়াতাড়ি ডাক্তার দেখান।'],
+            ['pill', 'শরীর ভালো লাগলে রক্ত পাতলা করার ওষুধ বন্ধ করা যায়', 'সত্যি?', 'শুধু ডাক্তারের পরামর্শেই বন্ধ করুন। তাড়াতাড়ি বন্ধ করলে আবার জমাট বাঁধতে পারে।'],
+            ['drop', 'রক্ত পাতলা করার ওষুধ রক্তকে জলের মতো করে দেয়', 'সত্যি?', 'এরা রক্ত জমাট বাঁধার গতি কমায়। তাই রক্ত পড়াই প্রধান পার্শ্বপ্রতিক্রিয়া।']],
+          cap: 'অন্য যেকোনো ওষুধ খাওয়ার আগে ডাক্তার বা ফার্মাসিস্টকে জিজ্ঞেস করুন।' }
+      : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
+          c: [['leg', 'A swollen leg after a baby is nothing to worry about', 'True?', 'Pain and swelling in one leg can be a clot. See a doctor soon.'],
+            ['pill', 'Feeling well means the blood thinner can stop', 'True?', 'Only stop on your doctor\'s advice. Stopping early can let a clot form again.'],
+            ['drop', 'Blood thinners make the blood watery', 'True?', 'They slow down clotting, which is why bleeding is the main side effect.']],
+          cap: 'Ask your doctor or pharmacist before taking any other medicine.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
       t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
         `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
