@@ -1881,7 +1881,7 @@ const TRY = {
   // Clots: three beliefs; each card turns over to what the chapter says.
   'clot-cards'(l) {
     const ic = {
-      leg: `<path d="M16 4h8v18l6 10H12l4-10z" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><circle cx="20" cy="20" r="3.5" fill="${C.red}"/>`,
+      leg: `<path d="M15 3h9v20c0 4 2 7 6 9v4H15c-2 0-3-2-3-4V12c0-5 1-9 3-9z" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><circle cx="19" cy="20" r="3.5" fill="${C.red}"/>`,
       pill: `<rect x="8" y="14" width="24" height="12" rx="6" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><path d="M20 14v12" stroke="${C.teal2}" stroke-width="2"/>`,
       drop: `<path d="M20 6c-6 9-10 15-10 20a10 10 0 0 0 20 0c0-5-4-11-10-20z" fill="${C.red}" opacity=".8"/>`,
     };
@@ -1889,7 +1889,7 @@ const TRY = {
       ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
           c: [['leg', 'বাচ্চা হওয়ার পর পা ফোলা নিয়ে ভাবার কিছু নেই', 'সত্যি?', 'এক পায়ে ব্যথা আর ফোলা জমাট হতে পারে। তাড়াতাড়ি ডাক্তার দেখান।'],
             ['pill', 'শরীর ভালো লাগলে রক্ত পাতলা করার ওষুধ বন্ধ করা যায়', 'সত্যি?', 'শুধু ডাক্তারের পরামর্শেই বন্ধ করুন। তাড়াতাড়ি বন্ধ করলে আবার জমাট বাঁধতে পারে।'],
-            ['drop', 'রক্ত পাতলা করার ওষুধ রক্তকে জলের মতো করে দেয়', 'সত্যি?', 'এরা রক্ত জমাট বাঁধার গতি কমায়। তাই রক্ত পড়াই প্রধান পার্শ্বপ্রতিক্রিয়া।']],
+            ['drop', 'রক্ত পাতলা করার ওষুধ রক্তকে জলের মতো করে দেয়', 'সত্যি?', 'এরা রক্ত জমাট বাঁধার গতি কমায়। তাই রক্ত পড়াই প্রধান সাইড এফেক্ট।']],
           cap: 'অন্য যেকোনো ওষুধ খাওয়ার আগে ডাক্তার বা ফার্মাসিস্টকে জিজ্ঞেস করুন।' }
       : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
           c: [['leg', 'A swollen leg after a baby is nothing to worry about', 'True?', 'Pain and swelling in one leg can be a clot. See a doctor soon.'],

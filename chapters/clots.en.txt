@@ -4,7 +4,7 @@ She thought the swelling came from standing in the kitchen.
 
 She is thirty-two and had her second baby by caesarean three weeks ago, in a nursing home in Kolkata. Her left calf has ached for two days, the leg is swollen and the skin looks darker. Her mother-in-law said every new mother's legs swell and rubbed it with warm oil.
 
-In Siliguri, a man of sixty-four had a clot in his lungs six months ago, after a long bus journey and a week in bed with fever. He has taken a blood thinner every day since. Now his gums bleed when he brushes, he feels well, and he wants to stop the tablets. His knee hurts too, and a neighbour has given him a painkiller.
+In Siliguri, a man of sixty-four had a clot in his lungs six months ago, after a long bus journey and a week in bed with fever. He has been on a blood thinner since. Now his gums bleed when he brushes, he feels well, and he wants to stop the tablets. His knee hurts too, and a neighbour has given him a painkiller.
 
 She wants to know whether a swollen leg after a baby is serious. He wants to know whether he can stop the tablets now.
 
@@ -27,7 +27,7 @@ A clot is more likely:
 - with age over sixty, extra weight, smoking, or being short of water
 - with cancer, heart failure, or a past clot
 - with the combined contraceptive pill or hormone treatment that contains oestrogen
-- when the blood clots more easily than usual, which can run in families
+- when the blood clots more easily than usual
 
 Sometimes a clot happens for no clear reason.
 
@@ -77,9 +77,9 @@ Stopping too early can let the clot grow or a new one form. Only stop on the adv
 
 ## Other treatments
 
-Most DVTs need a blood thinner alone. For a PE that strains the heart and drops the blood pressure, doctors give a medicine that dissolves the clot, in hospital, along with the blood thinner. In a few cases they remove or break up the clot through a thin tube. A small filter placed in a large vein, which catches clots before they reach the lungs, is used only for people who cannot take blood thinners, and is usually removed when they can.
+Most DVTs need a blood thinner alone. For a PE that strains the heart and drops the blood pressure, doctors give a medicine that dissolves the clot, in hospital, along with the blood thinner. In a few cases they break up the clot through a thin tube. A small filter placed in a large vein, which catches clots before they reach the lungs, is used only for people who cannot take blood thinners, and is usually removed when they can.
 
-Compression stockings are not needed by everyone after a DVT, but they may ease swelling and pain in some people. Some people have pain and swelling in the leg that lasts long after a DVT, and a few have lasting breathlessness after a PE. Tell the doctor if this happens.
+Compression stockings are not needed by everyone after a DVT, but they may ease swelling and pain in some people. Some people have pain and swelling in the leg that lasts long after a DVT, and a few develop long-term high pressure in the lung vessels after a PE, which causes breathlessness. Tell the doctor if this happens.
 
 ## Getting better and preventing another clot
 
@@ -96,7 +96,7 @@ Compression stockings are not needed by everyone after a DVT, but they may ease 
 
 Her husband takes her to the hospital that evening. A scan shows a clot in her leg, and she starts blood-thinning injections, which can be used while breastfeeding. Her mother-in-law now knows that a swollen, painful leg after a baby needs a doctor.
 
-The man shows his doctor his gums and the neighbour's painkiller. The doctor checks him, explains why stopping too early is risky, plans how long to continue, and gives him a soft toothbrush and a safer painkiller. He keeps taking his tablets.
+The man shows his doctor his gums and the neighbour's painkiller. The doctor checks him, explains why stopping too early is risky, plans how long to continue, and talks about a soft toothbrush and a safer painkiller. He keeps taking his tablets.
 
 # Go to a hospital now if
 
@@ -118,7 +118,7 @@ If you take a blood thinner, also go at once for:
 
 - Why did I get this clot, and do I need more tests?
 - Which blood thinner, and for how long?
-- What should I do if I forget to take it one day?
+- What should I do if I forget to take it?
 - Which painkillers and other medicines are safe for me?
 - What should I tell my dentist or surgeon?
 - How can I lower my risk on a long journey or during my next pregnancy?
