@@ -30,11 +30,11 @@ Under the Anemia Mukt Bharat programme, haemoglobin is tested at every pregnancy
 
 ## Treatment
 
-- Mild or moderate anaemia is treated with more iron and folic acid tablets. The haemoglobin is checked again after a month.
+- Mild or moderate anaemia is treated with a course of iron and folic acid tablets that the health worker or doctor gives. The haemoglobin is checked again after a month.
 - If the tablets upset the stomach, tell the ASHA, the nurse or the doctor. Do not just stop them. The doctor can give iron another way.
 - For moderate anaemia, especially if tablets cannot be taken, iron can be given through a drip into a vein, after the first three months of pregnancy.
 - Severe anaemia needs a hospital, for tests, iron through a drip or a blood transfusion.
-- If the haemoglobin does not rise even after taking iron as advised, the woman is sent to a bigger hospital to look for another cause. More of the same iron will not fix it.
+- If the haemoglobin does not rise even after taking iron as advised, the woman is sent to a bigger hospital to look for another cause.
 
 The Anaemia chapter on this site explains iron and B12 in more detail.
 
@@ -44,7 +44,7 @@ Platelets help the blood clot. In pregnancy, the platelet count is often a littl
 
 Sometimes a low count has another cause that needs care:
 
-- pre-eclampsia, a condition with high blood pressure in pregnancy, and a severe form of it called HELLP syndrome
+- pre-eclampsia, a condition with high blood pressure in pregnancy, and a related condition called HELLP syndrome
 - immune thrombocytopenia (ITP), which can get worse during pregnancy
 - some rarer blood conditions
 
@@ -91,20 +91,20 @@ The teacher's hematologist explains that a slightly low count in pregnancy is co
 
 Go at once, and do not drive yourself, if you are pregnant or have had a baby in the last few weeks and you have:
 
-- heavy bleeding from the vagina
+- bleeding from the vagina
 - sudden breathlessness, chest pain, or coughing up blood
 - pain and swelling in one leg
 - a severe headache that does not go away, blurred vision or flashing lights, pain below the ribs, or sudden swelling of the face, hands or feet
 - bleeding from the gums or nose that does not stop, or many bruises without injury
 - feeling very weak, faint, or a racing heartbeat
 - a baby that moves less than usual, or fluid leaking
+- thoughts of harming yourself or the baby
 
 # Take these questions to your doctor
 
 - Is my haemoglobin adequate for this stage of pregnancy?
 - Which iron and folic acid tablets should I take, and for how long?
 - What should I do if the tablets upset my stomach?
-- Do I need iron through a drip?
 - Is my platelet count a worry, and will it be checked again?
 - Should my husband and I have the carrier test?
 - Do I have a higher chance of a clot, and do I need anything to lower it?

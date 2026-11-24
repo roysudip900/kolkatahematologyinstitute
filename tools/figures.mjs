@@ -889,10 +889,10 @@ const FIG = {
       `<rect x="120" y="128" width="210" height="14" rx="7" fill="${C.mint}" stroke="${C.mintLine}" stroke-width="1.5"/>` +
       `<rect x="38" y="132" width="40" height="30" rx="6" fill="${C.amberBg}" stroke="${C.amber}" stroke-width="1.5"/>`;
     body += [70, 160, 240, 300].map((x, i) => `<g class="pc-d pc-d${i}">${drop(x)}<circle cx="${x}" cy="110" r="7" fill="#fff" stroke="${C.teal}" stroke-width="3"/></g>`).join('');
-    body += T(30, 30, t.hb, { a: 'start', size: 12, fill: C.red, w: 700 }) +
-      T(30, 182, t.carrier, { a: 'start', size: 12, fill: C.amber, w: 700 }) +
-      T(330, 160, t.iron, { a: 'end', size: 11, fill: C.teal, w: 700 }) +
-      T(30, 100, t.start, { a: 'start', size: 11, fill: C.muted }) + T(330, 100, t.birth, { a: 'end', size: 11, fill: C.muted });
+    body += T(30, 30, t.hb, { a: 'start', size: 12.5, fill: C.red, w: 700 }) +
+      T(30, 182, t.carrier, { a: 'start', size: 12.5, fill: C.amber, w: 700 }) +
+      T(330, 160, t.iron, { a: 'end', size: 12.5, fill: C.teal, w: 700 }) +
+      T(30, 100, t.start, { a: 'start', size: 12.5, fill: C.muted }) + T(330, 100, t.birth, { a: 'end', size: 12.5, fill: C.muted });
     return {
       cap: t.cap,
       svg: svg('pc', 360, 200, t.cap,
@@ -956,7 +956,7 @@ const FIG = {
     const body =
       `<rect x="20" y="70" width="320" height="66" rx="12" fill="${C.mint}" stroke="${C.mintLine}" stroke-width="2"/>` +
       T(26, 154, t.band, { a: 'start', size: 12.5, fill: C.teal2, w: 600 }) +
-      T(26, 172, t.heal, { a: 'start', size: 12, fill: C.muted, w: 500 }) + dots +
+      T(26, 172, t.heal, { a: 'start', size: 12.5, fill: C.muted, w: 500 }) + dots +
       `<g class="ct-l"><path d="M${xo} 42v-14" stroke="${C.red}" stroke-width="1.6"/>` + T(xo, 22, t.one, { a: 'end', size: 12.5, fill: C.red, w: 700 }) + '</g>';
     return {
       cap: t.cap,
