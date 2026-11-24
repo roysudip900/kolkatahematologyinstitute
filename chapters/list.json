@@ -342,5 +342,15 @@
   "card_bn": "গর্ভাবস্থায় খুব ক্লান্তি? রিপোর্টে প্লেটলেট কম? বাহক পরীক্ষা করাতে বলেছে?",
   "card_en": "Very tired in pregnancy? Platelets low on the report? Asked to have a carrier test?",
   "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#E3EEF9\"/><circle cx=\"24\" cy=\"13\" r=\"5\" fill=\"#FFFFFF\" stroke=\"#2D6E8E\" stroke-width=\"2\"/><path d=\"M18 44V26c0-5 3-7 6-7s5 2 6 5c5 2 7 6 6 11-1 4-4 6-8 6v3\" fill=\"#FFFFFF\" stroke=\"#2D6E8E\" stroke-width=\"2\"/><path d=\"M37 12c-3 4-4 6-4 8a4 4 0 0 0 8 0c0-2-1-4-4-8z\" fill=\"#D7263D\"/>"
+ },
+ {
+  "id": "transplant",
+  "bn": "বোন ম্যারো ট্রান্সপ্লান্ট",
+  "en": "Bone marrow transplant",
+  "desc_bn": "ট্রান্সপ্লান্ট কী আর কাদের জন্য, দাতা খোঁজা আর মিল দেখা, ধাপে ধাপে কী হয়, পরের মাসগুলোয় পরিবারের কী করতে হয়, আর ঝুঁকি।",
+  "desc_en": "What a transplant is and who it is for, finding a matching donor, what happens step by step, what the months after ask of a family, and the risks.",
+  "card_bn": "ডাক্তার ট্রান্সপ্লান্টের কথা বলেছেন? ভাই-বোনের মিল দেখতে বলেছেন?",
+  "card_en": "Has the doctor mentioned a transplant? Asked to test a brother or sister for a match?",
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#E3EEF9\"/><rect x=\"20\" y=\"9\" width=\"12\" height=\"16\" rx=\"3\" fill=\"#FFFFFF\" stroke=\"#2D6E8E\" stroke-width=\"2\"/><path d=\"M26 25v8\" stroke=\"#2D6E8E\" stroke-width=\"2.5\"/><circle cx=\"20\" cy=\"39\" r=\"3.5\" fill=\"#D7263D\"/><circle cx=\"28\" cy=\"37\" r=\"3.5\" fill=\"#D7263D\"/><circle cx=\"33\" cy=\"42\" r=\"3\" fill=\"#D7263D\" opacity=\".7\"/>"
  }
 ]
