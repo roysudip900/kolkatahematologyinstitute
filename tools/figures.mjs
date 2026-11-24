@@ -715,6 +715,35 @@ const FIG = {
         body),
     };
   },
+  // Blood cancers, MPN: two blood vessels. Above, usual blood: a few red cells flowing quickly. Below, thick blood:
+  // packed red cells and platelets moving slowly, with a small clot forming at a narrowing. No faces, no numbers.
+  'mpn-thick'(l) {
+    const t = l === 'bn'
+      ? { a: 'পাতলা রক্ত: সহজে চলে', b: 'ঘন রক্ত: ধীরে চলে', clot: 'জমাট',
+          cap: 'রক্তকণিকা বেশি হলে রক্ত ঘন হয়ে ধীরে চলে, আর জমাট বাঁধার ঝুঁকি বাড়ে। চিকিৎসার লক্ষ্য রক্তকণিকা কমানো আর সেই ঝুঁকি কমানো।' }
+      : { a: 'thinner blood: flows easily', b: 'thick blood: flows slowly', clot: 'clot',
+          cap: 'With too many blood cells, the blood becomes thick and flows slowly, and the risk of a clot goes up. Treatment aims to bring the counts and that risk down.' };
+    const vessel = (y) => `<rect x="14" y="${y}" width="332" height="44" rx="22" fill="${C.roseBg}" stroke="${C.rose}" stroke-width="2"/>`;
+    let body = vessel(38) + vessel(132);
+    body += T(18, 28, t.a, { a: 'start', size: 12.5, fill: C.muted, w: 700 }) + T(18, 122, t.b, { a: 'start', size: 12.5, fill: C.red, w: 700 });
+    body += '<defs><clipPath id="mt2a"><rect x="16" y="40" width="328" height="40" rx="20"/></clipPath><clipPath id="mt2b"><rect x="16" y="134" width="328" height="40" rx="20"/></clipPath></defs><g clip-path="url(#mt2a)"><g class="mt-fast">';
+    for (let i = 0; i < 6; i++) body += `<ellipse cx="${30 + i * 60}" cy="60" rx="9" ry="6" fill="${C.red}" opacity=".8"/>`;
+    body += '</g></g><g clip-path="url(#mt2b)"><g class="mt-slow">';
+    for (let i = 0; i < 26; i++) body += `<ellipse cx="${24 + i * 12 + (i % 2) * 3}" cy="${146 + (i % 3) * 8}" rx="7" ry="5" fill="${C.red}" opacity=".85"/>`;
+    for (let i = 0; i < 6; i++) body += `<circle cx="${40 + i * 50}" cy="${150 + (i % 2) * 12}" r="3" fill="#b9a7e8"/>`;
+    body += '</g></g>';
+    body += `<g class="mt-clot"><circle cx="300" cy="154" r="11" fill="#8b1e2d"/><circle cx="292" cy="150" r="4" fill="#b9a7e8"/><circle cx="306" cy="160" r="4" fill="#b9a7e8"/></g>` +
+      T(300, 196, t.clot, { a: 'middle', size: 12, fill: C.red, w: 700 });
+    return {
+      cap: t.cap,
+      svg: svg('mt2', 360, 208, t.cap,
+        '.mt-fast{animation:mtf 2.4s linear infinite}@keyframes mtf{from{transform:translateX(-60px)}to{transform:translateX(0)}}' +
+        '.mt-slow{animation:mts 9s linear infinite}@keyframes mts{from{transform:translateX(-12px)}to{transform:translateX(0)}}' +
+        '.mt-clot{transform-box:fill-box;transform-origin:center;animation:mtc 6s ease-in-out infinite}@keyframes mtc{0%{transform:scale(.4);opacity:.3}60%,100%{transform:scale(1);opacity:1}}' +
+        '@media (prefers-reduced-motion:reduce){.mt-fast,.mt-slow,.mt-clot{animation:none}}',
+        body),
+    };
+  },
   // Anaemia, iron: two tanks of body iron. Tablets drip iron into both. In the first, a leak (heavy periods or
   // bleeding) lets it out, so the level hardly rises; in the second the leak is treated and the level slowly rises.
   'iron-tank'(l) {
@@ -1642,6 +1671,30 @@ const TRY = {
             ['pill', 'Iron or tonics will build up the blood', 'True?', 'In MDS the problem is in the marrow. Do not start iron or tonics without the hematologist.'],
             ['cal', 'No treatment yet means nothing can be done', 'True?', 'Low-risk MDS is often checked regularly first, and treatment starts if it gets worse.']],
           cap: 'Take any question about the report to the hematologist.' };
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
+      t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
+        `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
+        `<span class="fc back"><span class="k">${esc(t.sign)}</span><span>${esc(back)}</span></span></button>`).join('') + '</div>';
+    return { cap: t.cap, cls: 'flipset', html };
+  },
+  // Blood cancers, MPN: three beliefs; each card turns over to what the chapter says.
+  'mpn-cards'(l) {
+    const ic = {
+      drop: `<path d="M20 5c-7 10-11 16-11 21a11 11 0 0 0 22 0c0-5-4-11-11-21z" fill="${C.red}"/><path d="M14 27a6 6 0 0 0 6 6" stroke="#fff" stroke-width="2" fill="none"/>`,
+      glass: `<path d="M11 8h18l-3 26H14z" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><path d="M13 16h14" stroke="${C.teal}" stroke-width="2"/>`,
+      plt: `<circle cx="14" cy="16" r="5" fill="#b9a7e8"/><circle cx="25" cy="14" r="5" fill="#b9a7e8"/><circle cx="20" cy="24" r="5" fill="#b9a7e8"/><circle cx="28" cy="26" r="4" fill="#b9a7e8"/>`,
+    };
+    const t = l === 'bn'
+      ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
+          c: [['drop', 'রক্ত ঘন মানে শরীর ভালো', 'সত্যি?', 'ঘন রক্ত ধীরে চলে আর জমাট বাঁধার ঝুঁকি বাড়ায়।'],
+            ['glass', 'জল বেশি খেলেই হিমোগ্লোবিন কমে যাবে', 'সত্যি?', 'জল কাজে লাগে শুধু শরীরে জল কম থাকলে। পলিসাইথেমিয়া ভেরায় মজ্জা নিজেই বেশি লোহিত কণিকা তৈরি করে।'],
+            ['plt', 'কষ্ট না থাকলে প্লেটলেট বেশি নিয়ে ভাবার কিছু নেই', 'সত্যি?', 'বেশি প্লেটলেট দলা পাকিয়ে রক্ত জমাট বাঁধাতে পারে। বেশিই থেকে গেলে হেমাটোলজিস্ট দেখান।']],
+          cap: 'রিপোর্ট দেখে নিজে কোনো ওষুধ শুরু বা বন্ধ করবেন না।' }
+      : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
+          c: [['drop', 'Thick blood means strong blood', 'True?', 'Thick blood flows slowly and raises the risk of a clot.'],
+            ['glass', 'Drinking more water will bring a high hemoglobin down', 'True?', 'Water helps only when the body is short of water. In polycythaemia vera, the marrow itself makes too many red cells.'],
+            ['plt', 'A high platelet count is nothing to worry about if you feel well', 'True?', 'Too many platelets can clump and cause clots. A count that stays high needs a hematologist.']],
+          cap: 'Do not start or stop any medicine because of a report.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
       t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
         `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +

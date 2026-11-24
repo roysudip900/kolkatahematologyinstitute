@@ -260,6 +260,17 @@
   "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FDECEE\"/><ellipse cx=\"15\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#D93A4A\"/><ellipse cx=\"22.5\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#E8616D\"/><ellipse cx=\"30\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#D93A4A\"/><ellipse cx=\"37.5\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#E8616D\"/>"
  },
  {
+  "id": "blood-cancers-mpn",
+  "parent": "blood-cancers",
+  "bn": "রক্তের ক্যান্সার: রক্তকণিকা বেশি (পলিসাইথেমিয়া, ইটি, মায়েলোফাইব্রোসিস)",
+  "en": "Blood cancers: high counts (polycythaemia, ET, myelofibrosis)",
+  "desc_bn": "পলিসাইথেমিয়া ভেরা, ইটি আর মায়েলোফাইব্রোসিস কী, ঘন রক্ত কেন বিপজ্জনক, রক্ত জমাট বাঁধার লক্ষণ, ভেনিসেকশন, আর চিকিৎসা কী করতে পারে।",
+  "desc_en": "What polycythaemia vera, ET and myelofibrosis are, why thick blood is a danger, the signs of a clot, venesection, and what treatment can do.",
+  "card_bn": "মুখ লাল, মাথা ধরা, স্নানের পর গা চুলকায়? হাত-পায়ে জ্বালা?",
+  "card_en": "A red face, headaches, itching after a bath? Burning hands or feet?",
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FDECEE\"/><ellipse cx=\"15\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#D93A4A\"/><ellipse cx=\"22.5\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#E8616D\"/><ellipse cx=\"30\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#D93A4A\"/><ellipse cx=\"37.5\" cy=\"26\" rx=\"3.6\" ry=\"12\" fill=\"#E8616D\"/>"
+ },
+ {
   "id": "marrow",
   "coauthor": "mridha",
   "bn": "বোন ম্যারো পরীক্ষা",
