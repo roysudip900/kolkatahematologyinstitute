@@ -683,6 +683,38 @@ const FIG = {
         body),
     };
   },
+  // Blood cancers, MDS: the marrow as a box of young cells on the left, a blood vessel on the right. Young cells move
+  // towards the blood; most fade before they get there, so the blood side stays thin. No faces, no numbers.
+  'mds-marrow'(l) {
+    const P = '#7A5AD1';
+    const t = l === 'bn'
+      ? { m: 'অস্থিমজ্জা', b: 'রক্ত', y: 'কচি কণিকা', few: 'সুস্থ কণিকা কম',
+          cap: 'এমডিএস-এ মজ্জার কচি কণিকাগুলো সুস্থ কণিকা হয়ে বড় হয় না, তাই রক্তে সুস্থ লোহিত কণিকা, শ্বেত কণিকা বা প্লেটলেট কম পড়ে।' }
+      : { m: 'bone marrow', b: 'blood', y: 'young cells', few: 'few healthy cells',
+          cap: 'In MDS, young cells in the marrow do not grow up into healthy cells, so the blood is short of healthy red cells, white cells or platelets.' };
+    let body = `<rect x="14" y="40" width="160" height="150" rx="18" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/>` +
+      `<rect x="232" y="40" width="114" height="150" rx="40" fill="${C.roseBg}" stroke="${C.rose}" stroke-width="2"/>`;
+    body += T(94, 30, t.m, { a: 'middle', size: 12.5, fill: C.teal2, w: 700 }) + T(289, 30, t.b, { a: 'middle', size: 12.5, fill: C.rose, w: 700 });
+    const ys = [70, 100, 130, 160];
+    ys.forEach((y, i) => [40, 75, 110].forEach((x, j) => {
+      body += `<circle cx="${x + (i % 2) * 12}" cy="${y}" r="${7 + ((i + j) % 3)}" fill="${P}" opacity="${0.45 + ((i * j) % 3) * 0.15}"/>`;
+    }));
+    body += T(94, 208, t.y, { a: 'middle', size: 12, fill: C.muted, w: 600 });
+    [0, 1, 2, 3, 4].forEach(i => {
+      body += `<circle class="md-c md-${i === 2 ? 'ok' : 'x'}" style="animation-delay:${(i * 0.9).toFixed(1)}s" cx="150" cy="${76 + i * 20}" r="6" fill="${i === 2 ? C.red : P}"/>`;
+    });
+    body += `<circle cx="276" cy="98" r="9" fill="${C.red}" opacity=".85"/><circle cx="304" cy="140" r="5" fill="#b9a7e8"/>`;
+    body += T(289, 208, t.few, { a: 'middle', size: 12, fill: C.rose, w: 700 });
+    return {
+      cap: t.cap,
+      svg: svg('md', 360, 222, t.cap,
+        '.md-c{animation:mdx 4.5s ease-in infinite}.md-ok{animation-name:mdok}' +
+        '@keyframes mdx{0%{transform:translateX(0);opacity:1}55%{transform:translateX(50px);opacity:0}100%{opacity:0}}' +
+        '@keyframes mdok{0%{transform:translateX(0);opacity:1}80%{transform:translateX(120px);opacity:1}100%{transform:translateX(120px);opacity:0}}' +
+        '@media (prefers-reduced-motion:reduce){.md-c{animation:none}}',
+        body),
+    };
+  },
   // Anaemia, iron: two tanks of body iron. Tablets drip iron into both. In the first, a leak (heavy periods or
   // bleeding) lets it out, so the level hardly rises; in the second the leak is treated and the level slowly rises.
   'iron-tank'(l) {
@@ -1586,6 +1618,30 @@ const TRY = {
             ['bolt', 'After the test a person stays weak for life', 'True?', 'The sample is small, and the body keeps making new marrow.'],
             ['drop', 'The blood report tells everything, the marrow test is extra', 'True?', 'The report shows which counts are low or high. The marrow test often shows why.']],
           cap: 'Ask the hematologist anything you want to know before the test.' };
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
+      t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
+        `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
+        `<span class="fc back"><span class="k">${esc(t.sign)}</span><span>${esc(back)}</span></span></button>`).join('') + '</div>';
+    return { cap: t.cap, cls: 'flipset', html };
+  },
+  // Blood cancers, MDS: three beliefs; each card turns over to what the chapter says.
+  'mds-cards'(l) {
+    const ic = {
+      tired: `<circle cx="20" cy="13" r="7" fill="${C.teal}"/><path d="M8 36c0-10 5-15 12-15s12 5 12 15z" fill="${C.teal}"/><path d="M26 6h6l-6 6h6" stroke="${C.teal2}" stroke-width="1.8" fill="none"/>`,
+      pill: `<rect x="8" y="14" width="24" height="12" rx="6" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><path d="M20 14v12" stroke="${C.teal2}" stroke-width="2"/>`,
+      cal: `<rect x="7" y="9" width="26" height="24" rx="4" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><path d="M7 16h26M14 5v8M26 5v8" stroke="${C.teal2}" stroke-width="2"/><circle cx="20" cy="24" r="3" fill="#7A5AD1"/>`,
+    };
+    const t = l === 'bn'
+      ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
+          c: [['tired', 'এই বয়সে ক্লান্তি তো বয়সেরই দোষ', 'সত্যি?', 'ক্লান্তি যদি বাড়তেই থাকে, সঙ্গে ফ্যাকাশে ভাব বা কালশিটে, তাহলে রক্ত পরীক্ষা আর ডাক্তার দরকার।'],
+            ['pill', 'আয়রন বা টনিকেই রক্ত বাড়বে', 'সত্যি?', 'এমডিএস-এ সমস্যাটা মজ্জার ভেতরে। হেমাটোলজিস্টকে না দেখিয়ে আয়রন বা টনিক শুরু করবেন না।'],
+            ['cal', 'এখনই চিকিৎসা নেই, মানে কিছু করার নেই', 'সত্যি?', 'কম ঝুঁকির এমডিএস-এ প্রথমে নিয়মিত চেকআপ হয়, বাড়লে চিকিৎসা শুরু হয়।']],
+          cap: 'রিপোর্ট নিয়ে প্রশ্ন থাকলে হেমাটোলজিস্টকে জিজ্ঞেস করুন।' }
+      : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
+          c: [['tired', 'Tiredness at this age is just old age', 'True?', 'Tiredness that keeps getting worse, with paleness or bruising, needs a blood test and a doctor.'],
+            ['pill', 'Iron or tonics will build up the blood', 'True?', 'In MDS the problem is in the marrow. Do not start iron or tonics without the hematologist.'],
+            ['cal', 'No treatment yet means nothing can be done', 'True?', 'Low-risk MDS is often checked regularly first, and treatment starts if it gets worse.']],
+          cap: 'Take any question about the report to the hematologist.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
       t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
         `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
