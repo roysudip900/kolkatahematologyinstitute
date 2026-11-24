@@ -2,7 +2,7 @@
 
 His family said thick blood meant good health, and he was proud of it.
 
-He is fifty-eight, a supervisor at a steel plant in Durgapur. For a year he has had headaches, his face is red even in winter, and his skin itches after every bath. A report for his blood pressure showed a high hemoglobin. His wife's cousin said he should eat less meat and drink more water.
+He is fifty-eight, a supervisor at a steel plant in Durgapur. He smokes, and for a year he has had headaches, his face is red even in winter, and his skin itches after every bath. A report for his blood pressure showed a high hemoglobin. His wife's cousin said he should eat less meat and drink more water.
 
 In Siliguri, a woman of forty-five has had burning in her feet that comes and goes. Her blood test before a small operation showed a high platelet count. The surgeon postponed the operation and sent her to a hematologist.
 
@@ -48,8 +48,8 @@ The aim in polycythaemia vera and ET is to lower the counts and the risk of clot
 
 - taking blood off, called venesection, much like giving blood, in polycythaemia vera
 - aspirin, if the hematologist advises it, to lower the risk of clots
-- medicines that bring the counts down, such as hydroxyurea (also called hydroxycarbamide), anagrelide for platelets, and interferon, including newer forms such as ropeginterferon
-- ruxolitinib, a newer targeted medicine, when other treatment has not worked
+- medicines that bring the counts down, such as hydroxyurea (also called hydroxycarbamide), anagrelide for platelets, and interferon, including newer forms such as ropeginterferon in polycythaemia vera
+- ruxolitinib, a newer targeted medicine, in polycythaemia vera when other treatment has not worked
 
 Some younger people with ET who have no signs and a safe platelet count are watched with regular check-ups.
 
@@ -66,8 +66,8 @@ The woman's tests show ET. The hematologist plans her treatment and talks to her
 # Go to a hospital the same day if
 
 - pain, swelling, redness or warmth in one leg
-- sudden breathlessness, chest pain, or coughing up blood
-- a face that droops, an arm or leg that goes weak, or speech that is slurred, which may be a stroke
+- sudden breathlessness, chest pain, or coughing up blood. Go at once.
+- a face that droops, an arm or leg that goes weak, or speech that is slurred, which may be a stroke. Go at once.
 - bleeding that does not stop
 
 # Take these questions to your doctor

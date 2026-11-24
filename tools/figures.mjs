@@ -719,7 +719,7 @@ const FIG = {
   // packed red cells and platelets moving slowly, with a small clot forming at a narrowing. No faces, no numbers.
   'mpn-thick'(l) {
     const t = l === 'bn'
-      ? { a: 'সাধারণ রক্ত: সহজে চলে', b: 'ঘন রক্ত: ধীরে চলে', clot: 'জমাট',
+      ? { a: 'পাতলা রক্ত: সহজে চলে', b: 'ঘন রক্ত: ধীরে চলে', clot: 'জমাট',
           cap: 'রক্তকণিকা বেশি হলে রক্ত ঘন হয়ে ধীরে চলে, আর জমাট বাঁধার ঝুঁকি বাড়ে। চিকিৎসার লক্ষ্য রক্তকণিকা কমানো আর সেই ঝুঁকি কমানো।' }
       : { a: 'thinner blood: flows easily', b: 'thick blood: flows slowly', clot: 'clot',
           cap: 'With too many blood cells, the blood becomes thick and flows slowly, and the risk of a clot goes up. Treatment aims to bring the counts and that risk down.' };
@@ -1688,12 +1688,12 @@ const TRY = {
       ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
           c: [['drop', 'রক্ত ঘন মানে শরীর ভালো', 'সত্যি?', 'ঘন রক্ত ধীরে চলে আর জমাট বাঁধার ঝুঁকি বাড়ায়।'],
             ['glass', 'জল বেশি খেলেই হিমোগ্লোবিন কমে যাবে', 'সত্যি?', 'জল কাজে লাগে শুধু শরীরে জল কম থাকলে। পলিসাইথেমিয়া ভেরায় মজ্জা নিজেই বেশি লোহিত কণিকা তৈরি করে।'],
-            ['plt', 'কষ্ট না থাকলে প্লেটলেট বেশি নিয়ে ভাবার কিছু নেই', 'সত্যি?', 'বেশি প্লেটলেট লক্ষণ ছাড়াও জমাট বাঁধাতে পারে। বেশিই থেকে গেলে হেমাটোলজিস্ট দেখান।']],
+            ['plt', 'কষ্ট না থাকলে প্লেটলেট বেশি নিয়ে ভাবার কিছু নেই', 'সত্যি?', 'বেশি প্লেটলেট দলা পাকিয়ে রক্ত জমাট বাঁধাতে পারে। বেশিই থেকে গেলে হেমাটোলজিস্ট দেখান।']],
           cap: 'রিপোর্ট দেখে নিজে কোনো ওষুধ শুরু বা বন্ধ করবেন না।' }
       : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
           c: [['drop', 'Thick blood means strong blood', 'True?', 'Thick blood flows slowly and raises the risk of a clot.'],
             ['glass', 'Drinking more water will bring a high hemoglobin down', 'True?', 'Water helps only when the body is short of water. In polycythaemia vera, the marrow itself makes too many red cells.'],
-            ['plt', 'A high platelet count is nothing to worry about if you feel well', 'True?', 'Too many platelets can cause clots even without signs. A count that stays high needs a hematologist.']],
+            ['plt', 'A high platelet count is nothing to worry about if you feel well', 'True?', 'Too many platelets can clump and cause clots. A count that stays high needs a hematologist.']],
           cap: 'Do not start or stop any medicine because of a report.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
       t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
