@@ -1068,6 +1068,29 @@ const FIG = {
         body),
     };
   },
+  // Jaundice with anaemia: red cells drift along; some break apart early; the broken pieces turn into a yellow wash
+  // that reaches an eye, which turns yellow. Fewer red cells means paleness. No numbers.
+  'jaundice-path'(l) {
+    const t = l === 'bn'
+      ? { a: 'লোহিত কণিকা তাড়াতাড়ি ভাঙে', b: 'বিলিরুবিন জমে', c: 'চোখ হলুদ, শরীর ফ্যাকাশে', cap: 'হিমোলাইটিক অ্যানিমিয়ায় লোহিত কণিকা সময়ের আগে ভেঙে যায়। কণিকা কমে বলে শরীর ফ্যাকাশে আর ক্লান্ত হয়, আর ভাঙা কণিকা থেকে বিলিরুবিন জমে চোখ হলুদ হয়। জন্ডিস লিভার থেকেও হতে পারে, তাই ডাক্তার কারণ খোঁজেন।' }
+      : { a: 'red cells break down early', b: 'bilirubin builds up', c: 'yellow eyes, pale body', cap: 'In haemolytic anaemia red cells break down too early. With fewer red cells the body turns pale and tired, and as the broken cells are cleared, bilirubin builds up and the eyes turn yellow. Jaundice can also come from the liver, so the doctor looks for the cause.' };
+    let body = '';
+    [40, 80, 120].forEach((x, i) => { body += `<ellipse cx="${x}" cy="70" rx="13" ry="10" fill="${C.red}" opacity=".85"/>`; });
+    body += `<g class="jp-break"><path d="M150 62l8 6-6 4 7 6" stroke="${C.red}" stroke-width="3" fill="none"/><circle cx="168" cy="64" r="4" fill="${C.red}" opacity=".7"/><circle cx="166" cy="78" r="3" fill="${C.red}" opacity=".6"/></g>`;
+    body += `<g class="jp-yel"><circle cx="210" cy="70" r="16" fill="${C.amberBg}" stroke="${C.amber}" stroke-width="2"/><circle cx="236" cy="64" r="9" fill="${C.amberBg}" stroke="${C.amber}" stroke-width="2"/></g>`;
+    body += `<path d="M262 70h18" stroke="${C.muted}" stroke-width="2.5"/><path d="M276 64l6 6-6 6" stroke="${C.muted}" stroke-width="2.5" fill="none"/>`;
+    body += `<ellipse cx="318" cy="70" rx="26" ry="15" fill="#fff" stroke="${C.ink}" stroke-width="2"/><ellipse class="jp-eye" cx="318" cy="70" rx="24" ry="13" fill="#f3d56b" opacity=".0"/><circle cx="318" cy="70" r="8" fill="${C.ink}"/>`;
+    body += T(80, 112, t.a, { a: 'middle', size: 12.5, fill: C.red, w: 700 }) + T(222, 112, t.b, { a: 'middle', size: 12.5, fill: C.amber, w: 700 }) + T(346, 140, t.c, { a: 'end', size: 12.5, fill: C.ink, w: 700 });
+    return {
+      cap: t.cap,
+      svg: svg('jp', 360, 160, t.cap,
+        '.jp-break{animation:jpb 4s ease-in-out infinite}@keyframes jpb{0%,20%{opacity:0}40%,100%{opacity:1}}' +
+        '.jp-yel{animation:jpy 4s ease-in-out infinite}@keyframes jpy{0%,40%{opacity:0}60%,100%{opacity:1}}' +
+        '.jp-eye{animation:jpe 4s ease-in-out infinite}@keyframes jpe{0%,60%{opacity:0}80%,100%{opacity:.7}}' +
+        '@media (prefers-reduced-motion:reduce){.jp-break,.jp-yel{animation:none;opacity:1}.jp-eye{animation:none;opacity:.7}}',
+        body),
+    };
+  },
   // Anaemia, iron: two tanks of body iron. Tablets drip iron into both. In the first, a leak (heavy periods or
   // bleeding) lets it out, so the level hardly rises; in the second the leak is treated and the level slowly rises.
   'iron-tank'(l) {
@@ -2299,6 +2322,29 @@ const TRY = {
             ['knife', 'An enlarged spleen always has to be removed', 'True?', 'Usually the cause is treated and the spleen is watched. It is removed only in some cases.'],
             ['ball', 'Football or kabaddi is fine with a big spleen', 'True?', 'A blow can make an enlarged spleen burst. Avoid contact sports.']],
           cap: 'Pain behind the left ribs with dizziness after an injury, or a high fever without a spleen, needs a hospital at once.' };
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
+      t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
+        `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
+        `<span class="fc back"><span class="k">${esc(t.sign)}</span><span>${esc(back)}</span></span></button>`).join('') + '</div>';
+    return { cap: t.cap, cls: 'flipset', html };
+  },
+  'jaundice-cards'(l) {
+    const ic = {
+      eye: `<ellipse cx="20" cy="20" rx="15" ry="9" fill="#f3d56b" stroke="${C.ink}" stroke-width="2"/><circle cx="20" cy="20" r="5" fill="${C.ink}"/>`,
+      cup: `<path d="M10 12h18v14a6 6 0 0 1-6 6h-6a6 6 0 0 1-6-6z" fill="${C.amberBg}" stroke="${C.amber}" stroke-width="2"/><path d="M28 16h3a3 3 0 0 1 0 6h-3" fill="none" stroke="${C.amber}" stroke-width="2"/>`,
+      baby: `<circle cx="20" cy="14" r="7" fill="#f3d56b" stroke="${C.teal2}" stroke-width="2"/><path d="M10 34c0-8 4-12 10-12s10 4 10 12" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/>`,
+    };
+    const t = l === 'bn'
+      ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
+          c: [['eye', 'চোখ হলুদ মানেই লিভারের জন্ডিস', 'সত্যি?', 'লোহিত কণিকা তাড়াতাড়ি ভেঙে গেলেও জন্ডিস হয়। সঙ্গে ফ্যাকাশে ভাব থাকলে ডাক্তারকে বলুন।'],
+            ['cup', 'আখের রস আর তেল বন্ধ করলেই কামলা সারে', 'সত্যি?', 'এতে কারণের চিকিৎসা হয় না। ম্যালেরিয়া বা অ্যানিমিয়ার মতো কারণ খুঁজতে ডাক্তার দেখান।'],
+            ['baby', 'নবজাতকের যেকোনো জন্ডিস দেরি করে দেখালেও চলে', 'সত্যি?', 'প্রথম দিনেই জন্ডিস, বা সঙ্গে খুব ঘুম, না খাওয়া, জ্বর বা গা ঠান্ডা হলে সঙ্গে সঙ্গে হাসপাতালে যান।']],
+          cap: 'জন্ডিসের সঙ্গে গাঢ় প্রস্রাব, শ্বাসকষ্ট বা খুব জ্বর হলে সঙ্গে সঙ্গে হাসপাতালে যান।' }
+      : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
+          c: [['eye', 'Yellow eyes always mean liver jaundice', 'True?', 'Red cells breaking down too fast can also cause jaundice. If there is paleness too, tell the doctor.'],
+            ['cup', 'Sugarcane juice and no oil will cure "kamla"', 'True?', 'This does not treat the cause. See a doctor to look for causes such as malaria or anaemia.'],
+            ['baby', 'Any newborn jaundice can wait', 'True?', 'Jaundice in the first day, or with sleepiness, poor feeding, fever or a baby who feels cold, needs a hospital at once.']],
+          cap: 'Jaundice with dark urine, breathlessness or a high fever needs a hospital at once.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
       t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
         `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
