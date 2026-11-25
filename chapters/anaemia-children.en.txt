@@ -32,6 +32,36 @@ Anaemia that goes on for a long time can hold back a young child's development a
 
 Behaviour and school troubles have many causes, and a child who is struggling may need other help too, from the school or a child specialist. A blood count is a quick way to rule one cause in or out. Ask for it before anyone decides the child is just naughty.
 
+# What causes anaemia in children
+
+Most anaemia in Indian children comes from poor nutrition. Too little iron is the commonest cause. Too little vitamin B12 or folic acid can also cause it, and some children are short of both iron and vitamin B12. Worm infections, dirty water and poor hygiene can lower the haemoglobin too. Low iron is common in older babies and toddlers, because their food after six months is often not enough or not varied enough.
+
+The doctor finds anaemia from what the child eats, an examination and a blood count, and may ask for a test of the body's iron store to confirm low iron.
+
+# What treatment can do
+
+- Most children with low iron are treated with iron by mouth. The doctor chooses the medicine and how much, by the child's weight.
+- Give the iron away from tea and coffee, which block it. Citrus fruit just before the medicine helps the body take it in.
+- Iron can turn the stools dark. Tell the doctor if your child has a stomach upset with it.
+- The doctor checks again after a short time to see that the iron is working. If it is not, the doctor looks for the reason, such as doses being missed, a problem taking in iron, hidden blood loss, or thalassemia trait.
+- Iron is continued for some months after the haemoglobin is better, to fill the body's store. Do not stop it when your child looks well. The doctor decides when to stop.
+- If the child is also short of vitamin B12 or folic acid, the doctor treats that too.
+- Iron through a drip into a vein is used only for a few children, such as those who cannot take or absorb iron by mouth. Iron injections into the muscle are not recommended.
+- A child with very severe anaemia and danger signs is treated in hospital. A blood transfusion is only for an emergency. It does not treat the cause, which still has to be found and treated.
+- Brothers and sisters of a child with low iron should be checked too.
+
+Food helps: eggs, meat, liver, fish, green leafy vegetables, citrus fruits, potatoes and tomatoes. Cut down on tea.
+
+# Preventing anaemia
+
+- Breast milk alone for the first six months, then varied home food with iron-rich items alongside it.
+- After the first birthday, limit milk and stop the bottle, so that milk does not take the place of food.
+- Take the iron and folic acid that the anganwadi or school gives under the Anemia Mukt Bharat programme, unless the doctor says otherwise.
+- Ask for a haemoglobin check when your baby goes for the measles vaccine, at about nine months to a year.
+- Take the deworming tablets given at the anganwadi or school.
+- Clean water, a toilet, and washing hands with soap help prevent the worm and gut infections that lower haemoglobin.
+- At birth, waiting a few minutes before the cord is clamped helps build the baby's iron store. Ask about it before the delivery.
+
 # How the stories go on
 
 The children's mother takes both of them to a doctor, with the school diary in her bag. The doctor asks what each child eats and drinks in a day, and about the wall beside the cot. Both blood counts show anaemia. The doctor looks for the reason in each child, starts treatment, and because of the plaster, checks the girl's lead level too. The milk bottle no longer fills her day.
@@ -41,7 +71,8 @@ Over the next months the girl stops reaching for the flower pot. The boy is less
 # Go to a hospital the same day if
 
 - your child becomes very pale, very drowsy, or too tired to feed or play
-- your child is breathless while resting, or faints
+- your child is breathless while resting, breathes fast, or faints
+- your child's face or feet swell
 - your child eats mud or other non-food things and has belly pain, keeps vomiting, or has a swollen belly
 - your child has swallowed iron tablets meant for someone else. Go at once
 
@@ -53,6 +84,8 @@ If your child keeps eating mud, chalk or plaster, or has been tired and irritabl
 - Can we do a blood count?
 - My child has eaten plaster or paint from a wall. Should lead be checked?
 - How much milk is right for my child at this age?
+- How long should the iron go on, and when will you check again?
+- Should my other children be checked too?
 - If it is anaemia, what is causing it?
 - If school is still hard once the blood is better, who should we see?
 
