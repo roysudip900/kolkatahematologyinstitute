@@ -2145,12 +2145,12 @@ const TRY = {
       ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
           c: [['weak', 'রক্ত দিলে মাসের পর মাস দুর্বল লাগে', 'সত্যি?', 'পরীক্ষায় সুস্থ দেখা গেলে তবেই রক্ত নেওয়া হয়। দেড় দিনের মধ্যে শরীর জল পূরণ করে নেয়।'],
             ['needle', 'রক্ত দিতে গিয়ে সুচ থেকে রোগ হতে পারে', 'সত্যি?', 'সুচ আর ব্যাগ জীবাণুমুক্ত প্যাকেটে আসে আর একবারই ব্যবহার হয়।'],
-            ['ask', 'ব্যক্তিগত প্রশ্নের উত্তর এড়িয়ে গেলেও ক্ষতি নেই', 'সত্যি?', 'খুব সাম্প্রতিক সংক্রমণ পরীক্ষায় ধরা না-ও পড়তে পারে। সত্যি উত্তর রোগীকে বাঁচায়, আর তা গোপন থাকে।']],
+            ['ask', 'ব্যক্তিগত প্রশ্নের উত্তর এড়িয়ে গেলেও ক্ষতি নেই', 'সত্যি?', 'খুব সাম্প্রতিক সংক্রমণ পরীক্ষায় ধরা না-ও পড়তে পারে। সত্যি উত্তর রোগীকে বাঁচায়, আর ব্লাড সেন্টারের উচিত তা গোপন রাখা।']],
           cap: 'আজ রক্ত দিতে পারবেন কিনা, ব্লাড সেন্টার বলে দেবে। রক্ত দেওয়ার পর অজ্ঞান ভাব না কাটলে, বুকে ব্যথা হলে বা রক্ত না থামলে সঙ্গে সঙ্গে হাসপাতালে যান।' }
       : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
           c: [['weak', 'Giving blood leaves you weak for months', 'True?', 'You give blood only if the checks show you are well. The body replaces the fluid within about a day and a half.'],
             ['needle', 'You can catch a disease from the needle when you give blood', 'True?', 'The needle and bag come in a sterile pack and are used only once.'],
-            ['ask', 'Skipping the personal questions does no harm', 'True?', 'Tests may miss a very recent infection. Honest answers protect the patient, and they are kept confidential.']],
+            ['ask', 'Skipping the personal questions does no harm', 'True?', 'Tests may miss a very recent infection. Honest answers protect the patient, and the blood centre should keep them confidential.']],
           cap: 'The blood centre tells you whether you can give blood today. Fainting that does not pass, chest pain, or bleeding that will not stop after giving blood needs a hospital at once.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
       t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +

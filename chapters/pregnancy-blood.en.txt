@@ -48,7 +48,7 @@ Sometimes a low count has another cause that needs care:
 - immune thrombocytopenia (ITP), which can get worse during pregnancy
 - some rarer blood conditions
 
-A woman with a very low count may see a hematologist and a doctor for high-risk pregnancies. She may need treatment to raise the count before delivery, to prevent heavy bleeding. Her baby may also have a low count at birth, which usually comes back within a few days.
+A woman with a very low count may see a hematologist and a doctor for high-risk pregnancies. She may need treatment to raise the count before delivery, to lower the chance of heavy bleeding. Her baby may also have a low count at birth, which usually comes back within a few days.
 
 The Low platelets chapter on this site has a part on ITP.
 
@@ -58,7 +58,7 @@ A carrier has one changed gene for thalassemia or sickle cell disease and is usu
 
 - A blood test shows whether the mother is a carrier. It is best done early in pregnancy, or before it.
 - If the mother is a carrier, the father is offered the test too.
-- If both are carriers, a test during pregnancy can show whether the baby has the condition. The team explains the choices and supports the couple in whatever they decide.
+- If both are carriers, a test during pregnancy can show whether the baby has the condition. This test looks only for the blood condition. The team does not use it to tell whether the baby is a boy or a girl. The test has a small chance of causing a miscarriage. The team explains this small risk before the test, explains all the choices, and supports the couple in whatever they decide.
 - Tell the doctor early if anyone in either family has thalassemia or sickle cell disease.
 
 The Thalassemia and Sickle cell disease chapters on this site explain how these run in families.
@@ -121,7 +121,7 @@ A slightly low count in pregnancy is common and usually harmless for mother and 
 
 ## My husband and I are both thalassemia carriers. What now?
 
-Each pregnancy has a chance of a baby with thalassemia major. A test during pregnancy can show whether the baby has it. Talk to your doctor early.
+Each pregnancy has a chance of a baby with thalassemia major. A test during pregnancy can show whether the baby has it. The test has a small chance of causing a miscarriage, and the team explains this first. Talk to your doctor early.
 
 # Sources
 
