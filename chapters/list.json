@@ -404,5 +404,16 @@
   "card_bn": "ডাক্তার বলেছেন পিলে বড়? অল্প খেলেই পেট ভরে যায়?",
   "card_en": "Told your spleen is enlarged? Feeling full after a few mouthfuls?",
   "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#E3EEF9\"/><path d=\"M30 11c8 1 10 13 6 26s-13 8-14 2 2-14 2-20 0-9 6-8z\" fill=\"#D7263D\" opacity=\".85\"/><path d=\"M12 18q12 6 24 0M12 24q12 6 24 0\" stroke=\"#2D6E8E\" stroke-width=\"1.5\" fill=\"none\"/>"
+ },
+ {
+  "id": "anaemia-jaundice",
+  "parent": "anaemia",
+  "bn": "অ্যানিমিয়া: জন্ডিসের সঙ্গে অ্যানিমিয়া",
+  "en": "Anaemia: jaundice with anaemia",
+  "desc_bn": "ফ্যাকাশে ভাবের সঙ্গে চোখ হলুদ কেন হয়, হিমোলাইটিক অ্যানিমিয়ার কারণ, লক্ষণ, চিকিৎসা, নবজাতকের জন্ডিস, আর কখন সঙ্গে সঙ্গে হাসপাতালে যাবেন।",
+  "desc_en": "Why yellow eyes can come with paleness, the causes of haemolytic anaemia, signs, treatment, jaundice in newborns, and when to go to a hospital at once.",
+  "card_bn": "ফ্যাকাশে আর চোখ হলুদ? জ্বরের পর প্রস্রাব চায়ের মতো গাঢ়?",
+  "card_en": "Pale with yellow eyes? Urine dark like tea after a fever?",
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FDECEE\"/><ellipse cx=\"26\" cy=\"26\" rx=\"15\" ry=\"9\" fill=\"#F3D56B\" stroke=\"#1F3B4D\" stroke-width=\"2\"/><circle cx=\"26\" cy=\"26\" r=\"5\" fill=\"#1F3B4D\"/>"
  }
 ]
