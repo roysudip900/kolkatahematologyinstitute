@@ -352,5 +352,15 @@
   "card_bn": "ডাক্তার ট্রান্সপ্লান্টের কথা বলেছেন? ভাই-বোনের মিল দেখতে বলেছেন?",
   "card_en": "Has the doctor mentioned a transplant? Asked to test a brother or sister for a match?",
   "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#E3EEF9\"/><rect x=\"20\" y=\"9\" width=\"12\" height=\"16\" rx=\"3\" fill=\"#FFFFFF\" stroke=\"#2D6E8E\" stroke-width=\"2\"/><path d=\"M26 25v8\" stroke=\"#2D6E8E\" stroke-width=\"2.5\"/><circle cx=\"20\" cy=\"39\" r=\"3.5\" fill=\"#D7263D\"/><circle cx=\"28\" cy=\"37\" r=\"3.5\" fill=\"#D7263D\"/><circle cx=\"33\" cy=\"42\" r=\"3\" fill=\"#D7263D\" opacity=\".7\"/>"
+ },
+ {
+  "id": "blood-transfusion",
+  "bn": "রক্ত নেওয়া",
+  "en": "Getting a blood transfusion",
+  "desc_bn": "রক্ত দেওয়া কী আর কেন লাগে, আগে, মাঝে আর পরে কী হয়, রক্ত কতটা নিরাপদ, পার্শ্বপ্রতিক্রিয়া, আর পরে কোন লক্ষণে হাসপাতালে যাবেন।",
+  "desc_en": "What a transfusion is and why it is needed, what happens before, during and after, how safe the blood is, side effects, and the signs afterwards that need a hospital.",
+  "card_bn": "ডাক্তার রক্ত দিতে বলেছেন? রক্ত থেকে রোগ হবে কিনা ভাবছেন?",
+  "card_en": "Told you need a transfusion? Wondering whether the blood is safe?",
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#E3EEF9\"/><rect x=\"18\" y=\"9\" width=\"16\" height=\"22\" rx=\"5\" fill=\"#FFFFFF\" stroke=\"#D7263D\" stroke-width=\"2\"/><rect x=\"21\" y=\"17\" width=\"10\" height=\"11\" rx=\"3\" fill=\"#D7263D\"/><path d=\"M26 31v6c0 4-3 6-8 7\" stroke=\"#D7263D\" stroke-width=\"2\" fill=\"none\"/>"
  }
 ]
