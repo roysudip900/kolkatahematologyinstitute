@@ -1047,6 +1047,27 @@ const FIG = {
         body),
     };
   },
+  // Enlarged spleen: a simple outline of the belly with the ribs; the spleen sits under the left ribs (the reader's
+  // right). It grows from a small shape tucked under the ribs to a large one reaching down past them. No numbers.
+  'spleen-map'(l) {
+    const t = l === 'bn'
+      ? { small: 'সাধারণ মাপের পিলে', big: 'বড় পিলে', left: 'শরীরের বাঁ দিক', cap: 'পিলে থাকে পেটের ওপরের বাঁ দিকে, বাঁ পাঁজরের পিছনে। বড় হলে পাঁজর ছাড়িয়ে নিচে নেমে আসে, তখন ডাক্তার পেটে চাপ দিয়ে বুঝতে পারেন। বড় পিলে চোটে ফেটে যেতে পারে।' }
+      : { small: 'usual size', big: 'enlarged', left: 'body\'s left', cap: 'The spleen sits in the upper left of the belly, behind the left ribs. When it is enlarged it reaches down below the ribs, where a doctor can feel it. An enlarged spleen can burst after a blow.' };
+    const torso = (x) => `<path d="M${x} 30c-30 0-50 20-50 60v90c0 20 20 30 50 30s50-10 50-30V90c0-40-20-60-50-60z" fill="#fff" stroke="${C.teal2}" stroke-width="2"/>` +
+      [0, 1, 2].map((i) => `<path d="M${x - 44} ${70 + i * 12}q44 ${18} 88 0" stroke="${C.muted}" stroke-width="1.5" fill="none" opacity=".6"/>`).join('');
+    let body = torso(90) + torso(270);
+    body += `<ellipse cx="116" cy="88" rx="14" ry="9" fill="${C.red}" opacity=".8" transform="rotate(-25 116 88)"/>`;
+    body += `<g class="sm-grow"><path d="M300 74c18 2 22 30 14 60s-30 50-46 40c-12-8 0-30 6-50s8-52 26-50z" fill="${C.red}" opacity=".8"/></g>`;
+    body += T(90, 236, t.small, { a: 'middle', size: 12.5, fill: C.ink }) + T(270, 236, t.big, { a: 'middle', size: 12.5, fill: C.red, w: 700 }) +
+      T(128, 26, t.left, { a: 'middle', size: 12.5, fill: C.muted }) + T(308, 26, t.left, { a: 'middle', size: 12.5, fill: C.muted });
+    return {
+      cap: t.cap,
+      svg: svg('sm', 360, 250, t.cap,
+        '.sm-grow{transform-origin:300px 80px;animation:smg 4s ease-in-out infinite}@keyframes smg{0%,10%{transform:scale(.45)}60%,100%{transform:scale(1)}}' +
+        '@media (prefers-reduced-motion:reduce){.sm-grow{animation:none}}',
+        body),
+    };
+  },
   // Anaemia, iron: two tanks of body iron. Tablets drip iron into both. In the first, a leak (heavy periods or
   // bleeding) lets it out, so the level hardly rises; in the second the leak is treated and the level slowly rises.
   'iron-tank'(l) {
@@ -2255,6 +2276,29 @@ const TRY = {
             ['report', 'A low white cell count means blood cancer', 'True?', 'It has many causes, such as some medicines or infections. Show the report to a doctor.'],
             ['pill', 'If the report shows a low count, stop your medicines yourself', 'True?', 'Do not stop any medicine on your own. The doctor decides whether to change it.']],
           cap: 'A fever, shivering, difficulty breathing or passing very little urine needs a hospital at once.' };
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
+      t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
+        `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
+        `<span class="fc back"><span class="k">${esc(t.sign)}</span><span>${esc(back)}</span></span></button>`).join('') + '</div>';
+    return { cap: t.cap, cls: 'flipset', html };
+  },
+  'spleen-cards'(l) {
+    const ic = {
+      sp: `<path d="M24 6c8 1 10 13 6 26s-13 8-14 2 2-14 2-20 0-9 6-8z" fill="${C.red}" opacity=".8"/>`,
+      knife: `<rect x="9" y="6" width="22" height="28" rx="3" fill="#fff" stroke="${C.teal2}" stroke-width="2"/><path d="M14 16l3 3 6-6M14 26h12" stroke="${C.teal}" stroke-width="2" fill="none"/>`,
+      ball: `<circle cx="20" cy="20" r="12" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><path d="M8 20h24M20 8v24" stroke="${C.teal2}" stroke-width="1.5"/>`,
+    };
+    const t = l === 'bn'
+      ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
+          c: [['sp', 'পিলে বড় হওয়া মানেই ক্যান্সার', 'সত্যি?', 'সংক্রমণ, লিভারের অসুখ, থ্যালাসেমিয়া সমেত অনেক কারণে হয়। ডাক্তার কারণ খোঁজেন।'],
+            ['knife', 'বড় পিলে সবসময় কেটে বাদ দিতে হয়', 'সত্যি?', 'সাধারণত কারণের চিকিৎসা হয় আর পিলের ওপর নজর রাখা হয়। বাদ দেওয়া হয় শুধু কিছু ক্ষেত্রে।'],
+            ['ball', 'পিলে বড় থাকলেও ফুটবল-কবাডি খেলায় অসুবিধা নেই', 'সত্যি?', 'চোট লাগলে বড় পিলে ফেটে যেতে পারে। ধাক্কাধাক্কির খেলা এড়িয়ে চলুন।']],
+          cap: 'চোটের পর বাঁ পাঁজরের নিচে ব্যথা আর মাথা ঘোরা, বা পিলে না থাকলে খুব জ্বর হলে সঙ্গে সঙ্গে হাসপাতালে যান।' }
+      : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
+          c: [['sp', 'An enlarged spleen means cancer', 'True?', 'It has many causes, including infections, liver disease and thalassemia. The doctor looks for the cause.'],
+            ['knife', 'An enlarged spleen always has to be removed', 'True?', 'Usually the cause is treated and the spleen is watched. It is removed only in some cases.'],
+            ['ball', 'Football or kabaddi is fine with a big spleen', 'True?', 'A blow can make an enlarged spleen burst. Avoid contact sports.']],
+          cap: 'Pain behind the left ribs with dizziness after an injury, or a high fever without a spleen, needs a hospital at once.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
       t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
         `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
