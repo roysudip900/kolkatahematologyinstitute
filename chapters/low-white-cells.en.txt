@@ -1,4 +1,4 @@
-> A low white cell count means the body has fewer of the cells that fight infection, so infections can come more easily and become serious quickly. Causes include some medicines, cancer treatment, infections and illnesses of the bone marrow. Never stop a medicine on your own because of a report. If your count is low and you get a fever, go to a hospital at once.
+> A low white cell count means the body has fewer of the cells that fight infection, so infections can come more easily and become serious quickly. Causes include some medicines, cancer treatment, infections and some other illnesses. Never stop a medicine on your own because of a report. If your count is low and you get a fever, go to a hospital at once.
 
 She thought it was only a sore throat, until the fever came at night.
 
@@ -10,7 +10,7 @@ She wants to know whether a sore throat can be dangerous. He wants to know what 
 
 # What white cells do
 
-White cells protect the body from infection. The commonest kind, the neutrophil, is the body's first line of defence. Each neutrophil lives less than a day, so the bone marrow has to make new ones all the time. The other main kind, the lymphocyte, helps control the body's defences and makes antibodies.
+White cells protect the body from infection. The commonest kind, the neutrophil, is the body's first line of defence. Neutrophils last only a short time, so the bone marrow keeps replacing them. The other main kind, the lymphocyte, helps control the body's defences and makes antibodies.
 
 A low white cell count usually means the body is not making enough white cells. When the neutrophils are low, it is called neutropenia. With fewer cells to fight germs, infections come more easily, and a simple infection can turn serious quickly.
 
@@ -19,7 +19,7 @@ A low white cell count usually means the body is not making enough white cells. 
 # What can cause it
 
 - cancer treatment, such as chemotherapy and radiotherapy
-- some medicines, including some medicines for an overactive thyroid and some medicines for mental illness
+- some medicines, including some medicines for an overactive thyroid and some medicines for serious mental illness
 - some cancers, such as leukaemia
 - infections, such as HIV or hepatitis
 - autoimmune conditions, such as rheumatoid arthritis
@@ -28,7 +28,7 @@ The doctor decides which tests are needed, from your history, your medicines and
 
 # Signs
 
-A low count does not always cause symptoms. It is often found on a blood test done for another reason. The main sign is getting infections often, or an infection that is worse than usual:
+A low count does not always cause symptoms. It can be found on a blood test done for another reason. The main sign is getting infections often, or an infection that is worse than usual:
 
 - a fever, or feeling hot, cold or shivery
 - a sore throat
@@ -101,7 +101,7 @@ Go to a hospital at once and tell them about your tablets. Some thyroid medicine
 
 ## What can I eat when my white cell count is low?
 
-Mostly yes, but avoid raw or undercooked meat, fish and eggs, store food properly, and do not share plates and cups. Ask the team if you need special advice.
+Most home food is fine, but avoid raw or undercooked meat, fish and eggs, store food properly, and do not share plates and cups. Ask the team if you need special advice.
 
 # Sources
 
