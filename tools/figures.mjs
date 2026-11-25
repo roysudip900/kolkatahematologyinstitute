@@ -902,6 +902,36 @@ const FIG = {
         body),
     };
   },
+  // Transplant: four steps in a two-by-two grid, lit one after another. Collect the stem cells, conditioning,
+  // the cells go in through a thin tube like a transfusion, the new marrow grows over weeks. No faces, no numbers.
+  'transplant-steps'(l) {
+    const t = l === 'bn'
+      ? { s: [['এক', 'স্টেম সেল সংগ্রহ', 'নিজের বা দাতার রক্ত থেকে'], ['দুই', 'কন্ডিশনিং', 'কেমো বা রেডিওথেরাপি'], ['তিন', 'নল দিয়ে কোষ', 'রক্ত দেওয়ার মতো, ব্যথা নেই'], ['চার', 'নতুন ম্যারো', 'কয়েক সপ্তাহে বাড়ে']],
+          cap: 'ট্রান্সপ্লান্টের চার ধাপ: স্টেম সেল সংগ্রহ, কেমোথেরাপি বা রেডিওথেরাপি দিয়ে কন্ডিশনিং, সরু নল দিয়ে রক্তে কোষ দেওয়া, আর কয়েক সপ্তাহ ধরে নতুন ম্যারো বেড়ে ওঠা। পুরো সেরে উঠতে এক বছর পর্যন্ত লাগতে পারে।' }
+      : { s: [['1', 'Collect the stem cells', "from own or donor's blood"], ['2', 'Conditioning', 'chemo or radiotherapy'], ['3', 'Cells through a tube', 'like a transfusion, no pain'], ['4', 'New marrow grows', 'over several weeks']],
+          cap: 'The four steps of a transplant: collecting the stem cells, conditioning with chemotherapy or radiotherapy, giving the cells into the blood through a thin tube, and the new marrow growing over several weeks. Full recovery can take up to a year.' };
+    const icon = [
+      (x, y) => `<path d="M${x} ${y - 12}c-6 9-9 13-9 17a9 9 0 0 0 18 0c0-4-3-8-9-17z" fill="${C.red}" opacity=".85"/>`,
+      (x, y) => `<circle cx="${x}" cy="${y}" r="11" fill="${C.amberBg}" stroke="${C.amber}" stroke-width="2.5"/><path d="M${x - 6} ${y}h12M${x} ${y - 6}v12" stroke="${C.amber}" stroke-width="2.5"/>`,
+      (x, y) => `<rect x="${x - 7}" y="${y - 14}" width="14" height="18" rx="3" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><path d="M${x} ${y + 4}v10" stroke="${C.teal2}" stroke-width="2.5"/>`,
+      (x, y) => [[-7, -4], [6, -6], [0, 6], [-9, 8], [9, 6]].map(([a, b]) => `<circle cx="${x + a}" cy="${y + b}" r="4.5" fill="${C.red}" opacity=".8"/>`).join(''),
+    ];
+    let body = '';
+    t.s.forEach(([n, h, sub], i) => {
+      const x = 14 + (i % 2) * 172, y = 12 + Math.floor(i / 2) * 104;
+      body += `<g class="tp-s tp-s${i}"><rect x="${x}" y="${y}" width="160" height="92" rx="12" fill="#fff" stroke="${C.teal2}" stroke-width="2"/>` +
+        `<rect x="${x + 8}" y="${y + 8}" width="${l === 'bn' ? 36 : 24}" height="24" rx="12" fill="${C.teal}"/>` + T(x + (l === 'bn' ? 26 : 20), y + 24.5, n, { a: 'middle', size: 12.5, fill: '#fff', w: 700 }) +
+        icon[i](x + 134, y + 26) + T(x + 12, y + 58, h, { a: 'start', size: 12.5, fill: C.ink, w: 700 }) + T(x + 12, y + 78, sub, { a: 'start', size: 12.5, fill: C.muted }) + '</g>';
+    });
+    return {
+      cap: t.cap,
+      svg: svg('tp', 360, 220, t.cap,
+        '.tp-s{animation:tps 8s ease-in-out infinite;opacity:.35}.tp-s1{animation-delay:2s}.tp-s2{animation-delay:4s}.tp-s3{animation-delay:6s}' +
+        '@keyframes tps{0%,5%{opacity:.35}12%,40%{opacity:1}50%,100%{opacity:.35}}' +
+        '@media (prefers-reduced-motion:reduce){.tp-s{animation:none;opacity:1}}',
+        body),
+    };
+  },
   // Anaemia, iron: two tanks of body iron. Tablets drip iron into both. In the first, a leak (heavy periods or
   // bleeding) lets it out, so the level hardly rises; in the second the leak is treated and the level slowly rises.
   'iron-tank'(l) {
@@ -1995,6 +2025,29 @@ const TRY = {
             ['plt', 'A slightly low platelet count in pregnancy means danger', 'True?', 'It is common and usually harmless for mother and baby. The doctor checks the cause and keeps an eye on it.'],
             ['pill', 'If iron tablets upset the stomach, quietly stop them', 'True?', 'Tell the ASHA or the doctor. The doctor can give iron another way.']],
           cap: 'Keep every check-up, and show the reports to your doctor.' };
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
+      t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
+        `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
+        `<span class="fc back"><span class="k">${esc(t.sign)}</span><span>${esc(back)}</span></span></button>`).join('') + '</div>';
+    return { cap: t.cap, cls: 'flipset', html };
+  },
+  'transplant-cards'(l) {
+    const ic = {
+      cut: `<path d="M8 30L32 10M10 10l22 20" stroke="${C.teal2}" stroke-width="3" stroke-linecap="round"/>`,
+      kin: `<circle cx="13" cy="12" r="5" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><circle cx="27" cy="14" r="4" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><path d="M6 32c0-7 4-11 7-11s7 4 7 11M21 32c0-6 3-9 6-9s6 3 6 9" fill="none" stroke="${C.teal2}" stroke-width="2"/>`,
+      home: `<path d="M6 20L20 8l14 12v14H6z" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><rect x="16" y="24" width="8" height="10" fill="#fff" stroke="${C.teal2}" stroke-width="2"/>`,
+    };
+    const t = l === 'bn'
+      ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
+          c: [['cut', 'বোন ম্যারো ট্রান্সপ্লান্ট মানে হাড় কেটে অপারেশন', 'সত্যি?', 'নতুন কোষ সরু নল দিয়ে রক্তে দেওয়া হয়, রক্ত দেওয়ার মতো। ব্যথা লাগে না।'],
+            ['kin', 'বাবা-মা সবসময় সবচেয়ে ভালো দাতা', 'সত্যি?', 'সবচেয়ে ভালো মিল সাধারণত ভাই বা বোন। এইচএলএ পরীক্ষায় মিল দেখা হয়।'],
+            ['home', 'ছুটি পেলেই ট্রান্সপ্লান্ট শেষ', 'সত্যি?', 'পুরো সেরে উঠতে এক বছর পর্যন্ত লাগতে পারে। চেকআপ, সংক্রমণ থেকে সাবধানতা আর ওষুধ চলতে থাকে।']],
+          cap: 'ট্রান্সপ্লান্টের পর জ্বর হলে সঙ্গে সঙ্গে টিমকে জানান।' }
+      : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
+          c: [['cut', 'A bone marrow transplant is an operation on the bones', 'True?', 'The new cells are given into the blood through a thin tube, like a transfusion. It is not painful.'],
+            ['kin', 'Parents are always the best donors', 'True?', 'The best match is usually a brother or sister. HLA typing checks the match.'],
+            ['home', 'Going home means the transplant is over', 'True?', 'Full recovery can take up to a year, with check-ups, care against infection and medicines.']],
+          cap: 'After a transplant, tell the team at once about any fever.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
       t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
         `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
