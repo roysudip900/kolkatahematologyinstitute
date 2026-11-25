@@ -37,6 +37,7 @@ Author: [Dr. Sudip Roy](https://share.google/OLTZr4ebHj8UmXFnB), MBBS, MD, DM (C
 - [Blood clots and blood thinners](https://kolkatahematologyinstitute.com/en/clots/): What a clot in the leg (DVT) and in the lungs (PE) are, who is at risk, the signs, living with blood thinners, and why never to stop them on your own.
 - [Sickle cell disease](https://kolkatahematologyinstitute.com/en/sickle-cell/): What sickle cell disease and being a carrier mean, the signs and crises, everyday care to prevent crises, treatment, and marriage and family planning.
 - [Blood problems in pregnancy](https://kolkatahematologyinstitute.com/en/pregnancy-blood/): Anaemia in pregnancy and its treatment, low platelets, the carrier test for thalassemia and sickle cell, and blood clots.
+- [Bone marrow transplant](https://kolkatahematologyinstitute.com/en/transplant/): What a transplant is and who it is for, finding a matching donor, what happens step by step, what the months after ask of a family, and the risks.
 
 ## অধ্যায় (বাংলা)
 - [অ্যানিমিয়া: রক্তাল্পতা](https://kolkatahematologyinstitute.com/anaemia/): সব সময় ক্লান্তি, সিঁড়ি ভাঙলে হাঁফ, রিপোর্টে হিমোগ্লোবিন কম? অ্যানিমিয়া মানে কী আর কারণ খোঁজা কেন জরুরি, লিখেছেন কলকাতার হেমাটোলজিস্ট।
@@ -71,3 +72,4 @@ Author: [Dr. Sudip Roy](https://share.google/OLTZr4ebHj8UmXFnB), MBBS, MD, DM (C
 - [রক্ত জমাট বাঁধা ও রক্ত পাতলা করার ওষুধ](https://kolkatahematologyinstitute.com/clots/): পায়ে জমাট (ডিভিটি) আর ফুসফুসে জমাট (পিই) কী, কাদের বেশি হয়, লক্ষণ, রক্ত পাতলা করার ওষুধ নিয়ে রোজকার জীবন, আর কেন নিজে থেকে বন্ধ নয়।
 - [সিকল সেল ডিজিজ](https://kolkatahematologyinstitute.com/sickle-cell/): সিকল সেল ডিজিজ আর বাহক হওয়া কী, লক্ষণ আর ক্রাইসিস, ক্রাইসিস আটকানোর রোজকার যত্ন, চিকিৎসা, আর বিয়ে ও পরিবার পরিকল্পনা।
 - [গর্ভাবস্থায় রক্তের সমস্যা](https://kolkatahematologyinstitute.com/pregnancy-blood/): গর্ভাবস্থায় অ্যানিমিয়া আর তার চিকিৎসা, প্লেটলেট কম হওয়া, থ্যালাসেমিয়া আর সিকল সেলের বাহক পরীক্ষা, আর রক্ত জমাট বাঁধা।
+- [বোন ম্যারো ট্রান্সপ্লান্ট](https://kolkatahematologyinstitute.com/transplant/): ট্রান্সপ্লান্ট কী আর কাদের জন্য, দাতা খোঁজা আর মিল দেখা, ধাপে ধাপে কী হয়, পরের মাসগুলোয় পরিবারের কী করতে হয়, আর ঝুঁকি।
