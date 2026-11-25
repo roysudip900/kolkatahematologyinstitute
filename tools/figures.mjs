@@ -1051,8 +1051,8 @@ const FIG = {
   // right). It grows from a small shape tucked under the ribs to a large one reaching down past them. No numbers.
   'spleen-map'(l) {
     const t = l === 'bn'
-      ? { small: 'সাধারণ মাপের পিলে', big: 'বড় পিলে', left: 'বাঁ দিক', cap: 'পিলে থাকে পেটের ওপরের বাঁ দিকে, বাঁ পাঁজরের পিছনে। বড় হলে পাঁজর ছাড়িয়ে নিচে নেমে আসে, তখন ডাক্তার পেটে চাপ দিয়ে বুঝতে পারেন। বড় পিলে চোটে ফেটে যেতে পারে।' }
-      : { small: 'usual size', big: 'enlarged', left: 'left side', cap: 'The spleen sits in the upper left of the belly, behind the left ribs. When it is enlarged it reaches down below the ribs, where a doctor can feel it. An enlarged spleen can burst after a blow.' };
+      ? { small: 'সাধারণ মাপের পিলে', big: 'বড় পিলে', left: 'শরীরের বাঁ দিক', cap: 'পিলে থাকে পেটের ওপরের বাঁ দিকে, বাঁ পাঁজরের পিছনে। বড় হলে পাঁজর ছাড়িয়ে নিচে নেমে আসে, তখন ডাক্তার পেটে চাপ দিয়ে বুঝতে পারেন। বড় পিলে চোটে ফেটে যেতে পারে।' }
+      : { small: 'usual size', big: 'enlarged', left: 'body\'s left', cap: 'The spleen sits in the upper left of the belly, behind the left ribs. When it is enlarged it reaches down below the ribs, where a doctor can feel it. An enlarged spleen can burst after a blow.' };
     const torso = (x) => `<path d="M${x} 30c-30 0-50 20-50 60v90c0 20 20 30 50 30s50-10 50-30V90c0-40-20-60-50-60z" fill="#fff" stroke="${C.teal2}" stroke-width="2"/>` +
       [0, 1, 2].map((i) => `<path d="M${x - 44} ${70 + i * 12}q44 ${18} 88 0" stroke="${C.muted}" stroke-width="1.5" fill="none" opacity=".6"/>`).join('');
     let body = torso(90) + torso(270);
@@ -2285,7 +2285,7 @@ const TRY = {
   'spleen-cards'(l) {
     const ic = {
       sp: `<path d="M24 6c8 1 10 13 6 26s-13 8-14 2 2-14 2-20 0-9 6-8z" fill="${C.red}" opacity=".8"/>`,
-      knife: `<path d="M8 30L28 10l4 4-20 20z" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/>`,
+      knife: `<rect x="9" y="6" width="22" height="28" rx="3" fill="#fff" stroke="${C.teal2}" stroke-width="2"/><path d="M14 16l3 3 6-6M14 26h12" stroke="${C.teal}" stroke-width="2" fill="none"/>`,
       ball: `<circle cx="20" cy="20" r="12" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><path d="M8 20h24M20 8v24" stroke="${C.teal2}" stroke-width="1.5"/>`,
     };
     const t = l === 'bn'
