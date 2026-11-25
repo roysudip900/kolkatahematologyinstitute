@@ -39,6 +39,7 @@ Author: [Dr. Sudip Roy](https://share.google/OLTZr4ebHj8UmXFnB), MBBS, MD, DM (C
 - [Blood problems in pregnancy](https://kolkatahematologyinstitute.com/en/pregnancy-blood/): Anaemia in pregnancy and its treatment, low platelets, the carrier test for thalassemia and sickle cell, and blood clots.
 - [Bone marrow transplant](https://kolkatahematologyinstitute.com/en/transplant/): What a transplant is and who it is for, finding a matching donor, what happens step by step, what the months after ask of a family, and the risks.
 - [Getting a blood transfusion](https://kolkatahematologyinstitute.com/en/blood-transfusion/): What a transfusion is and why it is needed, what happens before, during and after, how safe the blood is, side effects, and the signs afterwards that need a hospital.
+  - [Blood transfusion: donating blood](https://kolkatahematologyinstitute.com/en/blood-transfusion/donation/): Why donors are needed, who can and cannot give blood, what happens when you give, how safe it is for the donor, and common myths.
 
 ## অধ্যায় (বাংলা)
 - [অ্যানিমিয়া: রক্তাল্পতা](https://kolkatahematologyinstitute.com/anaemia/): সব সময় ক্লান্তি, সিঁড়ি ভাঙলে হাঁফ, রিপোর্টে হিমোগ্লোবিন কম? অ্যানিমিয়া মানে কী আর কারণ খোঁজা কেন জরুরি, লিখেছেন কলকাতার হেমাটোলজিস্ট।
@@ -75,3 +76,4 @@ Author: [Dr. Sudip Roy](https://share.google/OLTZr4ebHj8UmXFnB), MBBS, MD, DM (C
 - [গর্ভাবস্থায় রক্তের সমস্যা](https://kolkatahematologyinstitute.com/pregnancy-blood/): গর্ভাবস্থায় অ্যানিমিয়া আর তার চিকিৎসা, প্লেটলেট কম হওয়া, থ্যালাসেমিয়া আর সিকল সেলের বাহক পরীক্ষা, আর রক্ত জমাট বাঁধা।
 - [বোন ম্যারো ট্রান্সপ্লান্ট](https://kolkatahematologyinstitute.com/transplant/): ট্রান্সপ্লান্ট কী আর কাদের জন্য, দাতা খোঁজা আর মিল দেখা, ধাপে ধাপে কী হয়, পরের মাসগুলোয় পরিবারের কী করতে হয়, আর ঝুঁকি।
 - [রক্ত নেওয়া](https://kolkatahematologyinstitute.com/blood-transfusion/): রক্ত দেওয়া কী আর কেন লাগে, আগে, মাঝে আর পরে কী হয়, রক্ত কতটা নিরাপদ, পার্শ্বপ্রতিক্রিয়া, আর পরে কোন লক্ষণে হাসপাতালে যাবেন।
+  - [রক্তদান](https://kolkatahematologyinstitute.com/blood-transfusion/donation/): কেন রক্তদাতা দরকার, কারা রক্ত দিতে পারেন আর কারা নয়, রক্ত দেওয়ার সময় কী হয়, দাতার পক্ষে কতটা নিরাপদ, আর চেনা ভুল ধারণা।
