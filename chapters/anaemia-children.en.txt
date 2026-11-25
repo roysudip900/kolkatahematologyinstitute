@@ -12,23 +12,23 @@ The grandmother says the girl has picked up a bad habit and the boy has turned n
 
 # Why small children run short of iron
 
-Children grow fast, and growing takes a lot of iron. A baby is born with a store of it, but as the baby grows, iron has to come from food as well. Toddlers are among the children most likely to run short.
+Children grow fast, and growing takes a lot of iron. Low iron often starts between about nine months and one year, as a baby moves on to ordinary food, and young children are among the most likely to run short.
 
-Milk can be part of the reason. Cow's milk has little iron, and it makes the iron in other food harder to absorb. A toddler who fills up on milk through the day has little appetite left for the food that carries iron. In the first year, breast milk or formula suits a baby better than cow's milk. Ask your child's doctor what to give, and when.
+Milk can be part of the reason. Cow's milk has little iron, and it makes the iron in other food harder to absorb. A toddler who fills up on milk through the day has little appetite left for the food that carries iron. Mother's milk is a better source of iron than cow's milk, so for the first six months breast milk alone is best, and after that the baby starts other food. Make sure a toddler eats enough solid food rich in iron, and ask your child's doctor what to give, and when.
 
 [figure: iron-gap]
 
 # Mud, chalk and plaster
 
-Every baby puts things in their mouth. That is how babies find out about the world. Eating mud, chalk, plaster, paper or ice again and again, for weeks, is different. Doctors call it pica. It is common in small children, and low iron can be behind it.
+Every baby puts things in their mouth. That is how babies find out about the world. Wanting to eat mud, chalk, plaster, paper or ice again and again, for weeks, is different. Doctors call it pica, and low iron can be behind it.
 
-Some of these things do harm of their own. Mud can carry infection. Flakes and plaster from an old painted wall can carry lead, and a body that is short of iron takes up more lead than usual. Lead poisoning can itself cause behaviour and school problems. If your child has been eating from a wall, tell the doctor, because a lead test may be needed.
+Some of these things do harm of their own. Soil, dust and flakes of old paint can carry lead, and small children take in more of it than adults. A child who is short of iron takes up more lead. Lead can itself cause behaviour and learning problems. If your child has been eating from a wall, tell the doctor, because a lead test may be needed.
 
 # When it looks like naughtiness
 
 Low iron can show in a child's mood and in schoolwork. A child who is short of iron may be irritable, quick to anger and tired, quiet with other children, and slow to pay attention, and may start to fall behind in class. At home people call it temper, and at school they call it not trying.
 
-Anaemia that goes on for a long time can hold back a young child's development, so it is worth finding early.
+Anaemia that goes on for a long time can hold back a young child's development and learning, so it is worth finding early.
 
 Behaviour and school troubles have many causes, and a child who is struggling may need other help too, from the school or a child specialist. A blood count is a quick way to rule one cause in or out. Ask for it before anyone decides the child is just naughty.
 
@@ -60,7 +60,7 @@ If your child keeps eating mud, chalk or plaster, or has been tired and irritabl
 
 ## Why does my child eat mud or chalk?
 
-Small children try everything with their mouths. If a child keeps eating mud, chalk, plaster or paper for weeks, it is called pica, and low iron can be behind it. See your doctor. A blood count, and sometimes a lead test, can show what is going on.
+Small children try everything with their mouths. If a child keeps wanting to eat mud, chalk, plaster or paper for weeks, it is called pica, and low iron can be behind it. See your doctor. A blood count, and sometimes a lead test, can show what is going on.
 
 ## Can anaemia affect a child's behaviour and studies?
 
@@ -70,14 +70,19 @@ It can. A child short of iron may be irritable, quick to anger, tired and slow t
 
 It can. Cow's milk has little iron and makes the iron in other food harder to absorb, and a child who drinks a lot of it often eats less of everything else. Your child's doctor can tell you how much milk suits your child's age.
 
+## My child has a fever or loose motions. Should the iron syrup from the anganwadi go on?
+
+Ask the health worker or your child's doctor before giving any more, and do not decide on your own. The government's Anemia Mukt Bharat programme says that iron given to prevent anaemia should be held back during an acute illness such as fever, diarrhoea or pneumonia, and that iron treatment during an illness is decided by the treating doctor.
+
 ## Should I give my child iron or a tonic on my own?
 
 No. Get a blood test first, so the doctor knows whether iron is low and why. Too much iron is dangerous for children, so give it only as your child's doctor prescribes, and keep all iron tablets out of reach.
 
 # Sources
 
-- MedlinePlus: Anemia caused by low iron, infants and toddlers | https://medlineplus.gov/ency/article/007618.htm
-- MedlinePlus: Anemia caused by low iron, children | https://medlineplus.gov/ency/article/007134.htm
-- MedlinePlus: Pica | https://medlineplus.gov/ency/article/001538.htm
+- NHS: Iron deficiency anaemia | https://www.nhs.uk/conditions/iron-deficiency-anaemia/
+- American Society of Hematology: Iron-deficiency anemia | https://www.hematology.org/education/patients/anemia/iron-deficiency
+- WHO: Lead poisoning and health | https://www.who.int/news-room/fact-sheets/detail/lead-poisoning-and-health
+- Ministry of Health and Family Welfare: Anemia Mukt Bharat Abhiyaan operational guidelines (June 2026) | https://nhm.gov.in/New-Update-2025-26/Nutrition/AMB-guidelines/AMB-Abhiyaan-Guidelines.pdf
 - WHO: Anaemia fact sheet | https://www.who.int/news-room/fact-sheets/detail/anaemia
 - National Heart, Lung, and Blood Institute: Iron-deficiency anemia | https://www.nhlbi.nih.gov/health/anemia/iron-deficiency-anemia
