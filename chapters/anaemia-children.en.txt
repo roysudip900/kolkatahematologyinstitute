@@ -12,7 +12,7 @@ The grandmother says the girl has picked up a bad habit and the boy has turned n
 
 # Why small children run short of iron
 
-Children grow fast, and growing takes a lot of iron. Low iron often starts between about nine months and one year, as a baby moves on to ordinary food, and young children are among the most likely to run short.
+Children grow fast, and growing takes a lot of iron. When it happens, low iron usually starts between about nine months and one year, as a baby moves on to ordinary food, and young children are among the most likely to run short.
 
 Milk can be part of the reason. Cow's milk has little iron, and it makes the iron in other food harder to absorb. A toddler who fills up on milk through the day has little appetite left for the food that carries iron. Mother's milk is a better source of iron than cow's milk, so for the first six months breast milk alone is best, and after that the baby starts other food. Make sure a toddler eats enough solid food rich in iron, and ask your child's doctor what to give, and when.
 
@@ -103,9 +103,9 @@ It can. A child short of iron may be irritable, quick to anger, tired and slow t
 
 It can. Cow's milk has little iron and makes the iron in other food harder to absorb, and a child who drinks a lot of it often eats less of everything else. Your child's doctor can tell you how much milk suits your child's age.
 
-## My child has a fever or loose motions. Should the iron syrup from the anganwadi go on?
+## My child has a fever or loose motions. Should the iron syrup from the ASHA or the anganwadi go on?
 
-Ask the health worker or your child's doctor before giving any more, and do not decide on your own. The government's Anemia Mukt Bharat programme says that iron given to prevent anaemia should be held back during an acute illness such as fever, diarrhoea or pneumonia, and that iron treatment during an illness is decided by the treating doctor.
+Ask the health worker or your child's doctor before giving any more, and do not decide on your own. The government's Anemia Mukt Bharat programme tells health workers to hold back iron given to prevent anaemia during an acute illness such as fever, diarrhoea or pneumonia, and says that iron treatment during an illness is decided by the treating doctor.
 
 ## Should I give my child iron or a tonic on my own?
 
@@ -114,7 +114,7 @@ No. Get a blood test first, so the doctor knows whether iron is low and why. Too
 # Sources
 
 - NHS: Iron deficiency anaemia | https://www.nhs.uk/conditions/iron-deficiency-anaemia/
-- American Society of Hematology: Iron-deficiency anemia | https://www.hematology.org/education/patients/anemia/iron-deficiency
+- American Society of Hematology: Iron-deficiency anemia | https://www.hematology.org/resources/patients/anemia/iron-deficiency
 - WHO: Lead poisoning and health | https://www.who.int/news-room/fact-sheets/detail/lead-poisoning-and-health
 - Ministry of Health and Family Welfare: Anemia Mukt Bharat Abhiyaan operational guidelines (June 2026) | https://nhm.gov.in/New-Update-2025-26/Nutrition/AMB-guidelines/AMB-Abhiyaan-Guidelines.pdf
 - WHO: Anaemia fact sheet | https://www.who.int/news-room/fact-sheets/detail/anaemia
