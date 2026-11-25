@@ -26,7 +26,7 @@ A complete blood count is often done at the same time, because it counts the pla
 
 # Tests before an operation
 
-Before some operations, a dental extraction or a biopsy, the team may ask for PT, INR and APTT with a blood count, especially when there is a personal or family history of bleeding. Tell the doctor if you or anyone in your family bleeds a lot after cuts, teeth extraction, childbirth or operations, or has very heavy periods. The story of your bleeding often matters as much as the test.
+Before some operations, or before a tooth is pulled or a biopsy is taken, the team may ask for PT, INR and APTT with a blood count, especially when there is a personal or family history of bleeding. Tell the doctor if you or anyone in your family bleeds a lot after cuts, teeth extraction, childbirth or operations, or has very heavy periods. The story of your bleeding often matters as much as the test.
 
 If a result needs a closer look, the surgeon may ask a hematologist to see you before the operation.
 
@@ -52,7 +52,7 @@ Screening tests that come back within the lab's range do not rule out a bleeding
 
 # D-dimer when a clot is suspected
 
-A D-dimer test can be a first step when a clot in a leg vein or the lungs is suspected in someone who is otherwise well. A raised result means a clot is possible, but it does not prove one. A scan, such as an ultrasound of the leg or a CT scan of the lungs, is usually what shows whether there is a clot.
+A D-dimer test can be a first step when a clot in a leg vein or the lungs is suspected in someone who is otherwise well. The doctor reads the result together with how you are, and it does not prove a clot on its own. A scan, such as an ultrasound of the leg or a CT scan of the lungs, is usually what shows whether there is a clot.
 
 # Getting a good sample
 
@@ -61,7 +61,7 @@ Clotting tests are sensitive to how the sample is taken.
 - You do not need to fast before a clotting test.
 - Rest for a few minutes before the sample, and avoid hard exercise just before, because it can change some results.
 - Tell the team about every medicine, including aspirin, painkillers and blood thinners, because some can change the results. Do not stop any medicine on your own before a test.
-- The blood goes into a special tube that must be filled to the right level. If the lab asks for a new sample, it is usually because the tube was not filled enough or the blood clotted in it.
+- The blood goes into a special tube that must be filled to the right level. If the lab asks for a new sample, it can be because the tube was not filled enough or the blood clotted in it.
 
 [figure: coag-cards]
 
@@ -75,8 +75,8 @@ The clerk shows his report to his doctor instead of changing his tablets. The do
 
 Go at once, and do not drive yourself, if you have:
 
-- bleeding that will not stop after pressing on it for a while
-- blood in vomit, black or bloody stools, or coughing up blood
+- bleeding that will not stop after pressing firmly on it for some minutes
+- blood in vomit or urine, black or bloody stools, or coughing up blood
 - a sudden severe headache, or a hard knock to the head while on a blood thinner
 - sudden breathlessness or chest pain
 - a painful, swollen leg

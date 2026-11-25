@@ -2199,12 +2199,12 @@ const TRY = {
           c: [['report', 'রিপোর্টে একটা মান দাগানো মানেই রোগ', 'সত্যি?', 'একটা ফল দিয়ে রোগ ধরা যায় না। ডাক্তার রক্ত পড়ার ইতিহাস আর ওষুধ মিলিয়ে দেখেন, দরকারে আবার করান।'],
             ['pill', 'আইএনআর দেখে নিজেই ওয়ারফারিন বাড়ানো-কমানো যায়', 'সত্যি?', 'কতটা খাবেন, ঠিক করেন ডাক্তার বা ওয়ারফারিন ক্লিনিক। পরীক্ষাও বাদ দেবেন না।'],
             ['drop', 'পরীক্ষা সীমার মধ্যে এলে রক্ত পড়ার সমস্যা থাকতেই পারে না', 'সত্যি?', 'কিছু অসুখে স্ক্রিনিং পরীক্ষা সীমার মধ্যে আসে। সহজে রক্ত পড়লে ডাক্তারকে বলুন।']],
-          cap: 'রক্ত না থামলে, বমি বা পায়খানায় রক্ত, হঠাৎ খুব মাথাব্যথা বা হাঁফ ধরলে সঙ্গে সঙ্গে হাসপাতালে যান।' }
+          cap: 'রক্ত না থামলে, বমি বা পায়খানায় রক্ত, হঠাৎ খুব মাথাব্যথা, শ্বাসকষ্ট, বুকে ব্যথা বা একটা পা ফুলে ব্যথা হলে সঙ্গে সঙ্গে হাসপাতালে যান।' }
       : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
           c: [['report', 'A value marked on the report means a disease', 'True?', 'A single result does not make a diagnosis. The doctor reads it with your bleeding history and medicines, and may repeat it.'],
             ['pill', 'You can adjust warfarin yourself from the INR', 'True?', 'The doctor or warfarin clinic decides how much. Do not skip a test either.'],
             ['drop', 'Tests within range mean there can be no bleeding problem', 'True?', 'Screening tests can be within range in some bleeding disorders. Tell the doctor if you bleed easily.']],
-          cap: 'Bleeding that will not stop, blood in vomit or stools, a sudden severe headache or sudden breathlessness needs a hospital at once.' };
+          cap: 'Bleeding that will not stop, blood in vomit or stools, a sudden severe headache, sudden breathlessness, chest pain or a painful swollen leg needs a hospital at once.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
       t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
         `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
