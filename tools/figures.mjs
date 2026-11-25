@@ -2338,12 +2338,12 @@ const TRY = {
       ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
           c: [['eye', 'চোখ হলুদ মানেই লিভারের জন্ডিস', 'সত্যি?', 'লোহিত কণিকা তাড়াতাড়ি ভেঙে গেলেও জন্ডিস হয়। সঙ্গে ফ্যাকাশে ভাব থাকলে ডাক্তারকে বলুন।'],
             ['cup', 'আখের রস আর তেল বন্ধ করলেই কামলা সারে', 'সত্যি?', 'এতে কারণের চিকিৎসা হয় না। ম্যালেরিয়া বা অ্যানিমিয়ার মতো কারণ খুঁজতে ডাক্তার দেখান।'],
-            ['baby', 'নবজাতকের যেকোনো জন্ডিস দেরি করে দেখালেও চলে', 'সত্যি?', 'প্রথম দিনেই জন্ডিস, বা সঙ্গে খুব ঘুম, না খাওয়া বা জ্বর হলে সঙ্গে সঙ্গে হাসপাতালে যান।']],
+            ['baby', 'নবজাতকের যেকোনো জন্ডিস দেরি করে দেখালেও চলে', 'সত্যি?', 'প্রথম দিনেই জন্ডিস, বা সঙ্গে খুব ঘুম, না খাওয়া, জ্বর বা গা ঠান্ডা হলে সঙ্গে সঙ্গে হাসপাতালে যান।']],
           cap: 'জন্ডিসের সঙ্গে গাঢ় প্রস্রাব, শ্বাসকষ্ট বা খুব জ্বর হলে সঙ্গে সঙ্গে হাসপাতালে যান।' }
       : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
           c: [['eye', 'Yellow eyes always mean liver jaundice', 'True?', 'Red cells breaking down too fast can also cause jaundice. If there is paleness too, tell the doctor.'],
             ['cup', 'Sugarcane juice and no oil will cure "kamla"', 'True?', 'This does not treat the cause. See a doctor to look for causes such as malaria or anaemia.'],
-            ['baby', 'Any newborn jaundice can wait', 'True?', 'Jaundice in the first day, or with sleepiness, poor feeding or fever, needs a hospital at once.']],
+            ['baby', 'Any newborn jaundice can wait', 'True?', 'Jaundice in the first day, or with sleepiness, poor feeding, fever or a baby who feels cold, needs a hospital at once.']],
           cap: 'Jaundice with dark urine, breathlessness or a high fever needs a hospital at once.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
       t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +

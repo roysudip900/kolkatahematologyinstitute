@@ -6,11 +6,11 @@ She is seven and lives in a village near Jalpaiguri. She had a high fever last w
 
 In Kolkata, a woman of thirty-two has been short of breath on the stairs for two weeks. Her husband says her eyes look yellow. Her doctor found her haemoglobin low and sent her to a hematologist.
 
-The mother wants to know whether this is liver jaundice. The woman wants to know why her blood is breaking down.
+The mother wants to know whether this is liver jaundice. The woman wants to know why her haemoglobin is low.
 
 # Why anaemia and jaundice can come together
 
-Red cells usually live for about four months, and then the spleen removes them. In haemolytic anaemia, red cells are destroyed faster than the bone marrow can replace them. The person becomes pale, tired and weak. As the broken red cells are cleared, a yellow substance called bilirubin builds up, and the eyes and skin turn yellow. The spleen or liver may become larger.
+Red cells live for up to about four months, and then the spleen removes them. In haemolytic anaemia, red cells are destroyed faster than the bone marrow can replace them. The person becomes pale, tired and weak. As the broken red cells are cleared, a yellow substance called bilirubin builds up, and the eyes and skin turn yellow. The spleen or liver may become larger.
 
 Jaundice also has other causes, such as hepatitis, liver disease from alcohol, gallstones and pancreatitis. That is why the doctor looks for the reason, and why home remedies for "kamla" can delay the right treatment.
 
@@ -21,7 +21,7 @@ Jaundice also has other causes, such as hepatitis, liver disease from alcohol, g
 - infections, including malaria, which can break red cells and cause jaundice and dark urine
 - some medicines
 - the body's defences attacking its own red cells (autoimmune haemolytic anaemia)
-- inherited blood conditions, such as sickle cell disease and thalassemia
+- inherited blood conditions, such as sickle cell disease, thalassemia, and G6PD deficiency, in which an enzyme that protects red cells is low
 - reactions to a blood transfusion
 - in a newborn baby, a different blood group from the mother's
 
@@ -48,7 +48,7 @@ Treatment depends on the cause.
 - An infection such as malaria is treated quickly.
 - If a medicine is the cause, the doctor changes or stops it. Do not stop or change any medicine on your own.
 - When the body attacks its own red cells, medicines that calm the immune system are used.
-- A blood transfusion may be needed in an emergency, when the anaemia is severe. It does not treat the cause, which still has to be found and treated.
+- A blood transfusion may be needed in an emergency, when the anaemia is severe, or regularly in thalassemia major, where the body cannot make enough healthy blood. It does not treat the cause, which still has to be found and treated.
 - For some people, removing the spleen or a bone marrow transplant is considered.
 - Mild haemolytic anaemia may need no treatment, only check-ups.
 
@@ -58,7 +58,7 @@ Untreated severe haemolytic anaemia can strain the heart, so it should not be le
 
 # Jaundice in a newborn baby
 
-Yellow skin and eyes are common in newborn babies and are usually harmless, getting better within about two weeks. But jaundice in the first day of life, or jaundice in a baby who is very sleepy, not feeding, floppy or has a fever, needs a hospital at once. One cause is the baby's blood group differing from the mother's, which breaks down the baby's red cells.
+Yellow skin and eyes are common in newborn babies and are usually harmless, getting better within about two weeks. But jaundice in the first day of life, or jaundice in a baby who is very sleepy, not feeding, floppy, has a fever or feels cold, needs a hospital at once. One cause is the baby's blood group differing from the mother's, which breaks down the baby's red cells.
 
 # How the stories go on
 
@@ -76,7 +76,7 @@ Go at once, and do not drive yourself, if there is jaundice with:
 - very pale skin and extreme tiredness
 - bleeding for no reason
 
-For a baby: jaundice in the first day of life, or jaundice with sleepiness, poor feeding, floppiness, fever or fast breathing.
+For a baby: jaundice in the first day of life, or jaundice with a baby who is very sleepy or hard to wake, not feeding, floppy or stiff, jerking, has a fever or feels cold, has no wet nappies, or is breathing fast or with difficulty.
 
 # Take these questions to your doctor
 
@@ -99,12 +99,12 @@ They cannot treat the cause, and they can delay treatment for something serious,
 
 ## Is jaundice in my newborn dangerous?
 
-Usually not. Most newborn jaundice is harmless and fades within about two weeks. Jaundice in the first day, or with sleepiness, poor feeding or fever, needs a hospital at once.
+Usually not. Most newborn jaundice is harmless and fades within about two weeks. Jaundice in the first day, or with sleepiness, poor feeding, fever or a baby who feels cold, needs a hospital at once.
 
 # Sources
 
 - National Heart, Lung, and Blood Institute: Hemolytic anemia | https://www.nhlbi.nih.gov/health/anemia/hemolytic-anemia
 - American Society of Hematology: Anemia | https://www.hematology.org/resources/patients/anemia
 - NHS: Jaundice | https://www.nhs.uk/conditions/jaundice/
-- NHS: Jaundice in babies | https://www.nhs.uk/conditions/jaundice-newborn/
+- NHS: Jaundice in babies | https://www.nhs.uk/conditions/jaundice-in-babies/
 - World Health Organization: Malaria | https://www.who.int/news-room/fact-sheets/detail/malaria
