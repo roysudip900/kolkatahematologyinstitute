@@ -932,6 +932,35 @@ const FIG = {
         body),
     };
   },
+  // Transfusion: a drip bag on a stand with a line to an arm. Three checks light up in turn beside it: the blood
+  // sample that matches the group, the signature, and pulse, temperature and blood pressure. No numbers.
+  'transfusion-steps'(l) {
+    const t = l === 'bn'
+      ? { s: ['রক্তের নমুনায় গ্রুপ মেলানো', 'সম্মতিপত্রে সই', 'পালস, তাপ, ব্লাড প্রেশার দেখা', 'খারাপ লাগলে তখনই নার্সকে বলুন'],
+          cap: 'রক্ত দেওয়ার আগে নমুনা নিয়ে গ্রুপ মেলানো হয় আর সাধারণত সম্মতিপত্রে সই নেওয়া হয়। আগে, মাঝে আর পরে পালস, তাপ আর ব্লাড প্রেশার দেখা হয়। খারাপ লাগলে তখনই নার্সকে বলুন।' }
+      : { s: ['a blood sample to match the group', 'a consent form', 'pulse, temperature, blood pressure', 'feel unwell? tell the nurse at once'],
+          cap: 'Before a transfusion, a blood sample is taken to match the group, and a consent form is usually signed. Pulse, temperature and blood pressure are checked before, during and after. If you feel unwell, tell the nurse at once.' };
+    let body = `<path d="M70 20V200M50 200h40M70 24h30" stroke="${C.muted}" stroke-width="3" fill="none"/>` +
+      `<rect x="86" y="28" width="30" height="46" rx="8" fill="${C.roseBg}" stroke="${C.red}" stroke-width="2.5"/><rect x="90" y="44" width="22" height="26" rx="5" fill="${C.red}" opacity=".85"/>` +
+      `<path d="M101 74v20c0 30-10 50-40 60" stroke="${C.red}" stroke-width="2.5" fill="none"/>` +
+      `<path d="M20 160c20-6 30-6 46-4l40 8" stroke="#f3d9c4" stroke-width="22" stroke-linecap="round" fill="none"/>` +
+      `<circle class="tf-drop" cx="101" cy="80" r="3.5" fill="${C.red}"/>`;
+    t.s.forEach((x, i) => {
+      const y = 40 + i * 44, warn = i === 3;
+      body += `<g class="tf-c tf-c${i}"><circle cx="150" cy="${y}" r="10" fill="${warn ? C.amberBg : C.mint}" stroke="${warn ? C.amber : C.teal}" stroke-width="2.5"/>` +
+        (warn ? T(150, y + 4.5, '!', { a: 'middle', size: 12.5, fill: C.amber, w: 700 }) : `<path d="M145 ${y}l4 4 7-8" stroke="${C.teal}" stroke-width="2.5" fill="none"/>`) +
+        T(168, y + 4.5, x, { a: 'start', size: 12.5, fill: warn ? C.amber : C.ink, w: warn ? 700 : 400 }) + '</g>';
+    });
+    return {
+      cap: t.cap,
+      svg: svg('tf', 360, 220, t.cap,
+        '.tf-drop{animation:tfd 2s ease-in infinite}@keyframes tfd{0%{transform:translateY(0);opacity:1}100%{transform:translateY(16px);opacity:0}}' +
+        '.tf-c{animation:tfc 8s ease-in-out infinite;opacity:.35}.tf-c1{animation-delay:2s}.tf-c2{animation-delay:4s}.tf-c3{animation-delay:6s}' +
+        '@keyframes tfc{0%,5%{opacity:.35}12%,45%{opacity:1}55%,100%{opacity:.35}}' +
+        '@media (prefers-reduced-motion:reduce){.tf-drop,.tf-c{animation:none;opacity:1}}',
+        body),
+    };
+  },
   // Anaemia, iron: two tanks of body iron. Tablets drip iron into both. In the first, a leak (heavy periods or
   // bleeding) lets it out, so the level hardly rises; in the second the leak is treated and the level slowly rises.
   'iron-tank'(l) {
@@ -2048,6 +2077,29 @@ const TRY = {
             ['kin', 'Parents are always the best donors', 'True?', 'The best match is usually a brother or sister. HLA typing checks the match.'],
             ['home', 'Going home means the transplant is over', 'True?', 'Full recovery can take up to a year, with check-ups, care against infection and medicines.']],
           cap: 'After a transplant, tell the team at once about any fever.' };
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
+      t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
+        `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
+        `<span class="fc back"><span class="k">${esc(t.sign)}</span><span>${esc(back)}</span></span></button>`).join('') + '</div>';
+    return { cap: t.cap, cls: 'flipset', html };
+  },
+  'transfusion-cards'(l) {
+    const ic = {
+      test: `<rect x="15" y="6" width="10" height="26" rx="5" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><rect x="15" y="20" width="10" height="12" rx="5" fill="${C.red}" opacity=".8"/>`,
+      shiver: `<circle cx="20" cy="13" r="6" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><path d="M10 34c0-9 4-14 10-14s10 5 10 14M4 16l3 3-3 3M36 16l-3 3 3 3" fill="none" stroke="${C.teal2}" stroke-width="2"/>`,
+      bag: `<rect x="12" y="6" width="16" height="26" rx="5" fill="${C.roseBg}" stroke="${C.red}" stroke-width="2"/><path d="M14 30v6M26 30v6" stroke="${C.red}" stroke-width="2"/>`,
+    };
+    const t = l === 'bn'
+      ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
+          c: [['test', 'দান করা রক্ত পরীক্ষা না করেই দেওয়া হয়', 'সত্যি?', 'প্রতিটা দান এইচআইভি, হেপাটাইটিস বি, সি আর সিফিলিসের জন্য পরীক্ষা করা উচিত। সংক্রমণের সম্ভাবনা খুবই কম।'],
+            ['shiver', 'রক্ত নেওয়ার সময় কাঁপুনি হলে চুপ করে থাকাই ভালো', 'সত্যি?', 'তখনই নার্সকে বলুন। রক্ত আস্তে দিলে বা থামালে সাধারণত কমে যায়।'],
+            ['bag', 'রক্ত যত বেশি দেওয়া যায়, তত ভালো', 'সত্যি?', 'দরকার ছাড়া রক্ত দিলে লাভ ছাড়াই ঝুঁকি থাকে। ডাক্তার ঠিক করেন কখন দরকার।']],
+          cap: 'পরে জ্বর, শ্বাসকষ্ট বা গাঢ় প্রস্রাব হলে সঙ্গে সঙ্গে হাসপাতালে যান।' }
+      : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
+          c: [['test', 'Donated blood is given without testing', 'True?', 'Every donation should be screened for HIV, hepatitis B and C and syphilis. The chance of infection is very low.'],
+            ['shiver', 'Shivering during a transfusion is best kept quiet', 'True?', 'Tell the nurse at once. Slowing or stopping the transfusion usually helps.'],
+            ['bag', 'The more blood, the better', 'True?', 'A transfusion that is not needed brings risk without benefit. The doctor decides when it is needed.']],
+          cap: 'A fever, breathing trouble or dark urine afterwards needs a hospital at once.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
       t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
         `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
