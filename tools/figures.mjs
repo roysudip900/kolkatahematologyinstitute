@@ -961,6 +961,35 @@ const FIG = {
         body),
     };
   },
+  // Donation: four steps in a row of rounded cards, lit one after another: the questions, the quick check (a drop
+  // from the fingertip), about ten minutes in the chair with a sealed needle, then rest and a drink. No numbers.
+  'donation-steps'(l) {
+    const t = l === 'bn'
+      ? { s: [['প্রশ্ন', 'শরীর, ওষুধ, যাতায়াত'], ['ছোট পরীক্ষা', 'প্রেশার, ওজন, এক ফোঁটা রক্ত'], ['রক্ত দেওয়া', 'মিনিট দশেক, নতুন সুচ'], ['বিশ্রাম', 'একটু খাবার আর জল']],
+          cap: 'রক্ত দেওয়ার চার ধাপ: শরীর নিয়ে প্রশ্ন, প্রেশার, ওজন আর এক ফোঁটা রক্তের ছোট পরীক্ষা, মিনিট দশেক রক্ত দেওয়া নতুন জীবাণুমুক্ত সুচে, তারপর একটু বিশ্রাম আর খাবার-জল।' }
+      : { s: [['Questions', 'health, medicines, travel'], ['A quick check', 'pressure, weight, a drop'], ['Giving blood', 'ten minutes, new needle'], ['Rest', 'a drink and a snack']],
+          cap: 'The four steps of giving blood: questions about your health, a quick check of blood pressure, weight and a drop of blood, about ten minutes giving blood with a new sterile needle, then a short rest with a drink and a snack.' };
+    const icon = [
+      (x, y) => `<rect x="${x - 9}" y="${y - 12}" width="18" height="24" rx="3" fill="#fff" stroke="${C.teal2}" stroke-width="2"/><path d="M${x - 5} ${y - 5}h10M${x - 5} ${y}h10M${x - 5} ${y + 5}h6" stroke="${C.teal2}" stroke-width="1.8"/>`,
+      (x, y) => `<path d="M${x} ${y - 12}c-6 9-9 13-9 17a9 9 0 0 0 18 0c0-4-3-8-9-17z" fill="${C.red}" opacity=".85"/>`,
+      (x, y) => `<rect x="${x - 8}" y="${y - 12}" width="16" height="22" rx="4" fill="${C.roseBg}" stroke="${C.red}" stroke-width="2"/><rect x="${x - 5}" y="${y - 3}" width="10" height="10" rx="2" fill="${C.red}" opacity=".85"/>`,
+      (x, y) => `<path d="M${x - 9} ${y - 8}h16v14a6 6 0 0 1-6 6h-4a6 6 0 0 1-6-6z" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><path d="M${x + 7} ${y - 4}h3a3 3 0 0 1 0 6h-3" fill="none" stroke="${C.teal2}" stroke-width="2"/>`,
+    ];
+    let body = '';
+    t.s.forEach(([h, sub], i) => {
+      const x = 14 + (i % 2) * 172, y = 12 + Math.floor(i / 2) * 92;
+      body += `<g class="dn-s dn-s${i}"><rect x="${x}" y="${y}" width="160" height="80" rx="12" fill="#fff" stroke="${C.teal2}" stroke-width="2"/>` +
+        icon[i](x + 26, y + 30) + T(x + 48, y + 30, h, { a: 'start', size: 12.5, fill: C.ink, w: 700 }) + T(x + 12, y + 64, sub, { a: 'start', size: 12.5, fill: C.muted }) + '</g>';
+    });
+    return {
+      cap: t.cap,
+      svg: svg('dn', 360, 196, t.cap,
+        '.dn-s{animation:dns 8s ease-in-out infinite;opacity:.35}.dn-s1{animation-delay:2s}.dn-s2{animation-delay:4s}.dn-s3{animation-delay:6s}' +
+        '@keyframes dns{0%,5%{opacity:.35}12%,45%{opacity:1}55%,100%{opacity:.35}}' +
+        '@media (prefers-reduced-motion:reduce){.dn-s{animation:none;opacity:1}}',
+        body),
+    };
+  },
   // Anaemia, iron: two tanks of body iron. Tablets drip iron into both. In the first, a leak (heavy periods or
   // bleeding) lets it out, so the level hardly rises; in the second the leak is treated and the level slowly rises.
   'iron-tank'(l) {
@@ -2100,6 +2129,29 @@ const TRY = {
             ['shiver', 'Shivering during a transfusion is best kept quiet', 'True?', 'Tell the nurse at once. Slowing or stopping the transfusion usually helps.'],
             ['bag', 'A transfusion is the best treatment for anaemia', 'True?', 'A transfusion manages an emergency. It does not treat the cause. Why the haemoglobin is low needs to be found and treated.']],
           cap: 'A fever, breathing trouble or dark urine afterwards needs a hospital at once.' };
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
+      t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
+        `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
+        `<span class="fc back"><span class="k">${esc(t.sign)}</span><span>${esc(back)}</span></span></button>`).join('') + '</div>';
+    return { cap: t.cap, cls: 'flipset', html };
+  },
+  'donation-cards'(l) {
+    const ic = {
+      weak: `<circle cx="20" cy="12" r="6" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><path d="M10 34c0-9 4-14 10-14s10 5 10 14" fill="none" stroke="${C.teal2}" stroke-width="2"/>`,
+      needle: `<path d="M8 32L26 14M24 10l6 6M22 12l6 6" stroke="${C.teal2}" stroke-width="2.5" stroke-linecap="round"/><rect x="26" y="4" width="8" height="8" rx="2" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2" transform="rotate(45 30 8)"/>`,
+      ask: `<rect x="8" y="6" width="24" height="28" rx="3" fill="#fff" stroke="${C.teal2}" stroke-width="2"/><path d="M13 14h14M13 20h14M13 26h9" stroke="${C.teal2}" stroke-width="2"/>`,
+    };
+    const t = l === 'bn'
+      ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
+          c: [['weak', 'রক্ত দিলে মাসের পর মাস দুর্বল লাগে', 'সত্যি?', 'পরীক্ষায় সুস্থ দেখা গেলে তবেই রক্ত নেওয়া হয়। দেড় দিনের মধ্যে শরীর জল পূরণ করে নেয়।'],
+            ['needle', 'রক্ত দিতে গিয়ে সুচ থেকে রোগ হতে পারে', 'সত্যি?', 'সুচ আর ব্যাগ জীবাণুমুক্ত প্যাকেটে আসে আর একবারই ব্যবহার হয়।'],
+            ['ask', 'ব্যক্তিগত প্রশ্নের উত্তর এড়িয়ে গেলেও ক্ষতি নেই', 'সত্যি?', 'খুব সাম্প্রতিক সংক্রমণ পরীক্ষায় ধরা না-ও পড়তে পারে। সত্যি উত্তর রোগীকে বাঁচায়, আর তা গোপন থাকে।']],
+          cap: 'আজ রক্ত দিতে পারবেন কিনা, ব্লাড সেন্টার বলে দেবে।' }
+      : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
+          c: [['weak', 'Giving blood leaves you weak for months', 'True?', 'You give blood only if the checks show you are well. The body replaces the fluid within about a day and a half.'],
+            ['needle', 'You can catch a disease from the needle when you give blood', 'True?', 'The needle and bag come in a sterile pack and are used only once.'],
+            ['ask', 'Skipping the personal questions does no harm', 'True?', 'Tests may miss a very recent infection. Honest answers protect the patient, and they are kept confidential.']],
+          cap: 'The blood centre tells you whether you can give blood today.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
       t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
         `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +

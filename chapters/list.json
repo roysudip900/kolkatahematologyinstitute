@@ -362,5 +362,16 @@
   "card_bn": "ডাক্তার রক্ত দিতে বলেছেন? রক্ত থেকে রোগ হবে কিনা ভাবছেন?",
   "card_en": "Told you need a transfusion? Wondering whether the blood is safe?",
   "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#E3EEF9\"/><rect x=\"18\" y=\"9\" width=\"16\" height=\"22\" rx=\"5\" fill=\"#FFFFFF\" stroke=\"#D7263D\" stroke-width=\"2\"/><rect x=\"21\" y=\"17\" width=\"10\" height=\"11\" rx=\"3\" fill=\"#D7263D\"/><path d=\"M26 31v6c0 4-3 6-8 7\" stroke=\"#D7263D\" stroke-width=\"2\" fill=\"none\"/>"
+ },
+ {
+  "id": "blood-transfusion-donation",
+  "parent": "blood-transfusion",
+  "bn": "রক্ত নেওয়া: রক্তদান",
+  "en": "Blood transfusion: donating blood",
+  "desc_bn": "কেন রক্তদাতা দরকার, কারা রক্ত দিতে পারেন আর কারা নয়, রক্ত দেওয়ার সময় কী হয়, দাতার পক্ষে কতটা নিরাপদ, আর চেনা ভুল ধারণা।",
+  "desc_en": "Why donors are needed, who can and cannot give blood, what happens when you give, how safe it is for the donor, and common myths.",
+  "card_bn": "ব্লাড ব্যাংক দাতা আনতে বলেছে? রক্ত দিলে দুর্বল হব কিনা ভাবছেন?",
+  "card_en": "Asked to bring a donor to the blood bank? Wondering if giving blood will make you weak?",
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FDECEE\"/><path d=\"M26 11c-7 10-11 15-11 20a11 11 0 0 0 22 0c0-5-4-10-11-20z\" fill=\"#D93A4A\"/><path d=\"M21 31h10M26 26v10\" stroke=\"#FFFFFF\" stroke-width=\"3\" stroke-linecap=\"round\"/>"
  }
 ]
