@@ -225,6 +225,15 @@ function reviewed(file) {
   } catch {}
   return new Date().toISOString().slice(0, 10);
 }
+// The date a chapter file was first committed, for datePublished. The build Action checks out the full
+// history (fetch-depth: 0), so the first commit is there. Falls back to the last-updated date.
+function firstPublished(file, fallback) {
+  try {
+    const d = execFileSync('git', ['log', '--follow', '--diff-filter=A', '--format=%cs', '--', file], { cwd: ROOT, encoding: 'utf8' }).trim().split('\n').pop();
+    if (d) return d;
+  } catch {}
+  return fallback;
+}
 function niceDate(iso, l) {
   const [y, m, d] = iso.split('-').map(Number);
   return new Date(Date.UTC(y, m - 1, d)).toLocaleDateString(l === 'bn' ? 'bn-IN' : 'en-IN', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
@@ -341,7 +350,7 @@ for (const c of chapters) {
         `<a class="allbtn" href="/#library">${LEFT}${l === 'bn' ? 'সব অধ্যায়' : 'All chapters'}</a>`;
       schema = ld({
         '@context': 'https://schema.org', '@type': 'MedicalWebPage', name: title, description: desc, inLanguage: l,
-        url: canonical, dateModified: date, about: { '@type': 'MedicalCondition', name: c.en.split(':')[0] },
+        url: canonical, datePublished: firstPublished(`chapters/${c.id}.${l}.txt`, date), dateModified: date, about: { '@type': 'MedicalCondition', name: c.en.split(':')[0] },
         audience: { '@type': 'MedicalAudience', audienceType: 'Patient' },
         author: [...(co ? [coPerson(c.coauthor)] : []), { '@type': 'Person', '@id': ID.author, name: AUTHOR.en, jobTitle: 'Clinical Hematologist', honorificSuffix: CRED.en }],
         publisher: { '@type': 'MedicalOrganization', '@id': ID.org, name: SITE_NAME.en, url: SITE + '/' },
