@@ -2091,14 +2091,14 @@ const TRY = {
     };
     const t = l === 'bn'
       ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
-          c: [['test', 'দান করা রক্ত পরীক্ষা না করেই দেওয়া হয়', 'সত্যি?', 'প্রতিটা দান এইচআইভি, হেপাটাইটিস বি, সি আর সিফিলিসের জন্য পরীক্ষা করা উচিত। সংক্রমণের সম্ভাবনা খুবই কম।'],
+          c: [['test', 'দান করা রক্ত পরীক্ষা না করেই দেওয়া হয়', 'সত্যি?', 'প্রতিটা দান এইচআইভি, হেপাটাইটিস বি, সি আর সিফিলিসের জন্য পরীক্ষা করা উচিত, ভারতে ম্যালেরিয়ার জন্যও। সংক্রমণের সম্ভাবনা কম, তবে শূন্য নয়।'],
             ['shiver', 'রক্ত নেওয়ার সময় কাঁপুনি হলে চুপ করে থাকাই ভালো', 'সত্যি?', 'তখনই নার্সকে বলুন। রক্ত আস্তে দিলে বা থামালে সাধারণত কমে যায়।'],
-            ['bag', 'রক্ত যত বেশি দেওয়া যায়, তত ভালো', 'সত্যি?', 'দরকার ছাড়া রক্ত দিলে লাভ ছাড়াই ঝুঁকি থাকে। ডাক্তার ঠিক করেন কখন দরকার।']],
+            ['bag', 'অ্যানিমিয়ায় রক্ত দেওয়াই সবচেয়ে ভালো চিকিৎসা', 'সত্যি?', 'রক্ত দেওয়া জরুরি অবস্থা সামলায়, কারণ সারায় না। হিমোগ্লোবিন কেন কম, তা খুঁজে চিকিৎসা করতে হয়।']],
           cap: 'পরে জ্বর, শ্বাসকষ্ট বা গাঢ় প্রস্রাব হলে সঙ্গে সঙ্গে হাসপাতালে যান।' }
       : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
-          c: [['test', 'Donated blood is given without testing', 'True?', 'Every donation should be screened for HIV, hepatitis B and C and syphilis. The chance of infection is very low.'],
+          c: [['test', 'Donated blood is given without testing', 'True?', 'Every donation should be screened for HIV, hepatitis B and C and syphilis, and in India for malaria too. The chance of infection is low, but not zero.'],
             ['shiver', 'Shivering during a transfusion is best kept quiet', 'True?', 'Tell the nurse at once. Slowing or stopping the transfusion usually helps.'],
-            ['bag', 'The more blood, the better', 'True?', 'A transfusion that is not needed brings risk without benefit. The doctor decides when it is needed.']],
+            ['bag', 'A transfusion is the best treatment for anaemia', 'True?', 'A transfusion manages an emergency. It does not treat the cause. Why the haemoglobin is low needs to be found and treated.']],
           cap: 'A fever, breathing trouble or dark urine afterwards needs a hospital at once.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
       t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
