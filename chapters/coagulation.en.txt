@@ -1,4 +1,4 @@
-> Clotting tests, such as PT, INR, APTT, fibrinogen and D-dimer, measure how well and how fast your blood forms a clot. They are asked for before some operations, to keep warfarin safe, when someone bleeds or bruises easily, and when a clot is suspected. A result on its own does not make a diagnosis, so show every report to the doctor who asked for it, and never change a medicine because of a number on a report.
+> Clotting tests, such as PT, INR, APTT, fibrinogen and D-dimer, measure how well and how fast your blood forms a clot. They are asked for before some operations, to help keep warfarin safe, when someone bleeds or bruises easily, and when a clot is suspected. A result on its own does not make a diagnosis, so show every report to the doctor who asked for it, and never change a medicine because of a number on a report.
 
 The surgeon looked at her report and said she should see a hematologist before the operation.
 
@@ -52,7 +52,7 @@ Screening tests that come back within the lab's range do not rule out a bleeding
 
 # D-dimer when a clot is suspected
 
-A D-dimer test can be a first step when a clot in a leg vein or the lungs is suspected in someone who is otherwise well. A raised result means a clot is possible, but it does not prove one. A scan, such as an ultrasound of the leg or a CT scan of the lungs, shows whether there is a clot.
+A D-dimer test can be a first step when a clot in a leg vein or the lungs is suspected in someone who is otherwise well. A raised result means a clot is possible, but it does not prove one. A scan, such as an ultrasound of the leg or a CT scan of the lungs, is usually what shows whether there is a clot.
 
 # Getting a good sample
 
