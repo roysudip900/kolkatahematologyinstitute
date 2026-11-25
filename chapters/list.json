@@ -394,5 +394,15 @@
   "card_bn": "রিপোর্টে শ্বেতকণিকা কম? ওষুধ চলার মধ্যে গলা ব্যথা আর জ্বর?",
   "card_en": "A low white cell count on the report? Sore throat and fever while on a medicine?",
   "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#E3EEF9\"/><circle cx=\"20\" cy=\"24\" r=\"7\" fill=\"#FFFFFF\" stroke=\"#2D6E8E\" stroke-width=\"2\"/><circle cx=\"20\" cy=\"24\" r=\"2.5\" fill=\"#2D6E8E\"/><circle cx=\"34\" cy=\"30\" r=\"3.5\" fill=\"#E0A23B\"/><path d=\"M29 30h10M34 25v10\" stroke=\"#E0A23B\" stroke-width=\"1.5\"/>"
+ },
+ {
+  "id": "spleen",
+  "bn": "পিলে বড় হওয়া (স্প্লিনোমেগালি)",
+  "en": "Enlarged spleen (splenomegaly)",
+  "desc_bn": "পিলে কী করে, কেন বড় হয়, লক্ষণ, কীভাবে ধরা পড়ে, চিকিৎসা, কখন বাদ দেওয়া হয়, আর পিলে ছাড়া জীবন।",
+  "desc_en": "What the spleen does, why it grows, the signs, how it is found, treatment, when it is removed, and living without a spleen.",
+  "card_bn": "ডাক্তার বলেছেন পিলে বড়? অল্প খেলেই পেট ভরে যায়?",
+  "card_en": "Told your spleen is enlarged? Feeling full after a few mouthfuls?",
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#E3EEF9\"/><path d=\"M30 11c8 1 10 13 6 26s-13 8-14 2 2-14 2-20 0-9 6-8z\" fill=\"#D7263D\" opacity=\".85\"/><path d=\"M12 18q12 6 24 0M12 24q12 6 24 0\" stroke=\"#2D6E8E\" stroke-width=\"1.5\" fill=\"none\"/>"
  }
 ]
