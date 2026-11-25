@@ -1296,7 +1296,7 @@ const TRY = {
           cap: 'জন্মের সময়ের জমানো আয়রন বাচ্চা ধীরে ধীরে খরচ করে ফেলে, অথচ বড় হতে আয়রন লেগেই চলে। মাঝের ফাঁকটা ভরাতে হয় খাবার দিয়ে। দুটো বোতাম চেপে দেখুন। ছবিতে কোনো আসল মাপ নেই।' }
       : { store: 'iron stored at birth', need: 'iron a growing child needs', x: ['birth', 'first birthday', 'second birthday'],
           milk: 'Mostly milk', food: 'Milk and family food', short: 'Iron runs short', fill: 'Food fills the gap',
-          cap: 'A baby slowly uses up the iron it was born with, while a growing child keeps needing more. Food has to fill the gap. Tap the two buttons. The drawing has no real numbers.' };
+          cap: 'A baby is born with a store of iron that runs down, while a growing child keeps needing more. Food has to fill the gap. Tap the two buttons. The drawing has no real numbers.' };
     const store = bez([40, 62], [95, 70], [135, 150], [200, 182]).concat([[340, 188]]);
     const need = bez([40, 132], [110, 124], [160, 96], [210, 90]).concat([[340, 86]]);
     let x0 = 40; for (let x = 40; x <= 340; x++) { if (yAt(store, x) >= yAt(need, x)) { x0 = x; break; } }

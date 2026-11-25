@@ -12,25 +12,55 @@ The grandmother says the girl has picked up a bad habit and the boy has turned n
 
 # Why small children run short of iron
 
-Children grow fast, and growing takes a lot of iron. A baby is born with a store of it, but as the baby grows, iron has to come from food as well. Toddlers are among the children most likely to run short.
+Children grow fast, and growing takes a lot of iron. When it happens, low iron usually starts between about nine months and one year, as a baby moves on to ordinary food, and young children are among the most likely to run short.
 
-Milk can be part of the reason. Cow's milk has little iron, and it makes the iron in other food harder to absorb. A toddler who fills up on milk through the day has little appetite left for the food that carries iron. In the first year, breast milk or formula suits a baby better than cow's milk. Ask your child's doctor what to give, and when.
+Milk can be part of the reason. Cow's milk has little iron, and it makes the iron in other food harder to absorb. A toddler who fills up on milk through the day has little appetite left for the food that carries iron. Mother's milk is a better source of iron than cow's milk, so for the first six months breast milk alone is best, and after that the baby starts other food. Make sure a toddler eats enough solid food rich in iron, and ask your child's doctor what to give, and when.
 
 [figure: iron-gap]
 
 # Mud, chalk and plaster
 
-Every baby puts things in their mouth. That is how babies find out about the world. Eating mud, chalk, plaster, paper or ice again and again, for weeks, is different. Doctors call it pica. It is common in small children, and low iron can be behind it.
+Every baby puts things in their mouth. That is how babies find out about the world. Wanting to eat mud, chalk, plaster, paper or ice again and again, for weeks, is different. Doctors call it pica, and low iron can be behind it.
 
-Some of these things do harm of their own. Mud can carry infection. Flakes and plaster from an old painted wall can carry lead, and a body that is short of iron takes up more lead than usual. Lead poisoning can itself cause behaviour and school problems. If your child has been eating from a wall, tell the doctor, because a lead test may be needed.
+Some of these things do harm of their own. Soil, dust and flakes of old paint can carry lead, and small children take in more of it than adults. A child who is short of iron takes up more lead. Lead can itself cause behaviour and learning problems. If your child has been eating from a wall, tell the doctor, because a lead test may be needed.
 
 # When it looks like naughtiness
 
 Low iron can show in a child's mood and in schoolwork. A child who is short of iron may be irritable, quick to anger and tired, quiet with other children, and slow to pay attention, and may start to fall behind in class. At home people call it temper, and at school they call it not trying.
 
-Anaemia that goes on for a long time can hold back a young child's development, so it is worth finding early.
+Anaemia that goes on for a long time can hold back a young child's development and learning, so it is worth finding early.
 
 Behaviour and school troubles have many causes, and a child who is struggling may need other help too, from the school or a child specialist. A blood count is a quick way to rule one cause in or out. Ask for it before anyone decides the child is just naughty.
+
+# What causes anaemia in children
+
+Most anaemia in Indian children comes from poor nutrition. Too little iron is the commonest cause. Too little vitamin B12 or folic acid can also cause it, and some children are short of both iron and vitamin B12. Worm infections, dirty water and poor hygiene can lower the haemoglobin too. Low iron is common in older babies and toddlers, because their food after six months is often not enough or not varied enough.
+
+The doctor finds anaemia from what the child eats, an examination and a blood count, and may ask for a test of the body's iron store to confirm low iron.
+
+# What treatment can do
+
+- Most children with low iron are treated with iron by mouth. The doctor chooses the medicine and how much, by the child's weight.
+- Give the iron away from tea and coffee, which block it. Citrus fruit just before the medicine helps the body take it in.
+- Iron can turn the stools dark. Tell the doctor if your child has a stomach upset with it.
+- The doctor checks again after a short time to see that the iron is working. If it is not, the doctor looks for the reason, such as doses being missed, a problem taking in iron, hidden blood loss, or thalassemia trait.
+- Iron is continued for some months after the haemoglobin is better, to fill the body's store. Do not stop it when your child looks well. The doctor decides when to stop.
+- If the child is also short of vitamin B12 or folic acid, the doctor treats that too.
+- Iron through a drip into a vein is used only for a few children, such as those who cannot take or absorb iron by mouth. Iron injections into the muscle are not recommended.
+- A child with very severe anaemia and danger signs is treated in hospital. A blood transfusion is only for an emergency. It does not treat the cause, which still has to be found and treated.
+- Brothers and sisters of a child with low iron should be checked too.
+
+Food helps: eggs, meat, liver, fish, green leafy vegetables, citrus fruits, potatoes and tomatoes. Cut down on tea.
+
+# Preventing anaemia
+
+- Breast milk alone for the first six months, then varied home food with iron-rich items alongside it.
+- After the first birthday, limit milk and stop the bottle, so that milk does not take the place of food.
+- Take the iron and folic acid that the anganwadi or school gives under the Anemia Mukt Bharat programme, unless the doctor says otherwise.
+- Ask for a haemoglobin check when your baby goes for the measles vaccine, at about nine months to a year.
+- Take the deworming tablets given at the anganwadi or school.
+- Clean water, a toilet, and washing hands with soap help prevent the worm and gut infections that lower haemoglobin.
+- At birth, waiting a few minutes before the cord is clamped helps build the baby's iron store. Ask about it before the delivery.
 
 # How the stories go on
 
@@ -41,7 +71,8 @@ Over the next months the girl stops reaching for the flower pot. The boy is less
 # Go to a hospital the same day if
 
 - your child becomes very pale, very drowsy, or too tired to feed or play
-- your child is breathless while resting, or faints
+- your child is breathless while resting, breathes fast, or faints
+- your child's face or feet swell
 - your child eats mud or other non-food things and has belly pain, keeps vomiting, or has a swollen belly
 - your child has swallowed iron tablets meant for someone else. Go at once
 
@@ -53,6 +84,8 @@ If your child keeps eating mud, chalk or plaster, or has been tired and irritabl
 - Can we do a blood count?
 - My child has eaten plaster or paint from a wall. Should lead be checked?
 - How much milk is right for my child at this age?
+- How long should the iron go on, and when will you check again?
+- Should my other children be checked too?
 - If it is anaemia, what is causing it?
 - If school is still hard once the blood is better, who should we see?
 
@@ -60,7 +93,7 @@ If your child keeps eating mud, chalk or plaster, or has been tired and irritabl
 
 ## Why does my child eat mud or chalk?
 
-Small children try everything with their mouths. If a child keeps eating mud, chalk, plaster or paper for weeks, it is called pica, and low iron can be behind it. See your doctor. A blood count, and sometimes a lead test, can show what is going on.
+Small children try everything with their mouths. If a child keeps wanting to eat mud, chalk, plaster or paper for weeks, it is called pica, and low iron can be behind it. See your doctor. A blood count, and sometimes a lead test, can show what is going on.
 
 ## Can anaemia affect a child's behaviour and studies?
 
@@ -70,14 +103,19 @@ It can. A child short of iron may be irritable, quick to anger, tired and slow t
 
 It can. Cow's milk has little iron and makes the iron in other food harder to absorb, and a child who drinks a lot of it often eats less of everything else. Your child's doctor can tell you how much milk suits your child's age.
 
+## My child has a fever or loose motions. Should the iron syrup from the ASHA or the anganwadi go on?
+
+Ask the health worker or your child's doctor before giving any more, and do not decide on your own. The government's Anemia Mukt Bharat programme tells health workers to hold back iron given to prevent anaemia during an acute illness such as fever, diarrhoea or pneumonia, and says that iron treatment during an illness is decided by the treating doctor.
+
 ## Should I give my child iron or a tonic on my own?
 
 No. Get a blood test first, so the doctor knows whether iron is low and why. Too much iron is dangerous for children, so give it only as your child's doctor prescribes, and keep all iron tablets out of reach.
 
 # Sources
 
-- MedlinePlus: Anemia caused by low iron, infants and toddlers | https://medlineplus.gov/ency/article/007618.htm
-- MedlinePlus: Anemia caused by low iron, children | https://medlineplus.gov/ency/article/007134.htm
-- MedlinePlus: Pica | https://medlineplus.gov/ency/article/001538.htm
+- NHS: Iron deficiency anaemia | https://www.nhs.uk/conditions/iron-deficiency-anaemia/
+- American Society of Hematology: Iron-deficiency anemia | https://www.hematology.org/resources/patients/anemia/iron-deficiency
+- WHO: Lead poisoning and health | https://www.who.int/news-room/fact-sheets/detail/lead-poisoning-and-health
+- Ministry of Health and Family Welfare: Anemia Mukt Bharat Abhiyaan operational guidelines (June 2026) | https://nhm.gov.in/New-Update-2025-26/Nutrition/AMB-guidelines/AMB-Abhiyaan-Guidelines.pdf
 - WHO: Anaemia fact sheet | https://www.who.int/news-room/fact-sheets/detail/anaemia
 - National Heart, Lung, and Blood Institute: Iron-deficiency anemia | https://www.nhlbi.nih.gov/health/anemia/iron-deficiency-anemia
