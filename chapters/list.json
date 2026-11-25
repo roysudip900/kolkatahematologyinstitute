@@ -373,5 +373,16 @@
   "card_bn": "ব্লাড ব্যাংক দাতা আনতে বলেছে? রক্ত দিলে দুর্বল হব কিনা ভাবছেন?",
   "card_en": "Asked to bring a donor to the blood bank? Wondering if giving blood will make you weak?",
   "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FDECEE\"/><path d=\"M26 11c-7 10-11 15-11 20a11 11 0 0 0 22 0c0-5-4-10-11-20z\" fill=\"#D93A4A\"/><path d=\"M21 31h10M26 26v10\" stroke=\"#FFFFFF\" stroke-width=\"3\" stroke-linecap=\"round\"/>"
+ },
+ {
+  "id": "coagulation",
+  "bn": "রক্ত জমাট বাঁধার পরীক্ষা",
+  "en": "Blood clotting tests",
+  "coauthor": "mridha",
+  "desc_bn": "পিটি, আইএনআর, এপিটিটি, ফাইব্রিনোজেন আর ডি-ডাইমার কী মাপে, অপারেশনের আগে, ওয়ারফারিনে, সহজে রক্ত পড়লে আর জমাট সন্দেহ হলে কেন করা হয়, আর ঠিকঠাক নমুনা।",
+  "desc_en": "What PT, INR, APTT, fibrinogen and D-dimer measure, why they are done before an operation, on warfarin, when you bleed easily or a clot is suspected, and getting a good sample.",
+  "card_bn": "অপারেশনের আগে পিটি-আইএনআর? ওয়ারফারিনে আইএনআর? রিপোর্টে কিছু দাগানো?",
+  "card_en": "PT and INR before an operation? INR on warfarin? Something marked on the report?",
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#E3EEF9\"/><rect x=\"21\" y=\"9\" width=\"10\" height=\"30\" rx=\"5\" fill=\"#FFFFFF\" stroke=\"#2D6E8E\" stroke-width=\"2\"/><rect x=\"21\" y=\"24\" width=\"10\" height=\"15\" rx=\"5\" fill=\"#5BA4CF\"/><path d=\"M19 15h14\" stroke=\"#2D6E8E\" stroke-width=\"2\"/>"
  }
 ]

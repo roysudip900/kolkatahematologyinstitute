@@ -990,6 +990,36 @@ const FIG = {
         body),
     };
   },
+  // Clotting tests: four situations in a two-by-two grid, each with the tests usually asked for, lit in turn.
+  // Before an operation; on warfarin; bleeding easily; a clot suspected. No ranges, no numbers, no meanings.
+  'coag-tests'(l) {
+    const t = l === 'bn'
+      ? { s: [['অপারেশনের আগে', 'পিটি, আইএনআর, এপিটিটি', 'সঙ্গে সিবিসি'], ['ওয়ারফারিন খেলে', 'আইএনআর', 'ডাক্তার ঠিক করেন কবে'], ['সহজে রক্ত পড়লে', 'পিটি, এপিটিটি', 'দরকারে ফ্যাক্টর পরীক্ষা'], ['জমাট সন্দেহ হলে', 'ডি-ডাইমার', 'তারপর স্ক্যান']],
+          cap: 'কোন অবস্থায় সাধারণত কোন জমাট বাঁধার পরীক্ষা করতে বলা হয়। প্রতিটা রিপোর্ট যিনি পরীক্ষা করতে বলেছেন সেই ডাক্তারকে দেখান, আর রিপোর্ট দেখে নিজে ওষুধ বদলাবেন না।' }
+      : { s: [['Before an operation', 'PT, INR, APTT', 'with a blood count'], ['On warfarin', 'INR', 'the doctor decides when'], ['Bleeding easily', 'PT, APTT', 'then factor tests if needed'], ['A clot suspected', 'D-dimer', 'then a scan']],
+          cap: 'Which clotting tests are usually asked for in each situation. Show every report to the doctor who asked for it, and never change a medicine because of a report.' };
+    const icon = [
+      (x, y) => `<path d="M${x - 9} ${y + 8}l14 -14l4 4l-14 14z" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><path d="M${x + 5} ${y - 6}l4 -4" stroke="${C.teal2}" stroke-width="2.5"/>`,
+      (x, y) => `<rect x="${x - 10}" y="${y - 5}" width="20" height="10" rx="5" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><path d="M${x} ${y - 5}v10" stroke="${C.teal2}" stroke-width="2"/>`,
+      (x, y) => `<path d="M${x} ${y - 11}c-6 9-9 13-9 17a9 9 0 0 0 18 0c0-4-3-8-9-17z" fill="${C.red}" opacity=".85"/>`,
+      (x, y) => `<ellipse cx="${x}" cy="${y}" rx="7" ry="11" fill="#8b1e2d"/>`,
+    ];
+    let body = '';
+    t.s.forEach(([h, tests, sub], i) => {
+      const x = 14 + (i % 2) * 172, y = 12 + Math.floor(i / 2) * 104;
+      body += `<g class="cg-s cg-s${i}"><rect x="${x}" y="${y}" width="160" height="92" rx="12" fill="#fff" stroke="${C.teal2}" stroke-width="2"/>` +
+        icon[i](x + 136, y + 24) + T(x + 12, y + 26, h, { a: 'start', size: 12.5, fill: C.ink, w: 700 }) +
+        T(x + 12, y + 56, tests, { a: 'start', size: 12.5, fill: C.teal, w: 700 }) + T(x + 12, y + 78, sub, { a: 'start', size: 12.5, fill: C.muted }) + '</g>';
+    });
+    return {
+      cap: t.cap,
+      svg: svg('cg', 360, 220, t.cap,
+        '.cg-s{animation:cgs 8s ease-in-out infinite;opacity:.35}.cg-s1{animation-delay:2s}.cg-s2{animation-delay:4s}.cg-s3{animation-delay:6s}' +
+        '@keyframes cgs{0%,5%{opacity:.35}12%,45%{opacity:1}55%,100%{opacity:.35}}' +
+        '@media (prefers-reduced-motion:reduce){.cg-s{animation:none;opacity:1}}',
+        body),
+    };
+  },
   // Anaemia, iron: two tanks of body iron. Tablets drip iron into both. In the first, a leak (heavy periods or
   // bleeding) lets it out, so the level hardly rises; in the second the leak is treated and the level slowly rises.
   'iron-tank'(l) {
@@ -2152,6 +2182,29 @@ const TRY = {
             ['needle', 'You can catch a disease from the needle when you give blood', 'True?', 'The needle and bag come in a sterile pack and are used only once.'],
             ['ask', 'Skipping the personal questions does no harm', 'True?', 'Tests may miss a very recent infection. Honest answers protect the patient, and they are kept confidential.']],
           cap: 'The blood centre tells you whether you can give blood today. Fainting that does not pass, chest pain, or bleeding that will not stop after giving blood needs a hospital at once.' };
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
+      t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
+        `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
+        `<span class="fc back"><span class="k">${esc(t.sign)}</span><span>${esc(back)}</span></span></button>`).join('') + '</div>';
+    return { cap: t.cap, cls: 'flipset', html };
+  },
+  'coag-cards'(l) {
+    const ic = {
+      report: `<rect x="9" y="5" width="22" height="30" rx="3" fill="#fff" stroke="${C.teal2}" stroke-width="2"/><path d="M14 13h12M14 19h12M14 25h7" stroke="${C.teal2}" stroke-width="2"/><path d="M24 25h4" stroke="${C.red}" stroke-width="3"/>`,
+      pill: `<rect x="8" y="14" width="24" height="12" rx="6" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><path d="M20 14v12" stroke="${C.teal2}" stroke-width="2"/>`,
+      drop: `<path d="M20 6c-6 9-10 15-10 20a10 10 0 0 0 20 0c0-5-4-11-10-20z" fill="${C.red}" opacity=".8"/>`,
+    };
+    const t = l === 'bn'
+      ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
+          c: [['report', 'রিপোর্টে একটা মান দাগানো মানেই রোগ', 'সত্যি?', 'একটা ফল দিয়ে রোগ ধরা যায় না। ডাক্তার রক্ত পড়ার ইতিহাস আর ওষুধ মিলিয়ে দেখেন, দরকারে আবার করান।'],
+            ['pill', 'আইএনআর দেখে নিজেই ওয়ারফারিন বাড়ানো-কমানো যায়', 'সত্যি?', 'কতটা খাবেন, ঠিক করেন ডাক্তার বা ওয়ারফারিন ক্লিনিক। পরীক্ষাও বাদ দেবেন না।'],
+            ['drop', 'পরীক্ষা সীমার মধ্যে এলে রক্ত পড়ার সমস্যা থাকতেই পারে না', 'সত্যি?', 'কিছু অসুখে স্ক্রিনিং পরীক্ষা সীমার মধ্যে আসে। সহজে রক্ত পড়লে ডাক্তারকে বলুন।']],
+          cap: 'রক্ত না থামলে, বমি বা পায়খানায় রক্ত, হঠাৎ খুব মাথাব্যথা বা হাঁফ ধরলে সঙ্গে সঙ্গে হাসপাতালে যান।' }
+      : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
+          c: [['report', 'A value marked on the report means a disease', 'True?', 'A single result does not make a diagnosis. The doctor reads it with your bleeding history and medicines, and may repeat it.'],
+            ['pill', 'You can adjust warfarin yourself from the INR', 'True?', 'The doctor or warfarin clinic decides how much. Do not skip a test either.'],
+            ['drop', 'Tests within range mean there can be no bleeding problem', 'True?', 'Screening tests can be within range in some bleeding disorders. Tell the doctor if you bleed easily.']],
+          cap: 'Bleeding that will not stop, blood in vomit or stools, a sudden severe headache or sudden breathlessness needs a hospital at once.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
       t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
         `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +

@@ -1,0 +1,112 @@
+> Clotting tests, such as PT, INR, APTT, fibrinogen and D-dimer, measure how well and how fast your blood forms a clot. They are asked for before some operations, to keep warfarin safe, when someone bleeds or bruises easily, and when a clot is suspected. A result on its own does not make a diagnosis, so show every report to the doctor who asked for it, and never change a medicine because of a number on a report.
+
+The surgeon looked at her report and said she should see a hematologist before the operation.
+
+She is forty-five and lives in Barrackpore. She is due to have her gallbladder removed, and the hospital asked for a set of blood tests first. One line on the clotting report is marked in bold. She has always had heavy periods, and her gums bleed when she brushes, but no one ever asked her about it.
+
+In Howrah, a retired clerk of sixty-seven has taken warfarin for two years since a clot in his leg. He goes for an INR test every few weeks. Last month the number on his report changed, and he wonders whether he could just adjust his tablets himself and skip the next test.
+
+She wants to know what a clotting test can and cannot tell. He wants to know why the INR matters so much.
+
+# What clotting tests measure
+
+When a blood vessel is cut, platelets and a chain of proteins in the blood, called clotting factors, work together to form a clot and stop the bleeding. Clotting tests measure parts of this process on a small sample of blood.
+
+- PT (prothrombin time) measures how long the blood takes to clot through one group of clotting factors.
+- INR (international normalised ratio) also measures how quickly the blood clots. It is the test used to check warfarin.
+- APTT (activated partial thromboplastin time, sometimes called PTT) measures clotting through a different group of clotting factors.
+- Fibrinogen is one of the clotting proteins. The test measures it.
+- Clotting factor tests, also called factor assays, measure the level or activity of a single factor, such as factor VIII or factor IX, or von Willebrand factor.
+- A mixing test helps show whether a long clotting time is due to a missing factor or to an antibody that blocks one.
+- D-dimer measures a substance released when a clot breaks down.
+
+A complete blood count is often done at the same time, because it counts the platelets.
+
+[figure: coag-tests]
+
+# Tests before an operation
+
+Before some operations, a dental extraction or a biopsy, the team may ask for PT, INR and APTT with a blood count, especially when there is a personal or family history of bleeding. Tell the doctor if you or anyone in your family bleeds a lot after cuts, teeth extraction, childbirth or operations, or has very heavy periods. The story of your bleeding often matters as much as the test.
+
+If a result needs a closer look, the surgeon may ask a hematologist to see you before the operation.
+
+# INR on warfarin
+
+Warfarin is a blood thinner, and the right amount is different for each person. The INR shows how strongly the warfarin is working.
+
+- At first the INR is checked often, and then less often once it is steady. The doctor or the warfarin clinic decides when.
+- The doctor decides the warfarin dose from the INR. Do not change it yourself because of a report, and do not skip a test.
+- Many medicines, including some painkillers and antibiotics, herbal remedies, alcohol, and big changes in green leafy vegetables, can change the INR. Tell the doctor about anything new.
+
+The Blood clots chapter on this site explains blood thinners in more detail.
+
+# Bleeding or bruising easily
+
+When someone bleeds or bruises easily, the hematologist starts with questions and an examination, then asks for tests step by step:
+
+- a blood count and screening tests, PT and APTT
+- then, if needed, factor tests, von Willebrand tests, a mixing test, or tests of the liver
+- sometimes genetic tests
+
+Screening tests that come back within the lab's range do not rule out a bleeding problem. If the bleeding story is strong, the hematologist may still ask for more tests. The Haemophilia chapter on this site explains one bleeding disorder.
+
+# D-dimer when a clot is suspected
+
+A D-dimer test can be a first step when a clot in a leg vein or the lungs is suspected in someone who is otherwise well. A raised result means a clot is possible, but it does not prove one. A scan, such as an ultrasound of the leg or a CT scan of the lungs, shows whether there is a clot.
+
+# Getting a good sample
+
+Clotting tests are sensitive to how the sample is taken.
+
+- You do not need to fast before a clotting test.
+- Rest for a few minutes before the sample, and avoid hard exercise just before, because it can change some results.
+- Tell the team about every medicine, including aspirin, painkillers and blood thinners, because some can change the results. Do not stop any medicine on your own before a test.
+- The blood goes into a special tube that must be filled to the right level. If the lab asks for a new sample, it is usually because the tube was not filled enough or the blood clotted in it.
+
+[figure: coag-cards]
+
+# How the stories go on
+
+The woman tells the hematologist about her heavy periods and bleeding gums. More tests are done, step by step, and her operation is planned with the hematologist and the surgeon together.
+
+The clerk shows his report to his doctor instead of changing his tablets. The doctor finds that he had started a new painkiller from the chemist, stops it, adjusts the warfarin, and asks him to come back for an INR test soon.
+
+# Go to a hospital now if
+
+Go at once, and do not drive yourself, if you have:
+
+- bleeding that will not stop after pressing on it for a while
+- blood in vomit, black or bloody stools, or coughing up blood
+- a sudden severe headache, or a hard knock to the head while on a blood thinner
+- sudden breathlessness or chest pain
+- a painful, swollen leg
+
+# Take these questions to your doctor
+
+- Which clotting tests are you asking for, and why?
+- Do I need to do anything before the test?
+- Which of my medicines could change the result?
+- Who will explain the report to me?
+- On warfarin: when is my next INR test, and who changes my dose?
+- Do I need more tests before my operation?
+
+# Common questions
+
+## My report has a value marked high or low. Should I worry?
+
+Show the report to the doctor who asked for it. A single result does not make a diagnosis. The doctor reads it with your bleeding history, your medicines and how the sample was taken, and may repeat it.
+
+## Can I change my warfarin dose from my INR report?
+
+No. The doctor or warfarin clinic decides the dose. Do not change it, and do not skip a test.
+
+## If my clotting tests are within range, can I still have a bleeding problem?
+
+Yes. Screening tests can be within range even in some bleeding disorders. If you bleed easily, tell the doctor, who may ask for more tests.
+
+# Sources
+
+- National Heart, Lung, and Blood Institute: Bleeding disorders, diagnosis | https://www.nhlbi.nih.gov/health/bleeding-disorders/diagnosis
+- National Heart, Lung, and Blood Institute: Venous thromboembolism, diagnosis | https://www.nhlbi.nih.gov/health/venous-thromboembolism/diagnosis
+- NHS: Warfarin | https://www.nhs.uk/medicines/warfarin/
+- World Federation of Hemophilia: WFH Guidelines for the Management of Hemophilia, 3rd edition (2020) | https://doi.org/10.1111/hae.14046
