@@ -41,7 +41,7 @@ The doctor finds anaemia from what the child eats, an examination and a blood co
 # What treatment can do
 
 - Most children with low iron are treated with iron by mouth. The doctor chooses the medicine and how much, by the child's weight.
-- Give the iron away from tea and coffee, which block it. Citrus fruit just before the medicine helps the body take it in.
+- Give the iron away from milk, tea and coffee, which block it. Citrus fruit just before the medicine helps the body take it in.
 - Iron can turn the stools dark. Tell the doctor if your child has a stomach upset with it.
 - The doctor checks again after a short time to see that the iron is working. If it is not, the doctor looks for the reason, such as doses being missed, a problem taking in iron, hidden blood loss, or thalassemia trait.
 - Iron is continued for some months after the haemoglobin is better, to fill the body's store. Do not stop it when your child looks well. The doctor decides when to stop.
@@ -56,9 +56,9 @@ Food helps: eggs, meat, liver, fish, green leafy vegetables, citrus fruits, pota
 
 - Breast milk alone for the first six months, then varied home food with iron-rich items alongside it.
 - After the first birthday, limit milk and stop the bottle, so that milk does not take the place of food.
-- Take the iron and folic acid that the anganwadi or school gives under the Anemia Mukt Bharat programme, unless the doctor says otherwise.
+- Give your child the iron and folic acid that the ASHA, anganwadi or school gives under the Anemia Mukt Bharat programme, unless the doctor says otherwise.
 - Ask for a haemoglobin check when your baby goes for the measles vaccine, at about nine months to a year.
-- Take the deworming tablets given at the anganwadi or school.
+- Give your child the deworming tablets that the anganwadi or school gives.
 - Clean water, a toilet, and washing hands with soap help prevent the worm and gut infections that lower haemoglobin.
 - At birth, waiting a few minutes before the cord is clamped helps build the baby's iron store. Ask about it before the delivery.
 
@@ -109,7 +109,7 @@ Ask the health worker or your child's doctor before giving any more, and do not 
 
 ## Should I give my child iron or a tonic on my own?
 
-No. Get a blood test first, so the doctor knows whether iron is low and why. Too much iron is dangerous for children, so give it only as your child's doctor prescribes, and keep all iron tablets out of reach.
+No, not iron or a tonic from the shop. For any iron other than what the ASHA, anganwadi or school gives, get a blood test first, so the doctor knows whether iron is low and why. Too much iron is dangerous for children, so give it only as your child's doctor prescribes, and keep all iron tablets out of reach.
 
 # Sources
 
@@ -117,5 +117,5 @@ No. Get a blood test first, so the doctor knows whether iron is low and why. Too
 - American Society of Hematology: Iron-deficiency anemia | https://www.hematology.org/resources/patients/anemia/iron-deficiency
 - WHO: Lead poisoning and health | https://www.who.int/news-room/fact-sheets/detail/lead-poisoning-and-health
 - Ministry of Health and Family Welfare: Anemia Mukt Bharat Abhiyaan operational guidelines (June 2026) | https://nhm.gov.in/New-Update-2025-26/Nutrition/AMB-guidelines/AMB-Abhiyaan-Guidelines.pdf
-- WHO: Anaemia fact sheet | https://www.who.int/news-room/fact-sheets/detail/anaemia
+- Chandra J, Dewan P, Kumar P, Mahajan A, Singh P, Dhingra B, et al. Diagnosis, treatment and prevention of nutritional anemia in children: recommendations of the Joint Committee of Pediatric Hematology-Oncology Chapter and Pediatric and Adolescent Nutrition Society of the Indian Academy of Pediatrics. Indian Pediatr. 2022;59(10):782-801.
 - National Heart, Lung, and Blood Institute: Iron-deficiency anemia | https://www.nhlbi.nih.gov/health/anemia/iron-deficiency-anemia
