@@ -2138,7 +2138,7 @@ const TRY = {
   'donation-cards'(l) {
     const ic = {
       weak: `<circle cx="20" cy="12" r="6" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><path d="M10 34c0-9 4-14 10-14s10 5 10 14" fill="none" stroke="${C.teal2}" stroke-width="2"/>`,
-      needle: `<path d="M8 32L26 14M24 10l6 6M22 12l6 6" stroke="${C.teal2}" stroke-width="2.5" stroke-linecap="round"/><rect x="26" y="4" width="8" height="8" rx="2" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2" transform="rotate(45 30 8)"/>`,
+      needle: `<rect x="8" y="10" width="24" height="20" rx="4" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><path d="M14 20l4 4 8-8" stroke="${C.teal}" stroke-width="2.5" fill="none"/>`,
       ask: `<rect x="8" y="6" width="24" height="28" rx="3" fill="#fff" stroke="${C.teal2}" stroke-width="2"/><path d="M13 14h14M13 20h14M13 26h9" stroke="${C.teal2}" stroke-width="2"/>`,
     };
     const t = l === 'bn'
@@ -2146,12 +2146,12 @@ const TRY = {
           c: [['weak', 'রক্ত দিলে মাসের পর মাস দুর্বল লাগে', 'সত্যি?', 'পরীক্ষায় সুস্থ দেখা গেলে তবেই রক্ত নেওয়া হয়। দেড় দিনের মধ্যে শরীর জল পূরণ করে নেয়।'],
             ['needle', 'রক্ত দিতে গিয়ে সুচ থেকে রোগ হতে পারে', 'সত্যি?', 'সুচ আর ব্যাগ জীবাণুমুক্ত প্যাকেটে আসে আর একবারই ব্যবহার হয়।'],
             ['ask', 'ব্যক্তিগত প্রশ্নের উত্তর এড়িয়ে গেলেও ক্ষতি নেই', 'সত্যি?', 'খুব সাম্প্রতিক সংক্রমণ পরীক্ষায় ধরা না-ও পড়তে পারে। সত্যি উত্তর রোগীকে বাঁচায়, আর তা গোপন থাকে।']],
-          cap: 'আজ রক্ত দিতে পারবেন কিনা, ব্লাড সেন্টার বলে দেবে।' }
+          cap: 'আজ রক্ত দিতে পারবেন কিনা, ব্লাড সেন্টার বলে দেবে। রক্ত দেওয়ার পর অজ্ঞান ভাব না কাটলে, বুকে ব্যথা হলে বা রক্ত না থামলে সঙ্গে সঙ্গে হাসপাতালে যান।' }
       : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
           c: [['weak', 'Giving blood leaves you weak for months', 'True?', 'You give blood only if the checks show you are well. The body replaces the fluid within about a day and a half.'],
             ['needle', 'You can catch a disease from the needle when you give blood', 'True?', 'The needle and bag come in a sterile pack and are used only once.'],
             ['ask', 'Skipping the personal questions does no harm', 'True?', 'Tests may miss a very recent infection. Honest answers protect the patient, and they are kept confidential.']],
-          cap: 'The blood centre tells you whether you can give blood today.' };
+          cap: 'The blood centre tells you whether you can give blood today. Fainting that does not pass, chest pain, or bleeding that will not stop after giving blood needs a hospital at once.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
       t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
         `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +

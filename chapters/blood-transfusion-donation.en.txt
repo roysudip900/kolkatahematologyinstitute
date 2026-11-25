@@ -12,9 +12,11 @@ He wants to know whether giving blood will make him weak. She wants to know whet
 
 Blood is needed by women with complications in pregnancy and childbirth, children with severe anaemia, people hurt in accidents, and people having operations or cancer treatment. Blood can be stored only for a limited time, so a regular supply from healthy donors is needed for it to be there when a patient needs it.
 
-One donation can help more than one patient, because the blood is separated into red cells, platelets and plasma. Blood banks screen donated blood carefully to keep it safe.
+In anaemia, a transfusion manages an emergency. It does not treat the cause, and why the haemoglobin is low still has to be found and treated.
 
-The World Health Organization says regular voluntary donors who are not paid are the safest donors, because infections in the blood are least common among them. It asks every country to collect all its blood from such donors.
+Most of the blood used for transfusions comes from volunteer donors. One donation can help more than one patient, because the blood is separated into red cells, platelets and plasma. Donated blood is tested for infections. The World Health Organization says every donation should be screened for HIV, hepatitis B and C and syphilis, and in India it is also tested for malaria.
+
+The World Health Organization says regular voluntary donors who are not paid are the safest donors, because infections in the blood are least common among them. It asks every country to build its blood supply on such donors.
 
 [figure: donation-steps]
 
@@ -72,7 +74,7 @@ At the college camp, the student tells the doctor about her tattoo and the antib
 
 # Go to a hospital now if
 
-Go at once, or tell the blood centre staff straight away, if after giving blood you:
+If you are still at the blood centre, tell the staff at once. If you have left, go to a hospital now if, after giving blood, you:
 
 - faint and do not come round quickly, or keep feeling faint after lying down
 - have chest pain or difficulty breathing
@@ -85,6 +87,8 @@ Go at once, or tell the blood centre staff straight away, if after giving blood 
 - What are the age and weight limits here?
 - How often can I give blood?
 - I take a medicine. Can I still give blood?
+
+If you have a blood condition or take a regular medicine, ask your own doctor too. Do not stop a medicine to give blood.
 - What should I do if I feel unwell after giving blood?
 
 # Common questions
@@ -105,4 +109,4 @@ To protect you and the patient. Tests may not find a very recent infection, so h
 
 - World Health Organization: Blood products, why should I donate blood? | https://www.who.int/news-room/questions-and-answers/item/blood-products-why-should-i-donate-blood
 - World Health Organization: Blood safety and availability | https://www.who.int/news-room/fact-sheets/detail/blood-safety-and-availability
-- MedlinePlus: Blood transfusion and donation | https://medlineplus.gov/bloodtransfusionanddonation.html
+- National Heart, Lung, and Blood Institute: Treatments for blood disorders | https://www.nhlbi.nih.gov/health/blood-bone-marrow-treatments
