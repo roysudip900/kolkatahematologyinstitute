@@ -21,7 +21,7 @@ Jaundice also has other causes, such as hepatitis, liver disease from alcohol, g
 - infections, including malaria, which can break red cells and cause jaundice and dark urine
 - some medicines
 - the body's defences attacking its own red cells (autoimmune haemolytic anaemia)
-- inherited blood conditions, such as sickle cell disease, thalassemia, and G6PD deficiency, in which an enzyme that protects red cells is low
+- inherited blood conditions, such as sickle cell disease, thalassemia, G6PD deficiency, in which an enzyme that protects red cells is low, and hereditary spherocytosis, in which red cells are round and fragile and break down in the spleen
 - reactions to a blood transfusion
 - in a newborn baby, a different blood group from the mother's
 
