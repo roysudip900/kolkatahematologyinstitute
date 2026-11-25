@@ -1,4 +1,4 @@
-> A blood transfusion gives a person donated red cells, platelets or plasma through a thin tube in a vein, when blood has been lost or the body cannot make enough. It is common and generally very safe, because donated blood is tested and matched, but reactions can happen during or even days after it, so tell the nurse at once if you feel unwell during a transfusion, and know the signs that need a hospital afterwards.
+> A blood transfusion gives you donated red cells, platelets or plasma through a thin tube in a vein, when blood has been lost or the body cannot make enough. It is generally very safe because the blood is tested and matched, but tell the nurse at once if you feel unwell, and ask your doctor why you need it and which signs afterwards need a hospital.
 
 The nurse said she would need blood, and the first thing she asked was whether she could catch something from it.
 
@@ -73,7 +73,7 @@ Other problems are rare but can happen hours, days or even weeks later:
 - heart or lung problems
 - too much iron in the body, if a person has many transfusions
 
-People who need regular transfusions, such as children with thalassemia major, have more to plan for, including iron removal. The Thalassemia chapter on this site has a part on regular transfusions.
+People who need regular transfusions, such as children with thalassemia major, have more to plan for, including removing extra iron (chelation). The Thalassemia chapter on this site has a part on regular transfusions.
 
 [figure: transfusion-cards]
 
@@ -112,7 +112,7 @@ Tell them you recently had a blood transfusion.
 
 ## Can I get HIV or hepatitis from a transfusion?
 
-The chance is very low. Donated blood is tested for HIV, hepatitis B, hepatitis C and syphilis before it is used.
+The chance is very low. Donated blood is tested for infections before it is used, and the World Health Organization says every donation should be screened for HIV, hepatitis B, hepatitis C and syphilis.
 
 ## I started shivering during a transfusion. What does it mean?
 

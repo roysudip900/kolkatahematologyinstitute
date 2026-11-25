@@ -936,8 +936,8 @@ const FIG = {
   // sample that matches the group, the signature, and pulse, temperature and blood pressure. No numbers.
   'transfusion-steps'(l) {
     const t = l === 'bn'
-      ? { s: ['রক্তের নমুনায় গ্রুপ মেলানো', 'সম্মতিপত্রে সই', 'পালস, তাপ, ব্লাড প্রেশার দেখা', 'খারাপ লাগলে তখনই নার্সকে বলুন'],
-          cap: 'রক্ত দেওয়ার আগে নমুনা নিয়ে গ্রুপ মেলানো হয় আর সাধারণত সম্মতিপত্রে সই নেওয়া হয়। আগে, মাঝে আর পরে পালস, তাপ আর ব্লাড প্রেশার দেখা হয়। খারাপ লাগলে তখনই নার্সকে বলুন।' }
+      ? { s: ['রক্তের নমুনায় গ্রুপ মেলানো', 'সম্মতিপত্রে সই', 'পালস, টেম্পারেচার, প্রেশার দেখা', 'খারাপ লাগলে তখনই নার্সকে বলুন'],
+          cap: 'রক্ত দেওয়ার আগে নমুনা নিয়ে গ্রুপ মেলানো হয় আর সাধারণত সম্মতিপত্রে সই নেওয়া হয়। আগে, মাঝে আর পরে পালস, টেম্পারেচার আর ব্লাড প্রেশার দেখা হয়। খারাপ লাগলে তখনই নার্সকে বলুন।' }
       : { s: ['a blood sample to match the group', 'a consent form', 'pulse, temperature, blood pressure', 'feel unwell? tell the nurse at once'],
           cap: 'Before a transfusion, a blood sample is taken to match the group, and a consent form is usually signed. Pulse, temperature and blood pressure are checked before, during and after. If you feel unwell, tell the nurse at once.' };
     let body = `<path d="M70 20V200M50 200h40M70 24h30" stroke="${C.muted}" stroke-width="3" fill="none"/>` +
