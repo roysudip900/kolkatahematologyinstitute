@@ -26,8 +26,11 @@ An enlarged spleen is a sign that something else is going on. Causes include:
 
 - infections. In India, one of these is kala-azar (visceral leishmaniasis), which causes fever on and off, weight loss, a large spleen and liver, and anaemia
 - liver disease, such as cirrhosis
-- blood cancers, such as leukaemia, and myeloproliferative neoplasms such as polycythaemia vera and myelofibrosis
 - thalassemia, because the spleen keeps destroying red cells and makes some blood of its own
+- haemolytic anaemia, in which red cells break down sooner than they should, and the spleen grows as it works hard to clear them
+- chronic leukaemias, the slow-growing blood cancers such as CML and CLL
+- lymphoma, a cancer of the lymph glands, which can also reach the spleen
+- other blood conditions in which the marrow makes too many cells, such as polycythaemia vera and myelofibrosis
 - rheumatoid arthritis and some other long-term illnesses
 
 The hematologist or physician looks for the cause, because that is what needs treatment.
