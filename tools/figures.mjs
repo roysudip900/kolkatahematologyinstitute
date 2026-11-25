@@ -1020,6 +1020,33 @@ const FIG = {
         body),
     };
   },
+  // Low white cells: a row of guard circles (white cells) in front of a shield; germs (small spiky dots) drift in.
+  // With many guards, the germs are stopped; with few, they get through. No numbers.
+  'wbc-guard'(l) {
+    const t = l === 'bn'
+      ? { many: 'শ্বেতকণিকা যথেষ্ট', few: 'শ্বেতকণিকা কম', cap: 'শ্বেতকণিকা শরীরকে জীবাণু থেকে পাহারা দেয়। সংখ্যায় কম হলে জীবাণু সহজে ঢুকে পড়ে, তাই সংক্রমণ সহজে হয় আর তাড়াতাড়ি গুরুতর হতে পারে। শ্বেতকণিকা কম থাকলে জ্বর এলে সঙ্গে সঙ্গে হাসপাতালে যান।' }
+      : { many: 'enough white cells', few: 'too few white cells', cap: 'White cells guard the body against germs. When there are too few, germs get through more easily, so infections come more easily and can turn serious quickly. With a low count, a fever needs a hospital at once.' };
+    const germ = (x, y, c) => `<g class="${c}"><circle cx="${x}" cy="${y}" r="5" fill="${C.amber}"/><path d="M${x - 8} ${y}h16M${x} ${y - 8}v16M${x - 6} ${y - 6}l12 12M${x + 6} ${y - 6}l-12 12" stroke="${C.amber}" stroke-width="1.5"/></g>`;
+    const guard = (x, y) => `<circle cx="${x}" cy="${y}" r="11" fill="#fff" stroke="${C.teal}" stroke-width="2.5"/><circle cx="${x}" cy="${y}" r="4" fill="${C.teal2}"/>`;
+    let body = '';
+    [0, 1].forEach((row) => {
+      const y0 = 30 + row * 100, n = row === 0 ? 6 : 2;
+      body += `<rect x="14" y="${y0 - 16}" width="332" height="80" rx="12" fill="${row === 0 ? C.mint : C.roseBg}"/>`;
+      body += T(24, y0 + 2, row === 0 ? t.many : t.few, { a: 'start', size: 12.5, fill: row === 0 ? C.teal : C.red, w: 700 });
+      const xs = row === 0 ? [150, 180, 210, 240, 270, 300] : [180, 280];
+      xs.slice(0, n).forEach((x) => { body += guard(x, y0 + 30); });
+      body += germ(40, y0 + 30, row === 0 ? 'wg-stop' : 'wg-go');
+    });
+    body += `<path d="M330 40v60M330 140v60" stroke="${C.muted}" stroke-width="3" stroke-dasharray="4 4"/>`;
+    return {
+      cap: t.cap,
+      svg: svg('wg', 360, 214, t.cap,
+        '.wg-stop{animation:wgs 4s ease-in-out infinite}@keyframes wgs{0%{transform:translateX(0)}50%,100%{transform:translateX(80px)}}' +
+        '.wg-go{animation:wgg 4s ease-in-out infinite}@keyframes wgg{0%{transform:translateX(0)}100%{transform:translateX(300px)}}' +
+        '@media (prefers-reduced-motion:reduce){.wg-stop,.wg-go{animation:none}}',
+        body),
+    };
+  },
   // Anaemia, iron: two tanks of body iron. Tablets drip iron into both. In the first, a leak (heavy periods or
   // bleeding) lets it out, so the level hardly rises; in the second the leak is treated and the level slowly rises.
   'iron-tank'(l) {
@@ -2205,6 +2232,29 @@ const TRY = {
             ['pill', 'You can adjust warfarin yourself from the INR', 'True?', 'The doctor or warfarin clinic decides how much. Do not skip a test either.'],
             ['drop', 'Tests within range mean there can be no bleeding problem', 'True?', 'Screening tests can be within range in some bleeding disorders. Tell the doctor if you bleed easily.']],
           cap: 'Bleeding that will not stop, blood in vomit or stools, a sudden severe headache, sudden breathlessness, chest pain or a painful swollen leg needs a hospital at once.' };
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
+      t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
+        `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
+        `<span class="fc back"><span class="k">${esc(t.sign)}</span><span>${esc(back)}</span></span></button>`).join('') + '</div>';
+    return { cap: t.cap, cls: 'flipset', html };
+  },
+  'wbc-cards'(l) {
+    const ic = {
+      throat: `<circle cx="20" cy="14" r="8" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><path d="M14 34c0-6 3-10 6-10s6 4 6 10" fill="none" stroke="${C.teal2}" stroke-width="2"/><circle cx="20" cy="26" r="2.5" fill="${C.red}"/>`,
+      report: `<rect x="9" y="5" width="22" height="30" rx="3" fill="#fff" stroke="${C.teal2}" stroke-width="2"/><path d="M14 13h12M14 19h12M14 25h7" stroke="${C.teal2}" stroke-width="2"/><path d="M24 25h4" stroke="${C.red}" stroke-width="3"/>`,
+      pill: `<rect x="8" y="14" width="24" height="12" rx="6" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><path d="M20 14v12" stroke="${C.teal2}" stroke-width="2"/>`,
+    };
+    const t = l === 'bn'
+      ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
+          c: [['throat', 'শ্বেতকণিকা কম থাকলেও জ্বর-গলা ব্যথায় সকাল পর্যন্ত দেখা যায়', 'সত্যি?', 'সংক্রমণ তাড়াতাড়ি গুরুতর হতে পারে। জ্বর এলে সঙ্গে সঙ্গে হাসপাতালে যান।'],
+            ['report', 'শ্বেতকণিকা কম মানেই রক্তের ক্যান্সার', 'সত্যি?', 'অনেক কারণে কম হতে পারে, যেমন কিছু ওষুধ বা সংক্রমণ। রিপোর্টটা ডাক্তারকে দেখান।'],
+            ['pill', 'রিপোর্টে শ্বেতকণিকা কম দেখে নিজেই ওষুধ বন্ধ করা উচিত', 'সত্যি?', 'নিজে থেকে কোনো ওষুধ বন্ধ করবেন না। বদলানো লাগবে কিনা, ডাক্তার ঠিক করেন।']],
+          cap: 'জ্বর, কাঁপুনি, শ্বাসকষ্ট বা খুব কম প্রস্রাব হলে সঙ্গে সঙ্গে হাসপাতালে যান।' }
+      : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
+          c: [['throat', 'With a low count, a fever and sore throat can wait till morning', 'True?', 'Infections can turn serious quickly. With a fever, go to a hospital at once.'],
+            ['report', 'A low white cell count means blood cancer', 'True?', 'It has many causes, such as some medicines or infections. Show the report to a doctor.'],
+            ['pill', 'If the report shows a low count, stop your medicines yourself', 'True?', 'Do not stop any medicine on your own. The doctor decides whether to change it.']],
+          cap: 'A fever, shivering, difficulty breathing or passing very little urine needs a hospital at once.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
       t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
         `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
