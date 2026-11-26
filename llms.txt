@@ -45,6 +45,7 @@ Author: [Dr. Sudip Roy](https://share.google/OLTZr4ebHj8UmXFnB), MBBS, MD, DM (C
 - [Low white cell count](https://kolkatahematologyinstitute.com/en/low-white-cells/): What white cells do, causes of a low count, signs, treatment, lowering the risk of infection, and when to go to a hospital at once.
 - [Enlarged spleen (splenomegaly)](https://kolkatahematologyinstitute.com/en/spleen/): What the spleen does, why it grows, the signs, how it is found, treatment, when it is removed, and living without a spleen.
 - [Chemotherapy](https://kolkatahematologyinstitute.com/en/chemotherapy/): Told you need chemo? What it does, how it is given, hair loss, sickness, why a fever is an emergency and what to ask. By a Kolkata hematologist.
+  - [Intensive treatment](https://kolkatahematologyinstitute.com/en/chemotherapy/intensive/): Intensive chemotherapy for leukaemia: the weeks in hospital, the phases, remission, why transfusions are needed and what the family can do.
 
 ## অধ্যায় (বাংলা)
 - [অ্যানিমিয়া: রক্তাল্পতা](https://kolkatahematologyinstitute.com/anaemia/): সব সময় ক্লান্তি, সিঁড়ি ভাঙলে হাঁফ, রিপোর্টে হিমোগ্লোবিন কম? অ্যানিমিয়া মানে কী আর কারণ খোঁজা কেন জরুরি, লিখেছেন কলকাতার হেমাটোলজিস্ট।
@@ -87,3 +88,4 @@ Author: [Dr. Sudip Roy](https://share.google/OLTZr4ebHj8UmXFnB), MBBS, MD, DM (C
 - [শ্বেতকণিকা কম](https://kolkatahematologyinstitute.com/low-white-cells/): শ্বেতকণিকা কী করে, কম হওয়ার কারণ, লক্ষণ, চিকিৎসা, সংক্রমণের ঝুঁকি কমানো, আর কখন সঙ্গে সঙ্গে হাসপাতালে যাবেন।
 - [পিলে বড় হওয়া (স্প্লিনোমেগালি)](https://kolkatahematologyinstitute.com/spleen/): পিলে কী করে, কেন বড় হয়, লক্ষণ, কীভাবে ধরা পড়ে, চিকিৎসা, কখন বাদ দেওয়া হয়, আর পিলে ছাড়া জীবন।
 - [কেমোথেরাপি](https://kolkatahematologyinstitute.com/chemotherapy/): ডাক্তার কেমোর কথা বলেছেন? চুল পড়া, বমি ভাব, জ্বর এলে কী করবেন, বাচ্চা হবে কিনা। কেমোথেরাপি সহজ ভাষায়, লিখেছেন কলকাতার হেমাটোলজিস্ট।
+  - [ইনটেনসিভ চিকিৎসা](https://kolkatahematologyinstitute.com/chemotherapy/intensive/): লিউকেমিয়ায় ইনটেনসিভ কেমো: হাসপাতালের সপ্তাহগুলো, ধাপ, রেমিশন, বারবার রক্ত কেন লাগে, পরিবার কী করবে। লিখেছেন কলকাতার হেমাটোলজিস্ট।
