@@ -1191,6 +1191,32 @@ const FIG = {
         body),
     };
   },
+  // Bruises: two rows, each a blood vessel with a small leak. Top: many platelets drift to the leak and seal it; the
+  // bruise under the skin stays small. Bottom: only two platelets come; the bruise spreads wider. No numbers.
+  'bruise-seal'(l) {
+    const t = l === 'bn'
+      ? { a: 'প্লেটলেট যথেষ্ট: ছোট কালশিটে', b: 'প্লেটলেট কম: বড় কালশিটে', cap: 'চোট লাগলে ছোট রক্তনালী থেকে রক্ত বেরোয়। প্লেটলেট আর ক্লটিং ফ্যাক্টর ফুটো বন্ধ করে, তাই কালশিটে ছোট থাকে। এরা কম থাকলে রক্ত বেরোতেই থাকে, কালশিটে বড় হয় বা চোট ছাড়াই দেখা দেয়।' }
+      : { a: 'enough platelets: a small bruise', b: 'too few platelets: a large bruise', cap: 'A knock makes a small blood vessel leak. Platelets and clotting factors seal the leak, so the bruise stays small. When they are too few, the leak goes on, and bruises grow large or appear without a knock.' };
+    let body = '';
+    [0, 1].forEach((row) => {
+      const y = 40 + row * 92;
+      body += T(14, y - 16, row ? t.b : t.a, { a: 'start', size: 12.5, w: 700, fill: row ? C.red : C.teal });
+      body += `<rect x="14" y="${y}" width="332" height="22" rx="11" fill="${C.vessel}" stroke="${C.rose}" stroke-width="1.5"/>`;
+      body += `<ellipse class="bs-bruise${row}" cx="180" cy="${y + 40}" rx="20" ry="10" fill="#6B4C9A" opacity=".55"/>`;
+      body += `<path d="M176 ${y + 22}l4 6 4-6" fill="${C.red}"/>`;
+      const xs = row ? [60, 300] : [40, 80, 120, 240, 280, 320];
+      xs.forEach((x, i) => { body += `<circle class="bs-p bs-p${row}" cx="${x}" cy="${y + 11}" r="5" fill="#8D74D8" style="--dx:${(180 - x) * (row ? 0.35 : 0.9)}px"/>`; });
+    });
+    return {
+      cap: t.cap,
+      svg: svg('bs', 360, 196, t.cap,
+        '.bs-p{animation:bsp 6s ease-in-out infinite}@keyframes bsp{0%,10%{transform:none}50%,100%{transform:translateX(var(--dx))}}' +
+        '.bs-bruise0{transform-origin:180px 80px;animation:bsb0 6s ease-in-out infinite}@keyframes bsb0{0%{transform:scale(.4)}40%,100%{transform:scale(.7)}}' +
+        '.bs-bruise1{transform-origin:180px 172px;animation:bsb1 6s ease-in-out infinite}@keyframes bsb1{0%{transform:scale(.4)}70%,100%{transform:scale(2.4,1.6)}}' +
+        '@media (prefers-reduced-motion:reduce){.bs-p{animation:none}.bs-bruise0{animation:none;transform:scale(.7)}.bs-bruise1{animation:none;transform:scale(2.4,1.6)}}',
+        body),
+    };
+  },
   // Anaemia, iron: two tanks of body iron. Tablets drip iron into both. In the first, a leak (heavy periods or
   // bleeding) lets it out, so the level hardly rises; in the second the leak is treated and the level slowly rises.
   'iron-tank'(l) {
@@ -2543,6 +2569,32 @@ const TRY = {
             ['pill', 'Iron tablets will fix everything', 'True?', 'Iron can treat the anaemia, not the bleeding. The cause has to be found.'],
             ['tree', 'The women in our family are just like this', 'True?', 'An inherited bleeding disorder such as von Willebrand disease is possible. Ask for tests.']],
           cap: 'If she faints, turns very pale, is breathless, or the bleeding will not stop, go to a hospital at once.' };
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
+      t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
+        `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
+        `<span class="fc back"><span class="k">${esc(t.sign)}</span><span>${esc(back)}</span></span></button>`).join('') + '</div>';
+    return { cap: t.cap, cls: 'flipset', html };
+  },
+  'bruise-cards'(l) {
+    const ic = {
+      ball: `<circle cx="20" cy="20" r="13" fill="#fff" stroke="${C.teal2}" stroke-width="2"/><path d="M20 12l6 5-2 7h-8l-2-7z" fill="${C.teal2}"/>`,
+      tube: `<rect x="8" y="16" width="20" height="10" rx="3" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><path d="M28 18h5v6h-5" fill="${C.teal2}"/>`,
+      dots: `<circle cx="12" cy="14" r="3" fill="${C.red}"/><circle cx="24" cy="12" r="2.5" fill="${C.red}"/><circle cx="18" cy="24" r="3" fill="${C.red}"/><circle cx="30" cy="26" r="2.5" fill="${C.red}"/><circle cx="10" cy="30" r="2" fill="${C.red}"/>`,
+      pill: `<rect x="8" y="14" width="24" height="12" rx="6" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><path d="M20 14v12" stroke="${C.teal2}" stroke-width="2"/>`,
+    };
+    const t = l === 'bn'
+      ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
+          c: [['ball', 'বাচ্চার সব কালশিটেই খেলতে গিয়ে পড়ে যাওয়ার', 'সত্যি?', 'চোট ছাড়া, পিঠে বা পেটে, বা লাল ফুটকির সঙ্গে কালশিটে হলে ডাক্তার আর রক্ত পরীক্ষা লাগবে।'],
+            ['tube', 'মলম লাগিয়ে মিলিয়ে যাওয়ার অপেক্ষা করলেই হবে', 'সত্যি?', 'কারণ না জেনে অপেক্ষা নয়। আগে ডাক্তার দেখান।'],
+            ['dots', 'পায়ের ছোট লাল ফুটকি ঘামাচি', 'সত্যি?', 'প্লেটলেট কম থাকার দাগ হতে পারে। সঙ্গে জ্বর থাকলে সঙ্গে সঙ্গে হাসপাতালে যান।'],
+            ['pill', 'কালশিটের ব্যথায় আইবুপ্রোফেন দেওয়াই যায়', 'সত্যি?', 'প্লেটলেট কম থাকলে এতে রক্তপাত বাড়তে পারে। আগে ডাক্তারকে জিজ্ঞেস করুন।']],
+          cap: 'লাল ফুটকির সঙ্গে জ্বর, বাচ্চা ঝিমিয়ে পড়া, বা রক্ত বন্ধ না হলে সঙ্গে সঙ্গে হাসপাতালে যান।' }
+      : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
+          c: [['ball', 'Every bruise on a child is from a fall at play', 'True?', 'Bruises without a knock, on the back or tummy, or with red dots, need a doctor and a blood test.'],
+            ['tube', 'Rub in an ointment and wait for it to fade', 'True?', 'Do not wait without knowing the cause. See a doctor first.'],
+            ['dots', 'Tiny red dots on the legs are just a heat rash', 'True?', 'They can be bleeding spots from low platelets. With a fever, go to a hospital at once.'],
+            ['pill', 'Ibuprofen is fine for the pain of a bruise', 'True?', 'With low platelets it can make bleeding worse. Ask the doctor first.']],
+          cap: 'Red spots with a fever, a drowsy child, or bleeding that will not stop needs a hospital at once.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
       t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
         `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +

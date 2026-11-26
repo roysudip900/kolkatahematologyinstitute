@@ -472,5 +472,16 @@
   "card_en": "Her period lasts ten days? Dizzy at school? Told it will settle after marriage?",
   "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FDECEE\"/><path d=\"M26 12c0 0-10 12-10 19a10 10 0 0 0 20 0c0-7-10-19-10-19z\" fill=\"#D8323F\"/><circle cx=\"22\" cy=\"31\" r=\"3\" fill=\"#F9C2C7\"/>",
   "group": "bleed"
+ },
+ {
+  "id": "child-bruises",
+  "bn": "বাচ্চার গায়ে কালশিটে",
+  "en": "Bruises in children",
+  "desc_bn": "বাচ্চার গায়ে কালচে নীল ছোপ বা লাল ফুটকি? কখন খেলাধুলোর কালশিটে, কখন প্লেটলেট বা রক্তপাতের অসুখ, আর কখন হাসপাতাল। লিখেছেন কলকাতার হেমাটোলজিস্ট।",
+  "desc_en": "Bluish black patches or red dots on a child's skin? When bruises are from play, when they mean low platelets or a bleeding disorder, and when to go to hospital.",
+  "card_bn": "বাচ্চার গায়ে হঠাৎ কালচে ছোপ? পায়ে লাল ফুটকি? মনে পড়ছে না কোথায় লেগেছে?",
+  "card_en": "Bluish black patches on your child? Red dots on the legs? Cannot remember a fall?",
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#EFE9FC\"/><ellipse cx=\"26\" cy=\"27\" rx=\"13\" ry=\"9\" fill=\"#6B4C9A\" opacity=\".6\"/><ellipse cx=\"24\" cy=\"26\" rx=\"7\" ry=\"5\" fill=\"#8D74D8\"/><circle cx=\"38\" cy=\"16\" r=\"2\" fill=\"#D8323F\"/><circle cx=\"14\" cy=\"38\" r=\"1.8\" fill=\"#D8323F\"/>",
+  "group": "bleed"
  }
 ]
