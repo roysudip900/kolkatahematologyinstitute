@@ -490,8 +490,8 @@
   "en": "Genetic tests of blood and marrow",
   "desc_bn": "রোগ ধরা পড়ার পরেও ক্যারিওটাইপিং, ফিশ, পিসিআর, এনজিএস কেন? জেনেটিক পরীক্ষা কীভাবে রক্তের ক্যান্সারের চিকিৎসা ঠিক করে, সহজ ভাষায়।",
   "desc_en": "Why karyotyping, FISH, PCR and NGS are done after a blood cancer is diagnosed, and how they decide the treatment, explained in plain words.",
-  "card_bn": "রোগ ধরা পড়েছে, তবু আবার পরীক্ষা? ক্রোমোজোম, জিনের রিপোর্ট কেন লাগে?",
-  "card_en": "Diagnosis made, yet more tests? Why chromosome and gene reports matter?",
+  "card_bn": "রোগ ধরা পড়েছে, তবু আবার পরীক্ষা? ক্রোমোজোম আর জিনের রিপোর্ট কেন দরকার?",
+  "card_en": "Diagnosis made, yet more tests? Why do chromosome and gene reports matter?",
   "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#E6F3EE\"/><path d=\"M19 12c8 6 6 10 0 14s-8 8 0 14M33 12c-8 6-6 10 0 14s8 8 0 14\" fill=\"none\" stroke=\"#126158\" stroke-width=\"2.5\"/><path d=\"M21 17h10M22 26h8M21 35h10\" stroke=\"#D8323F\" stroke-width=\"2\"/>",
   "group": "tests",
   "coauthor": "mridha"

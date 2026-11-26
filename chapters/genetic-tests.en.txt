@@ -1,4 +1,4 @@
-> Genetic tests of blood and bone marrow, such as karyotyping, FISH, PCR and NGS, look for changes in the chromosomes and genes of blood cancer cells, and those changes often decide which treatment will work, how strong it needs to be, and whether it is working. Ask your hematologist which tests you need and why, because the few weeks they can take often mean the right treatment from the start.
+> Genetic tests of blood and bone marrow, such as karyotyping, FISH, PCR and NGS, look for changes in the chromosomes and genes of blood cancer cells, and those changes often decide which treatment will work, how strong it needs to be, and whether it is working. Ask your hematologist which tests you need and why, because the results, though they can take a few weeks, often mean the right treatment from the start.
 
 "The report already says leukaemia. Why more tests? Start the medicine."
 
@@ -10,11 +10,11 @@ The uncle wants to know what more these tests can tell. The man in Howrah wants 
 
 # Two leukaemias with the same name
 
-Under the microscope, two leukaemias can look the same. Inside their cells, they can be very different. Every cell carries instructions, written in genes, packed into chromosomes. In blood cancers, some of these instructions are broken, swapped or missing, and the exact change often decides how the disease behaves and which medicine will work against it.
+Under the microscope, two leukaemias can look the same. Inside their cells, they can be very different. Most cells carry instructions, written in genes, packed into chromosomes. In blood cancers, some of these instructions are broken, swapped or missing, and the exact change often decides how the disease behaves and which medicine will work against it.
 
 [figure: gene-zoom]
 
-Take chronic myeloid leukaemia. In most people with it, a piece of one chromosome has swapped places with a piece of another. This makes a new joined gene that tells the marrow to keep making white cells. There are targeted tablets made against exactly that joined gene. A gene test finds it, so the doctor knows the tablets will work.
+Take chronic myeloid leukaemia. In most people with it, a piece of one chromosome has swapped places with a piece of another. This makes a new joined gene that tells the marrow to keep making white cells. There are targeted tablets made against exactly that joined gene. A gene test finds it, so the doctor knows these tablets are the right treatment to start.
 
 Or take acute promyelocytic leukaemia, a form of acute myeloid leukaemia caused by genes on two chromosomes switching places. It is treated very differently from other acute leukaemias. A gene or chromosome test is what tells them apart.
 
@@ -38,7 +38,7 @@ The hematologist chooses which ones a person needs. Often it is more than one, b
 
 # Is it inherited?
 
-Most gene changes found in blood cancer cells happened during the person's life, in those cells only. They are not passed on to children. Sometimes a test is done on healthy cells too, such as from the blood or saliva, to tell the two apart. If a change you may have been born with turns up, another test is needed to confirm it, and the doctor will explain what it means for the family.
+Most gene changes found in blood cancer cells happened during the person's life, in those cells only. They are not passed on to children. Sometimes a test is done on healthy cells too, such as a tiny piece of skin, to tell the two apart. If a change you may have been born with turns up, another test is needed to confirm it, and the doctor will explain what it means for the family.
 
 # Why it takes time
 
@@ -46,7 +46,7 @@ These tests are done in special laboratories, and results can take a few weeks. 
 
 # How the stories go on
 
-The engineer's chromosome and gene tests show that his leukaemia has a change linked to a high chance of coming back. His team plans stronger treatment and starts looking for a bone marrow donor early.
+The engineer's chromosome and gene tests show that his leukaemia has a change linked to a high chance of coming back. His team plans stronger treatment and starts looking for a stem cell donor early.
 
 The man in Howrah's gene test finds the joined gene of chronic myeloid leukaemia. He starts a targeted tablet, and the same test is repeated on his blood from time to time to see how well the treatment is working.
 
@@ -54,7 +54,7 @@ Whichever story is closer to yours, ask what each test is for before it is done,
 
 # Go to a hospital now if
 
-Genetic tests are done in a stable moment. While you wait for results, go to a hospital at once if:
+While you wait for results, go to a hospital at once if:
 
 - there is a fever, or you feel hot, cold or shivery
 - there is bleeding that will not stop, or many new bruises or red spots

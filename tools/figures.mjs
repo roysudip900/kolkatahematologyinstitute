@@ -1222,7 +1222,7 @@ const FIG = {
   // NGS: a strip of DNA letters read one by one, with one changed letter. No numbers.
   'gene-zoom'(l) {
     const t = l === 'bn'
-      ? { k: 'ক্যারিওটাইপিং', kk: 'সব ক্রোমোজোম দেখে', f: 'ফিশ', ff: 'একটা জিনে আলো', p: 'পিসিআর', pp: 'অল্প থেকে অনেক কপি', n: 'এনজিএস', nn: 'অনেক জিন অক্ষরে অক্ষরে', cap: 'চারটে পরীক্ষা চারভাবে দেখে: ক্যারিওটাইপিং সব ক্রোমোজোম, ফিশ একটা বাছাই করা জিন বা ক্রোমোজোমে আলো জ্বেলে, পিসিআর একটা জেনেটিক অংশের অনেক কপি বানিয়ে, এনজিএস একসঙ্গে অনেক জিন অক্ষরে অক্ষরে পড়ে। প্রায়ই একটার বেশি পরীক্ষা লাগে।' }
+      ? { k: 'ক্যারিওটাইপিং', kk: 'সব ক্রোমোজোম দেখে', f: 'ফিশ', ff: 'একটা জিনে আলো', p: 'পিসিআর', pp: 'অল্প থেকে অনেকগুণ', n: 'এনজিএস', nn: 'অনেক জিন অক্ষরে অক্ষরে', cap: 'চারটে পরীক্ষা চারভাবে দেখে: ক্যারিওটাইপিং সব ক্রোমোজোম, ফিশ একটা বাছাই করা জিন বা ক্রোমোজোমে আলো জ্বেলে, পিসিআর একটা জেনেটিক অংশকে অনেকগুণ বাড়িয়ে, এনজিএস একসঙ্গে অনেক জিন অক্ষরে অক্ষরে পড়ে। প্রায়ই একটার বেশি পরীক্ষা লাগে।' }
       : { k: 'karyotyping', kk: 'all the chromosomes', f: 'FISH', ff: 'one gene lights up', p: 'PCR', pp: 'a little becomes a lot', n: 'NGS', nn: 'many genes, letter by letter', cap: 'Four tests, four ways of looking: karyotyping sees all the chromosomes, FISH lights up one chosen gene or chromosome, PCR copies one piece of genetic material many times, and NGS reads many genes letter by letter. Often more than one is needed.' };
     const box = (x, y, i, a, b) => `<g class="gz gz${i}"><rect x="${x}" y="${y}" width="168" height="118" rx="14" fill="${C.mint}" stroke="${C.mintLine}" stroke-width="1.5"/>` +
       T(x + 12, y + 22, a, { a: 'start', size: 12.5, w: 700, fill: C.teal }) + T(x + 12, y + 110, b, { a: 'start', size: 12.5, fill: C.ink }) + '</g>';
@@ -1232,7 +1232,9 @@ const FIG = {
       const x = 28 + i * 36, h = 44 - i * 6;
       [0, 1].forEach((j) => {
         body += `<rect x="${x + j * 11}" y="${40}" width="8" height="${h}" rx="4" fill="#8D74D8"/>`;
-        if (i === 2 && j === 1) body += `<rect class="gz-sw" x="${x + j * 11}" y="${40}" width="8" height="12" rx="4" fill="${C.red}"/>`;
+        // a swap between two different chromosomes: each carries the other's piece
+        if (i === 0 && j === 1) body += `<rect x="${x + j * 11}" y="${40}" width="8" height="12" rx="4" fill="${C.amber}"/>`;
+        if (i === 2 && j === 1) body += `<rect x="${x + j * 11}" y="${40}" width="8" height="12" rx="4" fill="${C.red}"/>`;
       });
     });
     // FISH: nucleus with glowing dots
@@ -2657,13 +2659,13 @@ const TRY = {
       ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
           c: [['report', 'রোগ তো ধরা পড়েছে, আর পরীক্ষা মানে টাকা নষ্ট', 'সত্যি?', 'রোগ ধরা পড়লে নাম জানা যায়। জেনেটিক পরীক্ষা অনেক সময় ঠিক করে কোন ওষুধ কাজ করবে আর চিকিৎসা কতটা জোরালো হবে।'],
             ['family', 'লিউকেমিয়ায় জিনের বদল মানে বাচ্চাদেরও হবে', 'সত্যি?', 'বেশিরভাগ বদল জীবদ্দশায়, শুধু ক্যান্সারের কোষে হয়, সন্তানের মধ্যে যায় না।'],
-            ['clock', 'ফলের অপেক্ষা মানেই চিকিৎসায় দেরি', 'সত্যি?', 'দরকার হলে নিরাপদ চিকিৎসা আগে শুরু হয়, ফল এলে পরিকল্পনা ঠিক করা হয়।'],
+            ['clock', 'ফল না আসা পর্যন্ত কোনো চিকিৎসাই হবে না', 'সত্যি?', 'দরকার হলে নিরাপদ চিকিৎসা আগে শুরু হয়, ফল এলে পরিকল্পনা ঠিক করা হয়।'],
             ['repeat', 'চিকিৎসা শুরু হলে আর পরীক্ষা লাগে না', 'সত্যি?', 'কিছু পরীক্ষা চিকিৎসার মাঝে আবার হয়, চিকিৎসা কতটা কাজ করছে দেখতে।']],
           cap: 'ফলের অপেক্ষায় থাকার সময় জ্বর, বন্ধ না হওয়া রক্তপাত বা খুব শ্বাসকষ্ট হলে সঙ্গে সঙ্গে হাসপাতালে যান।' }
       : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
           c: [['report', 'The diagnosis is made, so more tests waste money', 'True?', 'The diagnosis gives the name. Genetic tests often decide which medicine will work and how strong the plan must be.'],
             ['family', 'A gene change in leukaemia means my children will get it', 'True?', 'Most changes happen during life, in the cancer cells only, and are not passed on.'],
-            ['clock', 'Waiting for results means delaying treatment', 'True?', 'When needed, safe treatment starts first, and the plan is adjusted when results come.'],
+            ['clock', 'I must go without any treatment until the results come', 'True?', 'When needed, safe treatment starts first, and the plan is adjusted when results come.'],
             ['repeat', 'Once treatment starts, no more tests are needed', 'True?', 'Some tests are repeated during treatment to see how well it is working.']],
           cap: 'While waiting for results, a fever, bleeding that will not stop or severe breathlessness needs a hospital at once.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
