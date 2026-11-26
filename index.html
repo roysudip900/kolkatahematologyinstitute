@@ -470,6 +470,9 @@ footer p{max-width:36em}
 <meta property="og:description" content="Blood diseases explained in plain words, in Bengali and English, by a clinical hematologist.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://kolkatahematologyinstitute.com/">
+<link rel="alternate" hreflang="bn" href="https://kolkatahematologyinstitute.com/">
+<link rel="alternate" hreflang="en" href="https://kolkatahematologyinstitute.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://kolkatahematologyinstitute.com/">
 <meta name="twitter:card" content="summary">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"MedicalOrganization","@id":"https://kolkatahematologyinstitute.com/#org","name":"Kolkata Hematology Institute","alternateName":"কলকাতা হেমাটোলজি ইনস্টিটিউট","url":"https://kolkatahematologyinstitute.com/","logo":"https://kolkatahematologyinstitute.com/assets/logo-mark.png","description":"Blood diseases explained in plain words, in Bengali and English, by a clinical hematologist.","medicalSpecialty":"Hematologic","areaServed":{"@type":"City","name":"Kolkata"},"founder":{"@id":"https://kolkatahematologyinstitute.com/#author"},"member":[{"@id":"https://kolkatahematologyinstitute.com/#author"},{"@id":"https://kolkatahematologyinstitute.com/#author-mridha"}]},{"@type":"Person","@id":"https://kolkatahematologyinstitute.com/#author","name":"Dr. Sudip Roy","alternateName":"ডাঃ সুদীপ রায়","honorificSuffix":"MBBS, MD, DM (Clinical Hematology)","jobTitle":"Clinical Hematologist","url":"https://kolkatahematologyinstitute.com/#about","workLocation":{"@type":"City","name":"Kolkata"},"worksFor":{"@id":"https://kolkatahematologyinstitute.com/#org"},"hasOccupation":{"@type":"Occupation","name":"Clinical Hematologist","occupationLocation":{"@type":"City","name":"Kolkata"}},"knowsAbout":["Hematology","Anaemia","Iron deficiency","Vitamin B12 deficiency","Thalassemia","HbE","Blood transfusion","Iron chelation"],"sameAs":["https://share.google/OLTZr4ebHj8UmXFnB"]},{"@type":"Person","@id":"https://kolkatahematologyinstitute.com/#author-mridha","name":"Dr. Srejita Mridha","jobTitle":"Pathologist","honorificSuffix":"MBBS, MD (Pathology)","alternateName":"ডাঃ শ্রীজিতা মৃধা","url":"https://kolkatahematologyinstitute.com/#about","workLocation":{"@type":"City","name":"Kolkata"},"hasOccupation":{"@type":"Occupation","name":"Pathologist","occupationLocation":{"@type":"City","name":"Kolkata"}}},{"@type":"WebSite","@id":"https://kolkatahematologyinstitute.com/#website","url":"https://kolkatahematologyinstitute.com/","name":"Kolkata Hematology Institute","alternateName":"কলকাতা হেমাটোলজি ইনস্টিটিউট","description":"Blood diseases explained in plain words, in Bengali and English, by a clinical hematologist.","inLanguage":["bn","en"],"publisher":{"@id":"https://kolkatahematologyinstitute.com/#org"}}]}</script>
 <!-- site:end -->
@@ -647,9 +650,13 @@ function setLang(l){root.setAttribute('data-lang',l);root.setAttribute('lang',l)
   en.setAttribute('aria-pressed',l==='en');bn.setAttribute('aria-pressed',l==='bn');
   try{localStorage.setItem('khi-lang',l);}catch(e){}
   var qi=document.getElementById('q');if(qi){qi.placeholder=qi.getAttribute('data-ph-'+l);if(qi.value)find();}}
-en.addEventListener('click',function(){setLang('en');});
-bn.addEventListener('click',function(){setLang('bn');});
-try{var s=localStorage.getItem('khi-lang');if(s==='bn'||s==='en')setLang(s);}catch(e){}
+/* EN opens the English home page (/en/), বাং the Bengali one (/), keeping the place on the page. */
+function go(l,path){setLang(l);if(location.pathname!==path)location.href=path+location.hash;}
+en.addEventListener('click',function(){go('en','/en/');});
+bn.addEventListener('click',function(){go('bn','/');});
+/* The English home page (/en/) always opens in English; the main page opens in the reader's last choice. */
+if(root.getAttribute('data-fixed'))setLang(root.getAttribute('data-fixed'));
+else{try{var s=localStorage.getItem('khi-lang');if(s==='bn'||s==='en')setLang(s);}catch(e){}}
 
 /* Search (Dr. Roy, 2026-11-26): the site's own list of pages, search.json, is fetched from this site the first
    time the box is used, and searched here on the phone. Nothing typed is sent anywhere. */
