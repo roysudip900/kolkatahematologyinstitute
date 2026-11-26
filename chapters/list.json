@@ -430,5 +430,16 @@
   "card_bn": "ফ্যাকাশে আর চোখ হলুদ? জ্বরের পর প্রস্রাব চায়ের মতো গাঢ়?",
   "card_en": "Pale with yellow eyes? Urine dark like tea after a fever?",
   "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FDECEE\"/><ellipse cx=\"26\" cy=\"26\" rx=\"15\" ry=\"9\" fill=\"#F3D56B\" stroke=\"#1F3B4D\" stroke-width=\"2\"/><circle cx=\"26\" cy=\"26\" r=\"5\" fill=\"#1F3B4D\"/>"
+ },
+ {
+  "id": "chemotherapy",
+  "bn": "কেমোথেরাপি",
+  "en": "Chemotherapy",
+  "desc_bn": "ডাক্তার কেমোর কথা বলেছেন? চুল পড়া, বমি ভাব, জ্বর এলে কী করবেন, বাচ্চা হবে কিনা। কেমোথেরাপি সহজ ভাষায়, লিখেছেন কলকাতার হেমাটোলজিস্ট।",
+  "desc_en": "Told you need chemo? What it does, how it is given, hair loss, sickness, why a fever is an emergency and what to ask. By a Kolkata hematologist.",
+  "card_bn": "ডাক্তার কেমোর কথা বলেছেন? চুল পড়বে কিনা ভাবছেন? কবিরাজি আগে করবেন কিনা?",
+  "card_en": "Told you need chemo? Wondering about hair loss? Thinking of trying kabiraji first?",
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#EFE9FC\"/><rect x=\"18\" y=\"9\" width=\"16\" height=\"22\" rx=\"5\" fill=\"#FFFFFF\" stroke=\"#8D74D8\" stroke-width=\"2\"/><rect x=\"18\" y=\"19\" width=\"16\" height=\"12\" rx=\"4\" fill=\"#8D74D8\"/><rect x=\"23\" y=\"32\" width=\"6\" height=\"7\" rx=\"2\" fill=\"#C9B6F2\"/><path d=\"M26 39v5\" stroke=\"#8D74D8\" stroke-width=\"2\"/>",
+  "group": "treat"
  }
 ]
