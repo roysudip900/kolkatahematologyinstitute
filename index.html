@@ -119,6 +119,20 @@ html[data-lang="bn"] .hero h1 .hl{padding-bottom:.2em}
 /* chapter cards on the home page */
 .sec{padding-block:40px 0}
 .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.search{margin-bottom:36px}
+.search label{display:block;font-family:var(--serif);font-weight:600;font-size:clamp(1.35rem,4.4vw,1.75rem);line-height:1.4;margin-bottom:12px;color:var(--ink)}
+.sbox{position:relative}
+.sbox svg{position:absolute;left:18px;top:50%;width:20px;height:20px;transform:translateY(-50%);color:var(--teal-2);pointer-events:none}
+.sbox input{width:100%;height:56px;padding:0 18px 0 50px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:1.05rem;-webkit-appearance:none;appearance:none}
+.sbox input:focus{outline:none;border-color:var(--teal-2);box-shadow:0 0 0 4px color-mix(in srgb,var(--teal-2) 18%,transparent)}
+.sres{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:10px}
+.sres:empty{display:none}
+.sres a{display:block;padding:14px 18px;border-radius:20px;background:var(--surface);border:1px solid var(--line);color:inherit;text-decoration:none}
+.sres a:hover,.sres a:focus{border-color:var(--teal-2)}
+.sres .sp{display:block;font-size:.85rem;font-weight:600;color:var(--teal-2)}
+.sres .st{display:block;font-family:var(--serif);font-weight:600;font-size:1.15rem;line-height:1.35}
+.sres .sc{display:block;margin-top:4px;font-size:.95rem;line-height:1.55;color:var(--ink-2)}
+.snone{margin-top:12px;color:var(--ink-2)}
 .group+.group{margin-top:44px}
 .gh{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-weight:600;font-size:clamp(1.35rem,4.4vw,1.75rem);line-height:1.3;margin-bottom:16px;color:var(--ink)}
 .gh::before{content:"";width:12px;height:12px;flex:none;border-radius:50%;background:var(--red)}
@@ -502,6 +516,12 @@ footer p{max-width:36em}
   </div>
 
   <div class="wrap sec" id="library">
+    <div class="search" role="search">
+      <label for="q"><span lang="bn">কী খুঁজছেন?</span><span lang="en">What are you looking for?</span></label>
+      <div class="sbox"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M13 13l4.5 4.5"/></svg><input id="q" type="search" autocomplete="off" enterkeyhint="search" data-ph-bn="যেমন: প্লেটলেট, থ্যালাসেমিয়া, জন্ডিস" data-ph-en="For example: platelets, thalassemia, jaundice" placeholder="যেমন: প্লেটলেট, থ্যালাসেমিয়া, জন্ডিস"></div>
+      <ul class="sres" id="sres" aria-live="polite"></ul>
+      <p class="snone" id="snone" hidden><span lang="bn">এই কথাটা কোনো পাতায় পাওয়া গেল না। অন্য কথা দিয়ে খুঁজুন, বা নিচের বিষয়গুলো দেখুন।</span><span lang="en">No page matches that. Try another word, or look through the topics below.</span></p>
+    </div>
     <div class="groups" id="grid">
 <!-- grid:start (written by tools/build.mjs from chapters/list.json, do not edit by hand) -->
 <section class="group" id="g-red"><h2 class="gh"><span lang="bn">লোহিতকণিকা ও রক্তাল্পতা</span><span lang="en">Red cells and anaemia</span></h2>
@@ -596,10 +616,37 @@ if(CHAPTER_IDS.indexOf(h)>-1){var pl='bn';try{pl=localStorage.getItem('khi-lang'
 var root=document.documentElement,en=document.getElementById('btn-en'),bn=document.getElementById('btn-bn');
 function setLang(l){root.setAttribute('data-lang',l);root.setAttribute('lang',l);
   en.setAttribute('aria-pressed',l==='en');bn.setAttribute('aria-pressed',l==='bn');
-  try{localStorage.setItem('khi-lang',l);}catch(e){}}
+  try{localStorage.setItem('khi-lang',l);}catch(e){}
+  var qi=document.getElementById('q');if(qi){qi.placeholder=qi.getAttribute('data-ph-'+l);if(qi.value)find();}}
 en.addEventListener('click',function(){setLang('en');});
 bn.addEventListener('click',function(){setLang('bn');});
 try{var s=localStorage.getItem('khi-lang');if(s==='bn'||s==='en')setLang(s);}catch(e){}
+
+/* Search (Dr. Roy, 2026-11-26): the site's own list of pages, search.json, is fetched from this site the first
+   time the box is used, and searched here on the phone. Nothing typed is sent anywhere. */
+var q=document.getElementById('q'),res=document.getElementById('sres'),none=document.getElementById('snone'),IDX=null,loading=false,timer=0;
+function norm(x){return (x||'').normalize('NFC').toLowerCase().replace(/ae/g,'e').replace(/oe/g,'e')
+  .replace(/ী/g,'ি').replace(/ূ/g,'ু').replace(/ণ/g,'ন').replace(/[শষ]/g,'স').replace(/[^\p{L}\p{M}\p{N}]+/gu,' ');}
+function load(){if(IDX||loading)return;loading=true;
+  fetch('/search.json').then(function(r){return r.json();}).then(function(d){
+    IDX=d.map(function(e){var t=norm([e.t.bn,e.t.en,e.p&&e.p.bn,e.p&&e.p.en].join(' ')),c=norm([e.c.bn,e.c.en].join(' ')),s=norm([e.s.bn,e.s.en].join(' '));return {e:e,t:t,c:c,s:s};});
+    find();}).catch(function(){loading=false;});}
+function el(tag,cls,txt){var n=document.createElement(tag);if(cls)n.className=cls;if(txt)n.textContent=txt;return n;}
+function find(){
+  var raw=q.value.trim();res.textContent='';none.hidden=true;
+  if(!raw)return; if(!IDX){load();return;}
+  var terms=norm(raw).split(' ').filter(Boolean),l=root.getAttribute('data-lang')||'bn',hits=[];
+  IDX.forEach(function(x){var sc=0;
+    for(var i=0;i<terms.length;i++){var w=terms[i],k=(x.t.indexOf(w)>-1?6:0)+(x.c.indexOf(w)>-1?2:0)+(x.s.indexOf(w)>-1?1:0);if(!k)return;sc+=k;}
+    if(!x.e.p)sc+=1;hits.push({x:x,sc:sc});});
+  hits.sort(function(a,b){return b.sc-a.sc;});
+  hits.slice(0,8).forEach(function(h){var e=h.x.e,L=e.u[l]?l:(l==='bn'?'en':'bn'),li=el('li'),a=el('a');
+    a.href=e.u[L];a.setAttribute('lang',L);
+    if(e.p)a.appendChild(el('span','sp',e.p[L]));
+    a.appendChild(el('span','st',e.t[L]));a.appendChild(el('span','sc',e.c[L]));li.appendChild(a);res.appendChild(li);});
+  if(!hits.length)none.hidden=false;}
+if(q){q.addEventListener('focus',load);q.addEventListener('input',function(){clearTimeout(timer);timer=setTimeout(find,120);});
+  q.addEventListener('keydown',function(ev){if(ev.key==='Enter'){var f=res.querySelector('a');if(f)location.href=f.href;}});}
 
 /* People who ask their phone for less motion get a still drawing. */
 var calm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
