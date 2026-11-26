@@ -1217,6 +1217,51 @@ const FIG = {
         body),
     };
   },
+  // Genetic tests: four panels that light up in turn. Karyotyping: pairs of chromosomes, one pair with a swapped
+  // piece. FISH: a cell nucleus with glowing dots, two of them joined. PCR: one strand that copies into many.
+  // NGS: a strip of DNA letters read one by one, with one changed letter. No numbers.
+  'gene-zoom'(l) {
+    const t = l === 'bn'
+      ? { k: 'ক্যারিওটাইপিং', kk: 'সব ক্রোমোজোম দেখে', f: 'ফিশ', ff: 'একটা জিনে আলো', p: 'পিসিআর', pp: 'অল্প থেকে অনেক কপি', n: 'এনজিএস', nn: 'অনেক জিন অক্ষরে অক্ষরে', cap: 'চারটে পরীক্ষা চারভাবে দেখে: ক্যারিওটাইপিং সব ক্রোমোজোম, ফিশ একটা বাছাই করা জিন বা ক্রোমোজোমে আলো জ্বেলে, পিসিআর একটা জেনেটিক অংশের অনেক কপি বানিয়ে, এনজিএস একসঙ্গে অনেক জিন অক্ষরে অক্ষরে পড়ে। প্রায়ই একটার বেশি পরীক্ষা লাগে।' }
+      : { k: 'karyotyping', kk: 'all the chromosomes', f: 'FISH', ff: 'one gene lights up', p: 'PCR', pp: 'a little becomes a lot', n: 'NGS', nn: 'many genes, letter by letter', cap: 'Four tests, four ways of looking: karyotyping sees all the chromosomes, FISH lights up one chosen gene or chromosome, PCR copies one piece of genetic material many times, and NGS reads many genes letter by letter. Often more than one is needed.' };
+    const box = (x, y, i, a, b) => `<g class="gz gz${i}"><rect x="${x}" y="${y}" width="168" height="118" rx="14" fill="${C.mint}" stroke="${C.mintLine}" stroke-width="1.5"/>` +
+      T(x + 12, y + 22, a, { a: 'start', size: 12.5, w: 700, fill: C.teal }) + T(x + 12, y + 110, b, { a: 'start', size: 12.5, fill: C.ink }) + '</g>';
+    let body = box(8, 8, 0, t.k, t.kk) + box(184, 8, 1, t.f, t.ff) + box(8, 134, 2, t.p, t.pp) + box(184, 134, 3, t.n, t.nn);
+    // karyotype: four pairs, the third pair has a swapped red piece
+    [0, 1, 2, 3].forEach((i) => {
+      const x = 28 + i * 36, h = 44 - i * 6;
+      [0, 1].forEach((j) => {
+        body += `<rect x="${x + j * 11}" y="${40}" width="8" height="${h}" rx="4" fill="#8D74D8"/>`;
+        if (i === 2 && j === 1) body += `<rect class="gz-sw" x="${x + j * 11}" y="${40}" width="8" height="12" rx="4" fill="${C.red}"/>`;
+      });
+    });
+    // FISH: nucleus with glowing dots
+    body += `<circle cx="268" cy="64" r="30" fill="#fff" stroke="${C.teal2}" stroke-width="2"/>`;
+    body += `<circle class="gz-glow" cx="254" cy="58" r="5" fill="${C.red}"/><circle class="gz-glow" cx="280" cy="72" r="5" fill="#4C74D9"/><circle class="gz-glow" cx="270" cy="54" r="5" fill="${C.red}"/><circle class="gz-glow" cx="276" cy="56" r="5" fill="#4C74D9"/>`;
+    // PCR: one strand, then two, then four
+    [[0, 1], [1, 2], [2, 4]].forEach(([c, n]) => {
+      for (let k = 0; k < n; k++) body += `<rect class="gz-c gz-c${c}" x="${30 + c * 46}" y="${168 + k * 10}" width="34" height="5" rx="2.5" fill="${C.teal2}"/>`;
+    });
+    // NGS: letters strip with one changed letter
+    const L = 'ACGTTAGC';
+    L.split('').forEach((ch, k) => {
+      const x = 198 + k * 18, bad = k === 5;
+      body += `<rect x="${x}" y="${168}" width="15" height="22" rx="4" fill="${bad ? C.roseBg : '#fff'}" stroke="${bad ? C.red : C.mintLine}" stroke-width="1.5"/>`;
+      body += `<text x="${x + 7.5}" y="${184}" text-anchor="middle" font-size="12.5" font-weight="700" fill="${bad ? C.red : C.teal}">${ch}</text>`;
+    });
+    body += `<rect class="gz-read" x="196" y="164" width="19" height="30" rx="5" fill="none" stroke="${C.amber}" stroke-width="2.5"/>`;
+    return {
+      cap: t.cap,
+      svg: svg('gz', 360, 260, t.cap,
+        '.gz{opacity:.55;animation:gzb 12s ease-in-out infinite}.gz1{animation-delay:3s}.gz2{animation-delay:6s}.gz3{animation-delay:9s}' +
+        '@keyframes gzb{0%,3%{opacity:.55}8%,22%{opacity:1}28%,100%{opacity:.55}}' +
+        '.gz-glow{animation:gzg 2s ease-in-out infinite alternate}@keyframes gzg{from{opacity:.35}to{opacity:1}}' +
+        '.gz-c1{opacity:0;animation:gzc 4s ease-in-out infinite}.gz-c2{opacity:0;animation:gzc 4s ease-in-out infinite 1s}@keyframes gzc{0%,20%{opacity:0}40%,100%{opacity:1}}' +
+        '.gz-read{animation:gzr 6s steps(8) infinite}@keyframes gzr{from{transform:translateX(0)}to{transform:translateX(144px)}}' +
+        '@media (prefers-reduced-motion:reduce){.gz,.gz-glow,.gz-c1,.gz-c2,.gz-read{animation:none;opacity:1}}',
+        body),
+    };
+  },
   // Anaemia, iron: two tanks of body iron. Tablets drip iron into both. In the first, a leak (heavy periods or
   // bleeding) lets it out, so the level hardly rises; in the second the leak is treated and the level slowly rises.
   'iron-tank'(l) {
@@ -2595,6 +2640,32 @@ const TRY = {
             ['dots', 'Tiny red dots on the legs are just a heat rash', 'True?', 'They can be bleeding spots from low platelets. With a fever, go to a hospital at once.'],
             ['pill', 'Ibuprofen is fine for the pain of a bruise', 'True?', 'With low platelets it can make bleeding worse. Ask the doctor first.']],
           cap: 'Red spots with a fever, a drowsy child, or bleeding that will not stop needs a hospital at once.' };
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
+      t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
+        `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
+        `<span class="fc back"><span class="k">${esc(t.sign)}</span><span>${esc(back)}</span></span></button>`).join('') + '</div>';
+    return { cap: t.cap, cls: 'flipset', html };
+  },
+  'gene-cards'(l) {
+    const ic = {
+      report: `<rect x="9" y="5" width="22" height="30" rx="3" fill="#fff" stroke="${C.teal2}" stroke-width="2"/><path d="M14 13h12M14 19h12M14 25h7" stroke="${C.teal2}" stroke-width="2"/>`,
+      family: `<circle cx="13" cy="12" r="5" fill="${C.teal}"/><circle cx="27" cy="12" r="5" fill="${C.teal}"/><circle cx="20" cy="26" r="4" fill="${C.rose}"/><path d="M8 34c0-6 3-9 5-9s5 3 5 9M22 34c0-6 3-9 5-9s5 3 5 9" fill="${C.teal}"/>`,
+      clock: `<circle cx="20" cy="20" r="13" fill="#fff" stroke="${C.teal2}" stroke-width="2"/><path d="M20 12v9l6 3" stroke="${C.teal}" stroke-width="2.5" fill="none" stroke-linecap="round"/>`,
+      repeat: `<path d="M10 20a10 10 0 0 1 17-7" fill="none" stroke="${C.teal2}" stroke-width="2.5"/><path d="M27 8v6h-6" fill="none" stroke="${C.teal2}" stroke-width="2.5"/><path d="M30 20a10 10 0 0 1-17 7" fill="none" stroke="${C.teal2}" stroke-width="2.5"/><path d="M13 32v-6h6" fill="none" stroke="${C.teal2}" stroke-width="2.5"/>`,
+    };
+    const t = l === 'bn'
+      ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
+          c: [['report', 'রোগ তো ধরা পড়েছে, আর পরীক্ষা মানে টাকা নষ্ট', 'সত্যি?', 'রোগ ধরা পড়লে নাম জানা যায়। জেনেটিক পরীক্ষা অনেক সময় ঠিক করে কোন ওষুধ কাজ করবে আর চিকিৎসা কতটা জোরালো হবে।'],
+            ['family', 'লিউকেমিয়ায় জিনের বদল মানে বাচ্চাদেরও হবে', 'সত্যি?', 'বেশিরভাগ বদল জীবদ্দশায়, শুধু ক্যান্সারের কোষে হয়, সন্তানের মধ্যে যায় না।'],
+            ['clock', 'ফলের অপেক্ষা মানেই চিকিৎসায় দেরি', 'সত্যি?', 'দরকার হলে নিরাপদ চিকিৎসা আগে শুরু হয়, ফল এলে পরিকল্পনা ঠিক করা হয়।'],
+            ['repeat', 'চিকিৎসা শুরু হলে আর পরীক্ষা লাগে না', 'সত্যি?', 'কিছু পরীক্ষা চিকিৎসার মাঝে আবার হয়, চিকিৎসা কতটা কাজ করছে দেখতে।']],
+          cap: 'ফলের অপেক্ষায় থাকার সময় জ্বর, বন্ধ না হওয়া রক্তপাত বা খুব শ্বাসকষ্ট হলে সঙ্গে সঙ্গে হাসপাতালে যান।' }
+      : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
+          c: [['report', 'The diagnosis is made, so more tests waste money', 'True?', 'The diagnosis gives the name. Genetic tests often decide which medicine will work and how strong the plan must be.'],
+            ['family', 'A gene change in leukaemia means my children will get it', 'True?', 'Most changes happen during life, in the cancer cells only, and are not passed on.'],
+            ['clock', 'Waiting for results means delaying treatment', 'True?', 'When needed, safe treatment starts first, and the plan is adjusted when results come.'],
+            ['repeat', 'Once treatment starts, no more tests are needed', 'True?', 'Some tests are repeated during treatment to see how well it is working.']],
+          cap: 'While waiting for results, a fever, bleeding that will not stop or severe breathlessness needs a hospital at once.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
       t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
         `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
