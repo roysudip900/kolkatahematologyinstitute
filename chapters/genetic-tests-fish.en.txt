@@ -24,8 +24,8 @@ FISH finds only what it is asked to look for. So the hematologist chooses the te
 
 - Chronic myeloid leukaemia: BCR::ABL1, the joined gene made by the Philadelphia chromosome. FISH can confirm it quickly.
 - Acute promyelocytic leukaemia: PML::RARA. This form of leukaemia needs treatment urgently, so a quick answer matters.
-- Chronic lymphocytic leukaemia: a panel that usually looks for del(13q), del(11q), trisomy 12 and del(17p). Of these, del(17p) matters most. It means the usual treatments work less well and stop working sooner, so the hematologist may choose a different, targeted treatment.
-- Multiple myeloma: FISH is done on the bone marrow sample. del(17p), t(4;14) and t(14;16) are counted as higher risk changes, linked to myeloma that is harder to control. Others, such as t(11;14), are not counted among them. The result helps plan how strong the treatment should be and how closely it is followed.
+- Chronic lymphocytic leukaemia: a panel that usually looks for del(13q), del(11q), trisomy 12 and del(17p). Of these, del(17p) matters most. It is linked to the usual treatments working less well and for a shorter time, so the hematologist may choose a different, targeted treatment.
+- Multiple myeloma: FISH is done on the bone marrow sample, to look for the changes that place the myeloma in a risk group, explained below. The result helps plan how strong the treatment should be and how closely it is followed.
 
 In these names, "del" means a piece is missing, "t" means two chromosomes have swapped pieces, and "trisomy" means there is an extra copy of a whole chromosome.
 
@@ -35,7 +35,7 @@ Two people can have the same disease and very different courses. So the hematolo
 
 Some of the changes that place people in these groups:
 
-- Acute myeloid leukaemia: t(8;21), t(15;17) and inv(16) are linked to a better outcome. A KMT2A rearrangement, inv(3), t(6;9), or many changes at once are linked to a less good outcome, and the plan may then be stronger, sometimes with a transplant.
+- Acute myeloid leukaemia: t(8;21), t(15;17) and inv(16) are linked to a better outcome. A KMT2A rearrangement (older reports write MLL), inv(3), t(6;9), or many changes at once are linked to a less good outcome, and the plan may then be stronger, sometimes with a transplant.
 - Acute lymphoblastic leukaemia: t(12;21), which joins the ETV6 and RUNX1 genes and is common in children, and hyperdiploidy, meaning many extra chromosomes, are linked to a better outcome. A KMT2A rearrangement is linked to a worse one. The Philadelphia chromosome used to mean the worst outlook in this leukaemia, and targeted tablets have changed that.
 - Chronic lymphocytic leukaemia: del(13q) is linked to a better outlook, del(11q) and del(17p) to a less good one. FISH also helps tell this leukaemia apart from mantle cell lymphoma, which can look the same under the microscope but carries t(11;14) and behaves worse.
 - Multiple myeloma: t(11;14) and hyperdiploidy are linked to a better outlook. t(4;14), t(14;16), del(17p), and a gain of 1q or loss of 1p are linked to a less good one. Myeloma cells seldom divide, so a karyotype often misses these changes, and FISH is the main test for them.
