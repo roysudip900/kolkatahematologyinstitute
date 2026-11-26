@@ -1,12 +1,12 @@
-> Intensive chemotherapy is strong treatment that aims to cure, as in acute leukaemia, and its first phase usually means a stay in hospital while the blood counts fall very low and slowly recover. It comes in phases, so stay with the whole plan your hematologist makes, and go to the hospital at once for any fever, even between cycles.
+> Intensive chemotherapy is strong treatment that aims to cure, as in acute leukaemia, and its first phase usually means a stay in hospital while the blood counts fall very low and slowly recover. It comes in phases, so stay with the whole plan your hematologist makes, and go to the hospital at once for any fever, even at home between phases.
 
 His mother packed a bag for three days and was told to think in weeks.
 
-He is seven, from a village near Bankura, and he has acute lymphoblastic leukaemia. The hematologist explained the plan in the corridor of a Kolkata hospital: first a few days of steroid medicine, then chemotherapy, the first part of it on the ward. His mother heard "long treatment" and thought of his school, of the paddy that needs cutting, of the bus fare home. Then she heard about a needle in his lower back and stopped listening.
+He is seven, from a village near Bankura, and he has acute lymphoblastic leukaemia. The hematologist explained the plan in the corridor of a Kolkata hospital: first some days of steroid medicine, then chemotherapy, the first part of it on the ward. His mother heard "long treatment" and thought of his school, of the paddy that needs cutting, of the bus fare home. Then she heard about a needle in his lower back and stopped listening.
 
 In Howrah, a man of forty-five runs a hardware shop with his brother. He has acute myeloid leukaemia. He is fit, he has no other illness, and his team has offered intensive treatment. He wants to know how long the shop will be without him, and why a treatment meant to cure him must first make him so weak.
 
-She wants to know what the weeks ahead will look like. He wants to know why it has to be this hard.
+She wants to know what the weeks ahead will look like. The shopkeeper wants to know how long he will be away.
 
 # Why it is called intensive
 
@@ -26,7 +26,7 @@ Treatment comes in phases, each with its own job.
 
 Remission is good news, but it is not the end of treatment. The later phases are what stop the leukaemia returning, so the plan goes on even when the child is running around and the reports look fine.
 
-In acute lymphoblastic leukaemia, chemotherapy is also put into the fluid around the spinal cord, through a needle in the lower back, to stop leukaemia cells spreading to the brain. Some people later need a bone marrow transplant, or targeted medicines or immunotherapy, if the leukaemia is likely to come back or comes back.
+In acute lymphoblastic leukaemia, chemotherapy is also put into the fluid around the spinal cord, through a needle in the lower back, to stop leukaemia cells spreading to the brain. Some people later need a stem cell or bone marrow transplant, or targeted medicines or immunotherapy, if the leukaemia is likely to come back or comes back.
 
 # The weeks on the ward
 
@@ -50,7 +50,7 @@ Tell the specialists about any symptom or side effect that worries you. You do n
 
 The boy spends his first weeks on the ward, with transfusions on some days and a fever once, treated quickly. His leukaemia goes into remission. The tablets at home come later, and his mother learns which signs mean the bus back to Kolkata that same day.
 
-The man's brother runs the shop. After the first phase his leukaemia is in remission, and his team talks to him about the next phase and whether a transplant is right for him.
+The man's brother runs the shop. After the first phase his leukaemia is in remission, and his team talks to him about the next phase and whether a stem cell transplant is right for him.
 
 Whichever story is closer to yours, ask the team to draw the plan out on paper, phase by phase, before the first one starts.
 
@@ -76,7 +76,7 @@ Your hematologist will want you to understand the plan. Ask:
 - How long is the first stay in hospital likely to be?
 - Will I need transfusions, and what are they for?
 - Which signs mean I must come back at once, and where do I go at night?
-- Is a bone marrow transplant likely to be part of my plan?
+- Is a stem cell or bone marrow transplant likely to be part of my plan?
 
 # Common questions
 
@@ -99,3 +99,4 @@ No. It depends on the type of leukaemia, the person's age and their general heal
 - National Cancer Institute: Adult acute myeloid leukemia treatment | https://www.cancer.gov/types/leukemia/patient/adult-aml-treatment-pdq
 - National Cancer Institute: Childhood acute lymphoblastic leukemia treatment | https://www.cancer.gov/types/leukemia/patient/child-all-treatment-pdq
 - NHS: Sepsis | https://www.nhs.uk/conditions/sepsis/
+- NHS: Chemotherapy | https://www.nhs.uk/tests-and-treatments/chemotherapy/
