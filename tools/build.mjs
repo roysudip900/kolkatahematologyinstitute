@@ -52,6 +52,7 @@ const AUTHOR = { bn: 'ডাঃ সুদীপ রায়', en: 'Dr. Sudip Ro
 const CRED = { bn: 'এমবিবিএস, এমডি, ডিএম (ক্লিনিক্যাল হেমাটোলজি)', en: 'MBBS, MD, DM (Clinical Hematology)' };
 const SITE_NAME = { bn: 'কলকাতা হেমাটোলজি ইনস্টিটিউট', en: 'Kolkata Hematology Institute' };
 const LANGS = ['bn', 'en'];
+const SEARCH_ICON = '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M13 13l4.5 4.5"/></svg>';
 const GROUPS = [
   ['red', 'লোহিতকণিকা ও রক্তাল্পতা', 'Red cells and anaemia'],
   ['bleed', 'রক্তপাত ও রক্ত জমাট বাঁধা', 'Bleeding and clotting'],
@@ -359,7 +360,7 @@ for (const c of chapters) {
         `<aside class="endcard">${AVATAR}<div><div class="k">${l === 'bn' ? 'লেখক' : (co ? 'Authors' : 'Author')}</div>` +
         (co ? `<div class="who">${co[l]}</div><div class="cred">${co.cred[l]}</div>` : '') +
         `<div class="who">${au(l)}</div><div class="cred">${CRED[l]}</div></div></aside>` +
-        `<a class="allbtn" href="/#library">${LEFT}${l === 'bn' ? 'সব অধ্যায়' : 'All chapters'}</a>`;
+        `<a class="allbtn" href="/#g-${(c.parent ? byId[c.parent] : c).group}">${LEFT}${l === 'bn' ? 'সব অধ্যায়' : 'All chapters'}</a>`;
       schema = ld({
         '@context': 'https://schema.org', '@type': 'MedicalWebPage', name: title, description: desc, inLanguage: l,
         url: canonical, datePublished: firstPublished(`chapters/${c.id}.${l}.txt`, date), dateModified: date, about: { '@type': 'MedicalCondition', name: c.en.split(':')[0] },
@@ -418,6 +419,7 @@ ${schema}
   <a class="brand" href="/">${LOGO}<span class="nm">${SITE_NAME[l]}</span></a>
   <div class="right">
     <a class="nav" href="/#about">${l === 'bn' ? 'পরিচিতি' : 'About'}</a>
+    <a class="sbtn" href="/#find"><span class="sr">${l === 'bn' ? 'খুঁজুন' : 'Search'}</span>${SEARCH_ICON}</a>
     <div class="lang" role="group" aria-label="Language">
       <a href="${url(c.id, 'bn')}" hreflang="bn" ${l === 'bn' ? 'aria-current="true"' : ''} data-l="bn">বাং</a>
       <a href="${url(c.id, 'en')}" hreflang="en" ${l === 'en' ? 'aria-current="true"' : ''} data-l="en">EN</a>
@@ -426,7 +428,7 @@ ${schema}
 </div></header>
 
 <main class="read">
-${root ? `<a class="back" href="${url(root.id, l)}">${LEFT}${esc(short(root, l))}</a>` : `<a class="back" href="/#library">${LEFT}${l === 'bn' ? 'সব অধ্যায়' : 'All chapters'}</a>`}
+${root ? `<a class="back" href="${url(root.id, l)}">${LEFT}${esc(short(root, l))}</a>` : `<a class="back" href="/#g-${c.group}">${LEFT}${l === 'bn' ? 'সব অধ্যায়' : 'All chapters'}</a>`}
 <div class="chead">${ic(c.art, 'big')}${kick ? `<span class="kick">${kick}</span>` : ''}<h1>${esc(root ? partTitle(c, l) : title)}</h1></div>
 ${body}
 </main>
@@ -606,6 +608,9 @@ for (const c of chapters) {
 }
 if (cards) grid += `<section class="group" id="g-${g}"><h2 class="gh"><span lang="bn">${gbn}</span><span lang="en">${gen}</span></h2>\n<div class="grid">\n${cards}</div></section>\n`;
 }
+// Shortcuts to each group, under the search box.
+const shown = GROUPS.filter(([g]) => chapters.some((c) => !c.parent && c.group === g && (info[c.id].has.bn || info[c.id].has.en)));
+grid = `<nav class="jump" aria-label="Topics">${shown.map(([g, gbn, gen]) => `<a href="#g-${g}"><span lang="bn">${gbn}</span><span lang="en">${gen}</span></a>`).join('')}</nav>\n` + grid;
 const soon = ''; // Chapters with no words yet are not shown at all (Dr. Roy, 2026-11-18), so there is no "Coming soon" list.
 let home = index.replace(/(<!-- grid:start[^>]*-->\n)[\s\S]*?(<!-- grid:end -->)/, (m, a, b) => a + grid + b)
   .replace(/(<!-- soon:start[^>]*-->\n)[\s\S]*?(<!-- soon:end -->)/, (m, a, b) => a + soon + b)
