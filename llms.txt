@@ -44,6 +44,7 @@ Author: [Dr. Sudip Roy](https://share.google/OLTZr4ebHj8UmXFnB), MBBS, MD, DM (C
 - [Blood clotting tests](https://kolkatahematologyinstitute.com/en/coagulation/): What PT, INR, APTT, fibrinogen and D-dimer measure, why they are done before an operation, on warfarin, when you bleed easily or a clot is suspected, and getting a good sample.
 - [Low white cell count](https://kolkatahematologyinstitute.com/en/low-white-cells/): What white cells do, causes of a low count, signs, treatment, lowering the risk of infection, and when to go to a hospital at once.
 - [Enlarged spleen (splenomegaly)](https://kolkatahematologyinstitute.com/en/spleen/): What the spleen does, why it grows, the signs, how it is found, treatment, when it is removed, and living without a spleen.
+- [Chemotherapy](https://kolkatahematologyinstitute.com/en/chemotherapy/): Told you need chemo? What it does, how it is given, hair loss, sickness, why a fever is an emergency and what to ask. By a Kolkata hematologist.
 
 ## অধ্যায় (বাংলা)
 - [অ্যানিমিয়া: রক্তাল্পতা](https://kolkatahematologyinstitute.com/anaemia/): সব সময় ক্লান্তি, সিঁড়ি ভাঙলে হাঁফ, রিপোর্টে হিমোগ্লোবিন কম? অ্যানিমিয়া মানে কী আর কারণ খোঁজা কেন জরুরি, লিখেছেন কলকাতার হেমাটোলজিস্ট।
@@ -85,3 +86,4 @@ Author: [Dr. Sudip Roy](https://share.google/OLTZr4ebHj8UmXFnB), MBBS, MD, DM (C
 - [রক্ত জমাট বাঁধার পরীক্ষা](https://kolkatahematologyinstitute.com/coagulation/): পিটি, আইএনআর, এপিটিটি, ফাইব্রিনোজেন আর ডি-ডাইমার কী মাপে, অপারেশনের আগে, ওয়ারফারিনে, সহজে রক্ত পড়লে আর জমাট সন্দেহ হলে কেন করা হয়, আর ঠিকঠাক নমুনা।
 - [শ্বেতকণিকা কম](https://kolkatahematologyinstitute.com/low-white-cells/): শ্বেতকণিকা কী করে, কম হওয়ার কারণ, লক্ষণ, চিকিৎসা, সংক্রমণের ঝুঁকি কমানো, আর কখন সঙ্গে সঙ্গে হাসপাতালে যাবেন।
 - [পিলে বড় হওয়া (স্প্লিনোমেগালি)](https://kolkatahematologyinstitute.com/spleen/): পিলে কী করে, কেন বড় হয়, লক্ষণ, কীভাবে ধরা পড়ে, চিকিৎসা, কখন বাদ দেওয়া হয়, আর পিলে ছাড়া জীবন।
+- [কেমোথেরাপি](https://kolkatahematologyinstitute.com/chemotherapy/): ডাক্তার কেমোর কথা বলেছেন? চুল পড়া, বমি ভাব, জ্বর এলে কী করবেন, বাচ্চা হবে কিনা। কেমোথেরাপি সহজ ভাষায়, লিখেছেন কলকাতার হেমাটোলজিস্ট।
