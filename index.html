@@ -133,6 +133,14 @@ html[data-lang="bn"] .hero h1 .hl{padding-bottom:.2em}
 .sres .st{display:block;font-family:var(--serif);font-weight:600;font-size:1.15rem;line-height:1.35}
 .sres .sc{display:block;margin-top:4px;font-size:.95rem;line-height:1.55;color:var(--ink-2)}
 .snone{margin-top:12px;color:var(--ink-2)}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.sbtn{width:44px;height:44px;flex:none;border-radius:50%;display:grid;place-items:center;background:var(--sand);color:var(--teal)}
+.sbtn svg{width:19px;height:19px}
+.sbtn:hover{color:var(--teal-2)}
+.search,.group{scroll-margin-top:84px}
+.jump{display:flex;flex-wrap:wrap;gap:8px;margin:-14px 0 34px}
+.jump a{display:inline-flex;align-items:center;min-height:40px;padding:6px 14px;border-radius:999px;background:var(--mint);border:1px solid var(--mint-line);color:var(--teal);font-size:.92rem;font-weight:600;line-height:1.3;text-decoration:none}
+.jump a:hover{border-color:var(--teal-2)}
 .group+.group{margin-top:44px}
 .gh{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-weight:600;font-size:clamp(1.35rem,4.4vw,1.75rem);line-height:1.3;margin-bottom:16px;color:var(--ink)}
 .gh::before{content:"";width:12px;height:12px;flex:none;border-radius:50%;background:var(--red)}
@@ -432,8 +440,16 @@ footer p{max-width:36em}
   .hero-in{flex-direction:column-reverse;align-items:stretch;gap:6px;padding-block:8px 40px;min-height:0}
   .hero .txt{flex:none}
   .cells{flex:none;max-width:none;width:100%;max-height:250px}
-  .grid{grid-template-columns:1fr;gap:16px}
-  .card{padding:22px 22px 18px;border-radius:26px}
+  .grid{grid-template-columns:1fr;gap:14px}
+  .right{gap:10px}
+  .card{gap:10px}
+  .card .ic{width:46px;height:46px}
+  .card h3{font-size:1.32rem}
+  .card .deco{width:150px;height:150px;right:-48px;top:-48px}
+  .card .hook{font-size:1.04rem;line-height:1.5}
+  .card[lang="bn"] .hook{font-size:1rem;line-height:1.7}
+  .group+.group{margin-top:36px}
+  .card{padding:18px 18px 14px;border-radius:24px}
   .about{padding:22px}
   .chead{padding:26px 22px;border-radius:28px;min-height:176px}
   .chead .big{width:150px;height:150px;right:-30px;top:-30px}
@@ -463,6 +479,7 @@ footer p{max-width:36em}
     <span class="nm" lang="bn">কলকাতা হেমাটোলজি ইনস্টিটিউট</span><span class="nm" lang="en">Kolkata Hematology Institute</span></a>
   <div class="right">
     <a class="nav" href="#about"><span lang="bn">পরিচিতি</span><span lang="en">About</span></a>
+    <a class="sbtn" href="#find"><span class="sr" lang="bn">খুঁজুন</span><span class="sr" lang="en">Search</span><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M13 13l4.5 4.5"/></svg></a>
     <div class="lang" role="group" aria-label="Language">
       <button type="button" id="btn-bn" aria-pressed="true">বাং</button>
       <button type="button" id="btn-en" aria-pressed="false">EN</button>
@@ -516,7 +533,7 @@ footer p{max-width:36em}
   </div>
 
   <div class="wrap sec" id="library">
-    <div class="search" role="search">
+    <div class="search" id="find" role="search">
       <label for="q"><span lang="bn">কী খুঁজছেন?</span><span lang="en">What are you looking for?</span></label>
       <div class="sbox"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M13 13l4.5 4.5"/></svg><input id="q" type="search" autocomplete="off" enterkeyhint="search" data-ph-bn="যেমন: প্লেটলেট, থ্যালাসেমিয়া, জন্ডিস" data-ph-en="For example: platelets, thalassemia, jaundice" placeholder="যেমন: প্লেটলেট, থ্যালাসেমিয়া, জন্ডিস"></div>
       <ul class="sres" id="sres" aria-live="polite"></ul>
@@ -524,6 +541,7 @@ footer p{max-width:36em}
     </div>
     <div class="groups" id="grid">
 <!-- grid:start (written by tools/build.mjs from chapters/list.json, do not edit by hand) -->
+<nav class="jump" aria-label="Topics"><a href="#g-red"><span lang="bn">লোহিতকণিকা ও রক্তাল্পতা</span><span lang="en">Red cells and anaemia</span></a><a href="#g-bleed"><span lang="bn">রক্তপাত ও রক্ত জমাট বাঁধা</span><span lang="en">Bleeding and clotting</span></a><a href="#g-white"><span lang="bn">শ্বেতকণিকা ও রক্তের ক্যান্সার</span><span lang="en">White cells and blood cancers</span></a><a href="#g-tests"><span lang="bn">রক্তের পরীক্ষা</span><span lang="en">Blood tests</span></a><a href="#g-treat"><span lang="bn">চিকিৎসা</span><span lang="en">Treatments</span></a><a href="#g-other"><span lang="bn">গর্ভাবস্থা</span><span lang="en">Pregnancy</span></a></nav>
 <section class="group" id="g-red"><h2 class="gh"><span lang="bn">লোহিতকণিকা ও রক্তাল্পতা</span><span lang="en">Red cells and anaemia</span></h2>
 <div class="grid">
 <a class="card" lang="bn" href="/anaemia/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#FDECEE"/><circle cx="26" cy="26" r="15" fill="#F2A7AE"/><circle cx="26" cy="26" r="9" fill="#FDECEE"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#FDECEE"/><circle cx="26" cy="26" r="15" fill="#F2A7AE"/><circle cx="26" cy="26" r="9" fill="#FDECEE"/></svg><h3>অ্যানিমিয়া: রক্তাল্পতা</h3></span><span class="hook">সিঁড়ি ভাঙলেই হাঁফ ধরে? সারাদিন ক্লান্ত লাগে? রিপোর্টে হিমোগ্লোবিন কম?</span><span class="meta"><span>৮টি পর্ব</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
@@ -645,6 +663,8 @@ function find(){
     if(e.p)a.appendChild(el('span','sp',e.p[L]));
     a.appendChild(el('span','st',e.t[L]));a.appendChild(el('span','sc',e.c[L]));li.appendChild(a);res.appendChild(li);});
   if(!hits.length)none.hidden=false;}
+function toFind(){if(location.hash==='#find'&&q){q.focus({preventScroll:true});load();}}
+window.addEventListener('hashchange',toFind);window.addEventListener('load',function(){setTimeout(toFind,60);});
 if(q){q.addEventListener('focus',load);q.addEventListener('input',function(){clearTimeout(timer);timer=setTimeout(find,120);});
   q.addEventListener('keydown',function(ev){if(ev.key==='Enter'){var f=res.querySelector('a');if(f)location.href=f.href;}});}
 
