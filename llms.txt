@@ -48,6 +48,7 @@ Author: [Dr. Sudip Roy](https://share.google/OLTZr4ebHj8UmXFnB), MBBS, MD, DM (C
   - [Intensive treatment](https://kolkatahematologyinstitute.com/en/chemotherapy/intensive/): Intensive chemotherapy for leukaemia: the weeks in hospital, the phases, remission, why transfusions are needed and what the family can do.
   - [Palliative, lower-intensity treatment](https://kolkatahematologyinstitute.com/en/chemotherapy/palliative/): Lower-intensity or palliative chemotherapy: what it aims for, who it suits, what palliative care is, and easing pain and breathlessness.
 - [Heavy periods (menorrhagia)](https://kolkatahematologyinstitute.com/en/heavy-periods/): Heavy periods in young girls from the first period: when bleeding is too much, bleeding disorders such as von Willebrand disease, anaemia, and when to go to hospital.
+- [Bruises in children](https://kolkatahematologyinstitute.com/en/child-bruises/): Bluish black patches or red dots on a child's skin? When bruises are from play, when they mean low platelets or a bleeding disorder, and when to go to hospital.
 
 ## অধ্যায় (বাংলা)
 - [অ্যানিমিয়া: রক্তাল্পতা](https://kolkatahematologyinstitute.com/anaemia/): সব সময় ক্লান্তি, সিঁড়ি ভাঙলে হাঁফ, রিপোর্টে হিমোগ্লোবিন কম? অ্যানিমিয়া মানে কী আর কারণ খোঁজা কেন জরুরি, লিখেছেন কলকাতার হেমাটোলজিস্ট।
@@ -93,3 +94,4 @@ Author: [Dr. Sudip Roy](https://share.google/OLTZr4ebHj8UmXFnB), MBBS, MD, DM (C
   - [ইনটেনসিভ চিকিৎসা](https://kolkatahematologyinstitute.com/chemotherapy/intensive/): লিউকেমিয়ায় ইনটেনসিভ কেমো: হাসপাতালের সপ্তাহগুলো, ধাপ, রেমিশন, বারবার রক্ত কেন লাগে, পরিবার কী করবে। লিখেছেন কলকাতার হেমাটোলজিস্ট।
   - [প্যালিয়েটিভ, কম তীব্রতার চিকিৎসা](https://kolkatahematologyinstitute.com/chemotherapy/palliative/): কম তীব্রতার বা প্যালিয়েটিভ কেমো কী, কাদের জন্য, প্যালিয়েটিভ কেয়ার কী, ব্যথা আর শ্বাসকষ্ট কমানো। লিখেছেন কলকাতার হেমাটোলজিস্ট।
 - [মাসিকে অতিরিক্ত রক্তপাত (মেনোরেজিয়া)](https://kolkatahematologyinstitute.com/heavy-periods/): মেয়ের প্রথম মাসিক থেকেই খুব রক্ত যাচ্ছে? কখন সেটা বেশি, রক্তের অসুখ কিনা, রক্তাল্পতা, আর কখন হাসপাতাল। লিখেছেন কলকাতার হেমাটোলজিস্ট।
+- [বাচ্চার গায়ে কালশিটে](https://kolkatahematologyinstitute.com/child-bruises/): বাচ্চার গায়ে কালচে নীল ছোপ বা লাল ফুটকি? কখন খেলাধুলোর কালশিটে, কখন প্লেটলেট বা রক্তপাতের অসুখ, আর কখন হাসপাতাল। লিখেছেন কলকাতার হেমাটোলজিস্ট।
