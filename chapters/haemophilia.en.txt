@@ -1,4 +1,4 @@
-> Haemophilia is a rare condition, usually passed down in families, in which the blood lacks a clotting factor, so bleeding goes on longer than it should, often into the joints. It cannot usually be cured, but with clotting factor injections and other treatment most people live full lives, so a child who bruises easily or bleeds for a long time needs a hematologist.
+> Haemophilia is a rare condition, usually passed down in families, in which the blood lacks a clotting factor, so bleeding goes on longer than it should, often into the joints. It cannot usually be cured, but clotting factor injections and other treatment can control it, and most people can live full lives, so a child who bruises easily or bleeds for a long time needs a hematologist.
 
 The bruises came every time he played, and the neighbours began to look at his parents strangely.
 
@@ -41,7 +41,7 @@ The hematologist confirms it with blood tests.
 
 # What treatment can do
 
-Haemophilia cannot usually be cured, but treatment controls it. With treatment, most people with haemophilia live a full life. Treatment has two parts: medicines that replace or stand in for the missing factor, and supporting care that protects the joints, the teeth and everyday life.
+Haemophilia cannot usually be cured, but treatment can control it. With treatment, most people with haemophilia can live a full life. Treatment has two parts: medicines that replace or stand in for the missing factor, and supporting care that protects the joints, the teeth and everyday life.
 
 ## Medicines for bleeding
 
