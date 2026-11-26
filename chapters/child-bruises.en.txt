@@ -20,9 +20,11 @@ Three kinds of marks are worth knowing:
 - petechiae: tiny flat red or purple dots, like pinpricks
 - purpura: bigger red, purple or brownish patches of bleeding under the skin
 
+Some blackish or bluish marks are not bruises at all. Many babies are born with blue-grey patches on the lower back and buttocks, called Mongolian spots, which are birthmarks and not bleeding. Red birthmarks and eczema can also look like bruises. A doctor can tell them apart.
+
 # When bruises are from play
 
-Children who run, climb and play football get bruises, mostly on the parts that bump into things, such as the shins and knees. A bruise that has a clear cause, on a child who is otherwise well, usually needs nothing but time.
+Bruises become common once a child starts to crawl and walk, and most school children have some. They are mostly on the front of the body, over the bony parts that bump into things, such as the shins and knees. A bruise that has a clear cause, on a child who is otherwise well, usually needs nothing but time.
 
 # When bruises need a doctor
 
@@ -33,9 +35,13 @@ Show your child to a doctor if:
 - there are tiny red or purple dots, or purple patches
 - there are nosebleeds that come often or last long, or bleeding gums
 - a joint becomes swollen and painful without a clear injury
+- a baby who is not yet crawling or pulling up to stand has any bruise
+- a baby bled for a long time after a blood test, from the cord stump or after circumcision, or someone in the family, often on the mother's side for a boy, has a bleeding disorder
 - the child is also pale, tired, feverish, has bone pain or swollen glands
 
 These can be signs of low platelets, as in immune thrombocytopenia (ITP), which in children can follow a viral infection; of a bleeding disorder such as haemophilia or von Willebrand disease, which can run in families; of dengue after a fever; or, rarely, of leukaemia. A rash of raised red or purple spots, usually on the legs and bottom can also come from Henoch-Schönlein purpura, a condition that affects the blood vessels and is commoner in children.
+
+Bruises on a baby who cannot yet move about are rare, and doctors also keep in mind that bruises can come from someone hurting a child, especially when they do not fit what happened, are large and away from the bony parts, or carry the shape of a hand or a belt. In that case the doctor checks carefully for a blood problem too, because some bleeding disorders look the same.
 
 A blood count, and sometimes clotting tests, show the doctor which it is. Tell the doctor about bleeding in the family, and about any medicine the child has taken.
 
@@ -99,3 +105,4 @@ Ask the doctor first. Ibuprofen and aspirin can make bleeding worse in a child w
 - NHS: Henoch-Schönlein purpura (HSP) | https://www.nhs.uk/conditions/henoch-schonlein-purpura/
 - NHS: Meningitis | https://www.nhs.uk/conditions/meningitis/
 - World Health Organization: Dengue and severe dengue | https://www.who.int/news-room/fact-sheets/detail/dengue-and-severe-dengue
+- Blank G, McLaughlin T. An approach to bleeding and bruising, part 1 [podcast transcript]. PedsCases; 2021 Jan 14.
