@@ -451,5 +451,15 @@
   "desc_en": "Intensive chemotherapy for leukaemia: the weeks in hospital, the phases, remission, why transfusions are needed and what the family can do.",
   "card_bn": "লিউকেমিয়ায় হাসপাতালে ভর্তি থেকে কেমো? কতদিন লাগবে ভাবছেন?",
   "card_en": "Admitted for leukaemia chemo? Wondering how long it will take?"
+ },
+ {
+  "id": "chemotherapy-palliative",
+  "parent": "chemotherapy",
+  "bn": "কেমোথেরাপি: প্যালিয়েটিভ, কম তীব্রতার চিকিৎসা",
+  "en": "Chemotherapy: palliative, lower-intensity treatment",
+  "desc_bn": "কম তীব্রতার বা প্যালিয়েটিভ কেমো কী, কাদের জন্য, প্যালিয়েটিভ কেয়ার কী, ব্যথা আর শ্বাসকষ্ট কমানো। লিখেছেন কলকাতার হেমাটোলজিস্ট।",
+  "desc_en": "Lower-intensity or palliative chemotherapy: what it aims for, who it suits, what palliative care is, and easing pain and breathlessness.",
+  "card_bn": "ডাক্তার 'প্যালিয়েটিভ' বলেছেন? হালকা চিকিৎসা কেন, ভাবছেন?",
+  "card_en": "Heard the word 'palliative'? Wondering why the gentler treatment?"
  }
 ]
