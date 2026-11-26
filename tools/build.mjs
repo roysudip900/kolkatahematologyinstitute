@@ -58,7 +58,7 @@ const GROUPS = [
   ['white', 'শ্বেতকণিকা ও রক্তের ক্যান্সার', 'White cells and blood cancers'],
   ['tests', 'রক্তের পরীক্ষা', 'Blood tests'],
   ['treat', 'চিকিৎসা', 'Treatments'],
-  ['other', 'গর্ভাবস্থা ও অন্য সমস্যা', 'Pregnancy and other problems'],
+  ['other', 'গর্ভাবস্থা', 'Pregnancy'],
 ];
 // One identity for the site, the author and the publisher, so search engines and AI systems
 // can tie every page to the same person. The home page carries the full records; chapter pages point to them by @id.
@@ -668,6 +668,24 @@ ${llmsList('en')}
 ## অধ্যায় (বাংলা)
 ${llmsList('bn')}
 `);
+// search.json: what the search box on the home page searches (Dr. Roy, 2026-11-26). Every written page,
+// with its title, its card line and its "In short" answer, in both languages. The home page downloads this
+// one file from the site itself when the reader first taps the search box; nothing is sent anywhere.
+const inShort = (txt) => txt.replace(/\r/g, '').split('\n').filter((x) => /^>/.test(x.trim())).map((x) => x.trim().replace(/^>\s?/, '')).join(' ').trim();
+const search = chapters.filter((c) => info[c.id].has.bn || info[c.id].has.en).map((c) => {
+  const e = { u: {}, t: {}, c: {}, s: {} };
+  if (c.parent) e.p = {};
+  for (const l of LANGS) {
+    if (!info[c.id].has[l]) continue;
+    e.u[l] = url(c.id, l);
+    e.t[l] = c.parent ? partTitle(c, l) : c[l];
+    if (c.parent) e.p[l] = short(byId[c.parent], l);
+    e.c[l] = (c[`card_${l}`] || '').trim() || teaser(info[c.id].text[l]);
+    e.s[l] = inShort(info[c.id].text[l]);
+  }
+  return e;
+});
+writeFileSync(join(ROOT, 'search.json'), JSON.stringify(search) + '\n');
 writeFileSync(join(ROOT, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`);
 
 console.log(`built ${2 * chapters.filter((c) => info[c.id].has.bn || info[c.id].has.en).length} chapter pages, ${pages.length} in the sitemap (${today})`);
