@@ -1095,8 +1095,8 @@ const FIG = {
   // in each cycle (a rose band marks those days) and climb back during the rest. A dot travels along the line. No numbers.
   'chemo-cycle'(l) {
     const t = l === 'bn'
-      ? { chemo: 'কেমো', rest: 'বিশ্রাম, নতুন কোষ তৈরি হয়', low: 'এই দিনগুলোয় জ্বর এলে সঙ্গে সঙ্গে হাসপাতাল', cap: 'কেমো দেওয়া হয় সাইকেলে: কয়েক দিন ওষুধ, তারপর বিরতি, যাতে শরীর নতুন সুস্থ কোষ তৈরি করতে পারে। রেখাটা শ্বেতকণিকা: প্রতিটা সাইকেলে কয়েকটা দিন এরা সবচেয়ে কম থাকে, আর সেই দিনগুলোয় জ্বর এলে সঙ্গে সঙ্গে হাসপাতালে যেতে হয়।' }
-      : { chemo: 'chemo', rest: 'rest: new cells grow', low: 'Low days: with a fever, go to hospital at once', cap: 'Chemotherapy is given in cycles: a few days of treatment, then a rest so the body can make new healthy cells. The line shows the white cells: in each cycle there are days when they are lowest, and a fever on those days needs a hospital at once.' };
+      ? { chemo: 'কেমো', rest: 'বিশ্রাম, নতুন কোষ তৈরি হয়', low: 'এই দিনগুলোয় সংক্রমণের ভয় সবচেয়ে বেশি', cap: 'কেমো দেওয়া হয় সাইকেলে: কয়েক দিন ওষুধ, তারপর বিরতি, যাতে শরীর নতুন সুস্থ কোষ তৈরি করতে পারে। রেখাটা শ্বেতকণিকা: প্রতিটা সাইকেলে কয়েকটা দিন এরা সবচেয়ে কম থাকে, তখন সংক্রমণ সবচেয়ে বিপজ্জনক। কেমো চলার সময় যেকোনো দিন জ্বর এলে সঙ্গে সঙ্গে হাসপাতালে যান।' }
+      : { chemo: 'chemo', rest: 'rest: new cells grow', low: 'Low days: infection is most dangerous', cap: 'Chemotherapy is given in cycles: a few days of treatment, then a rest so the body can make new healthy cells. The line shows the white cells: in each cycle there are days when they are lowest, and an infection is most dangerous then. A fever on any day of chemotherapy needs a hospital at once.' };
     const P = 'M30 62C60 62 70 124 105 124S150 62 180 62S220 124 255 124S300 62 330 62';
     const bag = (x) => `<rect x="${x - 7}" y="18" width="14" height="20" rx="4" fill="#EFE9FC" stroke="#8D74D8" stroke-width="1.5"/><rect x="${x - 7}" y="28" width="14" height="10" rx="3" fill="#8D74D8"/><path d="M${x} 38v18" stroke="#C9B6F2" stroke-width="2"/>`;
     let body = `<rect x="14" y="108" width="332" height="30" rx="10" fill="${C.roseBg}"/>`;
@@ -2382,13 +2382,13 @@ const TRY = {
     };
     const t = l === 'bn'
       ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
-          c: [['drip', 'কেমো শরীরটা ভেতর থেকে পুড়িয়ে দেয়', 'সত্যি?', 'কেমো দ্রুত বাড়তে থাকা কোষের ওপর কাজ করে। বেশিরভাগ পার্শ্বপ্রতিক্রিয়া চিকিৎসা শেষ হলে কমে যায়।'],
+          c: [['drip', 'কেমো শরীরটা চিরকালের মতো শেষ করে দেয়', 'সত্যি?', 'কিছুদিন শরীরের ওপর ধকল যায়, কারণ কেমো সুস্থ কোষেও লাগে। তবে বেশিরভাগ পার্শ্বপ্রতিক্রিয়া চিকিৎসা শেষ হলে কমে যায়।'],
             ['hair', 'কেমোতে চুল গেলে আর ফেরে না', 'সত্যি?', 'সাধারণত চুল আবার গজায়, প্রায়ই চিকিৎসা শেষের দুই থেকে তিন মাসের মধ্যে।'],
             ['report', 'পার্শ্বপ্রতিক্রিয়া কম মানে কেমো কাজ করছে না', 'সত্যি?', 'পার্শ্বপ্রতিক্রিয়া দেখে বোঝা যায় না। ডাক্তার পরীক্ষা আর স্ক্যান করে দেখেন।'],
             ['leaf', 'আগে কবিরাজি করে দেখি, কেমো পরে', 'সত্যি?', 'কিছু ভেষজ ওষুধ ক্ষতি করতে পারে বা কেমোর কাজ কমায়। কিছু খাওয়ার আগে হেমাটোলজিস্টকে বলুন, কেমো পিছোবেন না।']],
           cap: 'কেমো চলার সময় জ্বর, কাঁপুনি, হঠাৎ শ্বাসকষ্ট বা বন্ধ না হওয়া রক্তপাত হলে সঙ্গে সঙ্গে হাসপাতালে যান।' }
       : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
-          c: [['drip', 'Chemo burns the body from inside', 'True?', 'Chemo works on fast-growing cells. Most side effects settle after treatment ends.'],
+          c: [['drip', 'Chemo ruins the body for good', 'True?', 'It can be hard on the body for a while, because it also hits healthy cells. Most side effects settle after treatment ends.'],
             ['hair', 'Hair lost to chemo never comes back', 'True?', 'Hair usually grows back, often within two or three months after treatment ends.'],
             ['report', 'Mild side effects mean chemo is not working', 'True?', 'Side effects do not show that. The doctor checks with tests and scans.'],
             ['leaf', 'Try kabiraji first, chemo later', 'True?', 'Some herbal medicines can harm or stop chemo working. Tell the hematologist first, and do not delay chemo.']],

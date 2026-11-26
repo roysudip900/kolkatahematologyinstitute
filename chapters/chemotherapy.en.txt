@@ -18,21 +18,21 @@ It can cure some cancers, stop them coming back, slow them down or ease the symp
 
 # How it is given
 
-Most chemotherapy goes into a vein through a drip, from a few minutes to a few days at a time. Some is a tablet taken at home, and some is an injection under the skin. People who need many drips may have a thin tube placed in a large vein in the chest, so the arm is not pricked every time.
+Most chemotherapy goes into a vein through a drip, from half an hour to a few days at a time. Some is a tablet taken at home, and some is an injection under the skin. People who need many drips may have a thin tube placed in a large vein in the chest, so the arm is not pricked every time.
 
-It is usually given in cycles: a few days of treatment, then a break of days or weeks so the body can recover and make new healthy cells. Before each cycle there is a blood test. Some treatment, such as the first treatment for acute leukaemia, usually needs a stay in hospital. Much of the rest is given as a day visit.
+It is usually given in cycles: a few days of treatment, then a break of days or weeks so the body can recover and make new healthy cells. Before each cycle there is usually a blood test. There are two broad kinds. Intensive chemotherapy aims to cure and is usually given in hospital, as in the first treatment for acute leukaemia. Lower-intensity, or palliative, chemotherapy aims to control the disease and ease symptoms for as long as possible; it is usually given at home or as a day visit and has fewer side effects.
 
 # The hair, the sickness and the tiredness
 
 Most people get some side effects, but nobody gets all of them. The common ones are tiredness, feeling sick, a sore mouth, constipation or loose motions, and hair loss. With some medicines, the hands and feet tingle.
 
-Hair loss is usually temporary. Hair often grows back within two or three months after treatment ends, soft and fine at first, sometimes curlier or a different colour.
+Hair loss is usually temporary. Hair often grows back within two or three months after treatment ends.
 
 Tell the team about every side effect: there are medicines to stop the sickness and ease a sore mouth. Help with meals and housework on the day of treatment and the day after makes the tiredness easier.
 
 # The days when the white cells are low
 
-Chemotherapy lowers the white cells that fight germs, and in every cycle there are days when they are at their lowest. An infection then can quickly become life-threatening. This is why a fever during chemotherapy is an emergency, even if it feels like an ordinary cold.
+Chemotherapy lowers the white cells that fight germs, and in every cycle there are days when they are at their lowest. An infection then can become life-threatening and needs urgent care. This is why a fever during chemotherapy is an emergency, even if it feels like an ordinary cold.
 
 Do not take a fever medicine at home and wait to see. It can bring the temperature down and hide a serious infection, so ask the team before taking any medicine for fever. Washing hands well, eating only well cooked fish, meat and eggs, and keeping away from people with a cold or a cough all lower the risk.
 
@@ -56,7 +56,7 @@ The woman spends the first weeks in hospital. Her hair falls, and her sister cut
 
 Whichever story is closer to yours, write your questions down and take them to the hematologist before the first cycle.
 
-# Go to a hospital the same day if
+# Go to a hospital now if
 
 During chemotherapy, go at once if:
 
@@ -70,7 +70,7 @@ Tell the hospital staff that you are having chemotherapy.
 
 # Take these questions to your doctor
 
-Your hematologist expects questions. These are a good start:
+Your hematologist expects questions. Start with these:
 
 - What is the aim of my chemotherapy: to cure, to control, or to ease symptoms?
 - How will it be given, and will I need to stay in hospital?
