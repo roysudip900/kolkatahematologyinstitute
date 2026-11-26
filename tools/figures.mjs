@@ -2496,7 +2496,7 @@ const TRY = {
             ['hair', 'Hair lost to chemo never comes back', 'True?', 'Hair usually grows back, often within two or three months after treatment ends.'],
             ['report', 'Mild side effects mean chemo is not working', 'True?', 'Side effects do not show that. The doctor checks with tests and scans.'],
             ['leaf', 'Try kabiraji first, chemo later', 'True?', 'Some herbal medicines can harm or stop chemo working. Tell the hematologist first, and do not delay chemo.']],
-          cap: 'During chemotherapy, a fever, shivering, sudden breathlessness or bleeding that will not stop needs a hospital at once.' };
+          cap: 'During chemotherapy, a fever, shivering, sudden breathlessness or bleeding that will not stop need a hospital at once.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
       t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
         `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
@@ -2585,13 +2585,13 @@ const TRY = {
     const t = l === 'bn'
       ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
           c: [['ball', 'বাচ্চার সব কালশিটেই খেলতে গিয়ে পড়ে যাওয়ার', 'সত্যি?', 'চোট ছাড়া, পিঠে বা পেটে, বা লাল ফুটকির সঙ্গে কালশিটে হলে ডাক্তার আর রক্ত পরীক্ষা লাগবে।'],
-            ['tube', 'মলম লাগিয়ে মিলিয়ে যাওয়ার অপেক্ষা করলেই হবে', 'সত্যি?', 'কারণ না জেনে অপেক্ষা নয়। আগে ডাক্তার দেখান।'],
+            ['tube', 'যেকোনো ছোপে মলম লাগিয়ে অপেক্ষা করলেই হবে', 'সত্যি?', 'চোট লেগে হওয়া কালশিটে অপেক্ষা করতে পারে। চোট ছাড়া ছোপ বা লাল ফুটকি থাকলে আগে ডাক্তার দেখান।'],
             ['dots', 'পায়ের ছোট লাল ফুটকি ঘামাচি', 'সত্যি?', 'প্লেটলেট কম থাকার দাগ হতে পারে। সঙ্গে জ্বর থাকলে সঙ্গে সঙ্গে হাসপাতালে যান।'],
             ['pill', 'কালশিটের ব্যথায় আইবুপ্রোফেন দেওয়াই যায়', 'সত্যি?', 'প্লেটলেট কম থাকলে এতে রক্তপাত বাড়তে পারে। আগে ডাক্তারকে জিজ্ঞেস করুন।']],
           cap: 'লাল ফুটকির সঙ্গে জ্বর, বাচ্চা ঝিমিয়ে পড়া, বা রক্ত বন্ধ না হলে সঙ্গে সঙ্গে হাসপাতালে যান।' }
       : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
           c: [['ball', 'Every bruise on a child is from a fall at play', 'True?', 'Bruises without a knock, on the back or tummy, or with red dots, need a doctor and a blood test.'],
-            ['tube', 'Rub in an ointment and wait for it to fade', 'True?', 'Do not wait without knowing the cause. See a doctor first.'],
+            ['tube', 'Rub in an ointment and wait for any patch to fade', 'True?', 'A bruise from a clear knock can wait. Patches without a knock, or with red dots, need a doctor first.'],
             ['dots', 'Tiny red dots on the legs are just a heat rash', 'True?', 'They can be bleeding spots from low platelets. With a fever, go to a hospital at once.'],
             ['pill', 'Ibuprofen is fine for the pain of a bruise', 'True?', 'With low platelets it can make bleeding worse. Ask the doctor first.']],
           cap: 'Red spots with a fever, a drowsy child, or bleeding that will not stop needs a hospital at once.' };

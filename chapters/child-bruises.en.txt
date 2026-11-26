@@ -1,4 +1,4 @@
-> Most bruises on a child who runs and plays are from knocks and fade by themselves, but bruises that come without a knock, keep appearing, are very large, or come with tiny red spots, bleeding gums or nosebleeds can be a sign of low platelets, a bleeding disorder or, rarely, leukaemia. Show your doctor or a hematologist, and go to the hospital at once if the spots come with fever, the child is unwell, or bleeding will not stop.
+> Most bruises on an active child come from knocks and fade by themselves, but bruises without a knock, or with tiny red spots, bleeding gums or nosebleeds, can be a sign of low platelets, a bleeding disorder or, rarely, leukaemia. Show your doctor or a hematologist, and go to the hospital at once if the spots come with fever, the child is unwell, or bleeding will not stop.
 
 The bluish black patches had appeared overnight, on her legs and her back.
 
@@ -35,7 +35,7 @@ Show your child to a doctor if:
 - a joint becomes swollen and painful without a clear injury
 - the child is also pale, tired, feverish, has bone pain or swollen glands
 
-These can be signs of low platelets, as in immune thrombocytopenia (ITP), which in children can follow a viral infection; of a bleeding disorder such as haemophilia or von Willebrand disease, which can run in families; of dengue after a fever; or, rarely, of leukaemia. A rash of raised red or purple spots on the legs and bottom can also come from Henoch-Schönlein purpura, an inflammation of the blood vessels that is commoner in children.
+These can be signs of low platelets, as in immune thrombocytopenia (ITP), which in children can follow a viral infection; of a bleeding disorder such as haemophilia or von Willebrand disease, which can run in families; of dengue after a fever; or, rarely, of leukaemia. A rash of raised red or purple spots, usually on the legs and bottom can also come from Henoch-Schönlein purpura, a condition that affects the blood vessels and is commoner in children.
 
 A blood count, and sometimes clotting tests, show the doctor which it is. Tell the doctor about bleeding in the family, and about any medicine the child has taken.
 
@@ -44,7 +44,7 @@ A blood count, and sometimes clotting tests, show the doctor which it is. Tell t
 # What not to do at home
 
 - Do not give painkillers such as ibuprofen or aspirin for the pain or a fever without asking the doctor, because they can make bleeding worse.
-- Do not rub ointments into the patches or wait for them to fade before the child has been seen.
+- If the bruises are like those in the list above, do not rub in an ointment and wait for them to fade.
 - Do not give steroid medicine or any tonic on your own.
 
 # How the stories go on
@@ -60,7 +60,7 @@ Whichever story is closer to yours, look at where the bruises are, whether there
 Go at once, and do not wait for the spots to fade, if:
 
 - the child has tiny red or purple spots or patches and a fever, or seems unwell, drowsy or hard to wake
-- the spots or patches do not fade when a glass is pressed against them and the child is unwell
+- the spots or patches do not fade when a glass is pressed against them and the child is unwell (on dark skin, look at the palms, the soles, inside the eyelids or the roof of the mouth)
 - a nosebleed lasts more than ten to fifteen minutes, or bleeding from a cut or the gums will not stop
 - there is blood in the urine, blood in vomit, or black stool
 - there is a head injury, a bad headache or vomiting in a child with many bruises or spots
