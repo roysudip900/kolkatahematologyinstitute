@@ -24,7 +24,7 @@ Treatment comes in phases, each with its own job.
 
 [figure: intensive-phases]
 
-Remission is good news, but it is not the end of treatment. The later phases are what stop the leukaemia returning, so the plan goes on even when the child is running around and the reports look fine.
+Remission is good news, but it is not the end of treatment. The later phases lower the chance of the leukaemia coming back, so the plan goes on even when the child is running around and the reports look fine.
 
 In acute lymphoblastic leukaemia, chemotherapy is also put into the fluid around the spinal cord, through a needle in the lower back, to stop leukaemia cells spreading to the brain. Some people later need a stem cell or bone marrow transplant, or targeted medicines or immunotherapy, if the leukaemia is likely to come back or comes back.
 
@@ -82,7 +82,7 @@ Your hematologist will want you to understand the plan. Ask:
 
 ## What does remission mean in leukaemia?
 
-It means the blood count has recovered and the marrow test shows almost no leukaemia cells. Treatment still continues, because the later phases stop the leukaemia coming back.
+It means the blood count has recovered and the marrow test shows almost no leukaemia cells. Treatment still continues, because the later phases lower the chance of it coming back.
 
 ## Why does my child need so many blood transfusions during chemo?
 

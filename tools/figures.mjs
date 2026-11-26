@@ -2410,13 +2410,13 @@ const TRY = {
     };
     const t = l === 'bn'
       ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
-          c: [['drip', 'কেমো শরীরটা চিরকালের মতো শেষ করে দেয়', 'সত্যি?', 'কিছুদিন শরীরের ওপর ধকল যায়, কারণ কেমো সুস্থ কোষেও লাগে। তবে বেশিরভাগ পার্শ্বপ্রতিক্রিয়া চিকিৎসা শেষ হলে কমে যায়।'],
+          c: [['drip', 'কেমো শরীরটা চিরকালের মতো শেষ করে দেয়', 'সত্যি?', 'কিছুদিন শরীরের ওপর ধকল যায়, কারণ কেমো সুস্থ কোষেও লাগে। বেশিরভাগ পার্শ্বপ্রতিক্রিয়া চিকিৎসা শেষ হলে কমে যায়, তবে দু-একটা প্রভাব, যেমন সন্তান ধারণের ক্ষমতার ওপর, থেকে যেতে পারে, তাই শুরুর আগে টিমকে জিজ্ঞেস করুন।'],
             ['hair', 'কেমোতে চুল গেলে আর ফেরে না', 'সত্যি?', 'সাধারণত চুল আবার গজায়, প্রায়ই চিকিৎসা শেষের দুই থেকে তিন মাসের মধ্যে।'],
             ['report', 'পার্শ্বপ্রতিক্রিয়া কম মানে কেমো কাজ করছে না', 'সত্যি?', 'পার্শ্বপ্রতিক্রিয়া দেখে বোঝা যায় না। ডাক্তার পরীক্ষা আর স্ক্যান করে দেখেন।'],
             ['leaf', 'আগে কবিরাজি করে দেখি, কেমো পরে', 'সত্যি?', 'কিছু ভেষজ ওষুধ ক্ষতি করতে পারে বা কেমোর কাজ কমায়। কিছু খাওয়ার আগে হেমাটোলজিস্টকে বলুন, কেমো পিছোবেন না।']],
           cap: 'কেমো চলার সময় জ্বর, কাঁপুনি, হঠাৎ শ্বাসকষ্ট বা বন্ধ না হওয়া রক্তপাত হলে সঙ্গে সঙ্গে হাসপাতালে যান।' }
       : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
-          c: [['drip', 'Chemo ruins the body for good', 'True?', 'It can be hard on the body for a while, because it also hits healthy cells. Most side effects settle after treatment ends.'],
+          c: [['drip', 'Chemo ruins the body for good', 'True?', 'It can be hard on the body for a while, because it also hits healthy cells. Most side effects settle after treatment ends, but a few, such as on fertility, can last, so ask the team before you start.'],
             ['hair', 'Hair lost to chemo never comes back', 'True?', 'Hair usually grows back, often within two or three months after treatment ends.'],
             ['report', 'Mild side effects mean chemo is not working', 'True?', 'Side effects do not show that. The doctor checks with tests and scans.'],
             ['leaf', 'Try kabiraji first, chemo later', 'True?', 'Some herbal medicines can harm or stop chemo working. Tell the hematologist first, and do not delay chemo.']],
@@ -2435,12 +2435,12 @@ const TRY = {
     };
     const t = l === 'bn'
       ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
-          c: [['flag', 'রেমিশন মানেই চিকিৎসা শেষ', 'সত্যি?', 'পরের ধাপগুলোই লিউকেমিয়া ফিরে আসা আটকায়। পুরো পরিকল্পনা মেনে চলুন।'],
+          c: [['flag', 'রেমিশন মানেই চিকিৎসা শেষ', 'সত্যি?', 'পরের ধাপগুলো লিউকেমিয়া ফিরে আসার সম্ভাবনা কমায়। পুরো পরিকল্পনা মেনে চলুন।'],
             ['bag', 'বারবার রক্ত লাগছে মানে কেমো কাজ করছে না', 'সত্যি?', 'কিছুদিন ম্যারো যথেষ্ট রক্ত বানাতে পারে না। সেরে না ওঠা পর্যন্ত রক্ত দিয়ে ঘাটতি মেটানো হয়।'],
             ['door', 'দেখতে এলে রোগীর মন ভালো থাকে, সবাই আসুক', 'সত্যি?', 'কণিকা কম থাকার দিনগুলোয় জীবাণু বিপজ্জনক। কে দেখতে আসবেন, টিমকে জিজ্ঞেস করুন। সর্দি-কাশি থাকলে কেউ আসবেন না।']],
           cap: 'জ্বর, কাঁপুনি, শ্বাসকষ্ট, মাথা গুলিয়ে যাওয়া বা বন্ধ না হওয়া রক্তপাত হলে সঙ্গে সঙ্গে হাসপাতালে যান।' }
       : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
-          c: [['flag', 'Remission means treatment is over', 'True?', 'The later phases stop the leukaemia coming back. Keep to the whole plan.'],
+          c: [['flag', 'Remission means treatment is over', 'True?', 'The later phases lower the chance of the leukaemia coming back. Keep to the whole plan.'],
             ['bag', 'Needing blood again and again means chemo is failing', 'True?', 'For a while the marrow cannot make enough blood. Transfusions fill the gap until it recovers.'],
             ['door', 'Visitors cheer the patient up, so let everyone come', 'True?', 'On the low days germs are dangerous. Ask the team about visitors, and anyone with a cold or cough stays away.']],
           cap: 'A fever, shivering, difficult breathing, confusion or bleeding that will not stop needs a hospital at once.' };
