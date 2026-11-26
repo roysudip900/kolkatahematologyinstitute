@@ -1166,6 +1166,31 @@ const FIG = {
         body),
     };
   },
+  // Heavy periods: two signs. Left, a clock whose hand turns while pads pile up beside it ("a new pad every hour or
+  // two"). Right, a strip of day boxes: the first seven are rose, the extra days fill in red ("more than seven days").
+  'hmb-signs'(l) {
+    const t = l === 'bn'
+      ? { a: 'এক-দু ঘণ্টায় নতুন প্যাড', b: 'সাত দিনের বেশি', c: 'প্রতিটা ঘর একদিন', cap: 'এক-দু ঘণ্টা অন্তর প্যাড বদলাতে হলে, বা মাসিক সাত দিনের বেশি চললে, রক্ত বেশি যাচ্ছে। মুখ বুজে সহ্য না করে ডাক্তার দেখান।' }
+      : { a: 'a new pad every hour or two', b: 'more than seven days', c: 'each box is one day', cap: 'Changing a pad every hour or two, or bleeding for more than seven days, means the bleeding is heavy. See a doctor rather than putting up with it.' };
+    let body = `<circle cx="62" cy="70" r="40" fill="#fff" stroke="${C.teal2}" stroke-width="3"/><circle cx="62" cy="70" r="4" fill="${C.teal}"/>` +
+      `<path class="hs-hand" d="M62 70V40" stroke="${C.teal}" stroke-width="3.5" stroke-linecap="round"/>`;
+    [0, 1, 2].forEach((i) => { body += `<rect class="hs-pad hs-p${i}" x="116" y="${92 - i * 18}" width="38" height="14" rx="7" fill="${C.roseBg}" stroke="${C.red}" stroke-width="1.5"/>`; });
+    body += T(90, 138, t.a, { size: 12.5, w: 700, fill: C.teal });
+    for (let i = 0; i < 10; i++) {
+      const x = 184 + (i % 5) * 34, y = i < 5 ? 40 : 76;
+      body += `<rect class="${i >= 7 ? `hs-x hs-x${i - 7}` : ''}" x="${x}" y="${y}" width="28" height="28" rx="6" fill="${i < 7 ? C.roseBg : C.red}" stroke="${C.red}" stroke-width="1.5"/>`;
+    }
+    body += T(184, 28, t.c, { a: 'start', size: 12.5, fill: C.muted }) + T(266, 138, t.b, { size: 12.5, w: 700, fill: C.red });
+    return {
+      cap: t.cap,
+      svg: svg('hs', 360, 150, t.cap,
+        '.hs-hand{transform-origin:62px 70px;animation:hsh 6s linear infinite}@keyframes hsh{to{transform:rotate(360deg)}}' +
+        '.hs-pad{opacity:0;animation:hsp 6s ease-in-out infinite}.hs-p1{animation-delay:1.5s}.hs-p2{animation-delay:3s}@keyframes hsp{0%{opacity:0}10%,80%{opacity:1}95%,100%{opacity:0}}' +
+        '.hs-x{opacity:.15;animation:hsx 6s ease-in-out infinite}.hs-x1{animation-delay:.6s}.hs-x2{animation-delay:1.2s}@keyframes hsx{0%,30%{opacity:.15}45%,85%{opacity:1}100%{opacity:.15}}' +
+        '@media (prefers-reduced-motion:reduce){.hs-hand{animation:none}.hs-pad,.hs-x{animation:none;opacity:1}}',
+        body),
+    };
+  },
   // Anaemia, iron: two tanks of body iron. Tablets drip iron into both. In the first, a leak (heavy periods or
   // bleeding) lets it out, so the level hardly rises; in the second the leak is treated and the level slowly rises.
   'iron-tank'(l) {
@@ -2492,6 +2517,32 @@ const TRY = {
             ['drip', 'Gentler treatment is no use', 'True?', 'It aims to keep the cancer under control for as long as possible and ease symptoms, with fewer side effects. Ask what it can do for you.'],
             ['wave', 'Pain has to be borne with this illness', 'True?', 'Pain and breathlessness can be eased. If a medicine is not working, tell the team, and never change it yourself.']],
           cap: 'A fever, bleeding that will not stop, sudden breathlessness or pain that suddenly gets much worse needs a hospital at once.' };
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
+      t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
+        `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
+        `<span class="fc back"><span class="k">${esc(t.sign)}</span><span>${esc(back)}</span></span></button>`).join('') + '</div>';
+    return { cap: t.cap, cls: 'flipset', html };
+  },
+  'hmb-cards'(l) {
+    const ic = {
+      girl: `<circle cx="20" cy="13" r="8" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><path d="M8 36c0-9 5-14 12-14s12 5 12 14z" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/>`,
+      ring: `<circle cx="20" cy="22" r="10" fill="none" stroke="${C.amber}" stroke-width="3"/><path d="M15 10l5-6 5 6z" fill="${C.amber}"/>`,
+      pill: `<rect x="8" y="14" width="24" height="12" rx="6" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><path d="M20 14v12" stroke="${C.teal2}" stroke-width="2"/>`,
+      tree: `<circle cx="20" cy="10" r="5" fill="${C.red}"/><circle cx="10" cy="30" r="5" fill="${C.rose}"/><circle cx="30" cy="30" r="5" fill="${C.rose}"/><path d="M20 15v6M20 21L10 25M20 21l10 4" stroke="${C.teal2}" stroke-width="2"/>`,
+    };
+    const t = l === 'bn'
+      ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
+          c: [['girl', 'প্রথম দিকের মাসিকে এত রক্ত যায়ই, অপেক্ষা করুন', 'সত্যি?', 'এক-দু ঘণ্টায় প্যাড ভিজলে বা সাত দিনের বেশি চললে অপেক্ষা নয়, ডাক্তার দেখান।'],
+            ['ring', 'বিয়ের পর সব ঠিক হয়ে যাবে', 'সত্যি?', 'অপেক্ষায় কারণের চিকিৎসা হয় না, রক্তাল্পতা বাড়তে পারে।'],
+            ['pill', 'আয়রন খেলেই সব মিটে যাবে', 'সত্যি?', 'আয়রনে রক্তাল্পতা সারাতে পারে, রক্তপাত থামে না। কারণটা খুঁজতে হবে।'],
+            ['tree', 'এ বাড়ির মেয়েদের এমনই হয়, কিছু করার নেই', 'সত্যি?', 'বংশে চলা রক্তের অসুখ, যেমন ভন উইলিব্র্যান্ড ডিজিজ, হতে পারে। পরীক্ষা করান।']],
+          cap: 'মেয়ে অজ্ঞান হলে, খুব ফ্যাকাশে হলে, হাঁফ ধরলে বা রক্ত থামতে না চাইলে সঙ্গে সঙ্গে হাসপাতালে যান।' }
+      : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
+          c: [['girl', 'First periods are always this heavy, just wait', 'True?', 'A pad soaked every hour or two, or bleeding for more than seven days, needs a doctor, not waiting.'],
+            ['ring', 'It will settle after marriage', 'True?', 'Waiting does not treat the cause, and the anaemia can grow worse.'],
+            ['pill', 'Iron tablets will fix everything', 'True?', 'Iron can treat the anaemia, not the bleeding. The cause has to be found.'],
+            ['tree', 'The women in our family are just like this', 'True?', 'An inherited bleeding disorder such as von Willebrand disease is possible. Ask for tests.']],
+          cap: 'If she faints, turns very pale, is breathless, or the bleeding will not stop, go to a hospital at once.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
       t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
         `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
