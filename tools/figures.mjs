@@ -1091,6 +1091,28 @@ const FIG = {
         body),
     };
   },
+  // Chemotherapy: two cycles. A drip bag marks each treatment; the line is the white cells, which dip to their lowest
+  // in each cycle (a rose band marks those days) and climb back during the rest. A dot travels along the line. No numbers.
+  'chemo-cycle'(l) {
+    const t = l === 'bn'
+      ? { chemo: 'কেমো', rest: 'বিশ্রাম, নতুন কোষ তৈরি হয়', low: 'এই দিনগুলোয় জ্বর এলে সঙ্গে সঙ্গে হাসপাতাল', cap: 'কেমো দেওয়া হয় সাইকেলে: কয়েক দিন ওষুধ, তারপর বিরতি, যাতে শরীর নতুন সুস্থ কোষ তৈরি করতে পারে। রেখাটা শ্বেতকণিকা: প্রতিটা সাইকেলে কয়েকটা দিন এরা সবচেয়ে কম থাকে, আর সেই দিনগুলোয় জ্বর এলে সঙ্গে সঙ্গে হাসপাতালে যেতে হয়।' }
+      : { chemo: 'chemo', rest: 'rest: new cells grow', low: 'Low days: with a fever, go to hospital at once', cap: 'Chemotherapy is given in cycles: a few days of treatment, then a rest so the body can make new healthy cells. The line shows the white cells: in each cycle there are days when they are lowest, and a fever on those days needs a hospital at once.' };
+    const P = 'M30 62C60 62 70 124 105 124S150 62 180 62S220 124 255 124S300 62 330 62';
+    const bag = (x) => `<rect x="${x - 7}" y="18" width="14" height="20" rx="4" fill="#EFE9FC" stroke="#8D74D8" stroke-width="1.5"/><rect x="${x - 7}" y="28" width="14" height="10" rx="3" fill="#8D74D8"/><path d="M${x} 38v18" stroke="#C9B6F2" stroke-width="2"/>`;
+    let body = `<rect x="14" y="108" width="332" height="30" rx="10" fill="${C.roseBg}"/>`;
+    body += `<path d="${P}" fill="none" stroke="${C.teal2}" stroke-width="3.5" stroke-linecap="round"/>`;
+    body += bag(30) + bag(180);
+    body += `<circle class="cc-dot" r="7" fill="#fff" stroke="${C.teal}" stroke-width="3"/>`;
+    body += T(42, 32, t.chemo, { a: 'start', size: 12.5, fill: '#5B3F8C', w: 700 }) + T(262, 34, t.rest, { a: 'middle', size: 12.5, fill: C.teal, w: 700 }) +
+      T(180, 160, t.low, { a: 'middle', size: 12.5, fill: C.red, w: 700 });
+    return {
+      cap: t.cap,
+      svg: svg('cc', 360, 176, t.cap,
+        `.cc-dot{offset-path:path('${P}');animation:ccm 8s linear infinite}@keyframes ccm{from{offset-distance:0%}to{offset-distance:100%}}` +
+        '@media (prefers-reduced-motion:reduce){.cc-dot{animation:none;offset-distance:16%}}',
+        body),
+    };
+  },
   // Anaemia, iron: two tanks of body iron. Tablets drip iron into both. In the first, a leak (heavy periods or
   // bleeding) lets it out, so the level hardly rises; in the second the leak is treated and the level slowly rises.
   'iron-tank'(l) {
@@ -2345,6 +2367,32 @@ const TRY = {
             ['cup', 'Sugarcane juice and no oil will cure "kamla"', 'True?', 'This does not treat the cause. See a doctor to look for causes such as malaria or anaemia.'],
             ['baby', 'Any newborn jaundice can wait', 'True?', 'Jaundice in the first day, or with sleepiness, poor feeding, fever or a baby who feels cold, needs a hospital at once.']],
           cap: 'Jaundice with dark urine, breathlessness or a high fever needs a hospital at once.' };
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
+      t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
+        `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
+        `<span class="fc back"><span class="k">${esc(t.sign)}</span><span>${esc(back)}</span></span></button>`).join('') + '</div>';
+    return { cap: t.cap, cls: 'flipset', html };
+  },
+  'chemo-cards'(l) {
+    const ic = {
+      drip: `<rect x="13" y="4" width="14" height="20" rx="4" fill="#EFE9FC" stroke="#8D74D8" stroke-width="2"/><rect x="13" y="14" width="14" height="10" rx="3" fill="#8D74D8"/><path d="M20 24v12" stroke="#8D74D8" stroke-width="2"/>`,
+      hair: `<circle cx="20" cy="22" r="10" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><path d="M10 18c2-8 18-10 20 0" fill="none" stroke="${C.teal}" stroke-width="3" stroke-linecap="round"/>`,
+      report: `<rect x="9" y="5" width="22" height="30" rx="3" fill="#fff" stroke="${C.teal2}" stroke-width="2"/><path d="M14 13h12M14 19h12M14 25h7" stroke="${C.teal2}" stroke-width="2"/>`,
+      leaf: `<path d="M8 32C8 16 18 8 32 8c0 14-8 24-24 24z" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><path d="M10 30L26 14" stroke="${C.teal2}" stroke-width="2"/>`,
+    };
+    const t = l === 'bn'
+      ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
+          c: [['drip', 'কেমো শরীরটা ভেতর থেকে পুড়িয়ে দেয়', 'সত্যি?', 'কেমো দ্রুত বাড়তে থাকা কোষের ওপর কাজ করে। বেশিরভাগ পার্শ্বপ্রতিক্রিয়া চিকিৎসা শেষ হলে কমে যায়।'],
+            ['hair', 'কেমোতে চুল গেলে আর ফেরে না', 'সত্যি?', 'সাধারণত চুল আবার গজায়, প্রায়ই চিকিৎসা শেষের দুই থেকে তিন মাসের মধ্যে।'],
+            ['report', 'পার্শ্বপ্রতিক্রিয়া কম মানে কেমো কাজ করছে না', 'সত্যি?', 'পার্শ্বপ্রতিক্রিয়া দেখে বোঝা যায় না। ডাক্তার পরীক্ষা আর স্ক্যান করে দেখেন।'],
+            ['leaf', 'আগে কবিরাজি করে দেখি, কেমো পরে', 'সত্যি?', 'কিছু ভেষজ ওষুধ ক্ষতি করতে পারে বা কেমোর কাজ কমায়। কিছু খাওয়ার আগে হেমাটোলজিস্টকে বলুন, কেমো পিছোবেন না।']],
+          cap: 'কেমো চলার সময় জ্বর, কাঁপুনি, হঠাৎ শ্বাসকষ্ট বা বন্ধ না হওয়া রক্তপাত হলে সঙ্গে সঙ্গে হাসপাতালে যান।' }
+      : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
+          c: [['drip', 'Chemo burns the body from inside', 'True?', 'Chemo works on fast-growing cells. Most side effects settle after treatment ends.'],
+            ['hair', 'Hair lost to chemo never comes back', 'True?', 'Hair usually grows back, often within two or three months after treatment ends.'],
+            ['report', 'Mild side effects mean chemo is not working', 'True?', 'Side effects do not show that. The doctor checks with tests and scans.'],
+            ['leaf', 'Try kabiraji first, chemo later', 'True?', 'Some herbal medicines can harm or stop chemo working. Tell the hematologist first, and do not delay chemo.']],
+          cap: 'During chemotherapy, a fever, shivering, sudden breathlessness or bleeding that will not stop needs a hospital at once.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
       t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
         `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
