@@ -1,4 +1,4 @@
-> PCR, polymerase chain reaction, copies one chosen piece of genetic material many times over, so that even a tiny amount can be found and measured, usually within one to two days. It is used to find BCR::ABL1 in chronic myeloid leukaemia and measure how much is left during treatment, PML::RARA in acute promyelocytic leukaemia, FLT3 and NPM1 in acute myeloid leukaemia, JAK2 in polycythaemia and related conditions, leftover leukaemia in acute lymphoblastic leukaemia, and the gene changes of thalassemia, so ask your hematologist what each PCR result means for your plan.
+> PCR, polymerase chain reaction, copies one chosen piece of genetic material many times over, so that even a tiny amount can be found and measured, often within one to two days. It is used to diagnose and follow several blood cancers and to test for thalassemia, so ask your hematologist what each PCR result means for your treatment.
 
 "The report says the number has gone down again. Is that good? When can I stop the tablets?"
 
@@ -26,7 +26,7 @@ PCR finds only the change it is asked to look for, so the hematologist chooses t
 
 - Chronic myeloid leukaemia: BCR::ABL1. At diagnosis, PCR confirms it, even in the few people whose karyotype does not show the Philadelphia chromosome. During treatment, a quantitative BCR::ABL1 PCR is one of the main tests of how well the targeted tablet is working. The level is checked regularly, and the hematologist looks for it to fall to certain levels by certain times.
 - Acute promyelocytic leukaemia: PML::RARA. PCR confirms it, and is repeated after treatment to check that none is left.
-- Acute myeloid leukaemia: FLT3 and NPM1. A FLT3 change is often linked to a less good outcome, and a targeted medicine against FLT3 may be added to the chemotherapy. An NPM1 change without a FLT3 change is linked to a better outcome.
+- Acute myeloid leukaemia: FLT3 and NPM1. A FLT3 change is often linked to a less good outcome, and a targeted medicine against FLT3 may be added to the chemotherapy. An NPM1 change without a certain FLT3 change is linked to a better outcome.
 - Polycythaemia vera, essential thrombocythaemia and myelofibrosis: JAK2, CALR or MPL. A JAK2 change is found in many people with these conditions, and helps tell them apart from a high count with another cause.
 - Acute lymphoblastic leukaemia: leftover leukaemia, called minimal or measurable residual disease. It is measured after the first phase of treatment, by PCR or by other tests. A higher level usually means a stronger treatment, and in some children and young people a low level can mean a lighter one.
 - Thalassemia and haemophilia: PCR based tests find the exact gene change, check other family members, and, for a couple who both carry thalassemia, can test a baby before birth.
@@ -43,7 +43,7 @@ PCR also cannot find changes it was not asked to look for. That is why it is use
 
 # Can the tablets be stopped?
 
-Some people with chronic myeloid leukaemia whose BCR::ABL1 level has stayed very low for several years may talk with their hematologist about stopping the tablets, with PCR tests done often afterwards. It is not right for everyone. In about half of the people who stop, the leukaemia comes back and the tablets have to start again. This is a decision only the hematologist can make with you. Never stop the tablets on your own because a report looks good.
+Some people with chronic myeloid leukaemia who have taken the tablets for years and whose BCR::ABL1 level has stayed very low may talk with their hematologist about stopping the tablets, with PCR tests done often afterwards. It is not right for everyone. In about half of the people who stop, the leukaemia comes back and the tablets have to start again. This is a decision only the hematologist can make with you. Never stop the tablets on your own because a report looks good.
 
 # Is the change inherited?
 
