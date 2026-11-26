@@ -52,6 +52,7 @@ English home page: https://kolkatahematologyinstitute.com/en/ (Bengali home page
 - [Heavy periods (menorrhagia)](https://kolkatahematologyinstitute.com/en/heavy-periods/): Heavy periods in young girls from the first period: when bleeding is too much, bleeding disorders such as von Willebrand disease, anaemia, and when to go to hospital.
 - [Bruises in children](https://kolkatahematologyinstitute.com/en/child-bruises/): Bluish black patches or red dots on a child's skin? When bruises are from play, when they mean low platelets or a bleeding disorder, and when to go to hospital.
 - [Genetic tests of blood and marrow](https://kolkatahematologyinstitute.com/en/genetic-tests/): Why karyotyping, FISH, PCR and NGS are done after a blood cancer is diagnosed, and how they decide the treatment, explained in plain words.
+  - [Karyotyping](https://kolkatahematologyinstitute.com/en/genetic-tests/karyotype/): What karyotyping is, what t(9;22), t(15;17) and del(5q) on the report mean, why it takes about two weeks, and what it cannot see.
 
 ## অধ্যায় (বাংলা)
 - [অ্যানিমিয়া: রক্তাল্পতা](https://kolkatahematologyinstitute.com/anaemia/): সব সময় ক্লান্তি, সিঁড়ি ভাঙলে হাঁফ, রিপোর্টে হিমোগ্লোবিন কম? অ্যানিমিয়া মানে কী আর কারণ খোঁজা কেন জরুরি, লিখেছেন কলকাতার হেমাটোলজিস্ট।
@@ -99,3 +100,4 @@ English home page: https://kolkatahematologyinstitute.com/en/ (Bengali home page
 - [মাসিকে অতিরিক্ত রক্তপাত (মেনোরেজিয়া)](https://kolkatahematologyinstitute.com/heavy-periods/): মেয়ের প্রথম মাসিক থেকেই খুব রক্ত যাচ্ছে? কখন সেটা বেশি, রক্তের অসুখ কিনা, রক্তাল্পতা, আর কখন হাসপাতাল। লিখেছেন কলকাতার হেমাটোলজিস্ট।
 - [বাচ্চার গায়ে কালশিটে](https://kolkatahematologyinstitute.com/child-bruises/): বাচ্চার গায়ে কালচে নীল ছোপ বা লাল ফুটকি? কখন খেলাধুলোর কালশিটে, কখন প্লেটলেট বা রক্তপাতের অসুখ, আর কখন হাসপাতাল। লিখেছেন কলকাতার হেমাটোলজিস্ট।
 - [রক্ত আর ম্যারোর জেনেটিক পরীক্ষা](https://kolkatahematologyinstitute.com/genetic-tests/): রোগ ধরা পড়ার পরেও ক্যারিওটাইপিং, ফিশ, পিসিআর, এনজিএস কেন? জেনেটিক পরীক্ষা কীভাবে রক্তের ক্যান্সারের চিকিৎসা ঠিক করে, সহজ ভাষায়।
+  - [জেনেটিক পরীক্ষা: ক্যারিওটাইপিং](https://kolkatahematologyinstitute.com/genetic-tests/karyotype/): ক্যারিওটাইপিং কী, রিপোর্টের t(9;22), t(15;17), del(5q) মানে কী, কেন দু সপ্তাহ লাগে, আর এটা কী দেখতে পায় না। সহজ ভাষায়।
