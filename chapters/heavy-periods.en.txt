@@ -25,6 +25,8 @@ None of this is something a girl should just put up with.
 
 # Why it matters to a blood doctor
 
+In the first few years after periods start, the commonest reason for heavy bleeding is that the ovaries do not yet release an egg every month, so the hormones are not settled. That is why families, and sometimes doctors, call it hormonal and wait. But in a study of two hundred girls sent to specialists in the United States for heavy periods, one in three had a bleeding disorder, and it was found just as often when the bleeding looked hormonal. Many of them had waited years for the diagnosis.
+
 Some girls bleed heavily because their blood does not clot properly. One of these is von Willebrand disease, in which a protein that helps blood clot is low or does not work well. It is inherited, so it runs in families. The signs are easy to miss: bruising easily, nosebleeds that come often or last long, bleeding gums, bleeding more than usual after a cut or a dental or other procedure, and heavy periods. Sometimes heavy periods are the first sign anyone notices.
 
 Other causes include low platelets, some medicines such as blood thinners and chemotherapy, and conditions of the womb or ovaries. The doctor asks about all of these.
@@ -37,7 +39,7 @@ Iron treats the anaemia, but it does not stop the bleeding. The cause of the hea
 
 # How it is found
 
-The doctor asks how long the periods last, how often she changes pads, whether she has clots or floods, and about bruises, nosebleeds and bleeding in the family. A period diary kept for a few months helps the doctor see what happens. Blood tests check for anaemia and iron, and clotting tests look for a bleeding disorder. Testing for von Willebrand disease may need to be done more than once, and a hematologist usually arranges it.
+The doctor asks how long the periods last, how often she changes pads, whether she has clots or floods, and about bruises, nosebleeds and bleeding in the family. A period diary kept for a few months helps the doctor see what happens. Guidelines for girls with heavy periods ask the doctor to check three things: anaemia and iron stores, hormone causes, and a bleeding disorder, working with a hematologist. Blood tests check for anaemia and iron, and clotting tests look for a bleeding disorder. Testing for von Willebrand disease may need to be done more than once, and a hematologist usually arranges it.
 
 # What treatment can do
 
@@ -55,7 +57,7 @@ Which medicine, and for how long, is decided by the doctor for each girl. Do not
 
 The thirteen-year-old's mother takes her to a doctor after the fainting. Her blood test shows anaemia from iron loss. The doctor treats the anaemia, starts medicine to reduce the bleeding, and refers her to a hematologist to look for a bleeding disorder. She keeps a diary of each period, and goes back to tuition.
 
-The fifteen-year-old sees a hematologist with her mother. Tests over a few weeks show von Willebrand disease. She learns which medicine to use for a heavy period or a nosebleed, and to tell any dentist or surgeon about it. Her mother is tested too.
+The fifteen-year-old sees a hematologist with her mother. Tests over a few weeks show von Willebrand disease. She learns which medicine to use for a heavy period or a nosebleed, which medicines are safe for her, and to tell any dentist or surgeon about it. Her mother is tested too.
 
 Whichever story is closer to yours, write down how long the periods last and how often the pad is changed, and take it to the doctor.
 
@@ -84,7 +86,7 @@ A doctor or hematologist can help, so bring these questions:
 
 ## Is heavy bleeding normal in the first periods?
 
-Periods can be irregular and sometimes heavier when they first start. But bleeding that soaks a pad every hour or two, lasts more than seven days or makes her faint is not something to wait out. See a doctor.
+Periods can be irregular and sometimes heavier when they first start, usually because of hormones. But a bleeding disorder can hide behind the same pattern, and bleeding that soaks a pad every hour or two, lasts more than seven days or makes her faint is not something to wait out. See a doctor.
 
 ## Will heavy periods settle after marriage?
 
@@ -100,3 +102,5 @@ Yes, sometimes. Von Willebrand disease usually runs in families, so if a mother,
 - NHS: Von Willebrand disease | https://www.nhs.uk/conditions/von-willebrand-disease/
 - NHS: Starting your periods | https://www.nhs.uk/conditions/periods/starting-periods/
 - NHS: Iron deficiency anaemia | https://www.nhs.uk/conditions/iron-deficiency-anaemia/
+- American College of Obstetricians and Gynecologists: Screening and management of bleeding disorders in adolescents with heavy menstrual bleeding (Committee Opinion 785) | https://www.acog.org/clinical/guidance/committee-opinion/2019/09/screening-and-management-of-bleeding-disorders-in-adolescents-with-heavy-menstrual-bleeding
+- Zia A, Jain S, Kouides P, Zhang S, Gao A, Salas N, et al. Bleeding disorders in adolescents with heavy menstrual bleeding in a multicenter prospective US cohort. Haematologica. 2020;105(7):1969-76.
