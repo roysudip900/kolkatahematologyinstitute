@@ -495,5 +495,16 @@
   "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#E6F3EE\"/><path d=\"M19 12c8 6 6 10 0 14s-8 8 0 14M33 12c-8 6-6 10 0 14s8 8 0 14\" fill=\"none\" stroke=\"#126158\" stroke-width=\"2.5\"/><path d=\"M21 17h10M22 26h8M21 35h10\" stroke=\"#D8323F\" stroke-width=\"2\"/>",
   "group": "tests",
   "coauthor": "mridha"
+ },
+ {
+  "id": "genetic-tests-karyotype",
+  "parent": "genetic-tests",
+  "bn": "জেনেটিক পরীক্ষা: ক্যারিওটাইপিং",
+  "en": "Genetic tests: karyotyping",
+  "desc_bn": "ক্যারিওটাইপিং কী, রিপোর্টের t(9;22), t(15;17), del(5q) মানে কী, কেন দু সপ্তাহ লাগে, আর এটা কী দেখতে পায় না। সহজ ভাষায়।",
+  "desc_en": "What karyotyping is, what t(9;22), t(15;17) and del(5q) on the report mean, why it takes about two weeks, and what it cannot see.",
+  "card_bn": "রিপোর্টে t(9;22) বা del(5q) লেখা? ক্যারিওটাইপে এত দেরি কেন?",
+  "card_en": "t(9;22) or del(5q) on your report? Why does a karyotype take so long?",
+  "coauthor": "mridha"
  }
 ]

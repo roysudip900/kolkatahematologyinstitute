@@ -1,0 +1,91 @@
+> Karyotyping, or conventional cytogenetics, grows cells from the bone marrow or blood in the laboratory and looks at all their chromosomes under a microscope, to find large changes such as the Philadelphia chromosome in chronic myeloid leukaemia, t(15;17) in acute promyelocytic leukaemia or del(5q) in myelodysplastic syndrome. These changes help name the disease, choose the treatment and judge the outlook, so ask your hematologist what your karyotype showed and what it means for your plan.
+
+The bone marrow report came in a week. The chromosome report took two more.
+
+She is sixty-one and lives in Tollygunge. For a year she has been tired and pale, and for the last six months she has needed a blood transfusion every few weeks. The bone marrow test showed myelodysplastic syndrome, a condition in which the marrow makes blood cells that do not grow up properly. Her daughter could not understand why the hematologist kept saying "let us wait for the karyotype".
+
+In Kolkata, a mother sits outside a children's ward. Her son of fourteen has acute lymphoblastic leukaemia, and his chemotherapy has already begun. Then the hematologist tells her the karyotype has shown a change called the Philadelphia chromosome, and that the plan will now include a tablet as well.
+
+The daughter wants to know what one more report can change. The mother wants to know why her son's plan changed after it had started.
+
+# What a karyotype is
+
+Each cell keeps its genes in chromosomes, forty-six of them, in pairs. A karyotype is a picture of all of them, arranged pair by pair, so a trained eye can see when one is broken, missing, extra, turned around, or has swapped a piece with another.
+
+To take that picture, the laboratory needs living cells that are dividing, because chromosomes can only be seen clearly at that moment. So the cells from the bone marrow or blood are grown for a few days first. This is why the sample must reach the laboratory fresh, and why the result takes about two weeks.
+
+[figure: karyo-read]
+
+# The changes it finds, and what they mean
+
+A karyotype report uses a short code. A few of the changes doctors look for most:
+
+- Philadelphia chromosome, written t(9;22): pieces of chromosomes 9 and 22 swap places and make the BCR::ABL1 joined gene. It is found in most people with chronic myeloid leukaemia, and in some with acute lymphoblastic leukaemia, more often in teenagers and adults. Targeted tablets work against it.
+- t(15;17): genes on chromosomes 15 and 17 swap places and make the PML::RARA gene. This means acute promyelocytic leukaemia, a form of acute myeloid leukaemia that is treated in its own, very different way and needs treatment urgently.
+- del(5q): a missing piece of the long arm of chromosome 5. When it is the only change in myelodysplastic syndrome, it marks a type that can respond to a particular medicine, lenalidomide, which can lessen the need for transfusions.
+- Other changes help the hematologist judge how a myelodysplastic syndrome or an acute leukaemia is likely to behave, and how strong the treatment should be.
+
+In the code, "t" means two chromosomes have swapped pieces, "del" means a piece is missing, "inv" means a piece is turned around, and a plus or minus sign before a number means a whole chromosome is extra or missing.
+
+# What it can and cannot see
+
+A karyotype looks at every chromosome at once, so it can find changes nobody was looking for. That is its strength.
+
+It sees only large changes. Small changes, and changes inside a single gene, are too small for it, and so are changes in cells that do not grow in the laboratory. It also looks at only a few cells. That is why the hematologist often asks for FISH, PCR or NGS as well: each finds what the karyotype can miss.
+
+Sometimes the cells do not grow well enough to give a result, and the test has to be repeated or the answer found another way.
+
+[figure: karyo-cards]
+
+# Is a chromosome change inherited?
+
+A change found in the leukaemia or marrow cells usually happened in those cells during life. It is not passed on to children. The Philadelphia chromosome, for example, is not passed from parent to child.
+
+# How the stories go on
+
+The woman's karyotype shows del(5q) as the only change. Her hematologist explains that her type of myelodysplastic syndrome can respond to a particular medicine, and starts it. Over the next months she needs transfusions less often, and her blood counts are checked regularly.
+
+The boy's plan now includes a targeted tablet together with his chemotherapy, and his team talks to the family about whether he will need a stem cell transplant later. His mother understands that the change was found in time to matter.
+
+Whichever story is closer to yours, ask for your karyotype result in words, and what it changes in your plan.
+
+# Go to a hospital now if
+
+While you wait for a karyotype result, go to a hospital at once if:
+
+- there is a fever, or you feel hot, cold or shivery
+- there is bleeding that will not stop, or many new bruises or red spots
+- you become very breathless, very pale or very drowsy
+- there is new confusion, a severe headache or a fit
+
+# Take these questions to your doctor
+
+Your hematologist or the pathologist can explain the report. Ask:
+
+- What did my karyotype show, and what does each part of the code mean?
+- Does the result change my treatment?
+- Do I also need FISH, PCR or NGS, and why?
+- If the cells did not grow, will the test be repeated?
+- Will the karyotype be checked again during or after treatment?
+
+# Common questions
+
+## Why does a karyotype take so long?
+
+Because the cells must first be grown in the laboratory until they divide, which takes a few days, and then the chromosomes are counted and studied. The whole test usually takes about two weeks.
+
+## My karyotype showed no change. Does that mean I do not have leukaemia?
+
+No. A karyotype sees only large chromosome changes, and many blood cancers have small changes it cannot see. The diagnosis rests on the bone marrow test and the other tests together. Ask your hematologist what the result means for you.
+
+## What does t(9;22) on my report mean?
+
+It means pieces of chromosomes 9 and 22 have swapped places, which is the Philadelphia chromosome. It is found in most people with chronic myeloid leukaemia and in some with acute lymphoblastic leukaemia, and targeted tablets work against it.
+
+# Sources
+
+- Zitella LJ. Molecular testing in hematologic malignancies. J Adv Pract Oncol. 2022;13(3):324-7. | https://pmc.ncbi.nlm.nih.gov/articles/PMC9126340/
+- National Cancer Institute: Chronic myeloid leukemia treatment | https://www.cancer.gov/types/leukemia/patient/cml-treatment-pdq
+- National Cancer Institute: Adult acute myeloid leukemia treatment | https://www.cancer.gov/types/leukemia/patient/adult-aml-treatment-pdq
+- National Cancer Institute: Childhood acute lymphoblastic leukemia treatment | https://www.cancer.gov/types/leukemia/patient/child-all-treatment-pdq
+- National Cancer Institute: Myelodysplastic syndromes treatment | https://www.cancer.gov/types/myeloproliferative/patient/myelodysplastic-treatment-pdq

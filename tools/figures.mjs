@@ -1264,6 +1264,36 @@ const FIG = {
         body),
     };
   },
+  // Karyotyping: chromosome pairs laid out in a row (a karyogram). Two of them (labelled 9 and 22) swap a piece,
+  // shown by coloured tips that blink; below, the report code appears piece by piece: 46,XY,t(9;22).
+  'karyo-read'(l) {
+    const t = l === 'bn'
+      ? { a: 'জোড়ায় জোড়ায় সাজানো ক্রোমোজোম', b: 'রিপোর্টের সংকেত', cap: 'ক্যারিওটাইপে সব ক্রোমোজোম জোড়া ধরে সাজানো হয়। এখানে নয় আর বাইশ নম্বর ক্রোমোজোম একটা করে টুকরো বদল করেছে, এটাই ফিলাডেলফিয়া ক্রোমোজোম। রিপোর্টে লেখা হয় t(9;22)।' }
+      : { a: 'chromosomes laid out in pairs', b: 'the report code', cap: 'A karyotype lays out all the chromosomes in pairs. Here chromosomes 9 and 22 have swapped a piece each: this is the Philadelphia chromosome, written t(9;22) on the report.' };
+    let body = T(14, 22, t.a, { a: 'start', size: 12.5, w: 700, fill: C.teal });
+    const pairs = [[1, 56], [5, 50], [9, 42], [15, 34], [17, 30], [22, 22]];
+    pairs.forEach(([n, h], i) => {
+      const x = 22 + i * 56, y = 40;
+      [0, 1].forEach((j) => {
+        const cx = x + j * 14;
+        body += `<rect x="${cx}" y="${y}" width="10" height="${h}" rx="5" fill="#8D74D8"/><rect x="${cx}" y="${y + h * 0.35}" width="10" height="3" fill="#EFE9FC"/>`;
+        if (n === 9 && j === 1) body += `<rect class="kr-sw" x="${cx}" y="${y + h - 10}" width="10" height="10" rx="5" fill="${C.amber}"/>`;
+        if (n === 22 && j === 1) body += `<rect class="kr-sw" x="${cx}" y="${y + h - 10}" width="10" height="10" rx="5" fill="${C.red}"/>`;
+      });
+      body += `<text x="${x + 12}" y="${118}" text-anchor="middle" font-size="12.5" font-weight="700" fill="${n === 9 || n === 22 ? C.red : C.muted}">${n}</text>`;
+    });
+    body += T(14, 150, t.b, { a: 'start', size: 12.5, w: 700, fill: C.teal });
+    body += `<rect x="14" y="160" width="332" height="34" rx="10" fill="#fff" stroke="${C.mintLine}" stroke-width="1.5"/>`;
+    body += `<text x="30" y="183" font-size="15" font-weight="700" font-family="monospace"><tspan class="kr-c kr-c0" fill="${C.ink}">46,</tspan><tspan class="kr-c kr-c1" fill="${C.ink}">XY,</tspan><tspan class="kr-c kr-c2" fill="${C.red}">t(9;22)</tspan></text>`;
+    return {
+      cap: t.cap,
+      svg: svg('kr', 360, 204, t.cap,
+        '.kr-sw{animation:krs 2.4s ease-in-out infinite alternate}@keyframes krs{from{opacity:.35}to{opacity:1}}' +
+                '.kr-c{opacity:0;animation:krc 6s ease-in-out infinite}.kr-c1{animation-delay:.8s}.kr-c2{animation-delay:1.6s}@keyframes krc{0%{opacity:0}12%,85%{opacity:1}100%{opacity:0}}' +
+        '@media (prefers-reduced-motion:reduce){.kr-sw{animation:none;opacity:1}.kr-c{animation:none;opacity:1}}',
+        body),
+    };
+  },
   // Anaemia, iron: two tanks of body iron. Tablets drip iron into both. In the first, a leak (heavy periods or
   // bleeding) lets it out, so the level hardly rises; in the second the leak is treated and the level slowly rises.
   'iron-tank'(l) {
@@ -2667,6 +2697,32 @@ const TRY = {
             ['family', 'A gene change in leukaemia means my children will get it', 'True?', 'Most changes happen during life, in the cancer cells only, and are not passed on.'],
             ['clock', 'I must go without any treatment until the results come', 'True?', 'Treatment that cannot wait starts first, and the plan is adjusted when results come.'],
             ['repeat', 'Once treatment starts, no more tests are needed', 'True?', 'Some tests are repeated during treatment to see how well it is working.']],
+          cap: 'While waiting for results, a fever, bleeding that will not stop or severe breathlessness needs a hospital at once.' };
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
+      t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
+        `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
+        `<span class="fc back"><span class="k">${esc(t.sign)}</span><span>${esc(back)}</span></span></button>`).join('') + '</div>';
+    return { cap: t.cap, cls: 'flipset', html };
+  },
+  'karyo-cards'(l) {
+    const ic = {
+      clock: `<circle cx="20" cy="20" r="13" fill="#fff" stroke="${C.teal2}" stroke-width="2"/><path d="M20 12v9l6 3" stroke="${C.teal}" stroke-width="2.5" fill="none" stroke-linecap="round"/>`,
+      lens: `<circle cx="17" cy="17" r="10" fill="#fff" stroke="${C.teal2}" stroke-width="2.5"/><path d="M25 25l9 9" stroke="${C.teal2}" stroke-width="3" stroke-linecap="round"/>`,
+      report: `<rect x="9" y="5" width="22" height="30" rx="3" fill="#fff" stroke="${C.teal2}" stroke-width="2"/><path d="M14 13h12M14 19h12M14 25h7" stroke="${C.teal2}" stroke-width="2"/>`,
+      family: `<circle cx="13" cy="12" r="5" fill="${C.teal}"/><circle cx="27" cy="12" r="5" fill="${C.teal}"/><circle cx="20" cy="26" r="4" fill="${C.rose}"/><path d="M8 34c0-6 3-9 5-9s5 3 5 9M22 34c0-6 3-9 5-9s5 3 5 9" fill="${C.teal}"/>`,
+    };
+    const t = l === 'bn'
+      ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
+          c: [['clock', 'ক্যারিওটাইপের রিপোর্ট এক-দুদিনেই আসা উচিত', 'সত্যি?', 'কোষ আগে বাড়াতে হয়, তাই সাধারণত প্রায় দু সপ্তাহ লাগে।'],
+            ['lens', 'ক্যারিওটাইপে সব জিনের বদল ধরা পড়ে', 'সত্যি?', 'শুধু বড় বদল। ছোট বদলের জন্য ফিশ, পিসিআর বা এনজিএস লাগতে পারে।'],
+            ['report', 'ক্যারিওটাইপে বদল নেই মানে ক্যান্সার নেই', 'সত্যি?', 'অনেক রক্তের ক্যান্সারের বদল এত ছোট যে ক্যারিওটাইপে দেখা যায় না। হেমাটোলজিস্টকে জিজ্ঞেস করুন।'],
+            ['family', 'লিউকেমিয়ার ক্রোমোজোমের বদল সন্তানের হবে', 'সত্যি?', 'এই বদল সাধারণত জীবদ্দশায় ক্যান্সারের কোষেই হয়, সন্তানের মধ্যে যায় না।']],
+          cap: 'ফলের অপেক্ষায় থাকার সময় জ্বর, বন্ধ না হওয়া রক্তপাত বা খুব শ্বাসকষ্ট হলে সঙ্গে সঙ্গে হাসপাতালে যান।' }
+      : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
+          c: [['clock', 'A karyotype report should come in a day or two', 'True?', 'The cells must be grown first, so it usually takes about two weeks.'],
+            ['lens', 'A karyotype finds every gene change', 'True?', 'Only large changes. Small ones may need FISH, PCR or NGS.'],
+            ['report', 'No change on the karyotype means no cancer', 'True?', 'Many blood cancers have changes too small for a karyotype to see. Ask your hematologist.'],
+            ['family', 'A chromosome change in leukaemia will pass to my children', 'True?', 'It usually happened during life in the cancer cells, and is not passed on.']],
           cap: 'While waiting for results, a fever, bleeding that will not stop or severe breathlessness needs a hospital at once.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
       t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
