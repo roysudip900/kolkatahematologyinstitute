@@ -58,7 +58,7 @@ const GROUPS = [
   ['white', 'শ্বেতকণিকা ও রক্তের ক্যান্সার', 'White cells and blood cancers'],
   ['tests', 'রক্তের পরীক্ষা', 'Blood tests'],
   ['treat', 'চিকিৎসা', 'Treatments'],
-  ['other', 'গর্ভাবস্থা ও অন্য সমস্যা', 'Pregnancy and other problems'],
+  ['other', 'গর্ভাবস্থা', 'Pregnancy'],
 ];
 // One identity for the site, the author and the publisher, so search engines and AI systems
 // can tie every page to the same person. The home page carries the full records; chapter pages point to them by @id.
