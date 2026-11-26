@@ -1,0 +1,107 @@
+> FISH, fluorescence in situ hybridisation, uses glowing labels that stick to one chosen gene or chromosome, so the laboratory can see and count that change in cells from the blood, bone marrow or a lymph node, usually within two to three days. It is used to look for named changes such as BCR::ABL1 in chronic myeloid leukaemia, PML::RARA in acute promyelocytic leukaemia, del(17p) in chronic lymphocytic leukaemia and t(4;14) in myeloma, and the answer often decides the treatment and the risk group, so ask your hematologist which FISH tests you need and what each result means.
+
+"The karyotype was already done. Why another chromosome test?"
+
+He is sixty-eight, a retired schoolteacher in Behala. A routine blood test two years ago found chronic lymphocytic leukaemia, and since then his hematologist has watched it with regular blood tests. Now his glands have grown and his counts have fallen, and treatment is needed. Before choosing it, the hematologist sends his blood for FISH.
+
+In Barasat, a woman of fifty-seven has just been told she has multiple myeloma. The bone marrow test confirmed it. Her son reads the report and finds a list of strange names under the heading FISH: del(17p), t(4;14), t(14;16). He wants to know why these matter if the diagnosis is already made.
+
+The teacher wants to know why one more test before treatment. The son wants to know what the names mean.
+
+# What FISH is
+
+A FISH test uses small pieces of genetic material made in the laboratory, each carrying a glowing dye. Each piece is built to stick to one chosen gene or one part of a chromosome. Under a special microscope, wherever it sticks, it lights up as a coloured dot.
+
+The laboratory then counts the dots in each cell. A healthy cell usually shows two dots for each gene, one on each chromosome of the pair. One dot means a piece is missing. Three dots mean there is an extra copy. When two genes that should be apart are joined, their two colours sit together as one dot.
+
+[figure: fish-dots]
+
+FISH does not need the cells to divide, so they do not have to be grown first. That is why the result usually comes in two to three days, much sooner than a karyotype. It can also be done on cells that will not grow in the laboratory, and on a sample from a lymph node. And because it looks at a few hundred cells, it can find a change carried by only a small share of them.
+
+# What FISH looks for
+
+FISH finds only what it is asked to look for. So the hematologist chooses the tests, often as a set, called a panel, that fits the disease. These are some of the names you may see on a report:
+
+- Chronic myeloid leukaemia: BCR::ABL1, the joined gene made by the Philadelphia chromosome. FISH can confirm it quickly.
+- Acute promyelocytic leukaemia: PML::RARA. This form of leukaemia needs treatment urgently, so a quick answer matters.
+- Chronic lymphocytic leukaemia: a panel that usually looks for del(13q), del(11q), trisomy 12 and del(17p). Of these, del(17p) matters most. It is linked to the usual treatments working less well and for a shorter time, so the hematologist may choose a different, targeted treatment.
+- Multiple myeloma: FISH is done on the bone marrow sample, to look for the changes that place the myeloma in a risk group, explained below. The result helps plan how strong the treatment should be and how closely it is followed.
+
+In these names, "del" means a piece is missing, "t" means two chromosomes have swapped pieces, and "trisomy" means there is an extra copy of a whole chromosome.
+
+# Why these results sort people into risk groups
+
+Two people can have the same disease and very different courses. So the hematologist uses the changes found by FISH, together with the karyotype and other tests, to place each person in a risk group, usually favourable, intermediate or higher risk. The risk group helps decide how strong the treatment should be, whether a stem cell transplant should be planned early, and how closely the disease is followed.
+
+Some of the changes that place people in these groups:
+
+- Acute myeloid leukaemia: t(8;21), t(15;17) and inv(16) are linked to a better outcome. A KMT2A rearrangement (older reports write MLL), inv(3), t(6;9), or many changes at once are linked to a less good outcome, and the plan may then be stronger, sometimes with a transplant.
+- Acute lymphoblastic leukaemia: t(12;21), which joins the ETV6 and RUNX1 genes and is common in children, and hyperdiploidy, meaning many extra chromosomes, are linked to a better outcome. A KMT2A rearrangement is linked to a worse one. The Philadelphia chromosome used to mean the worst outlook in this leukaemia, and targeted tablets have greatly improved it for many people.
+- Chronic lymphocytic leukaemia: del(13q) is linked to a better outlook, del(11q) and del(17p) to a less good one. FISH also helps tell this leukaemia apart from mantle cell lymphoma, which can look the same under the microscope but carries t(11;14) and behaves worse.
+- Multiple myeloma: t(11;14) and hyperdiploidy are linked to a better outlook. t(4;14), t(14;16), del(17p), and a gain of 1q or loss of 1p are linked to a less good one. Myeloma cells seldom divide, so a karyotype often misses these changes, and FISH is the main test for them.
+- Myelodysplastic syndrome: chromosome changes are built into the scoring systems doctors use to judge how it is likely to behave. FISH can find a change when the karyotype shows none or the cells did not grow.
+
+A risk group describes what tends to happen in many people with the same change. It does not decide what will happen to one person, and it can change as treatment improves, as the Philadelphia chromosome shows. Ask your hematologist which risk group you are in, and what it means for your plan.
+
+# What FISH cannot do
+
+Because each FISH test looks for one chosen change, a result that does not show that change says nothing about other changes. It does not mean there is no cancer. This is why FISH is often done together with a karyotype, which looks at every chromosome, and with PCR or NGS, which can find changes too small for either.
+
+[figure: fish-cards]
+
+# Is the change inherited?
+
+The changes FISH finds in leukaemia, lymphoma or myeloma cells usually happened in those cells during life. They are not passed on to children.
+
+# How the stories go on
+
+The teacher's FISH shows del(17p). His hematologist explains that with this change, the usual chemotherapy is less likely to work well, and chooses a targeted tablet instead. His blood counts and glands are checked regularly to see how it is working.
+
+The woman's FISH shows t(4;14). Her hematologist explains that this is one of the higher risk changes, and plans her treatment and her follow up with that in mind. Her son now knows what one line of the report means, and what to ask about the rest.
+
+Whichever story is closer to yours, ask which FISH tests were done, what each one showed, and what it changes in the plan.
+
+# Go to a hospital now if
+
+While you wait for results, go to a hospital at once if:
+
+- there is a fever, or you feel hot, cold or shivery
+- there is bleeding that will not stop, or many new bruises or red spots
+- you become very breathless, very pale or very drowsy
+- there is new confusion, a severe headache or a fit
+- for someone with myeloma: sudden numbness or weakness in the legs, or losing control of urine or stools
+
+# Take these questions to your doctor
+
+Do not start, stop or change any medicine because of a FISH report. Show it to your hematologist first.
+
+Your hematologist or the pathologist can explain the report. Ask:
+
+- Which FISH tests were done, and why these ones?
+- What did each one show, and what does it mean for my treatment?
+- Which risk group am I in, and why?
+- Do I also need a karyotype, PCR or NGS?
+- Will FISH be repeated during or after treatment?
+
+# Common questions
+
+## Why do I need FISH if the karyotype is already done?
+
+Because FISH can find some changes the karyotype misses: changes too small to see on a karyotype, changes in cells that did not grow, and changes carried by only a small share of cells. It also gives an answer in days, not weeks.
+
+## My FISH did not show any of the changes. Does that mean I do not have cancer?
+
+No. FISH looks only for the changes it was asked about. The diagnosis rests on the bone marrow test and the other tests together. Ask your hematologist what the result means for you.
+
+## What does del(17p) on my report mean?
+
+It means a piece of the short arm of chromosome 17 is missing in the cancer cells. In chronic lymphocytic leukaemia and in myeloma, it is linked to the disease being harder to treat, and in chronic lymphocytic leukaemia it often changes which treatment is chosen. Ask your hematologist what it means for your plan.
+
+# Sources
+
+- Zitella LJ. Molecular testing in hematologic malignancies. J Adv Pract Oncol. 2022;13(3):324-7. | https://pmc.ncbi.nlm.nih.gov/articles/PMC9126340/
+- National Cancer Institute: Chronic myeloid leukemia treatment | https://www.cancer.gov/types/leukemia/patient/cml-treatment-pdq
+- National Cancer Institute: Adult acute myeloid leukemia treatment | https://www.cancer.gov/types/leukemia/patient/adult-aml-treatment-pdq
+- National Cancer Institute: Chronic lymphocytic leukemia treatment (health professional version) | https://www.cancer.gov/types/leukemia/hp/cll-treatment-pdq
+- National Cancer Institute: Plasma cell neoplasms (including multiple myeloma) treatment (health professional version) | https://www.cancer.gov/types/myeloma/hp/myeloma-treatment-pdq
+- Hu L, Ru K, Zhang L, Huang Y, Zhu X, Liu H, et al. Fluorescence in situ hybridization (FISH): an increasingly demanded tool for biomarker research and personalized medicine. Biomark Res. 2014;2(1):3. | https://pmc.ncbi.nlm.nih.gov/articles/PMC3917523/

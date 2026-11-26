@@ -1296,6 +1296,38 @@ const FIG = {
         body),
     };
   },
+  // FISH: three cell nuclei under the microscope, as glowing dots. Healthy: two red, two green.
+  // One piece missing (as in del(17p)): one red, two green. Two genes joined (as in BCR::ABL1): a yellow dot.
+  'fish-dots'(l) {
+    const t = l === 'bn'
+      ? { a: 'মাইক্রোস্কোপে আলো-জ্বলা বিন্দু', c: [['সুস্থ কোষ', 'প্রতিটার দুটো'], ['একটা টুকরো নেই', 'যেমন del(17p)'], ['দুটো জিন জুড়ে গেছে', 'যেমন BCR::ABL1']],
+          cap: 'ফিশে প্রতিটা বেছে নেওয়া জিন রঙিন বিন্দু হয়ে জ্বলে। সুস্থ কোষে প্রতিটার দুটো বিন্দু। একটা কম মানে একটা টুকরো নেই। লাল আর সবুজ জুড়ে হলুদ বিন্দু মানে দুটো জিন জুড়ে গেছে।' }
+      : { a: 'glowing dots under the microscope', c: [['healthy cell', 'two of each'], ['a piece missing', 'as in del(17p)'], ['two genes joined', 'as in BCR::ABL1']],
+          cap: 'In FISH each chosen gene glows as a coloured dot. A healthy cell shows two of each. One dot fewer means a piece is missing. Red and green joined into one yellow dot means two genes are joined.' };
+    const G = '#3FB27F', Y = '#F2C94C', N = '#22304F';
+    const dots = [
+      [[-18, -14, C.red], [16, 12, C.red], [14, -18, G], [-14, 16, G]],
+      [[-6, -16, C.red], [16, -6, G], [-12, 16, G]],
+      [[-18, -10, C.red], [16, -16, G], [4, 16, Y]],
+    ];
+    let body = T(14, 22, t.a, { a: 'start', size: 12.5, w: 700, fill: C.teal });
+    dots.forEach((ds, i) => {
+      const cx = 62 + i * 118, cy = 88;
+      body += `<circle cx="${cx}" cy="${cy}" r="44" fill="${N}"/>`;
+      ds.forEach(([dx, dy, f], k) => {
+        body += `<circle class="fd fd${(i + k) % 3}" cx="${cx + dx}" cy="${cy + dy}" r="6.5" fill="${f}"/>`;
+      });
+      body += T(cx, 154, t.c[i][0], { size: 12.5, w: 700, fill: i === 0 ? C.teal : C.red });
+      body += T(cx, 172, t.c[i][1], { size: 12.5, fill: C.muted });
+    });
+    return {
+      cap: t.cap,
+      svg: svg('fd', 360, 186, t.cap,
+        '.fd{animation:fdg 2.4s ease-in-out infinite alternate}.fd1{animation-delay:.6s}.fd2{animation-delay:1.2s}@keyframes fdg{from{opacity:.45}to{opacity:1}}' +
+        '@media (prefers-reduced-motion:reduce){.fd{animation:none;opacity:1}}',
+        body),
+    };
+  },
   // Anaemia, iron: two tanks of body iron. Tablets drip iron into both. In the first, a leak (heavy periods or
   // bleeding) lets it out, so the level hardly rises; in the second the leak is treated and the level slowly rises.
   'iron-tank'(l) {
@@ -2725,6 +2757,32 @@ const TRY = {
             ['lens', 'A karyotype finds every gene change', 'True?', 'Only large changes. Small ones may need FISH, PCR or NGS.'],
             ['report', 'No change on the karyotype means no cancer', 'True?', 'Many blood cancers have changes too small for a karyotype to see. Ask your hematologist.'],
             ['family', 'A chromosome change in leukaemia will pass to my children', 'True?', 'It usually happened during life in the cancer cells, and is not passed on.']],
+          cap: 'While waiting for results, a fever, bleeding that will not stop or severe breathlessness needs a hospital at once.' };
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
+      t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
+        `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
+        `<span class="fc back"><span class="k">${esc(t.sign)}</span><span>${esc(back)}</span></span></button>`).join('') + '</div>';
+    return { cap: t.cap, cls: 'flipset', html };
+  },
+  'fish-cards'(l) {
+    const ic = {
+      clock: `<circle cx="20" cy="20" r="13" fill="#fff" stroke="${C.teal2}" stroke-width="2"/><path d="M20 12v9l6 3" stroke="${C.teal}" stroke-width="2.5" fill="none" stroke-linecap="round"/>`,
+      lens: `<circle cx="17" cy="17" r="10" fill="#fff" stroke="${C.teal2}" stroke-width="2.5"/><path d="M25 25l9 9" stroke="${C.teal2}" stroke-width="3" stroke-linecap="round"/>`,
+      report: `<rect x="9" y="5" width="22" height="30" rx="3" fill="#fff" stroke="${C.teal2}" stroke-width="2"/><path d="M14 13h12M14 19h12M14 25h7" stroke="${C.teal2}" stroke-width="2"/>`,
+      family: `<circle cx="13" cy="12" r="5" fill="${C.teal}"/><circle cx="27" cy="12" r="5" fill="${C.teal}"/><circle cx="20" cy="26" r="4" fill="${C.rose}"/><path d="M8 34c0-6 3-9 5-9s5 3 5 9M22 34c0-6 3-9 5-9s5 3 5 9" fill="${C.teal}"/>`,
+    };
+    const t = l === 'bn'
+      ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
+          c: [['lens', 'ফিশ সব ক্রোমোজোম একসঙ্গে দেখে', 'সত্যি?', 'ফিশ শুধু সেই বদলগুলোই খোঁজে, যেগুলো খুঁজতে বলা হয়।'],
+            ['clock', 'ক্যারিওটাইপের মতো ফিশেও দু সপ্তাহ লাগে', 'সত্যি?', 'কোষ বাড়াতে হয় না, তাই সাধারণত দুই থেকে তিন দিন লাগে।'],
+            ['report', 'ফিশে বদল নেই মানে ক্যান্সার নেই', 'সত্যি?', 'যে বদল খোঁজা হয়নি, তা ফিশে ধরা পড়ে না। হেমাটোলজিস্টকে জিজ্ঞেস করুন।'],
+            ['family', 'ফিশে পাওয়া বদল সন্তানের হবে', 'সত্যি?', 'এই বদল সাধারণত জীবনের কোনো এক সময়ে ক্যান্সারের কোষেই হয়, সন্তানের মধ্যে যায় না।']],
+          cap: 'ফলের অপেক্ষায় থাকার সময় জ্বর, বন্ধ না হওয়া রক্তপাত বা খুব শ্বাসকষ্ট হলে সঙ্গে সঙ্গে হাসপাতালে যান।' }
+      : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
+          c: [['lens', 'FISH looks at every chromosome at once', 'True?', 'FISH looks only for the changes it is asked to look for.'],
+            ['clock', 'FISH takes two weeks, like a karyotype', 'True?', 'The cells do not need to be grown, so it usually takes two to three days.'],
+            ['report', 'No change on FISH means no cancer', 'True?', 'A change nobody asked about will not show on FISH. Ask your hematologist.'],
+            ['family', 'A change found by FISH will pass to my children', 'True?', 'It usually happened during life in the cancer cells, and is not passed on.']],
           cap: 'While waiting for results, a fever, bleeding that will not stop or severe breathlessness needs a hospital at once.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
       t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +

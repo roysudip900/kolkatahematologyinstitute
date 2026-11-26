@@ -506,5 +506,16 @@
   "card_bn": "রিপোর্টে t(9;22) বা del(5q) লেখা? ক্যারিওটাইপে এত দেরি কেন?",
   "card_en": "t(9;22) or del(5q) on your report? Why does a karyotype take so long?",
   "coauthor": "mridha"
+ },
+ {
+  "id": "genetic-tests-fish",
+  "parent": "genetic-tests",
+  "bn": "জেনেটিক পরীক্ষা: ফিশ",
+  "en": "Genetic tests: FISH",
+  "desc_bn": "ফিশ কী, রিপোর্টে BCR::ABL1, PML::RARA, del(17p), t(4;14) মানে কী, কেন দুই-তিন দিনেই ফল আসে, আর এটা কী খুঁজে পায় না। সহজ ভাষায়।",
+  "desc_en": "What FISH is, what BCR::ABL1, PML::RARA, del(17p) and t(4;14) on the report mean, why results come in two to three days, and what it cannot find.",
+  "card_bn": "রিপোর্টে del(17p) বা t(4;14) লেখা? ফিশ কী খোঁজে?",
+  "card_en": "del(17p) or t(4;14) on your report? What does FISH look for?",
+  "coauthor": "mridha"
  }
 ]
