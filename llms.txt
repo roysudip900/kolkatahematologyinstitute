@@ -4,6 +4,8 @@
 
 Author: [Dr. Sudip Roy](https://share.google/OLTZr4ebHj8UmXFnB), MBBS, MD, DM (Clinical Hematology), clinical hematologist in Kolkata. Co-author of the blood report and other hematopathology pages: Dr. Srejita Mridha, MBBS, MD (Pathology), pathologist. Every chapter exists in Bengali and in English, and each one ends with when to go to hospital and which questions to take to a doctor.
 
+English home page: https://kolkatahematologyinstitute.com/en/ (Bengali home page: https://kolkatahematologyinstitute.com/)
+
 ## Chapters (English)
 - [Anaemia: low hemoglobin](https://kolkatahematologyinstitute.com/en/anaemia/): Always tired, breathless on the stairs, low hemoglobin on your report? A Kolkata hematologist on what anaemia means and why the cause matters.
   - [When it feels like the heart or the nerves](https://kolkatahematologyinstitute.com/en/anaemia/heart-nerves/): A racing heart, breathlessness or pins and needles can come from anaemia or low vitamin B12. When to ask for a blood count, and when to go to hospital.

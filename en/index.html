@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-fixed="en">
+<head>
+<!-- Written by tools/build.mjs from index.html: the English home page. Do not edit by hand. -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#0B3F3D">
+<title>Kolkata Hematology Institute</title>
+<link rel="canonical" href="https://kolkatahematologyinstitute.com/en/">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Blood diseases explained in plain words, in Bengali and English, by a clinical hematologist.">
+<meta property="og:image" content="https://kolkatahematologyinstitute.com/assets/logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@400..800&display=swap" rel="stylesheet">
+<style>
+/* Hallmark · checked: 2026-11-19 · genre: editorial (inferred) · copy: verbatim
+ * floor: 1 FAIL left, judged false (73: the flip-card backs are turned away and hidden until tapped) · fixed: 6a, 7a, 7b, 25, 26a, 34, 38i, 38iii, 39a, 39b (.cta), 40, 48, 49a, 54, 62, F16, F21 · structural: printed in the handoff · finish-review: not run
+ * built: the project · redesign: polish · v2.0.0 */
+/* Hallmark · kept by Dr. Roy (2026-11-20): the "রোগীদের জন্য / For patients and families" pill and the gold squiggle under the headline stay, although 54 flags them */
+/* Hallmark · dismissed F7 · the pill radius is on controls (language switch, buttons) and on tags (chips, "later" badges); boxes keep 20 to 34px radii */
+/* Hallmark · waive 80 · the hero cells, the chapter-head cell and the card marks are the institute's own drawings, and the footer tells readers they are drawings, not slides · a hematology primer has no photograph of a red cell that a patient could read; the drawn cell is the brand */
+/* Hallmark · waive 39b · the tall controls are the three-reasons tiles (.tr-b), each a portrait above a name · a reader picks a person from the story here, so each tile carries a face and wraps a long name */
+/* Hallmark · dismissed F19 · four weights: Bengali display needs 700 where Fraunces sits at 600; body 400 and 500 */
+/* Hallmark · dismissed 49 · the three-reasons tabs wrap by design on a 375px phone; nowrap would push them off screen */
+/* Design B, "a story book about blood": warm paper ground, deep teal ink, red cells that drift,
+   serif headlines (Fraunces for English, Noto Serif Bengali for Bengali), Hind Siliguri for reading.
+   This one style block is used by the home page and by every chapter page (tools/build.mjs copies it). */
+:root{
+  --paper:#FAF5EC;
+  --surface:#FFFCF6;
+  --surface-2:#FFF9F0;
+  --on-deep:#FFFAF2;
+  --ink:#15211F;
+  --ink-2:#31423F;
+  --muted:#5B6B68;
+  --line:#EADFCE;
+  --teal:#0B3F3D;
+  --teal-2:#126158;
+  --teal-soft:#BFE3DC;
+  --teal-text:#D9EFEA;
+  --mint:#E6F3EE;
+  --mint-line:#BFE0D6;
+  --red:#D8323F;
+  --red-2:#EC6A74;
+  --red-ink:#A51D2A;
+  --rose:#FDEDEE;
+  --rose-line:#F4C3C8;
+  --gold:#F2B441;
+  --sand:#EFE6D6;
+  --sand-2:#F3EDE2;
+  --sand-line:#D6C8AF;
+  --red-soft:#F6B6BC;
+  --alarm:#B4202E;
+  --amber:#E39A2D;
+  --amber-soft:#FFF1DC;
+  --amber-ink:#9A5A0C;
+  --key:#FFF8E6;
+  --key-line:#F1DDA2;
+  --video-bg:#1C0A0E;
+  --shade:#0A1312;
+  --grey-soft:#EEF0EF;
+  --grey-ink:#3E4A48;
+  --sans:"Hind Siliguri",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --serif:"Fraunces","Noto Serif Bengali",Georgia,serif;
+  --deep:radial-gradient(60% 75% at 90% 12%,#1B7A70 0%,rgba(27,122,112,0) 70%),radial-gradient(70% 80% at 0% 100%,#062B2A 0%,rgba(6,43,42,0) 65%),#0B3F3D;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:clip}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:clip}
+html[data-lang="en"] [lang="bn"]{display:none}
+html[data-lang="bn"] [lang="en"]{display:none}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--teal-2);outline-offset:3px;transition:none}
+.hero :focus-visible,.chead :focus-visible,.tm-end :focus-visible{outline-color:var(--gold)}
+::selection{background:var(--teal-soft);color:var(--ink)}
+html{caret-color:var(--teal-2);scrollbar-color:var(--sand-line) var(--paper)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3,p{margin:0}
+h1,h2,h3{text-wrap:balance}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 86%,transparent);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:11px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:.95rem;line-height:1.25;min-width:0}
+.brand svg{width:36px;height:36px;flex:none}
+.brand .nm{display:block;max-width:11.5em}
+.right{display:flex;align-items:center;gap:22px;flex:none}
+.right a.nav{font-size:1rem;font-weight:500;min-height:44px;display:flex;align-items:center}
+.right a.nav:hover{color:var(--teal-2)}
+.lang{display:flex;background:var(--sand);border-radius:999px;padding:3px}
+.lang button,.lang a{font:inherit;font-size:.86rem;font-weight:600;min-width:46px;height:40px;border:0;border-radius:999px;background:none;color:var(--muted);cursor:pointer;display:flex;align-items:center;justify-content:center}
+.lang button[aria-pressed="true"],.lang a[aria-current="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 3px color-mix(in srgb,var(--ink) 14%,transparent)}
+
+/* hero */
+.hero{position:relative;color:var(--on-deep);background:var(--deep);border-radius:0 0 48px 48px;overflow:hidden}
+.hero-in{display:flex;align-items:center;gap:28px;padding-block:40px 48px;min-height:min(60svh,500px)}
+.hero .txt{flex:1 1 440px;display:flex;flex-direction:column;gap:18px;align-items:flex-start;position:relative;z-index:1}
+.hero .tag{display:inline-flex;align-items:center;gap:9px;font-size:.88rem;font-weight:600;color:var(--teal-soft);border:1px solid rgba(191,227,220,.35);border-radius:999px;padding:6px 15px}
+.hero .tag::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--red-2);box-shadow:0 0 0 4px rgba(236,106,116,.25)}
+.hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(2.7rem,10vw,5rem);line-height:1.1;letter-spacing:-.015em}
+html[data-lang="bn"] .hero h1{line-height:1.32;letter-spacing:0;font-weight:700;font-size:clamp(2.5rem,9.4vw,4.6rem)}
+.hero h1 .hl{font-style:normal;display:inline-block;padding-bottom:.16em;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 20' preserveAspectRatio='none'%3E%3Cpath d='M4 13 C58 3 112 4 152 9 S246 17 296 6' fill='none' stroke='%23F2B441' stroke-width='5' stroke-linecap='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") no-repeat 0 100%/100% .34em}
+html[data-lang="bn"] .hero h1 .hl{padding-bottom:.2em}
+.hero .lead{font-size:clamp(1.02rem,2.6vw,1.2rem);font-weight:500;line-height:1.55;color:var(--on-deep)}
+.cta{display:inline-flex;align-items:center;gap:10px;margin-top:8px;background:var(--surface);color:var(--teal);font-weight:700;padding:0 6px 0 26px;height:52px;border-radius:999px;transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s;box-shadow:0 18px 30px -18px color-mix(in srgb,var(--shade) 60%,transparent)}
+.cta:hover{transform:translateY(-3px)}
+.cta .dot{width:40px;height:40px;border-radius:50%;background:var(--red);color:var(--on-deep);display:grid;place-items:center}
+.cta svg{width:16px;height:16px}
+.cells{flex:1 1 360px;max-width:540px;height:auto;overflow:visible}
+.cells .f{transform-box:fill-box;transform-origin:center;animation:float 8s ease-in-out infinite}
+.cells .f2{animation-duration:10s;animation-delay:-3s}
+.cells .f3{animation-duration:12s;animation-delay:-6s}
+.cells .f4{animation-duration:9s;animation-delay:-2s}
+@keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-12px) rotate(3deg)}}
+
+/* chapter cards on the home page */
+.sec{padding-block:40px 0}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.search{margin-bottom:36px}
+.search label{display:block;font-family:var(--serif);font-weight:600;font-size:clamp(1.35rem,4.4vw,1.75rem);line-height:1.4;margin-bottom:12px;color:var(--ink)}
+.sbox{position:relative}
+.sbox svg{position:absolute;left:18px;top:50%;width:20px;height:20px;transform:translateY(-50%);color:var(--teal-2);pointer-events:none}
+.sbox input{width:100%;height:56px;padding:0 18px 0 50px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:1.05rem;-webkit-appearance:none;appearance:none}
+.sbox input:focus{outline:none;border-color:var(--teal-2);box-shadow:0 0 0 4px color-mix(in srgb,var(--teal-2) 18%,transparent)}
+.sres{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:10px}
+.sres:empty{display:none}
+.sres a{display:block;padding:14px 18px;border-radius:20px;background:var(--surface);border:1px solid var(--line);color:inherit;text-decoration:none}
+.sres a:hover,.sres a:focus{border-color:var(--teal-2)}
+.sres .sp{display:block;font-size:.85rem;font-weight:600;color:var(--teal-2)}
+.sres .st{display:block;font-family:var(--serif);font-weight:600;font-size:1.15rem;line-height:1.35}
+.sres .sc{display:block;margin-top:4px;font-size:.95rem;line-height:1.55;color:var(--ink-2)}
+.snone{margin-top:12px;color:var(--ink-2)}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.sbtn{width:44px;height:44px;flex:none;border-radius:50%;display:grid;place-items:center;background:var(--sand);color:var(--teal)}
+.sbtn svg{width:19px;height:19px}
+.sbtn:hover{color:var(--teal-2)}
+.search,.group{scroll-margin-top:84px}
+.jump{display:flex;flex-wrap:wrap;gap:8px;margin:-14px 0 34px}
+.jump a{display:inline-flex;align-items:center;min-height:40px;padding:6px 14px;border-radius:999px;background:var(--mint);border:1px solid var(--mint-line);color:var(--teal);font-size:.92rem;font-weight:600;line-height:1.3;text-decoration:none}
+.jump a:hover{border-color:var(--teal-2)}
+.group+.group{margin-top:44px}
+.gh{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-weight:600;font-size:clamp(1.35rem,4.4vw,1.75rem);line-height:1.3;margin-bottom:16px;color:var(--ink)}
+.gh::before{content:"";width:12px;height:12px;flex:none;border-radius:50%;background:var(--red)}
+html[data-lang="bn"] .gh{line-height:1.5}
+.card{position:relative;overflow:hidden;display:flex;flex-direction:column;gap:14px;padding:26px 26px 22px;border-radius:30px;background:var(--surface);border:1px solid var(--line);box-shadow:0 30px 50px -42px color-mix(in srgb,var(--ink) 50%,transparent);transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
+.card:hover{transform:translateY(-5px);box-shadow:0 38px 60px -38px color-mix(in srgb,var(--ink) 55%,transparent)}
+.card .deco{position:absolute;right:-52px;top:-52px;width:200px;height:200px;opacity:.5;pointer-events:none}
+.card .top{position:relative;display:flex;align-items:center;gap:14px}
+.card .ic{width:58px;height:58px;flex:none;filter:drop-shadow(0 6px 10px color-mix(in srgb,var(--ink) 12%,transparent))}
+.card h3{font-family:var(--serif);font-weight:600;font-size:clamp(1.45rem,5.2vw,1.85rem);line-height:1.2}
+.card[lang="bn"] h3{line-height:1.4}
+.card .hook{position:relative;font-family:var(--serif);font-style:italic;font-size:1.13rem;line-height:1.5;color:var(--ink-2)}
+.card[lang="bn"] .hook{font-style:normal;line-height:1.75;font-size:1.08rem}
+.card .meta{position:relative;display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;padding-top:4px;color:var(--muted);font-size:.9rem;font-weight:500}
+.card .go{width:44px;height:44px;border-radius:50%;background:var(--teal);color:var(--on-deep);display:grid;place-items:center;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.card:hover .go{transform:translateX(5px)}
+.card .go svg{width:16px;height:16px}
+.soon{margin-top:28px}
+.soon .k{font-size:.85rem;font-weight:600;color:var(--muted);margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{display:inline-flex;align-items:center;gap:10px;padding:7px 17px 7px 7px;border-radius:999px;border:1px dashed var(--sand-line);color:var(--muted);font-weight:500;font-size:.98rem;background:color-mix(in srgb,var(--on-deep) 55%,transparent)}
+.chip .ic{width:34px;height:34px;flex:none}
+
+/* about */
+.head h2{font-family:var(--serif);font-weight:600;font-size:clamp(1.5rem,4.6vw,2rem);margin-bottom:16px}
+.about + .about{margin-top:16px}
+.about{display:flex;align-items:center;gap:20px;background:linear-gradient(135deg,var(--surface) 0%,var(--mint) 100%);border:1px solid var(--mint-line);border-radius:30px;padding:28px}
+.about .av{width:72px;height:72px;flex:none}
+.about .k{font-size:.82rem;font-weight:600;color:var(--teal-2)}
+.about .who{font-family:var(--serif);font-size:1.7rem;font-weight:600;line-height:1.3}
+.about .cred{color:var(--muted);font-size:.98rem}
+
+/* chapter page */
+.progress{position:fixed;left:0;top:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(var(--p,0));background:linear-gradient(90deg,var(--red),var(--gold));z-index:30;pointer-events:none}
+.read{max-width:760px;margin:0 auto;padding:14px 20px 0}
+.back{display:inline-flex;align-items:center;gap:8px;color:var(--muted);font-size:.95rem;font-weight:500;min-height:44px}
+.back svg{width:14px;height:14px}
+.chead{position:relative;overflow:hidden;margin-top:4px;color:var(--on-deep);border-radius:34px;padding:30px 28px;background:var(--deep);min-height:190px;display:flex;flex-direction:column;justify-content:flex-end;gap:10px}
+.chead .big{position:absolute;right:-34px;top:-34px;width:190px;height:190px;animation:float 10s ease-in-out infinite;filter:drop-shadow(0 20px 30px color-mix(in srgb,var(--shade) 25%,transparent))}
+.chead .kick{position:relative;font-size:.86rem;font-weight:600;color:var(--on-deep)}
+.chead h1{position:relative;font-family:var(--serif);font-weight:600;font-size:clamp(2.1rem,8.4vw,3.3rem);line-height:1.12;letter-spacing:-.01em;max-width:11em}
+:lang(bn) .chead h1{line-height:1.35;letter-spacing:0;font-weight:700}
+.by{display:flex;align-items:center;gap:12px;margin-top:18px;color:var(--muted);font-size:.93rem;line-height:1.45}
+.by .av{width:42px;height:42px;flex:none}
+.by b{display:block;color:var(--ink);font-weight:600;font-size:1rem}
+
+/* moving illustrations inside a chapter (tools/figures.mjs) */
+.fig{margin:30px 0 4px;background:linear-gradient(180deg,var(--surface) 0%,var(--surface-2) 100%);border:1px solid var(--line);border-radius:26px;padding:16px 14px 16px;box-shadow:0 26px 44px -40px color-mix(in srgb,var(--ink) 50%,transparent)}
+.fig .figsvg{display:block;width:100%;height:auto;max-width:560px;margin:0 auto;font-family:var(--sans)}
+.fig figcaption{margin:12px 4px 0;font-size:.98rem;line-height:1.6;color:var(--ink-2)}
+:lang(bn) .fig figcaption{line-height:1.8}
+
+/* figures the reader can touch ([figure: heart-pace], signs-check, habit-or-sign, iron-gap) */
+.try .try-h{font-family:var(--serif);font-weight:600;font-size:1.3rem;color:var(--teal);margin:4px 4px 2px}
+:lang(bn) .try .try-h{font-weight:700}
+.try .try-sub{margin:0 4px 6px;font-size:.95rem;color:var(--muted)}
+.try button{font:inherit;-webkit-tap-highlight-color:transparent;cursor:pointer}
+.hp-ctl{max-width:460px;margin:4px auto 0;padding:0 4px}
+.try .lbl{display:block;font-size:.86rem;font-weight:600;color:var(--teal-2);margin-bottom:2px}
+.hp input[type=range]{display:block;width:100%;height:40px;margin:0;accent-color:var(--red);cursor:pointer}
+.hp-ends{display:flex;justify-content:space-between;font-size:.84rem;color:var(--muted);margin-top:-4px}
+.hp-say{margin:10px 0 0;min-height:3.3em;font-size:1.03rem;line-height:1.55;font-weight:500;color:var(--ink);transition:color .4s}
+:lang(bn) .hp-say{line-height:1.75}
+.hp.hp-alarm .hp-say{color:var(--alarm)}
+.chk-g{margin-top:14px}
+.chk-g .k{font-size:.84rem;font-weight:600;color:var(--teal-2);margin:0 4px 8px}
+.chk-g.red .k{color:var(--alarm)}
+.chk-l{display:flex;flex-wrap:wrap;gap:8px}
+.chk-i{display:inline-flex;align-items:center;gap:9px;min-height:44px;padding:8px 15px 8px 11px;border-radius:999px;border:1.5px solid var(--mint-line);background:var(--surface);color:var(--ink);font-size:.97rem;line-height:1.35;text-align:left;transition:background .2s,border-color .2s}
+.chk-i::before{content:"";flex:none;width:18px;height:18px;border-radius:50%;border:2px solid var(--mint-line);background:var(--surface) center/12px no-repeat;transition:background-color .2s,border-color .2s}
+.chk-i[aria-pressed=true]{background:var(--mint);border-color:var(--teal-2)}
+.chk-i[aria-pressed=true]::before{border-color:var(--teal-2);background-color:var(--teal-2);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2.5 6.2l2.3 2.3L9.5 3.6' fill='none' stroke='%23fff' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+.chk-i.red{border-color:var(--rose-line)}
+.chk-i.red[aria-pressed=true]{background:var(--rose);border-color:var(--red)}
+.chk-i.red[aria-pressed=true]::before{border-color:var(--red);background-color:var(--red)}
+.chk-out{margin-top:18px;padding:16px 16px 14px;border-radius:20px;background:var(--paper);border:1px solid var(--line)}
+.chk-msg{margin:0;font-size:1rem;line-height:1.6;color:var(--ink)}
+:lang(bn) .chk-msg{line-height:1.8}
+.chk-warn{margin:0 0 10px;padding:11px 14px;border-radius:14px;background:var(--rose);color:var(--alarm);font-weight:600;line-height:1.5}
+.chk-share{margin-top:12px;display:inline-flex;align-items:center;min-height:46px;padding:10px 20px;border:0;border-radius:999px;background:var(--teal);color:var(--on-deep);font-weight:600;font-size:.97rem}
+.chk-warn[hidden],.chk-share[hidden]{display:none}
+.flips{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.flip{display:grid;border:0;padding:0;background:none;text-align:left;perspective:900px;color:inherit}
+.flip .fc{grid-area:1/1;display:flex;flex-direction:column;gap:8px;min-height:168px;padding:14px 13px;border-radius:20px;backface-visibility:hidden;-webkit-backface-visibility:hidden;transition:transform .65s cubic-bezier(.2,.7,.2,1)}
+.flip .front{background:var(--surface);border:1.5px solid var(--line);box-shadow:0 14px 24px -22px color-mix(in srgb,var(--ink) 60%,transparent)}
+.flip .front svg{width:38px;height:38px}
+.flip .q{font-family:var(--serif);font-size:1.02rem;line-height:1.35;color:var(--ink);font-weight:600}
+:lang(bn) .flip .q{line-height:1.6}
+.flip .tag{margin-top:auto;align-self:flex-start;padding:3px 11px;border-radius:999px;background:var(--amber-soft);color:var(--amber-ink);font-size:.84rem;font-weight:600}
+.flip .back{background:var(--deep);color:var(--on-deep);transform:rotateY(180deg);font-size:.94rem;line-height:1.5}
+:lang(bn) .flip .back{line-height:1.7}
+.flip .back .k{font-size:.8rem;font-weight:700;color:var(--on-deep)}
+.flip[aria-pressed=true] .front{transform:rotateY(-180deg)}
+.flip[aria-pressed=true] .back{transform:rotateY(0)}
+.seg{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:8px}
+.seg button{min-height:44px;padding:8px 18px;border-radius:999px;border:1.5px solid var(--mint-line);background:var(--surface);color:var(--teal);font-weight:600;font-size:.95rem}
+.seg button[aria-pressed=true]{background:var(--teal);border-color:var(--teal);color:var(--on-deep)}
+.gap .ig-full,.gap[data-mode=food] .ig-short{opacity:0}
+.gap[data-mode=food] .ig-full{opacity:1}
+@media (prefers-reduced-motion:reduce){.flip .fc{transition:none}}
+.bc-say{margin:6px 4px 0;min-height:3.2em;font-size:1.02rem;line-height:1.55;font-weight:500;color:var(--ink)}
+:lang(bn) .bc-say{line-height:1.75}
+.baby[data-kid=maj] .bc-say{color:var(--alarm)}
+.bc-ctl{display:flex;flex-wrap:wrap;gap:10px;margin:12px 4px 0}
+.bc-go{min-height:48px;padding:10px 26px;border:0;border-radius:999px;background:var(--red);color:var(--on-deep);font-weight:700;font-size:1.02rem;box-shadow:0 12px 22px -14px color-mix(in srgb,var(--red) 90%,transparent)}
+.bc-go:active{transform:scale(.97)}
+.bc-again{min-height:48px;padding:10px 18px;border:1.5px solid var(--mint-line);border-radius:999px;background:var(--surface);color:var(--teal);font-weight:600;font-size:.95rem}
+.bc-sofar{margin:16px 4px 0;padding:12px 14px;border-radius:18px;background:var(--paper);border:1px solid var(--line)}
+.bc-sofar .k{display:block;font-size:.82rem;font-weight:600;color:var(--teal-2);margin-bottom:6px}
+.bc-dots{display:flex;flex-wrap:wrap;gap:5px;min-height:16px;margin-bottom:8px}
+.bc-dots i,.bc-leg i{display:inline-block;width:14px;height:14px;border-radius:50%;flex:none}
+.bc-ok i,.bc-dots .ok{background:var(--teal-2)}
+.bc-car i,.bc-dots .car{background:linear-gradient(90deg,var(--teal-2) 50%,var(--red) 50%)}
+.bc-maj i,.bc-dots .maj{background:var(--red)}
+.bc-dots i{animation:bcpop .35s ease-out}
+@keyframes bcpop{from{transform:scale(0)}to{transform:scale(1)}}
+.bc-legs{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.9rem;color:var(--ink-2)}
+.bc-leg{display:inline-flex;align-items:center;gap:6px}
+.bc-note{margin:10px 4px 0;font-size:.95rem;line-height:1.55;color:var(--ink-2)}
+:lang(bn) .bc-note{line-height:1.75}
+.baby[data-mode=both] .bc-no,.baby[data-mode=one] .bc-nb{display:none}
+@media (prefers-reduced-motion:reduce){.bc-dots i{animation:none}}
+.tr-rep{display:block;width:100%;max-width:340px;margin:10px auto 0;height:auto}
+.tr-tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}
+.tr-b{display:flex;flex-direction:column;align-items:center;gap:6px;padding:10px 6px 12px;border-radius:18px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);font-size:.86rem;font-weight:600;line-height:1.3;text-align:center;transition:background .25s,border-color .25s,transform .25s}
+:lang(bn) .tr-b{line-height:1.5}
+.tr-b svg{width:46px;height:46px}
+.tr-b[aria-pressed=true]{background:var(--mint);border-color:var(--teal-2);transform:translateY(-2px)}
+.tr-out{margin-top:12px;padding:14px 16px;border-radius:20px;background:var(--paper);border:1px solid var(--line);min-height:120px}
+.tr-pick{margin:0;color:var(--muted);font-size:.95rem}
+.tr-out.has .tr-pick{display:none}
+.tr-p[hidden]{display:none}
+.tr-p{animation:trin .45s ease-out}
+@keyframes trin{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.tr-p dl{margin:0}
+.tr-p dt{font-size:.8rem;font-weight:700;color:var(--teal-2);margin-top:10px}
+.tr-p dt:first-child{margin-top:0}
+.tr-p dd{margin:2px 0 0;font-size:1rem;line-height:1.55;color:var(--ink)}
+:lang(bn) .tr-p dd{line-height:1.75}
+.tr-badge{display:inline-block;margin-top:2px;padding:4px 12px;border-radius:12px;font-weight:600;font-size:.95rem;line-height:1.45}
+.tr-part{background:var(--amber-soft);color:var(--amber-ink)}.tr-bad{background:var(--rose);color:var(--alarm)}.tr-none{background:var(--grey-soft);color:var(--grey-ink)}
+@media (prefers-reduced-motion:reduce){.tr-p{animation:none}.tr-b{transition:none}}
+.tm-dots{display:flex;gap:6px;margin:10px 4px 12px}
+.tm-dots i{width:22px;height:6px;border-radius:3px;background:var(--line);transition:background .3s}
+.tm-dots i.ok{background:var(--teal-2)}.tm-dots i.no{background:var(--amber)}.tm-dots i.now{background:var(--mint-line)}
+.tm-card{padding:18px 16px 16px;border-radius:22px;background:var(--surface);border:1.5px solid var(--line);box-shadow:0 16px 28px -24px color-mix(in srgb,var(--ink) 60%,transparent);animation:tmin .45s cubic-bezier(.2,.7,.2,1)}
+@keyframes tmin{from{opacity:0;transform:translateX(24px)}to{opacity:1;transform:none}}
+.tm-card[hidden],.tm-fb[hidden],.tm-end[hidden]{display:none}
+.tm-n{margin:0 0 6px;font-size:.8rem;font-weight:700;color:var(--muted)}
+.tm-q{margin:0;font-family:var(--serif);font-size:1.22rem;line-height:1.4;font-weight:600;color:var(--ink);min-height:3em}
+:lang(bn) .tm-q{line-height:1.6;font-weight:700}
+.tm-ch{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
+.tm-ch button{min-height:52px;padding:8px 10px;border-radius:16px;font-weight:700;font-size:.97rem;line-height:1.3;border:1.5px solid var(--mint-line);background:var(--mint);color:var(--teal);transition:background-color .25s,color .25s,transform .2s}
+.tm-ch .tm-b{background:var(--rose);border-color:var(--rose-line);color:var(--red-ink)}
+.tm-ch button{text-wrap:balance}
+@media (max-width:440px){.tm-ch{grid-template-columns:1fr}}
+.tm-ch button:active{transform:scale(.97)}
+.tm-ch button[disabled]:not(.picked){cursor:not-allowed;background:var(--sand-2);border-color:var(--line);color:var(--muted)}
+.tm-ch button.picked{cursor:default;box-shadow:0 0 0 3px color-mix(in srgb,var(--teal) 18%,transparent)}
+.tm-fb{margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);animation:trin .4s ease-out}
+.tm-v{margin:0;font-weight:700;font-size:1rem}
+.tm-v.ok{color:var(--teal-2)}.tm-v.no{color:var(--amber-ink)}
+.tm-why{margin:4px 0 0;font-size:1rem;line-height:1.55;color:var(--ink-2)}
+:lang(bn) .tm-why{line-height:1.75}
+.tm-next,.tm-again{margin-top:12px;min-height:46px;padding:10px 24px;border:0;border-radius:999px;background:var(--teal);color:var(--on-deep);font-weight:700;font-size:.97rem}
+.tm-end{padding:20px 18px;border-radius:22px;background:var(--deep);color:var(--on-deep);animation:tmin .45s ease-out}
+.tm-score{margin:0;font-family:var(--serif);font-size:1.35rem;font-weight:600;line-height:1.4}
+.tm-endnote{margin:8px 0 0;font-size:1rem;line-height:1.6;color:var(--teal-text)}
+.tm-end .tm-again{background:var(--surface);color:var(--teal)}
+@media (prefers-reduced-motion:reduce){.tm-card,.tm-end,.tm-fb{animation:none}}
+.kd .tm-card{margin-top:10px}
+.kd .tm-score{font-family:var(--sans);font-size:1.05rem;font-weight:500;line-height:1.6}
+:lang(bn) .kd .tm-score{line-height:1.8}
+
+/* short videos inside a chapter ([video: name]) */
+.vid{margin:30px auto 6px;max-width:300px;text-align:center}
+.vid .vbox{position:relative;border-radius:22px;overflow:hidden;background:var(--video-bg);box-shadow:0 30px 50px -34px color-mix(in srgb,var(--ink) 70%,transparent);-webkit-touch-callout:none;user-select:none}
+.vid video{display:block;width:100%;height:auto;aspect-ratio:9/16;cursor:pointer}
+.vid button{position:absolute;border:0;padding:0;display:grid;place-items:center;cursor:pointer;color:var(--on-deep);-webkit-tap-highlight-color:transparent}
+.vid .vplay{left:50%;top:50%;width:72px;height:72px;margin:-36px 0 0 -36px;border-radius:50%;background:color-mix(in srgb,var(--red) 92%,transparent);box-shadow:0 10px 26px color-mix(in srgb,var(--shade) 40%,transparent);transition:opacity .3s,transform .3s}
+.vid .vplay svg{width:34px;height:34px}
+.vid .vplay .i-replay{display:none}
+.vid.ended .vplay .i-play{display:none}.vid.ended .vplay .i-replay{display:block}
+.js .vid.playing .vplay{opacity:0;transform:scale(.8);pointer-events:none}
+.vid .vsnd{right:12px;bottom:16px;width:46px;height:46px;border-radius:50%;background:color-mix(in srgb,var(--on-deep) 92%,transparent);color:var(--teal);box-shadow:0 6px 16px color-mix(in srgb,var(--shade) 35%,transparent)}
+.vid .vsnd svg{width:24px;height:24px}
+.vid .vsnd .i-sound{display:none}
+.vid.sound .vsnd .i-muted{display:none}.vid.sound .vsnd .i-sound{display:block}
+.vid .vbar{position:absolute;left:0;right:0;bottom:0;height:4px;background:color-mix(in srgb,var(--on-deep) 18%,transparent)}
+.vid .vbar i{display:block;height:100%;width:0;background:var(--red)}
+.vid figcaption{margin-top:12px;font-family:var(--sans);font-size:.98rem;line-height:1.6;color:var(--ink-2)}
+:lang(bn) .vid figcaption{line-height:1.8}
+
+/* chapters and their parts */
+.parts{margin-top:22px;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:14px 18px 6px}
+.parts .k{font-size:.84rem;font-weight:600;color:var(--teal-2);padding-bottom:4px}
+.parts ol{list-style:none;margin:0;padding:0}
+.parts li{border-top:1px solid var(--line)}
+.parts li:first-child{border-top:0}
+.parts .row{display:flex;align-items:center;gap:12px;min-height:48px;padding:6px 0;font-size:1.02rem;line-height:1.4}
+.parts a.row:hover span:last-child{color:var(--teal-2);text-decoration:underline;text-underline-offset:3px}
+.parts .n{width:28px;height:28px;flex:none;border-radius:50%;display:grid;place-items:center;background:var(--mint);color:var(--teal);font-size:.85rem;font-weight:700}
+.parts li[aria-current] .row{font-weight:600}
+.parts li[aria-current] .n{background:var(--teal);color:var(--on-deep)}
+.parts .later .row{color:var(--muted)}
+.parts .later .n{background:var(--sand-2);color:var(--muted)}
+.parts .later em{margin-left:auto;flex:none;font-style:normal;font-size:.76rem;font-weight:600;border:1px dashed var(--sand-line);border-radius:999px;padding:1px 10px}
+.nextpart{margin-top:40px;display:flex;align-items:center;gap:16px;color:var(--on-deep);background:var(--deep);border-radius:26px;padding:20px 20px 20px 24px;transition:transform .3s}
+.nextpart:hover{transform:translateY(-3px)}
+.nextpart .k{display:block;font-size:.84rem;font-weight:600;color:var(--on-deep)}
+.nextpart .t{display:block;font-family:var(--serif);font-size:1.32rem;font-weight:600;line-height:1.3;margin-top:2px}
+:lang(bn) .nextpart .t{line-height:1.5;font-weight:700}
+.nextpart .go{margin-left:auto;width:46px;height:46px;flex:none;border-radius:50%;background:var(--surface);color:var(--teal);display:grid;place-items:center}
+.nextpart .go svg{width:16px;height:16px}
+
+/* the opening story of a chapter */
+.story{margin-top:30px;font-family:var(--serif);font-size:1.22rem;line-height:1.7}
+:lang(bn) .story{font-size:1.15rem;line-height:1.95}
+.story p{margin-top:18px}
+.story p:first-child{margin-top:0}
+.story .story-note{margin-top:16px;font-family:var(--sans);font-size:.86rem;line-height:1.5;color:var(--muted)}
+:lang(bn) .story .story-note{font-size:.88rem;line-height:1.7}
+.story .hookline{font-size:clamp(1.8rem,6.8vw,2.6rem);line-height:1.2;font-weight:600;color:var(--teal);letter-spacing:-.01em;text-wrap:balance}
+:lang(bn) .story .hookline{line-height:1.45;letter-spacing:0;font-weight:700}
+.story .lede{font-size:1.34rem}
+:lang(bn) .story .lede{font-size:1.24rem}
+.sep{display:flex;justify-content:center;gap:11px;margin:40px 0 4px}
+.sep i{width:11px;height:11px;border-radius:50%;background:radial-gradient(circle,var(--red-soft) 0 34%,var(--red) 36%)}
+
+/* the rest of a chapter */
+.prose h2{font-family:var(--serif);font-weight:600;font-size:clamp(1.5rem,5.4vw,1.95rem);line-height:1.22;color:var(--teal);margin-top:44px}
+:lang(bn) .prose h2{line-height:1.45;font-weight:700}
+.prose h2::before{content:"";display:block;width:38px;height:4px;border-radius:2px;background:var(--red);margin-bottom:14px}
+.prose h3{font-size:1.18rem;font-weight:600;line-height:1.4;margin-top:28px}
+.prose p,.prose li,.story p{max-width:62ch}
+.prose p{margin-top:16px;font-size:1.1rem;line-height:1.85;overflow-wrap:anywhere}
+.prose ul{list-style:none;margin:16px 0 0;padding:0}
+.prose li{position:relative;padding-left:1.7em;margin-top:10px;font-size:1.1rem;line-height:1.7}
+.prose li::before{content:"";position:absolute;left:.2em;top:.55em;width:.62em;height:.62em;border-radius:50%;background:radial-gradient(circle,var(--red-soft) 0 34%,var(--red) 36%)}
+.box{margin-top:40px;border-radius:26px;padding:24px 22px 22px}
+.prose .box h2{margin-top:0;display:flex;align-items:flex-start;gap:12px;font-size:clamp(1.35rem,4.8vw,1.7rem)}
+.prose .box h2::before{display:none}
+.box h2 svg{width:30px;height:30px;flex:none;margin-top:.12em}
+.warn{background:var(--rose);border:1px solid var(--rose-line)}
+.prose .warn h2{color:var(--red-ink)}
+.ask{background:var(--mint);border:1px solid var(--mint-line)}
+.ask li{padding-left:2em}
+.ask li::before{left:0;top:.32em;width:1.05em;height:1.05em;border-radius:6px;background:var(--surface);border:2px solid var(--teal-2)}
+.key{background:var(--key);border:1px solid var(--key-line)}
+/* "In short" answer above the story ("> " lines) and the sources list at the end ("# Sources") */
+.insum{margin-top:20px;padding:15px 18px 16px;border-radius:20px;background:var(--mint);border:1px solid var(--mint-line)}
+.insum .k{display:block;font-size:.8rem;font-weight:700;color:var(--teal-2)}
+.insum p{margin:4px 0 0;font-size:1.06rem;line-height:1.6;font-weight:500;color:var(--ink)}
+:lang(bn) .insum p{line-height:1.8}
+.srcs{margin-top:44px;padding-top:6px;border-top:1px solid var(--line)}
+.prose .srcs h2{font-size:1.15rem;margin-top:18px;color:var(--muted)}
+.prose .srcs h2::before{display:none}
+.prose .srcs li{font-size:.97rem;line-height:1.55;margin-top:9px}
+.srcs a{color:var(--teal-2);text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
+.srcs .host{color:var(--muted);font-size:.84rem;white-space:nowrap}
+.faq details{border-top:1px solid var(--line)}
+.faq h2 + details{margin-top:20px}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;position:relative;padding:18px 50px 18px 0;font-weight:600;font-size:1.12rem;line-height:1.5}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:2px;top:50%;width:34px;height:34px;border-radius:50%;background:var(--mint);color:var(--teal);display:grid;place-items:center;font-size:1.35rem;font-weight:500;line-height:1;transform:translateY(-50%);transition:transform .3s,background .3s}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg);background:var(--teal);color:var(--on-deep)}
+.faq details > div{padding:0 0 20px}
+.faq details > div > :first-child{margin-top:0}
+.endcard{margin-top:46px;display:flex;align-items:center;gap:16px;background:linear-gradient(135deg,var(--surface) 0%,var(--mint) 100%);border:1px solid var(--mint-line);border-radius:26px;padding:20px 22px}
+.endcard .av{width:58px;height:58px;flex:none}
+.endcard .k{font-size:.82rem;font-weight:600;color:var(--teal-2)}
+.endcard .who{font-family:var(--serif);font-size:1.35rem;font-weight:600;line-height:1.3}
+.au{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;text-decoration-color:var(--teal-2)}
+.au:hover,.au:focus-visible{color:var(--teal-2)}
+.endcard .cred{color:var(--muted);font-size:.93rem}
+.allbtn{display:inline-flex;align-items:center;gap:10px;margin-top:18px;background:var(--teal);color:var(--on-deep);font-weight:600;padding:0 24px 0 20px;height:52px;border-radius:999px;transition:transform .3s}
+.allbtn:hover{transform:translateX(-3px)}
+.allbtn svg{width:15px;height:15px}
+/* a chapter that has no words yet */
+.slot{margin-top:24px;background:var(--surface);border:1px solid var(--line);border-radius:26px;padding:28px 24px}
+.slot .note{display:inline-block;font-size:.85rem;font-weight:600;color:var(--muted);border:1px dashed var(--muted);border-radius:999px;padding:6px 14px;margin-bottom:22px}
+.sk{height:14px;border-radius:7px;background:var(--line);margin-top:14px}
+.sk.h{height:24px;width:55%;margin-top:36px}
+
+/* things fade up as they come into view (only when the script is running) */
+.js .rv{opacity:0;transform:translateY(18px)}
+.js .rv.in{opacity:1;transform:none;transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+
+footer{margin-top:64px;padding:28px 0 46px;color:var(--muted);font-size:.88rem;border-top:1px solid var(--line)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 30px}
+footer p{max-width:36em}
+
+@media (max-width:760px){
+  .right a.nav{display:none}
+  .hero{border-radius:0 0 36px 36px}
+  .hero-in{flex-direction:column-reverse;align-items:stretch;gap:4px;padding-block:4px 28px;min-height:0}
+  .hero .txt{flex:none;gap:12px}
+  .hero .tag{display:none}
+  .hero h1{font-size:clamp(2.2rem,9vw,3rem)}
+  html[data-lang="bn"] .hero h1{font-size:clamp(2.1rem,8.6vw,2.9rem)}
+  .cells{flex:none;max-width:none;width:calc(100% + 40px);margin:0 -20px;height:200px;overflow:hidden;-webkit-mask-image:linear-gradient(#000 82%,transparent);mask-image:linear-gradient(#000 82%,transparent)}
+  .grid{grid-template-columns:1fr;gap:14px}
+  .right{gap:10px}
+  .card{gap:10px}
+  .card .ic{width:46px;height:46px}
+  .card h3{font-size:1.32rem}
+  .card .deco{width:150px;height:150px;right:-48px;top:-48px}
+  .card .hook{font-size:1.04rem;line-height:1.5}
+  .card[lang="bn"] .hook{font-size:1rem;line-height:1.7}
+  .group+.group{margin-top:36px}
+  .card{padding:18px 18px 14px;border-radius:24px}
+  .about{padding:22px}
+  .chead{padding:26px 22px;border-radius:28px;min-height:176px}
+  .chead .big{width:150px;height:150px;right:-30px;top:-30px}
+  .chead h1{max-width:none;padding-right:96px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .cells .f,.chead .big{animation:none}
+  .card,.cta,.allbtn,.card .go,.nextpart{transition:none}
+  .js .rv{opacity:1;transform:none}
+}
+</style>
+<!-- site:start (written by tools/build.mjs) -->
+<meta property="og:title" content="Kolkata Hematology Institute">
+<meta property="og:description" content="Blood diseases explained in plain words, in Bengali and English, by a clinical hematologist.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kolkatahematologyinstitute.com/en/">
+<link rel="alternate" hreflang="bn" href="https://kolkatahematologyinstitute.com/">
+<link rel="alternate" hreflang="en" href="https://kolkatahematologyinstitute.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://kolkatahematologyinstitute.com/">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"MedicalOrganization","@id":"https://kolkatahematologyinstitute.com/#org","name":"Kolkata Hematology Institute","alternateName":"কলকাতা হেমাটোলজি ইনস্টিটিউট","url":"https://kolkatahematologyinstitute.com/","logo":"https://kolkatahematologyinstitute.com/assets/logo-mark.png","description":"Blood diseases explained in plain words, in Bengali and English, by a clinical hematologist.","medicalSpecialty":"Hematologic","areaServed":{"@type":"City","name":"Kolkata"},"founder":{"@id":"https://kolkatahematologyinstitute.com/#author"},"member":[{"@id":"https://kolkatahematologyinstitute.com/#author"},{"@id":"https://kolkatahematologyinstitute.com/#author-mridha"}]},{"@type":"Person","@id":"https://kolkatahematologyinstitute.com/#author","name":"Dr. Sudip Roy","alternateName":"ডাঃ সুদীপ রায়","honorificSuffix":"MBBS, MD, DM (Clinical Hematology)","jobTitle":"Clinical Hematologist","url":"https://kolkatahematologyinstitute.com/#about","workLocation":{"@type":"City","name":"Kolkata"},"worksFor":{"@id":"https://kolkatahematologyinstitute.com/#org"},"hasOccupation":{"@type":"Occupation","name":"Clinical Hematologist","occupationLocation":{"@type":"City","name":"Kolkata"}},"knowsAbout":["Hematology","Anaemia","Iron deficiency","Vitamin B12 deficiency","Thalassemia","HbE","Blood transfusion","Iron chelation"],"sameAs":["https://share.google/OLTZr4ebHj8UmXFnB"]},{"@type":"Person","@id":"https://kolkatahematologyinstitute.com/#author-mridha","name":"Dr. Srejita Mridha","jobTitle":"Pathologist","honorificSuffix":"MBBS, MD (Pathology)","alternateName":"ডাঃ শ্রীজিতা মৃধা","url":"https://kolkatahematologyinstitute.com/#about","workLocation":{"@type":"City","name":"Kolkata"},"hasOccupation":{"@type":"Occupation","name":"Pathologist","occupationLocation":{"@type":"City","name":"Kolkata"}}},{"@type":"WebSite","@id":"https://kolkatahematologyinstitute.com/#website","url":"https://kolkatahematologyinstitute.com/","name":"Kolkata Hematology Institute","alternateName":"কলকাতা হেমাটোলজি ইনস্টিটিউট","description":"Blood diseases explained in plain words, in Bengali and English, by a clinical hematologist.","inLanguage":["bn","en"],"publisher":{"@id":"https://kolkatahematologyinstitute.com/#org"}}]}</script>
+<!-- site:end -->
+</head>
+<body>
+
+<header><div class="wrap bar">
+  <a class="brand" href="#top">
+    <svg viewBox="0 0 200 240" aria-hidden="true"><path d="M100 10 C100 10 30 104 30 160 A70 70 0 0 0 170 160 C170 104 100 10 100 10 Z" fill="#FFF1F3" stroke="#0F2A4A" stroke-width="10" stroke-linejoin="round"/><circle cx="78" cy="172" r="28" fill="#B0182F"/><circle cx="78" cy="172" r="11" fill="#E46A7B"/><circle cx="124" cy="128" r="24" fill="#B9A3D9"/><circle cx="120" cy="128" r="10" fill="#5B3F8C"/><circle cx="134" cy="184" r="9" fill="#8B6BB5"/></svg>
+    <span class="nm" lang="bn">কলকাতা হেমাটোলজি ইনস্টিটিউট</span><span class="nm" lang="en">Kolkata Hematology Institute</span></a>
+  <div class="right">
+    <a class="nav" href="#about"><span lang="bn">পরিচিতি</span><span lang="en">About</span></a>
+    <a class="sbtn" href="#find"><span class="sr" lang="bn">খুঁজুন</span><span class="sr" lang="en">Search</span><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M13 13l4.5 4.5"/></svg></a>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" id="btn-bn" aria-pressed="false">বাং</button>
+      <button type="button" id="btn-en" aria-pressed="true">EN</button>
+    </div>
+  </div>
+</div></header>
+
+<div id="home">
+  <div class="hero" id="top">
+    <div class="wrap hero-in">
+      <div class="txt">
+        <span class="tag"><span lang="bn">রোগীদের জন্য</span><span lang="en">For patients and families</span></span>
+        <h1>
+          <span lang="bn">রক্তের রোগ,<br><em class="hl">সহজ ভাষায়।</em></span>
+          <span lang="en">Blood diseases,<br><em class="hl">in plain words.</em></span>
+        </h1>
+        <p class="lead">
+          <span lang="bn">নিজের রোগকে জানুন।<br>বিবেচনা করে সিদ্ধান্ত নিন।</span>
+          <span lang="en">Know your disease.<br>Take responsible decisions.</span>
+        </p>
+        <a class="cta" href="#library"><span lang="bn">পড়া শুরু করুন</span><span lang="en">Start reading</span>
+          <span class="dot"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3v10M4 9l4 4 4-4"/></svg></span></a>
+      </div>
+      <!-- The drawing: big red cells that float, and a stream of small ones that drift along two vessels. -->
+      <svg class="cells" viewBox="0 66 520 280" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs>
+          <symbol id="rc" viewBox="-50 -50 100 100"><circle r="50" fill="#D8323F"/><circle r="22" fill="#F08A93"/></symbol>
+          <symbol id="rc2" viewBox="-50 -50 100 100"><circle r="50" fill="#EC6A74"/><circle r="22" fill="#F9C2C7"/></symbol>
+          <path id="flowA" d="M-70,340 C60,260 150,410 290,320 S470,160 600,210"/>
+          <path id="flowB" d="M-70,120 C70,50 180,160 300,100 S480,-10 600,50"/>
+        </defs>
+        <use href="#flowA" fill="none" stroke="rgba(255,255,255,.07)" stroke-width="78" stroke-linecap="round"/>
+        <use href="#flowB" fill="none" stroke="rgba(255,255,255,.05)" stroke-width="56" stroke-linecap="round"/>
+        <g>
+          <use href="#rc2" x="-13" y="-13" width="26" height="26"><animateMotion dur="20s" begin="-2s" repeatCount="indefinite"><mpath href="#flowA"/></animateMotion></use>
+          <use href="#rc" x="-17" y="-17" width="34" height="34"><animateMotion dur="20s" begin="-7s" repeatCount="indefinite"><mpath href="#flowA"/></animateMotion></use>
+          <use href="#rc2" x="-10" y="-10" width="20" height="20"><animateMotion dur="20s" begin="-11s" repeatCount="indefinite"><mpath href="#flowA"/></animateMotion></use>
+          <use href="#rc" x="-14" y="-14" width="28" height="28"><animateMotion dur="20s" begin="-16s" repeatCount="indefinite"><mpath href="#flowA"/></animateMotion></use>
+          <use href="#rc" x="-11" y="-11" width="22" height="22"><animateMotion dur="26s" begin="-4s" repeatCount="indefinite"><mpath href="#flowB"/></animateMotion></use>
+          <use href="#rc2" x="-15" y="-15" width="30" height="30"><animateMotion dur="26s" begin="-12s" repeatCount="indefinite"><mpath href="#flowB"/></animateMotion></use>
+          <use href="#rc" x="-9" y="-9" width="18" height="18"><animateMotion dur="26s" begin="-20s" repeatCount="indefinite"><mpath href="#flowB"/></animateMotion></use>
+        </g>
+        <!-- Drawings: a red cell, a white cell, a bag of blood (transfusion), a drip bag (chemotherapy) and a bone with red marrow inside. -->
+        <g class="f"><circle cx="250" cy="205" r="82" fill="#D8323F"/><circle cx="250" cy="205" r="37" fill="#F08A93"/></g>
+        <g class="f f2"><rect x="416" y="88" width="40" height="10" rx="5" fill="#F9C2C7"/><circle cx="436" cy="93" r="2.5" fill="#0B3F3D"/><rect x="398" y="94" width="76" height="98" rx="18" fill="#D8323F"/><rect x="411" y="110" width="50" height="32" rx="8" fill="#FFF1F3"/><path d="M436 115c-2 3-8 9-8 14a8 8 0 0 0 16 0c0-5-6-11-8-14z" fill="#D8323F"/><path d="M436 192v20q0 10-12 12" fill="none" stroke="#F9C2C7" stroke-width="5" stroke-linecap="round"/></g>
+        <g class="f f3"><rect x="66" y="88" width="20" height="8" rx="4" fill="#EFE9FC"/><rect x="42" y="92" width="68" height="88" rx="17" fill="#EFE9FC"/><path d="M42 134h68v29a17 17 0 0 1-17 17H59a17 17 0 0 1-17-17z" fill="#8D74D8"/><path d="M55 106h16M55 117h11" stroke="#8D74D8" stroke-width="3" stroke-linecap="round"/><rect x="69" y="184" width="14" height="22" rx="5" fill="#C9B6F2"/><circle cx="76" cy="197" r="3.5" fill="#5B3F8C"/><path d="M76 206v22" stroke="#C9B6F2" stroke-width="4" stroke-linecap="round"/></g>
+        <g class="f f4"><g fill="#FFF3D6"><circle cx="366" cy="278" r="15"/><circle cx="366" cy="302" r="15"/><circle cx="474" cy="278" r="15"/><circle cx="474" cy="302" r="15"/><rect x="364" y="275" width="112" height="30" rx="12"/></g><rect x="384" y="282" width="72" height="16" rx="8" fill="#D8323F"/><circle cx="397" cy="290" r="3" fill="#F9C2C7"/><circle cx="414" cy="289" r="2.6" fill="#C9B6F2"/><circle cx="429" cy="291" r="3" fill="#F9C2C7"/><circle cx="444" cy="289" r="2.6" fill="#F9C2C7"/></g>
+        <g class="f f2"><circle cx="126" cy="296" r="27" fill="#EFE9FC"/><circle cx="119" cy="290" r="11" fill="#8D74D8"/><circle cx="133" cy="302" r="10" fill="#8D74D8"/></g>
+        <g class="f f3"><circle cx="318" cy="306" r="18" fill="#EC6A74"/><circle cx="318" cy="306" r="8" fill="#F9C2C7"/></g>
+        <circle cx="352" cy="152" r="8" fill="#C9B6F2"/><circle cx="196" cy="320" r="7" fill="#C9B6F2"/><circle cx="492" cy="218" r="7" fill="#C9B6F2"/><circle cx="158" cy="120" r="6" fill="#C9B6F2"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="wrap sec" id="library">
+    <div class="search" id="find" role="search">
+      <label for="q"><span lang="bn">কী খুঁজছেন?</span><span lang="en">What are you looking for?</span></label>
+      <div class="sbox"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M13 13l4.5 4.5"/></svg><input id="q" type="search" autocomplete="off" enterkeyhint="search" data-ph-bn="যেমন: প্লেটলেট, থ্যালাসেমিয়া, জন্ডিস" data-ph-en="For example: platelets, thalassemia, jaundice" placeholder="যেমন: প্লেটলেট, থ্যালাসেমিয়া, জন্ডিস"></div>
+      <ul class="sres" id="sres" aria-live="polite"></ul>
+      <p class="snone" id="snone" hidden><span lang="bn">এই কথাটা কোনো পাতায় পাওয়া গেল না। অন্য কথা দিয়ে খুঁজুন, বা নিচের বিষয়গুলো দেখুন।</span><span lang="en">No page matches that. Try another word, or look through the topics below.</span></p>
+    </div>
+    <div class="groups" id="grid">
+<!-- grid:start (written by tools/build.mjs from chapters/list.json, do not edit by hand) -->
+<nav class="jump" aria-label="Topics"><a href="#g-red"><span lang="bn">লোহিতকণিকা ও রক্তাল্পতা</span><span lang="en">Red cells and anaemia</span></a><a href="#g-bleed"><span lang="bn">রক্তপাত ও রক্ত জমাট বাঁধা</span><span lang="en">Bleeding and clotting</span></a><a href="#g-white"><span lang="bn">শ্বেতকণিকা ও রক্তের ক্যান্সার</span><span lang="en">White cells and blood cancers</span></a><a href="#g-tests"><span lang="bn">রক্তের পরীক্ষা</span><span lang="en">Blood tests</span></a><a href="#g-treat"><span lang="bn">চিকিৎসা</span><span lang="en">Treatments</span></a><a href="#g-other"><span lang="bn">গর্ভাবস্থা</span><span lang="en">Pregnancy</span></a></nav>
+<section class="group" id="g-red"><h2 class="gh"><span lang="bn">লোহিতকণিকা ও রক্তাল্পতা</span><span lang="en">Red cells and anaemia</span></h2>
+<div class="grid">
+<a class="card" lang="bn" href="/anaemia/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#FDECEE"/><circle cx="26" cy="26" r="15" fill="#F2A7AE"/><circle cx="26" cy="26" r="9" fill="#FDECEE"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#FDECEE"/><circle cx="26" cy="26" r="15" fill="#F2A7AE"/><circle cx="26" cy="26" r="9" fill="#FDECEE"/></svg><h3>অ্যানিমিয়া: রক্তাল্পতা</h3></span><span class="hook">সিঁড়ি ভাঙলেই হাঁফ ধরে? সারাদিন ক্লান্ত লাগে? রিপোর্টে হিমোগ্লোবিন কম?</span><span class="meta"><span>৮টি পর্ব</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
+<a class="card" lang="en" href="/en/anaemia/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#FDECEE"/><circle cx="26" cy="26" r="15" fill="#F2A7AE"/><circle cx="26" cy="26" r="9" fill="#FDECEE"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#FDECEE"/><circle cx="26" cy="26" r="15" fill="#F2A7AE"/><circle cx="26" cy="26" r="9" fill="#FDECEE"/></svg><h3>Anaemia: low hemoglobin</h3></span><span class="hook">Breathless on the stairs? Tired all day? Hemoglobin low on your report?</span><span class="meta"><span>8 parts</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
+<a class="card" lang="bn" href="/thalassemia/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#FFF3D6"/><circle cx="26" cy="26" r="15" fill="#D93A4A"/><circle cx="26" cy="26" r="10" fill="#FFF3D6"/><circle cx="26" cy="26" r="4.5" fill="#D93A4A"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#FFF3D6"/><circle cx="26" cy="26" r="15" fill="#D93A4A"/><circle cx="26" cy="26" r="10" fill="#FFF3D6"/><circle cx="26" cy="26" r="4.5" fill="#D93A4A"/></svg><h3>থ্যালাসেমিয়া</h3></span><span class="hook">রিপোর্টে লেখা ‘থ্যালাসেমিয়া ট্রেট’? বিয়ের আগে কী জানবেন? বাচ্চা ফ্যাকাশে, খেতে চায় না?</span><span class="meta"><span>৭টি পর্ব</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
+<a class="card" lang="en" href="/en/thalassemia/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#FFF3D6"/><circle cx="26" cy="26" r="15" fill="#D93A4A"/><circle cx="26" cy="26" r="10" fill="#FFF3D6"/><circle cx="26" cy="26" r="4.5" fill="#D93A4A"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#FFF3D6"/><circle cx="26" cy="26" r="15" fill="#D93A4A"/><circle cx="26" cy="26" r="10" fill="#FFF3D6"/><circle cx="26" cy="26" r="4.5" fill="#D93A4A"/></svg><h3>Thalassemia</h3></span><span class="hook">Your report says ‘thalassemia trait’? Getting married soon? A baby who is pale and will not feed?</span><span class="meta"><span>7 parts</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
+<a class="card" lang="bn" href="/sickle-cell/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#E3EEF9"/><ellipse cx="18" cy="20" rx="7" ry="6" fill="#D7263D" opacity=".85"/><path d="M20 36C25 26 37 26 42 36C37 31 25 31 20 36z" fill="#8b1e2d"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#E3EEF9"/><ellipse cx="18" cy="20" rx="7" ry="6" fill="#D7263D" opacity=".85"/><path d="M20 36C25 26 37 26 42 36C37 31 25 31 20 36z" fill="#8b1e2d"/></svg><h3>সিকল সেল ডিজিজ</h3></span><span class="hook">বাচ্চার হাত-পা ফুলে ব্যথা? বারবার হাড়ে ব্যথা? পরিবারে কেউ বাহক?</span><span class="meta"><span>৯ মিনিটে পড়ুন</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
+<a class="card" lang="en" href="/en/sickle-cell/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#E3EEF9"/><ellipse cx="18" cy="20" rx="7" ry="6" fill="#D7263D" opacity=".85"/><path d="M20 36C25 26 37 26 42 36C37 31 25 31 20 36z" fill="#8b1e2d"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#E3EEF9"/><ellipse cx="18" cy="20" rx="7" ry="6" fill="#D7263D" opacity=".85"/><path d="M20 36C25 26 37 26 42 36C37 31 25 31 20 36z" fill="#8b1e2d"/></svg><h3>Sickle cell disease</h3></span><span class="hook">A child with swollen, painful hands and feet? Repeated bone pain? A carrier in the family?</span><span class="meta"><span>10 min read</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
+</div></section>
+<section class="group" id="g-bleed"><h2 class="gh"><span lang="bn">রক্তপাত ও রক্ত জমাট বাঁধা</span><span lang="en">Bleeding and clotting</span></h2>
+<div class="grid">
+<a class="card" lang="bn" href="/low-platelets/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#EDE7FB"/><circle cx="18" cy="20" r="4" fill="#7A5AD1"/><circle cx="33" cy="17" r="3" fill="#7A5AD1"/><circle cx="30" cy="33" r="4.5" fill="#7A5AD1"/><circle cx="17" cy="35" r="2.5" fill="#7A5AD1"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#EDE7FB"/><circle cx="18" cy="20" r="4" fill="#7A5AD1"/><circle cx="33" cy="17" r="3" fill="#7A5AD1"/><circle cx="30" cy="33" r="4.5" fill="#7A5AD1"/><circle cx="17" cy="35" r="2.5" fill="#7A5AD1"/></svg><h3>প্লেটলেট কম ও আইটিপি</h3></span><span class="hook">রিপোর্টে প্লেটলেটের পাশে L? পায়ে লাল ফুটকি? ভাবছেন ব্লাড ক্যান্সার কিনা?</span><span class="meta"><span>৩টি পর্ব</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
+<a class="card" lang="en" href="/en/low-platelets/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#EDE7FB"/><circle cx="18" cy="20" r="4" fill="#7A5AD1"/><circle cx="33" cy="17" r="3" fill="#7A5AD1"/><circle cx="30" cy="33" r="4.5" fill="#7A5AD1"/><circle cx="17" cy="35" r="2.5" fill="#7A5AD1"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#EDE7FB"/><circle cx="18" cy="20" r="4" fill="#7A5AD1"/><circle cx="33" cy="17" r="3" fill="#7A5AD1"/><circle cx="30" cy="33" r="4.5" fill="#7A5AD1"/><circle cx="17" cy="35" r="2.5" fill="#7A5AD1"/></svg><h3>Low platelets and ITP</h3></span><span class="hook">An L next to platelets on your report? Red dots on a child's legs? Wondering if it is blood cancer?</span><span class="meta"><span>3 parts</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
+<a class="card" lang="bn" href="/haemophilia/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#FDE2E4"/><path d="M26 10c-7 10-11 16-11 21a11 11 0 0 0 22 0c0-5-4-11-11-21z" fill="#D7263D"/><path d="M20 32a6 6 0 0 0 6 6" stroke="#FFFFFF" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#FDE2E4"/><path d="M26 10c-7 10-11 16-11 21a11 11 0 0 0 22 0c0-5-4-11-11-21z" fill="#D7263D"/><path d="M20 32a6 6 0 0 0 6 6" stroke="#FFFFFF" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg><h3>হিমোফিলিয়া</h3></span><span class="hook">ছোট্ট ছেলের অল্পেই কালশিটে, হাঁটু ফুলে যায়? কেটে গেলে রক্ত থামে না?</span><span class="meta"><span>৬ মিনিটে পড়ুন</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
+<a class="card" lang="en" href="/en/haemophilia/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#FDE2E4"/><path d="M26 10c-7 10-11 16-11 21a11 11 0 0 0 22 0c0-5-4-11-11-21z" fill="#D7263D"/><path d="M20 32a6 6 0 0 0 6 6" stroke="#FFFFFF" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#FDE2E4"/><path d="M26 10c-7 10-11 16-11 21a11 11 0 0 0 22 0c0-5-4-11-11-21z" fill="#D7263D"/><path d="M20 32a6 6 0 0 0 6 6" stroke="#FFFFFF" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg><h3>Haemophilia</h3></span><span class="hook">A little boy who bruises easily, or a knee that swells? A cut that keeps bleeding?</span><span class="meta"><span>7 min read</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
+<a class="card" lang="bn" href="/clots/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#E3EEF9"/><path d="M21 8h10v22c0 5 3 8 8 10v4H21c-3 0-4-2-4-5V16c0-5 1-8 4-8z" fill="#FFFFFF" stroke="#2D6E8E" stroke-width="2"/><circle cx="25" cy="28" r="4.5" fill="#D7263D"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#E3EEF9"/><path d="M21 8h10v22c0 5 3 8 8 10v4H21c-3 0-4-2-4-5V16c0-5 1-8 4-8z" fill="#FFFFFF" stroke="#2D6E8E" stroke-width="2"/><circle cx="25" cy="28" r="4.5" fill="#D7263D"/></svg><h3>রক্ত জমাট বাঁধা ও রক্ত পাতলা করার ওষুধ</h3></span><span class="hook">এক পা ফুলে ব্যথা? হঠাৎ হাঁফ ধরা? রক্ত পাতলা করার ওষুধ খান?</span><span class="meta"><span>৬ মিনিটে পড়ুন</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
+<a class="card" lang="en" href="/en/clots/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#E3EEF9"/><path d="M21 8h10v22c0 5 3 8 8 10v4H21c-3 0-4-2-4-5V16c0-5 1-8 4-8z" fill="#FFFFFF" stroke="#2D6E8E" stroke-width="2"/><circle cx="25" cy="28" r="4.5" fill="#D7263D"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#E3EEF9"/><path d="M21 8h10v22c0 5 3 8 8 10v4H21c-3 0-4-2-4-5V16c0-5 1-8 4-8z" fill="#FFFFFF" stroke="#2D6E8E" stroke-width="2"/><circle cx="25" cy="28" r="4.5" fill="#D7263D"/></svg><h3>Blood clots and blood thinners</h3></span><span class="hook">One leg swollen and painful? Sudden breathlessness? Taking a blood thinner?</span><span class="meta"><span>7 min read</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
+<a class="card" lang="bn" href="/heavy-periods/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#FDECEE"/><path d="M26 12c0 0-10 12-10 19a10 10 0 0 0 20 0c0-7-10-19-10-19z" fill="#D8323F"/><circle cx="22" cy="31" r="3" fill="#F9C2C7"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#FDECEE"/><path d="M26 12c0 0-10 12-10 19a10 10 0 0 0 20 0c0-7-10-19-10-19z" fill="#D8323F"/><circle cx="22" cy="31" r="3" fill="#F9C2C7"/></svg><h3>মাসিকে অতিরিক্ত রক্তপাত (মেনোরেজিয়া)</h3></span><span class="hook">মেয়ের মাসিক দশ দিন চলে? স্কুলে মাথা ঘোরে? ভাবছেন বিয়ের পর ঠিক হবে?</span><span class="meta"><span>৫ মিনিটে পড়ুন</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
+<a class="card" lang="en" href="/en/heavy-periods/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#FDECEE"/><path d="M26 12c0 0-10 12-10 19a10 10 0 0 0 20 0c0-7-10-19-10-19z" fill="#D8323F"/><circle cx="22" cy="31" r="3" fill="#F9C2C7"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#FDECEE"/><path d="M26 12c0 0-10 12-10 19a10 10 0 0 0 20 0c0-7-10-19-10-19z" fill="#D8323F"/><circle cx="22" cy="31" r="3" fill="#F9C2C7"/></svg><h3>Heavy periods (menorrhagia)</h3></span><span class="hook">Her period lasts ten days? Dizzy at school? Told it will settle after marriage?</span><span class="meta"><span>6 min read</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
+<a class="card" lang="bn" href="/child-bruises/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#EFE9FC"/><ellipse cx="26" cy="27" rx="13" ry="9" fill="#6B4C9A" opacity=".6"/><ellipse cx="24" cy="26" rx="7" ry="5" fill="#8D74D8"/><circle cx="38" cy="16" r="2" fill="#D8323F"/><circle cx="14" cy="38" r="1.8" fill="#D8323F"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#EFE9FC"/><ellipse cx="26" cy="27" rx="13" ry="9" fill="#6B4C9A" opacity=".6"/><ellipse cx="24" cy="26" rx="7" ry="5" fill="#8D74D8"/><circle cx="38" cy="16" r="2" fill="#D8323F"/><circle cx="14" cy="38" r="1.8" fill="#D8323F"/></svg><h3>বাচ্চার গায়ে কালশিটে</h3></span><span class="hook">বাচ্চার গায়ে হঠাৎ কালচে ছোপ? পায়ে লাল ফুটকি? মনে পড়ছে না কোথায় লেগেছে?</span><span class="meta"><span>৫ মিনিটে পড়ুন</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
+<a class="card" lang="en" href="/en/child-bruises/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#EFE9FC"/><ellipse cx="26" cy="27" rx="13" ry="9" fill="#6B4C9A" opacity=".6"/><ellipse cx="24" cy="26" rx="7" ry="5" fill="#8D74D8"/><circle cx="38" cy="16" r="2" fill="#D8323F"/><circle cx="14" cy="38" r="1.8" fill="#D8323F"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#EFE9FC"/><ellipse cx="26" cy="27" rx="13" ry="9" fill="#6B4C9A" opacity=".6"/><ellipse cx="24" cy="26" rx="7" ry="5" fill="#8D74D8"/><circle cx="38" cy="16" r="2" fill="#D8323F"/><circle cx="14" cy="38" r="1.8" fill="#D8323F"/></svg><h3>Bruises in children</h3></span><span class="hook">Bluish black patches on your child? Red dots on the legs? Cannot remember a fall?</span><span class="meta"><span>6 min read</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
+</div></section>
+<section class="group" id="g-white"><h2 class="gh"><span lang="bn">শ্বেতকণিকা ও রক্তের ক্যান্সার</span><span lang="en">White cells and blood cancers</span></h2>
+<div class="grid">
+<a class="card" lang="bn" href="/blood-cancers/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#E4EEFF"/><circle cx="19" cy="19" r="9" fill="#B7CBF7"/><circle cx="18" cy="18" r="4.5" fill="#3B4FB8"/><circle cx="35" cy="24" r="7" fill="#B7CBF7"/><circle cx="36" cy="25" r="3.5" fill="#3B4FB8"/><circle cx="24" cy="37" r="8" fill="#B7CBF7"/><circle cx="23" cy="38" r="4" fill="#3B4FB8"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#E4EEFF"/><circle cx="19" cy="19" r="9" fill="#B7CBF7"/><circle cx="18" cy="18" r="4.5" fill="#3B4FB8"/><circle cx="35" cy="24" r="7" fill="#B7CBF7"/><circle cx="36" cy="25" r="3.5" fill="#3B4FB8"/><circle cx="24" cy="37" r="8" fill="#B7CBF7"/><circle cx="23" cy="38" r="4" fill="#3B4FB8"/></svg><h3>রক্তের ক্যান্সার</h3></span><span class="hook">ক্লান্ত, ফ্যাকাশে, অকারণে কালশিটে? গলায় ডেলা যা সারছে না? ভাবছেন রক্তের ক্যান্সার কিনা?</span><span class="meta"><span>৯টি পর্ব</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
+<a class="card" lang="en" href="/en/blood-cancers/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#E4EEFF"/><circle cx="19" cy="19" r="9" fill="#B7CBF7"/><circle cx="18" cy="18" r="4.5" fill="#3B4FB8"/><circle cx="35" cy="24" r="7" fill="#B7CBF7"/><circle cx="36" cy="25" r="3.5" fill="#3B4FB8"/><circle cx="24" cy="37" r="8" fill="#B7CBF7"/><circle cx="23" cy="38" r="4" fill="#3B4FB8"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#E4EEFF"/><circle cx="19" cy="19" r="9" fill="#B7CBF7"/><circle cx="18" cy="18" r="4.5" fill="#3B4FB8"/><circle cx="35" cy="24" r="7" fill="#B7CBF7"/><circle cx="36" cy="25" r="3.5" fill="#3B4FB8"/><circle cx="24" cy="37" r="8" fill="#B7CBF7"/><circle cx="23" cy="38" r="4" fill="#3B4FB8"/></svg><h3>Blood cancers</h3></span><span class="hook">Tired, pale, bruising for no reason? A lump that will not go? Wondering if it is blood cancer?</span><span class="meta"><span>9 parts</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
+<a class="card" lang="bn" href="/low-white-cells/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#E3EEF9"/><circle cx="20" cy="24" r="7" fill="#FFFFFF" stroke="#2D6E8E" stroke-width="2"/><circle cx="20" cy="24" r="2.5" fill="#2D6E8E"/><circle cx="34" cy="30" r="3.5" fill="#E0A23B"/><path d="M29 30h10M34 25v10" stroke="#E0A23B" stroke-width="1.5"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#E3EEF9"/><circle cx="20" cy="24" r="7" fill="#FFFFFF" stroke="#2D6E8E" stroke-width="2"/><circle cx="20" cy="24" r="2.5" fill="#2D6E8E"/><circle cx="34" cy="30" r="3.5" fill="#E0A23B"/><path d="M29 30h10M34 25v10" stroke="#E0A23B" stroke-width="1.5"/></svg><h3>শ্বেতকণিকা কম</h3></span><span class="hook">রিপোর্টে শ্বেতকণিকা কম? ওষুধ চলার মধ্যে গলা ব্যথা আর জ্বর?</span><span class="meta"><span>৪ মিনিটে পড়ুন</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
+<a class="card" lang="en" href="/en/low-white-cells/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#E3EEF9"/><circle cx="20" cy="24" r="7" fill="#FFFFFF" stroke="#2D6E8E" stroke-width="2"/><circle cx="20" cy="24" r="2.5" fill="#2D6E8E"/><circle cx="34" cy="30" r="3.5" fill="#E0A23B"/><path d="M29 30h10M34 25v10" stroke="#E0A23B" stroke-width="1.5"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#E3EEF9"/><circle cx="20" cy="24" r="7" fill="#FFFFFF" stroke="#2D6E8E" stroke-width="2"/><circle cx="20" cy="24" r="2.5" fill="#2D6E8E"/><circle cx="34" cy="30" r="3.5" fill="#E0A23B"/><path d="M29 30h10M34 25v10" stroke="#E0A23B" stroke-width="1.5"/></svg><h3>Low white cell count</h3></span><span class="hook">A low white cell count on the report? Sore throat and fever while on a medicine?</span><span class="meta"><span>5 min read</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
+<a class="card" lang="bn" href="/spleen/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#E3EEF9"/><path d="M30 11c8 1 10 13 6 26s-13 8-14 2 2-14 2-20 0-9 6-8z" fill="#D7263D" opacity=".85"/><path d="M12 18q12 6 24 0M12 24q12 6 24 0" stroke="#2D6E8E" stroke-width="1.5" fill="none"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#E3EEF9"/><path d="M30 11c8 1 10 13 6 26s-13 8-14 2 2-14 2-20 0-9 6-8z" fill="#D7263D" opacity=".85"/><path d="M12 18q12 6 24 0M12 24q12 6 24 0" stroke="#2D6E8E" stroke-width="1.5" fill="none"/></svg><h3>পিলে বড় হওয়া (স্প্লিনোমেগালি)</h3></span><span class="hook">ডাক্তার বলেছেন পিলে বড়? অল্প খেলেই পেট ভরে যায়?</span><span class="meta"><span>৪ মিনিটে পড়ুন</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
+<a class="card" lang="en" href="/en/spleen/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#E3EEF9"/><path d="M30 11c8 1 10 13 6 26s-13 8-14 2 2-14 2-20 0-9 6-8z" fill="#D7263D" opacity=".85"/><path d="M12 18q12 6 24 0M12 24q12 6 24 0" stroke="#2D6E8E" stroke-width="1.5" fill="none"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#E3EEF9"/><path d="M30 11c8 1 10 13 6 26s-13 8-14 2 2-14 2-20 0-9 6-8z" fill="#D7263D" opacity=".85"/><path d="M12 18q12 6 24 0M12 24q12 6 24 0" stroke="#2D6E8E" stroke-width="1.5" fill="none"/></svg><h3>Enlarged spleen (splenomegaly)</h3></span><span class="hook">Told your spleen is enlarged? Feeling full after a few mouthfuls?</span><span class="meta"><span>5 min read</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
+</div></section>
+<section class="group" id="g-tests"><h2 class="gh"><span lang="bn">রক্তের পরীক্ষা</span><span lang="en">Blood tests</span></h2>
+<div class="grid">
+<a class="card" lang="bn" href="/cbc/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#E6F3EE"/><rect x="15" y="12" width="22" height="28" rx="3" fill="#fff" stroke="#126158" stroke-width="2"/><path d="M19 19h14M19 25h14M19 31h9" stroke="#126158" stroke-width="2" stroke-linecap="round"/><circle cx="35" cy="34" r="5" fill="#D8323F"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#E6F3EE"/><rect x="15" y="12" width="22" height="28" rx="3" fill="#fff" stroke="#126158" stroke-width="2"/><path d="M19 19h14M19 25h14M19 31h9" stroke="#126158" stroke-width="2" stroke-linecap="round"/><circle cx="35" cy="34" r="5" fill="#D8323F"/></svg><h3>রক্তের রিপোর্ট (সিবিসি)</h3></span><span class="hook">রিপোর্টে H আর L দেখে চিন্তা? এমসিভি মানে কী? রিপোর্টের কোন লাইনগুলো জরুরি?</span><span class="meta"><span>৩ মিনিটে পড়ুন</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
+<a class="card" lang="en" href="/en/cbc/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#E6F3EE"/><rect x="15" y="12" width="22" height="28" rx="3" fill="#fff" stroke="#126158" stroke-width="2"/><path d="M19 19h14M19 25h14M19 31h9" stroke="#126158" stroke-width="2" stroke-linecap="round"/><circle cx="35" cy="34" r="5" fill="#D8323F"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#E6F3EE"/><rect x="15" y="12" width="22" height="28" rx="3" fill="#fff" stroke="#126158" stroke-width="2"/><path d="M19 19h14M19 25h14M19 31h9" stroke="#126158" stroke-width="2" stroke-linecap="round"/><circle cx="35" cy="34" r="5" fill="#D8323F"/></svg><h3>Your blood report (CBC)</h3></span><span class="hook">An H or L on your blood report? What does MCV mean? Which lines on the report matter?</span><span class="meta"><span>4 min read</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
+<a class="card" lang="bn" href="/marrow/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#FFE9D2"/><circle cx="18" cy="19" r="8" fill="#FFFFFF"/><circle cx="35" cy="30" r="9" fill="#FFFFFF"/><circle cx="18" cy="37" r="5" fill="#FFFFFF"/><circle cx="31" cy="14" r="2.5" fill="#7A5AD1"/><circle cx="38" cy="17" r="2" fill="#7A5AD1"/><circle cx="26" cy="27" r="2.5" fill="#7A5AD1"/><circle cx="27" cy="41" r="2" fill="#7A5AD1"/><circle cx="10" cy="28" r="2" fill="#7A5AD1"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#FFE9D2"/><circle cx="18" cy="19" r="8" fill="#FFFFFF"/><circle cx="35" cy="30" r="9" fill="#FFFFFF"/><circle cx="18" cy="37" r="5" fill="#FFFFFF"/><circle cx="31" cy="14" r="2.5" fill="#7A5AD1"/><circle cx="38" cy="17" r="2" fill="#7A5AD1"/><circle cx="26" cy="27" r="2.5" fill="#7A5AD1"/><circle cx="27" cy="41" r="2" fill="#7A5AD1"/><circle cx="10" cy="28" r="2" fill="#7A5AD1"/></svg><h3>বোন ম্যারো পরীক্ষা</h3></span><span class="hook">ম্যারো পরীক্ষা করাতে বলেছে? ব্যথা লাগবে? শিরদাঁড়া থেকে নেয়? দুর্বল হয়ে যাব?</span><span class="meta"><span>৪ মিনিটে পড়ুন</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
+<a class="card" lang="en" href="/en/marrow/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#FFE9D2"/><circle cx="18" cy="19" r="8" fill="#FFFFFF"/><circle cx="35" cy="30" r="9" fill="#FFFFFF"/><circle cx="18" cy="37" r="5" fill="#FFFFFF"/><circle cx="31" cy="14" r="2.5" fill="#7A5AD1"/><circle cx="38" cy="17" r="2" fill="#7A5AD1"/><circle cx="26" cy="27" r="2.5" fill="#7A5AD1"/><circle cx="27" cy="41" r="2" fill="#7A5AD1"/><circle cx="10" cy="28" r="2" fill="#7A5AD1"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#FFE9D2"/><circle cx="18" cy="19" r="8" fill="#FFFFFF"/><circle cx="35" cy="30" r="9" fill="#FFFFFF"/><circle cx="18" cy="37" r="5" fill="#FFFFFF"/><circle cx="31" cy="14" r="2.5" fill="#7A5AD1"/><circle cx="38" cy="17" r="2" fill="#7A5AD1"/><circle cx="26" cy="27" r="2.5" fill="#7A5AD1"/><circle cx="27" cy="41" r="2" fill="#7A5AD1"/><circle cx="10" cy="28" r="2" fill="#7A5AD1"/></svg><h3>The bone marrow test</h3></span><span class="hook">Asked to have a bone marrow test? Will it hurt? Is it from the spine? Will it leave me weak?</span><span class="meta"><span>5 min read</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
+<a class="card" lang="bn" href="/coagulation/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#E3EEF9"/><rect x="21" y="9" width="10" height="30" rx="5" fill="#FFFFFF" stroke="#2D6E8E" stroke-width="2"/><rect x="21" y="24" width="10" height="15" rx="5" fill="#5BA4CF"/><path d="M19 15h14" stroke="#2D6E8E" stroke-width="2"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#E3EEF9"/><rect x="21" y="9" width="10" height="30" rx="5" fill="#FFFFFF" stroke="#2D6E8E" stroke-width="2"/><rect x="21" y="24" width="10" height="15" rx="5" fill="#5BA4CF"/><path d="M19 15h14" stroke="#2D6E8E" stroke-width="2"/></svg><h3>রক্ত জমাট বাঁধার পরীক্ষা</h3></span><span class="hook">অপারেশনের আগে পিটি-আইএনআর? ওয়ারফারিনে আইএনআর? রিপোর্টে কিছু দাগানো?</span><span class="meta"><span>৫ মিনিটে পড়ুন</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
+<a class="card" lang="en" href="/en/coagulation/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#E3EEF9"/><rect x="21" y="9" width="10" height="30" rx="5" fill="#FFFFFF" stroke="#2D6E8E" stroke-width="2"/><rect x="21" y="24" width="10" height="15" rx="5" fill="#5BA4CF"/><path d="M19 15h14" stroke="#2D6E8E" stroke-width="2"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#E3EEF9"/><rect x="21" y="9" width="10" height="30" rx="5" fill="#FFFFFF" stroke="#2D6E8E" stroke-width="2"/><rect x="21" y="24" width="10" height="15" rx="5" fill="#5BA4CF"/><path d="M19 15h14" stroke="#2D6E8E" stroke-width="2"/></svg><h3>Blood clotting tests</h3></span><span class="hook">PT and INR before an operation? INR on warfarin? Something marked on the report?</span><span class="meta"><span>6 min read</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
+</div></section>
+<section class="group" id="g-treat"><h2 class="gh"><span lang="bn">চিকিৎসা</span><span lang="en">Treatments</span></h2>
+<div class="grid">
+<a class="card" lang="bn" href="/transplant/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#E3EEF9"/><rect x="20" y="9" width="12" height="16" rx="3" fill="#FFFFFF" stroke="#2D6E8E" stroke-width="2"/><path d="M26 25v8" stroke="#2D6E8E" stroke-width="2.5"/><circle cx="20" cy="39" r="3.5" fill="#D7263D"/><circle cx="28" cy="37" r="3.5" fill="#D7263D"/><circle cx="33" cy="42" r="3" fill="#D7263D" opacity=".7"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#E3EEF9"/><rect x="20" y="9" width="12" height="16" rx="3" fill="#FFFFFF" stroke="#2D6E8E" stroke-width="2"/><path d="M26 25v8" stroke="#2D6E8E" stroke-width="2.5"/><circle cx="20" cy="39" r="3.5" fill="#D7263D"/><circle cx="28" cy="37" r="3.5" fill="#D7263D"/><circle cx="33" cy="42" r="3" fill="#D7263D" opacity=".7"/></svg><h3>বোন ম্যারো ট্রান্সপ্লান্ট</h3></span><span class="hook">ডাক্তার ট্রান্সপ্লান্টের কথা বলেছেন? ভাই-বোনের মিল দেখতে বলেছেন?</span><span class="meta"><span>৬ মিনিটে পড়ুন</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
+<a class="card" lang="en" href="/en/transplant/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#E3EEF9"/><rect x="20" y="9" width="12" height="16" rx="3" fill="#FFFFFF" stroke="#2D6E8E" stroke-width="2"/><path d="M26 25v8" stroke="#2D6E8E" stroke-width="2.5"/><circle cx="20" cy="39" r="3.5" fill="#D7263D"/><circle cx="28" cy="37" r="3.5" fill="#D7263D"/><circle cx="33" cy="42" r="3" fill="#D7263D" opacity=".7"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#E3EEF9"/><rect x="20" y="9" width="12" height="16" rx="3" fill="#FFFFFF" stroke="#2D6E8E" stroke-width="2"/><path d="M26 25v8" stroke="#2D6E8E" stroke-width="2.5"/><circle cx="20" cy="39" r="3.5" fill="#D7263D"/><circle cx="28" cy="37" r="3.5" fill="#D7263D"/><circle cx="33" cy="42" r="3" fill="#D7263D" opacity=".7"/></svg><h3>Bone marrow transplant</h3></span><span class="hook">Has the doctor mentioned a transplant? Asked to test a brother or sister for a match?</span><span class="meta"><span>7 min read</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
+<a class="card" lang="bn" href="/blood-transfusion/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#E3EEF9"/><rect x="18" y="9" width="16" height="22" rx="5" fill="#FFFFFF" stroke="#D7263D" stroke-width="2"/><rect x="21" y="17" width="10" height="11" rx="3" fill="#D7263D"/><path d="M26 31v6c0 4-3 6-8 7" stroke="#D7263D" stroke-width="2" fill="none"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#E3EEF9"/><rect x="18" y="9" width="16" height="22" rx="5" fill="#FFFFFF" stroke="#D7263D" stroke-width="2"/><rect x="21" y="17" width="10" height="11" rx="3" fill="#D7263D"/><path d="M26 31v6c0 4-3 6-8 7" stroke="#D7263D" stroke-width="2" fill="none"/></svg><h3>রক্ত নেওয়া</h3></span><span class="hook">ডাক্তার রক্ত দিতে বলেছেন? রক্ত থেকে রোগ হবে কিনা ভাবছেন?</span><span class="meta"><span>২টি পর্ব</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
+<a class="card" lang="en" href="/en/blood-transfusion/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#E3EEF9"/><rect x="18" y="9" width="16" height="22" rx="5" fill="#FFFFFF" stroke="#D7263D" stroke-width="2"/><rect x="21" y="17" width="10" height="11" rx="3" fill="#D7263D"/><path d="M26 31v6c0 4-3 6-8 7" stroke="#D7263D" stroke-width="2" fill="none"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#E3EEF9"/><rect x="18" y="9" width="16" height="22" rx="5" fill="#FFFFFF" stroke="#D7263D" stroke-width="2"/><rect x="21" y="17" width="10" height="11" rx="3" fill="#D7263D"/><path d="M26 31v6c0 4-3 6-8 7" stroke="#D7263D" stroke-width="2" fill="none"/></svg><h3>Getting a blood transfusion</h3></span><span class="hook">Told you need a transfusion? Wondering whether the blood is safe?</span><span class="meta"><span>2 parts</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
+<a class="card" lang="bn" href="/chemotherapy/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#EFE9FC"/><rect x="18" y="9" width="16" height="22" rx="5" fill="#FFFFFF" stroke="#8D74D8" stroke-width="2"/><rect x="18" y="19" width="16" height="12" rx="4" fill="#8D74D8"/><rect x="23" y="32" width="6" height="7" rx="2" fill="#C9B6F2"/><path d="M26 39v5" stroke="#8D74D8" stroke-width="2"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#EFE9FC"/><rect x="18" y="9" width="16" height="22" rx="5" fill="#FFFFFF" stroke="#8D74D8" stroke-width="2"/><rect x="18" y="19" width="16" height="12" rx="4" fill="#8D74D8"/><rect x="23" y="32" width="6" height="7" rx="2" fill="#C9B6F2"/><path d="M26 39v5" stroke="#8D74D8" stroke-width="2"/></svg><h3>কেমোথেরাপি</h3></span><span class="hook">ডাক্তার কেমোর কথা বলেছেন? চুল পড়বে কিনা ভাবছেন? কবিরাজি আগে করবেন কিনা?</span><span class="meta"><span>৩টি পর্ব</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
+<a class="card" lang="en" href="/en/chemotherapy/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#EFE9FC"/><rect x="18" y="9" width="16" height="22" rx="5" fill="#FFFFFF" stroke="#8D74D8" stroke-width="2"/><rect x="18" y="19" width="16" height="12" rx="4" fill="#8D74D8"/><rect x="23" y="32" width="6" height="7" rx="2" fill="#C9B6F2"/><path d="M26 39v5" stroke="#8D74D8" stroke-width="2"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#EFE9FC"/><rect x="18" y="9" width="16" height="22" rx="5" fill="#FFFFFF" stroke="#8D74D8" stroke-width="2"/><rect x="18" y="19" width="16" height="12" rx="4" fill="#8D74D8"/><rect x="23" y="32" width="6" height="7" rx="2" fill="#C9B6F2"/><path d="M26 39v5" stroke="#8D74D8" stroke-width="2"/></svg><h3>Chemotherapy</h3></span><span class="hook">Told you need chemo? Wondering about hair loss? Thinking of trying kabiraji first?</span><span class="meta"><span>3 parts</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
+</div></section>
+<section class="group" id="g-other"><h2 class="gh"><span lang="bn">গর্ভাবস্থা</span><span lang="en">Pregnancy</span></h2>
+<div class="grid">
+<a class="card" lang="bn" href="/pregnancy-blood/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#E3EEF9"/><circle cx="24" cy="13" r="5" fill="#FFFFFF" stroke="#2D6E8E" stroke-width="2"/><path d="M18 44V26c0-5 3-7 6-7s5 2 6 5c5 2 7 6 6 11-1 4-4 6-8 6v3" fill="#FFFFFF" stroke="#2D6E8E" stroke-width="2"/><path d="M37 12c-3 4-4 6-4 8a4 4 0 0 0 8 0c0-2-1-4-4-8z" fill="#D7263D"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#E3EEF9"/><circle cx="24" cy="13" r="5" fill="#FFFFFF" stroke="#2D6E8E" stroke-width="2"/><path d="M18 44V26c0-5 3-7 6-7s5 2 6 5c5 2 7 6 6 11-1 4-4 6-8 6v3" fill="#FFFFFF" stroke="#2D6E8E" stroke-width="2"/><path d="M37 12c-3 4-4 6-4 8a4 4 0 0 0 8 0c0-2-1-4-4-8z" fill="#D7263D"/></svg><h3>গর্ভাবস্থায় রক্তের সমস্যা</h3></span><span class="hook">গর্ভাবস্থায় খুব ক্লান্তি? রিপোর্টে প্লেটলেট কম? বাহক পরীক্ষা করাতে বলেছে?</span><span class="meta"><span>৬ মিনিটে পড়ুন</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
+<a class="card" lang="en" href="/en/pregnancy-blood/"><svg class="deco" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#E3EEF9"/><circle cx="24" cy="13" r="5" fill="#FFFFFF" stroke="#2D6E8E" stroke-width="2"/><path d="M18 44V26c0-5 3-7 6-7s5 2 6 5c5 2 7 6 6 11-1 4-4 6-8 6v3" fill="#FFFFFF" stroke="#2D6E8E" stroke-width="2"/><path d="M37 12c-3 4-4 6-4 8a4 4 0 0 0 8 0c0-2-1-4-4-8z" fill="#D7263D"/></svg><span class="top"><svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#E3EEF9"/><circle cx="24" cy="13" r="5" fill="#FFFFFF" stroke="#2D6E8E" stroke-width="2"/><path d="M18 44V26c0-5 3-7 6-7s5 2 6 5c5 2 7 6 6 11-1 4-4 6-8 6v3" fill="#FFFFFF" stroke="#2D6E8E" stroke-width="2"/><path d="M37 12c-3 4-4 6-4 8a4 4 0 0 0 8 0c0-2-1-4-4-8z" fill="#D7263D"/></svg><h3>Blood problems in pregnancy</h3></span><span class="hook">Very tired in pregnancy? Platelets low on the report? Asked to have a carrier test?</span><span class="meta"><span>7 min read</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span></a>
+</div></section>
+<!-- grid:end -->
+    </div>
+<!-- soon:start (written by tools/build.mjs, do not edit by hand) -->
+<!-- soon:end -->
+  </div>
+
+  <div class="wrap sec" id="about">
+    <div class="head"><h2><span lang="bn">পরিচিতি</span><span lang="en">About</span></h2></div>
+    <div class="about">
+      <svg class="av" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#CFE6DF"/><circle cx="26" cy="20" r="8" fill="#0B3F3D"/><path d="M10 44c2-10 9-14 16-14s14 4 16 14" fill="#0B3F3D"/></svg>
+      <div>
+        <div class="k"><span lang="bn">লেখক</span><span lang="en">Author</span></div>
+        <div class="who"><a class="au" href="https://share.google/OLTZr4ebHj8UmXFnB" target="_blank" rel="noopener"><span lang="bn">ডাঃ সুদীপ রায়</span><span lang="en">Dr. Sudip Roy</span></a></div>
+        <div class="cred"><span lang="bn">এমবিবিএস, এমডি, ডিএম (ক্লিনিক্যাল হেমাটোলজি)</span><span lang="en">MBBS, MD, DM (Clinical Hematology)</span></div>
+      </div>
+    </div>
+    <div class="about">
+      <svg class="av" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#CFE6DF"/><circle cx="26" cy="20" r="8" fill="#0B3F3D"/><path d="M10 44c2-10 9-14 16-14s14 4 16 14" fill="#0B3F3D"/></svg>
+      <div>
+        <div class="k"><span lang="bn">লেখক, ল্যাবের রিপোর্ট ও পরীক্ষা</span><span lang="en">Author, lab reports and tests</span></div>
+        <div class="who"><span lang="bn">ডাঃ শ্রীজিতা মৃধা</span><span lang="en">Dr. Srejita Mridha</span></div>
+        <div class="cred"><span lang="bn">এমবিবিএস, এমডি (প্যাথোলজি)</span><span lang="en">MBBS, MD (Pathology)</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer><div class="wrap">
+  <p><span lang="bn">© ২০২৬ কলকাতা হেমাটোলজি ইনস্টিটিউট</span><span lang="en">© 2026 Kolkata Hematology Institute</span></p>
+  <p><span lang="bn">এই সাইট শুধু জানার জন্য। এটি চিকিৎসকের পরামর্শের বিকল্প নয়। ছবিগুলি আঁকা, আসল স্লাইড নয়।</span><span lang="en">This site is for learning. It does not replace seeing a doctor. The pictures are drawings, not real slides.</span></p>
+</div></footer>
+
+<script>
+(function(){
+"use strict";
+/* Old links like /#anaemia now go to the chapter's own page, /anaemia/ (Bengali) or /en/anaemia/ (English). */
+var CHAPTER_IDS=/*ids:start*/["anaemia","thalassemia","low-platelets","cbc","blood-cancers","marrow","haemophilia","clots","sickle-cell","pregnancy-blood","transplant","blood-transfusion","coagulation","low-white-cells","spleen","chemotherapy","heavy-periods","child-bruises"]/*ids:end*/;
+var h=location.hash.slice(1);
+if(CHAPTER_IDS.indexOf(h)>-1){var pl='bn';try{pl=localStorage.getItem('khi-lang')||'bn';}catch(e){}
+  location.replace((pl==='en'?'/en/':'/')+h+'/');return;}
+
+var root=document.documentElement,en=document.getElementById('btn-en'),bn=document.getElementById('btn-bn');
+function setLang(l){root.setAttribute('data-lang',l);root.setAttribute('lang',l);
+  en.setAttribute('aria-pressed',l==='en');bn.setAttribute('aria-pressed',l==='bn');
+  try{localStorage.setItem('khi-lang',l);}catch(e){}
+  var qi=document.getElementById('q');if(qi){qi.placeholder=qi.getAttribute('data-ph-'+l);if(qi.value)find();}}
+/* EN opens the English home page (/en/), বাং the Bengali one (/), keeping the place on the page. */
+function go(l,path){setLang(l);if(location.pathname!==path)location.href=path+location.hash;}
+en.addEventListener('click',function(){go('en','/en/');});
+bn.addEventListener('click',function(){go('bn','/');});
+/* The English home page (/en/) always opens in English; the main page opens in the reader's last choice. */
+if(root.getAttribute('data-fixed'))setLang(root.getAttribute('data-fixed'));
+else{try{var s=localStorage.getItem('khi-lang');if(s==='bn'||s==='en')setLang(s);}catch(e){}}
+
+/* Search (Dr. Roy, 2026-11-26): the site's own list of pages, search.json, is fetched from this site the first
+   time the box is used, and searched here on the phone. Nothing typed is sent anywhere. */
+var q=document.getElementById('q'),res=document.getElementById('sres'),none=document.getElementById('snone'),IDX=null,loading=false,timer=0;
+function norm(x){return (x||'').normalize('NFC').toLowerCase().replace(/ae/g,'e').replace(/oe/g,'e')
+  .replace(/ী/g,'ি').replace(/ূ/g,'ু').replace(/ণ/g,'ন').replace(/[শষ]/g,'স').replace(/[^\p{L}\p{M}\p{N}]+/gu,' ');}
+function load(){if(IDX||loading)return;loading=true;
+  fetch('/search.json').then(function(r){return r.json();}).then(function(d){
+    IDX=d.map(function(e){var t=norm([e.t.bn,e.t.en,e.p&&e.p.bn,e.p&&e.p.en].join(' ')),c=norm([e.c.bn,e.c.en].join(' ')),s=norm([e.s.bn,e.s.en].join(' '));return {e:e,t:t,c:c,s:s};});
+    find();}).catch(function(){loading=false;});}
+function el(tag,cls,txt){var n=document.createElement(tag);if(cls)n.className=cls;if(txt)n.textContent=txt;return n;}
+function find(){
+  var raw=q.value.trim();res.textContent='';none.hidden=true;
+  if(!raw)return; if(!IDX){load();return;}
+  var terms=norm(raw).split(' ').filter(Boolean),l=root.getAttribute('data-lang')||'bn',hits=[];
+  IDX.forEach(function(x){var sc=0;
+    for(var i=0;i<terms.length;i++){var w=terms[i],k=(x.t.indexOf(w)>-1?6:0)+(x.c.indexOf(w)>-1?2:0)+(x.s.indexOf(w)>-1?1:0);if(!k)return;sc+=k;}
+    if(!x.e.p)sc+=1;hits.push({x:x,sc:sc});});
+  hits.sort(function(a,b){return b.sc-a.sc;});
+  hits.slice(0,8).forEach(function(h){var e=h.x.e,L=e.u[l]?l:(l==='bn'?'en':'bn'),li=el('li'),a=el('a');
+    a.href=e.u[L];a.setAttribute('lang',L);
+    if(e.p)a.appendChild(el('span','sp',e.p[L]));
+    a.appendChild(el('span','st',e.t[L]));a.appendChild(el('span','sc',e.c[L]));li.appendChild(a);res.appendChild(li);});
+  if(!hits.length)none.hidden=false;}
+function toFind(){if(location.hash==='#find'&&q){q.focus({preventScroll:true});load();}}
+window.addEventListener('hashchange',toFind);window.addEventListener('load',function(){setTimeout(toFind,60);});
+if(q){q.addEventListener('focus',load);q.addEventListener('input',function(){clearTimeout(timer);timer=setTimeout(find,120);});
+  q.addEventListener('keydown',function(ev){if(ev.key==='Enter'){var f=res.querySelector('a');if(f)location.href=f.href;}});}
+
+/* People who ask their phone for less motion get a still drawing. */
+var calm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var art=document.querySelector('.cells');
+if(calm&&art&&art.pauseAnimations)art.pauseAnimations();
+
+/* Cards fade up as they scroll into view. */
+if(!calm)root.classList.add('js');
+if(!calm&&'IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.card,.soon,.about').forEach(function(el,i){el.classList.add('rv');el.style.transitionDelay=(i%2*90)+'ms';io.observe(el);});
+}
+})();
+</script>
+</body>
+</html>
