@@ -7,7 +7,8 @@
   "desc_en": "Always tired, breathless on the stairs, low hemoglobin on your report? A Kolkata hematologist on what anaemia means and why the cause matters.",
   "card_bn": "সিঁড়ি ভাঙলেই হাঁফ ধরে? সারাদিন ক্লান্ত লাগে? রিপোর্টে হিমোগ্লোবিন কম?",
   "card_en": "Breathless on the stairs? Tired all day? Hemoglobin low on your report?",
-  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FDECEE\"/><circle cx=\"26\" cy=\"26\" r=\"15\" fill=\"#F2A7AE\"/><circle cx=\"26\" cy=\"26\" r=\"9\" fill=\"#FDECEE\"/>"
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FDECEE\"/><circle cx=\"26\" cy=\"26\" r=\"15\" fill=\"#F2A7AE\"/><circle cx=\"26\" cy=\"26\" r=\"9\" fill=\"#FDECEE\"/>",
+  "group": "red"
  },
  {
   "id": "anaemia-heart-nerves",
@@ -83,7 +84,8 @@
   "desc_en": "Thalassemia in plain words from a Kolkata hematologist: carrier or patient, how it runs in families, living with it, and when to see a doctor.",
   "card_bn": "রিপোর্টে লেখা ‘থ্যালাসেমিয়া ট্রেট’? বিয়ের আগে কী জানবেন? বাচ্চা ফ্যাকাশে, খেতে চায় না?",
   "card_en": "Your report says ‘thalassemia trait’? Getting married soon? A baby who is pale and will not feed?",
-  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FFF3D6\"/><circle cx=\"26\" cy=\"26\" r=\"15\" fill=\"#D93A4A\"/><circle cx=\"26\" cy=\"26\" r=\"10\" fill=\"#FFF3D6\"/><circle cx=\"26\" cy=\"26\" r=\"4.5\" fill=\"#D93A4A\"/>"
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FFF3D6\"/><circle cx=\"26\" cy=\"26\" r=\"15\" fill=\"#D93A4A\"/><circle cx=\"26\" cy=\"26\" r=\"10\" fill=\"#FFF3D6\"/><circle cx=\"26\" cy=\"26\" r=\"4.5\" fill=\"#D93A4A\"/>",
+  "group": "red"
  },
  {
   "id": "thalassemia-inheritance",
@@ -159,7 +161,8 @@
   "desc_en": "Low platelets on your report? What it means, why the count falls (fever, dengue, ITP, medicines, the marrow), which signs need a hospital, and what the doctor checks.",
   "card_bn": "রিপোর্টে প্লেটলেটের পাশে L? পায়ে লাল ফুটকি? ভাবছেন ব্লাড ক্যান্সার কিনা?",
   "card_en": "An L next to platelets on your report? Red dots on a child's legs? Wondering if it is blood cancer?",
-  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#EDE7FB\"/><circle cx=\"18\" cy=\"20\" r=\"4\" fill=\"#7A5AD1\"/><circle cx=\"33\" cy=\"17\" r=\"3\" fill=\"#7A5AD1\"/><circle cx=\"30\" cy=\"33\" r=\"4.5\" fill=\"#7A5AD1\"/><circle cx=\"17\" cy=\"35\" r=\"2.5\" fill=\"#7A5AD1\"/>"
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#EDE7FB\"/><circle cx=\"18\" cy=\"20\" r=\"4\" fill=\"#7A5AD1\"/><circle cx=\"33\" cy=\"17\" r=\"3\" fill=\"#7A5AD1\"/><circle cx=\"30\" cy=\"33\" r=\"4.5\" fill=\"#7A5AD1\"/><circle cx=\"17\" cy=\"35\" r=\"2.5\" fill=\"#7A5AD1\"/>",
+  "group": "bleed"
  },
  {
   "id": "low-platelets-dengue",
@@ -192,7 +195,8 @@
   "desc_en": "What hemoglobin, PCV, MCV, white cells and platelets measure on your report, why ranges differ between labs, why one H or L is often nothing, and when to see a hematologist.",
   "card_bn": "রিপোর্টে H আর L দেখে চিন্তা? এমসিভি মানে কী? রিপোর্টের কোন লাইনগুলো জরুরি?",
   "card_en": "An H or L on your blood report? What does MCV mean? Which lines on the report matter?",
-  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#E6F3EE\"/><rect x=\"15\" y=\"12\" width=\"22\" height=\"28\" rx=\"3\" fill=\"#fff\" stroke=\"#126158\" stroke-width=\"2\"/><path d=\"M19 19h14M19 25h14M19 31h9\" stroke=\"#126158\" stroke-width=\"2\" stroke-linecap=\"round\"/><circle cx=\"35\" cy=\"34\" r=\"5\" fill=\"#D8323F\"/>"
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#E6F3EE\"/><rect x=\"15\" y=\"12\" width=\"22\" height=\"28\" rx=\"3\" fill=\"#fff\" stroke=\"#126158\" stroke-width=\"2\"/><path d=\"M19 19h14M19 25h14M19 31h9\" stroke=\"#126158\" stroke-width=\"2\" stroke-linecap=\"round\"/><circle cx=\"35\" cy=\"34\" r=\"5\" fill=\"#D8323F\"/>",
+  "group": "tests"
  },
  {
   "id": "blood-cancers",
@@ -202,7 +206,8 @@
   "desc_en": "What leukaemia, lymphoma and myeloma are, the signs that call for a blood test, when to go to hospital the same day, and what treatment can do. Many are treatable.",
   "card_bn": "ক্লান্ত, ফ্যাকাশে, অকারণে কালশিটে? গলায় ডেলা যা সারছে না? ভাবছেন রক্তের ক্যান্সার কিনা?",
   "card_en": "Tired, pale, bruising for no reason? A lump that will not go? Wondering if it is blood cancer?",
-  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#E4EEFF\"/><circle cx=\"19\" cy=\"19\" r=\"9\" fill=\"#B7CBF7\"/><circle cx=\"18\" cy=\"18\" r=\"4.5\" fill=\"#3B4FB8\"/><circle cx=\"35\" cy=\"24\" r=\"7\" fill=\"#B7CBF7\"/><circle cx=\"36\" cy=\"25\" r=\"3.5\" fill=\"#3B4FB8\"/><circle cx=\"24\" cy=\"37\" r=\"8\" fill=\"#B7CBF7\"/><circle cx=\"23\" cy=\"38\" r=\"4\" fill=\"#3B4FB8\"/>"
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#E4EEFF\"/><circle cx=\"19\" cy=\"19\" r=\"9\" fill=\"#B7CBF7\"/><circle cx=\"18\" cy=\"18\" r=\"4.5\" fill=\"#3B4FB8\"/><circle cx=\"35\" cy=\"24\" r=\"7\" fill=\"#B7CBF7\"/><circle cx=\"36\" cy=\"25\" r=\"3.5\" fill=\"#3B4FB8\"/><circle cx=\"24\" cy=\"37\" r=\"8\" fill=\"#B7CBF7\"/><circle cx=\"23\" cy=\"38\" r=\"4\" fill=\"#3B4FB8\"/>",
+  "group": "white"
  },
  {
   "id": "blood-cancers-cml",
@@ -301,7 +306,8 @@
   "desc_en": "What the bone marrow test is, why it is needed, what happens on the day, whether it hurts, why it is not from the spine, and what the pathologist looks at.",
   "card_bn": "ম্যারো পরীক্ষা করাতে বলেছে? ব্যথা লাগবে? শিরদাঁড়া থেকে নেয়? দুর্বল হয়ে যাব?",
   "card_en": "Asked to have a bone marrow test? Will it hurt? Is it from the spine? Will it leave me weak?",
-  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FFE9D2\"/><circle cx=\"18\" cy=\"19\" r=\"8\" fill=\"#FFFFFF\"/><circle cx=\"35\" cy=\"30\" r=\"9\" fill=\"#FFFFFF\"/><circle cx=\"18\" cy=\"37\" r=\"5\" fill=\"#FFFFFF\"/><circle cx=\"31\" cy=\"14\" r=\"2.5\" fill=\"#7A5AD1\"/><circle cx=\"38\" cy=\"17\" r=\"2\" fill=\"#7A5AD1\"/><circle cx=\"26\" cy=\"27\" r=\"2.5\" fill=\"#7A5AD1\"/><circle cx=\"27\" cy=\"41\" r=\"2\" fill=\"#7A5AD1\"/><circle cx=\"10\" cy=\"28\" r=\"2\" fill=\"#7A5AD1\"/>"
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FFE9D2\"/><circle cx=\"18\" cy=\"19\" r=\"8\" fill=\"#FFFFFF\"/><circle cx=\"35\" cy=\"30\" r=\"9\" fill=\"#FFFFFF\"/><circle cx=\"18\" cy=\"37\" r=\"5\" fill=\"#FFFFFF\"/><circle cx=\"31\" cy=\"14\" r=\"2.5\" fill=\"#7A5AD1\"/><circle cx=\"38\" cy=\"17\" r=\"2\" fill=\"#7A5AD1\"/><circle cx=\"26\" cy=\"27\" r=\"2.5\" fill=\"#7A5AD1\"/><circle cx=\"27\" cy=\"41\" r=\"2\" fill=\"#7A5AD1\"/><circle cx=\"10\" cy=\"28\" r=\"2\" fill=\"#7A5AD1\"/>",
+  "group": "tests"
  },
  {
   "id": "haemophilia",
@@ -311,7 +317,8 @@
   "desc_en": "What haemophilia is, why it mostly affects boys, bleeding into joints, factor and other treatment, school and sport, and when to go to hospital at once.",
   "card_bn": "ছোট্ট ছেলের অল্পেই কালশিটে, হাঁটু ফুলে যায়? কেটে গেলে রক্ত থামে না?",
   "card_en": "A little boy who bruises easily, or a knee that swells? A cut that keeps bleeding?",
-  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FDE2E4\"/><path d=\"M26 10c-7 10-11 16-11 21a11 11 0 0 0 22 0c0-5-4-11-11-21z\" fill=\"#D7263D\"/><path d=\"M20 32a6 6 0 0 0 6 6\" stroke=\"#FFFFFF\" stroke-width=\"2.2\" fill=\"none\" stroke-linecap=\"round\"/>"
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#FDE2E4\"/><path d=\"M26 10c-7 10-11 16-11 21a11 11 0 0 0 22 0c0-5-4-11-11-21z\" fill=\"#D7263D\"/><path d=\"M20 32a6 6 0 0 0 6 6\" stroke=\"#FFFFFF\" stroke-width=\"2.2\" fill=\"none\" stroke-linecap=\"round\"/>",
+  "group": "bleed"
  },
  {
   "id": "clots",
@@ -321,7 +328,8 @@
   "desc_en": "What a clot in the leg (DVT) and in the lungs (PE) are, who is at risk, the signs, living with blood thinners, and why never to stop them on your own.",
   "card_bn": "এক পা ফুলে ব্যথা? হঠাৎ হাঁফ ধরা? রক্ত পাতলা করার ওষুধ খান?",
   "card_en": "One leg swollen and painful? Sudden breathlessness? Taking a blood thinner?",
-  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#E3EEF9\"/><path d=\"M21 8h10v22c0 5 3 8 8 10v4H21c-3 0-4-2-4-5V16c0-5 1-8 4-8z\" fill=\"#FFFFFF\" stroke=\"#2D6E8E\" stroke-width=\"2\"/><circle cx=\"25\" cy=\"28\" r=\"4.5\" fill=\"#D7263D\"/>"
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#E3EEF9\"/><path d=\"M21 8h10v22c0 5 3 8 8 10v4H21c-3 0-4-2-4-5V16c0-5 1-8 4-8z\" fill=\"#FFFFFF\" stroke=\"#2D6E8E\" stroke-width=\"2\"/><circle cx=\"25\" cy=\"28\" r=\"4.5\" fill=\"#D7263D\"/>",
+  "group": "bleed"
  },
  {
   "id": "sickle-cell",
@@ -331,7 +339,8 @@
   "desc_en": "What sickle cell disease and being a carrier mean, the signs and crises, everyday care to prevent crises, treatment, and marriage and family planning.",
   "card_bn": "বাচ্চার হাত-পা ফুলে ব্যথা? বারবার হাড়ে ব্যথা? পরিবারে কেউ বাহক?",
   "card_en": "A child with swollen, painful hands and feet? Repeated bone pain? A carrier in the family?",
-  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#E3EEF9\"/><ellipse cx=\"18\" cy=\"20\" rx=\"7\" ry=\"6\" fill=\"#D7263D\" opacity=\".85\"/><path d=\"M20 36C25 26 37 26 42 36C37 31 25 31 20 36z\" fill=\"#8b1e2d\"/>"
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#E3EEF9\"/><ellipse cx=\"18\" cy=\"20\" rx=\"7\" ry=\"6\" fill=\"#D7263D\" opacity=\".85\"/><path d=\"M20 36C25 26 37 26 42 36C37 31 25 31 20 36z\" fill=\"#8b1e2d\"/>",
+  "group": "red"
  },
  {
   "id": "pregnancy-blood",
@@ -341,7 +350,8 @@
   "desc_en": "Anaemia in pregnancy and its treatment, low platelets, the carrier test for thalassemia and sickle cell, and blood clots.",
   "card_bn": "গর্ভাবস্থায় খুব ক্লান্তি? রিপোর্টে প্লেটলেট কম? বাহক পরীক্ষা করাতে বলেছে?",
   "card_en": "Very tired in pregnancy? Platelets low on the report? Asked to have a carrier test?",
-  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#E3EEF9\"/><circle cx=\"24\" cy=\"13\" r=\"5\" fill=\"#FFFFFF\" stroke=\"#2D6E8E\" stroke-width=\"2\"/><path d=\"M18 44V26c0-5 3-7 6-7s5 2 6 5c5 2 7 6 6 11-1 4-4 6-8 6v3\" fill=\"#FFFFFF\" stroke=\"#2D6E8E\" stroke-width=\"2\"/><path d=\"M37 12c-3 4-4 6-4 8a4 4 0 0 0 8 0c0-2-1-4-4-8z\" fill=\"#D7263D\"/>"
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#E3EEF9\"/><circle cx=\"24\" cy=\"13\" r=\"5\" fill=\"#FFFFFF\" stroke=\"#2D6E8E\" stroke-width=\"2\"/><path d=\"M18 44V26c0-5 3-7 6-7s5 2 6 5c5 2 7 6 6 11-1 4-4 6-8 6v3\" fill=\"#FFFFFF\" stroke=\"#2D6E8E\" stroke-width=\"2\"/><path d=\"M37 12c-3 4-4 6-4 8a4 4 0 0 0 8 0c0-2-1-4-4-8z\" fill=\"#D7263D\"/>",
+  "group": "other"
  },
  {
   "id": "transplant",
@@ -351,7 +361,8 @@
   "desc_en": "What a transplant is and who it is for, finding a matching donor, what happens step by step, what the months after ask of a family, and the risks.",
   "card_bn": "ডাক্তার ট্রান্সপ্লান্টের কথা বলেছেন? ভাই-বোনের মিল দেখতে বলেছেন?",
   "card_en": "Has the doctor mentioned a transplant? Asked to test a brother or sister for a match?",
-  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#E3EEF9\"/><rect x=\"20\" y=\"9\" width=\"12\" height=\"16\" rx=\"3\" fill=\"#FFFFFF\" stroke=\"#2D6E8E\" stroke-width=\"2\"/><path d=\"M26 25v8\" stroke=\"#2D6E8E\" stroke-width=\"2.5\"/><circle cx=\"20\" cy=\"39\" r=\"3.5\" fill=\"#D7263D\"/><circle cx=\"28\" cy=\"37\" r=\"3.5\" fill=\"#D7263D\"/><circle cx=\"33\" cy=\"42\" r=\"3\" fill=\"#D7263D\" opacity=\".7\"/>"
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#E3EEF9\"/><rect x=\"20\" y=\"9\" width=\"12\" height=\"16\" rx=\"3\" fill=\"#FFFFFF\" stroke=\"#2D6E8E\" stroke-width=\"2\"/><path d=\"M26 25v8\" stroke=\"#2D6E8E\" stroke-width=\"2.5\"/><circle cx=\"20\" cy=\"39\" r=\"3.5\" fill=\"#D7263D\"/><circle cx=\"28\" cy=\"37\" r=\"3.5\" fill=\"#D7263D\"/><circle cx=\"33\" cy=\"42\" r=\"3\" fill=\"#D7263D\" opacity=\".7\"/>",
+  "group": "treat"
  },
  {
   "id": "blood-transfusion",
@@ -361,7 +372,8 @@
   "desc_en": "What a transfusion is and why it is needed, what happens before, during and after, how safe the blood is, side effects, and the signs afterwards that need a hospital.",
   "card_bn": "ডাক্তার রক্ত দিতে বলেছেন? রক্ত থেকে রোগ হবে কিনা ভাবছেন?",
   "card_en": "Told you need a transfusion? Wondering whether the blood is safe?",
-  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#E3EEF9\"/><rect x=\"18\" y=\"9\" width=\"16\" height=\"22\" rx=\"5\" fill=\"#FFFFFF\" stroke=\"#D7263D\" stroke-width=\"2\"/><rect x=\"21\" y=\"17\" width=\"10\" height=\"11\" rx=\"3\" fill=\"#D7263D\"/><path d=\"M26 31v6c0 4-3 6-8 7\" stroke=\"#D7263D\" stroke-width=\"2\" fill=\"none\"/>"
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#E3EEF9\"/><rect x=\"18\" y=\"9\" width=\"16\" height=\"22\" rx=\"5\" fill=\"#FFFFFF\" stroke=\"#D7263D\" stroke-width=\"2\"/><rect x=\"21\" y=\"17\" width=\"10\" height=\"11\" rx=\"3\" fill=\"#D7263D\"/><path d=\"M26 31v6c0 4-3 6-8 7\" stroke=\"#D7263D\" stroke-width=\"2\" fill=\"none\"/>",
+  "group": "treat"
  },
  {
   "id": "blood-transfusion-donation",
@@ -383,7 +395,8 @@
   "desc_en": "What PT, INR, APTT, fibrinogen and D-dimer measure, why they are done before an operation, on warfarin, when you bleed easily or a clot is suspected, and getting a good sample.",
   "card_bn": "অপারেশনের আগে পিটি-আইএনআর? ওয়ারফারিনে আইএনআর? রিপোর্টে কিছু দাগানো?",
   "card_en": "PT and INR before an operation? INR on warfarin? Something marked on the report?",
-  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#E3EEF9\"/><rect x=\"21\" y=\"9\" width=\"10\" height=\"30\" rx=\"5\" fill=\"#FFFFFF\" stroke=\"#2D6E8E\" stroke-width=\"2\"/><rect x=\"21\" y=\"24\" width=\"10\" height=\"15\" rx=\"5\" fill=\"#5BA4CF\"/><path d=\"M19 15h14\" stroke=\"#2D6E8E\" stroke-width=\"2\"/>"
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#E3EEF9\"/><rect x=\"21\" y=\"9\" width=\"10\" height=\"30\" rx=\"5\" fill=\"#FFFFFF\" stroke=\"#2D6E8E\" stroke-width=\"2\"/><rect x=\"21\" y=\"24\" width=\"10\" height=\"15\" rx=\"5\" fill=\"#5BA4CF\"/><path d=\"M19 15h14\" stroke=\"#2D6E8E\" stroke-width=\"2\"/>",
+  "group": "tests"
  },
  {
   "id": "low-white-cells",
@@ -393,7 +406,8 @@
   "desc_en": "What white cells do, causes of a low count, signs, treatment, lowering the risk of infection, and when to go to a hospital at once.",
   "card_bn": "রিপোর্টে শ্বেতকণিকা কম? ওষুধ চলার মধ্যে গলা ব্যথা আর জ্বর?",
   "card_en": "A low white cell count on the report? Sore throat and fever while on a medicine?",
-  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#E3EEF9\"/><circle cx=\"20\" cy=\"24\" r=\"7\" fill=\"#FFFFFF\" stroke=\"#2D6E8E\" stroke-width=\"2\"/><circle cx=\"20\" cy=\"24\" r=\"2.5\" fill=\"#2D6E8E\"/><circle cx=\"34\" cy=\"30\" r=\"3.5\" fill=\"#E0A23B\"/><path d=\"M29 30h10M34 25v10\" stroke=\"#E0A23B\" stroke-width=\"1.5\"/>"
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#E3EEF9\"/><circle cx=\"20\" cy=\"24\" r=\"7\" fill=\"#FFFFFF\" stroke=\"#2D6E8E\" stroke-width=\"2\"/><circle cx=\"20\" cy=\"24\" r=\"2.5\" fill=\"#2D6E8E\"/><circle cx=\"34\" cy=\"30\" r=\"3.5\" fill=\"#E0A23B\"/><path d=\"M29 30h10M34 25v10\" stroke=\"#E0A23B\" stroke-width=\"1.5\"/>",
+  "group": "white"
  },
  {
   "id": "spleen",
@@ -403,7 +417,8 @@
   "desc_en": "What the spleen does, why it grows, the signs, how it is found, treatment, when it is removed, and living without a spleen.",
   "card_bn": "ডাক্তার বলেছেন পিলে বড়? অল্প খেলেই পেট ভরে যায়?",
   "card_en": "Told your spleen is enlarged? Feeling full after a few mouthfuls?",
-  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#E3EEF9\"/><path d=\"M30 11c8 1 10 13 6 26s-13 8-14 2 2-14 2-20 0-9 6-8z\" fill=\"#D7263D\" opacity=\".85\"/><path d=\"M12 18q12 6 24 0M12 24q12 6 24 0\" stroke=\"#2D6E8E\" stroke-width=\"1.5\" fill=\"none\"/>"
+  "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#E3EEF9\"/><path d=\"M30 11c8 1 10 13 6 26s-13 8-14 2 2-14 2-20 0-9 6-8z\" fill=\"#D7263D\" opacity=\".85\"/><path d=\"M12 18q12 6 24 0M12 24q12 6 24 0\" stroke=\"#2D6E8E\" stroke-width=\"1.5\" fill=\"none\"/>",
+  "group": "other"
  },
  {
   "id": "anaemia-jaundice",

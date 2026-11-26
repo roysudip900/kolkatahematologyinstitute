@@ -35,6 +35,10 @@
 // becomes /thalassemia/inheritance/), it is not shown on the home page, and it is listed under
 // "In this chapter" on the chapter's own page and on every part's page. Its text files keep their
 // names (chapters/thalassemia-inheritance.en.txt). The old flat address redirects to the new one.
+//
+// Groups on the home page (Dr. Roy, 2026-11-26, "by part of blood"): every chapter (not a part)
+// has "group" in chapters/list.json, one of the keys in GROUPS below. The home page shows the
+// groups in this order, each with its heading, and the chapters in list.json order inside it.
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync, rmSync, rmdirSync, readdirSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
@@ -48,6 +52,14 @@ const AUTHOR = { bn: 'ডাঃ সুদীপ রায়', en: 'Dr. Sudip Ro
 const CRED = { bn: 'এমবিবিএস, এমডি, ডিএম (ক্লিনিক্যাল হেমাটোলজি)', en: 'MBBS, MD, DM (Clinical Hematology)' };
 const SITE_NAME = { bn: 'কলকাতা হেমাটোলজি ইনস্টিটিউট', en: 'Kolkata Hematology Institute' };
 const LANGS = ['bn', 'en'];
+const GROUPS = [
+  ['red', 'লোহিতকণিকা ও রক্তাল্পতা', 'Red cells and anaemia'],
+  ['bleed', 'রক্তপাত ও রক্ত জমাট বাঁধা', 'Bleeding and clotting'],
+  ['white', 'শ্বেতকণিকা ও রক্তের ক্যান্সার', 'White cells and blood cancers'],
+  ['tests', 'রক্তের পরীক্ষা', 'Blood tests'],
+  ['treat', 'চিকিৎসা', 'Treatments'],
+  ['other', 'গর্ভাবস্থা ও অন্য সমস্যা', 'Pregnancy and other problems'],
+];
 // One identity for the site, the author and the publisher, so search engines and AI systems
 // can tie every page to the same person. The home page carries the full records; chapter pages point to them by @id.
 // The publisher stays a MedicalOrganization, and no chamber name goes on the site (Dr. Roy, 2026-11-21).
@@ -572,9 +584,12 @@ if(!calm&&'IntersectionObserver' in window){
 // Home page: chapters only. Parts live inside their chapter.
 // A chapter with words gets a card with its card line (or, failing that, its first sentence).
 // A chapter with no words yet is not shown.
+for (const c of chapters) if (!c.parent && !GROUPS.some((g) => g[0] === c.group)) throw new Error(`chapters/list.json: "${c.id}" needs a "group" (${GROUPS.map((g) => g[0]).join(', ')})`);
 let grid = '';
+for (const [g, gbn, gen] of GROUPS) {
+let cards = '';
 for (const c of chapters) {
-  if (c.parent) continue;
+  if (c.parent || c.group !== g) continue;
   const { text, has } = info[c.id];
   for (const l of LANGS) {
     const other = l === 'bn' ? 'en' : 'bn';
@@ -585,9 +600,11 @@ for (const c of chapters) {
     const parts = 1 + kids(c.id).filter((x) => info[x.id].has[l]).length;
     const meta = parts > 1 ? (l === 'bn' ? `${bnNum(parts)}টি পর্ব` : `${parts} parts`)
       : has[l] ? readTime(text[l], l) : readTime(text[other], other);
-    grid += `<a class="card" lang="${l}" href="${url(c.id, l)}">${ic(c.art, 'deco')}<span class="top">${ic(c.art)}<h2>${esc(c[l])}</h2></span>` +
+    cards += `<a class="card" lang="${l}" href="${url(c.id, l)}">${ic(c.art, 'deco')}<span class="top">${ic(c.art)}<h3>${esc(c[l])}</h3></span>` +
       `<span class="hook">${hook}</span><span class="meta"><span>${meta}</span><span class="go">${RIGHT}</span></span></a>\n`;
   }
+}
+if (cards) grid += `<section class="group" id="g-${g}"><h2 class="gh"><span lang="bn">${gbn}</span><span lang="en">${gen}</span></h2>\n<div class="grid">\n${cards}</div></section>\n`;
 }
 const soon = ''; // Chapters with no words yet are not shown at all (Dr. Roy, 2026-11-18), so there is no "Coming soon" list.
 let home = index.replace(/(<!-- grid:start[^>]*-->\n)[\s\S]*?(<!-- grid:end -->)/, (m, a, b) => a + grid + b)
