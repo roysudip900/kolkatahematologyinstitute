@@ -1113,6 +1113,34 @@ const FIG = {
         body),
     };
   },
+  // Intensive chemotherapy: three phases as boxes. Each lights in turn; after the first, a "remission" flag appears.
+  // The third (tablets at home) is dashed: only in acute lymphoblastic leukaemia. No numbers in digits.
+  'intensive-phases'(l) {
+    const t = l === 'bn'
+      ? { b: [['প্রথম ধাপ', 'লিউকেমিয়া', 'সাফ করা'], ['দ্বিতীয় ধাপ', 'লুকোনো কোষ', 'মারা'], ['তৃতীয় ধাপ', 'বাড়িতে', 'ট্যাবলেট']], hosp: 'হাসপাতালে', all: 'লিম্ফোব্লাস্টিকে', rem: 'রেমিশন',
+          cap: 'প্রথম ধাপ সাধারণত হাসপাতালে, লক্ষ্য লিউকেমিয়া সাফ করে রেমিশনে পৌঁছনো। দ্বিতীয় ধাপে লুকিয়ে থাকা কোষ মারা হয়। অ্যাকিউট লিম্ফোব্লাস্টিক লিউকেমিয়ায় এরপর লম্বা সময় বাড়িতে ট্যাবলেট চলে। রেমিশনের পরেও পুরো পরিকল্পনা মেনে চলতে হয়।' }
+      : { b: [['Phase one', 'clear the', 'leukaemia'], ['Phase two', 'kill hidden', 'cells'], ['Phase three', 'tablets', 'at home']], hosp: 'in hospital', all: 'in ALL', rem: 'remission',
+          cap: 'The first phase is usually in hospital and aims to clear the leukaemia into remission. The second kills cells that may be hiding. In acute lymphoblastic leukaemia a long third phase of tablets at home follows. The plan goes on after remission.' };
+    let body = '';
+    const xs = [14, 130, 246];
+    xs.forEach((x, i) => {
+      body += `<g class="ip-b ip-b${i}"><rect x="${x}" y="44" width="100" height="78" rx="14" fill="${i === 0 ? C.roseBg : C.mint}" stroke="${i === 0 ? C.red : C.teal2}" stroke-width="2"${i === 2 ? ' stroke-dasharray="5 4"' : ''}/>` +
+        T(x + 50, 66, t.b[i][0], { size: 12.5, w: 700, fill: i === 0 ? C.red : C.teal }) + T(x + 50, 88, t.b[i][1], { size: 12.5 }) + T(x + 50, 106, t.b[i][2], { size: 12.5 }) + '</g>';
+      if (i < 2) body += `<path d="M${x + 104} 83h10" stroke="${C.muted}" stroke-width="2.5"/><path d="M${x + 110} 78l5 5-5 5" stroke="${C.muted}" stroke-width="2.5" fill="none"/>`;
+    });
+    body += `<rect x="24" y="132" width="80" height="22" rx="11" fill="${C.roseBg}"/>` + T(64, 147, t.hosp, { size: 12.5, fill: C.red, w: 700 });
+    body += `<rect x="256" y="132" width="80" height="22" rx="11" fill="${C.mint}"/>` + T(296, 147, t.all, { size: 12.5, fill: C.teal, w: 700 });
+    body += `<g class="ip-rem"><path d="M122 38V12" stroke="${C.teal}" stroke-width="2"/><path d="M122 12h30l-6 6 6 6h-30z" fill="${C.amber}"/>` + T(158, 22, t.rem, { a: 'start', size: 12.5, fill: C.teal, w: 700 }) + '</g>';
+    return {
+      cap: t.cap,
+      svg: svg('ip', 360, 164, t.cap,
+        '.ip-b{animation:ipb 9s ease-in-out infinite;opacity:.45}.ip-b1{animation-delay:3s}.ip-b2{animation-delay:6s}' +
+        '@keyframes ipb{0%,5%{opacity:.45}10%,30%{opacity:1}36%,100%{opacity:.45}}' +
+        '.ip-rem{animation:ipr 9s ease-in-out infinite}@keyframes ipr{0%,28%{opacity:0}34%,100%{opacity:1}}' +
+        '@media (prefers-reduced-motion:reduce){.ip-b,.ip-rem{animation:none;opacity:1}}',
+        body),
+    };
+  },
   // Anaemia, iron: two tanks of body iron. Tablets drip iron into both. In the first, a leak (heavy periods or
   // bleeding) lets it out, so the level hardly rises; in the second the leak is treated and the level slowly rises.
   'iron-tank'(l) {
@@ -2393,6 +2421,29 @@ const TRY = {
             ['report', 'Mild side effects mean chemo is not working', 'True?', 'Side effects do not show that. The doctor checks with tests and scans.'],
             ['leaf', 'Try kabiraji first, chemo later', 'True?', 'Some herbal medicines can harm or stop chemo working. Tell the hematologist first, and do not delay chemo.']],
           cap: 'During chemotherapy, a fever, shivering, sudden breathlessness or bleeding that will not stop needs a hospital at once.' };
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
+      t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
+        `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
+        `<span class="fc back"><span class="k">${esc(t.sign)}</span><span>${esc(back)}</span></span></button>`).join('') + '</div>';
+    return { cap: t.cap, cls: 'flipset', html };
+  },
+  'intensive-cards'(l) {
+    const ic = {
+      flag: `<path d="M12 36V6" stroke="${C.teal}" stroke-width="2.5"/><path d="M12 6h18l-5 6 5 6H12z" fill="${C.amber}"/>`,
+      bag: `<rect x="12" y="4" width="16" height="22" rx="5" fill="#fff" stroke="${C.red}" stroke-width="2"/><rect x="15" y="12" width="10" height="11" rx="3" fill="${C.red}"/><path d="M20 26v10" stroke="${C.red}" stroke-width="2"/>`,
+      door: `<rect x="10" y="4" width="20" height="32" rx="3" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/><circle cx="25" cy="21" r="2" fill="${C.teal}"/>`,
+    };
+    const t = l === 'bn'
+      ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
+          c: [['flag', 'রেমিশন মানেই চিকিৎসা শেষ', 'সত্যি?', 'পরের ধাপগুলোই লিউকেমিয়া ফিরে আসা আটকায়। পুরো পরিকল্পনা মেনে চলুন।'],
+            ['bag', 'বারবার রক্ত লাগছে মানে কেমো কাজ করছে না', 'সত্যি?', 'কিছুদিন ম্যারো যথেষ্ট রক্ত বানাতে পারে না। সেরে না ওঠা পর্যন্ত রক্ত দিয়ে ঘাটতি মেটানো হয়।'],
+            ['door', 'দেখতে এলে রোগীর মন ভালো থাকে, সবাই আসুক', 'সত্যি?', 'কণিকা কম থাকার দিনগুলোয় জীবাণু বিপজ্জনক। কে দেখতে আসবেন, টিমকে জিজ্ঞেস করুন। সর্দি-কাশি থাকলে কেউ আসবেন না।']],
+          cap: 'জ্বর, কাঁপুনি, শ্বাসকষ্ট, মাথা গুলিয়ে যাওয়া বা বন্ধ না হওয়া রক্তপাত হলে সঙ্গে সঙ্গে হাসপাতালে যান।' }
+      : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
+          c: [['flag', 'Remission means treatment is over', 'True?', 'The later phases stop the leukaemia coming back. Keep to the whole plan.'],
+            ['bag', 'Needing blood again and again means chemo is failing', 'True?', 'For a while the marrow cannot make enough blood. Transfusions fill the gap until it recovers.'],
+            ['door', 'Visitors cheer the patient up, so let everyone come', 'True?', 'On the low days germs are dangerous. Ask the team about visitors, and anyone with a cold or cough stays away.']],
+          cap: 'A fever, shivering, difficult breathing, confusion or bleeding that will not stop needs a hospital at once.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
       t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
         `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +

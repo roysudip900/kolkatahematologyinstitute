@@ -441,5 +441,15 @@
   "card_en": "Told you need chemo? Wondering about hair loss? Thinking of trying kabiraji first?",
   "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#EFE9FC\"/><rect x=\"18\" y=\"9\" width=\"16\" height=\"22\" rx=\"5\" fill=\"#FFFFFF\" stroke=\"#8D74D8\" stroke-width=\"2\"/><rect x=\"18\" y=\"19\" width=\"16\" height=\"12\" rx=\"4\" fill=\"#8D74D8\"/><rect x=\"23\" y=\"32\" width=\"6\" height=\"7\" rx=\"2\" fill=\"#C9B6F2\"/><path d=\"M26 39v5\" stroke=\"#8D74D8\" stroke-width=\"2\"/>",
   "group": "treat"
+ },
+ {
+  "id": "chemotherapy-intensive",
+  "parent": "chemotherapy",
+  "bn": "কেমোথেরাপি: ইনটেনসিভ চিকিৎসা",
+  "en": "Chemotherapy: intensive treatment",
+  "desc_bn": "লিউকেমিয়ায় ইনটেনসিভ কেমো: হাসপাতালের সপ্তাহগুলো, ধাপ, রেমিশন, বারবার রক্ত কেন লাগে, পরিবার কী করবে। লিখেছেন কলকাতার হেমাটোলজিস্ট।",
+  "desc_en": "Intensive chemotherapy for leukaemia: the weeks in hospital, the phases, remission, why transfusions are needed and what the family can do.",
+  "card_bn": "লিউকেমিয়ায় হাসপাতালে ভর্তি থেকে কেমো? কতদিন লাগবে ভাবছেন?",
+  "card_en": "Admitted for leukaemia chemo? Wondering how long it will take?"
  }
 ]
