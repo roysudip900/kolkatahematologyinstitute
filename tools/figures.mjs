@@ -1141,6 +1141,31 @@ const FIG = {
         body),
     };
   },
+  // Palliative care: the person in the middle; four helpers around (hematologist, palliative care team,
+  // nurse, family). Small dots travel from each helper to the middle in turn. No numbers.
+  'pall-team'(l) {
+    const t = l === 'bn'
+      ? { n: ['হেমাটোলজিস্ট', 'প্যালিয়েটিভ টিম', 'নার্স', 'পরিবার'], mid: 'রোগী', cap: 'কম তীব্রতার চিকিৎসা চালান হেমাটোলজিস্ট, আর তার পাশাপাশি প্যালিয়েটিভ কেয়ার টিম দেখে ব্যথা, শ্বাসকষ্ট, দুশ্চিন্তা আর পরিবারের প্রয়োজন। এটা অসুখের যেকোনো পর্যায়ে শুরু করা যায়।' }
+      : { n: ['hematologist', 'palliative team', 'nurse', 'family'], mid: 'patient', cap: 'The hematologist runs the lower-intensity treatment, and the palliative care team works alongside, looking after pain, breathlessness, worry and the family’s needs. It can begin at any stage of the illness.' };
+    const pos = [[70, 44], [290, 44], [70, 156], [290, 156]];
+    let body = `<circle cx="180" cy="100" r="40" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/>` + person(180, 96, 1.1);
+    pos.forEach(([x, y], i) => {
+      const sx = x < 180 ? x + 52 : x - 52, ex = x < 180 ? 148 : 212, ey = y < 100 ? 80 : 120;
+      body += `<path d="M${sx} ${y}L${ex} ${ey}" stroke="${C.mintLine}" stroke-width="2" stroke-dasharray="4 4"/>`;
+      body += `<rect x="${x - 60}" y="${y - 15}" width="120" height="30" rx="15" fill="${i === 1 ? C.roseBg : '#fff'}" stroke="${i === 1 ? C.red : C.teal2}" stroke-width="1.5"/>` +
+        T(x, y + 4.5, t.n[i], { size: 12.5, w: 700, fill: i === 1 ? C.red : C.teal });
+      body += `<circle class="pt-d pt-d${i}" cx="${sx}" cy="${y}" r="5" fill="${C.red}" style="--dx:${ex - sx}px;--dy:${ey - y}px"/>`;
+    });
+    body += T(180, 192, t.mid, { size: 12.5, w: 700, fill: C.teal });
+    return {
+      cap: t.cap,
+      svg: svg('pt', 360, 200, t.cap,
+        '.pt-d{opacity:0;animation:ptd 8s ease-in-out infinite}.pt-d1{animation-delay:2s}.pt-d2{animation-delay:4s}.pt-d3{animation-delay:6s}' +
+        '@keyframes ptd{0%{opacity:0;transform:none}5%{opacity:1}22%{opacity:1;transform:translate(var(--dx),var(--dy))}26%,100%{opacity:0;transform:translate(var(--dx),var(--dy))}}' +
+        '@media (prefers-reduced-motion:reduce){.pt-d{animation:none;opacity:0}}',
+        body),
+    };
+  },
   // Anaemia, iron: two tanks of body iron. Tablets drip iron into both. In the first, a leak (heavy periods or
   // bleeding) lets it out, so the level hardly rises; in the second the leak is treated and the level slowly rises.
   'iron-tank'(l) {
@@ -2444,6 +2469,29 @@ const TRY = {
             ['bag', 'Needing blood again and again means chemo is failing', 'True?', 'For a while the marrow cannot make enough blood. Transfusions fill the gap until it recovers.'],
             ['door', 'Visitors cheer the patient up, so let everyone come', 'True?', 'On the low days germs are dangerous. Ask the team about visitors, and anyone with a cold or cough stays away.']],
           cap: 'A fever, shivering, difficult breathing, confusion or bleeding that will not stop needs a hospital at once.' };
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
+      t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
+        `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
+        `<span class="fc back"><span class="k">${esc(t.sign)}</span><span>${esc(back)}</span></span></button>`).join('') + '</div>';
+    return { cap: t.cap, cls: 'flipset', html };
+  },
+  'pall-cards'(l) {
+    const ic = {
+      hand: `<path d="M8 22c6-2 10 2 16 0s8-6 8-6v10c0 6-6 10-12 10s-12-4-12-8z" fill="${C.mint}" stroke="${C.teal2}" stroke-width="2"/>`,
+      drip: `<rect x="13" y="4" width="14" height="20" rx="4" fill="#EFE9FC" stroke="#8D74D8" stroke-width="2"/><rect x="13" y="14" width="14" height="10" rx="3" fill="#8D74D8"/><path d="M20 24v12" stroke="#8D74D8" stroke-width="2"/>`,
+      wave: `<path d="M6 20c4-8 8-8 12 0s8 8 12 0" fill="none" stroke="${C.red}" stroke-width="3" stroke-linecap="round"/>`,
+    };
+    const t = l === 'bn'
+      ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
+          c: [['hand', 'প্যালিয়েটিভ মানে ডাক্তাররা হাল ছেড়ে দিয়েছেন', 'সত্যি?', 'যেকোনো পর্যায়ে, চিকিৎসার পাশাপাশি শুরু করা যায়। লক্ষ্য মানুষটাকে যতটা সম্ভব ভালো রাখা।'],
+            ['drip', 'হালকা চিকিৎসায় কোনো লাভ নেই', 'সত্যি?', 'লক্ষ্য যতদিন সম্ভব ক্যান্সারকে আটকে রাখা আর কষ্ট কমানো, পার্শ্বপ্রতিক্রিয়াও কম। আপনার ক্ষেত্রে কী হতে পারে, জিজ্ঞেস করুন।'],
+            ['wave', 'এই অসুখে ব্যথা সহ্য করতেই হয়', 'সত্যি?', 'ব্যথা আর শ্বাসকষ্ট কমানো যায়। ওষুধে কাজ না হলে টিমকে বলুন, নিজে বদলাবেন না।']],
+          cap: 'জ্বর, বন্ধ না হওয়া রক্তপাত, হঠাৎ শ্বাসকষ্ট বা হঠাৎ বেড়ে যাওয়া ব্যথা হলে সঙ্গে সঙ্গে হাসপাতালে যান।' }
+      : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
+          c: [['hand', 'Palliative means the doctors have given up', 'True?', 'It can begin at any stage, alongside treatment. It aims to help the person feel as well as possible.'],
+            ['drip', 'Gentler treatment is no use', 'True?', 'It aims to keep the cancer under control for as long as possible and ease symptoms, with fewer side effects. Ask what it can do for you.'],
+            ['wave', 'Pain has to be borne with this illness', 'True?', 'Pain and breathlessness can be eased. If a medicine is not working, tell the team, and never change it yourself.']],
+          cap: 'A fever, bleeding that will not stop, sudden breathlessness or pain that suddenly gets much worse needs a hospital at once.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
       t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
         `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
