@@ -1,0 +1,99 @@
+> Genetic tests of blood and bone marrow, such as karyotyping, FISH, PCR and NGS, look for changes in the chromosomes and genes of blood cancer cells, and those changes often decide which treatment will work, how strong it needs to be, and whether it is working. Ask your hematologist which tests you need and why, because the results, though some take days and some weeks, often mean the right treatment from the start.
+
+"The report already says leukaemia. Why more tests? Start the medicine."
+
+He is twenty-eight, an engineer in Salt Lake, and he has acute leukaemia. The bone marrow test confirmed it. Then the hematologist asked for more tests on the same sample: chromosomes, genes, names his father had never heard. His uncle, who paid for the first round, wanted to know why the family should spend more when the answer was already on paper.
+
+In Howrah, a man of fifty-two has a very high white cell count. The hematologist suspects chronic myeloid leukaemia and sends his blood for a gene test. He wants to know why a simple count is not enough, and why the result will take more than a few days.
+
+The uncle wants to know what more these tests can tell. The man in Howrah wants to know why he must wait.
+
+# Two leukaemias with the same name
+
+Under the microscope, two leukaemias can look the same. Inside their cells, they can be very different. Most cells carry instructions, written in genes, packed into chromosomes. In blood cancers, some of these instructions are broken, swapped or missing, and the exact change often decides how the disease behaves and which medicine will work against it.
+
+[figure: gene-zoom]
+
+Take chronic myeloid leukaemia. In most people with it, a piece of one chromosome has swapped places with a piece of another. This makes a new joined gene that tells the marrow to keep making white cells. There are targeted tablets made against exactly that joined gene. A gene test finds it, so the doctor knows these tablets are usually the right treatment to start.
+
+Or take acute promyelocytic leukaemia, a form of acute myeloid leukaemia caused by genes on two chromosomes switching places. It is treated very differently from other acute leukaemias. A gene or chromosome test is what tells them apart.
+
+# What the tests can tell
+
+- Which disease it is, exactly. Two people with the same name for their leukaemia can have different subtypes, and some subtypes are treated differently.
+- Which treatment will work. Some targeted medicines work only when the cancer has a certain change. The test can also show a change that stops a medicine working, which spares the patient a treatment that will not help.
+- How strong the treatment needs to be. Some changes mean the disease is likely to come back, and the plan may then include a stronger treatment or a bone marrow transplant. With other changes, a gentler plan may be enough.
+- Whether treatment is working. Some of these tests can find one leukaemia cell hidden among many thousands of healthy ones, so they are repeated during and after treatment to see how much is left.
+
+# The four main tests
+
+- Karyotyping looks at all the chromosomes of the cells under a microscope, to find ones that are broken, missing, swapped or extra. It sees large changes, not very small ones.
+- FISH uses glowing labels that stick to one chosen gene or chromosome, so the lab can see and count that change, even in cells that are not dividing.
+- PCR copies one chosen piece of genetic material many times over, so even a tiny amount can be found and measured.
+- NGS, next generation sequencing, reads many genes at the same time, letter by letter, to find small changes in any of them.
+
+The hematologist chooses which ones a person needs. Often it is more than one, because each sees something the others cannot.
+
+[figure: gene-cards]
+
+# Not only for blood cancer
+
+Gene tests are used just as much for blood conditions people are born with, such as thalassemia, haemophilia and some rare inherited forms of bone marrow failure. They can confirm the exact gene change, help check other family members, and, for a couple who both carry thalassemia, test a baby before birth. Testing a baby for thalassemia before birth was one of the first uses of these tests in medicine.
+
+# Is it inherited?
+
+Most gene changes found in blood cancer cells happened during the person's life, in those cells only. They are not passed on to children. Sometimes a test is done on healthy cells too, such as a tiny piece of skin, to tell the two apart. If a change you may have been born with turns up, another test is needed to confirm it, and the doctor will explain what it means for the family.
+
+# Why it takes time
+
+These tests are done in special laboratories. FISH and PCR results often come in a few days. Karyotyping takes about two weeks, because the cells must first be grown until they divide. A long wait does not mean something is wrong. When treatment cannot wait, the hematologist starts the treatment that cannot wait and adjusts the plan when the results come.
+
+# How the stories go on
+
+The engineer's chromosome and gene tests show that his leukaemia has a change linked to a high chance of coming back. His team plans stronger treatment and starts looking for a stem cell donor early.
+
+The man in Howrah's gene test finds the joined gene of chronic myeloid leukaemia. He starts a targeted tablet, and the same test is repeated on his blood from time to time to see how well the treatment is working.
+
+Whichever story is closer to yours, ask what each test is for before it is done, and what it will change.
+
+# Go to a hospital now if
+
+While you wait for results, go to a hospital at once if:
+
+- there is a fever, or you feel hot, cold or shivery
+- there is bleeding that will not stop, or many new bruises or red spots
+- you become very breathless, very pale or very drowsy
+- there is new confusion, a severe headache or a fit
+
+# Take these questions to your doctor
+
+Your hematologist will explain why each test is needed. Ask:
+
+- Which genetic tests do I need, and what will each one tell us?
+- Will the results change my treatment?
+- How long will the results take, and what happens while we wait?
+- Will the tests be repeated during treatment?
+- Is any change found likely to run in my family?
+
+# Common questions
+
+## Why do I need genetic tests if the diagnosis is already made?
+
+Because the diagnosis gives the name, and the genetic tests often decide the treatment: which medicine will work, how strong the plan needs to be, and whether a transplant is needed.
+
+## Does a gene change in my leukaemia mean my children will get it?
+
+Usually not. Most changes in blood cancer cells happen during life, in those cells only, and are not passed on. If a test suggests an inherited change, the doctor will arrange a test to confirm it.
+
+## Why are the tests repeated after treatment starts?
+
+Some of these tests show how much of the cancer is left. Repeating them during treatment shows how well it is working.
+
+# Sources
+
+- National Cancer Institute: Chronic myeloid leukemia treatment | https://www.cancer.gov/types/leukemia/patient/cml-treatment-pdq
+- National Cancer Institute: Adult acute myeloid leukemia treatment | https://www.cancer.gov/types/leukemia/patient/adult-aml-treatment-pdq
+- National Cancer Institute: Biomarker testing for cancer treatment | https://www.cancer.gov/about-cancer/treatment/types/biomarker-testing-cancer-treatment
+- NHS: Tests and next steps for chronic myeloid leukaemia | https://www.nhs.uk/conditions/chronic-myeloid-leukaemia/tests-and-next-steps/
+- Jitani A. The limitless potential of molecular diagnostics in hematology. J Hematol Allied Sci. 2023;3(1):1-2. | https://jhas-bsh.com/the-limitless-potential-of-molecular-diagnostics-in-hematology/
+- Zitella LJ. Molecular testing in hematologic malignancies. J Adv Pract Oncol. 2022;13(3):324-7. | https://pmc.ncbi.nlm.nih.gov/articles/PMC9126340/
