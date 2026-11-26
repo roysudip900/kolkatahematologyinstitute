@@ -517,5 +517,16 @@
   "card_bn": "রিপোর্টে del(17p) বা t(4;14) লেখা? ফিশ কী খোঁজে?",
   "card_en": "del(17p) or t(4;14) on your report? What does FISH look for?",
   "coauthor": "mridha"
+ },
+ {
+  "id": "genetic-tests-pcr",
+  "parent": "genetic-tests",
+  "bn": "জেনেটিক পরীক্ষা: পিসিআর",
+  "en": "Genetic tests: PCR",
+  "desc_bn": "পিসিআর কী, BCR::ABL1-এর সংখ্যা কমা-বাড়ার মানে কী, PML::RARA, FLT3, NPM1, JAK2 কেন দেখা হয়, \"নট ডিটেক্টেড\" মানে কী, আর ট্যাবলেট কি বন্ধ করা যায়। সহজ ভাষায়।",
+  "desc_en": "What PCR is, what a falling or rising BCR::ABL1 number means, why PML::RARA, FLT3, NPM1 and JAK2 are tested, what \"not detected\" means, and whether the tablets can be stopped.",
+  "card_bn": "BCR::ABL1-এর সংখ্যা কমেছে? \"নট ডিটেক্টেড\" মানে কী?",
+  "card_en": "Your BCR::ABL1 number has fallen? What does \"not detected\" mean?",
+  "coauthor": "mridha"
  }
 ]

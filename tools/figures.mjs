@@ -1328,6 +1328,37 @@ const FIG = {
         body),
     };
   },
+  // PCR: one chosen piece is copied, and each round doubles it: one, two, four, eight, sixteen.
+  // The columns appear one after another, left to right.
+  'pcr-copy'(l) {
+    const t = l === 'bn'
+      ? { a: 'প্রতি দফায় কপি দ্বিগুণ', s: 'শুরুতে', e: 'কয়েক ঘণ্টা পরে', f: 'এবার মাপা যায়',
+          cap: 'পিসিআরে বেছে নেওয়া টুকরোটা প্রতি দফায় দ্বিগুণ হয়। কয়েক ঘণ্টার মধ্যে এত কপি হয়ে যায় যে খুব অল্প থাকলেও সেটা খুঁজে পাওয়া আর মাপা যায়।' }
+      : { a: 'each round doubles the copies', s: 'at the start', e: 'a few hours later', f: 'now it can be measured',
+          cap: 'In PCR the chosen piece doubles with every round. Within a few hours there are so many copies that even a tiny amount can be found and measured.' };
+    let body = T(14, 22, t.a, { a: 'start', size: 12.5, w: 700, fill: C.teal });
+    [1, 2, 4, 8, 16].forEach((n, i) => {
+      const x = 22 + i * 66;
+      let g = '';
+      for (let k = 0; k < n; k++) {
+        const col = k % 2, row = Math.floor(k / 2);
+        g += `<rect x="${x + col * 24}" y="${136 - row * 12}" width="20" height="7" rx="3.5" fill="${C.red}"/>`;
+      }
+      body += `<g class="pc pc${i}">${g}</g>`;
+      if (i < 4) body += `<path class="pc pc${i}" d="M${x + 48} 122l10 0m-4 -4l4 4l-4 4" stroke="${C.muted}" stroke-width="2" fill="none" stroke-linecap="round"/>`;
+    });
+    body += T(16, 164, t.s, { a: 'start', size: 12.5, fill: C.muted });
+    body += T(346, 164, t.e, { a: 'end', size: 12.5, fill: C.muted });
+    body += `<text class="pc pc4" x="346" y="184" text-anchor="end" font-size="12.5" font-weight="700" fill="${C.red}">${esc(t.f)}</text>`;
+    return {
+      cap: t.cap,
+      svg: svg('pc', 360, 196, t.cap,
+        '.pc{opacity:0;animation:pcs 7s ease-in-out infinite}.pc1{animation-delay:.9s}.pc2{animation-delay:1.8s}.pc3{animation-delay:2.7s}.pc4{animation-delay:3.6s}' +
+        '@keyframes pcs{0%{opacity:0}8%,80%{opacity:1}100%{opacity:0}}' +
+        '@media (prefers-reduced-motion:reduce){.pc{animation:none;opacity:1}}',
+        body),
+    };
+  },
   // Anaemia, iron: two tanks of body iron. Tablets drip iron into both. In the first, a leak (heavy periods or
   // bleeding) lets it out, so the level hardly rises; in the second the leak is treated and the level slowly rises.
   'iron-tank'(l) {
@@ -2784,6 +2815,32 @@ const TRY = {
             ['report', 'No change on FISH means no cancer', 'True?', 'A change nobody asked about will not show on FISH. Ask your hematologist.'],
             ['family', 'A change found by FISH will pass to my children', 'True?', 'It usually happened during life in the cancer cells, and is not passed on.']],
           cap: 'While waiting for results, a fever, bleeding that will not stop or severe breathlessness needs a hospital at once.' };
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
+      t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
+        `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
+        `<span class="fc back"><span class="k">${esc(t.sign)}</span><span>${esc(back)}</span></span></button>`).join('') + '</div>';
+    return { cap: t.cap, cls: 'flipset', html };
+  },
+  'pcr-cards'(l) {
+    const ic = {
+      clock: `<circle cx="20" cy="20" r="13" fill="#fff" stroke="${C.teal2}" stroke-width="2"/><path d="M20 12v9l6 3" stroke="${C.teal}" stroke-width="2.5" fill="none" stroke-linecap="round"/>`,
+      lens: `<circle cx="17" cy="17" r="10" fill="#fff" stroke="${C.teal2}" stroke-width="2.5"/><path d="M25 25l9 9" stroke="${C.teal2}" stroke-width="3" stroke-linecap="round"/>`,
+      report: `<rect x="9" y="5" width="22" height="30" rx="3" fill="#fff" stroke="${C.teal2}" stroke-width="2"/><path d="M14 13h12M14 19h12M14 25h7" stroke="${C.teal2}" stroke-width="2"/>`,
+      pill: `<rect x="6" y="14" width="28" height="12" rx="6" fill="#fff" stroke="${C.teal2}" stroke-width="2"/><path d="M20 14v12" stroke="${C.teal2}" stroke-width="2"/><rect x="20" y="15" width="13" height="10" rx="5" fill="${C.rose}"/>`,
+    };
+    const t = l === 'bn'
+      ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
+          c: [['report', '"নট ডিটেক্টেড" মানে ক্যান্সার পুরো চলে গেছে', 'সত্যি?', 'পরীক্ষা যতটা ধরতে পারে, তার চেয়েও কম কোষ থাকতে পারে। তাই পরীক্ষা আবার হয়।'],
+            ['pill', 'সংখ্যা খুব কমে গেলে নিজেই ট্যাবলেট বন্ধ করা যায়', 'সত্যি?', 'কখনো নিজে থেকে নয়। বন্ধ করার কথা শুধু হেমাটোলজিস্টের সঙ্গে, বছরের পর বছর খুব কম থাকার পর।'],
+            ['lens', 'পিসিআর সব জিনের বদল খুঁজে পায়', 'সত্যি?', 'যে বদল খুঁজতে বলা হয়, শুধু সেটাই।'],
+            ['clock', 'পিসিআরের ফল আসতে সপ্তাহ লাগে', 'সত্যি?', 'কোষ বাড়াতে হয় না, তাই প্রায়ই এক থেকে দু দিনে আসে।']],
+          cap: 'চিকিৎসার মধ্যে জ্বর, বন্ধ না হওয়া রক্তপাত বা খুব শ্বাসকষ্ট হলে সঙ্গে সঙ্গে হাসপাতালে যান।' }
+      : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
+          c: [['report', '"Not detected" means the cancer is completely gone', 'True?', 'There may be fewer cells than the test can find. That is why it is repeated.'],
+            ['pill', 'When the number is very low, I can stop the tablets myself', 'True?', 'Never on your own. Stopping is only discussed with the hematologist, after years at a very low level.'],
+            ['lens', 'PCR finds every gene change', 'True?', 'Only the change it is asked to look for.'],
+            ['clock', 'PCR results take weeks', 'True?', 'The cells do not need to be grown, so it often takes one to two days.']],
+          cap: 'During treatment, a fever, bleeding that will not stop or severe breathlessness needs a hospital at once.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
       t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
         `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
