@@ -418,7 +418,7 @@
   "card_bn": "ডাক্তার বলেছেন পিলে বড়? অল্প খেলেই পেট ভরে যায়?",
   "card_en": "Told your spleen is enlarged? Feeling full after a few mouthfuls?",
   "art": "<circle cx=\"26\" cy=\"26\" r=\"26\" fill=\"#E3EEF9\"/><path d=\"M30 11c8 1 10 13 6 26s-13 8-14 2 2-14 2-20 0-9 6-8z\" fill=\"#D7263D\" opacity=\".85\"/><path d=\"M12 18q12 6 24 0M12 24q12 6 24 0\" stroke=\"#2D6E8E\" stroke-width=\"1.5\" fill=\"none\"/>",
-  "group": "other"
+  "group": "white"
  },
  {
   "id": "anaemia-jaundice",
