@@ -1,0 +1,104 @@
+> PCR, polymerase chain reaction, copies one chosen piece of genetic material many times over, so that even a tiny amount can be found and measured, usually within one to two days. It is used to find BCR::ABL1 in chronic myeloid leukaemia and measure how much is left during treatment, PML::RARA in acute promyelocytic leukaemia, FLT3 and NPM1 in acute myeloid leukaemia, JAK2 in polycythaemia and related conditions, leftover leukaemia in acute lymphoblastic leukaemia, and the gene changes of thalassemia, so ask your hematologist what each PCR result means for your plan.
+
+"The report says the number has gone down again. Is that good? When can I stop the tablets?"
+
+He is forty-six and runs a shop in Dum Dum. A year ago he was found to have chronic myeloid leukaemia, and he has taken a targeted tablet every day since. Every few months his blood goes for a PCR test, and each report gives a number that has kept falling. He wants to know what the number means, and whether a small enough number means he can stop.
+
+In Garia, a man of fifty-eight went for a routine check and was told his red cell count was too high. He does not smoke and has no lung or heart trouble. The hematologist sends his blood for a JAK2 test. He wants to know why a gene test for a high count.
+
+The shopkeeper wants to know what his number means. The man in Garia wants to know what a gene has to do with thick blood.
+
+# What PCR is
+
+PCR is a copying machine for genetic material. The laboratory chooses one small piece, such as one gene or one joined gene, and copies it again and again. Each round doubles the copies, and in a few hours there are so many that the piece can be seen and measured, even if it started in only a few cells.
+
+[figure: pcr-copy]
+
+Because of this, PCR needs only a small sample, usually blood or bone marrow. The cells do not need to be grown, and the result often comes in one to two days. PCR can work on DNA, and also on RNA, the working copy a gene makes, which is how it finds joined genes such as BCR::ABL1.
+
+PCR is very sensitive. It can find one changed cell among about a hundred thousand. That is why it is used to measure how much leukaemia is left after treatment, long after the blood count and the microscope look clear.
+
+There are two kinds of answer. Some PCR tests say whether the change is there or not. Others, called quantitative or real time PCR, also say how much of it there is, as a number that can be compared from one test to the next.
+
+# What PCR looks for
+
+PCR finds only the change it is asked to look for, so the hematologist chooses the test that fits the disease. These are some of the names you may see:
+
+- Chronic myeloid leukaemia: BCR::ABL1. At diagnosis, PCR confirms it, even in the few people whose karyotype does not show the Philadelphia chromosome. During treatment, a quantitative BCR::ABL1 PCR is one of the main tests of how well the targeted tablet is working. The level is checked regularly, and the hematologist looks for it to fall to certain levels by certain times.
+- Acute promyelocytic leukaemia: PML::RARA. PCR confirms it, and is repeated after treatment to check that none is left.
+- Acute myeloid leukaemia: FLT3 and NPM1. A FLT3 change is often linked to a less good outcome, and a targeted medicine against FLT3 may be added to the chemotherapy. An NPM1 change without a FLT3 change is linked to a better outcome.
+- Polycythaemia vera, essential thrombocythaemia and myelofibrosis: JAK2, CALR or MPL. A JAK2 change is found in many people with these conditions, and helps tell them apart from a high count with another cause.
+- Acute lymphoblastic leukaemia: leftover leukaemia, called minimal or measurable residual disease. It is measured after the first phase of treatment, by PCR or by other tests. A higher level usually means a stronger treatment, and in some children and young people a low level can mean a lighter one.
+- Thalassemia and haemophilia: PCR based tests find the exact gene change, check other family members, and, for a couple who both carry thalassemia, can test a baby before birth.
+
+# What a PCR result can and cannot tell
+
+A falling number in chronic myeloid leukaemia usually means the treatment is working. A rising number is a reason to talk to the hematologist, who may repeat the test or look at the treatment again. One result on its own is read together with the earlier ones.
+
+"Not detected" means the test could not find the change. It does not always mean every cancer cell is gone. There may be fewer than the test can find, which is why the test is often repeated.
+
+PCR also cannot find changes it was not asked to look for. That is why it is used together with the karyotype, FISH and sometimes NGS.
+
+[figure: pcr-cards]
+
+# Can the tablets be stopped?
+
+Some people with chronic myeloid leukaemia whose BCR::ABL1 level has stayed very low for several years may talk with their hematologist about stopping the tablets, with PCR tests done often afterwards. It is not right for everyone. In about half of the people who stop, the leukaemia comes back and the tablets have to start again. This is a decision only the hematologist can make with you. Never stop the tablets on your own because a report looks good.
+
+# Is the change inherited?
+
+A change found in leukaemia cells, such as BCR::ABL1, FLT3 or JAK2, usually happened in those cells during life, and is not passed on to children. The gene changes of thalassemia and haemophilia are different. A person is born with them, and they can be passed on, which is why PCR based tests are used for the family too.
+
+# How the stories go on
+
+The shopkeeper's hematologist explains that his falling number is what they hoped to see, and that the tablets must go on. The test will keep being repeated, and stopping can only be discussed after his level has stayed very low for years. He keeps his reports in one file, so each new number can be compared with the old ones.
+
+The man in Garia's JAK2 test finds a change, and together with his other results it shows polycythaemia vera, a condition in which the marrow makes too many red cells. His hematologist explains the treatment and the checks it will need.
+
+Whichever story is closer to yours, ask what each PCR result means, and how it compares with the last one.
+
+# Go to a hospital now if
+
+While on treatment or waiting for results, go to a hospital at once if:
+
+- there is a fever, or you feel hot, cold or shivery
+- there is bleeding that will not stop, or many new bruises or red spots
+- you become very breathless, very pale or very drowsy
+- there is new confusion, a severe headache or a fit
+- a face that droops, an arm or leg that goes weak, or speech that is slurred
+- pain, swelling, redness or warmth in one leg, or sudden breathlessness or chest pain
+
+# Take these questions to your doctor
+
+Do not start, stop or change any medicine because of a PCR report. Show it to your hematologist first.
+
+Your hematologist or the pathologist can explain the report. Ask:
+
+- Which PCR test was done, and what did it look for?
+- What does my result mean, and how does it compare with the last one?
+- How often will the test be repeated?
+- What level are we aiming for, and by when?
+- Do I also need FISH, a karyotype or NGS?
+
+# Common questions
+
+## My PCR says "not detected". Can I stop my tablets?
+
+No, not on your own. "Not detected" may mean there are too few cells left for the test to find. Some people may stop the tablets after years at a very low level, but only with their hematologist, and with close PCR checks afterwards.
+
+## Why is PCR repeated so often?
+
+Because it shows how much of the leukaemia is left, and the change over time matters more than any one result. Repeating it shows whether the treatment is working, and whether the disease is coming back early, before the blood count changes.
+
+## Can PCR find a change the karyotype missed?
+
+Yes. PCR looks inside the gene, so it can find changes far too small to see on a karyotype, and in far fewer cells. But it finds only the change it was asked to look for.
+
+# Sources
+
+- Zitella LJ. Molecular testing in hematologic malignancies. J Adv Pract Oncol. 2022;13(3):324-7. | https://pmc.ncbi.nlm.nih.gov/articles/PMC9126340/
+- Jitani A. The limitless potential of molecular diagnostics in hematology. J Hematol Allied Sci. 2023;3(1):1-2. | https://jhas-bsh.com/the-limitless-potential-of-molecular-diagnostics-in-hematology/
+- National Cancer Institute: Chronic myeloid leukemia treatment (health professional version) | https://www.cancer.gov/types/leukemia/hp/cml-treatment-pdq
+- National Cancer Institute: Adult acute myeloid leukemia treatment (health professional version) | https://www.cancer.gov/types/leukemia/hp/adult-aml-treatment-pdq
+- National Cancer Institute: Childhood acute lymphoblastic leukemia treatment (health professional version) | https://www.cancer.gov/types/leukemia/hp/child-all-treatment-pdq
+- National Cancer Institute: Myeloproliferative neoplasms treatment | https://www.cancer.gov/types/myeloproliferative/patient/chronic-treatment-pdq
