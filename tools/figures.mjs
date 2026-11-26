@@ -2534,13 +2534,13 @@ const TRY = {
       ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
           c: [['girl', 'প্রথম দিকের মাসিকে এত রক্ত যায়ই, অপেক্ষা করুন', 'সত্যি?', 'এক-দু ঘণ্টায় প্যাড ভিজলে বা সাত দিনের বেশি চললে অপেক্ষা নয়, ডাক্তার দেখান।'],
             ['ring', 'বিয়ের পর সব ঠিক হয়ে যাবে', 'সত্যি?', 'অপেক্ষায় কারণের চিকিৎসা হয় না, রক্তাল্পতা বাড়তে পারে।'],
-            ['pill', 'আয়রন খেলেই সব মিটে যাবে', 'সত্যি?', 'আয়রনে রক্তাল্পতা সারে, রক্তপাত থামে না। কারণটা খুঁজতে হবে।'],
+            ['pill', 'আয়রন খেলেই সব মিটে যাবে', 'সত্যি?', 'আয়রনে রক্তাল্পতা সারাতে পারে, রক্তপাত থামে না। কারণটা খুঁজতে হবে।'],
             ['tree', 'এ বাড়ির মেয়েদের এমনই হয়, কিছু করার নেই', 'সত্যি?', 'বংশে চলা রক্তের অসুখ, যেমন ভন উইলিব্র্যান্ড ডিজিজ, হতে পারে। পরীক্ষা করান।']],
           cap: 'মেয়ে অজ্ঞান হলে, খুব ফ্যাকাশে হলে, হাঁফ ধরলে বা রক্ত থামতে না চাইলে সঙ্গে সঙ্গে হাসপাতালে যান।' }
       : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
           c: [['girl', 'First periods are always this heavy, just wait', 'True?', 'A pad soaked every hour or two, or bleeding for more than seven days, needs a doctor, not waiting.'],
             ['ring', 'It will settle after marriage', 'True?', 'Waiting does not treat the cause, and the anaemia can grow worse.'],
-            ['pill', 'Iron tablets will fix everything', 'True?', 'Iron treats the anaemia, not the bleeding. The cause has to be found.'],
+            ['pill', 'Iron tablets will fix everything', 'True?', 'Iron can treat the anaemia, not the bleeding. The cause has to be found.'],
             ['tree', 'The women in our family are just like this', 'True?', 'An inherited bleeding disorder such as von Willebrand disease is possible. Ask for tests.']],
           cap: 'If she faints, turns very pale, is breathless, or the bleeding will not stop, go to a hospital at once.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
