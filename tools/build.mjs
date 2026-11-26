@@ -52,6 +52,8 @@ const AUTHOR = { bn: 'ডাঃ সুদীপ রায়', en: 'Dr. Sudip Ro
 const CRED = { bn: 'এমবিবিএস, এমডি, ডিএম (ক্লিনিক্যাল হেমাটোলজি)', en: 'MBBS, MD, DM (Clinical Hematology)' };
 const SITE_NAME = { bn: 'কলকাতা হেমাটোলজি ইনস্টিটিউট', en: 'Kolkata Hematology Institute' };
 const LANGS = ['bn', 'en'];
+// The home page in each language (Dr. Roy, 2026-11-26: an English home page at /en/, backlog item 3).
+const HOME = { bn: '/', en: '/en/' };
 const SEARCH_ICON = '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M13 13l4.5 4.5"/></svg>';
 const GROUPS = [
   ['red', 'লোহিতকণিকা ও রক্তাল্পতা', 'Red cells and anaemia'],
@@ -360,7 +362,7 @@ for (const c of chapters) {
         `<aside class="endcard">${AVATAR}<div><div class="k">${l === 'bn' ? 'লেখক' : (co ? 'Authors' : 'Author')}</div>` +
         (co ? `<div class="who">${co[l]}</div><div class="cred">${co.cred[l]}</div>` : '') +
         `<div class="who">${au(l)}</div><div class="cred">${CRED[l]}</div></div></aside>` +
-        `<a class="allbtn" href="/#g-${(c.parent ? byId[c.parent] : c).group}">${LEFT}${l === 'bn' ? 'সব অধ্যায়' : 'All chapters'}</a>`;
+        `<a class="allbtn" href="${HOME[l]}#g-${(c.parent ? byId[c.parent] : c).group}">${LEFT}${l === 'bn' ? 'সব অধ্যায়' : 'All chapters'}</a>`;
       schema = ld({
         '@context': 'https://schema.org', '@type': 'MedicalWebPage', name: title, description: desc, inLanguage: l,
         url: canonical, datePublished: firstPublished(`chapters/${c.id}.${l}.txt`, date), dateModified: date, about: { '@type': 'MedicalCondition', name: c.en.split(':')[0] },
@@ -416,10 +418,10 @@ ${schema}
 <div class="progress" aria-hidden="true"></div>
 
 <header><div class="wrap bar">
-  <a class="brand" href="/">${LOGO}<span class="nm">${SITE_NAME[l]}</span></a>
+  <a class="brand" href="${HOME[l]}">${LOGO}<span class="nm">${SITE_NAME[l]}</span></a>
   <div class="right">
-    <a class="nav" href="/#about">${l === 'bn' ? 'পরিচিতি' : 'About'}</a>
-    <a class="sbtn" href="/#find"><span class="sr">${l === 'bn' ? 'খুঁজুন' : 'Search'}</span>${SEARCH_ICON}</a>
+    <a class="nav" href="${HOME[l]}#about">${l === 'bn' ? 'পরিচিতি' : 'About'}</a>
+    <a class="sbtn" href="${HOME[l]}#find"><span class="sr">${l === 'bn' ? 'খুঁজুন' : 'Search'}</span>${SEARCH_ICON}</a>
     <div class="lang" role="group" aria-label="Language">
       <a href="${url(c.id, 'bn')}" hreflang="bn" ${l === 'bn' ? 'aria-current="true"' : ''} data-l="bn">বাং</a>
       <a href="${url(c.id, 'en')}" hreflang="en" ${l === 'en' ? 'aria-current="true"' : ''} data-l="en">EN</a>
@@ -428,7 +430,7 @@ ${schema}
 </div></header>
 
 <main class="read">
-${root ? `<a class="back" href="${url(root.id, l)}">${LEFT}${esc(short(root, l))}</a>` : `<a class="back" href="/#g-${c.group}">${LEFT}${l === 'bn' ? 'সব অধ্যায়' : 'All chapters'}</a>`}
+${root ? `<a class="back" href="${url(root.id, l)}">${LEFT}${esc(short(root, l))}</a>` : `<a class="back" href="${HOME[l]}#g-${c.group}">${LEFT}${l === 'bn' ? 'সব অধ্যায়' : 'All chapters'}</a>`}
 <div class="chead">${ic(c.art, 'big')}${kick ? `<span class="kick">${kick}</span>` : ''}<h1>${esc(root ? partTitle(c, l) : title)}</h1></div>
 ${body}
 </main>
@@ -623,6 +625,9 @@ const homeHead = `<!-- site:start (written by tools/build.mjs) -->
 <meta property="og:description" content="${esc(SITE_DESC)}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="${SITE}/">
+<link rel="alternate" hreflang="bn" href="${SITE}/">
+<link rel="alternate" hreflang="en" href="${SITE}/en/">
+<link rel="alternate" hreflang="x-default" href="${SITE}/">
 <meta name="twitter:card" content="summary">
 ${ld({
   '@context': 'https://schema.org',
@@ -646,12 +651,24 @@ home = /<!-- site:start[\s\S]*?<!-- site:end -->/.test(home)
   ? home.replace(/<!-- site:start[\s\S]*?<!-- site:end -->/, () => homeHead)
   : home.replace('</head>', () => homeHead + '\n</head>');
 writeFileSync(join(ROOT, 'index.html'), home);
+// The English home page: the same page, opening in English at its own address, so English searchers land on
+// an English page. It always opens in English (data-fixed), whatever the reader chose before.
+const homeEn = home
+  .replace('<html lang="bn" data-lang="bn">', '<html lang="en" data-lang="en" data-fixed="en">')
+  .replace(`<link rel="canonical" href="${SITE}/">`, `<link rel="canonical" href="${SITE}/en/">`)
+  .replace(`<meta property="og:url" content="${SITE}/">`, `<meta property="og:url" content="${SITE}/en/">`)
+  .replace('<button type="button" id="btn-bn" aria-pressed="true">', '<button type="button" id="btn-bn" aria-pressed="false">')
+  .replace('<button type="button" id="btn-en" aria-pressed="false">', '<button type="button" id="btn-en" aria-pressed="true">')
+  .replace('<head>', '<head>\n<!-- Written by tools/build.mjs from index.html: the English home page. Do not edit by hand. -->');
+if (!/data-fixed="en"/.test(homeEn) || !homeEn.includes(`${SITE}/en/"`)) throw new Error('English home page: index.html did not have the expected lines');
+mkdirSync(join(ROOT, 'en'), { recursive: true });
+writeFileSync(join(ROOT, 'en', 'index.html'), homeEn);
 
 // sitemap.xml: the home page plus every chapter page that has words in it.
 const today = new Date().toISOString().slice(0, 10);
 const sm = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url><loc>${SITE}/</loc>${pages.length ? `<lastmod>${pages.map((p) => p.lastmod).sort().pop()}</lastmod>` : ''}</url>
+${['/', '/en/'].map((h) => `  <url><loc>${SITE}${h}</loc>${pages.length ? `<lastmod>${pages.map((p) => p.lastmod).sort().pop()}</lastmod>` : ''}<xhtml:link rel="alternate" hreflang="bn" href="${SITE}/"/><xhtml:link rel="alternate" hreflang="en" href="${SITE}/en/"/></url>`).join('\n')}
 ${pages.map((p) => `  <url><loc>${p.loc}</loc><lastmod>${p.lastmod}</lastmod>${p.alts.length > 1 ? p.alts.map(([x, h]) => `<xhtml:link rel="alternate" hreflang="${x}" href="${h}"/>`).join('') : ''}</url>`).join('\n')}
 </urlset>
 `;
@@ -666,6 +683,8 @@ writeFileSync(join(ROOT, 'llms.txt'), `# ${SITE_NAME.en} (${SITE_NAME.bn})
 > ${SITE_DESC}
 
 Author: ${SAME_AS.length ? `[${AUTHOR.en}](${SAME_AS[0]})` : AUTHOR.en}, ${CRED.en}, clinical hematologist in Kolkata. Co-author of the blood report and other hematopathology pages: ${COAUTHORS.mridha.en}, ${COAUTHORS.mridha.cred.en}, pathologist. Every chapter exists in Bengali and in English, and each one ends with when to go to hospital and which questions to take to a doctor.
+
+English home page: ${SITE}/en/ (Bengali home page: ${SITE}/)
 
 ## Chapters (English)
 ${llmsList('en')}
