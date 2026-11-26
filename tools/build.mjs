@@ -374,6 +374,10 @@ for (const c of chapters) {
         ...(b.src.length ? { citation: b.src.map((x) => ({ '@type': 'CreativeWork', name: x.title, url: x.url })) } : {}),
         ...(root ? { isPartOf: { '@type': 'MedicalWebPage', name: root[l], url: SITE + url(root.id, l) } } : {}),
       });
+      // Breadcrumbs for search results (backlog item 2): home page > chapter > part, in the page's own language.
+      const crumbs = [[SITE_NAME[l], SITE + HOME[l]], ...(root ? [[root[l], SITE + url(root.id, l)], [partTitle(c, l), canonical]] : [[c[l], canonical]])];
+      schema += ld({ '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+        itemListElement: crumbs.map(([name, item], i) => ({ '@type': 'ListItem', position: i + 1, name, item })) });
       if (b.faq.length) schema += '\n' + ld({
         '@context': 'https://schema.org', '@type': 'FAQPage', inLanguage: l,
         mainEntity: b.faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
