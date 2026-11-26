@@ -125,6 +125,20 @@ html[data-lang="bn"] .hero h1 .hl{padding-bottom:.2em}
 /* chapter cards on the home page */
 .sec{padding-block:40px 0}
 .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.search{margin-bottom:36px}
+.search label{display:block;font-family:var(--serif);font-weight:600;font-size:clamp(1.35rem,4.4vw,1.75rem);line-height:1.4;margin-bottom:12px;color:var(--ink)}
+.sbox{position:relative}
+.sbox svg{position:absolute;left:18px;top:50%;width:20px;height:20px;transform:translateY(-50%);color:var(--teal-2);pointer-events:none}
+.sbox input{width:100%;height:56px;padding:0 18px 0 50px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:1.05rem;-webkit-appearance:none;appearance:none}
+.sbox input:focus{outline:none;border-color:var(--teal-2);box-shadow:0 0 0 4px color-mix(in srgb,var(--teal-2) 18%,transparent)}
+.sres{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:10px}
+.sres:empty{display:none}
+.sres a{display:block;padding:14px 18px;border-radius:20px;background:var(--surface);border:1px solid var(--line);color:inherit;text-decoration:none}
+.sres a:hover,.sres a:focus{border-color:var(--teal-2)}
+.sres .sp{display:block;font-size:.85rem;font-weight:600;color:var(--teal-2)}
+.sres .st{display:block;font-family:var(--serif);font-weight:600;font-size:1.15rem;line-height:1.35}
+.sres .sc{display:block;margin-top:4px;font-size:.95rem;line-height:1.55;color:var(--ink-2)}
+.snone{margin-top:12px;color:var(--ink-2)}
 .group+.group{margin-top:44px}
 .gh{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-weight:600;font-size:clamp(1.35rem,4.4vw,1.75rem);line-height:1.3;margin-bottom:16px;color:var(--ink)}
 .gh::before{content:"";width:12px;height:12px;flex:none;border-radius:50%;background:var(--red)}
