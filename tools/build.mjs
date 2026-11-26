@@ -257,7 +257,8 @@ const ld = (o) => `<script type="application/ld+json">${JSON.stringify(o).replac
 
 const index = read('index.html');
 const style = index.match(/<style>[\s\S]*?<\/style>/)[0];
-const fonts = index.match(/<link rel="preconnect"[\s\S]*?rel="stylesheet">/)[0];
+// The fonts are stored on the site (assets/fonts, Dr. Roy 2026-11-22: "Yes store"); no request goes to Google.
+const fonts = index.match(/<link rel="stylesheet" href="\/assets\/fonts\/fonts\.css">/)[0];
 const footer = index.match(/<footer>[\s\S]*?<\/footer>/)[0];
 const chapters = JSON.parse(read('chapters/list.json'));
 const byId = Object.fromEntries(chapters.map((c) => [c.id, c]));
