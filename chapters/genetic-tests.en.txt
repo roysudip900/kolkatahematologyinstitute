@@ -14,7 +14,7 @@ Under the microscope, two leukaemias can look the same. Inside their cells, they
 
 [figure: gene-zoom]
 
-Take chronic myeloid leukaemia. In most people with it, a piece of one chromosome has swapped places with a piece of another. This makes a new joined gene that tells the marrow to keep making white cells. There are targeted tablets made against exactly that joined gene. A gene test finds it, so the doctor knows these tablets are the right treatment to start.
+Take chronic myeloid leukaemia. In most people with it, a piece of one chromosome has swapped places with a piece of another. This makes a new joined gene that tells the marrow to keep making white cells. There are targeted tablets made against exactly that joined gene. A gene test finds it, so the doctor knows these tablets are usually the right treatment to start.
 
 Or take acute promyelocytic leukaemia, a form of acute myeloid leukaemia caused by genes on two chromosomes switching places. It is treated very differently from other acute leukaemias. A gene or chromosome test is what tells them apart.
 
@@ -22,7 +22,7 @@ Or take acute promyelocytic leukaemia, a form of acute myeloid leukaemia caused 
 
 - Which disease it is, exactly. Two people with the same name for their leukaemia can have different subtypes, and some subtypes are treated differently.
 - Which treatment will work. Some targeted medicines work only when the cancer has a certain change. The test can also show a change that stops a medicine working, which spares the patient a treatment that will not help.
-- How strong the treatment needs to be. Some changes mean the disease is likely to come back, and the plan may then include a stronger treatment or a bone marrow transplant. Other changes mean a gentler plan is enough.
+- How strong the treatment needs to be. Some changes mean the disease is likely to come back, and the plan may then include a stronger treatment or a bone marrow transplant. With other changes, a gentler plan may be enough.
 - Whether treatment is working. Some of these tests are repeated during treatment to see how well it is working.
 
 # The four main tests
@@ -42,7 +42,7 @@ Most gene changes found in blood cancer cells happened during the person's life,
 
 # Why it takes time
 
-These tests are done in special laboratories, and results can take a few weeks. A long wait does not mean something is wrong. When treatment cannot wait, the hematologist starts what is safe and adjusts the plan when the results come.
+These tests are done in special laboratories, and results can take a few weeks. A long wait does not mean something is wrong. When treatment cannot wait, the hematologist starts the treatment that cannot wait and adjusts the plan when the results come.
 
 # How the stories go on
 

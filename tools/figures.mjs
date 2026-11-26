@@ -2657,15 +2657,15 @@ const TRY = {
     };
     const t = l === 'bn'
       ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
-          c: [['report', 'রোগ তো ধরা পড়েছে, আর পরীক্ষা মানে টাকা নষ্ট', 'সত্যি?', 'রোগ ধরা পড়লে নাম জানা যায়। জেনেটিক পরীক্ষা অনেক সময় ঠিক করে কোন ওষুধ কাজ করবে আর চিকিৎসা কতটা জোরালো হবে।'],
+          c: [['report', 'রোগ তো ধরা পড়েছে, আর পরীক্ষা মানে টাকা নষ্ট', 'সত্যি?', 'রোগ ধরা পড়লে নাম জানা যায়। জেনেটিক পরীক্ষা অনেক সময় ঠিক করে কোন ওষুধ কাজ করবে আর চিকিৎসা কতটা জোরালো হবে। কোন পরীক্ষা লাগবে আর তাতে কী বদলাবে, জিজ্ঞেস করুন।'],
             ['family', 'লিউকেমিয়ায় জিনের বদল মানে বাচ্চাদেরও হবে', 'সত্যি?', 'বেশিরভাগ বদল জীবদ্দশায়, শুধু ক্যান্সারের কোষে হয়, সন্তানের মধ্যে যায় না।'],
-            ['clock', 'ফল না আসা পর্যন্ত কোনো চিকিৎসাই হবে না', 'সত্যি?', 'দরকার হলে নিরাপদ চিকিৎসা আগে শুরু হয়, ফল এলে পরিকল্পনা ঠিক করা হয়।'],
+            ['clock', 'ফল না আসা পর্যন্ত কোনো চিকিৎসাই হবে না', 'সত্যি?', 'যে চিকিৎসা অপেক্ষা করতে পারে না, তা আগে শুরু হয়, ফল এলে পরিকল্পনা ঠিক করা হয়।'],
             ['repeat', 'চিকিৎসা শুরু হলে আর পরীক্ষা লাগে না', 'সত্যি?', 'কিছু পরীক্ষা চিকিৎসার মাঝে আবার হয়, চিকিৎসা কতটা কাজ করছে দেখতে।']],
           cap: 'ফলের অপেক্ষায় থাকার সময় জ্বর, বন্ধ না হওয়া রক্তপাত বা খুব শ্বাসকষ্ট হলে সঙ্গে সঙ্গে হাসপাতালে যান।' }
       : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
-          c: [['report', 'The diagnosis is made, so more tests waste money', 'True?', 'The diagnosis gives the name. Genetic tests often decide which medicine will work and how strong the plan must be.'],
+          c: [['report', 'The diagnosis is made, so more tests waste money', 'True?', 'The diagnosis gives the name. Genetic tests often decide which medicine will work and how strong the plan must be. Ask which tests you need and what each will change.'],
             ['family', 'A gene change in leukaemia means my children will get it', 'True?', 'Most changes happen during life, in the cancer cells only, and are not passed on.'],
-            ['clock', 'I must go without any treatment until the results come', 'True?', 'When needed, safe treatment starts first, and the plan is adjusted when results come.'],
+            ['clock', 'I must go without any treatment until the results come', 'True?', 'Treatment that cannot wait starts first, and the plan is adjusted when results come.'],
             ['repeat', 'Once treatment starts, no more tests are needed', 'True?', 'Some tests are repeated during treatment to see how well it is working.']],
           cap: 'While waiting for results, a fever, bleeding that will not stop or severe breathlessness needs a hospital at once.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
