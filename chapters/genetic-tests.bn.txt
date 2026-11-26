@@ -36,6 +36,10 @@
 
 [figure: gene-cards]
 
+# শুধু রক্তের ক্যান্সারের জন্য নয়
+
+যে রক্তের অসুখ নিয়ে মানুষ জন্মায়, যেমন থ্যালাসেমিয়া, হিমোফিলিয়া, আর বোন ম্যারো কাজ না করার কিছু বিরল বংশগত অসুখ, সেখানেও জিন পরীক্ষা সমান কাজে লাগে। এতে ঠিক কোন জিনের বদল, তা নিশ্চিত হয়, পরিবারের অন্যদের পরীক্ষায় সাহায্য হয়, আর স্বামী-স্ত্রী দুজনেই থ্যালাসেমিয়ার বাহক হলে জন্মের আগেই গর্ভের বাচ্চার পরীক্ষা করা যায়। গর্ভের বাচ্চার থ্যালাসেমিয়া পরীক্ষাই চিকিৎসায় এই পরীক্ষাগুলোর প্রথম দিকের ব্যবহারগুলোর একটা।
+
 # এটা কি বংশে চলে?
 
 রক্তের ক্যান্সারের কোষে যে জিনের বদল পাওয়া যায়, তার বেশিরভাগই মানুষটার জীবদ্দশায়, শুধু ওই কোষগুলোতেই হয়েছে। এগুলো সন্তানের মধ্যে যায় না। কখনো কখনো দুটোকে আলাদা করতে সুস্থ কোষেও পরীক্ষা করা হয়, যেমন চামড়ার ছোট্ট একটা টুকরো থেকে। জন্ম থেকে থাকতে পারে এমন কোনো বদল পাওয়া গেলে সেটা নিশ্চিত করতে আরেকটা পরীক্ষা লাগে, আর পরিবারের জন্য তার মানে কী, ডাক্তার বুঝিয়ে বলবেন।
@@ -91,4 +95,5 @@
 - National Cancer Institute: Adult acute myeloid leukemia treatment | https://www.cancer.gov/types/leukemia/patient/adult-aml-treatment-pdq
 - National Cancer Institute: Biomarker testing for cancer treatment | https://www.cancer.gov/about-cancer/treatment/types/biomarker-testing-cancer-treatment
 - NHS: Tests and next steps for chronic myeloid leukaemia | https://www.nhs.uk/conditions/chronic-myeloid-leukaemia/tests-and-next-steps/
+- Jitani A. The limitless potential of molecular diagnostics in hematology. J Hematol Allied Sci. 2023;3(1):1-2. | https://jhas-bsh.com/the-limitless-potential-of-molecular-diagnostics-in-hematology/
 - Zitella LJ. Molecular testing in hematologic malignancies. J Adv Pract Oncol. 2022;13(3):324-7. | https://pmc.ncbi.nlm.nih.gov/articles/PMC9126340/

@@ -36,6 +36,10 @@ The hematologist chooses which ones a person needs. Often it is more than one, b
 
 [figure: gene-cards]
 
+# Not only for blood cancer
+
+Gene tests are used just as much for blood conditions people are born with, such as thalassemia, haemophilia and some rare inherited forms of bone marrow failure. They can confirm the exact gene change, help check other family members, and, for a couple who both carry thalassemia, test a baby before birth. Testing a baby for thalassemia before birth was one of the first uses of these tests in medicine.
+
 # Is it inherited?
 
 Most gene changes found in blood cancer cells happened during the person's life, in those cells only. They are not passed on to children. Sometimes a test is done on healthy cells too, such as a tiny piece of skin, to tell the two apart. If a change you may have been born with turns up, another test is needed to confirm it, and the doctor will explain what it means for the family.
@@ -91,4 +95,5 @@ Some of these tests show how much of the cancer is left. Repeating them during t
 - National Cancer Institute: Adult acute myeloid leukemia treatment | https://www.cancer.gov/types/leukemia/patient/adult-aml-treatment-pdq
 - National Cancer Institute: Biomarker testing for cancer treatment | https://www.cancer.gov/about-cancer/treatment/types/biomarker-testing-cancer-treatment
 - NHS: Tests and next steps for chronic myeloid leukaemia | https://www.nhs.uk/conditions/chronic-myeloid-leukaemia/tests-and-next-steps/
+- Jitani A. The limitless potential of molecular diagnostics in hematology. J Hematol Allied Sci. 2023;3(1):1-2. | https://jhas-bsh.com/the-limitless-potential-of-molecular-diagnostics-in-hematology/
 - Zitella LJ. Molecular testing in hematologic malignancies. J Adv Pract Oncol. 2022;13(3):324-7. | https://pmc.ncbi.nlm.nih.gov/articles/PMC9126340/
