@@ -20,7 +20,7 @@ To take that picture, the laboratory needs living cells that are dividing, becau
 
 A karyotype report uses a short code. A few of the changes doctors look for most:
 
-- Philadelphia chromosome, written t(9;22): pieces of chromosomes 9 and 22 swap places and make the BCR::ABL1 joined gene. It is found in most people with chronic myeloid leukaemia, and in some with acute lymphoblastic leukaemia, more often in teenagers and adults. Targeted tablets work against it.
+- Philadelphia chromosome, written t(9;22): pieces of chromosomes 9 and 22 swap places and make the BCR::ABL1 joined gene. It is found in most people with chronic myeloid leukaemia, and in some with acute lymphoblastic leukaemia, more often in teenagers and adults. Targeted tablets can work against it.
 - t(15;17): genes on chromosomes 15 and 17 swap places and make the PML::RARA gene. This means acute promyelocytic leukaemia, a form of acute myeloid leukaemia that is treated in its own, very different way and needs treatment urgently.
 - del(5q): a missing piece of the long arm of chromosome 5. When it is the only change in myelodysplastic syndrome, it marks a type that can respond to a particular medicine, lenalidomide, which can lessen the need for transfusions.
 - Other changes help the hematologist judge how a myelodysplastic syndrome or an acute leukaemia is likely to behave, and how strong the treatment should be.
@@ -43,7 +43,7 @@ A change found in the leukaemia or marrow cells usually happened in those cells 
 
 # How the stories go on
 
-The woman's karyotype shows del(5q) as the only change. Her hematologist explains that her type of myelodysplastic syndrome can respond to a particular medicine, and starts it. Over the next months she needs transfusions less often, and her blood counts are checked regularly.
+The woman's karyotype shows del(5q) as the only change. Her hematologist explains that her type of myelodysplastic syndrome can respond to a particular medicine, and starts it. In her case, over the next months she needs transfusions less often. It does not help everyone. Her blood counts are checked regularly.
 
 The boy's plan now includes a targeted tablet together with his chemotherapy, and his team talks to the family about whether he will need a stem cell transplant later. His mother understands that the change was found in time to matter.
 
@@ -82,7 +82,7 @@ No. A karyotype sees only large chromosome changes, and many blood cancers have 
 
 ## What does t(9;22) on my report mean?
 
-It means pieces of chromosomes 9 and 22 have swapped places, which is the Philadelphia chromosome. It is found in most people with chronic myeloid leukaemia and in some with acute lymphoblastic leukaemia, and targeted tablets work against it.
+It means pieces of chromosomes 9 and 22 have swapped places, which is the Philadelphia chromosome. It is found in most people with chronic myeloid leukaemia and in some with acute lymphoblastic leukaemia, and targeted tablets can work against it.
 
 # Sources
 
