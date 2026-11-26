@@ -1277,8 +1277,10 @@ const FIG = {
       [0, 1].forEach((j) => {
         const cx = x + j * 14;
         body += `<rect x="${cx}" y="${y}" width="10" height="${h}" rx="5" fill="#8D74D8"/><rect x="${cx}" y="${y + h * 0.35}" width="10" height="3" fill="#EFE9FC"/>`;
-        if (n === 9 && j === 1) body += `<rect class="kr-sw" x="${cx}" y="${y + h - 10}" width="10" height="10" rx="5" fill="${C.amber}"/>`;
-        if (n === 22 && j === 1) body += `<rect class="kr-sw" x="${cx}" y="${y + h - 10}" width="10" height="10" rx="5" fill="${C.red}"/>`;
+        if (n === 9 && j === 0) body += `<rect x="${cx}" y="${y + h - 10}" width="10" height="10" rx="5" fill="${C.amber}"/>`;
+        if (n === 22 && j === 0) body += `<rect x="${cx}" y="${y + h - 10}" width="10" height="10" rx="5" fill="${C.red}"/>`;
+        if (n === 9 && j === 1) body += `<rect class="kr-sw" x="${cx}" y="${y + h - 10}" width="10" height="10" rx="5" fill="${C.red}"/>`;
+        if (n === 22 && j === 1) body += `<rect class="kr-sw" x="${cx}" y="${y + h - 10}" width="10" height="10" rx="5" fill="${C.amber}"/>`;
       });
       body += `<text x="${x + 12}" y="${118}" text-anchor="middle" font-size="12.5" font-weight="700" fill="${n === 9 || n === 22 ? C.red : C.muted}">${n}</text>`;
     });

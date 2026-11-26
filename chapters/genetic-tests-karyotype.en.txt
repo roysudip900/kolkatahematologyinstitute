@@ -2,7 +2,7 @@
 
 The bone marrow report came in a week. The chromosome report took two more.
 
-She is sixty-one and lives in Tollygunge. For a year she has been tired and pale, and for the last six months she has needed a blood transfusion every few weeks. The bone marrow test showed myelodysplastic syndrome, a condition in which the marrow makes blood cells that do not grow up properly. Her daughter could not understand why the hematologist kept saying "let us wait for the karyotype".
+She is sixty-one and lives in Tollygunge. For a year she has been tired and pale, and for the last six months she has needed a blood transfusion every few weeks. The transfusions keep her going while her marrow cannot make enough blood, but they do not treat the cause, and the cause has to be found. The bone marrow test showed myelodysplastic syndrome, a condition in which the marrow makes blood cells that do not grow up properly. Her daughter could not understand why the hematologist kept saying "let us wait for the karyotype".
 
 In Kolkata, a mother sits outside a children's ward. Her son of fourteen has acute lymphoblastic leukaemia, and his chemotherapy has already begun. Then the hematologist tells her the karyotype has shown a change called the Philadelphia chromosome, and that the plan will now include a tablet as well.
 
@@ -59,6 +59,8 @@ While you wait for a karyotype result, go to a hospital at once if:
 - there is new confusion, a severe headache or a fit
 
 # Take these questions to your doctor
+
+Do not start, stop or change any medicine because of a karyotype report. Show it to your hematologist first.
 
 Your hematologist or the pathologist can explain the report. Ask:
 
