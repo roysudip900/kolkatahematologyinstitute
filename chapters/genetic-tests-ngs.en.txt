@@ -1,0 +1,98 @@
+> NGS, next generation sequencing, reads many genes at once, letter by letter, to find small changes that other gene tests can miss. It helps name a blood cancer, judge its risk, choose a targeted medicine and find conditions a person was born with, so ask your hematologist what your NGS found and what it means for you.
+
+"The report is three pages of gene names. Which one matters?"
+
+She is sixty-seven and lives in Barrackpore. She has acute myeloid leukaemia, and she also has heart trouble, so very strong chemotherapy would be hard on her. Her hematologist sends her bone marrow for NGS before deciding on the treatment. Her son wants to know why they must wait for another test when the diagnosis is already clear.
+
+In Bardhaman, a boy of nine has had low blood counts for years. His marrow makes too few cells, and no infection, medicine or vitamin lack explains it. His hematologist suggests a gene test for conditions a child can be born with. His parents want to know why a gene test, and whether it means something for his younger sister.
+
+The son wants to know what three pages of names can change. The parents want to know what a gene test can tell them about the whole family.
+
+# What NGS is
+
+Every gene is written in a long string of four chemical letters. A change in a single letter can be enough to make a cell behave differently. NGS reads those letters directly.
+
+The older way read one gene at a time. NGS reads many genes at once. It can read a chosen set of genes, called a panel, picked for a particular disease. It can read all the genes, called the exome, which is a small part of all the DNA but holds most of the changes that cause disease. Or it can read all the DNA, the whole genome. In blood diseases, panels are the test used most.
+
+[figure: ngs-read]
+
+# Why NGS, when other tests are already done
+
+Each test sees something different. A karyotype sees large changes in whole chromosomes. FISH and PCR look for one chosen change each. NGS reads every letter of every gene on its panel, so it can find small changes anywhere in those genes, including ones nobody was looking for. Hematologists often use all of them together, because each sees what the others miss.
+
+# What NGS looks for
+
+These are some of the genes you may see on a report:
+
+- Acute myeloid leukaemia: FLT3, NPM1, CEBPA, RUNX1 and other genes. Changes in these genes are now a routine part of judging how the leukaemia is likely to behave and how strong the treatment should be.
+- Acute myeloid leukaemia: IDH1 and IDH2. For an older person, or someone who cannot take very strong chemotherapy, a change in one of these genes can mean there is a targeted medicine made against it.
+- Chronic lymphocytic leukaemia: TP53. A small change in this gene is linked to the usual treatments working less well, much like del(17p). FISH cannot find a small change inside TP53, so it is looked for by sequencing.
+- Polycythaemia vera, essential thrombocythaemia and myelofibrosis: JAK2, CALR and MPL, often tested together.
+- Leftover disease: after treatment, NGS can find one leukaemia or myeloma cell among a hundred thousand or even a million. In acute lymphoblastic leukaemia, chronic lymphocytic leukaemia and myeloma, a lower level of leftover disease is linked to a longer life without the disease coming back.
+- Conditions people are born with: inherited bone marrow failure, inherited platelet disorders and some immune system disorders. Here NGS has made it much easier to find the exact gene change.
+
+# Reading an NGS report
+
+An NGS report names each gene with a change, and the exact change in it. It often gives a percentage, which shows roughly how many copies of that gene in the sample carry the change. A small percentage can mean the change is in a small group of cells. A percentage close to half or to all of them can mean the person was born with the change, and then a test of healthy cells, such as a small piece of skin, may be done to tell the two apart.
+
+Not every change found needs treatment, and not every change has a medicine. A targeted medicine matched to a change may still not work for everyone. Sometimes a result points to a clinical trial. The hematologist reads the report together with all the other tests.
+
+The changes in a cancer can also change over time. An NGS result shows the cancer at the moment the sample was taken, so the test may be repeated if the disease comes back.
+
+[figure: ngs-cards]
+
+# Is the change inherited?
+
+Most changes NGS finds in blood cancer cells happened during life, in those cells only, and are not passed on. Sometimes NGS finds a change a person was born with. Then another test confirms it, and the hematologist may suggest a meeting with a genetic counsellor, because it can matter for brothers, sisters and children too.
+
+# How the stories go on
+
+The woman's NGS shows an IDH1 change. Her hematologist explains that for someone in her position there is a targeted medicine made against this change, and discusses it with the family alongside the other choices, including how her heart will be watched. Her son now knows which line of the three pages mattered most.
+
+The boy's NGS finds a change in a gene linked to an inherited bone marrow failure condition. A second test confirms it, and his parents and sister are offered testing too. His hematologist explains what it means for his care and for the family.
+
+Whichever story is closer to yours, ask which genes were read, which changes were found, and which of them change the plan.
+
+# Go to a hospital now if
+
+While on treatment or waiting for results, go to a hospital at once if:
+
+- there is a fever, or you feel hot, cold or shivery
+- there is bleeding that will not stop, or many new bruises or red spots
+- you become very breathless, very pale or very drowsy
+- there is new confusion, a severe headache or a fit
+
+# Take these questions to your doctor
+
+Do not start, stop or change any medicine because of an NGS report. Show it to your hematologist first.
+
+Your hematologist or the pathologist can explain the report. Ask:
+
+- Which genes did the test read, and why these?
+- Which changes were found, and which of them matter for my treatment?
+- Is there a medicine or a clinical trial matched to any of them?
+- Could any change be one I was born with, and does my family need testing?
+- Will the test be repeated during or after treatment?
+
+# Common questions
+
+## Why do I need NGS if the karyotype and FISH are already done?
+
+Because NGS reads the letters inside many genes, so it finds small changes the karyotype cannot see and that FISH and PCR were not asked to look for. Each test sees something the others miss.
+
+## My report lists several gene changes. Does each one need treatment?
+
+No. Some changes guide the treatment, some help judge the risk, and some have no medicine yet. Your hematologist will explain which ones matter for you.
+
+## Can NGS find something I was born with?
+
+Sometimes. If a change looks inherited, another test is done to confirm it, and the doctor will explain what it means for you and your family.
+
+# Sources
+
+- Zitella LJ. Molecular testing in hematologic malignancies. J Adv Pract Oncol. 2022;13(3):324-7. | https://pmc.ncbi.nlm.nih.gov/articles/PMC9126340/
+- Jitani A. The limitless potential of molecular diagnostics in hematology. J Hematol Allied Sci. 2023;3(1):1-2. | https://jhas-bsh.com/the-limitless-potential-of-molecular-diagnostics-in-hematology/
+- National Cancer Institute: Biomarker testing for cancer treatment | https://www.cancer.gov/about-cancer/treatment/types/biomarker-testing-cancer-treatment
+- National Cancer Institute: Adult acute myeloid leukemia treatment (health professional version) | https://www.cancer.gov/types/leukemia/hp/adult-aml-treatment-pdq
+- National Cancer Institute: Chronic lymphocytic leukemia treatment (health professional version) | https://www.cancer.gov/types/leukemia/hp/cll-treatment-pdq
+- National Cancer Institute: Myeloproliferative neoplasms treatment | https://www.cancer.gov/types/myeloproliferative/patient/chronic-treatment-pdq
