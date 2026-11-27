@@ -80,7 +80,7 @@ Your hematologist or the pathologist can explain the report. Ask:
 
 ## Why do I need NGS if the karyotype and FISH are already done?
 
-Because NGS reads the letters inside many genes, so it finds small changes the karyotype cannot see and that FISH and PCR were not asked to look for. Each test sees something the others miss.
+Because NGS reads the letters inside many genes, so it finds small changes the karyotype cannot see and that FISH and PCR were not asked to look for. Each test sees something the others miss. Your hematologist decides whether NGS will change your plan, so ask what it will add for you.
 
 ## My report lists several gene changes. Does each one need treatment?
 
