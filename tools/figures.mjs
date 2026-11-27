@@ -1359,6 +1359,39 @@ const FIG = {
         body),
     };
   },
+  // NGS: a gene as a row of letters; a reading window slides along it, and one letter (a G that became a T)
+  // lights up red. Below, a panel: many genes read at the same time.
+  'ngs-read'(l) {
+    const t = l === 'bn'
+      ? { a: 'একটা জিন, অক্ষর ধরে ধরে পড়া', b: 'একটা অক্ষর বদলে গেছে', c: 'প্যানেল: একসঙ্গে অনেকগুলো জিন',
+          cap: 'এনজিএস জিনের অক্ষরগুলো একটা একটা করে পড়ে, তাই একটা মাত্র অক্ষরের বদলও ধরা পড়ে। প্যানেলে একসঙ্গে অনেকগুলো জিন পড়া হয়।' }
+      : { a: 'one gene, read letter by letter', b: 'one letter has changed', c: 'a panel: many genes at once',
+          cap: 'NGS reads the letters of a gene one by one, so even a change in a single letter is found. A panel reads many genes at the same time.' };
+    const seq = 'ACGTTAGCCATGGACT', hit = 9;
+    let body = T(14, 22, t.a, { a: 'start', size: 12.5, w: 700, fill: C.teal });
+    body += `<rect class="nr-win" x="14" y="34" width="40" height="30" rx="6" fill="${C.mint}" stroke="${C.mintLine}"/>`;
+    [...seq].forEach((ch, i) => {
+      const x = 22 + i * 20.5, red = i === hit;
+      body += `<text ${red ? 'class="nr-hit" ' : ''}x="${x}" y="55" text-anchor="middle" font-size="15" font-weight="700" font-family="monospace" fill="${red ? C.red : C.ink}">${red ? 'T' : ch}</text>`;
+    });
+    body += `<path d="M${22 + hit * 20.5} 66v10" stroke="${C.red}" stroke-width="2"/>`;
+    body += T(22 + hit * 20.5, 92, t.b, { size: 12.5, w: 700, fill: C.red });
+    body += T(14, 126, t.c, { a: 'start', size: 12.5, w: 700, fill: C.teal });
+    ['FLT3', 'NPM1', 'IDH1', 'IDH2', 'TP53', 'RUNX1', 'CEBPA', 'JAK2'].forEach((g, i) => {
+      const x = 14 + (i % 4) * 84, y = 138 + Math.floor(i / 4) * 30, on = g === 'IDH1';
+      body += `<rect class="nr-g" style="animation-delay:${(i * 0.25).toFixed(2)}s" x="${x}" y="${y}" width="76" height="22" rx="6" fill="${on ? C.roseBg : '#fff'}" stroke="${on ? C.red : C.mintLine}" stroke-width="1.5"/>`;
+      body += `<text x="${x + 38}" y="${y + 15.5}" text-anchor="middle" font-size="12.5" font-weight="700" fill="${on ? C.red : C.ink}">${g}</text>`;
+    });
+    return {
+      cap: t.cap,
+      svg: svg('nr', 360, 200, t.cap,
+        '.nr-win{animation:nrw 6s linear infinite}@keyframes nrw{from{transform:translateX(0)}to{transform:translateX(300px)}}' +
+        '.nr-hit{animation:nrh 1.4s ease-in-out infinite alternate}@keyframes nrh{from{opacity:.4}to{opacity:1}}' +
+        '.nr-g{animation:nrg 2.4s ease-in-out infinite alternate}@keyframes nrg{from{opacity:.55}to{opacity:1}}' +
+        '@media (prefers-reduced-motion:reduce){.nr-win,.nr-hit,.nr-g{animation:none;opacity:1;transform:none}}',
+        body),
+    };
+  },
   // Anaemia, iron: two tanks of body iron. Tablets drip iron into both. In the first, a leak (heavy periods or
   // bleeding) lets it out, so the level hardly rises; in the second the leak is treated and the level slowly rises.
   'iron-tank'(l) {
@@ -2840,6 +2873,32 @@ const TRY = {
             ['pill', 'When the number is very low, I can stop the tablets myself', 'True?', 'Never on your own. Stopping is only discussed with the hematologist, after years at a very low level.'],
             ['lens', 'PCR finds every gene change', 'True?', 'Only the change it is asked to look for.'],
             ['clock', 'PCR results take weeks', 'True?', 'The cells do not need to be grown, so it often takes one to two days.']],
+          cap: 'During treatment, a fever, bleeding that will not stop or severe breathlessness needs a hospital at once.' };
+    const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
+      t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +
+        `<span class="fc front"><svg viewBox="0 0 40 40" aria-hidden="true">${ic[i]}</svg><span class="q">${esc(front)}</span><span class="tag">${esc(tag)}</span></span>` +
+        `<span class="fc back"><span class="k">${esc(t.sign)}</span><span>${esc(back)}</span></span></button>`).join('') + '</div>';
+    return { cap: t.cap, cls: 'flipset', html };
+  },
+  'ngs-cards'(l) {
+    const ic = {
+      report: `<rect x="9" y="5" width="22" height="30" rx="3" fill="#fff" stroke="${C.teal2}" stroke-width="2"/><path d="M14 13h12M14 19h12M14 25h7" stroke="${C.teal2}" stroke-width="2"/>`,
+      pill: `<rect x="6" y="14" width="28" height="12" rx="6" fill="#fff" stroke="${C.teal2}" stroke-width="2"/><path d="M20 14v12" stroke="${C.teal2}" stroke-width="2"/><rect x="20" y="15" width="13" height="10" rx="5" fill="${C.rose}"/>`,
+      clock: `<circle cx="20" cy="20" r="13" fill="#fff" stroke="${C.teal2}" stroke-width="2"/><path d="M20 12v9l6 3" stroke="${C.teal}" stroke-width="2.5" fill="none" stroke-linecap="round"/>`,
+      family: `<circle cx="13" cy="12" r="5" fill="${C.teal}"/><circle cx="27" cy="12" r="5" fill="${C.teal}"/><circle cx="20" cy="26" r="4" fill="${C.rose}"/><path d="M8 34c0-6 3-9 5-9s5 3 5 9M22 34c0-6 3-9 5-9s5 3 5 9" fill="${C.teal}"/>`,
+    };
+    const t = l === 'bn'
+      ? { h: 'সত্যি, না ভুল ধারণা?', sub: 'কার্ডে চাপ দিলে উল্টে যাবে।', sign: 'ভুল ধারণা',
+          c: [['report', 'রিপোর্টের প্রতিটা বদলের চিকিৎসা লাগে', 'সত্যি?', 'কিছু বদল চিকিৎসা ঠিক করে, কিছু ঝুঁকি বোঝায়, কিছুর এখনও ওষুধ নেই।'],
+            ['pill', 'বদলের সঙ্গে মেলানো ওষুধ সবসময় কাজ করে', 'সত্যি?', 'মেলানো ওষুধও সবার ক্ষেত্রে কাজ না করতে পারে।'],
+            ['clock', 'এনজিএসের ফল সারা জীবন একই থাকে', 'সত্যি?', 'ক্যান্সারের বদল সময়ের সঙ্গে বদলাতে পারে, তাই পরীক্ষা আবার হতে পারে।'],
+            ['family', 'এনজিএসে পাওয়া সব বদল সন্তানের হবে', 'সত্যি?', 'বেশিরভাগ বদল শুধু ক্যান্সারের কোষে, জীবনের কোনো এক সময়ে হয়েছে।']],
+          cap: 'চিকিৎসার মধ্যে জ্বর, বন্ধ না হওয়া রক্তপাত বা খুব শ্বাসকষ্ট হলে সঙ্গে সঙ্গে হাসপাতালে যান।' }
+      : { h: 'True, or a myth?', sub: 'Tap a card to turn it over.', sign: 'A myth',
+          c: [['report', 'Every change on the report needs treatment', 'True?', 'Some changes guide treatment, some show the risk, and some have no medicine yet.'],
+            ['pill', 'A medicine matched to a change always works', 'True?', 'Even a matched medicine may not work for everyone.'],
+            ['clock', 'An NGS result stays the same for life', 'True?', 'The changes in a cancer can change over time, so the test may be repeated.'],
+            ['family', 'Every change NGS finds will pass to my children', 'True?', 'Most changes happened during life, in the cancer cells only.']],
           cap: 'During treatment, a fever, bleeding that will not stop or severe breathlessness needs a hospital at once.' };
     const html = `<p class="try-h">${esc(t.h)}</p><p class="try-sub">${esc(t.sub)}</p><div class="flips">` +
       t.c.map(([i, front, tag, back]) => `<button type="button" class="flip" aria-pressed="false">` +

@@ -528,5 +528,16 @@
   "card_bn": "BCR::ABL1-এর সংখ্যা কমেছে? \"নট ডিটেক্টেড\" মানে কী?",
   "card_en": "Your BCR::ABL1 number has fallen? What does \"not detected\" mean?",
   "coauthor": "mridha"
+ },
+ {
+  "id": "genetic-tests-ngs",
+  "parent": "genetic-tests",
+  "bn": "জেনেটিক পরীক্ষা: এনজিএস",
+  "en": "Genetic tests: NGS",
+  "desc_bn": "এনজিএস কী, রিপোর্টে IDH1, IDH2, TP53, FLT3, NPM1 মানে কী, শতাংশটা কী বোঝায়, সব বদলের কি চিকিৎসা লাগে, আর জন্ম থেকে থাকা বদল। সহজ ভাষায়।",
+  "desc_en": "What NGS is, what IDH1, IDH2, TP53, FLT3 and NPM1 on the report mean, what the percentage shows, whether every change needs treatment, and changes a person is born with.",
+  "card_bn": "এনজিএস রিপোর্টে তিন পাতা জিনের নাম? কোনটা আসল?",
+  "card_en": "Three pages of gene names on your NGS report? Which ones matter?",
+  "coauthor": "mridha"
  }
 ]
