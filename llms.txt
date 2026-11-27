@@ -55,6 +55,7 @@ English home page: https://kolkatahematologyinstitute.com/en/ (Bengali home page
   - [Karyotyping](https://kolkatahematologyinstitute.com/en/genetic-tests/karyotype/): What karyotyping is, what t(9;22), t(15;17) and del(5q) on the report mean, why it takes about two weeks, and what it cannot see.
   - [FISH](https://kolkatahematologyinstitute.com/en/genetic-tests/fish/): What FISH is, what BCR::ABL1, PML::RARA, del(17p) and t(4;14) on the report mean, why results come in two to three days, and what it cannot find.
   - [PCR](https://kolkatahematologyinstitute.com/en/genetic-tests/pcr/): What PCR is, what a falling or rising BCR::ABL1 number means, why PML::RARA, FLT3, NPM1 and JAK2 are tested, what "not detected" means, and whether the tablets can be stopped.
+  - [NGS](https://kolkatahematologyinstitute.com/en/genetic-tests/ngs/): What NGS is, what IDH1, IDH2, TP53, FLT3 and NPM1 on the report mean, what the percentage shows, whether every change needs treatment, and changes a person is born with.
 
 ## অধ্যায় (বাংলা)
 - [অ্যানিমিয়া: রক্তাল্পতা](https://kolkatahematologyinstitute.com/anaemia/): সব সময় ক্লান্তি, সিঁড়ি ভাঙলে হাঁফ, রিপোর্টে হিমোগ্লোবিন কম? অ্যানিমিয়া মানে কী আর কারণ খোঁজা কেন জরুরি, লিখেছেন কলকাতার হেমাটোলজিস্ট।
@@ -105,3 +106,4 @@ English home page: https://kolkatahematologyinstitute.com/en/ (Bengali home page
   - [জেনেটিক পরীক্ষা: ক্যারিওটাইপিং](https://kolkatahematologyinstitute.com/genetic-tests/karyotype/): ক্যারিওটাইপিং কী, রিপোর্টের t(9;22), t(15;17), del(5q) মানে কী, কেন দু সপ্তাহ লাগে, আর এটা কী দেখতে পায় না। সহজ ভাষায়।
   - [জেনেটিক পরীক্ষা: ফিশ](https://kolkatahematologyinstitute.com/genetic-tests/fish/): ফিশ কী, রিপোর্টে BCR::ABL1, PML::RARA, del(17p), t(4;14) মানে কী, কেন দুই-তিন দিনেই ফল আসে, আর এটা কী খুঁজে পায় না। সহজ ভাষায়।
   - [জেনেটিক পরীক্ষা: পিসিআর](https://kolkatahematologyinstitute.com/genetic-tests/pcr/): পিসিআর কী, BCR::ABL1-এর সংখ্যা কমা-বাড়ার মানে কী, PML::RARA, FLT3, NPM1, JAK2 কেন দেখা হয়, "নট ডিটেক্টেড" মানে কী, আর ট্যাবলেট কি বন্ধ করা যায়। সহজ ভাষায়।
+  - [জেনেটিক পরীক্ষা: এনজিএস](https://kolkatahematologyinstitute.com/genetic-tests/ngs/): এনজিএস কী, রিপোর্টে IDH1, IDH2, TP53, FLT3, NPM1 মানে কী, শতাংশটা কী বোঝায়, সব বদলের কি চিকিৎসা লাগে, আর জন্ম থেকে থাকা বদল। সহজ ভাষায়।
