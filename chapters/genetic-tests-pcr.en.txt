@@ -29,7 +29,7 @@ PCR finds only the change it is asked to look for, so the hematologist chooses t
 - Acute myeloid leukaemia: FLT3 and NPM1. A FLT3 change is often linked to a less good outcome, and a targeted medicine against FLT3 may be added to the chemotherapy. An NPM1 change without a certain FLT3 change is linked to a better outcome.
 - Polycythaemia vera, essential thrombocythaemia and myelofibrosis: JAK2, CALR or MPL. A JAK2 change is found in many people with these conditions, and helps tell them apart from a high count with another cause.
 - Acute lymphoblastic leukaemia: leftover leukaemia, called minimal or measurable residual disease. It is measured after the first phase of treatment, by PCR or by other tests. A higher level usually means a stronger treatment, and in some children and young people a low level can mean a lighter one.
-- Thalassemia and haemophilia: PCR based tests find the exact gene change, check other family members, and, for a couple who both carry thalassemia, can test a baby before birth.
+- Thalassemia and haemophilia: PCR based tests find the exact gene change, check other family members, and, for a couple who both carry thalassemia, can test a baby before birth. This test looks only for the blood condition. It is not used to tell whether the baby is a boy or a girl.
 
 # What a PCR result can and cannot tell
 
