@@ -18,7 +18,7 @@ The older way read one gene at a time. NGS reads many genes at once. It can read
 
 # Why NGS, when other tests are already done
 
-Each test sees something different. A karyotype sees large changes in whole chromosomes. FISH and PCR look for one chosen change each. NGS reads every letter of every gene on its panel, so it can find small changes anywhere in those genes, including ones nobody was looking for. Hematologists often use all of them together, because each sees what the others miss.
+Each test sees something different. A karyotype sees large changes in whole chromosomes. FISH and PCR look for one chosen change each. NGS reads the genes on its panel letter by letter, so it can find small changes in them, including ones nobody was looking for. Hematologists often use all of them together, because each sees what the others miss.
 
 # What NGS looks for
 
@@ -61,6 +61,8 @@ While on treatment or waiting for results, go to a hospital at once if:
 - there is bleeding that will not stop, or many new bruises or red spots
 - you become very breathless, very pale or very drowsy
 - there is new confusion, a severe headache or a fit
+- a face that droops, an arm or leg that goes weak, or speech that is slurred
+- pain, swelling, redness or warmth in one leg, or sudden breathlessness or chest pain
 
 # Take these questions to your doctor
 
